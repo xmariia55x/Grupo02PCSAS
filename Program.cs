@@ -16,7 +16,10 @@ namespace Grupo02PCSAS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.Run(new Form1());
+            //Application.Run(new fCrearActividadAdmin());
+            //Application.Run(new fCrearCursoAdmin());
+            Application.Run(new fModificarCursos());
             //Commit de maria
         }
     }

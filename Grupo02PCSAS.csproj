@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fCrearActividadAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCrearActividadAdmin.Designer.cs">
+      <DependentUpon>fCrearActividadAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCrearCursoAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCrearCursoAdmin.Designer.cs">
+      <DependentUpon>fCrearCursoAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fModificarCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fModificarCursos.Designer.cs">
+      <DependentUpon>fModificarCursos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +72,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fCrearActividadAdmin.resx">
+      <DependentUpon>fCrearActividadAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCrearCursoAdmin.resx">
+      <DependentUpon>fCrearCursoAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fModificarCursos.resx">
+      <DependentUpon>fModificarCursos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
