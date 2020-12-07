@@ -58,6 +58,24 @@
     <Compile Include="fCrearCursoAdmin.Designer.cs">
       <DependentUpon>fCrearCursoAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="fInfoActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInfoActividad.Designer.cs">
+      <DependentUpon>fInfoActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fInfoCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInfoCurso.Designer.cs">
+      <DependentUpon>fInfoCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fInfoCursoProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInfoCursoProfesor.Designer.cs">
+      <DependentUpon>fInfoCursoProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="fModificarCursos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +93,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRegistro.Designer.cs">
+      <DependentUpon>fRegistro.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallaBorrarCurso.cs">
       <SubType>Form</SubType>
@@ -102,6 +126,15 @@
     <EmbeddedResource Include="fCrearCursoAdmin.resx">
       <DependentUpon>fCrearCursoAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fInfoActividad.resx">
+      <DependentUpon>fInfoActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fInfoCurso.resx">
+      <DependentUpon>fInfoCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fInfoCursoProfesor.resx">
+      <DependentUpon>fInfoCursoProfesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fModificarCursos.resx">
       <DependentUpon>fModificarCursos.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRegistro.resx">
+      <DependentUpon>fRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaBorrarCurso.resx">
       <DependentUpon>PantallaBorrarCurso.cs</DependentUpon>
