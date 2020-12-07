@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace formsprueba
+namespace Grupo02PCSAS
 {
     public partial class PantallaBorrarCurso : Form
     {

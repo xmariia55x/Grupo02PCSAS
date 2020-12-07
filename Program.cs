@@ -22,7 +22,10 @@ namespace Grupo02PCSAS
             //Application.Run(new fModificarCursos());
             //Application.Run(new fNuevoDebateForo());
             //Application.Run(new PantallaBorrarCurso());
+            Application.Run(new PantallaBorrarCurso());
             //Commit de maria
         }
     }
+
+
 }
