@@ -64,6 +64,12 @@
     <Compile Include="fModificarCursos.Designer.cs">
       <DependentUpon>fModificarCursos.cs</DependentUpon>
     </Compile>
+    <Compile Include="fNuevoDebateForo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNuevoDebateForo.Designer.cs">
+      <DependentUpon>fNuevoDebateForo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fModificarCursos.resx">
       <DependentUpon>fModificarCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNuevoDebateForo.resx">
+      <DependentUpon>fNuevoDebateForo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

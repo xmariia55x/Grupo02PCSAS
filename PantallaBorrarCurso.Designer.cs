@@ -1,7 +1,7 @@
 ﻿
-namespace formsprueba
+namespace Grupo02PCSAS
 {
-    partial class PantallaBorrarCurso
+    partial class PantallaBorrarCurso 
     {
         /// <summary>
         /// Required designer variable.
