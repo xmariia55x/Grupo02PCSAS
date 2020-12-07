@@ -19,8 +19,10 @@ namespace Grupo02PCSAS
             //Application.Run(new Form1());
             //Application.Run(new fCrearActividadAdmin());
             //Application.Run(new fCrearCursoAdmin());
-            Application.Run(new fModificarCursos());
+            Application.Run(new PantallaBorrarCurso());
             //Commit de maria
         }
     }
+
+
 }

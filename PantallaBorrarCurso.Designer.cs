@@ -1,5 +1,5 @@
 ﻿
-namespace formsprueba
+namespace Grupo02PCSAS
 {
     partial class PantallaBorrarCurso
     {
