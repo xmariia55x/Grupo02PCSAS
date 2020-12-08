@@ -36,5 +36,10 @@ namespace Grupo02PCSAS
 		{
 
 		}
-	}
+
+        private void bAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
 }

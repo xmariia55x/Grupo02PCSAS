@@ -29,7 +29,7 @@ namespace Grupo02PCSAS
             pProfesor.Visible = false;
             pOng.Visible = false;
 
-            usuario = new Rol("admin", "maquina", true);
+            
         }
 
         private void bAlumno_Click(object sender, EventArgs e)

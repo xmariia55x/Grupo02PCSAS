@@ -23,21 +23,27 @@ namespace Grupo02PCSAS.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com")]
         public string BD_SERVER {
             get {
                 return ((string)(this["BD_SERVER"]));
             }
+            set {
+                this["BD_SERVER"] = value;
+            }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("apsgrupo02")]
         public string BD_NAME {
             get {
                 return ((string)(this["BD_NAME"]));
+            }
+            set {
+                this["BD_NAME"] = value;
             }
         }
     }

@@ -36,7 +36,7 @@ namespace Grupo02PCSAS
             this.horaInicioCurso = (string)tupla[6];
             this.horaFinCurso = (string)tupla[7];
             this.aforoCurso = (int)tupla[8];
-            this.online = (bool)tupla[9];
+            this.online = (int)tupla[9] == 1 ? true : false;
         }
 
         public Curso(int idCurso, string profesorCurso, string nombreCurso, string descripcionCurso, string fechaInicioCurso
