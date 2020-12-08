@@ -27,8 +27,8 @@ namespace Grupo02PCSAS
             //Application.Run(new fInfoCursoProfesor());
             //Application.Run(new fPrincipalProfesor());
             //Application.Run(new fPantallaAdmin());
-            Application.Run(new fStartAplicacion());
-           
+            //Application.Run(new fStartAplicacion());
+            Application.Run(new fRegistro());
             //Commit de maria
         }
     }

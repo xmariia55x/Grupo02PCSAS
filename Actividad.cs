@@ -192,5 +192,15 @@ namespace Grupo02PCSAS
             lugarActividad = null;
             aforoActividad = -1;
         }
+
+        public override bool Equals(object obj)
+        {
+            return (obj is Actividad) && (idActividad.Equals(((Actividad)obj).idActividad));
+        }
+
+        public override int GetHashCode()
+        {
+            return idActividad.GetHashCode();
+        }
     }
 }

@@ -20,17 +20,18 @@ namespace Grupo02PCSAS
             string sentencia = "SELECT * FROM CursosRealizados WHERE idCurso = " + idCurso + " AND correo = '" + email + "';";
             object[] tupla = miBD.Select(sentencia)[0];
 
-            this.idCurso = (int) tupla[0];
-            this.correo = (string)tupla[1];
-        }
-
-        public CursosRealizados(int numeroCurso, string email)
-        {
-            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "INSERT INTO CursosRealizados VALUES (" + numeroCurso + ", '" + email + "');";
-            miBD.Insert(sentencia);
-            this.idCurso = numeroCurso;
-            correo = email;
+            if (tupla != null)
+            {
+                this.idCurso = (int)tupla[0];
+                this.correo = (string)tupla[1];
+            }
+            else
+            {
+                sentencia = "INSERT INTO CursosRealizados VALUES (" + numeroCurso + ", '" + email + "');";
+                miBD.Insert(sentencia);
+                this.idCurso = numeroCurso;
+                correo = email;
+            }
         }
 
         public int IdCurso
@@ -66,6 +67,16 @@ namespace Grupo02PCSAS
 
             idCurso = -1;
             correo = null;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return (obj is CursosRealizados) && (idCurso.Equals(((CursosRealizados)obj).idCurso)) && (correo.Equals(((CursosRealizados)obj).correo));
+        }
+
+        public override int GetHashCode()
+        {
+            return idCurso.GetHashCode() + correo.GetHashCode();
         }
     }
 }

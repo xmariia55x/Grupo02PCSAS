@@ -98,5 +98,15 @@ namespace Grupo02PCSAS
             mensajeDebate = null;
             fechaPublicacion = null;
         }
+
+        public override bool Equals(object obj)
+        {
+            return (obj is Debate) && (creadorDebate.Equals(((Debate)obj).creadorDebate)) && (asuntoDebate.Equals(((Debate)obj).asuntoDebate));
+        }
+
+        public override int GetHashCode()
+        {
+            return creadorDebate.GetHashCode() + asuntoDebate.GetHashCode();
+        }
     }
 }

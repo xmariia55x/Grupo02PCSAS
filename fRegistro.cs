@@ -12,12 +12,15 @@ namespace Grupo02PCSAS
 {
     public partial class fRegistro : Form
     {
+        private Rol usuario;
         public fRegistro()
         {
             InitializeComponent();
             pAlumno.Visible = true;
             pProfesor.Visible = false;
             pOng.Visible = false;
+
+            
         }
 
         private void fRegistro_Load(object sender, EventArgs e)
@@ -25,6 +28,8 @@ namespace Grupo02PCSAS
             pAlumno.Visible = true;
             pProfesor.Visible = false;
             pOng.Visible = false;
+
+            usuario = new Rol("admin", "maquina", true);
         }
 
         private void bAlumno_Click(object sender, EventArgs e)

@@ -20,17 +20,18 @@ namespace Grupo02PCSAS
             string sentencia = "SELECT * FROM ActividadesRealizadas WHERE idActividad = " + numeroActividad + " AND correo = '" + email + "';";
             object[] tupla = miBD.Select(sentencia)[0];
 
-            this.idActividad = (int)tupla[0];
-            this.correo = (string)tupla[1];
-        }
-
-        public ActividadesRealizadas(int numAct, string email)
-        {
-            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "INSERT INTO ActividadesRealizadas VALUES (" + numAct + ", '" + email + "');";
-            miBD.Insert(sentencia);
-            this.idActividad = numAct;
-            correo = email;
+            if(tupla != null)
+            {
+                this.idActividad = (int)tupla[0];
+                this.correo = (string)tupla[1];
+            }
+            else
+            {
+                sentencia = "INSERT INTO ActividadesRealizadas VALUES (" + numeroActividad + ", '" + email + "');";
+                miBD.Insert(sentencia);
+                this.idActividad = numeroActividad;
+                correo = email;
+            }
         }
 
         public int IdActividad
@@ -66,6 +67,16 @@ namespace Grupo02PCSAS
 
             idActividad = -1;
             correo = null;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return (obj is ActividadesRealizadas) && (idActividad.Equals(((ActividadesRealizadas)obj).idActividad)) && (correo.Equals(((ActividadesRealizadas)obj).correo));
+        }
+
+        public override int GetHashCode()
+        {
+            return idActividad.GetHashCode() + correo.GetHashCode();
         }
     }
 }
