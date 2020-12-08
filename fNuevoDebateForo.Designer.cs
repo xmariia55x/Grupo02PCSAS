@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lRolUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lNombreApellidosUsuario = new System.Windows.Forms.Label();
@@ -45,17 +44,18 @@
             this.tMensajeDebate = new System.Windows.Forms.TextBox();
             this.bEnviarDebate = new System.Windows.Forms.Button();
             this.bCancelarDebate = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.lRolUsuario);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lNombreApellidosUsuario);
@@ -77,15 +77,6 @@
             this.label5.Size = new System.Drawing.Size(88, 26);
             this.label5.TabIndex = 7;
             this.label5.Text = "Mi perfil";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(1277, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 103);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
             // 
             // lRolUsuario
             // 
@@ -129,9 +120,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.pcsas;
+            this.pictureBox1.Location = new System.Drawing.Point(-15, -50);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(297, 173);
+            this.pictureBox1.Size = new System.Drawing.Size(288, 244);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -223,11 +215,21 @@
             this.bCancelarDebate.Text = "Cancelar";
             this.bCancelarDebate.UseVisualStyleBackColor = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
+            this.pictureBox2.Location = new System.Drawing.Point(1271, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 103);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
             // fNuevoDebateForo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PapayaWhip;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1469, 1033);
             this.Controls.Add(this.bCancelarDebate);
             this.Controls.Add(this.bEnviarDebate);
@@ -244,9 +246,9 @@
             this.Text = "Información del curso";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,7 +261,6 @@
         private System.Windows.Forms.Label lNombreApellidosUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lRolUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -271,5 +272,6 @@
         private System.Windows.Forms.TextBox tMensajeDebate;
         private System.Windows.Forms.Button bEnviarDebate;
         private System.Windows.Forms.Button bCancelarDebate;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

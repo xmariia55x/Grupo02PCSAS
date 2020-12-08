@@ -59,18 +59,19 @@ namespace Grupo02PCSAS
             this.panel1.Controls.Add(this.lHola);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(-8, -16);
+            this.panel1.Location = new System.Drawing.Point(-7, -13);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1478, 287);
+            this.panel1.Size = new System.Drawing.Size(1314, 230);
             this.panel1.TabIndex = 0;
             // 
             // lMiPerfil
             // 
             this.lMiPerfil.AutoSize = true;
             this.lMiPerfil.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lMiPerfil.Location = new System.Drawing.Point(1316, 222);
+            this.lMiPerfil.Location = new System.Drawing.Point(1170, 178);
             this.lMiPerfil.Name = "lMiPerfil";
-            this.lMiPerfil.Size = new System.Drawing.Size(102, 29);
+            this.lMiPerfil.Size = new System.Drawing.Size(88, 26);
             this.lMiPerfil.TabIndex = 6;
             this.lMiPerfil.Text = "Mi perfil";
             // 
@@ -78,9 +79,9 @@ namespace Grupo02PCSAS
             // 
             this.lProfesor.AutoSize = true;
             this.lProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lProfesor.Location = new System.Drawing.Point(1109, 181);
+            this.lProfesor.Location = new System.Drawing.Point(986, 145);
             this.lProfesor.Name = "lProfesor";
-            this.lProfesor.Size = new System.Drawing.Size(101, 29);
+            this.lProfesor.Size = new System.Drawing.Size(86, 26);
             this.lProfesor.TabIndex = 5;
             this.lProfesor.Text = "Profesor";
             // 
@@ -88,9 +89,9 @@ namespace Grupo02PCSAS
             // 
             this.lRol.AutoSize = true;
             this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRol.Location = new System.Drawing.Point(1048, 181);
+            this.lRol.Location = new System.Drawing.Point(932, 145);
             this.lRol.Name = "lRol";
-            this.lRol.Size = new System.Drawing.Size(55, 29);
+            this.lRol.Size = new System.Drawing.Size(47, 26);
             this.lRol.TabIndex = 4;
             this.lRol.Text = "Rol:";
             // 
@@ -98,9 +99,9 @@ namespace Grupo02PCSAS
             // 
             this.lNombre.AutoSize = true;
             this.lNombre.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombre.Location = new System.Drawing.Point(839, 110);
+            this.lNombre.Location = new System.Drawing.Point(746, 88);
             this.lNombre.Name = "lNombre";
-            this.lNombre.Size = new System.Drawing.Size(371, 55);
+            this.lNombre.Size = new System.Drawing.Size(311, 46);
             this.lNombre.TabIndex = 3;
             this.lNombre.Text = "Nombre Apellidos";
             // 
@@ -108,29 +109,33 @@ namespace Grupo02PCSAS
             // 
             this.lHola.AutoSize = true;
             this.lHola.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lHola.Location = new System.Drawing.Point(715, 110);
+            this.lHola.Location = new System.Drawing.Point(636, 88);
             this.lHola.Name = "lHola";
-            this.lHola.Size = new System.Drawing.Size(129, 55);
+            this.lHola.Size = new System.Drawing.Size(108, 46);
             this.lHola.TabIndex = 2;
             this.lHola.Text = "Hola,";
             this.lHola.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
             this.pictureBox2.ImageLocation = "E:\\Fotos\\usuario.PNG";
-            this.pictureBox2.Location = new System.Drawing.Point(1280, 71);
+            this.pictureBox2.Location = new System.Drawing.Point(1138, 57);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(159, 139);
+            this.pictureBox2.Size = new System.Drawing.Size(141, 111);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.pcsas;
             this.pictureBox1.ImageLocation = "E:\\Fotos\\pcsas.JPEG";
-            this.pictureBox1.Location = new System.Drawing.Point(3, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(-11, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(271, 271);
+            this.pictureBox1.Size = new System.Drawing.Size(241, 217);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -139,9 +144,9 @@ namespace Grupo02PCSAS
             // 
             this.lCurso.AutoSize = true;
             this.lCurso.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCurso.Location = new System.Drawing.Point(585, 343);
+            this.lCurso.Location = new System.Drawing.Point(520, 274);
             this.lCurso.Name = "lCurso";
-            this.lCurso.Size = new System.Drawing.Size(149, 55);
+            this.lCurso.Size = new System.Drawing.Size(125, 46);
             this.lCurso.TabIndex = 7;
             this.lCurso.Text = "Curso:";
             this.lCurso.Click += new System.EventHandler(this.label1_Click_1);
@@ -150,9 +155,9 @@ namespace Grupo02PCSAS
             // 
             this.lNombreCurso.AutoSize = true;
             this.lNombreCurso.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreCurso.Location = new System.Drawing.Point(731, 343);
+            this.lNombreCurso.Location = new System.Drawing.Point(650, 274);
             this.lNombreCurso.Name = "lNombreCurso";
-            this.lNombreCurso.Size = new System.Drawing.Size(179, 55);
+            this.lNombreCurso.Size = new System.Drawing.Size(150, 46);
             this.lNombreCurso.TabIndex = 7;
             this.lNombreCurso.Text = "Nombre";
             this.lNombreCurso.Click += new System.EventHandler(this.label1_Click_2);
@@ -161,9 +166,9 @@ namespace Grupo02PCSAS
             // 
             this.lNombreProfesorCurso.AutoSize = true;
             this.lNombreProfesorCurso.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreProfesorCurso.Location = new System.Drawing.Point(735, 433);
+            this.lNombreProfesorCurso.Location = new System.Drawing.Point(653, 346);
             this.lNombreProfesorCurso.Name = "lNombreProfesorCurso";
-            this.lNombreProfesorCurso.Size = new System.Drawing.Size(113, 36);
+            this.lNombreProfesorCurso.Size = new System.Drawing.Size(96, 29);
             this.lNombreProfesorCurso.TabIndex = 8;
             this.lNombreProfesorCurso.Text = "Nombre";
             // 
@@ -171,9 +176,9 @@ namespace Grupo02PCSAS
             // 
             this.lProfesorCurso.AutoSize = true;
             this.lProfesorCurso.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lProfesorCurso.Location = new System.Drawing.Point(601, 433);
+            this.lProfesorCurso.Location = new System.Drawing.Point(534, 346);
             this.lProfesorCurso.Name = "lProfesorCurso";
-            this.lProfesorCurso.Size = new System.Drawing.Size(128, 36);
+            this.lProfesorCurso.Size = new System.Drawing.Size(110, 29);
             this.lProfesorCurso.TabIndex = 9;
             this.lProfesorCurso.Text = "Profesor:";
             // 
@@ -181,28 +186,29 @@ namespace Grupo02PCSAS
             // 
             this.lListaUsuarios.AutoSize = true;
             this.lListaUsuarios.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lListaUsuarios.Location = new System.Drawing.Point(664, 510);
+            this.lListaUsuarios.Location = new System.Drawing.Point(590, 408);
             this.lListaUsuarios.Name = "lListaUsuarios";
-            this.lListaUsuarios.Size = new System.Drawing.Size(186, 36);
+            this.lListaUsuarios.Size = new System.Drawing.Size(163, 29);
             this.lListaUsuarios.TabIndex = 10;
             this.lListaUsuarios.Text = "Lista Usuarios";
             // 
             // dgvUsuarios
             // 
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(31, 574);
+            this.dgvUsuarios.Location = new System.Drawing.Point(28, 459);
+            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.RowHeadersWidth = 62;
             this.dgvUsuarios.RowTemplate.Height = 28;
-            this.dgvUsuarios.Size = new System.Drawing.Size(1401, 298);
+            this.dgvUsuarios.Size = new System.Drawing.Size(1245, 238);
             this.dgvUsuarios.TabIndex = 11;
             // 
             // PantallaListaUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1465, 1024);
+            this.ClientSize = new System.Drawing.Size(1302, 819);
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.lListaUsuarios);
             this.Controls.Add(this.lNombreProfesorCurso);
@@ -210,6 +216,7 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.lNombreCurso);
             this.Controls.Add(this.lCurso);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PantallaListaUsuarios";
             this.Text = "PantallaListaUSuarios";
             this.panel1.ResumeLayout(false);
