@@ -106,6 +106,12 @@
     <Compile Include="fPantallaPrincipalAlumno.Designer.cs">
       <DependentUpon>fPantallaPrincipalAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="fPrincipalProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPrincipalProfesor.Designer.cs">
+      <DependentUpon>fPrincipalProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="fRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fPantallaPrincipalAlumno.resx">
       <DependentUpon>fPantallaPrincipalAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPrincipalProfesor.resx">
+      <DependentUpon>fPrincipalProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fRegistro.resx">
       <DependentUpon>fRegistro.cs</DependentUpon>
