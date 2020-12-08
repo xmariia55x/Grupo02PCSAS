@@ -4,6 +4,7 @@ using System.Text;
 using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace Grupo02PCSAS
 {
@@ -22,8 +23,9 @@ namespace Grupo02PCSAS
         {
             List<string> res = new List<string>();
             string consultaSelect = "SELECT TOP 1 * FROM " + tabla + ";";
-            OleDbConnection conexion = new OleDbConnection(cadenaConexion);
-            OleDbCommand comando = new OleDbCommand(consultaSelect, conexion);
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = cadenaConexion;
+            MySqlCommand comando = new MySqlCommand(consultaSelect, conexion);
 
             conexion.Open();
             System.Data.Common.DbDataReader reader = comando.ExecuteReader();
@@ -43,8 +45,9 @@ namespace Grupo02PCSAS
             if (consultaSelect.ToUpper().IndexOf("DROP") > -1) return null;
 
             List<object[]> res = new List<object[]>();
-            OleDbConnection conexion = new OleDbConnection(cadenaConexion);
-            OleDbCommand comando = new OleDbCommand(consultaSelect, conexion);
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = cadenaConexion;
+            MySqlCommand comando = new MySqlCommand(consultaSelect, conexion);
 
             conexion.Open();
             System.Data.Common.DbDataReader reader = comando.ExecuteReader();
@@ -70,10 +73,10 @@ namespace Grupo02PCSAS
             if (consultaSelect.ToUpper().IndexOf("SELECT") == -1) return null;
             if (consultaSelect.ToUpper().IndexOf("DROP") > -1) return null;
 
-          
-            OleDbConnection conexion = new OleDbConnection(cadenaConexion);
-            OleDbCommand comando = new OleDbCommand(consultaSelect, conexion);
 
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = cadenaConexion;
+            MySqlCommand comando = new MySqlCommand(consultaSelect, conexion);
             conexion.Open();
             object res = comando.ExecuteScalar();
 
@@ -86,23 +89,27 @@ namespace Grupo02PCSAS
         public void Update(string cadenaUpdate)
         {
             if (cadenaUpdate.Length == 0) return;
-
-            OleDbConnection conexion = new OleDbConnection(cadenaConexion);
-            OleDbCommand comando = new OleDbCommand(cadenaUpdate, conexion);
-
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = cadenaConexion;
             conexion.Open();
+
+            MySqlCommand comando = new MySqlCommand(cadenaUpdate, conexion);
+
             comando.ExecuteNonQuery();
             conexion.Close();
+
         }
 
         public void Delete(string cadenaDelete)
         {
             if (cadenaDelete.Length == 0) return;
 
-            OleDbConnection conexion = new OleDbConnection(cadenaConexion);
-            OleDbCommand comando = new OleDbCommand(cadenaDelete, conexion);
-
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = cadenaConexion;
             conexion.Open();
+
+            MySqlCommand comando = new MySqlCommand(cadenaDelete, conexion);
+
             comando.ExecuteNonQuery();
             conexion.Close();
         }
@@ -110,12 +117,13 @@ namespace Grupo02PCSAS
         public void Insert(string cadenaInsert)
         {
             if (cadenaInsert.Length == 0) return;
-
-            OleDbConnection conexion = new OleDbConnection(cadenaConexion);
-
-            OleDbCommand comando = new OleDbCommand(cadenaInsert, conexion);
-
+            
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = cadenaConexion;
             conexion.Open();
+
+            MySqlCommand comando = new MySqlCommand(cadenaInsert, conexion);
+           
             comando.ExecuteNonQuery();
             conexion.Close();
         }
@@ -141,16 +149,13 @@ namespace Grupo02PCSAS
         public AccessDB(string pathBD)
         {
             origen_datos = pathBD;
-            cadenaConexion = "Provider=Microsoft.Jet.OLEDB.4.0; "
-                    + "Data Source=" + pathBD;
+            cadenaConexion = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
         }
 
         public AccessDB(string pathBD, string pwd)
         {
             origen_datos = pathBD;
-            cadenaConexion = "Provider=Microsoft.Jet.OLEDB.4.0; "
-                    + "Data Source=" + pathBD
-                    + ";Jet OLEDB:Database Password=" + pwd;
+            cadenaConexion = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
         }
     }
 
@@ -160,16 +165,13 @@ namespace Grupo02PCSAS
         public AccessDB2007(string pathBD)
         {
             origen_datos = pathBD;
-            cadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0; "
-                    + "Data Source=" + pathBD;
+            cadenaConexion = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
         }
 
         public AccessDB2007(string pathBD, string pwd)
         {
             origen_datos = pathBD;
-            cadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0; "
-                    + "Data Source=" + pathBD
-                    + ";Jet OLEDB:Database Password=" + pwd;
+            cadenaConexion = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
         }
     }
 
@@ -179,8 +181,7 @@ namespace Grupo02PCSAS
         {
             origen_datos = BD;
 
-            cadenaConexion = "Provider=SQLOLEDB;Data Source=" + server + "\\" + instancia
-                + ";Integrated Security=SSPI;Initial Catalog=" + BD;
+            cadenaConexion = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             cadenaConexionSQLNCLI = "Data Source=" + server + "\\" + instancia
                 + ";Integrated Security=SSPI;Initial Catalog=" + BD;
         }
@@ -189,8 +190,7 @@ namespace Grupo02PCSAS
         {
             origen_datos = BD;
 
-            cadenaConexion = "Provider=SQLOLEDB;Data Source=" + server + ";"
-                + "Integrated Security=SSPI;Initial Catalog=" + BD;
+            cadenaConexion = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             cadenaConexionSQLNCLI = "Data Source=" + server + ";"
                 + "Integrated Security=SSPI;Initial Catalog=" + BD;
         }
@@ -200,8 +200,7 @@ namespace Grupo02PCSAS
         {
             origen_datos = BD;
 
-            cadenaConexion = "Provider=SQLOLEDB;Data Source=" + server + "\\" + instancia
-                + "Initial Catalog=" + BD + ";User ID=" + user + ";Password=" + pwd + ";";
+            cadenaConexion = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             cadenaConexionSQLNCLI = "Data Source=" + server + "\\" + instancia
                 + "Initial Catalog=" + BD + ";User ID=" + user + ";Password=" + pwd + ";";
         }
@@ -210,8 +209,7 @@ namespace Grupo02PCSAS
         {
             origen_datos = BD;
 
-            cadenaConexion = "Provider=SQLOLEDB;Data Source=" + server + ";"
-                + "Initial Catalog=" + BD + ";User ID=" + user + ";Password=" + pwd + ";";
+            cadenaConexion = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             cadenaConexionSQLNCLI = "Data Source=" + server + ";"
                 + "Initial Catalog=" + BD + ";User ID=" + user + ";Password=" + pwd + ";";
         }

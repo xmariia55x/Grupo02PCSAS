@@ -37,7 +37,8 @@ namespace Grupo02PCSAS
 
             rolName = (string)tupla[0];
             rolDes = (string)tupla[1];
-            admin = (bool)tupla[2];
+            admin = (int)tupla[2] == 1 ? true : false;
+            //admin = (bool)tupla[2];
             
 
         }
