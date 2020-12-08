@@ -50,6 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actividad.cs" />
+    <Compile Include="ActividadesRealizadas.cs" />
+    <Compile Include="CursosRealizados.cs" />
+    <Compile Include="Debate.cs" />
     <Compile Include="fCrearActividadAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
