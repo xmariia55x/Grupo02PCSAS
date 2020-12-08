@@ -225,7 +225,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pngtree-black-simple-and-proportional-thin-line-png-image_2319135.jpg" />
+    <None Include="Resources\lineaSeparadora.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\pcsas.jpeg" />
+    <Content Include="Resources\usuario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
