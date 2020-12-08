@@ -31,5 +31,10 @@ namespace Grupo02PCSAS
         {
 
         }
-    }
+
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
