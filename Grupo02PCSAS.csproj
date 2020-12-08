@@ -76,6 +76,12 @@
     <Compile Include="fInfoCursoProfesor.Designer.cs">
       <DependentUpon>fInfoCursoProfesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="fDatosPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDatosPerfil.Designer.cs">
+      <DependentUpon>fDatosPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="fModificarCursos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,12 @@
     <Compile Include="PantallaPrincipalForo.Designer.cs">
       <DependentUpon>PantallaPrincipalForo.cs</DependentUpon>
     </Compile>
+    <Compile Include="fEditarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fEditarPerfil.Designer.cs">
+      <DependentUpon>fEditarPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fCrearActividadAdmin.resx">
@@ -140,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fInfoCursoProfesor.resx">
       <DependentUpon>fInfoCursoProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDatosPerfil.resx">
+      <DependentUpon>fDatosPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fModificarCursos.resx">
       <DependentUpon>fModificarCursos.cs</DependentUpon>
@@ -165,6 +180,9 @@
     <EmbeddedResource Include="PantallaPrincipalForo.resx">
       <DependentUpon>PantallaPrincipalForo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fEditarPerfil.resx">
+      <DependentUpon>fEditarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -173,6 +191,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -186,6 +205,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-black-simple-and-proportional-thin-line-png-image_2319135.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
