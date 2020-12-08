@@ -76,6 +76,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="fPrincipalProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPrincipalProfesor.Designer.cs">
+      <DependentUpon>fPrincipalProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallaBorrarCurso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPrincipalProfesor.resx">
+      <DependentUpon>fPrincipalProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaBorrarCurso.resx">
       <DependentUpon>PantallaBorrarCurso.cs</DependentUpon>
