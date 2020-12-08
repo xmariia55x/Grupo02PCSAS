@@ -58,6 +58,24 @@
     <Compile Include="fCrearCursoAdmin.Designer.cs">
       <DependentUpon>fCrearCursoAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="fInfoActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInfoActividad.Designer.cs">
+      <DependentUpon>fInfoActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fInfoCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInfoCurso.Designer.cs">
+      <DependentUpon>fInfoCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fInfoCursoProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInfoCursoProfesor.Designer.cs">
+      <DependentUpon>fInfoCursoProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="fDatosPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +88,41 @@
     <Compile Include="fModificarCursos.Designer.cs">
       <DependentUpon>fModificarCursos.cs</DependentUpon>
     </Compile>
+    <Compile Include="fNuevoDebateForo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNuevoDebateForo.Designer.cs">
+      <DependentUpon>fNuevoDebateForo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRegistro.Designer.cs">
+      <DependentUpon>fRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaBorrarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaBorrarCurso.Designer.cs">
+      <DependentUpon>PantallaBorrarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaListaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaListaUsuarios.Designer.cs">
+      <DependentUpon>PantallaListaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaPrincipalForo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaPrincipalForo.Designer.cs">
+      <DependentUpon>PantallaPrincipalForo.cs</DependentUpon>
     </Compile>
     <Compile Include="fEditarPerfil.cs">
       <SubType>Form</SubType>
@@ -90,14 +138,38 @@
     <EmbeddedResource Include="fCrearCursoAdmin.resx">
       <DependentUpon>fCrearCursoAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fInfoActividad.resx">
+      <DependentUpon>fInfoActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fInfoCurso.resx">
+      <DependentUpon>fInfoCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fInfoCursoProfesor.resx">
+      <DependentUpon>fInfoCursoProfesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fDatosPerfil.resx">
       <DependentUpon>fDatosPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fModificarCursos.resx">
       <DependentUpon>fModificarCursos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fNuevoDebateForo.resx">
+      <DependentUpon>fNuevoDebateForo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRegistro.resx">
+      <DependentUpon>fRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaBorrarCurso.resx">
+      <DependentUpon>PantallaBorrarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaListaUsuarios.resx">
+      <DependentUpon>PantallaListaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaPrincipalForo.resx">
+      <DependentUpon>PantallaPrincipalForo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fEditarPerfil.resx">
       <DependentUpon>fEditarPerfil.cs</DependentUpon>
