@@ -251,7 +251,8 @@ namespace Grupo02PCSAS
             this.textBox4.Location = new System.Drawing.Point(449, 822);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(217, 26);
+            this.textBox4.PasswordChar = '*';
+            this.textBox4.Size = new System.Drawing.Size(193, 22);
             this.textBox4.TabIndex = 38;
             // 
             // label9
@@ -269,7 +270,8 @@ namespace Grupo02PCSAS
             this.textBox5.Location = new System.Drawing.Point(447, 871);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(217, 26);
+            this.textBox5.PasswordChar = '*';
+            this.textBox5.Size = new System.Drawing.Size(193, 22);
             this.textBox5.TabIndex = 40;
             // 
             // bGuardarCambios
