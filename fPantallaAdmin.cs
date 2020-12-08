@@ -32,9 +32,17 @@ namespace Grupo02PCSAS
 
         private void bCrearActividad_Click(object sender, EventArgs e)
         {
-            fPrincipalProfesor profesor = new fPrincipalProfesor();
+            fCrearActividadAdmin actividad = new fCrearActividadAdmin();
             this.Visible = false;
-            profesor.ShowDialog();
+            actividad.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void bCrearCurso_Click(object sender, EventArgs e)
+        {
+            fCrearCursoAdmin curso = new fCrearCursoAdmin();
+            this.Visible = false;
+            curso.ShowDialog();
             this.Visible = true;
         }
     }

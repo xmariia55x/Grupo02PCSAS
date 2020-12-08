@@ -202,6 +202,7 @@ namespace Grupo02PCSAS
             this.bCrearCurso.TabIndex = 52;
             this.bCrearCurso.Text = "Crear Curso";
             this.bCrearCurso.UseVisualStyleBackColor = false;
+            this.bCrearCurso.Click += new System.EventHandler(this.bCrearCurso_Click);
             // 
             // fPantallaAdmin
             // 
