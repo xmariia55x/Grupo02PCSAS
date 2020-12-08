@@ -10,16 +10,19 @@ using System.Windows.Forms;
 
 namespace Grupo02PCSAS
 {
-    public partial class fPantallaAdmin : Form
+    public partial class fInicioAplicacion : Form
     {
-        public fPantallaAdmin()
+        public fInicioAplicacion()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            fRegistro registro = new fRegistro();
+            this.Visible = false;
+            registro.ShowDialog();
+            this.Visible = true;
         }
     }
 }
