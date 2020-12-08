@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Grupo02PCSAS
 {
-    public partial class Form1 : Form
+    public partial class fInicioSesion : Form
     {
-        public Form1()
+        public fInicioSesion()
         {
             InitializeComponent();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
