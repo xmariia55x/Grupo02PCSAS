@@ -70,6 +70,12 @@ namespace Grupo02PCSAS
             this.Close();
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fPrincipalProfesor profe = new fPrincipalProfesor();
+            this.Visible = false;
+            profe.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

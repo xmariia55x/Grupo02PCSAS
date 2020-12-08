@@ -41,5 +41,18 @@ namespace Grupo02PCSAS
         {
 
         }
+
+        private void bAniadirDebate_Click(object sender, EventArgs e)
+        {
+            fNuevoDebateForo nuevoDebate = new fNuevoDebateForo();
+            this.Visible = false;
+            nuevoDebate.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

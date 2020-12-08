@@ -21,5 +21,29 @@ namespace Grupo02PCSAS
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datosp = new fDatosPerfil();
+            this.Visible = false;
+            datosp.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void bCrearActividad_Click(object sender, EventArgs e)
+        {
+            fCrearActividadAdmin actividad = new fCrearActividadAdmin();
+            this.Visible = false;
+            actividad.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void bCrearCurso_Click(object sender, EventArgs e)
+        {
+            fCrearCursoAdmin curso = new fCrearCursoAdmin();
+            this.Visible = false;
+            curso.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

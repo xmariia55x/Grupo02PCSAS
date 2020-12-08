@@ -22,5 +22,31 @@ namespace Grupo02PCSAS
         {
 
         }
+
+        private void bAccederAlForo_Click(object sender, EventArgs e)
+        {
+            PantallaPrincipalForo foro = new PantallaPrincipalForo();
+            this.Visible = false;
+            foro.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void bEventosInscritos_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bCrearCurso_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datosPerfil = new fDatosPerfil();
+            this.Visible = false;
+            datosPerfil.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

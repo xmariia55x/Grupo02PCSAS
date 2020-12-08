@@ -21,5 +21,20 @@ namespace Grupo02PCSAS
         {
 
         }
+
+        private void bCancelarDebate_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void fNuevoDebateForo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
