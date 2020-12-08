@@ -124,7 +124,8 @@ namespace Grupo02PCSAS
             // 
             // pictureBox2
             // 
-            this.pictureBox2.ImageLocation = "E:\\Fotos\\usuario.PNg";
+            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
+            this.pictureBox2.ImageLocation = "";
             this.pictureBox2.Location = new System.Drawing.Point(1261, 47);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(186, 143);
@@ -134,7 +135,8 @@ namespace Grupo02PCSAS
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ImageLocation = "E:\\Fotos\\pcsas.JPEG";
+            this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.pcsas;
+            this.pictureBox1.ImageLocation = "";
             this.pictureBox1.Location = new System.Drawing.Point(-1, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(276, 271);
