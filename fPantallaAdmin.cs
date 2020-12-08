@@ -16,5 +16,21 @@ namespace Grupo02PCSAS
         {
             InitializeComponent();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datosp = new fDatosPerfil();
+            this.Visible = false;
+            datosp.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void bCrearActividad_Click(object sender, EventArgs e)
+        {
+            fPrincipalProfesor profesor = new fPrincipalProfesor();
+            this.Visible = false;
+            profesor.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

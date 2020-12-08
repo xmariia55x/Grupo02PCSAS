@@ -41,5 +41,29 @@ namespace Grupo02PCSAS
         {
 
         }
+
+        private void lMiPerfil_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datos = new fDatosPerfil();
+            this.Visible = false;
+            datos.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datos = new fDatosPerfil();
+            this.Visible = false;
+            datos.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PantallaPrincipalForo foro = new PantallaPrincipalForo();
+            this.Visible = false;
+            foro.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

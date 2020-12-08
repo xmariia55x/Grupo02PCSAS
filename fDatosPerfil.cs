@@ -48,5 +48,18 @@ namespace Grupo02PCSAS
         {
 
         }
+
+        private void bEditarPerfil_Click(object sender, EventArgs e)
+        {
+			fEditarPerfil edicion = new fEditarPerfil();
+			this.Visible = false;
+			edicion.ShowDialog();
+			this.Visible = true;
+		}
+
+        private void bAtras_Click(object sender, EventArgs e)
+        {
+			this.Close();
+        }
     }
 }

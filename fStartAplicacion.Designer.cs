@@ -33,6 +33,10 @@ namespace Grupo02PCSAS
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bAlumno = new System.Windows.Forms.Button();
+            this.bProfesor = new System.Windows.Forms.Button();
+            this.bEntidad = new System.Windows.Forms.Button();
+            this.bAdmin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,12 +77,68 @@ namespace Grupo02PCSAS
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // bAlumno
+            // 
+            this.bAlumno.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bAlumno.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAlumno.Location = new System.Drawing.Point(585, 138);
+            this.bAlumno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bAlumno.Name = "bAlumno";
+            this.bAlumno.Size = new System.Drawing.Size(179, 61);
+            this.bAlumno.TabIndex = 3;
+            this.bAlumno.Text = "Alumno";
+            this.bAlumno.UseVisualStyleBackColor = false;
+            this.bAlumno.Click += new System.EventHandler(this.bAlumno_Click);
+            // 
+            // bProfesor
+            // 
+            this.bProfesor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bProfesor.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bProfesor.Location = new System.Drawing.Point(585, 258);
+            this.bProfesor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bProfesor.Name = "bProfesor";
+            this.bProfesor.Size = new System.Drawing.Size(179, 61);
+            this.bProfesor.TabIndex = 4;
+            this.bProfesor.Text = "Profesor";
+            this.bProfesor.UseVisualStyleBackColor = false;
+            this.bProfesor.Click += new System.EventHandler(this.bProfesor_Click);
+            // 
+            // bEntidad
+            // 
+            this.bEntidad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bEntidad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bEntidad.Location = new System.Drawing.Point(585, 364);
+            this.bEntidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bEntidad.Name = "bEntidad";
+            this.bEntidad.Size = new System.Drawing.Size(179, 61);
+            this.bEntidad.TabIndex = 5;
+            this.bEntidad.Text = "Entidad";
+            this.bEntidad.UseVisualStyleBackColor = false;
+            this.bEntidad.Click += new System.EventHandler(this.bEntidad_Click);
+            // 
+            // bAdmin
+            // 
+            this.bAdmin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bAdmin.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAdmin.Location = new System.Drawing.Point(585, 480);
+            this.bAdmin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bAdmin.Name = "bAdmin";
+            this.bAdmin.Size = new System.Drawing.Size(179, 61);
+            this.bAdmin.TabIndex = 6;
+            this.bAdmin.Text = "Admin";
+            this.bAdmin.UseVisualStyleBackColor = false;
+            this.bAdmin.Click += new System.EventHandler(this.bAdmin_Click);
+            // 
             // fStartAplicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(415, 626);
+            this.ClientSize = new System.Drawing.Size(910, 726);
+            this.Controls.Add(this.bAdmin);
+            this.Controls.Add(this.bEntidad);
+            this.Controls.Add(this.bProfesor);
+            this.Controls.Add(this.bAlumno);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -97,6 +157,10 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button bAlumno;
+        private System.Windows.Forms.Button bProfesor;
+        private System.Windows.Forms.Button bEntidad;
+        private System.Windows.Forms.Button bAdmin;
     }
 }
 

@@ -32,5 +32,34 @@ namespace Grupo02PCSAS
             inicio.ShowDialog();
             this.Visible = true;
         }
+
+        private void bAlumno_Click(object sender, EventArgs e)
+        {
+            fPantallaPrincipalAlumno alumno = new fPantallaPrincipalAlumno();
+            this.Visible = false;
+            alumno.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void bProfesor_Click(object sender, EventArgs e)
+        {
+            fPrincipalProfesor profesor = new fPrincipalProfesor();
+            this.Visible = false;
+            profesor.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void bEntidad_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void bAdmin_Click(object sender, EventArgs e)
+        {
+            fPantallaAdmin admin = new fPantallaAdmin();
+            this.Visible = false;
+            admin.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

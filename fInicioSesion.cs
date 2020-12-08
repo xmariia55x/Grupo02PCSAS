@@ -26,5 +26,14 @@ namespace Grupo02PCSAS
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fPantallaPrincipalAlumno alumno = new fPantallaPrincipalAlumno();
+            this.Visible = false;
+            alumno.ShowDialog();
+            this.Close();
+
+        }
     }
 }
