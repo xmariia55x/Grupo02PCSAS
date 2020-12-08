@@ -58,6 +58,30 @@
     <Compile Include="fCrearCursoAdmin.Designer.cs">
       <DependentUpon>fCrearCursoAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="fInfoActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInfoActividad.Designer.cs">
+      <DependentUpon>fInfoActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fInfoCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInfoCurso.Designer.cs">
+      <DependentUpon>fInfoCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fInfoCursoProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInfoCursoProfesor.Designer.cs">
+      <DependentUpon>fInfoCursoProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDatosPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDatosPerfil.Designer.cs">
+      <DependentUpon>fDatosPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="fModificarCursos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +99,24 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fPantallaPrincipalAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPantallaPrincipalAlumno.Designer.cs">
+      <DependentUpon>fPantallaPrincipalAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fPantallaPrincipalAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPantallaPrincipalAdmin.Designer.cs">
+      <DependentUpon>fPantallaPrincipalAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRegistro.Designer.cs">
+      <DependentUpon>fRegistro.cs</DependentUpon>
     </Compile>
     <Compile Include="fPrincipalProfesor.cs">
       <SubType>Form</SubType>
@@ -100,6 +142,12 @@
     <Compile Include="PantallaPrincipalForo.Designer.cs">
       <DependentUpon>PantallaPrincipalForo.cs</DependentUpon>
     </Compile>
+    <Compile Include="fEditarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fEditarPerfil.Designer.cs">
+      <DependentUpon>fEditarPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fCrearActividadAdmin.resx">
@@ -107,6 +155,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fCrearCursoAdmin.resx">
       <DependentUpon>fCrearCursoAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fInfoActividad.resx">
+      <DependentUpon>fInfoActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fInfoCurso.resx">
+      <DependentUpon>fInfoCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fInfoCursoProfesor.resx">
+      <DependentUpon>fInfoCursoProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDatosPerfil.resx">
+      <DependentUpon>fDatosPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fModificarCursos.resx">
       <DependentUpon>fModificarCursos.cs</DependentUpon>
@@ -116,6 +176,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPantallaPrincipalAlumno.resx">
+      <DependentUpon>fPantallaPrincipalAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPantallaPrincipalAdmin.resx">
+      <DependentUpon>fPantallaPrincipalAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRegistro.resx">
+      <DependentUpon>fRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fPrincipalProfesor.resx">
       <DependentUpon>fPrincipalProfesor.cs</DependentUpon>
@@ -129,6 +198,9 @@
     <EmbeddedResource Include="PantallaPrincipalForo.resx">
       <DependentUpon>PantallaPrincipalForo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fEditarPerfil.resx">
+      <DependentUpon>fEditarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -137,6 +209,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -150,6 +223,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-black-simple-and-proportional-thin-line-png-image_2319135.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
