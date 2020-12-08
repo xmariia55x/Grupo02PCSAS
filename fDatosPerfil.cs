@@ -22,11 +22,6 @@ namespace Grupo02PCSAS
 
 		}
 
-		private void pictureBox2_Click(object sender, EventArgs e)
-		{
-
-		}
-
 		private void fDatosPerfil_Paint(object sender, PaintEventArgs e)
 		{
 			Graphics l = e.Graphics;

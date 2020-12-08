@@ -78,7 +78,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BackColor = System.Drawing.Color.Beige;
             this.panel5.Controls.Add(this.label20);
             this.panel5.Location = new System.Drawing.Point(0, 651);
             this.panel5.Name = "panel5";
@@ -97,7 +97,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.Beige;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label21);
             this.panel4.Controls.Add(this.lFechaFin);
@@ -282,7 +282,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.Beige;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.lDescripcion);
             this.panel3.Controls.Add(this.label10);
@@ -312,7 +312,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.Beige;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.lInscrito);
@@ -377,7 +377,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.PapayaWhip;
+            this.panel1.BackColor = System.Drawing.Color.Beige;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox2);

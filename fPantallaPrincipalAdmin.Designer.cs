@@ -60,7 +60,7 @@ namespace Grupo02PCSAS
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1469, 174);
+            this.panel1.Size = new System.Drawing.Size(1469, 204);
             this.panel1.TabIndex = 1;
             // 
             // label5
@@ -75,6 +75,7 @@ namespace Grupo02PCSAS
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
             this.pictureBox2.Location = new System.Drawing.Point(1277, 11);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 103);
@@ -124,9 +125,11 @@ namespace Grupo02PCSAS
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.pcsas;
+            this.pictureBox1.ImageLocation = "E:\\Fotos\\pcsas.JPEG";
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -59);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(297, 173);
+            this.pictureBox1.Size = new System.Drawing.Size(285, 280);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;

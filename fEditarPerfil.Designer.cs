@@ -53,16 +53,18 @@ namespace Grupo02PCSAS
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.bGuardarCambios = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.label4.Location = new System.Drawing.Point(1259, 336);
+            this.label4.Location = new System.Drawing.Point(1357, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 23);
             this.label4.TabIndex = 17;
@@ -72,7 +74,7 @@ namespace Grupo02PCSAS
             // 
             this.lRol.AutoSize = true;
             this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.lRol.Location = new System.Drawing.Point(1088, 336);
+            this.lRol.Location = new System.Drawing.Point(702, 175);
             this.lRol.Name = "lRol";
             this.lRol.Size = new System.Drawing.Size(66, 23);
             this.lRol.TabIndex = 16;
@@ -82,7 +84,7 @@ namespace Grupo02PCSAS
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
-            this.label2.Location = new System.Drawing.Point(1043, 336);
+            this.label2.Location = new System.Drawing.Point(657, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 23);
             this.label2.TabIndex = 15;
@@ -131,7 +133,7 @@ namespace Grupo02PCSAS
             this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 258);
+            this.pictureBox1.Size = new System.Drawing.Size(261, 211);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -276,6 +278,7 @@ namespace Grupo02PCSAS
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lNombre);
@@ -285,10 +288,22 @@ namespace Grupo02PCSAS
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1477, 415);
+            this.panel1.Size = new System.Drawing.Size(1477, 241);
             this.panel1.TabIndex = 42;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // Form2
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
+            this.pictureBox2.Location = new System.Drawing.Point(1342, 46);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 103);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // fEditarPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -310,12 +325,13 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label10);
-            this.Name = "Form2";
+            this.Name = "fEditarPerfil";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,5 +362,6 @@ namespace Grupo02PCSAS
 		private System.Windows.Forms.TextBox textBox5;
 		private System.Windows.Forms.Button bGuardarCambios;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
