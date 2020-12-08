@@ -36,8 +36,8 @@ namespace Grupo02PCSAS
             this.lNombreApellidos = new System.Windows.Forms.Label();
             this.lHola = new System.Windows.Forms.Label();
             this.lMiPerfil = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbUsuario = new System.Windows.Forms.PictureBox();
+            this.pbPcsas = new System.Windows.Forms.PictureBox();
             this.lCursos = new System.Windows.Forms.Label();
             this.bAtras = new System.Windows.Forms.Button();
             this.dgvMisCursos = new System.Windows.Forms.DataGridView();
@@ -46,8 +46,8 @@ namespace Grupo02PCSAS
             this.bCrearCurso = new System.Windows.Forms.Button();
             this.bBasura = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPcsas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,8 +59,8 @@ namespace Grupo02PCSAS
             this.panel1.Controls.Add(this.lNombreApellidos);
             this.panel1.Controls.Add(this.lHola);
             this.panel1.Controls.Add(this.lMiPerfil);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pbUsuario);
+            this.panel1.Controls.Add(this.pbPcsas);
             this.panel1.Location = new System.Drawing.Point(-5, -8);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1477, 276);
@@ -117,25 +117,26 @@ namespace Grupo02PCSAS
             this.lMiPerfil.TabIndex = 2;
             this.lMiPerfil.Text = "Mi perfil";
             // 
-            // pictureBox2
+            // pbUsuario
             // 
-            this.pictureBox2.ImageLocation = "E:\\Fotos\\usuario.PNG";
-            this.pictureBox2.Location = new System.Drawing.Point(1277, 54);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(144, 151);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.pbUsuario.ImageLocation = "C:\\Users\\Javi\\Source\\Repos\\xmariia55x\\Grupo02PCSAS\\Resources\\usuario.png";
+            this.pbUsuario.Location = new System.Drawing.Point(1277, 54);
+            this.pbUsuario.Name = "pbUsuario";
+            this.pbUsuario.Size = new System.Drawing.Size(144, 151);
+            this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbUsuario.TabIndex = 1;
+            this.pbUsuario.TabStop = false;
             // 
-            // pictureBox1
+            // pbPcsas
             // 
-            this.pictureBox1.ImageLocation = "E:\\Fotos\\pcsas.JPEG";
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(276, 271);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbPcsas.ImageLocation = "E:\\Fotos\\pcsas.JPEG";
+            this.pbPcsas.Location = new System.Drawing.Point(3, 3);
+            this.pbPcsas.Name = "pbPcsas";
+            this.pbPcsas.Size = new System.Drawing.Size(276, 271);
+            this.pbPcsas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPcsas.TabIndex = 0;
+            this.pbPcsas.TabStop = false;
+            this.pbPcsas.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lCursos
             // 
@@ -231,8 +232,8 @@ namespace Grupo02PCSAS
             this.Text = "PantallaBorrarCurso";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPcsas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -247,8 +248,8 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label lNombreApellidos;
         private System.Windows.Forms.Label lHola;
         private System.Windows.Forms.Label lMiPerfil;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbUsuario;
+        private System.Windows.Forms.PictureBox pbPcsas;
         private System.Windows.Forms.Label lCursos;
         private System.Windows.Forms.Button bAtras;
         private System.Windows.Forms.DataGridView dgvMisCursos;

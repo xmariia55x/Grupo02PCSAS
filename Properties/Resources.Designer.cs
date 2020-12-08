@@ -63,9 +63,29 @@ namespace Grupo02PCSAS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pngtree_black_simple_and_proportional_thin_line_png_image_2319135 {
+        internal static System.Drawing.Bitmap lineaSeparadora {
             get {
-                object obj = ResourceManager.GetObject("pngtree-black-simple-and-proportional-thin-line-png-image_2319135", resourceCulture);
+                object obj = ResourceManager.GetObject("lineaSeparadora", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pcsas {
+            get {
+                object obj = ResourceManager.GetObject("pcsas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuario {
+            get {
+                object obj = ResourceManager.GetObject("usuario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

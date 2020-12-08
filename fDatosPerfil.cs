@@ -48,5 +48,10 @@ namespace Grupo02PCSAS
 		{
 			MessageBox.Show("ALERTA: ¿ESTÁ SEGURO QUE DESEA BORRAR EL PERFIL?");
 		}
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

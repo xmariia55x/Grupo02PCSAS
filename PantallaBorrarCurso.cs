@@ -16,6 +16,7 @@ namespace Grupo02PCSAS
         {
             InitializeComponent();
             bBasura.Visible = true;
+            pbPcsas.Image = Properties.Resources.pcsas;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,6 +35,11 @@ namespace Grupo02PCSAS
             {
 
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
