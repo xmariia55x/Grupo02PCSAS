@@ -15,14 +15,14 @@ namespace Grupo02PCSAS
         public fRegistro()
         {
             InitializeComponent();
-            pAlumno.Visible = false;
+            pAlumno.Visible = true;
             pProfesor.Visible = false;
             pOng.Visible = false;
         }
 
         private void fRegistro_Load(object sender, EventArgs e)
         {
-            pAlumno.Visible = false;
+            pAlumno.Visible = true;
             pProfesor.Visible = false;
             pOng.Visible = false;
         }
@@ -59,5 +59,12 @@ namespace Grupo02PCSAS
             pAlumno.Visible = false;
             pProfesor.Visible = false;
         }
+
+        private void bAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+       
     }
 }

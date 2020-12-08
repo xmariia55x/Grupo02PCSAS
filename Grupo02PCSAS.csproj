@@ -86,6 +86,12 @@
     <Compile Include="fDatosPerfil.Designer.cs">
       <DependentUpon>fDatosPerfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="fInicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInicioSesion.Designer.cs">
+      <DependentUpon>fInicioSesion.cs</DependentUpon>
+    </Compile>
     <Compile Include="fModificarCursos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,11 +104,11 @@
     <Compile Include="fNuevoDebateForo.Designer.cs">
       <DependentUpon>fNuevoDebateForo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="fStartAplicacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="fStartAplicacion.Designer.cs">
+      <DependentUpon>fStartAplicacion.cs</DependentUpon>
     </Compile>
     <Compile Include="fPantallaAdmin.cs">
       <SubType>Form</SubType>
@@ -172,14 +178,17 @@
     <EmbeddedResource Include="fDatosPerfil.resx">
       <DependentUpon>fDatosPerfil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fInicioSesion.resx">
+      <DependentUpon>fInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fModificarCursos.resx">
       <DependentUpon>fModificarCursos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fNuevoDebateForo.resx">
       <DependentUpon>fNuevoDebateForo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="fStartAplicacion.resx">
+      <DependentUpon>fStartAplicacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fPantallaAdmin.resx">
       <DependentUpon>fPantallaAdmin.cs</DependentUpon>
@@ -232,6 +241,7 @@
     <None Include="Resources\lineaSeparadora.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Atras1.png" />
     <Content Include="Resources\pcsas.jpeg" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
