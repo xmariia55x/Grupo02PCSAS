@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BDLibrary.cs" />
+    <Compile Include="Curso.cs" />
+    <Compile Include="Rol.cs" />
+    <Compile Include="Usuario.cs" />
     <Compile Include="fCrearActividadAdmin.cs">
       <SubType>Form</SubType>
     </Compile>

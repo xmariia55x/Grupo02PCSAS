@@ -244,6 +244,7 @@ namespace Grupo02PCSAS
             // 
             this.textBox4.Location = new System.Drawing.Point(399, 658);
             this.textBox4.Name = "textBox4";
+            this.textBox4.PasswordChar = '*';
             this.textBox4.Size = new System.Drawing.Size(193, 22);
             this.textBox4.TabIndex = 38;
             // 
@@ -261,6 +262,7 @@ namespace Grupo02PCSAS
             // 
             this.textBox5.Location = new System.Drawing.Point(397, 697);
             this.textBox5.Name = "textBox5";
+            this.textBox5.PasswordChar = '*';
             this.textBox5.Size = new System.Drawing.Size(193, 22);
             this.textBox5.TabIndex = 40;
             // 
