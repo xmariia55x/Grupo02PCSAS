@@ -114,5 +114,17 @@ namespace Grupo02PCSAS
             this.niu = null;
             this.rol = null;
         }
+
+        public override bool Equals(object obj)
+        {
+            return (obj is Usuario) && (this.correoUsuario.Equals(((Usuario)obj).correoUsuario));
+        }
+
+        public override int GetHashCode()
+        {
+            return correoUsuario.GetHashCode();
+        }
+
+
     }
 }

@@ -190,6 +190,18 @@ namespace Grupo02PCSAS
             this.online = false;
 
         }
+
+        public override bool Equals(object obj)
+        {
+            return (obj is Curso) && (idCurso.Equals(((Curso)obj).idCurso));
+        }
+
+        public override int GetHashCode()
+        {
+            return idCurso.GetHashCode();
+        }
+
+
     }
     
 
