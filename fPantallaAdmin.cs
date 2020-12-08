@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Grupo02PCSAS
 {
-    public partial class fPantallaPrincipalAdmin : Form
+    public partial class fPantallaAdmin : Form
     {
-        public fPantallaPrincipalAdmin()
+        public fPantallaAdmin()
         {
             InitializeComponent();
         }

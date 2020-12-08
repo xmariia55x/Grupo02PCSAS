@@ -100,17 +100,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="fPantallaAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPantallaAdmin.Designer.cs">
+      <DependentUpon>fPantallaAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="fPantallaPrincipalAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fPantallaPrincipalAlumno.Designer.cs">
       <DependentUpon>fPantallaPrincipalAlumno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fPantallaPrincipalAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fPantallaPrincipalAdmin.Designer.cs">
-      <DependentUpon>fPantallaPrincipalAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="fPrincipalProfesor.cs">
       <SubType>Form</SubType>
@@ -177,11 +177,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fPantallaAdmin.resx">
+      <DependentUpon>fPantallaAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fPantallaPrincipalAlumno.resx">
       <DependentUpon>fPantallaPrincipalAlumno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fPantallaPrincipalAdmin.resx">
-      <DependentUpon>fPantallaPrincipalAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fPrincipalProfesor.resx">
       <DependentUpon>fPrincipalProfesor.cs</DependentUpon>
