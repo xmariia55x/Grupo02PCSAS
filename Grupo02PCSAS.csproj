@@ -98,11 +98,11 @@
     <Compile Include="fNuevoDebateForo.Designer.cs">
       <DependentUpon>fNuevoDebateForo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="fInicioAplicacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="fInicioAplicacion.Designer.cs">
+      <DependentUpon>fInicioAplicacion.cs</DependentUpon>
     </Compile>
     <Compile Include="fPantallaAdmin.cs">
       <SubType>Form</SubType>
@@ -178,8 +178,8 @@
     <EmbeddedResource Include="fNuevoDebateForo.resx">
       <DependentUpon>fNuevoDebateForo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="fInicioAplicacion.resx">
+      <DependentUpon>fInicioAplicacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fPantallaAdmin.resx">
       <DependentUpon>fPantallaAdmin.cs</DependentUpon>
@@ -208,17 +208,11 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
