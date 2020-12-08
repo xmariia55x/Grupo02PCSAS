@@ -89,7 +89,7 @@ namespace Grupo02PCSAS
             this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(261, 211);
+            this.pictureBox1.Size = new System.Drawing.Size(285, 241);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -191,7 +191,7 @@ namespace Grupo02PCSAS
             this.bEventosInscritos.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bEventosInscritos.Location = new System.Drawing.Point(663, 674);
             this.bEventosInscritos.Name = "bEventosInscritos";
-            this.bEventosInscritos.Size = new System.Drawing.Size(181, 63);
+            this.bEventosInscritos.Size = new System.Drawing.Size(198, 63);
             this.bEventosInscritos.TabIndex = 50;
             this.bEventosInscritos.Text = "Eventos inscritos";
             this.bEventosInscritos.UseVisualStyleBackColor = false;
