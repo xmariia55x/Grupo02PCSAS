@@ -25,7 +25,8 @@ namespace Grupo02PCSAS
             //Application.Run(new PantallaBorrarCurso());
             //Application.Run(new PantallaBorrarCurso());
             //Application.Run(new fInfoCursoProfesor());
-            Application.Run(new fPrincipalProfesor());
+            //Application.Run(new fPrincipalProfesor());
+            Application.Run(new fPantallaAdmin());
             //Commit de maria
         }
     }
