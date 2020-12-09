@@ -35,7 +35,7 @@
   <ItemGroup>
     <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\PrivateAssemblies\MySql.Data.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\PrivateAssemblies\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,6 +53,12 @@
     <Compile Include="BDLibrary.cs" />
     <Compile Include="Curso.cs" />
     <Compile Include="Error.cs" />
+    <Compile Include="fPrincipalOng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPrincipalOng.Designer.cs">
+      <DependentUpon>fPrincipalOng.cs</DependentUpon>
+    </Compile>
     <Compile Include="Rol.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Actividad.cs" />
@@ -195,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fNuevoDebateForo.resx">
       <DependentUpon>fNuevoDebateForo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPrincipalOng.resx">
+      <DependentUpon>fPrincipalOng.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fStartAplicacion.resx">
       <DependentUpon>fStartAplicacion.cs</DependentUpon>
