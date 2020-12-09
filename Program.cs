@@ -38,7 +38,7 @@ namespace Grupo02PCSAS
             //Console.WriteLine(usuario.ToString());
             //Application.Run(new fRegistro());
             //Commit de maria
-            Application.Run(new fPrincipalOng());
+            Application.Run(new fRegistro());
         }
     }
 
