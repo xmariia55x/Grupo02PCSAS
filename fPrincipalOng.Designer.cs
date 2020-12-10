@@ -42,9 +42,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.bInformación = new System.Windows.Forms.Button();
-            this.bModificar = new System.Windows.Forms.Button();
-            this.bBorrar = new System.Windows.Forms.Button();
-            this.bParticipantes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,7 +50,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Beige;
+            this.panel1.BackColor = System.Drawing.Color.Bisque;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -194,48 +191,12 @@
             this.bInformación.Text = "Información";
             this.bInformación.UseVisualStyleBackColor = false;
             // 
-            // bModificar
-            // 
-            this.bModificar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bModificar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bModificar.Location = new System.Drawing.Point(1235, 561);
-            this.bModificar.Name = "bModificar";
-            this.bModificar.Size = new System.Drawing.Size(181, 63);
-            this.bModificar.TabIndex = 57;
-            this.bModificar.Text = "Modificar";
-            this.bModificar.UseVisualStyleBackColor = false;
-            // 
-            // bBorrar
-            // 
-            this.bBorrar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bBorrar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBorrar.Location = new System.Drawing.Point(1235, 658);
-            this.bBorrar.Name = "bBorrar";
-            this.bBorrar.Size = new System.Drawing.Size(181, 63);
-            this.bBorrar.TabIndex = 58;
-            this.bBorrar.Text = "Borrar";
-            this.bBorrar.UseVisualStyleBackColor = false;
-            // 
-            // bParticipantes
-            // 
-            this.bParticipantes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bParticipantes.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bParticipantes.Location = new System.Drawing.Point(1235, 371);
-            this.bParticipantes.Name = "bParticipantes";
-            this.bParticipantes.Size = new System.Drawing.Size(181, 63);
-            this.bParticipantes.TabIndex = 59;
-            this.bParticipantes.Text = "Ver participantes";
-            this.bParticipantes.UseVisualStyleBackColor = false;
-            // 
             // fPrincipalOng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1469, 1033);
-            this.Controls.Add(this.bParticipantes);
-            this.Controls.Add(this.bBorrar);
-            this.Controls.Add(this.bModificar);
             this.Controls.Add(this.bInformación);
             this.Controls.Add(this.bCrearActividad);
             this.Controls.Add(this.bAccederAlForo);
@@ -270,8 +231,5 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button bInformación;
-        private System.Windows.Forms.Button bModificar;
-        private System.Windows.Forms.Button bBorrar;
-        private System.Windows.Forms.Button bParticipantes;
     }
 }

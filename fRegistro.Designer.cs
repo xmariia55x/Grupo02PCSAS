@@ -64,12 +64,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tNombreAlumno = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.bAtras = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pAtras = new System.Windows.Forms.PictureBox();
             this.pOng.SuspendLayout();
             this.pProfesor.SuspendLayout();
             this.pAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pAtras)).BeginInit();
             this.SuspendLayout();
             // 
             // pOng
@@ -421,18 +422,6 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Nombre completo";
             // 
-            // bAtras
-            // 
-            this.bAtras.BackColor = System.Drawing.Color.Transparent;
-            this.bAtras.Image = global::Grupo02PCSAS.Properties.Resources.Atras;
-            this.bAtras.Location = new System.Drawing.Point(360, 152);
-            this.bAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bAtras.Name = "bAtras";
-            this.bAtras.Size = new System.Drawing.Size(89, 80);
-            this.bAtras.TabIndex = 29;
-            this.bAtras.UseVisualStyleBackColor = false;
-            this.bAtras.Click += new System.EventHandler(this.bAtras_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -443,13 +432,23 @@
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
+            // pAtras
+            // 
+            this.pAtras.Image = global::Grupo02PCSAS.Properties.Resources._60577;
+            this.pAtras.Location = new System.Drawing.Point(234, 78);
+            this.pAtras.Name = "pAtras";
+            this.pAtras.Size = new System.Drawing.Size(80, 60);
+            this.pAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pAtras.TabIndex = 29;
+            this.pAtras.TabStop = false;
+            // 
             // fRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1469, 1033);
-            this.Controls.Add(this.bAtras);
+            this.Controls.Add(this.pAtras);
             this.Controls.Add(this.bOng);
             this.Controls.Add(this.bProfesor);
             this.Controls.Add(this.bAlumno);
@@ -468,6 +467,7 @@
             this.pAlumno.ResumeLayout(false);
             this.pAlumno.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pAtras)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -510,6 +510,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tNombreAlumno;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button bAtras;
+        private System.Windows.Forms.PictureBox pAtras;
     }
 }
