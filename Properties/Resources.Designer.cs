@@ -63,6 +63,36 @@ namespace Grupo02PCSAS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _16363 {
+            get {
+                object obj = ResourceManager.GetObject("16363", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _17656 {
+            get {
+                object obj = ResourceManager.GetObject("17656", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _60577 {
+            get {
+                object obj = ResourceManager.GetObject("60577", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Atras {
             get {
                 object obj = ResourceManager.GetObject("Atras", resourceCulture);
@@ -96,6 +126,16 @@ namespace Grupo02PCSAS.Properties {
         internal static System.Drawing.Bitmap usuario {
             get {
                 object obj = ResourceManager.GetObject("usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2020_12_06_at_17_27_26 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2020-12-06 at 17.27.26", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

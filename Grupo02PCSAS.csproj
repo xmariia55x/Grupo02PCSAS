@@ -260,6 +260,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Atras1.png" />
+    <None Include="Properties\Resources\16363.png" />
+    <None Include="Properties\Resources\17656.png" />
+    <None Include="Properties\Resources\60577.png" />
+    <None Include="Properties\Resources\WhatsApp Image 2020-12-06 at 17.27.26.jpeg" />
     <Content Include="Resources\pcsas.jpeg" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>

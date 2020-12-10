@@ -31,6 +31,8 @@ namespace Grupo02PCSAS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fPrincipalProfesor));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lNombre = new System.Windows.Forms.Label();
             this.lApellidos = new System.Windows.Forms.Label();
@@ -41,13 +43,10 @@ namespace Grupo02PCSAS
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bAccederAlForo = new System.Windows.Forms.Button();
             this.bEventosInscritos = new System.Windows.Forms.Button();
-            this.bCrearCurso = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,6 +64,35 @@ namespace Grupo02PCSAS
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1477, 241);
             this.panel1.TabIndex = 46;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
+            this.pictureBox2.Location = new System.Drawing.Point(1342, 46);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 103);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Beige;
+            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
+            this.pictureBox1.ImageLocation = "C:\\Users\\maria\\OneDrive - Universidad de Málaga\\UNIVERSIDAD\\Tercer año\\1er cuatri" +
+    "mestre\\Ingeniería de requisitos\\Proyecto";
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(285, 241);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -170,54 +198,12 @@ namespace Grupo02PCSAS
             this.bEventosInscritos.UseVisualStyleBackColor = false;
             this.bEventosInscritos.Click += new System.EventHandler(this.bEventosInscritos_Click);
             // 
-            // bCrearCurso
-            // 
-            this.bCrearCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bCrearCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCrearCurso.Location = new System.Drawing.Point(1069, 674);
-            this.bCrearCurso.Name = "bCrearCurso";
-            this.bCrearCurso.Size = new System.Drawing.Size(181, 63);
-            this.bCrearCurso.TabIndex = 51;
-            this.bCrearCurso.Text = "Crear curso";
-            this.bCrearCurso.UseVisualStyleBackColor = false;
-            this.bCrearCurso.Click += new System.EventHandler(this.bCrearCurso_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(1342, 46);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 103);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Beige;
-            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.ImageLocation = "C:\\Users\\maria\\OneDrive - Universidad de Málaga\\UNIVERSIDAD\\Tercer año\\1er cuatri" +
-    "mestre\\Ingeniería de requisitos\\Proyecto";
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(285, 241);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
             // fPrincipalProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1469, 844);
-            this.Controls.Add(this.bCrearCurso);
             this.Controls.Add(this.bEventosInscritos);
             this.Controls.Add(this.bAccederAlForo);
             this.Controls.Add(this.dataGridView1);
@@ -228,9 +214,9 @@ namespace Grupo02PCSAS
             this.Text = "Perfil - Profesor";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,6 +237,5 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button bAccederAlForo;
         private System.Windows.Forms.Button bEventosInscritos;
-        private System.Windows.Forms.Button bCrearCurso;
     }
 }
