@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Grupo02PCSAS
 {
-    public partial class fModificarCursos : Form
+    public partial class fInicioInvitado : Form
     {
-        public fModificarCursos()
+        public fInicioInvitado()
         {
             InitializeComponent();
-        }
-
-        private void fModificarCursos_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

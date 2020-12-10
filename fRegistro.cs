@@ -12,13 +12,16 @@ namespace Grupo02PCSAS
 {
     public partial class fRegistro : Form
     {
-        private Rol usuario;
+        //0 - alumno ; 1 - profesor; 2 - ong
+        private int seleccionado;
+
         public fRegistro()
         {
             InitializeComponent();
             pAlumno.Visible = true;
             pProfesor.Visible = false;
             pOng.Visible = false;
+            seleccionado = 0;
         }
 
         private void fRegistro_Load(object sender, EventArgs e)
@@ -30,6 +33,8 @@ namespace Grupo02PCSAS
 
         private void bAlumno_Click(object sender, EventArgs e)
         {
+            seleccionado = 0;
+
             bAlumno.BackColor = SystemColors.ActiveCaption;
             bProfesor.BackColor = SystemColors.ButtonHighlight;
             bOng.BackColor = SystemColors.ButtonHighlight;
@@ -41,6 +46,8 @@ namespace Grupo02PCSAS
 
         private void bProfesor_Click(object sender, EventArgs e)
         {
+            seleccionado = 1;
+
             bAlumno.BackColor = SystemColors.ButtonHighlight;
             bProfesor.BackColor = SystemColors.ActiveCaption;
             bOng.BackColor = SystemColors.ButtonHighlight;
@@ -52,6 +59,8 @@ namespace Grupo02PCSAS
 
         private void bOng_Click(object sender, EventArgs e)
         {
+            seleccionado = 2;
+
             bOng.BackColor = SystemColors.ActiveCaption;
             bAlumno.BackColor = SystemColors.ButtonHighlight;
             bProfesor.BackColor = SystemColors.ButtonHighlight;
@@ -61,17 +70,76 @@ namespace Grupo02PCSAS
             pProfesor.Visible = false;
         }
 
-        private void bAtras_Click(object sender, EventArgs e)
+        private void pAtras_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bRegistro_Click(object sender, EventArgs e)
         {
-            fPrincipalProfesor profe = new fPrincipalProfesor();
-            this.Visible = false;
-            profe.ShowDialog();
-            this.Visible = true;
+            String nombre = null, correo = null, contrasenia = null, niu = null, cif = null, rol = null;
+            Usuario user;
+
+            try
+            {
+                if (seleccionado == 0)  //Alumno
+                {
+                    nombre = tNombreAlumno.Text;
+                    correo = tCorreoAlumno.Text;
+                    cif = null;
+                    niu = null;
+                    rol = "ALUMNO";
+                    if (tPwdAlumno.Equals(tConfirmarAlumno))
+                    {
+                        contrasenia = tPwdAlumno.Text;
+                    }
+                    else
+                    {
+                        throw new Error("Las contraseñas no coinciden");
+                    }
+                }
+                else if (seleccionado == 1)
+                {
+                    nombre = tNombreProfesor.Text;
+                    correo = tCorreoProfesor.Text;
+                    niu = tNiuProfesor.Text;
+                    cif = null;
+                    rol = "PROFESOR";
+                    if (tPwdProfesor.Equals(tConfirmarPwd))
+                    {
+                        contrasenia = tPwdProfesor.Text;
+                    }
+                    else
+                    {
+                        throw new Error("Las contraseñas no coinciden");
+                    }
+                }
+                else if (seleccionado == 2)
+                {
+                    nombre = tNombreOng.Text;
+                    correo = tCorreoOng.Text;
+                    cif = tCifOng.Text;
+                    niu = null;
+                    rol = "ONG";
+                    if (tPwdOng.Equals(tConfirmarOng))
+                    {
+                        contrasenia = tPwdOng.Text;
+                    }
+                    else
+                    {
+                        throw new Error("Las contraseñas no coinciden");
+                    }
+                }
+
+                user = new Usuario(correo, nombre, contrasenia, cif, niu, new Rol(rol));
+                MessageBox.Show("Usuario creado con éxito");
+                this.Close();
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }

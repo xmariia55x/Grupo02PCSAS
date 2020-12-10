@@ -51,7 +51,7 @@ namespace Grupo02PCSAS
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.bAniadirDebate = new System.Windows.Forms.Button();
             this.bMisDebatesForo = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,6 +60,7 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoPcsas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,7 +101,7 @@ namespace Grupo02PCSAS
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1511, 212);
+            this.label1.Location = new System.Drawing.Point(1265, 203);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 29);
             this.label1.TabIndex = 6;
@@ -109,7 +110,7 @@ namespace Grupo02PCSAS
             // pictureBox1
             // 
             this.pictureBox1.ImageLocation = "E:\\Fotos\\usuario.PNG";
-            this.pictureBox1.Location = new System.Drawing.Point(1490, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(1244, 42);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(151, 159);
@@ -132,7 +133,7 @@ namespace Grupo02PCSAS
             // 
             this.lRolUsuario.AutoSize = true;
             this.lRolUsuario.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRolUsuario.Location = new System.Drawing.Point(1258, 172);
+            this.lRolUsuario.Location = new System.Drawing.Point(1012, 163);
             this.lRolUsuario.Name = "lRolUsuario";
             this.lRolUsuario.Size = new System.Drawing.Size(94, 29);
             this.lRolUsuario.TabIndex = 3;
@@ -142,7 +143,7 @@ namespace Grupo02PCSAS
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1197, 172);
+            this.label3.Location = new System.Drawing.Point(951, 163);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 29);
             this.label3.TabIndex = 2;
@@ -152,7 +153,7 @@ namespace Grupo02PCSAS
             // 
             this.lNombreApellidos.AutoSize = true;
             this.lNombreApellidos.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreApellidos.Location = new System.Drawing.Point(1024, 82);
+            this.lNombreApellidos.Location = new System.Drawing.Point(778, 73);
             this.lNombreApellidos.Name = "lNombreApellidos";
             this.lNombreApellidos.Size = new System.Drawing.Size(371, 55);
             this.lNombreApellidos.TabIndex = 1;
@@ -162,7 +163,7 @@ namespace Grupo02PCSAS
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(889, 82);
+            this.label5.Location = new System.Drawing.Point(643, 73);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 55);
             this.label5.TabIndex = 0;
@@ -246,7 +247,7 @@ namespace Grupo02PCSAS
             // 
             this.lForo.AutoSize = true;
             this.lForo.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lForo.Location = new System.Drawing.Point(736, 342);
+            this.lForo.Location = new System.Drawing.Point(787, 314);
             this.lForo.Name = "lForo";
             this.lForo.Size = new System.Drawing.Size(133, 55);
             this.lForo.TabIndex = 7;
@@ -256,7 +257,7 @@ namespace Grupo02PCSAS
             // 
             this.lDebates.AutoSize = true;
             this.lDebates.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDebates.Location = new System.Drawing.Point(669, 462);
+            this.lDebates.Location = new System.Drawing.Point(720, 434);
             this.lDebates.Name = "lDebates";
             this.lDebates.Size = new System.Drawing.Size(284, 29);
             this.lDebates.TabIndex = 8;
@@ -265,7 +266,7 @@ namespace Grupo02PCSAS
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(430, 582);
+            this.dataGridView1.Location = new System.Drawing.Point(481, 554);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
@@ -309,23 +310,24 @@ namespace Grupo02PCSAS
             this.bMisDebatesForo.Text = "Mis debates";
             this.bMisDebatesForo.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // pictureBox3
             // 
-            this.button1.Image = global::Grupo02PCSAS.Properties.Resources.Atras;
-            this.button1.Location = new System.Drawing.Point(94, 336);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 100);
-            this.button1.TabIndex = 17;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
+            this.pictureBox3.Location = new System.Drawing.Point(114, 337);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(80, 60);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.button1_Click);
             // 
             // PantallaPrincipalForo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1653, 1055);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1465, 1024);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.bMisDebatesForo);
             this.Controls.Add(this.bAniadirDebate);
             this.Controls.Add(this.dataGridView2);
@@ -347,6 +349,7 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoPcsas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,6 +379,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button bAniadirDebate;
         private System.Windows.Forms.Button bMisDebatesForo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
