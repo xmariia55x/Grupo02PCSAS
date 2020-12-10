@@ -113,6 +113,7 @@
             this.lNombreApellidosUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNombreApellidosUsuario.Location = new System.Drawing.Point(621, 39);
             this.lNombreApellidosUsuario.Name = "lNombreApellidosUsuario";
+            this.lNombreApellidosUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lNombreApellidosUsuario.Size = new System.Drawing.Size(346, 44);
             this.lNombreApellidosUsuario.TabIndex = 3;
             this.lNombreApellidosUsuario.Text = "Nombre y apellidos";
