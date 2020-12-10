@@ -18,6 +18,7 @@ namespace Grupo02PCSAS
         public fNuevoDebateForo(Usuario usuarioActual)
         {
             usuario = usuarioActual;
+            
             InitializeComponent();
         }
 
@@ -35,6 +36,8 @@ namespace Grupo02PCSAS
         {
             bEnviarDebate.Enabled = true;
             bCancelarDebate.Enabled = true;
+            lNombreApellidosUsuario.Text = usuario.NombreUsuario;
+            lRolUsuario.Text = usuario.RolUsuario.RolName;
         }
 
         private void bAtras_Click(object sender, EventArgs e)
