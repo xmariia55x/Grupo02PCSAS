@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lPerfil = new System.Windows.Forms.Label();
             this.lRolUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lNombreApellidosUsuario = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.lPerfil);
             this.panel1.Controls.Add(this.lRolUsuario);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lNombreApellidosUsuario);
@@ -77,15 +77,16 @@
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
-            // label5
+            // lPerfil
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1283, 128);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 26);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Mi perfil";
+            this.lPerfil.AutoSize = true;
+            this.lPerfil.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lPerfil.Location = new System.Drawing.Point(1283, 128);
+            this.lPerfil.Name = "lPerfil";
+            this.lPerfil.Size = new System.Drawing.Size(88, 26);
+            this.lPerfil.TabIndex = 7;
+            this.lPerfil.Text = "Mi perfil";
+            this.lPerfil.Click += new System.EventHandler(this.lPerfil_Click);
             // 
             // lRolUsuario
             // 
@@ -180,7 +181,9 @@
             // 
             // tAsuntoDebate
             // 
+            this.tAsuntoDebate.Font = new System.Drawing.Font("Trebuchet MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tAsuntoDebate.Location = new System.Drawing.Point(275, 438);
+            this.tAsuntoDebate.MaxLength = 50;
             this.tAsuntoDebate.Multiline = true;
             this.tAsuntoDebate.Name = "tAsuntoDebate";
             this.tAsuntoDebate.Size = new System.Drawing.Size(858, 54);
@@ -188,7 +191,9 @@
             // 
             // tMensajeDebate
             // 
+            this.tMensajeDebate.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tMensajeDebate.Location = new System.Drawing.Point(275, 577);
+            this.tMensajeDebate.MaxLength = 300;
             this.tMensajeDebate.Multiline = true;
             this.tMensajeDebate.Name = "tMensajeDebate";
             this.tMensajeDebate.Size = new System.Drawing.Size(858, 135);
@@ -264,7 +269,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lNombreApellidosUsuario;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lPerfil;
         private System.Windows.Forms.Label lRolUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lForo;
