@@ -42,7 +42,7 @@
             this.bOng = new System.Windows.Forms.Button();
             this.bProfesor = new System.Windows.Forms.Button();
             this.bAlumno = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bRegistro = new System.Windows.Forms.Button();
             this.pProfesor = new System.Windows.Forms.Panel();
             this.tConfirmarPwd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -224,7 +224,7 @@
             this.bAlumno.UseVisualStyleBackColor = false;
             this.bAlumno.Click += new System.EventHandler(this.bAlumno_Click);
             // 
-            // button1
+            // bRegistro
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -236,6 +236,15 @@
             this.button1.Text = "Registrarse";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bRegistro.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bRegistro.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bRegistro.Location = new System.Drawing.Point(647, 770);
+            this.bRegistro.Name = "bRegistro";
+            this.bRegistro.Size = new System.Drawing.Size(181, 63);
+            this.bRegistro.TabIndex = 22;
+            this.bRegistro.Text = "Registrarse";
+            this.bRegistro.UseVisualStyleBackColor = false;
+            this.bRegistro.Click += new System.EventHandler(this.bRegistro_Click);
             // 
             // pProfesor
             // 
@@ -463,6 +472,7 @@
             this.pAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pAtras.TabIndex = 29;
             this.pAtras.TabStop = false;
+            this.pAtras.Click += new System.EventHandler(this.pAtras_Click);
             // 
             // fRegistro
             // 
@@ -475,7 +485,7 @@
             this.Controls.Add(this.bProfesor);
             this.Controls.Add(this.bAlumno);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bRegistro);
             this.Controls.Add(this.pOng);
             this.Controls.Add(this.pAlumno);
             this.Controls.Add(this.pProfesor);
@@ -512,7 +522,7 @@
         private System.Windows.Forms.Button bProfesor;
         private System.Windows.Forms.Button bAlumno;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bRegistro;
         private System.Windows.Forms.Panel pProfesor;
         private System.Windows.Forms.TextBox tConfirmarPwd;
         private System.Windows.Forms.Label label4;

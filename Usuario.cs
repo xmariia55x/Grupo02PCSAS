@@ -39,6 +39,7 @@ namespace Grupo02PCSAS
             this.niu = niu;
             this.rol = rol;
         }
+
         public string CorreoUsuario
         {
             get { return correoUsuario; }
