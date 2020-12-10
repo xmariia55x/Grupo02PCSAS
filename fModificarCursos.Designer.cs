@@ -45,15 +45,15 @@ namespace Grupo02PCSAS
             this.rModPresencial = new System.Windows.Forms.RadioButton();
             this.tModNombreCurso = new System.Windows.Forms.TextBox();
             this.tModDescripcionCurso = new System.Windows.Forms.TextBox();
-            this.tModFechaIniCurso = new System.Windows.Forms.TextBox();
-            this.tModFechaFinCurso = new System.Windows.Forms.TextBox();
             this.tModLugarCurso = new System.Windows.Forms.TextBox();
-            this.tModHoraIniCurso = new System.Windows.Forms.TextBox();
-            this.tModHoraFinCurso = new System.Windows.Forms.TextBox();
             this.tModAforoCurso = new System.Windows.Forms.TextBox();
             this.lModProfesor = new System.Windows.Forms.ListBox();
             this.bModAniadirArchivosCurso = new System.Windows.Forms.Button();
             this.bModGuardarCambiosCurso = new System.Windows.Forms.Button();
+            this.dModiFechaIniCurso = new System.Windows.Forms.DateTimePicker();
+            this.dModiFechaFinCurso = new System.Windows.Forms.DateTimePicker();
+            this.dModiHoraIniCurso = new System.Windows.Forms.DateTimePicker();
+            this.dModiHoraFinCurso = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +75,7 @@ namespace Grupo02PCSAS
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(623, 316);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(330, 55);
+            this.label1.Size = new System.Drawing.Size(322, 54);
             this.label1.TabIndex = 3;
             this.label1.Text = "Modificar Curso";
             // 
@@ -208,46 +208,19 @@ namespace Grupo02PCSAS
             this.tModDescripcionCurso.Size = new System.Drawing.Size(218, 151);
             this.tModDescripcionCurso.TabIndex = 29;
             // 
-            // tModFechaIniCurso
-            // 
-            this.tModFechaIniCurso.Location = new System.Drawing.Point(657, 448);
-            this.tModFechaIniCurso.Name = "tModFechaIniCurso";
-            this.tModFechaIniCurso.Size = new System.Drawing.Size(218, 22);
-            this.tModFechaIniCurso.TabIndex = 30;
-            // 
-            // tModFechaFinCurso
-            // 
-            this.tModFechaFinCurso.Location = new System.Drawing.Point(657, 549);
-            this.tModFechaFinCurso.Name = "tModFechaFinCurso";
-            this.tModFechaFinCurso.Size = new System.Drawing.Size(218, 22);
-            this.tModFechaFinCurso.TabIndex = 31;
-            // 
             // tModLugarCurso
             // 
             this.tModLugarCurso.Location = new System.Drawing.Point(657, 646);
+            this.tModLugarCurso.Multiline = true;
             this.tModLugarCurso.Name = "tModLugarCurso";
-            this.tModLugarCurso.Size = new System.Drawing.Size(218, 22);
+            this.tModLugarCurso.Size = new System.Drawing.Size(218, 54);
             this.tModLugarCurso.TabIndex = 32;
-            // 
-            // tModHoraIniCurso
-            // 
-            this.tModHoraIniCurso.Location = new System.Drawing.Point(1105, 448);
-            this.tModHoraIniCurso.Name = "tModHoraIniCurso";
-            this.tModHoraIniCurso.Size = new System.Drawing.Size(218, 22);
-            this.tModHoraIniCurso.TabIndex = 33;
-            // 
-            // tModHoraFinCurso
-            // 
-            this.tModHoraFinCurso.Location = new System.Drawing.Point(1105, 549);
-            this.tModHoraFinCurso.Name = "tModHoraFinCurso";
-            this.tModHoraFinCurso.Size = new System.Drawing.Size(218, 22);
-            this.tModHoraFinCurso.TabIndex = 34;
             // 
             // tModAforoCurso
             // 
             this.tModAforoCurso.Location = new System.Drawing.Point(1105, 646);
             this.tModAforoCurso.Name = "tModAforoCurso";
-            this.tModAforoCurso.Size = new System.Drawing.Size(218, 22);
+            this.tModAforoCurso.Size = new System.Drawing.Size(196, 22);
             this.tModAforoCurso.TabIndex = 35;
             // 
             // lModProfesor
@@ -259,7 +232,7 @@ namespace Grupo02PCSAS
             "Profesor 2"});
             this.lModProfesor.Location = new System.Drawing.Point(1105, 754);
             this.lModProfesor.Name = "lModProfesor";
-            this.lModProfesor.Size = new System.Drawing.Size(214, 36);
+            this.lModProfesor.Size = new System.Drawing.Size(196, 36);
             this.lModProfesor.TabIndex = 36;
             // 
             // bModAniadirArchivosCurso
@@ -284,21 +257,65 @@ namespace Grupo02PCSAS
             this.bModGuardarCambiosCurso.Text = "Guardar cambios";
             this.bModGuardarCambiosCurso.UseVisualStyleBackColor = false;
             // 
+            // dModiFechaIniCurso
+            // 
+            this.dModiFechaIniCurso.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dModiFechaIniCurso.CustomFormat = "dd/MM/yyyy";
+            this.dModiFechaIniCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dModiFechaIniCurso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dModiFechaIniCurso.Location = new System.Drawing.Point(657, 448);
+            this.dModiFechaIniCurso.Name = "dModiFechaIniCurso";
+            this.dModiFechaIniCurso.Size = new System.Drawing.Size(218, 31);
+            this.dModiFechaIniCurso.TabIndex = 39;
+            // 
+            // dModiFechaFinCurso
+            // 
+            this.dModiFechaFinCurso.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dModiFechaFinCurso.CustomFormat = "dd/MM/yyyy";
+            this.dModiFechaFinCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dModiFechaFinCurso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dModiFechaFinCurso.Location = new System.Drawing.Point(657, 549);
+            this.dModiFechaFinCurso.Name = "dModiFechaFinCurso";
+            this.dModiFechaFinCurso.Size = new System.Drawing.Size(218, 31);
+            this.dModiFechaFinCurso.TabIndex = 40;
+            // 
+            // dModiHoraIniCurso
+            // 
+            this.dModiHoraIniCurso.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dModiHoraIniCurso.CustomFormat = "HH:mm";
+            this.dModiHoraIniCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dModiHoraIniCurso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dModiHoraIniCurso.Location = new System.Drawing.Point(1105, 448);
+            this.dModiHoraIniCurso.Name = "dModiHoraIniCurso";
+            this.dModiHoraIniCurso.Size = new System.Drawing.Size(196, 31);
+            this.dModiHoraIniCurso.TabIndex = 41;
+            // 
+            // dModiHoraFinCurso
+            // 
+            this.dModiHoraFinCurso.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dModiHoraFinCurso.CustomFormat = "HH:mm";
+            this.dModiHoraFinCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dModiHoraFinCurso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dModiHoraFinCurso.Location = new System.Drawing.Point(1105, 549);
+            this.dModiHoraFinCurso.Name = "dModiHoraFinCurso";
+            this.dModiHoraFinCurso.Size = new System.Drawing.Size(196, 31);
+            this.dModiHoraFinCurso.TabIndex = 42;
+            // 
             // fModificarCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1469, 1033);
+            this.Controls.Add(this.dModiHoraFinCurso);
+            this.Controls.Add(this.dModiHoraIniCurso);
+            this.Controls.Add(this.dModiFechaFinCurso);
+            this.Controls.Add(this.dModiFechaIniCurso);
             this.Controls.Add(this.bModGuardarCambiosCurso);
             this.Controls.Add(this.bModAniadirArchivosCurso);
             this.Controls.Add(this.lModProfesor);
             this.Controls.Add(this.tModAforoCurso);
-            this.Controls.Add(this.tModHoraFinCurso);
-            this.Controls.Add(this.tModHoraIniCurso);
             this.Controls.Add(this.tModLugarCurso);
-            this.Controls.Add(this.tModFechaFinCurso);
-            this.Controls.Add(this.tModFechaIniCurso);
             this.Controls.Add(this.tModDescripcionCurso);
             this.Controls.Add(this.tModNombreCurso);
             this.Controls.Add(this.rModPresencial);
@@ -339,14 +356,14 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tModNombreCurso;
         private System.Windows.Forms.TextBox tModDescripcionCurso;
-        private System.Windows.Forms.TextBox tModFechaIniCurso;
-        private System.Windows.Forms.TextBox tModFechaFinCurso;
         private System.Windows.Forms.TextBox tModLugarCurso;
-        private System.Windows.Forms.TextBox tModHoraIniCurso;
-        private System.Windows.Forms.TextBox tModHoraFinCurso;
         private System.Windows.Forms.TextBox tModAforoCurso;
         private System.Windows.Forms.ListBox lModProfesor;
         private System.Windows.Forms.Button bModAniadirArchivosCurso;
         private System.Windows.Forms.Button bModGuardarCambiosCurso;
+        private System.Windows.Forms.DateTimePicker dModiFechaIniCurso;
+        private System.Windows.Forms.DateTimePicker dModiFechaFinCurso;
+        private System.Windows.Forms.DateTimePicker dModiHoraIniCurso;
+        private System.Windows.Forms.DateTimePicker dModiHoraFinCurso;
     }
 }

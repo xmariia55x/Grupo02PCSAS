@@ -48,10 +48,10 @@ namespace Grupo02PCSAS
             this.bAtras = new System.Windows.Forms.Button();
             this.lColaboradores = new System.Windows.Forms.ListBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.fechaActIni = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.dFechaIniAct = new System.Windows.Forms.DateTimePicker();
+            this.dFechaFinAct = new System.Windows.Forms.DateTimePicker();
+            this.dHoraIniAct = new System.Windows.Forms.DateTimePicker();
+            this.dHoraFinAct = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,8 +94,9 @@ namespace Grupo02PCSAS
             // tLugarAct
             // 
             this.tLugarAct.Location = new System.Drawing.Point(657, 682);
+            this.tLugarAct.Multiline = true;
             this.tLugarAct.Name = "tLugarAct";
-            this.tLugarAct.Size = new System.Drawing.Size(218, 22);
+            this.tLugarAct.Size = new System.Drawing.Size(218, 54);
             this.tLugarAct.TabIndex = 7;
             // 
             // tDescripcionAct
@@ -110,7 +111,7 @@ namespace Grupo02PCSAS
             // 
             this.tAforoAct.Location = new System.Drawing.Point(1105, 682);
             this.tAforoAct.Name = "tAforoAct";
-            this.tAforoAct.Size = new System.Drawing.Size(218, 22);
+            this.tAforoAct.Size = new System.Drawing.Size(196, 22);
             this.tAforoAct.TabIndex = 9;
             // 
             // label2
@@ -236,49 +237,49 @@ namespace Grupo02PCSAS
             this.label10.TabIndex = 22;
             this.label10.Text = "Colaboradores";
             // 
-            // fechaActIni
+            // dFechaIniAct
             // 
-            this.fechaActIni.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechaActIni.CustomFormat = "dd/MM/yyyy";
-            this.fechaActIni.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechaActIni.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fechaActIni.Location = new System.Drawing.Point(657, 480);
-            this.fechaActIni.Name = "fechaActIni";
-            this.fechaActIni.Size = new System.Drawing.Size(165, 31);
-            this.fechaActIni.TabIndex = 23;
+            this.dFechaIniAct.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dFechaIniAct.CustomFormat = "dd/MM/yyyy";
+            this.dFechaIniAct.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dFechaIniAct.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dFechaIniAct.Location = new System.Drawing.Point(657, 480);
+            this.dFechaIniAct.Name = "dFechaIniAct";
+            this.dFechaIniAct.Size = new System.Drawing.Size(218, 31);
+            this.dFechaIniAct.TabIndex = 23;
             // 
-            // dateTimePicker1
+            // dFechaFinAct
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(657, 583);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(165, 31);
-            this.dateTimePicker1.TabIndex = 24;
+            this.dFechaFinAct.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dFechaFinAct.CustomFormat = "dd/MM/yyyy";
+            this.dFechaFinAct.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dFechaFinAct.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dFechaFinAct.Location = new System.Drawing.Point(657, 583);
+            this.dFechaFinAct.Name = "dFechaFinAct";
+            this.dFechaFinAct.Size = new System.Drawing.Size(218, 31);
+            this.dFechaFinAct.TabIndex = 24;
             // 
-            // dateTimePicker2
+            // dHoraIniAct
             // 
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.CustomFormat = "HH:mm";
-            this.dateTimePicker2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(1105, 480);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(196, 31);
-            this.dateTimePicker2.TabIndex = 25;
+            this.dHoraIniAct.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dHoraIniAct.CustomFormat = "HH:mm";
+            this.dHoraIniAct.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dHoraIniAct.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dHoraIniAct.Location = new System.Drawing.Point(1105, 480);
+            this.dHoraIniAct.Name = "dHoraIniAct";
+            this.dHoraIniAct.Size = new System.Drawing.Size(196, 31);
+            this.dHoraIniAct.TabIndex = 25;
             // 
-            // dateTimePicker4
+            // dHoraFinAct
             // 
-            this.dateTimePicker4.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker4.CustomFormat = "HH:mm";
-            this.dateTimePicker4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker4.Location = new System.Drawing.Point(1105, 583);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(196, 31);
-            this.dateTimePicker4.TabIndex = 27;
+            this.dHoraFinAct.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dHoraFinAct.CustomFormat = "HH:mm";
+            this.dHoraFinAct.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dHoraFinAct.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dHoraFinAct.Location = new System.Drawing.Point(1105, 583);
+            this.dHoraFinAct.Name = "dHoraFinAct";
+            this.dHoraFinAct.Size = new System.Drawing.Size(196, 31);
+            this.dHoraFinAct.TabIndex = 27;
             // 
             // fCrearActividadAdmin
             // 
@@ -286,10 +287,10 @@ namespace Grupo02PCSAS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1469, 1033);
-            this.Controls.Add(this.dateTimePicker4);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.fechaActIni);
+            this.Controls.Add(this.dHoraFinAct);
+            this.Controls.Add(this.dHoraIniAct);
+            this.Controls.Add(this.dFechaFinAct);
+            this.Controls.Add(this.dFechaIniAct);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lColaboradores);
             this.Controls.Add(this.bAtras);
@@ -336,9 +337,9 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Button bAtras;
         private System.Windows.Forms.ListBox lColaboradores;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker fechaActIni;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker dFechaIniAct;
+        private System.Windows.Forms.DateTimePicker dFechaFinAct;
+        private System.Windows.Forms.DateTimePicker dHoraIniAct;
+        private System.Windows.Forms.DateTimePicker dHoraFinAct;
     }
 }
