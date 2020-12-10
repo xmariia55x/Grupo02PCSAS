@@ -77,6 +77,8 @@ namespace Grupo02PCSAS
 
         private void bRegistro_Click(object sender, EventArgs e)
         {
+            //NO SE REGISTRA EL PROFESOR Y LA ONG DA FALLO
+
             String nombre = null, correo = null, contrasenia = null, niu = null, cif = null, rol = null;
             Usuario user;
 
@@ -98,12 +100,10 @@ namespace Grupo02PCSAS
                 }
                 else if (seleccionado == 1) //Profesor
                 {
-                    Console.WriteLine(seleccionado);
                     nombre = tNombreProfesor.Text;
                     correo = tCorreoProfesor.Text;
                     niu = tNiuProfesor.Text;
                     rol = "PROFESOR";
-                    Console.WriteLine(seleccionado);
                     if (tPwdProfesor.Text.Equals(tConfirmarPwd.Text))
                     {
                         contrasenia = tPwdProfesor.Text;
