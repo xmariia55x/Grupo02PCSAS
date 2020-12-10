@@ -84,6 +84,7 @@ namespace Grupo02PCSAS
             // tNombreCurso
             // 
             this.tNombreCurso.Location = new System.Drawing.Point(172, 448);
+            this.tNombreCurso.MaxLength = 50;
             this.tNombreCurso.Name = "tNombreCurso";
             this.tNombreCurso.Size = new System.Drawing.Size(218, 22);
             this.tNombreCurso.TabIndex = 3;
@@ -91,6 +92,7 @@ namespace Grupo02PCSAS
             // tDescripcionCurso
             // 
             this.tDescripcionCurso.Location = new System.Drawing.Point(172, 549);
+            this.tDescripcionCurso.MaxLength = 300;
             this.tDescripcionCurso.Multiline = true;
             this.tDescripcionCurso.Name = "tDescripcionCurso";
             this.tDescripcionCurso.Size = new System.Drawing.Size(218, 151);
@@ -99,6 +101,7 @@ namespace Grupo02PCSAS
             // tAforoCurso
             // 
             this.tAforoCurso.Location = new System.Drawing.Point(1105, 646);
+            this.tAforoCurso.MaxLength = 8;
             this.tAforoCurso.Name = "tAforoCurso";
             this.tAforoCurso.Size = new System.Drawing.Size(196, 22);
             this.tAforoCurso.TabIndex = 5;
@@ -106,6 +109,7 @@ namespace Grupo02PCSAS
             // tLugarCurso
             // 
             this.tLugarCurso.Location = new System.Drawing.Point(657, 646);
+            this.tLugarCurso.MaxLength = 50;
             this.tLugarCurso.Multiline = true;
             this.tLugarCurso.Name = "tLugarCurso";
             this.tLugarCurso.Size = new System.Drawing.Size(218, 54);
@@ -120,7 +124,6 @@ namespace Grupo02PCSAS
             this.label3.Size = new System.Drawing.Size(137, 26);
             this.label3.TabIndex = 13;
             this.label3.Text = "Nombre curso";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -259,6 +262,7 @@ namespace Grupo02PCSAS
             this.bGuardarCambiosCurso.TabIndex = 26;
             this.bGuardarCambiosCurso.Text = "Guardar cambios";
             this.bGuardarCambiosCurso.UseVisualStyleBackColor = false;
+            this.bGuardarCambiosCurso.Click += new System.EventHandler(this.bGuardarCambiosCurso_Click);
             // 
             // bAtras
             // 
