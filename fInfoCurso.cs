@@ -16,5 +16,10 @@ namespace Grupo02PCSAS
         {
             InitializeComponent();
         }
+
+        private void lDescripcion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
