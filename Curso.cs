@@ -39,14 +39,14 @@ namespace Grupo02PCSAS
             this.online = (int)tupla[9] == 1 ? true : false;
         }
 
-        public Curso(int idCurso, string profesorCurso, string nombreCurso, string descripcionCurso, string fechaInicioCurso
+        public Curso(string profesorCurso, string nombreCurso, string descripcionCurso, string fechaInicioCurso
             , string fechaFinCurso, string horaInicioCurso, string horaFinCurso, int aforoCurso, bool online)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "INSERT INTO CURSO VALUES (" + idCurso+",'"+profesorCurso+"','"+nombreCurso+"','"+descripcionCurso+"','"
+            string sentencia = "INSERT INTO CURSO VALUES ('" +profesorCurso+"','"+nombreCurso+"','"+descripcionCurso+"','"
                 +fechaInicioCurso+"','"+fechaFinCurso+"','"+horaInicioCurso+"','"+horaFinCurso+"',"+aforoCurso+ (online ? 1 : 0) + ");";
             miBD.Insert(sentencia);
-            this.idCurso = idCurso;
+            this.idCurso = (int) miBD.SelectScalar("SELECT MAX(idCurso) FROM CURSO;");
             this.profesorCurso = profesorCurso;
             this.nombreCurso = nombreCurso;
             this.descripcionCurso = descripcionCurso;
