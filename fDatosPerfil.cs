@@ -12,9 +12,11 @@ namespace Grupo02PCSAS
 {
 	public partial class fDatosPerfil : Form
 	{
-		public fDatosPerfil()
+		private Usuario user;
+        public fDatosPerfil(Usuario user)
 		{
 			InitializeComponent();
+			this.user = user;
 		}
 
 		private void label1_Click(object sender, EventArgs e)
@@ -31,7 +33,32 @@ namespace Grupo02PCSAS
 
 		private void fDatosPerfil_Load(object sender, EventArgs e)
 		{
+            if (user.RolUsuario.Equals("ALUMNO"))
+            {
 
+				panelAlumno.Visible = true;
+				panelProfesor.Visible = false;
+				panelProfesor.Enabled = false;
+				panelEntidad.Visible = false;
+				panelEntidad.Enabled = false;
+
+			}else if (user.RolUsuario.Equals("PROFESOR"))
+            {
+				panelAlumno.Visible = false;
+				panelAlumno.Enabled = false;
+				panelProfesor.Visible = true;
+				panelEntidad.Visible = false;
+				panelEntidad.Enabled = false;
+
+            }else if (user.RolUsuario.Equals("ENTIDAD"))
+            {
+				panelAlumno.Visible = false;
+				panelAlumno.Enabled = false;
+				panelEntidad.Visible = true;
+				panelProfesor.Visible = false;
+				panelProfesor.Enabled = false;
+
+			}
 		}
 
 		private void label3_Click(object sender, EventArgs e)

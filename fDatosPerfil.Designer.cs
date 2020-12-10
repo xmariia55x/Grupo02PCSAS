@@ -33,18 +33,14 @@ namespace Grupo02PCSAS
             this.bEditarPerfil = new System.Windows.Forms.Button();
             this.bBorrarPerfil = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.lNombreYApellidos = new System.Windows.Forms.Label();
+            this.lNombreAlumno = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lEmail = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lCIF = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lNIU = new System.Windows.Forms.Label();
+            this.lEmailAlumno = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lPwdAlumno = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelAlumno = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -55,11 +51,29 @@ namespace Grupo02PCSAS
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.bAtras = new System.Windows.Forms.Button();
+            this.panelProfesor = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lNombreProfe = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lEmailProfe = new System.Windows.Forms.Label();
+            this.lPwdProfe = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lNiuProfe = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.panelEntidad = new System.Windows.Forms.Panel();
+            this.lEmailEntidad = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lCifEntidad = new System.Windows.Forms.Label();
+            this.lPwdEntidad = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panelAlumno.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelProfesor.SuspendLayout();
+            this.panelEntidad.SuspendLayout();
             this.SuspendLayout();
             // 
             // bEditarPerfil
@@ -94,20 +108,20 @@ namespace Grupo02PCSAS
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 78);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(265, 36);
+            this.label3.Size = new System.Drawing.Size(227, 29);
             this.label3.TabIndex = 11;
             this.label3.Text = "Nombre y Apellidos:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // lNombreYApellidos
+            // lNombreAlumno
             // 
-            this.lNombreYApellidos.AutoSize = true;
-            this.lNombreYApellidos.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreYApellidos.Location = new System.Drawing.Point(263, 78);
-            this.lNombreYApellidos.Name = "lNombreYApellidos";
-            this.lNombreYApellidos.Size = new System.Drawing.Size(323, 36);
-            this.lNombreYApellidos.TabIndex = 12;
-            this.lNombreYApellidos.Text = "TU NOMBRE Y APELLIDOS";
+            this.lNombreAlumno.AutoSize = true;
+            this.lNombreAlumno.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNombreAlumno.Location = new System.Drawing.Point(250, 78);
+            this.lNombreAlumno.Name = "lNombreAlumno";
+            this.lNombreAlumno.Size = new System.Drawing.Size(280, 29);
+            this.lNombreAlumno.TabIndex = 12;
+            this.lNombreAlumno.Text = "TU NOMBRE Y APELLIDOS";
             // 
             // label5
             // 
@@ -115,79 +129,39 @@ namespace Grupo02PCSAS
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 118);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 36);
+            this.label5.Size = new System.Drawing.Size(82, 29);
             this.label5.TabIndex = 13;
             this.label5.Text = "Email:";
             // 
-            // lEmail
+            // lEmailAlumno
             // 
-            this.lEmail.AutoSize = true;
-            this.lEmail.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lEmail.Location = new System.Drawing.Point(250, 118);
-            this.lEmail.Name = "lEmail";
-            this.lEmail.Size = new System.Drawing.Size(132, 36);
-            this.lEmail.TabIndex = 14;
-            this.lEmail.Text = "TU EMAIL";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 154);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 36);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "CIF ONG:";
-            // 
-            // lCIF
-            // 
-            this.lCIF.AutoSize = true;
-            this.lCIF.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCIF.Location = new System.Drawing.Point(250, 154);
-            this.lCIF.Name = "lCIF";
-            this.lCIF.Size = new System.Drawing.Size(97, 36);
-            this.lCIF.TabIndex = 16;
-            this.lCIF.Text = "TU CIF";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 192);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 36);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "NIU:";
-            // 
-            // lNIU
-            // 
-            this.lNIU.AutoSize = true;
-            this.lNIU.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNIU.Location = new System.Drawing.Point(250, 192);
-            this.lNIU.Name = "lNIU";
-            this.lNIU.Size = new System.Drawing.Size(101, 36);
-            this.lNIU.TabIndex = 18;
-            this.lNIU.Text = "TU NIU";
+            this.lEmailAlumno.AutoSize = true;
+            this.lEmailAlumno.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lEmailAlumno.Location = new System.Drawing.Point(250, 118);
+            this.lEmailAlumno.Name = "lEmailAlumno";
+            this.lEmailAlumno.Size = new System.Drawing.Size(113, 29);
+            this.lEmailAlumno.TabIndex = 14;
+            this.lEmailAlumno.Text = "TU EMAIL";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(3, 231);
+            this.label8.Location = new System.Drawing.Point(3, 154);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 36);
+            this.label8.Size = new System.Drawing.Size(143, 29);
             this.label8.TabIndex = 19;
             this.label8.Text = "Contraseña:";
             // 
-            // label9
+            // lPwdAlumno
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(250, 231);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 36);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "*******";
+            this.lPwdAlumno.AutoSize = true;
+            this.lPwdAlumno.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lPwdAlumno.Location = new System.Drawing.Point(250, 154);
+            this.lPwdAlumno.Name = "lPwdAlumno";
+            this.lPwdAlumno.Size = new System.Drawing.Size(76, 29);
+            this.lPwdAlumno.TabIndex = 20;
+            this.lPwdAlumno.Text = "*******";
             // 
             // label10
             // 
@@ -195,7 +169,7 @@ namespace Grupo02PCSAS
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(871, 532);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(458, 36);
+            this.label10.Size = new System.Drawing.Size(395, 29);
             this.label10.TabIndex = 21;
             this.label10.Text = "Mis Actividades y cursos realizados:";
             // 
@@ -209,24 +183,20 @@ namespace Grupo02PCSAS
             this.dataGridView1.Size = new System.Drawing.Size(378, 222);
             this.dataGridView1.TabIndex = 22;
             // 
-            // panel2
+            // panelAlumno
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.lNombreYApellidos);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.lEmail);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.lCIF);
-            this.panel2.Controls.Add(this.lNIU);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(217, 482);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(591, 374);
-            this.panel2.TabIndex = 44;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panelAlumno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelAlumno.Controls.Add(this.label3);
+            this.panelAlumno.Controls.Add(this.lNombreAlumno);
+            this.panelAlumno.Controls.Add(this.label5);
+            this.panelAlumno.Controls.Add(this.lEmailAlumno);
+            this.panelAlumno.Controls.Add(this.lPwdAlumno);
+            this.panelAlumno.Controls.Add(this.label8);
+            this.panelAlumno.Location = new System.Drawing.Point(217, 482);
+            this.panelAlumno.Name = "panelAlumno";
+            this.panelAlumno.Size = new System.Drawing.Size(591, 374);
+            this.panelAlumno.TabIndex = 44;
+            this.panelAlumno.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel1
             // 
@@ -278,7 +248,7 @@ namespace Grupo02PCSAS
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(653, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 57);
+            this.label1.Size = new System.Drawing.Size(112, 49);
             this.label1.TabIndex = 12;
             this.label1.Text = "Hola,";
             // 
@@ -288,7 +258,7 @@ namespace Grupo02PCSAS
             this.lNombre.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNombre.Location = new System.Drawing.Point(771, 100);
             this.lNombre.Name = "lNombre";
-            this.lNombre.Size = new System.Drawing.Size(191, 57);
+            this.lNombre.Size = new System.Drawing.Size(163, 49);
             this.lNombre.TabIndex = 13;
             this.lNombre.Text = "NOMBRE";
             // 
@@ -298,7 +268,7 @@ namespace Grupo02PCSAS
             this.lApellidos.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lApellidos.Location = new System.Drawing.Point(940, 100);
             this.lApellidos.Name = "lApellidos";
-            this.lApellidos.Size = new System.Drawing.Size(240, 57);
+            this.lApellidos.Size = new System.Drawing.Size(201, 49);
             this.lApellidos.TabIndex = 14;
             this.lApellidos.Text = "APELLIDOS";
             // 
@@ -308,7 +278,7 @@ namespace Grupo02PCSAS
             this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.lRol.Location = new System.Drawing.Point(702, 175);
             this.lRol.Name = "lRol";
-            this.lRol.Size = new System.Drawing.Size(81, 27);
+            this.lRol.Size = new System.Drawing.Size(66, 23);
             this.lRol.TabIndex = 16;
             this.lRol.Text = "TU ROL";
             // 
@@ -318,7 +288,7 @@ namespace Grupo02PCSAS
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.label2.Location = new System.Drawing.Point(657, 175);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 27);
+            this.label2.Size = new System.Drawing.Size(39, 23);
             this.label2.TabIndex = 15;
             this.label2.Text = "Rol:";
             // 
@@ -328,7 +298,7 @@ namespace Grupo02PCSAS
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 10.2F);
             this.label4.Location = new System.Drawing.Point(1357, 175);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 27);
+            this.label4.Size = new System.Drawing.Size(73, 23);
             this.label4.TabIndex = 17;
             this.label4.Text = "Mi perfil";
             // 
@@ -342,15 +312,187 @@ namespace Grupo02PCSAS
             this.bAtras.UseVisualStyleBackColor = true;
             this.bAtras.Click += new System.EventHandler(this.bAtras_Click);
             // 
+            // panelProfesor
+            // 
+            this.panelProfesor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelProfesor.Controls.Add(this.panelEntidad);
+            this.panelProfesor.Controls.Add(this.label11);
+            this.panelProfesor.Controls.Add(this.lNombreProfe);
+            this.panelProfesor.Controls.Add(this.label13);
+            this.panelProfesor.Controls.Add(this.lEmailProfe);
+            this.panelProfesor.Controls.Add(this.lPwdProfe);
+            this.panelProfesor.Controls.Add(this.label17);
+            this.panelProfesor.Controls.Add(this.lNiuProfe);
+            this.panelProfesor.Controls.Add(this.label20);
+            this.panelProfesor.Location = new System.Drawing.Point(217, 482);
+            this.panelProfesor.Name = "panelProfesor";
+            this.panelProfesor.Size = new System.Drawing.Size(591, 374);
+            this.panelProfesor.TabIndex = 45;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(3, 78);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(227, 29);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Nombre y Apellidos:";
+            // 
+            // lNombreProfe
+            // 
+            this.lNombreProfe.AutoSize = true;
+            this.lNombreProfe.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNombreProfe.Location = new System.Drawing.Point(250, 78);
+            this.lNombreProfe.Name = "lNombreProfe";
+            this.lNombreProfe.Size = new System.Drawing.Size(280, 29);
+            this.lNombreProfe.TabIndex = 12;
+            this.lNombreProfe.Text = "TU NOMBRE Y APELLIDOS";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(3, 118);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(82, 29);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Email:";
+            // 
+            // lEmailProfe
+            // 
+            this.lEmailProfe.AutoSize = true;
+            this.lEmailProfe.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lEmailProfe.Location = new System.Drawing.Point(250, 118);
+            this.lEmailProfe.Name = "lEmailProfe";
+            this.lEmailProfe.Size = new System.Drawing.Size(113, 29);
+            this.lEmailProfe.TabIndex = 14;
+            this.lEmailProfe.Text = "TU EMAIL";
+            // 
+            // lPwdProfe
+            // 
+            this.lPwdProfe.AutoSize = true;
+            this.lPwdProfe.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lPwdProfe.Location = new System.Drawing.Point(250, 192);
+            this.lPwdProfe.Name = "lPwdProfe";
+            this.lPwdProfe.Size = new System.Drawing.Size(76, 29);
+            this.lPwdProfe.TabIndex = 20;
+            this.lPwdProfe.Text = "*******";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(3, 192);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(143, 29);
+            this.label17.TabIndex = 19;
+            this.label17.Text = "Contraseña:";
+            // 
+            // lNiuProfe
+            // 
+            this.lNiuProfe.AutoSize = true;
+            this.lNiuProfe.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNiuProfe.Location = new System.Drawing.Point(250, 154);
+            this.lNiuProfe.Name = "lNiuProfe";
+            this.lNiuProfe.Size = new System.Drawing.Size(88, 29);
+            this.lNiuProfe.TabIndex = 18;
+            this.lNiuProfe.Text = "TU NIU";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(3, 154);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(60, 29);
+            this.label20.TabIndex = 17;
+            this.label20.Text = "NIU:";
+            // 
+            // panelEntidad
+            // 
+            this.panelEntidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelEntidad.Controls.Add(this.lEmailEntidad);
+            this.panelEntidad.Controls.Add(this.label9);
+            this.panelEntidad.Controls.Add(this.lCifEntidad);
+            this.panelEntidad.Controls.Add(this.lPwdEntidad);
+            this.panelEntidad.Controls.Add(this.label15);
+            this.panelEntidad.Controls.Add(this.label18);
+            this.panelEntidad.Location = new System.Drawing.Point(0, -1);
+            this.panelEntidad.Name = "panelEntidad";
+            this.panelEntidad.Size = new System.Drawing.Size(591, 374);
+            this.panelEntidad.TabIndex = 46;
+            // 
+            // lEmailEntidad
+            // 
+            this.lEmailEntidad.AutoSize = true;
+            this.lEmailEntidad.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lEmailEntidad.Location = new System.Drawing.Point(250, 78);
+            this.lEmailEntidad.Name = "lEmailEntidad";
+            this.lEmailEntidad.Size = new System.Drawing.Size(113, 29);
+            this.lEmailEntidad.TabIndex = 12;
+            this.lEmailEntidad.Text = "TU EMAIL";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(3, 78);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 29);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Email:";
+            // 
+            // lCifEntidad
+            // 
+            this.lCifEntidad.AutoSize = true;
+            this.lCifEntidad.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lCifEntidad.Location = new System.Drawing.Point(250, 118);
+            this.lCifEntidad.Name = "lCifEntidad";
+            this.lCifEntidad.Size = new System.Drawing.Size(84, 29);
+            this.lCifEntidad.TabIndex = 14;
+            this.lCifEntidad.Text = "TU CIF";
+            // 
+            // lPwdEntidad
+            // 
+            this.lPwdEntidad.AutoSize = true;
+            this.lPwdEntidad.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lPwdEntidad.Location = new System.Drawing.Point(250, 154);
+            this.lPwdEntidad.Name = "lPwdEntidad";
+            this.lPwdEntidad.Size = new System.Drawing.Size(76, 29);
+            this.lPwdEntidad.TabIndex = 20;
+            this.lPwdEntidad.Text = "*******";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(3, 154);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(143, 29);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "Contraseña:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(3, 118);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(56, 29);
+            this.label18.TabIndex = 17;
+            this.label18.Text = "CIF:";
+            // 
             // fDatosPerfil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1469, 1033);
+            this.Controls.Add(this.panelProfesor);
             this.Controls.Add(this.bAtras);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelAlumno);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.bBorrarPerfil);
@@ -362,12 +504,16 @@ namespace Grupo02PCSAS
             this.Load += new System.EventHandler(this.fDatosPerfil_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.fDatosPerfil_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelAlumno.ResumeLayout(false);
+            this.panelAlumno.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelProfesor.ResumeLayout(false);
+            this.panelProfesor.PerformLayout();
+            this.panelEntidad.ResumeLayout(false);
+            this.panelEntidad.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,18 +524,14 @@ namespace Grupo02PCSAS
 		private System.Windows.Forms.Button bEditarPerfil;
 		private System.Windows.Forms.Button bBorrarPerfil;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label lNombreYApellidos;
+		private System.Windows.Forms.Label lNombreAlumno;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Label lEmail;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Label lCIF;
-		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.Label lNIU;
+		private System.Windows.Forms.Label lEmailAlumno;
 		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Label lPwdAlumno;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelAlumno;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -400,5 +542,21 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button bAtras;
+        private System.Windows.Forms.Panel panelProfesor;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lNombreProfe;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lEmailProfe;
+        private System.Windows.Forms.Label lPwdProfe;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lNiuProfe;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Panel panelEntidad;
+        private System.Windows.Forms.Label lEmailEntidad;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lCifEntidad;
+        private System.Windows.Forms.Label lPwdEntidad;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label18;
     }
 }

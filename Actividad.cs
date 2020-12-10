@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Grupo02PCSAS
 {
-    class Actividad
+    public class Actividad
     {
         private static string BD_SERVER = Properties.Settings.Default.BD_SERVER;
         private static string BD_NAME = Properties.Settings.Default.BD_NAME;
