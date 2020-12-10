@@ -19,8 +19,6 @@ namespace Grupo02PCSAS
             pAlumno.Visible = true;
             pProfesor.Visible = false;
             pOng.Visible = false;
-
-            
         }
 
         private void fRegistro_Load(object sender, EventArgs e)
@@ -28,8 +26,6 @@ namespace Grupo02PCSAS
             pAlumno.Visible = true;
             pProfesor.Visible = false;
             pOng.Visible = false;
-
-            
         }
 
         private void bAlumno_Click(object sender, EventArgs e)

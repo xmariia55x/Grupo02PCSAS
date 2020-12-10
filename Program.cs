@@ -28,16 +28,17 @@ namespace Grupo02PCSAS
             //Application.Run(new fPrincipalProfesor());
             //Application.Run(new fPantallaAdmin());
             //Application.Run(new fStartAplicacion());
-            Rol usuario = new Rol("hola");
-            Console.WriteLine(usuario.ToString());
+            //Rol usuario = new Rol("hola");
+            //Console.WriteLine(usuario.ToString());
             //Rol usuario2 = new Rol("hola2", "kk", true);
-            Rol user3 = new Rol("hola2");
-            Console.WriteLine(user3.ToString());
-            user3.BorrarRol();
-            usuario.RolDes = "cambia";
-            Console.WriteLine(usuario.ToString());
+            //Rol user3 = new Rol("hola2");
+            //Console.WriteLine(user3.ToString());
+            //user3.BorrarRol();
+            //usuario.RolDes = "cambia";
+            //Console.WriteLine(usuario.ToString());
             //Application.Run(new fRegistro());
             //Commit de maria
+            Application.Run(new fRegistro());
         }
     }
 
