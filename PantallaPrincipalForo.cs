@@ -44,7 +44,7 @@ namespace Grupo02PCSAS
 
         private void bAniadirDebate_Click(object sender, EventArgs e)
         {
-            fNuevoDebateForo nuevoDebate = new fNuevoDebateForo();
+            fNuevoDebateForo nuevoDebate = new fNuevoDebateForo(null); //M -> HAY QUE CAMBIARLO!!!!
             this.Visible = false;
             nuevoDebate.ShowDialog();
             this.Visible = true;

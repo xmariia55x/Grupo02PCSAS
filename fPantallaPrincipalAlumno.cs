@@ -44,7 +44,7 @@ namespace Grupo02PCSAS
 
         private void lMiPerfil_Click(object sender, EventArgs e)
         {
-            fDatosPerfil datos = new fDatosPerfil();
+            fDatosPerfil datos = new fDatosPerfil(null); //M -> HAY QUE CAMBIARLO!!!!
             this.Visible = false;
             datos.ShowDialog();
             this.Visible = true;
@@ -52,7 +52,7 @@ namespace Grupo02PCSAS
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            fDatosPerfil datos = new fDatosPerfil();
+            fDatosPerfil datos = new fDatosPerfil(null); //M -> HAY QUE CAMBIARLO!!!!
             this.Visible = false;
             datos.ShowDialog();
             this.Visible = true;

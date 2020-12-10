@@ -20,7 +20,7 @@ namespace Grupo02PCSAS
         public Usuario(string correo)//constructor SELECT
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-           Object[] tupla =  miBD.Select("SELECT * FROM USUARIO WHERE CORREOUSUARIO = '" + correo + "';")[0];
+           Object[] tupla =  miBD.Select("SELECT * FROM Usuario WHERE correoUsuario = '" + correo + "';")[0];
             this.correoUsuario = (string) tupla[0];
             this.nombreUsuario = (string) tupla[1];
             this.contraseniaUsuario = (string) tupla[2];
@@ -31,7 +31,7 @@ namespace Grupo02PCSAS
         public Usuario(string correo, string nombre, string contrasenia, string cif, string niu, Rol rol)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            miBD.Insert("INSERT INTO USUARIO VALUES ('" + correo + "','" + nombre + "','" + contrasenia + "','" + cif + "','" + niu + "','" + rol.RolName + "');");
+            miBD.Insert("INSERT INTO Usuario VALUES ('" + correo + "','" + nombre + "','" + contrasenia + "','" + cif + "','" + niu + "','" + rol.RolName + "');");
             this.correoUsuario = correo;
             this.nombreUsuario = nombre;
             this.contraseniaUsuario = contrasenia;
@@ -45,7 +45,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE USUARIO SET CORREOUSUARIO = '" + value + "'WHERE CORREOUSUARIO='" + this.correoUsuario + "';");
+                miBD.Update("UPDATE Usuario SET correoUsuario = '" + value + "'WHERE correoUsuario='" + this.correoUsuario + "';");
                 this.correoUsuario = value;
             }
         }
@@ -56,7 +56,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE USUARIO SET NOMBREUSUARIO = '" + value + "'WHERE CORREOUSUARIO='" + this.correoUsuario + "';");
+                miBD.Update("UPDATE Usuario SET nombreUsuario = '" + value + "'WHERE correoUsuario='" + this.correoUsuario + "';");
                 this.nombreUsuario = value;
             }
         }
@@ -67,7 +67,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE USUARIO SET CONTRASENIAUSUARIO = '" + value + "'WHERE CORREOUSUARIO='" + this.correoUsuario + "';");
+                miBD.Update("UPDATE Usuario SET contraseniaUsuario = '" + value + "'WHERE correoUsuario='" + this.correoUsuario + "';");
                 this.contraseniaUsuario = value;
             }
         }
@@ -78,7 +78,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE USUARIO SET CIF = '" + value + "'WHERE CORREOUSUARIO='" + this.correoUsuario + "';");
+                miBD.Update("UPDATE Usuario SET cif = '" + value + "'WHERE correoUsuario='" + this.correoUsuario + "';");
                 this.cif = value;
             }
         }
@@ -89,7 +89,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE USUARIO SET NIU = '" + value + "'WHERE CORREOUSUARIO='" + this.correoUsuario + "';");
+                miBD.Update("UPDATE Usuario SET niu = '" + value + "'WHERE correoUsuario='" + this.correoUsuario + "';");
                 this.niu = value;
             }
         }
@@ -99,14 +99,14 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE USUARIO SET ROLUSUARIO = '" + value.RolName + "'WHERE CORREOUSUARIO='" + this.correoUsuario + "';");
+                miBD.Update("UPDATE Usuario SET rolUsuario = '" + value.RolName + "'WHERE correoUsuario='" + this.correoUsuario + "';");
                 this.rol = value;
             }
         }
         public void BorrarUsuario()
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            miBD.Delete("DELETE FROM USUARIO WHERE CORREOUSUARIO ='" + this.correoUsuario + "';");
+            miBD.Delete("DELETE FROM Usuario WHERE correoUsuario ='" + this.correoUsuario + "';");
             this.correoUsuario = null;
             this.nombreUsuario = null;
             this.contraseniaUsuario = null;
