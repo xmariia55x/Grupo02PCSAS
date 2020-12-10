@@ -50,6 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="apsgrupo02DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>apsgrupo02DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BDLibrary.cs" />
     <Compile Include="Curso.cs" />
     <Compile Include="Error.cs" />
@@ -237,6 +242,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="apsgrupo02DataSet.xsc">
+      <DependentUpon>apsgrupo02DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="apsgrupo02DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>apsgrupo02DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="apsgrupo02DataSet.xss">
+      <DependentUpon>apsgrupo02DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

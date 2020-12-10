@@ -12,8 +12,12 @@ namespace Grupo02PCSAS
 {
     public partial class fNuevoDebateForo : Form
     {
-        public fNuevoDebateForo()
+        private Debate debateCreado;
+        private Usuario usuario;
+        private string asunto, mensaje;
+        public fNuevoDebateForo(Usuario usuarioActual)
         {
+            usuario = usuarioActual;
             InitializeComponent();
         }
 
@@ -29,12 +33,35 @@ namespace Grupo02PCSAS
 
         private void fNuevoDebateForo_Load(object sender, EventArgs e)
         {
-
+            bEnviarDebate.Enabled = true;
+            bCancelarDebate.Enabled = true;
         }
 
         private void bAtras_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void bEnviarDebate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                asunto = tAsuntoDebate.Text;
+                mensaje = tMensajeDebate.Text;
+
+                if (asunto.Equals("") || mensaje.Equals(""))
+                {
+                    MessageBox.Show("Faltan campos obligatorios por rellenar");
+                }
+                else if (!asunto.Equals("") && !mensaje.Equals(""))
+                {
+                    debateCreado = new Debate(usuario.NombreUsuario, asunto, mensaje, DateTime.Now.ToShortDateString());
+                    debateCreado = null;
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Se ha producido un error: " + ex.Message);
+            }
         }
     }
 }

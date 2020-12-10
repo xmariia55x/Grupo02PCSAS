@@ -121,7 +121,6 @@ namespace Grupo02PCSAS
             // 
             // pbUsuario
             // 
-            this.pbUsuario.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
             this.pbUsuario.ImageLocation = "C:\\Users\\Javi\\Source\\Repos\\xmariia55x\\Grupo02PCSAS\\Resources\\usuario.png";
             this.pbUsuario.Location = new System.Drawing.Point(1135, 43);
             this.pbUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -133,7 +132,6 @@ namespace Grupo02PCSAS
             // 
             // pbPcsas
             // 
-            this.pbPcsas.Image = global::Grupo02PCSAS.Properties.Resources.pcsas;
             this.pbPcsas.ImageLocation = "E:\\Fotos\\pcsas.JPEG";
             this.pbPcsas.Location = new System.Drawing.Point(-12, 3);
             this.pbPcsas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
