@@ -84,104 +84,100 @@
             this.pOng.Controls.Add(this.label13);
             this.pOng.Controls.Add(this.tNombreOng);
             this.pOng.Controls.Add(this.label14);
-            this.pOng.Location = new System.Drawing.Point(531, 388);
-            this.pOng.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pOng.Location = new System.Drawing.Point(472, 310);
             this.pOng.Name = "pOng";
-            this.pOng.Size = new System.Drawing.Size(513, 495);
+            this.pOng.Size = new System.Drawing.Size(456, 396);
             this.pOng.TabIndex = 27;
             // 
             // tConfirmarOng
             // 
             this.tConfirmarOng.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tConfirmarOng.Location = new System.Drawing.Point(3, 441);
-            this.tConfirmarOng.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tConfirmarOng.Location = new System.Drawing.Point(3, 353);
             this.tConfirmarOng.Name = "tConfirmarOng";
-            this.tConfirmarOng.Size = new System.Drawing.Size(506, 35);
+            this.tConfirmarOng.PasswordChar = '*';
+            this.tConfirmarOng.Size = new System.Drawing.Size(450, 31);
             this.tConfirmarOng.TabIndex = 19;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(132, 405);
+            this.label9.Location = new System.Drawing.Point(117, 324);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(267, 29);
+            this.label9.Size = new System.Drawing.Size(226, 26);
             this.label9.TabIndex = 18;
             this.label9.Text = "Confirma tu contraseña";
             // 
             // tPwdOng
             // 
             this.tPwdOng.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tPwdOng.Location = new System.Drawing.Point(3, 352);
-            this.tPwdOng.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tPwdOng.Location = new System.Drawing.Point(3, 282);
             this.tPwdOng.Name = "tPwdOng";
-            this.tPwdOng.Size = new System.Drawing.Size(506, 35);
+            this.tPwdOng.PasswordChar = '*';
+            this.tPwdOng.Size = new System.Drawing.Size(450, 31);
             this.tPwdOng.TabIndex = 17;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(132, 316);
+            this.label11.Location = new System.Drawing.Point(117, 253);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(272, 29);
+            this.label11.Size = new System.Drawing.Size(230, 26);
             this.label11.TabIndex = 16;
             this.label11.Text = "Introduce tu contraseña";
             // 
             // tCorreoOng
             // 
             this.tCorreoOng.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tCorreoOng.Location = new System.Drawing.Point(3, 261);
-            this.tCorreoOng.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tCorreoOng.Location = new System.Drawing.Point(3, 209);
             this.tCorreoOng.Name = "tCorreoOng";
-            this.tCorreoOng.Size = new System.Drawing.Size(506, 35);
+            this.tCorreoOng.Size = new System.Drawing.Size(450, 31);
             this.tCorreoOng.TabIndex = 15;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(154, 225);
+            this.label12.Location = new System.Drawing.Point(137, 180);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(213, 29);
+            this.label12.Size = new System.Drawing.Size(182, 26);
             this.label12.TabIndex = 14;
             this.label12.Text = "Correo electrónico";
             // 
             // tCifOng
             // 
             this.tCifOng.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tCifOng.Location = new System.Drawing.Point(3, 164);
-            this.tCifOng.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tCifOng.Location = new System.Drawing.Point(3, 131);
             this.tCifOng.Name = "tCifOng";
-            this.tCifOng.Size = new System.Drawing.Size(506, 35);
+            this.tCifOng.Size = new System.Drawing.Size(450, 31);
             this.tCifOng.TabIndex = 13;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(231, 128);
+            this.label13.Location = new System.Drawing.Point(205, 102);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 29);
+            this.label13.Size = new System.Drawing.Size(41, 26);
             this.label13.TabIndex = 12;
             this.label13.Text = "CIF";
             // 
             // tNombreOng
             // 
             this.tNombreOng.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tNombreOng.Location = new System.Drawing.Point(3, 71);
-            this.tNombreOng.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tNombreOng.Location = new System.Drawing.Point(3, 57);
             this.tNombreOng.Name = "tNombreOng";
-            this.tNombreOng.Size = new System.Drawing.Size(506, 35);
+            this.tNombreOng.Size = new System.Drawing.Size(450, 31);
             this.tNombreOng.TabIndex = 11;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(161, 35);
+            this.label14.Location = new System.Drawing.Point(143, 28);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(204, 29);
+            this.label14.Size = new System.Drawing.Size(174, 26);
             this.label14.TabIndex = 10;
             this.label14.Text = "Nombre completo";
             // 
@@ -189,10 +185,9 @@
             // 
             this.bOng.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bOng.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bOng.Location = new System.Drawing.Point(890, 314);
-            this.bOng.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bOng.Location = new System.Drawing.Point(791, 251);
             this.bOng.Name = "bOng";
-            this.bOng.Size = new System.Drawing.Size(204, 79);
+            this.bOng.Size = new System.Drawing.Size(181, 63);
             this.bOng.TabIndex = 26;
             this.bOng.Text = "ONG/Entidad";
             this.bOng.UseVisualStyleBackColor = false;
@@ -202,10 +197,9 @@
             // 
             this.bProfesor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bProfesor.Location = new System.Drawing.Point(686, 314);
-            this.bProfesor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bProfesor.Location = new System.Drawing.Point(610, 251);
             this.bProfesor.Name = "bProfesor";
-            this.bProfesor.Size = new System.Drawing.Size(204, 79);
+            this.bProfesor.Size = new System.Drawing.Size(181, 63);
             this.bProfesor.TabIndex = 25;
             this.bProfesor.Text = "Profesor";
             this.bProfesor.UseVisualStyleBackColor = false;
@@ -215,10 +209,9 @@
             // 
             this.bAlumno.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.bAlumno.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAlumno.Location = new System.Drawing.Point(483, 314);
-            this.bAlumno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bAlumno.Location = new System.Drawing.Point(429, 251);
             this.bAlumno.Name = "bAlumno";
-            this.bAlumno.Size = new System.Drawing.Size(204, 79);
+            this.bAlumno.Size = new System.Drawing.Size(181, 63);
             this.bAlumno.TabIndex = 24;
             this.bAlumno.Text = "Alumno";
             this.bAlumno.UseVisualStyleBackColor = false;
@@ -226,21 +219,12 @@
             // 
             // bRegistro
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(690, 894);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(204, 79);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Registrarse";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             this.bRegistro.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bRegistro.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bRegistro.Location = new System.Drawing.Point(647, 770);
+            this.bRegistro.Location = new System.Drawing.Point(620, 720);
+            this.bRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bRegistro.Name = "bRegistro";
-            this.bRegistro.Size = new System.Drawing.Size(181, 63);
+            this.bRegistro.Size = new System.Drawing.Size(161, 50);
             this.bRegistro.TabIndex = 22;
             this.bRegistro.Text = "Registrarse";
             this.bRegistro.UseVisualStyleBackColor = false;
@@ -258,104 +242,100 @@
             this.pProfesor.Controls.Add(this.label8);
             this.pProfesor.Controls.Add(this.tNombreProfesor);
             this.pProfesor.Controls.Add(this.label10);
-            this.pProfesor.Location = new System.Drawing.Point(531, 388);
-            this.pProfesor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pProfesor.Location = new System.Drawing.Point(472, 310);
             this.pProfesor.Name = "pProfesor";
-            this.pProfesor.Size = new System.Drawing.Size(513, 495);
+            this.pProfesor.Size = new System.Drawing.Size(456, 396);
             this.pProfesor.TabIndex = 21;
             // 
             // tConfirmarPwd
             // 
             this.tConfirmarPwd.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tConfirmarPwd.Location = new System.Drawing.Point(3, 441);
-            this.tConfirmarPwd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tConfirmarPwd.Location = new System.Drawing.Point(3, 353);
             this.tConfirmarPwd.Name = "tConfirmarPwd";
-            this.tConfirmarPwd.Size = new System.Drawing.Size(506, 35);
+            this.tConfirmarPwd.PasswordChar = '*';
+            this.tConfirmarPwd.Size = new System.Drawing.Size(450, 31);
             this.tConfirmarPwd.TabIndex = 19;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(132, 405);
+            this.label4.Location = new System.Drawing.Point(117, 324);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(267, 29);
+            this.label4.Size = new System.Drawing.Size(226, 26);
             this.label4.TabIndex = 18;
             this.label4.Text = "Confirma tu contraseña";
             // 
             // tPwdProfesor
             // 
             this.tPwdProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tPwdProfesor.Location = new System.Drawing.Point(3, 352);
-            this.tPwdProfesor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tPwdProfesor.Location = new System.Drawing.Point(3, 282);
             this.tPwdProfesor.Name = "tPwdProfesor";
-            this.tPwdProfesor.Size = new System.Drawing.Size(506, 35);
+            this.tPwdProfesor.PasswordChar = '*';
+            this.tPwdProfesor.Size = new System.Drawing.Size(450, 31);
             this.tPwdProfesor.TabIndex = 17;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(132, 316);
+            this.label6.Location = new System.Drawing.Point(117, 253);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(272, 29);
+            this.label6.Size = new System.Drawing.Size(230, 26);
             this.label6.TabIndex = 16;
             this.label6.Text = "Introduce tu contraseña";
             // 
             // tCorreoProfesor
             // 
             this.tCorreoProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tCorreoProfesor.Location = new System.Drawing.Point(3, 261);
-            this.tCorreoProfesor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tCorreoProfesor.Location = new System.Drawing.Point(3, 209);
             this.tCorreoProfesor.Name = "tCorreoProfesor";
-            this.tCorreoProfesor.Size = new System.Drawing.Size(506, 35);
+            this.tCorreoProfesor.Size = new System.Drawing.Size(450, 31);
             this.tCorreoProfesor.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(154, 225);
+            this.label7.Location = new System.Drawing.Point(137, 180);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(213, 29);
+            this.label7.Size = new System.Drawing.Size(182, 26);
             this.label7.TabIndex = 14;
             this.label7.Text = "Correo electrónico";
             // 
             // tNiuProfesor
             // 
             this.tNiuProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tNiuProfesor.Location = new System.Drawing.Point(3, 164);
-            this.tNiuProfesor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tNiuProfesor.Location = new System.Drawing.Point(3, 131);
             this.tNiuProfesor.Name = "tNiuProfesor";
-            this.tNiuProfesor.Size = new System.Drawing.Size(506, 35);
+            this.tNiuProfesor.Size = new System.Drawing.Size(450, 31);
             this.tNiuProfesor.TabIndex = 13;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(231, 128);
+            this.label8.Location = new System.Drawing.Point(205, 102);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 29);
+            this.label8.Size = new System.Drawing.Size(44, 26);
             this.label8.TabIndex = 12;
             this.label8.Text = "NIU";
             // 
             // tNombreProfesor
             // 
             this.tNombreProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tNombreProfesor.Location = new System.Drawing.Point(3, 71);
-            this.tNombreProfesor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tNombreProfesor.Location = new System.Drawing.Point(3, 57);
             this.tNombreProfesor.Name = "tNombreProfesor";
-            this.tNombreProfesor.Size = new System.Drawing.Size(506, 35);
+            this.tNombreProfesor.Size = new System.Drawing.Size(450, 31);
             this.tNombreProfesor.TabIndex = 11;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(161, 35);
+            this.label10.Location = new System.Drawing.Point(143, 28);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(204, 29);
+            this.label10.Size = new System.Drawing.Size(174, 26);
             this.label10.TabIndex = 10;
             this.label10.Text = "Nombre completo";
             // 
@@ -369,95 +349,91 @@
             this.pAlumno.Controls.Add(this.label1);
             this.pAlumno.Controls.Add(this.tNombreAlumno);
             this.pAlumno.Controls.Add(this.label5);
-            this.pAlumno.Location = new System.Drawing.Point(531, 388);
-            this.pAlumno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pAlumno.Location = new System.Drawing.Point(472, 310);
             this.pAlumno.Name = "pAlumno";
-            this.pAlumno.Size = new System.Drawing.Size(513, 495);
+            this.pAlumno.Size = new System.Drawing.Size(456, 396);
             this.pAlumno.TabIndex = 28;
             // 
             // tConfirmarAlumno
             // 
             this.tConfirmarAlumno.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tConfirmarAlumno.Location = new System.Drawing.Point(3, 352);
-            this.tConfirmarAlumno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tConfirmarAlumno.Location = new System.Drawing.Point(3, 282);
             this.tConfirmarAlumno.Name = "tConfirmarAlumno";
-            this.tConfirmarAlumno.Size = new System.Drawing.Size(506, 35);
+            this.tConfirmarAlumno.PasswordChar = '*';
+            this.tConfirmarAlumno.Size = new System.Drawing.Size(450, 31);
             this.tConfirmarAlumno.TabIndex = 17;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(132, 316);
+            this.label3.Location = new System.Drawing.Point(117, 253);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(267, 29);
+            this.label3.Size = new System.Drawing.Size(226, 26);
             this.label3.TabIndex = 16;
             this.label3.Text = "Confirma tu contraseña";
             // 
             // tPwdAlumno
             // 
             this.tPwdAlumno.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tPwdAlumno.Location = new System.Drawing.Point(3, 261);
-            this.tPwdAlumno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tPwdAlumno.Location = new System.Drawing.Point(3, 209);
             this.tPwdAlumno.Name = "tPwdAlumno";
-            this.tPwdAlumno.Size = new System.Drawing.Size(506, 35);
+            this.tPwdAlumno.PasswordChar = '*';
+            this.tPwdAlumno.Size = new System.Drawing.Size(450, 31);
             this.tPwdAlumno.TabIndex = 15;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(127, 225);
+            this.label2.Location = new System.Drawing.Point(113, 180);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(272, 29);
+            this.label2.Size = new System.Drawing.Size(230, 26);
             this.label2.TabIndex = 14;
             this.label2.Text = "Introduce tu contraseña";
             // 
             // tCorreoAlumno
             // 
             this.tCorreoAlumno.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tCorreoAlumno.Location = new System.Drawing.Point(3, 164);
-            this.tCorreoAlumno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tCorreoAlumno.Location = new System.Drawing.Point(3, 131);
             this.tCorreoAlumno.Name = "tCorreoAlumno";
-            this.tCorreoAlumno.Size = new System.Drawing.Size(506, 35);
+            this.tCorreoAlumno.Size = new System.Drawing.Size(450, 31);
             this.tCorreoAlumno.TabIndex = 13;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(152, 128);
+            this.label1.Location = new System.Drawing.Point(135, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 29);
+            this.label1.Size = new System.Drawing.Size(182, 26);
             this.label1.TabIndex = 12;
             this.label1.Text = "Correo electrónico";
             // 
             // tNombreAlumno
             // 
             this.tNombreAlumno.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tNombreAlumno.Location = new System.Drawing.Point(3, 71);
-            this.tNombreAlumno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tNombreAlumno.Location = new System.Drawing.Point(3, 57);
             this.tNombreAlumno.Name = "tNombreAlumno";
-            this.tNombreAlumno.Size = new System.Drawing.Size(506, 35);
+            this.tNombreAlumno.Size = new System.Drawing.Size(450, 31);
             this.tNombreAlumno.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(161, 35);
+            this.label5.Location = new System.Drawing.Point(143, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(204, 29);
+            this.label5.Size = new System.Drawing.Size(174, 26);
             this.label5.TabIndex = 10;
             this.label5.Text = "Nombre completo";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
-            this.pictureBox1.Location = new System.Drawing.Point(585, 30);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(520, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(411, 256);
+            this.pictureBox1.Size = new System.Drawing.Size(365, 205);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
@@ -465,10 +441,9 @@
             // pAtras
             // 
             this.pAtras.Image = global::Grupo02PCSAS.Properties.Resources._60577;
-            this.pAtras.Location = new System.Drawing.Point(284, 116);
-            this.pAtras.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pAtras.Location = new System.Drawing.Point(252, 93);
             this.pAtras.Name = "pAtras";
-            this.pAtras.Size = new System.Drawing.Size(90, 75);
+            this.pAtras.Size = new System.Drawing.Size(80, 60);
             this.pAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pAtras.TabIndex = 29;
             this.pAtras.TabStop = false;
@@ -476,10 +451,10 @@
             // 
             // fRegistro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1465, 1024);
+            this.ClientSize = new System.Drawing.Size(1302, 819);
             this.Controls.Add(this.pAtras);
             this.Controls.Add(this.bOng);
             this.Controls.Add(this.bProfesor);
@@ -489,7 +464,6 @@
             this.Controls.Add(this.pOng);
             this.Controls.Add(this.pAlumno);
             this.Controls.Add(this.pProfesor);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fRegistro";

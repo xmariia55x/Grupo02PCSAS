@@ -86,10 +86,8 @@ namespace Grupo02PCSAS
                 {
                     nombre = tNombreAlumno.Text;
                     correo = tCorreoAlumno.Text;
-                    cif = null;
-                    niu = null;
                     rol = "ALUMNO";
-                    if (tPwdAlumno.Equals(tConfirmarAlumno))
+                    if (tPwdAlumno.Text.Equals(tConfirmarAlumno.Text))
                     {
                         contrasenia = tPwdAlumno.Text;
                     }
@@ -98,14 +96,15 @@ namespace Grupo02PCSAS
                         throw new Error("Las contraseñas no coinciden");
                     }
                 }
-                else if (seleccionado == 1)
+                else if (seleccionado == 1) //Profesor
                 {
+                    Console.WriteLine(seleccionado);
                     nombre = tNombreProfesor.Text;
                     correo = tCorreoProfesor.Text;
                     niu = tNiuProfesor.Text;
-                    cif = null;
                     rol = "PROFESOR";
-                    if (tPwdProfesor.Equals(tConfirmarPwd))
+                    Console.WriteLine(seleccionado);
+                    if (tPwdProfesor.Text.Equals(tConfirmarPwd.Text))
                     {
                         contrasenia = tPwdProfesor.Text;
                     }
@@ -113,15 +112,15 @@ namespace Grupo02PCSAS
                     {
                         throw new Error("Las contraseñas no coinciden");
                     }
+                    Console.WriteLine(seleccionado);
                 }
-                else if (seleccionado == 2)
+                else if (seleccionado == 2) //ONG
                 {
                     nombre = tNombreOng.Text;
                     correo = tCorreoOng.Text;
                     cif = tCifOng.Text;
-                    niu = null;
                     rol = "ONG";
-                    if (tPwdOng.Equals(tConfirmarOng))
+                    if (tPwdOng.Text.Equals(tConfirmarOng.Text))
                     {
                         contrasenia = tPwdOng.Text;
                     }
