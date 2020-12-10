@@ -38,12 +38,12 @@ namespace Grupo02PCSAS
             //Console.WriteLine(usuario.ToString());
             //Application.Run(new fRegistro());
             //Commit de maria
-            Rol alumno = new Rol("ALUMNO", "al", false);
+            //Rol alumno = new Rol("ALUMNO", "al", false);
             //Rol profesor = new Rol("PROFESOR", "prof", false);
             //Rol admin = new Rol("ADMIN", "adm", true);
-            Usuario user = new Usuario("prueba", "prueba", "prueba", "cif", "niu", alumno);
+            //Usuario user = new Usuario("prueba", "prueba", "prueba", "cif", "niu", alumno);
             //Application.Run(new fDatosPerfil(user));
-            Application.Run(new fNuevoDebateForo(user));
+            Application.Run(new fRegistro());
         }
     }
 
