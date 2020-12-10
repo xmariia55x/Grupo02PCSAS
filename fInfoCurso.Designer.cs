@@ -301,6 +301,7 @@
             this.lDescripcion.Size = new System.Drawing.Size(727, 289);
             this.lDescripcion.TabIndex = 1;
             this.lDescripcion.Text = resources.GetString("lDescripcion.Text");
+            this.lDescripcion.Click += new System.EventHandler(this.lDescripcion_Click);
             // 
             // label10
             // 

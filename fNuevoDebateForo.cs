@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,6 +46,14 @@ namespace Grupo02PCSAS
             this.Close();
         }
 
+        private void lPerfil_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil ventana = new fDatosPerfil(usuario);
+            this.Visible = false;
+            ventana.ShowDialog();
+            this.Visible = true;
+        }
+
         private void bEnviarDebate_Click(object sender, EventArgs e)
         {
             try
@@ -54,14 +63,22 @@ namespace Grupo02PCSAS
 
                 if (asunto.Equals("") || mensaje.Equals(""))
                 {
-                    MessageBox.Show("Faltan campos obligatorios por rellenar");
+                    MessageBox.Show("Faltan campos obligatorios por rellenar.");
                 }
                 else if (!asunto.Equals("") && !mensaje.Equals(""))
                 {
+                    
                     debateCreado = new Debate(usuario.NombreUsuario, asunto, mensaje, DateTime.Now.ToShortDateString());
                     debateCreado = null;
+                        
+                    
                 }
-            } catch (Exception ex)
+            } catch (MySqlException excp)
+            {
+                //Ya habia un debate creado por el mismo usuario con igual asunto y hay que lanzar una advertencia
+                MessageBox.Show("Ya hay un debate creado con el mismo asunto, cambie el asunto, por favor.");
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Se ha producido un error: " + ex.Message);
             }
