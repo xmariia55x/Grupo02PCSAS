@@ -40,7 +40,7 @@ namespace Grupo02PCSAS
 
         private void bCrearCurso_Click(object sender, EventArgs e)
         {
-            fCrearCursoAdmin curso = new fCrearCursoAdmin();
+            fCrearCursoAdmin curso = new fCrearCursoAdmin(null);
             this.Visible = false;
             curso.ShowDialog();
             this.Visible = true;
