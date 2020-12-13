@@ -12,7 +12,7 @@ namespace Grupo02PCSAS
         private static string BD_NAME = Properties.Settings.Default.BD_NAME;
 
         private int idCurso;
-        private string profesorCurso;
+        private Usuario profesorCurso;
         private string nombreCurso;
         private string descripcionCurso;
         private string fechaInicioCurso;
@@ -28,7 +28,7 @@ namespace Grupo02PCSAS
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
             Object[] tupla = miBD.Select("SELECT * FROM CURSO WHERE IDCURSO = "+idCurso+"")[0];
             this.idCurso = (int)tupla[0];
-            this.profesorCurso = (string)tupla[1];
+            this.profesorCurso = new Usuario((string)tupla[1]);
             this.nombreCurso = (string)tupla[2];
             this.descripcionCurso = (string)tupla[3];
             this.fechaInicioCurso = (string)tupla[4];
@@ -39,12 +39,12 @@ namespace Grupo02PCSAS
             this.online = (int)tupla[9] == 1 ? true : false;
         }
 
-        public Curso(string profesorCurso, string nombreCurso, string descripcionCurso, string fechaInicioCurso
+        public Curso(Usuario profesorCurso, string nombreCurso, string descripcionCurso, string fechaInicioCurso
             , string fechaFinCurso, string horaInicioCurso, string horaFinCurso, int aforoCurso, bool online)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
             string sentencia = "INSERT INTO CURSO VALUES ('" +profesorCurso+"','"+nombreCurso+"','"+descripcionCurso+"','"
-                +fechaInicioCurso+"','"+fechaFinCurso+"','"+horaInicioCurso+"','"+horaFinCurso+"',"+aforoCurso+ (online ? 1 : 0) + ");";
+                +fechaInicioCurso+"','"+fechaFinCurso+"','"+horaInicioCurso+"','"+horaFinCurso+"',"+aforoCurso+"," + (online ? 1 : 0) + ");";
             miBD.Insert(sentencia);
             this.idCurso = (int) miBD.SelectScalar("SELECT MAX(idCurso) FROM CURSO;");
             this.profesorCurso = profesorCurso;
@@ -69,13 +69,13 @@ namespace Grupo02PCSAS
                 this.idCurso = value;
             }
         }
-        public string CursoProfesor
+        public Usuario CursoProfesor
         {
             get { return this.profesorCurso; }
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE CURSO SET PROFESORCURSO='" + value + "' WHERE IDCURSO = " + this.idCurso);
+                miBD.Update("UPDATE CURSO SET PROFESORCURSO='" + value.NombreUsuario + "' WHERE IDCURSO = " + this.idCurso);
                 this.profesorCurso = value;
 
             }

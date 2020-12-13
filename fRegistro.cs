@@ -122,7 +122,7 @@ namespace Grupo02PCSAS
                     nombreO = tNombreOng.Text;
                     correoO = tCorreoOng.Text;
                     cifO = tCifOng.Text;
-                    rolO = "ONG";
+                    rolO = "ENTIDAD";
                     if (tPwdOng.Text.Equals(tConfirmarOng.Text))
                     {
                         contraseniaO = tPwdOng.Text;
@@ -132,9 +132,10 @@ namespace Grupo02PCSAS
                         throw new Error("Las contraseñas no coinciden");
                     }
                     Usuario user = new Usuario(correoO, nombreO, contraseniaO, cifO, niuO, new Rol(rolO));
-                    MessageBox.Show("Usuario con rol Profesor creado con éxito");
+                    MessageBox.Show("Usuario con rol Ong/Entidad creado con éxito");
                     this.Close();
                 }
+                
             } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);

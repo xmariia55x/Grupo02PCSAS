@@ -14,6 +14,34 @@ namespace Grupo02PCSAS
         private int idCurso;
         private string correo;
 
+        public static List<Usuario> listaUsuarios(int cursoId)
+        {
+            List<Usuario> lista = new List<Usuario>();
+            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+
+            foreach (object[] tupla in miBD.Select("SELECT correo FROM CursosRealizados WHERE idCurso = " + cursoId + ";"))
+            {
+                string correo = (string)tupla[0];
+                lista.Add(new Usuario(correo));
+            }
+
+            return lista;
+        }
+
+        public static List<Curso> listaActividades(string correo)
+        {
+            List<Curso> lista = new List<Curso>();
+            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+
+            foreach (object[] tupla in miBD.Select("SELECT idCurso FROM CursosRealizados WHERE correo = " + correo + ";"))
+            {
+                int cursoId = (int)tupla[0];
+                lista.Add(new Curso(cursoId));
+            }
+
+            return lista;
+        }
+
         public CursosRealizados(int numeroCurso, string email)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
