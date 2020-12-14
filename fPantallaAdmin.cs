@@ -24,7 +24,7 @@ namespace Grupo02PCSAS
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            fDatosPerfil datosp = new fDatosPerfil();
+            fDatosPerfil datosp = new fDatosPerfil(null); //M -> ESTO HAY QUE CAMBIARLO!!!!!
             this.Visible = false;
             datosp.ShowDialog();
             this.Visible = true;
@@ -40,7 +40,7 @@ namespace Grupo02PCSAS
 
         private void bCrearCurso_Click(object sender, EventArgs e)
         {
-            fCrearCursoAdmin curso = new fCrearCursoAdmin();
+            fCrearCursoAdmin curso = new fCrearCursoAdmin(null);
             this.Visible = false;
             curso.ShowDialog();
             this.Visible = true;

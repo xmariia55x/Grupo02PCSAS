@@ -45,5 +45,17 @@ namespace Grupo02PCSAS
         {
 
         }
+
+        private void PantallaBorrarCurso_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Curso' Puede moverla o quitarla según sea necesario.
+            this.cursoTableAdapter.Fill(this.apsgrupo02DataSet.Curso);
+
+        }
+
+        private void dgvMisCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

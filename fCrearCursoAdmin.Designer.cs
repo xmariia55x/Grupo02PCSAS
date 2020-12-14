@@ -36,10 +36,6 @@ namespace Grupo02PCSAS
             this.tDescripcionCurso = new System.Windows.Forms.TextBox();
             this.tAforoCurso = new System.Windows.Forms.TextBox();
             this.tLugarCurso = new System.Windows.Forms.TextBox();
-            this.tFechaIniCurso = new System.Windows.Forms.TextBox();
-            this.tHoraIniCurso = new System.Windows.Forms.TextBox();
-            this.tHoraFinCurso = new System.Windows.Forms.TextBox();
-            this.tFechaFinCurso = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,6 +51,10 @@ namespace Grupo02PCSAS
             this.bAniadirArchivosCurso = new System.Windows.Forms.Button();
             this.bGuardarCambiosCurso = new System.Windows.Forms.Button();
             this.bAtras = new System.Windows.Forms.Button();
+            this.dFechaIniCurso = new System.Windows.Forms.DateTimePicker();
+            this.dFechaFinCurso = new System.Windows.Forms.DateTimePicker();
+            this.dHoraIniCurso = new System.Windows.Forms.DateTimePicker();
+            this.dHoraFinCurso = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,10 +65,9 @@ namespace Grupo02PCSAS
             this.pictureBox1.ImageLocation = "C:\\Users\\maria\\OneDrive - Universidad de Málaga\\UNIVERSIDAD\\Tercer año\\1er cuatri" +
     "mestre\\Ingeniería de requisitos\\Proyecto";
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(712, 32);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(633, 26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(348, 339);
+            this.pictureBox1.Size = new System.Drawing.Size(309, 271);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -76,95 +75,63 @@ namespace Grupo02PCSAS
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(738, 395);
+            this.label1.Location = new System.Drawing.Point(656, 316);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 66);
+            this.label1.Size = new System.Drawing.Size(249, 54);
             this.label1.TabIndex = 2;
             this.label1.Text = "Crear Curso";
             // 
             // tNombreCurso
             // 
-            this.tNombreCurso.Location = new System.Drawing.Point(194, 560);
-            this.tNombreCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tNombreCurso.Location = new System.Drawing.Point(172, 448);
+            this.tNombreCurso.MaxLength = 50;
             this.tNombreCurso.Name = "tNombreCurso";
-            this.tNombreCurso.Size = new System.Drawing.Size(245, 26);
+            this.tNombreCurso.Size = new System.Drawing.Size(218, 22);
             this.tNombreCurso.TabIndex = 3;
             // 
             // tDescripcionCurso
             // 
-            this.tDescripcionCurso.Location = new System.Drawing.Point(194, 686);
-            this.tDescripcionCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tDescripcionCurso.Location = new System.Drawing.Point(172, 549);
+            this.tDescripcionCurso.MaxLength = 300;
             this.tDescripcionCurso.Multiline = true;
             this.tDescripcionCurso.Name = "tDescripcionCurso";
-            this.tDescripcionCurso.Size = new System.Drawing.Size(245, 188);
+            this.tDescripcionCurso.Size = new System.Drawing.Size(218, 151);
             this.tDescripcionCurso.TabIndex = 4;
             // 
             // tAforoCurso
             // 
-            this.tAforoCurso.Location = new System.Drawing.Point(1243, 808);
-            this.tAforoCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tAforoCurso.Location = new System.Drawing.Point(1105, 646);
+            this.tAforoCurso.MaxLength = 8;
             this.tAforoCurso.Name = "tAforoCurso";
-            this.tAforoCurso.Size = new System.Drawing.Size(245, 26);
+            this.tAforoCurso.Size = new System.Drawing.Size(196, 22);
             this.tAforoCurso.TabIndex = 5;
             // 
             // tLugarCurso
             // 
-            this.tLugarCurso.Location = new System.Drawing.Point(739, 808);
-            this.tLugarCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tLugarCurso.Location = new System.Drawing.Point(657, 646);
+            this.tLugarCurso.MaxLength = 50;
+            this.tLugarCurso.Multiline = true;
             this.tLugarCurso.Name = "tLugarCurso";
-            this.tLugarCurso.Size = new System.Drawing.Size(245, 26);
+            this.tLugarCurso.Size = new System.Drawing.Size(218, 54);
             this.tLugarCurso.TabIndex = 6;
-            // 
-            // tFechaIniCurso
-            // 
-            this.tFechaIniCurso.Location = new System.Drawing.Point(739, 560);
-            this.tFechaIniCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tFechaIniCurso.Name = "tFechaIniCurso";
-            this.tFechaIniCurso.Size = new System.Drawing.Size(245, 26);
-            this.tFechaIniCurso.TabIndex = 7;
-            // 
-            // tHoraIniCurso
-            // 
-            this.tHoraIniCurso.Location = new System.Drawing.Point(1243, 560);
-            this.tHoraIniCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tHoraIniCurso.Name = "tHoraIniCurso";
-            this.tHoraIniCurso.Size = new System.Drawing.Size(245, 26);
-            this.tHoraIniCurso.TabIndex = 8;
-            // 
-            // tHoraFinCurso
-            // 
-            this.tHoraFinCurso.Location = new System.Drawing.Point(1243, 686);
-            this.tHoraFinCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tHoraFinCurso.Name = "tHoraFinCurso";
-            this.tHoraFinCurso.Size = new System.Drawing.Size(245, 26);
-            this.tHoraFinCurso.TabIndex = 9;
-            // 
-            // tFechaFinCurso
-            // 
-            this.tFechaFinCurso.Location = new System.Drawing.Point(739, 686);
-            this.tFechaFinCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tFechaFinCurso.Name = "tFechaFinCurso";
-            this.tFechaFinCurso.Size = new System.Drawing.Size(245, 26);
-            this.tFechaFinCurso.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(188, 512);
+            this.label3.Location = new System.Drawing.Point(167, 410);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 29);
+            this.label3.Size = new System.Drawing.Size(137, 26);
             this.label3.TabIndex = 13;
             this.label3.Text = "Nombre curso";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(189, 639);
+            this.label2.Location = new System.Drawing.Point(168, 511);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 29);
+            this.label2.Size = new System.Drawing.Size(173, 26);
             this.label2.TabIndex = 14;
             this.label2.Text = "Breve descripción";
             // 
@@ -172,9 +139,9 @@ namespace Grupo02PCSAS
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(734, 512);
+            this.label4.Location = new System.Drawing.Point(652, 410);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 29);
+            this.label4.Size = new System.Drawing.Size(150, 26);
             this.label4.TabIndex = 15;
             this.label4.Text = "Fecha de inicio";
             // 
@@ -182,9 +149,9 @@ namespace Grupo02PCSAS
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(734, 639);
+            this.label5.Location = new System.Drawing.Point(652, 511);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(242, 29);
+            this.label5.Size = new System.Drawing.Size(206, 26);
             this.label5.TabIndex = 16;
             this.label5.Text = "Fecha de finalización";
             // 
@@ -192,9 +159,9 @@ namespace Grupo02PCSAS
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(734, 760);
+            this.label6.Location = new System.Drawing.Point(652, 608);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 29);
+            this.label6.Size = new System.Drawing.Size(62, 26);
             this.label6.TabIndex = 17;
             this.label6.Text = "Lugar";
             // 
@@ -202,9 +169,9 @@ namespace Grupo02PCSAS
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1238, 512);
+            this.label7.Location = new System.Drawing.Point(1100, 410);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(163, 29);
+            this.label7.Size = new System.Drawing.Size(139, 26);
             this.label7.TabIndex = 18;
             this.label7.Text = "Hora de inicio";
             // 
@@ -212,9 +179,9 @@ namespace Grupo02PCSAS
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1238, 639);
+            this.label8.Location = new System.Drawing.Point(1100, 511);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(229, 29);
+            this.label8.Size = new System.Drawing.Size(195, 26);
             this.label8.TabIndex = 19;
             this.label8.Text = "Hora de finalización";
             // 
@@ -222,9 +189,9 @@ namespace Grupo02PCSAS
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1238, 760);
+            this.label9.Location = new System.Drawing.Point(1100, 608);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 29);
+            this.label9.Size = new System.Drawing.Size(61, 26);
             this.label9.TabIndex = 20;
             this.label9.Text = "Aforo";
             // 
@@ -232,10 +199,9 @@ namespace Grupo02PCSAS
             // 
             this.rOnline.AutoSize = true;
             this.rOnline.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rOnline.Location = new System.Drawing.Point(739, 892);
-            this.rOnline.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rOnline.Location = new System.Drawing.Point(657, 714);
             this.rOnline.Name = "rOnline";
-            this.rOnline.Size = new System.Drawing.Size(107, 33);
+            this.rOnline.Size = new System.Drawing.Size(91, 30);
             this.rOnline.TabIndex = 21;
             this.rOnline.TabStop = true;
             this.rOnline.Text = "Online";
@@ -245,10 +211,9 @@ namespace Grupo02PCSAS
             // 
             this.rPresencial.AutoSize = true;
             this.rPresencial.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rPresencial.Location = new System.Drawing.Point(897, 892);
-            this.rPresencial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rPresencial.Location = new System.Drawing.Point(797, 714);
             this.rPresencial.Name = "rPresencial";
-            this.rPresencial.Size = new System.Drawing.Size(147, 33);
+            this.rPresencial.Size = new System.Drawing.Size(125, 30);
             this.rPresencial.TabIndex = 22;
             this.rPresencial.TabStop = true;
             this.rPresencial.Text = "Presencial";
@@ -257,23 +222,22 @@ namespace Grupo02PCSAS
             // lProfesor
             // 
             this.lProfesor.FormattingEnabled = true;
-            this.lProfesor.ItemHeight = 20;
+            this.lProfesor.ItemHeight = 16;
             this.lProfesor.Items.AddRange(new object[] {
             "Profesor 1",
             "Profesor 2"});
-            this.lProfesor.Location = new System.Drawing.Point(1243, 942);
-            this.lProfesor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lProfesor.Location = new System.Drawing.Point(1105, 754);
             this.lProfesor.Name = "lProfesor";
-            this.lProfesor.Size = new System.Drawing.Size(240, 44);
+            this.lProfesor.Size = new System.Drawing.Size(196, 36);
             this.lProfesor.TabIndex = 23;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1238, 898);
+            this.label10.Location = new System.Drawing.Point(1100, 718);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 29);
+            this.label10.Size = new System.Drawing.Size(86, 26);
             this.label10.TabIndex = 24;
             this.label10.Text = "Profesor";
             // 
@@ -281,10 +245,9 @@ namespace Grupo02PCSAS
             // 
             this.bAniadirArchivosCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bAniadirArchivosCurso.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAniadirArchivosCurso.Location = new System.Drawing.Point(194, 909);
-            this.bAniadirArchivosCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bAniadirArchivosCurso.Location = new System.Drawing.Point(172, 727);
             this.bAniadirArchivosCurso.Name = "bAniadirArchivosCurso";
-            this.bAniadirArchivosCurso.Size = new System.Drawing.Size(148, 99);
+            this.bAniadirArchivosCurso.Size = new System.Drawing.Size(132, 79);
             this.bAniadirArchivosCurso.TabIndex = 25;
             this.bAniadirArchivosCurso.Text = "Añadir archivos";
             this.bAniadirArchivosCurso.UseVisualStyleBackColor = false;
@@ -293,30 +256,79 @@ namespace Grupo02PCSAS
             // 
             this.bGuardarCambiosCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bGuardarCambiosCurso.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bGuardarCambiosCurso.Location = new System.Drawing.Point(762, 952);
-            this.bGuardarCambiosCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bGuardarCambiosCurso.Location = new System.Drawing.Point(677, 762);
             this.bGuardarCambiosCurso.Name = "bGuardarCambiosCurso";
-            this.bGuardarCambiosCurso.Size = new System.Drawing.Size(204, 79);
+            this.bGuardarCambiosCurso.Size = new System.Drawing.Size(181, 63);
             this.bGuardarCambiosCurso.TabIndex = 26;
             this.bGuardarCambiosCurso.Text = "Guardar cambios";
             this.bGuardarCambiosCurso.UseVisualStyleBackColor = false;
+            this.bGuardarCambiosCurso.Click += new System.EventHandler(this.bGuardarCambiosCurso_Click);
             // 
             // bAtras
             // 
             this.bAtras.Image = global::Grupo02PCSAS.Properties.Resources.Atras;
-            this.bAtras.Location = new System.Drawing.Point(278, 250);
+            this.bAtras.Location = new System.Drawing.Point(247, 200);
+            this.bAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bAtras.Name = "bAtras";
-            this.bAtras.Size = new System.Drawing.Size(100, 100);
+            this.bAtras.Size = new System.Drawing.Size(89, 80);
             this.bAtras.TabIndex = 27;
             this.bAtras.UseVisualStyleBackColor = true;
             this.bAtras.Click += new System.EventHandler(this.bAtras_Click);
             // 
+            // dFechaIniCurso
+            // 
+            this.dFechaIniCurso.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dFechaIniCurso.CustomFormat = "dd/MM/yyyy";
+            this.dFechaIniCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dFechaIniCurso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dFechaIniCurso.Location = new System.Drawing.Point(657, 448);
+            this.dFechaIniCurso.Name = "dFechaIniCurso";
+            this.dFechaIniCurso.Size = new System.Drawing.Size(218, 31);
+            this.dFechaIniCurso.TabIndex = 28;
+            // 
+            // dFechaFinCurso
+            // 
+            this.dFechaFinCurso.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dFechaFinCurso.CustomFormat = "dd/MM/yyyy";
+            this.dFechaFinCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dFechaFinCurso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dFechaFinCurso.Location = new System.Drawing.Point(657, 549);
+            this.dFechaFinCurso.Name = "dFechaFinCurso";
+            this.dFechaFinCurso.Size = new System.Drawing.Size(218, 31);
+            this.dFechaFinCurso.TabIndex = 29;
+            // 
+            // dHoraIniCurso
+            // 
+            this.dHoraIniCurso.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dHoraIniCurso.CustomFormat = "HH:mm";
+            this.dHoraIniCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dHoraIniCurso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dHoraIniCurso.Location = new System.Drawing.Point(1105, 448);
+            this.dHoraIniCurso.Name = "dHoraIniCurso";
+            this.dHoraIniCurso.Size = new System.Drawing.Size(196, 31);
+            this.dHoraIniCurso.TabIndex = 30;
+            // 
+            // dHoraFinCurso
+            // 
+            this.dHoraFinCurso.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dHoraFinCurso.CustomFormat = "HH:mm";
+            this.dHoraFinCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dHoraFinCurso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dHoraFinCurso.Location = new System.Drawing.Point(1105, 549);
+            this.dHoraFinCurso.Name = "dHoraFinCurso";
+            this.dHoraFinCurso.Size = new System.Drawing.Size(196, 31);
+            this.dHoraFinCurso.TabIndex = 31;
+            // 
             // fCrearCursoAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1653, 1291);
+            this.ClientSize = new System.Drawing.Size(1469, 844);
+            this.Controls.Add(this.dHoraFinCurso);
+            this.Controls.Add(this.dHoraIniCurso);
+            this.Controls.Add(this.dFechaFinCurso);
+            this.Controls.Add(this.dFechaIniCurso);
             this.Controls.Add(this.bAtras);
             this.Controls.Add(this.bGuardarCambiosCurso);
             this.Controls.Add(this.bAniadirArchivosCurso);
@@ -332,17 +344,12 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tFechaFinCurso);
-            this.Controls.Add(this.tHoraFinCurso);
-            this.Controls.Add(this.tHoraIniCurso);
-            this.Controls.Add(this.tFechaIniCurso);
             this.Controls.Add(this.tLugarCurso);
             this.Controls.Add(this.tAforoCurso);
             this.Controls.Add(this.tDescripcionCurso);
             this.Controls.Add(this.tNombreCurso);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fCrearCursoAdmin";
             this.Text = "fCrearCursoAdmin";
             this.Load += new System.EventHandler(this.fCrearCursoAdmin_Load);
@@ -360,10 +367,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.TextBox tDescripcionCurso;
         private System.Windows.Forms.TextBox tAforoCurso;
         private System.Windows.Forms.TextBox tLugarCurso;
-        private System.Windows.Forms.TextBox tFechaIniCurso;
-        private System.Windows.Forms.TextBox tHoraIniCurso;
-        private System.Windows.Forms.TextBox tHoraFinCurso;
-        private System.Windows.Forms.TextBox tFechaFinCurso;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
@@ -379,5 +382,9 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Button bAniadirArchivosCurso;
         private System.Windows.Forms.Button bGuardarCambiosCurso;
         private System.Windows.Forms.Button bAtras;
+        private System.Windows.Forms.DateTimePicker dFechaIniCurso;
+        private System.Windows.Forms.DateTimePicker dFechaFinCurso;
+        private System.Windows.Forms.DateTimePicker dHoraIniCurso;
+        private System.Windows.Forms.DateTimePicker dHoraFinCurso;
     }
 }

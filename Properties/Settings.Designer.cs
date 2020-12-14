@@ -46,5 +46,16 @@ namespace Grupo02PCSAS.Properties {
                 this["BD_NAME"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com;user id=grupo" +
+            "02;database=apsgrupo02;password=galvezgerena2021;persistsecurityinfo=True")]
+        public string apsgrupo02ConnectionString {
+            get {
+                return ((string)(this["apsgrupo02ConnectionString"]));
+            }
+        }
     }
 }

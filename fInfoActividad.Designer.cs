@@ -32,7 +32,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
+            this.lHoraFin = new System.Windows.Forms.Label();
             this.lFechaFin = new System.Windows.Forms.Label();
             this.lHoraInicio = new System.Windows.Forms.Label();
             this.lFechaInicio = new System.Windows.Forms.Label();
@@ -47,14 +47,14 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lCreador = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lDescripcion = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lInscrito = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.lNombreCurso = new System.Windows.Forms.Label();
+            this.lNombreAct = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -77,7 +77,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.Beige;
+            this.panel5.BackColor = System.Drawing.Color.FloralWhite;
             this.panel5.Controls.Add(this.label20);
             this.panel5.Location = new System.Drawing.Point(0, 650);
             this.panel5.Name = "panel5";
@@ -88,7 +88,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(661, 24);
+            this.label20.Location = new System.Drawing.Point(596, 29);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(173, 26);
             this.label20.TabIndex = 2;
@@ -96,9 +96,9 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Beige;
+            this.panel4.BackColor = System.Drawing.Color.FloralWhite;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label21);
+            this.panel4.Controls.Add(this.lHoraFin);
             this.panel4.Controls.Add(this.lFechaFin);
             this.panel4.Controls.Add(this.lHoraInicio);
             this.panel4.Controls.Add(this.lFechaInicio);
@@ -113,27 +113,27 @@
             this.panel4.Controls.Add(this.label15);
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Location = new System.Drawing.Point(741, 322);
+            this.panel4.Controls.Add(this.lCreador);
+            this.panel4.Location = new System.Drawing.Point(694, 322);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(728, 327);
+            this.panel4.Size = new System.Drawing.Size(742, 327);
             this.panel4.TabIndex = 9;
             // 
-            // label21
+            // lHoraFin
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(509, 246);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(23, 26);
-            this.label21.TabIndex = 15;
-            this.label21.Text = "X";
+            this.lHoraFin.AutoSize = true;
+            this.lHoraFin.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lHoraFin.Location = new System.Drawing.Point(455, 246);
+            this.lHoraFin.Name = "lHoraFin";
+            this.lHoraFin.Size = new System.Drawing.Size(23, 26);
+            this.lHoraFin.TabIndex = 15;
+            this.lHoraFin.Text = "X";
             // 
             // lFechaFin
             // 
             this.lFechaFin.AutoSize = true;
             this.lFechaFin.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lFechaFin.Location = new System.Drawing.Point(521, 182);
+            this.lFechaFin.Location = new System.Drawing.Point(467, 182);
             this.lFechaFin.Name = "lFechaFin";
             this.lFechaFin.Size = new System.Drawing.Size(23, 26);
             this.lFechaFin.TabIndex = 14;
@@ -143,7 +143,7 @@
             // 
             this.lHoraInicio.AutoSize = true;
             this.lHoraInicio.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lHoraInicio.Location = new System.Drawing.Point(539, 117);
+            this.lHoraInicio.Location = new System.Drawing.Point(484, 117);
             this.lHoraInicio.Name = "lHoraInicio";
             this.lHoraInicio.Size = new System.Drawing.Size(23, 26);
             this.lHoraInicio.TabIndex = 13;
@@ -153,7 +153,7 @@
             // 
             this.lFechaInicio.AutoSize = true;
             this.lFechaInicio.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lFechaInicio.Location = new System.Drawing.Point(551, 55);
+            this.lFechaInicio.Location = new System.Drawing.Point(497, 55);
             this.lFechaInicio.Name = "lFechaInicio";
             this.lFechaInicio.Size = new System.Drawing.Size(23, 26);
             this.lFechaInicio.TabIndex = 12;
@@ -203,7 +203,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(411, 246);
+            this.label16.Location = new System.Drawing.Point(356, 246);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(94, 26);
             this.label16.TabIndex = 7;
@@ -213,7 +213,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(410, 182);
+            this.label17.Location = new System.Drawing.Point(356, 182);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(106, 26);
             this.label17.TabIndex = 6;
@@ -223,7 +223,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(410, 117);
+            this.label18.Location = new System.Drawing.Point(356, 117);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(120, 26);
             this.label18.TabIndex = 5;
@@ -233,7 +233,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(411, 55);
+            this.label19.Location = new System.Drawing.Point(356, 55);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(132, 26);
             this.label19.TabIndex = 4;
@@ -269,31 +269,31 @@
             this.label13.TabIndex = 1;
             this.label13.Text = "Plazas disponibles:";
             // 
-            // label12
+            // lCreador
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(34, 55);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(99, 26);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Profesor:";
+            this.lCreador.AutoSize = true;
+            this.lCreador.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lCreador.Location = new System.Drawing.Point(34, 55);
+            this.lCreador.Name = "lCreador";
+            this.lCreador.Size = new System.Drawing.Size(95, 26);
+            this.lCreador.TabIndex = 0;
+            this.lCreador.Text = "Creador:";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Beige;
+            this.panel3.BackColor = System.Drawing.Color.FloralWhite;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.lDescripcion);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Location = new System.Drawing.Point(0, 322);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(742, 327);
+            this.panel3.Size = new System.Drawing.Size(702, 327);
             this.panel3.TabIndex = 8;
             // 
             // lDescripcion
             // 
             this.lDescripcion.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDescripcion.Location = new System.Drawing.Point(42, 67);
+            this.lDescripcion.Location = new System.Drawing.Point(24, 67);
             this.lDescripcion.Name = "lDescripcion";
             this.lDescripcion.Size = new System.Drawing.Size(646, 231);
             this.lDescripcion.TabIndex = 1;
@@ -311,24 +311,24 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Beige;
+            this.panel2.BackColor = System.Drawing.Color.FloralWhite;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.lInscrito);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.lNombreCurso);
+            this.panel2.Controls.Add(this.lNombreAct);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 177);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1469, 146);
+            this.panel2.Size = new System.Drawing.Size(1302, 146);
             this.panel2.TabIndex = 7;
             // 
             // lInscrito
             // 
             this.lInscrito.AutoSize = true;
             this.lInscrito.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lInscrito.Location = new System.Drawing.Point(1241, 59);
+            this.lInscrito.Location = new System.Drawing.Point(1152, 59);
             this.lInscrito.Name = "lInscrito";
             this.lInscrito.Size = new System.Drawing.Size(80, 26);
             this.lInscrito.TabIndex = 6;
@@ -338,21 +338,21 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1154, 59);
+            this.label9.Location = new System.Drawing.Point(1065, 59);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 26);
             this.label9.TabIndex = 5;
             this.label9.Text = "ESTADO:";
             // 
-            // lNombreCurso
+            // lNombreAct
             // 
-            this.lNombreCurso.AutoSize = true;
-            this.lNombreCurso.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreCurso.Location = new System.Drawing.Point(590, 43);
-            this.lNombreCurso.Name = "lNombreCurso";
-            this.lNombreCurso.Size = new System.Drawing.Size(171, 49);
-            this.lNombreCurso.TabIndex = 4;
-            this.lNombreCurso.Text = "NOMBRE";
+            this.lNombreAct.AutoSize = true;
+            this.lNombreAct.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNombreAct.Location = new System.Drawing.Point(590, 43);
+            this.lNombreAct.Name = "lNombreAct";
+            this.lNombreAct.Size = new System.Drawing.Size(171, 49);
+            this.lNombreAct.TabIndex = 4;
+            this.lNombreAct.Text = "NOMBRE";
             // 
             // label6
             // 
@@ -376,7 +376,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Beige;
+            this.panel1.BackColor = System.Drawing.Color.Bisque;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -388,14 +388,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1469, 177);
+            this.panel1.Size = new System.Drawing.Size(1302, 177);
             this.panel1.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1283, 128);
+            this.label5.Location = new System.Drawing.Point(1145, 126);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 26);
             this.label5.TabIndex = 7;
@@ -404,12 +404,13 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(1277, 11);
+            this.pictureBox2.Location = new System.Drawing.Point(1128, 10);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 103);
+            this.pictureBox2.Size = new System.Drawing.Size(122, 106);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lRol
             // 
@@ -465,7 +466,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1469, 1033);
+            this.ClientSize = new System.Drawing.Size(1302, 819);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -495,7 +496,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lHoraFin;
         private System.Windows.Forms.Label lFechaFin;
         private System.Windows.Forms.Label lHoraInicio;
         private System.Windows.Forms.Label lFechaInicio;
@@ -510,14 +511,14 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lCreador;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lDescripcion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lInscrito;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lNombreCurso;
+        private System.Windows.Forms.Label lNombreAct;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;

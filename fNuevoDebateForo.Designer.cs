@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lPerfil = new System.Windows.Forms.Label();
             this.lRolUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lNombreApellidosUsuario = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.lPerfil);
             this.panel1.Controls.Add(this.lRolUsuario);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lNombreApellidosUsuario);
@@ -64,36 +64,37 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1653, 217);
+            this.panel1.Size = new System.Drawing.Size(1465, 217);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(1430, 14);
+            this.pictureBox2.Location = new System.Drawing.Point(1300, 27);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(112, 129);
+            this.pictureBox2.Size = new System.Drawing.Size(131, 131);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
-            // label5
+            // lPerfil
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1443, 160);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 29);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Mi perfil";
+            this.lPerfil.AutoSize = true;
+            this.lPerfil.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lPerfil.Location = new System.Drawing.Point(1283, 128);
+            this.lPerfil.Name = "lPerfil";
+            this.lPerfil.Size = new System.Drawing.Size(88, 26);
+            this.lPerfil.TabIndex = 7;
+            this.lPerfil.Text = "Mi perfil";
+            this.lPerfil.Click += new System.EventHandler(this.lPerfil_Click);
             // 
             // lRolUsuario
             // 
             this.lRolUsuario.AutoSize = true;
             this.lRolUsuario.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRolUsuario.Location = new System.Drawing.Point(620, 145);
+            this.lRolUsuario.Location = new System.Drawing.Point(1004, 146);
             this.lRolUsuario.Name = "lRolUsuario";
             this.lRolUsuario.Size = new System.Drawing.Size(73, 29);
             this.lRolUsuario.TabIndex = 5;
@@ -103,7 +104,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(570, 145);
+            this.label1.Location = new System.Drawing.Point(954, 146);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 29);
             this.label1.TabIndex = 4;
@@ -115,6 +116,7 @@
             this.lNombreApellidosUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNombreApellidosUsuario.Location = new System.Drawing.Point(699, 49);
             this.lNombreApellidosUsuario.Name = "lNombreApellidosUsuario";
+            this.lNombreApellidosUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lNombreApellidosUsuario.Size = new System.Drawing.Size(408, 52);
             this.lNombreApellidosUsuario.TabIndex = 3;
             this.lNombreApellidosUsuario.Text = "Nombre y apellidos";
@@ -144,7 +146,7 @@
             // 
             this.lForo.AutoSize = true;
             this.lForo.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lForo.Location = new System.Drawing.Point(736, 342);
+            this.lForo.Location = new System.Drawing.Point(709, 280);
             this.lForo.Name = "lForo";
             this.lForo.Size = new System.Drawing.Size(133, 55);
             this.lForo.TabIndex = 8;
@@ -154,7 +156,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(714, 421);
+            this.label6.Location = new System.Drawing.Point(687, 359);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(175, 29);
             this.label6.TabIndex = 9;
@@ -164,7 +166,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(304, 498);
+            this.label7.Location = new System.Drawing.Point(277, 436);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 29);
             this.label7.TabIndex = 10;
@@ -174,7 +176,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(304, 642);
+            this.label8.Location = new System.Drawing.Point(277, 580);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 29);
             this.label8.TabIndex = 11;
@@ -182,7 +184,10 @@
             // 
             // tAsuntoDebate
             // 
-            this.tAsuntoDebate.Location = new System.Drawing.Point(309, 548);
+            this.tAsuntoDebate.Font = new System.Drawing.Font("Trebuchet MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tAsuntoDebate.Location = new System.Drawing.Point(275, 438);
+            this.tAsuntoDebate.MaxLength = 50;
+            this.tAsuntoDebate.Location = new System.Drawing.Point(282, 486);
             this.tAsuntoDebate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tAsuntoDebate.Multiline = true;
             this.tAsuntoDebate.Name = "tAsuntoDebate";
@@ -191,8 +196,11 @@
             // 
             // tMensajeDebate
             // 
-            this.tMensajeDebate.Location = new System.Drawing.Point(309, 721);
+            this.tMensajeDebate.Location = new System.Drawing.Point(282, 659);
             this.tMensajeDebate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tMensajeDebate.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tMensajeDebate.Location = new System.Drawing.Point(275, 577);
+            this.tMensajeDebate.MaxLength = 300;
             this.tMensajeDebate.Multiline = true;
             this.tMensajeDebate.Name = "tMensajeDebate";
             this.tMensajeDebate.Size = new System.Drawing.Size(965, 168);
@@ -202,19 +210,20 @@
             // 
             this.bEnviarDebate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bEnviarDebate.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEnviarDebate.Location = new System.Drawing.Point(577, 950);
+            this.bEnviarDebate.Location = new System.Drawing.Point(550, 888);
             this.bEnviarDebate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bEnviarDebate.Name = "bEnviarDebate";
             this.bEnviarDebate.Size = new System.Drawing.Size(204, 79);
             this.bEnviarDebate.TabIndex = 14;
             this.bEnviarDebate.Text = "Enviar al foro";
             this.bEnviarDebate.UseVisualStyleBackColor = false;
+            this.bEnviarDebate.Click += new System.EventHandler(this.bEnviarDebate_Click);
             // 
             // bCancelarDebate
             // 
             this.bCancelarDebate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bCancelarDebate.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCancelarDebate.Location = new System.Drawing.Point(885, 950);
+            this.bCancelarDebate.Location = new System.Drawing.Point(858, 888);
             this.bCancelarDebate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bCancelarDebate.Name = "bCancelarDebate";
             this.bCancelarDebate.Size = new System.Drawing.Size(204, 79);
@@ -226,7 +235,8 @@
             // bAtras
             // 
             this.bAtras.Image = global::Grupo02PCSAS.Properties.Resources.Atras;
-            this.bAtras.Location = new System.Drawing.Point(96, 315);
+            this.bAtras.Location = new System.Drawing.Point(69, 253);
+            this.bAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bAtras.Name = "bAtras";
             this.bAtras.Size = new System.Drawing.Size(100, 100);
             this.bAtras.TabIndex = 16;
@@ -238,7 +248,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1653, 1291);
+            this.ClientSize = new System.Drawing.Size(1465, 1024);
             this.Controls.Add(this.bAtras);
             this.Controls.Add(this.bCancelarDebate);
             this.Controls.Add(this.bEnviarDebate);
@@ -269,7 +279,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lNombreApellidosUsuario;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lPerfil;
         private System.Windows.Forms.Label lRolUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lForo;

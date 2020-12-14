@@ -26,7 +26,7 @@ namespace Grupo02PCSAS
             string sentencia = "SELECT * FROM Actividad WHERE idActividad = " + numeroActividad + ";";
             object[] tupla = miBD.Select(sentencia)[0];
 
-            this.idActividad = numeroActividad;
+            this.idActividad = (int)tupla[0];
             this.usuarioCreador = new Usuario((string)tupla[1]);
             this.nombreActividad = (string)tupla[2];
             this.descripcionActividad = (string)tupla[3];
@@ -38,12 +38,12 @@ namespace Grupo02PCSAS
             this.aforoActividad = (int)tupla[9];
         }
 
-        public Actividad(int numAct, Usuario user, string nombreAct, string descrAct, string fIniAct, string fFinAct, string hIniAct, string hFinAct, string lugarAct, int aforoPermitido)
+        public Actividad(Usuario user, string nombreAct, string descrAct, string fIniAct, string fFinAct, string hIniAct, string hFinAct, string lugarAct, int aforoPermitido)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "INSERT INTO Actividad VALUES (" + numAct + ", '" + user.CorreoUsuario + "','" + nombreAct + "','"+ descrAct + "','" + fIniAct + "','" + fFinAct + "','" + hIniAct + "','" + hFinAct + "','" + lugarAct + "'," + aforoPermitido + ");";
+            string sentencia = "INSERT INTO Actividad VALUES ('" + user.CorreoUsuario + "','" + nombreAct + "','"+ descrAct + "','" + fIniAct + "','" + fFinAct + "','" + hIniAct + "','" + hFinAct + "','" + lugarAct + "'," + aforoPermitido + ");";
             miBD.Insert(sentencia);
-            this.idActividad = numAct;
+            this.idActividad = (int) miBD.SelectScalar("SELECT MAX(idActividad) FROM Actividad;");
             this.usuarioCreador = user;
             this.nombreActividad = nombreAct;
             this.descripcionActividad = descrAct;

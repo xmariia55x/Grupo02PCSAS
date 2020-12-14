@@ -42,7 +42,7 @@
             this.bOng = new System.Windows.Forms.Button();
             this.bProfesor = new System.Windows.Forms.Button();
             this.bAlumno = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bRegistro = new System.Windows.Forms.Button();
             this.pProfesor = new System.Windows.Forms.Panel();
             this.tConfirmarPwd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -84,7 +84,7 @@
             this.pOng.Controls.Add(this.label13);
             this.pOng.Controls.Add(this.tNombreOng);
             this.pOng.Controls.Add(this.label14);
-            this.pOng.Location = new System.Drawing.Point(506, 365);
+            this.pOng.Location = new System.Drawing.Point(472, 310);
             this.pOng.Name = "pOng";
             this.pOng.Size = new System.Drawing.Size(456, 396);
             this.pOng.TabIndex = 27;
@@ -94,6 +94,7 @@
             this.tConfirmarOng.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tConfirmarOng.Location = new System.Drawing.Point(3, 353);
             this.tConfirmarOng.Name = "tConfirmarOng";
+            this.tConfirmarOng.PasswordChar = '*';
             this.tConfirmarOng.Size = new System.Drawing.Size(450, 31);
             this.tConfirmarOng.TabIndex = 19;
             // 
@@ -112,6 +113,7 @@
             this.tPwdOng.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tPwdOng.Location = new System.Drawing.Point(3, 282);
             this.tPwdOng.Name = "tPwdOng";
+            this.tPwdOng.PasswordChar = '*';
             this.tPwdOng.Size = new System.Drawing.Size(450, 31);
             this.tPwdOng.TabIndex = 17;
             // 
@@ -183,7 +185,7 @@
             // 
             this.bOng.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bOng.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bOng.Location = new System.Drawing.Point(825, 306);
+            this.bOng.Location = new System.Drawing.Point(791, 251);
             this.bOng.Name = "bOng";
             this.bOng.Size = new System.Drawing.Size(181, 63);
             this.bOng.TabIndex = 26;
@@ -195,7 +197,7 @@
             // 
             this.bProfesor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bProfesor.Location = new System.Drawing.Point(644, 306);
+            this.bProfesor.Location = new System.Drawing.Point(610, 251);
             this.bProfesor.Name = "bProfesor";
             this.bProfesor.Size = new System.Drawing.Size(181, 63);
             this.bProfesor.TabIndex = 25;
@@ -207,7 +209,7 @@
             // 
             this.bAlumno.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.bAlumno.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAlumno.Location = new System.Drawing.Point(463, 306);
+            this.bAlumno.Location = new System.Drawing.Point(429, 251);
             this.bAlumno.Name = "bAlumno";
             this.bAlumno.Size = new System.Drawing.Size(181, 63);
             this.bAlumno.TabIndex = 24;
@@ -215,17 +217,18 @@
             this.bAlumno.UseVisualStyleBackColor = false;
             this.bAlumno.Click += new System.EventHandler(this.bAlumno_Click);
             // 
-            // button1
+            // bRegistro
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(647, 770);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 63);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Registrarse";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bRegistro.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bRegistro.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bRegistro.Location = new System.Drawing.Point(620, 720);
+            this.bRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bRegistro.Name = "bRegistro";
+            this.bRegistro.Size = new System.Drawing.Size(161, 50);
+            this.bRegistro.TabIndex = 22;
+            this.bRegistro.Text = "Registrarse";
+            this.bRegistro.UseVisualStyleBackColor = false;
+            this.bRegistro.Click += new System.EventHandler(this.bRegistro_Click);
             // 
             // pProfesor
             // 
@@ -239,7 +242,7 @@
             this.pProfesor.Controls.Add(this.label8);
             this.pProfesor.Controls.Add(this.tNombreProfesor);
             this.pProfesor.Controls.Add(this.label10);
-            this.pProfesor.Location = new System.Drawing.Point(506, 365);
+            this.pProfesor.Location = new System.Drawing.Point(472, 310);
             this.pProfesor.Name = "pProfesor";
             this.pProfesor.Size = new System.Drawing.Size(456, 396);
             this.pProfesor.TabIndex = 21;
@@ -249,6 +252,7 @@
             this.tConfirmarPwd.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tConfirmarPwd.Location = new System.Drawing.Point(3, 353);
             this.tConfirmarPwd.Name = "tConfirmarPwd";
+            this.tConfirmarPwd.PasswordChar = '*';
             this.tConfirmarPwd.Size = new System.Drawing.Size(450, 31);
             this.tConfirmarPwd.TabIndex = 19;
             // 
@@ -267,6 +271,7 @@
             this.tPwdProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tPwdProfesor.Location = new System.Drawing.Point(3, 282);
             this.tPwdProfesor.Name = "tPwdProfesor";
+            this.tPwdProfesor.PasswordChar = '*';
             this.tPwdProfesor.Size = new System.Drawing.Size(450, 31);
             this.tPwdProfesor.TabIndex = 17;
             // 
@@ -344,7 +349,7 @@
             this.pAlumno.Controls.Add(this.label1);
             this.pAlumno.Controls.Add(this.tNombreAlumno);
             this.pAlumno.Controls.Add(this.label5);
-            this.pAlumno.Location = new System.Drawing.Point(506, 365);
+            this.pAlumno.Location = new System.Drawing.Point(472, 310);
             this.pAlumno.Name = "pAlumno";
             this.pAlumno.Size = new System.Drawing.Size(456, 396);
             this.pAlumno.TabIndex = 28;
@@ -354,6 +359,7 @@
             this.tConfirmarAlumno.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tConfirmarAlumno.Location = new System.Drawing.Point(3, 282);
             this.tConfirmarAlumno.Name = "tConfirmarAlumno";
+            this.tConfirmarAlumno.PasswordChar = '*';
             this.tConfirmarAlumno.Size = new System.Drawing.Size(450, 31);
             this.tConfirmarAlumno.TabIndex = 17;
             // 
@@ -372,6 +378,7 @@
             this.tPwdAlumno.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tPwdAlumno.Location = new System.Drawing.Point(3, 209);
             this.tPwdAlumno.Name = "tPwdAlumno";
+            this.tPwdAlumno.PasswordChar = '*';
             this.tPwdAlumno.Size = new System.Drawing.Size(450, 31);
             this.tPwdAlumno.TabIndex = 15;
             // 
@@ -424,7 +431,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
-            this.pictureBox1.Location = new System.Drawing.Point(554, 78);
+            this.pictureBox1.Location = new System.Drawing.Point(520, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(365, 205);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -434,25 +441,26 @@
             // pAtras
             // 
             this.pAtras.Image = global::Grupo02PCSAS.Properties.Resources._60577;
-            this.pAtras.Location = new System.Drawing.Point(234, 78);
+            this.pAtras.Location = new System.Drawing.Point(252, 93);
             this.pAtras.Name = "pAtras";
             this.pAtras.Size = new System.Drawing.Size(80, 60);
             this.pAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pAtras.TabIndex = 29;
             this.pAtras.TabStop = false;
+            this.pAtras.Click += new System.EventHandler(this.pAtras_Click);
             // 
             // fRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1469, 1033);
+            this.BackColor = System.Drawing.Color.Bisque;
+            this.ClientSize = new System.Drawing.Size(1302, 819);
             this.Controls.Add(this.pAtras);
             this.Controls.Add(this.bOng);
             this.Controls.Add(this.bProfesor);
             this.Controls.Add(this.bAlumno);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bRegistro);
             this.Controls.Add(this.pOng);
             this.Controls.Add(this.pAlumno);
             this.Controls.Add(this.pProfesor);
@@ -488,7 +496,7 @@
         private System.Windows.Forms.Button bProfesor;
         private System.Windows.Forms.Button bAlumno;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bRegistro;
         private System.Windows.Forms.Panel pProfesor;
         private System.Windows.Forms.TextBox tConfirmarPwd;
         private System.Windows.Forms.Label label4;

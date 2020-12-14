@@ -50,9 +50,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="apsgrupo02DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>apsgrupo02DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BDLibrary.cs" />
     <Compile Include="Curso.cs" />
     <Compile Include="Error.cs" />
+    <Compile Include="fInicioInvitado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInicioInvitado.Designer.cs">
+      <DependentUpon>fInicioInvitado.cs</DependentUpon>
+    </Compile>
     <Compile Include="fPrincipalOng.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +204,9 @@
     <EmbeddedResource Include="fDatosPerfil.resx">
       <DependentUpon>fDatosPerfil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fInicioInvitado.resx">
+      <DependentUpon>fInicioInvitado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fInicioSesion.resx">
       <DependentUpon>fInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +251,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="apsgrupo02DataSet.xsc">
+      <DependentUpon>apsgrupo02DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="apsgrupo02DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>apsgrupo02DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="apsgrupo02DataSet.xss">
+      <DependentUpon>apsgrupo02DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -264,6 +289,8 @@
     <None Include="Properties\Resources\17656.png" />
     <None Include="Properties\Resources\60577.png" />
     <None Include="Properties\Resources\WhatsApp Image 2020-12-06 at 17.27.26.jpeg" />
+    <None Include="Resources\Logo-Informatica.png" />
+    <None Include="Resources\logo-uma.png" />
     <Content Include="Resources\pcsas.jpeg" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>

@@ -16,5 +16,10 @@ namespace Grupo02PCSAS
         {
             InitializeComponent();
         }
+
+        private void fModificarCursos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
