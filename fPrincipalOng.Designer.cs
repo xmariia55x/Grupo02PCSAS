@@ -40,12 +40,6 @@
             this.bEventos = new System.Windows.Forms.Button();
             this.bAccederAlForo = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.bInformación = new System.Windows.Forms.Button();
-            this.apsgrupo02DataSet = new Grupo02PCSAS.apsgrupo02DataSet();
-            this.actividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.actividadTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.ActividadTableAdapter();
-            this.actividadBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.idActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creadorActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,13 +50,19 @@
             this.horaFinActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lugarActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aforoActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actividadBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.apsgrupo02DataSet = new Grupo02PCSAS.apsgrupo02DataSet();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bInformacion = new System.Windows.Forms.Button();
+            this.actividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.actividadTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.ActividadTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -203,46 +203,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(960, 319);
             this.dataGridView1.TabIndex = 53;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(504, 216);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(279, 49);
-            this.label3.TabIndex = 52;
-            this.label3.Text = "Mis actividades";
-            // 
-            // bInformación
-            // 
-            this.bInformación.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bInformación.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInformación.Location = new System.Drawing.Point(1105, 469);
-            this.bInformación.Name = "bInformación";
-            this.bInformación.Size = new System.Drawing.Size(181, 63);
-            this.bInformación.TabIndex = 56;
-            this.bInformación.Text = "Información";
-            this.bInformación.UseVisualStyleBackColor = false;
-            // 
-            // apsgrupo02DataSet
-            // 
-            this.apsgrupo02DataSet.DataSetName = "apsgrupo02DataSet";
-            this.apsgrupo02DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // actividadBindingSource
-            // 
-            this.actividadBindingSource.DataMember = "Actividad";
-            this.actividadBindingSource.DataSource = this.apsgrupo02DataSet;
-            // 
-            // actividadTableAdapter
-            // 
-            this.actividadTableAdapter.ClearBeforeFill = true;
-            // 
-            // actividadBindingSource1
-            // 
-            this.actividadBindingSource1.DataMember = "Actividad";
-            this.actividadBindingSource1.DataSource = this.apsgrupo02DataSet;
-            // 
             // idActividadDataGridViewTextBoxColumn
             // 
             this.idActividadDataGridViewTextBoxColumn.DataPropertyName = "idActividad";
@@ -342,13 +302,53 @@
             this.aforoActividadDataGridViewTextBoxColumn.ReadOnly = true;
             this.aforoActividadDataGridViewTextBoxColumn.Width = 71;
             // 
+            // actividadBindingSource1
+            // 
+            this.actividadBindingSource1.DataMember = "Actividad";
+            this.actividadBindingSource1.DataSource = this.apsgrupo02DataSet;
+            // 
+            // apsgrupo02DataSet
+            // 
+            this.apsgrupo02DataSet.DataSetName = "apsgrupo02DataSet";
+            this.apsgrupo02DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(504, 216);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(279, 49);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "Mis actividades";
+            // 
+            // bInformacion
+            // 
+            this.bInformacion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bInformacion.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bInformacion.Location = new System.Drawing.Point(1105, 469);
+            this.bInformacion.Name = "bInformacion";
+            this.bInformacion.Size = new System.Drawing.Size(181, 63);
+            this.bInformacion.TabIndex = 56;
+            this.bInformacion.Text = "Información";
+            this.bInformacion.UseVisualStyleBackColor = false;
+            // 
+            // actividadBindingSource
+            // 
+            this.actividadBindingSource.DataMember = "Actividad";
+            this.actividadBindingSource.DataSource = this.apsgrupo02DataSet;
+            // 
+            // actividadTableAdapter
+            // 
+            this.actividadTableAdapter.ClearBeforeFill = true;
+            // 
             // fPrincipalOng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1302, 819);
-            this.Controls.Add(this.bInformación);
+            this.Controls.Add(this.bInformacion);
             this.Controls.Add(this.bEventos);
             this.Controls.Add(this.bAccederAlForo);
             this.Controls.Add(this.dataGridView1);
@@ -363,9 +363,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,7 +385,7 @@
         private System.Windows.Forms.Button bAccederAlForo;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button bInformación;
+        private System.Windows.Forms.Button bInformacion;
         private apsgrupo02DataSet apsgrupo02DataSet;
         private System.Windows.Forms.BindingSource actividadBindingSource;
         private apsgrupo02DataSetTableAdapters.ActividadTableAdapter actividadTableAdapter;
