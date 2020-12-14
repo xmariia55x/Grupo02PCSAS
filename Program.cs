@@ -43,10 +43,10 @@ namespace Grupo02PCSAS
             //Rol profesor = new Rol("PROFESOR", "prof", false);
             //Rol admin = new Rol("ADMIN", "adm", true);
             //Usuario user = new Usuario("prueba", "prueba", "prueba", "cif", "niu", alumno);
-            //Usuario user = new Usuario("prueba");
+            Usuario user = new Usuario("prueba");
             //Usuario user = new Usuario("prueba", "prueba", "prueba", "cif", "niu", alumno);
-            //Application.Run(new fDatosPerfil(user));
-            Application.Run(new fRegistro());
+            Application.Run(new fEditarPerfil(user));
+            //Application.Run(new fRegistro());
         }
     }
 
