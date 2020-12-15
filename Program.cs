@@ -45,7 +45,7 @@ namespace Grupo02PCSAS
             //Usuario user = new Usuario("prueba", "prueba", "prueba", "cif", "niu", alumno);
             Usuario user = new Usuario("davidgc@gmail.com");
             //Usuario user = new Usuario("prueba", "prueba", "prueba", "cif", "niu", alumno);
-            Application.Run(new fDatosPerfil(user));
+            //Application.Run(new fDatosPerfil(user));
             //Rol admin = new Rol("ADMIN", "administrador", true);
             Rol admin = new Rol("ADMIN");
             Rol profesor = new Rol("PROFESOR");
@@ -55,22 +55,38 @@ namespace Grupo02PCSAS
             //Usuario usuario = new Usuario("anto2", "anto2", "prueba", "c", "niu", profesor);
             Usuario usuario = new Usuario("anto");
             //Application.Run(new fDatosPerfil(user));
-            Application.Run(new PantallaListaUsuarios(new Curso(20)));
+            //Application.Run(new PantallaListaUsuarios(new Curso(20)));
             //Application.Run(new fRegistro());
             //Console.WriteLine(usuario.CorreoUsuario + " "+usuario.NombreUsuario);
-            Application.Run(new fCrearActividadAdmin(usuario));
+            //Application.Run(new fCrearActividadAdmin(usuario));
             
-            //Curso c = new Curso("anto2", "aps", "aps para ninios", "13/12/2020"
-            //, "13/12/2020", "12:00", "14:00", "UMA", 7, false);
+            Curso c = new Curso(22);
+            Application.Run(new fModificarCursos(usuario, c));
+            /*
+                string fechaFin = "12/12/2020";
+            string[] fechaF = fechaFin.Split('/');
+            foreach (string s in fechaF) Console.WriteLine(s);
+            double a = Convert.ToDouble(fechaF[2]);
+            Console.WriteLine(a);
+            
+            double hI, mI;
+            
+            if (double.TryParse(fechaF[0], out hI) && double.TryParse(fechaF[1], out mI))
+            {
+                Console.WriteLine(hI);
+                Console.WriteLine(mI);
+            }
+
+            */
             //Actividad a = new Actividad(usuario, "recogida alimentos", "random", "13/12/2020", "13/12/2020", "12:00", "14:00", "UMA", 7);
-            Application.Run(new fEditarPerfil(user));
+            //Application.Run(new fEditarPerfil(user));
             //Application.Run(new fRegistro());
             //Application.Run(new fRegistro());
             //Application.Run(new fPantallaPrincipalAlumno(user));
             //Usuario user = new Usuario("pepe");
             //Application.Run(new fPantallaAdmin(user));
-            Usuario user = new Usuario("anto");
-            Application.Run(new fPrincipalProfesor(user));
+            //Usuario user = new Usuario("anto");
+            //Application.Run(new fPrincipalProfesor(user));
         }
     }
 

@@ -12,14 +12,14 @@ namespace Grupo02PCSAS
 {
     public partial class fModificarCursos : Form
     {
-        private Usuario user, profesor;
+        private Usuario user;
         private Curso cursoRealizado;
         
-        public fModificarCursos(Usuario u, int idCurso)
+        public fModificarCursos(Usuario u, Curso c)
         {
             InitializeComponent();
             user = u;
-            cursoRealizado = new Curso(idCurso);
+            cursoRealizado = c;
         }
 
         private void fModificarCursos_Load(object sender, EventArgs e)
@@ -35,6 +35,93 @@ namespace Grupo02PCSAS
             {
                 foreach (Usuario u in Usuario.listaProfesores()) listProfesor.Items.Add(u.CorreoUsuario);
             }
+            mostrarSeleccionado();
+        }
+
+        private void mostrarSeleccionado()
+        {
+            if (cursoRealizado == null)
+            {
+                tModNombreCurso.Text = "";
+                tModDescripcionCurso.Text = "";
+                tModLugarCurso.Text = "";
+                tModAforoCurso.Text = "";
+                rModOnline.Checked = false;
+                rModPresencial.Checked = false;
+                listProfesor.SelectedItem = null;
+            }
+            else
+            {
+                tModNombreCurso.Text = cursoRealizado.CursoNombre;
+                tModDescripcionCurso.Text = cursoRealizado.CursoDescripcion;
+                tModLugarCurso.Text = cursoRealizado.CursoLugar;
+                tModAforoCurso.Text = cursoRealizado.CursoAforo.ToString();
+                if(cursoRealizado.CursoOnline)
+                {
+                    rModPresencial.Checked = false;
+                    rModOnline.Checked = true;
+                } else
+                {
+                    rModPresencial.Checked = true;
+                    rModOnline.Checked = false;
+                }
+                string horaFin = cursoRealizado.CursoHoraFin;
+                
+                string[] horaF = horaFin.Split(':');
+                string horaIni = cursoRealizado.CursoHoraInicio;
+                
+                string[] horaI = horaIni.Split(':');
+                string fechaIni = cursoRealizado.CursoFechaInicio;
+                
+                string[] fechaI = fechaIni.Split('/');
+                string fechaFin = cursoRealizado.CursoFechaFin;
+                string[] fechaF = fechaFin.Split('/');
+                
+                int hI, mI; 
+                int hF, mF;
+                if(int.TryParse(horaI[0], out hI) && int.TryParse(horaI[1], out mI))
+                {
+                    dModiHoraIniCurso.Value = new DateTime(2300, 1, 1, hI, mI, 0);
+                } else
+                {
+                    Console.WriteLine("No se puede hacer el parse");
+                }
+                
+                if(int.TryParse(horaF[0], out hF) && int.TryParse(horaF[1], out mF))
+                {
+                    dModiHoraFinCurso.Value = new DateTime(2300, 1, 1, hF, mF, 0);
+                }
+                else
+                {
+                    Console.WriteLine("No se puede hacer el parse");
+                }
+
+                
+                int dF, dI, mesI, aI, mesF, aF;
+
+                if(int.TryParse(fechaI[0], out dI) && int.TryParse(fechaI[1], out mesI) && int.TryParse(fechaI[2], out aI))
+                {
+                    dModiFechaIniCurso.Value = new DateTime(aI, mesI, dI, 0, 0, 0);
+                }
+                else
+                {
+                    Console.WriteLine("No se puede hacer el parse");
+                }
+
+                //dModiFechaFinCurso = new DateTimePicker();
+                if (int.TryParse(fechaF[0], out dF) && int.TryParse(fechaF[1], out mesF) && int.TryParse(fechaF[2], out aF))
+                {
+                    dModiFechaFinCurso.Value = new DateTime(aF, mesF, dF, 0, 0, 0);
+                }
+                else
+                {
+                    Console.WriteLine("No se puede hacer el parse");
+                }
+
+
+                listProfesor.SelectedItem = cursoRealizado.CursoProfesor;
+            }
+
         }
 
         private void bModGuardarCambiosCurso_Click(object sender, EventArgs e)
@@ -57,21 +144,20 @@ namespace Grupo02PCSAS
                     cursoRealizado.CursoLugar = tModLugarCurso.Text;
                 if (cursoRealizado.CursoOnline != rModOnline.Checked)
                     cursoRealizado.CursoOnline = rModOnline.Checked;
-                if (cursoRealizado.CursoAforo != Convert.ToInt32(tModAforoCurso))
-                    cursoRealizado.CursoAforo = Convert.ToInt32(tModAforoCurso);
-                if (cursoRealizado.CursoProfesor.CorreoUsuario != new Usuario((string)listProfesor.SelectedItem).CorreoUsuario) && panel1.Visible = true)
-                    //cursoRealizado.CursoProfesor = listProfesor.SelectedItem;
+                if (cursoRealizado.CursoAforo != Convert.ToInt32(tModAforoCurso.Text))
+                    cursoRealizado.CursoAforo = Convert.ToInt32(tModAforoCurso.Text);
+                  
                 if (user.RolUsuario.RolName.Equals("ADMIN"))
                 {
-                    profesor = new Usuario((string)listProfesor.SelectedItem);
+                    cursoRealizado.CursoProfesor = new Usuario((string)listProfesor.SelectedItem);
                 }
-
-                
             }
             catch (Exception ex)
             {
                 MessageBox.Show("ERROR: " + ex.Message);
             }
         }
+
+        
     }
 }
