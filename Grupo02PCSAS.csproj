@@ -292,6 +292,7 @@
     <None Include="Properties\Resources\WhatsApp Image 2020-12-06 at 17.27.26.jpeg" />
     <None Include="Resources\Logo-Informatica.png" />
     <None Include="Resources\logo-uma.png" />
+    <None Include="Resources\basura.png" />
     <Content Include="Resources\pcsas.jpeg" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>

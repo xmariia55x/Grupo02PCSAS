@@ -373,10 +373,10 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Button bModGuardarCambiosCurso;
         private System.Windows.Forms.DateTimePicker dModiFechaIniCurso;
         private System.Windows.Forms.DateTimePicker dModiFechaFinCurso;
-        private System.Windows.Forms.DateTimePicker dModiHoraIniCurso;
         private System.Windows.Forms.DateTimePicker dModiHoraFinCurso;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListBox listProfesor;
+        public System.Windows.Forms.DateTimePicker dModiHoraIniCurso;
     }
 }

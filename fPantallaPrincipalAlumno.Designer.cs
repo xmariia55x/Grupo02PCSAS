@@ -62,6 +62,7 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -272,6 +273,7 @@ namespace Grupo02PCSAS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1465, 1024);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.dgvMisCursos);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -296,6 +298,7 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,5 +327,6 @@ namespace Grupo02PCSAS
         private apsgrupo02DataSetTableAdapters.CursoTableAdapter cursoTableAdapter;
         private System.Windows.Forms.BindingSource cursoBindingSource2;
         private System.Windows.Forms.BindingSource cursoBindingSource1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

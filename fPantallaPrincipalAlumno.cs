@@ -90,5 +90,10 @@ namespace Grupo02PCSAS
             foro.ShowDialog();
             this.Visible = true;
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

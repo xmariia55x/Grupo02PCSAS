@@ -32,7 +32,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
+            this.lHoraF = new System.Windows.Forms.Label();
             this.lFechaFin = new System.Windows.Forms.Label();
             this.lHoraInicio = new System.Windows.Forms.Label();
             this.lFechaInicio = new System.Windows.Forms.Label();
@@ -88,7 +88,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(586, 17);
+            this.label20.Location = new System.Drawing.Point(638, 15);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(211, 26);
             this.label20.TabIndex = 2;
@@ -98,7 +98,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FloralWhite;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label21);
+            this.panel4.Controls.Add(this.lHoraF);
             this.panel4.Controls.Add(this.lFechaFin);
             this.panel4.Controls.Add(this.lHoraInicio);
             this.panel4.Controls.Add(this.lFechaInicio);
@@ -114,20 +114,20 @@
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.lProfesor);
-            this.panel4.Location = new System.Drawing.Point(694, 322);
+            this.panel4.Location = new System.Drawing.Point(746, 322);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(775, 327);
+            this.panel4.Size = new System.Drawing.Size(723, 327);
             this.panel4.TabIndex = 10;
             // 
-            // label21
+            // lHoraF
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(455, 246);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(23, 26);
-            this.label21.TabIndex = 15;
-            this.label21.Text = "X";
+            this.lHoraF.AutoSize = true;
+            this.lHoraF.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lHoraF.Location = new System.Drawing.Point(455, 246);
+            this.lHoraF.Name = "lHoraF";
+            this.lHoraF.Size = new System.Drawing.Size(23, 26);
+            this.lHoraF.TabIndex = 15;
+            this.lHoraF.Text = "X";
             // 
             // lFechaFin
             // 
@@ -287,7 +287,7 @@
             this.panel3.Controls.Add(this.label10);
             this.panel3.Location = new System.Drawing.Point(0, 322);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(703, 327);
+            this.panel3.Size = new System.Drawing.Size(746, 327);
             this.panel3.TabIndex = 9;
             // 
             // lDescripcion
@@ -295,7 +295,7 @@
             this.lDescripcion.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lDescripcion.Location = new System.Drawing.Point(42, 67);
             this.lDescripcion.Name = "lDescripcion";
-            this.lDescripcion.Size = new System.Drawing.Size(646, 231);
+            this.lDescripcion.Size = new System.Drawing.Size(661, 231);
             this.lDescripcion.TabIndex = 1;
             this.lDescripcion.Text = resources.GetString("lDescripcion.Text");
             // 
@@ -321,7 +321,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 177);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1302, 146);
+            this.panel2.Size = new System.Drawing.Size(1469, 146);
             this.panel2.TabIndex = 8;
             // 
             // lInscrito
@@ -388,7 +388,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1302, 177);
+            this.panel1.Size = new System.Drawing.Size(1469, 177);
             this.panel1.TabIndex = 7;
             // 
             // label5
@@ -465,7 +465,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1302, 819);
+            this.ClientSize = new System.Drawing.Size(1469, 1033);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -474,6 +474,7 @@
             this.Name = "fInfoCurso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fInfoCurso";
+            this.Load += new System.EventHandler(this.fInfoCurso_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -496,7 +497,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lHoraF;
         private System.Windows.Forms.Label lFechaFin;
         private System.Windows.Forms.Label lHoraInicio;
         private System.Windows.Forms.Label lFechaInicio;
