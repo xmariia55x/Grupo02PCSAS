@@ -28,6 +28,31 @@ namespace Grupo02PCSAS
             this.niu = (string) tupla[4];
             this.rol = new Rol((string)tupla[5]);
         }
+
+        public static List<Usuario> listaColaboradores()
+        {
+            List<Usuario> lista = new List<Usuario>();
+            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+
+            foreach (object[] tupla in miBD.Select("SELECT correoUsuario FROM Usuario WHERE rolUsuario = 'ENTIDAD';"))
+            {
+                string r = (string)tupla[0];
+                lista.Add(new Usuario(r));
+            }
+            return lista;
+        }
+        public static List<Usuario> listaProfesores()
+        {
+            List<Usuario> lista = new List<Usuario>();
+            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+
+            foreach (object[] tupla in miBD.Select("SELECT correoUsuario FROM Usuario WHERE rolUsuario = 'PROFESOR';"))
+            {
+                string r = (string)tupla[0];
+                lista.Add(new Usuario(r));
+            }
+            return lista;
+        }
         public Usuario(string correo, string nombre, string contrasenia, string cif, string niu, Rol rol)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);

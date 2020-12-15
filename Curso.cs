@@ -26,7 +26,7 @@ namespace Grupo02PCSAS
         public Curso(int idCurso)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            Object[] tupla = miBD.Select("SELECT * FROM CURSO WHERE IDCURSO = "+idCurso+"")[0];
+            Object[] tupla = miBD.Select("SELECT * FROM Curso WHERE idCurso = " + idCurso+";")[0];
             this.idCurso = (int)tupla[0];
             this.profesorCurso = new Usuario((string)tupla[1]);
             this.nombreCurso = (string)tupla[2];
@@ -35,18 +35,20 @@ namespace Grupo02PCSAS
             this.fechaFinCurso = (string)tupla[5];
             this.horaInicioCurso = (string)tupla[6];
             this.horaFinCurso = (string)tupla[7];
-            this.aforoCurso = (int)tupla[8];
-            this.online = (int)tupla[9] == 1 ? true : false;
+            this.lugarCurso = (string)tupla[8];
+            this.aforoCurso = (int)tupla[9];
+            this.online = (int)tupla[10] == 1 ? true : false;
         }
 
         public Curso(Usuario profesorCurso, string nombreCurso, string descripcionCurso, string fechaInicioCurso
-            , string fechaFinCurso, string horaInicioCurso, string horaFinCurso, int aforoCurso, bool online)
+            , string fechaFinCurso, string horaInicioCurso, string horaFinCurso, string lugarCurso, int aforoCurso, bool online)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "INSERT INTO CURSO VALUES ('" +profesorCurso+"','"+nombreCurso+"','"+descripcionCurso+"','"
-                +fechaInicioCurso+"','"+fechaFinCurso+"','"+horaInicioCurso+"','"+horaFinCurso+"',"+aforoCurso+"," + (online ? 1 : 0) + ");";
+           
+            string sentencia = "INSERT INTO Curso VALUES (" + 0 + ",'" + profesorCurso.CorreoUsuario+"','"+nombreCurso+"','"+descripcionCurso+"','"
+                +fechaInicioCurso+"','"+fechaFinCurso+"','"+horaInicioCurso+"','"+horaFinCurso+ "','" + lugarCurso + "',"+aforoCurso+ "," + (online ? 1 : 0) + ");";
             miBD.Insert(sentencia);
-            this.idCurso = (int) miBD.SelectScalar("SELECT MAX(idCurso) FROM CURSO;");
+            this.idCurso = (int)miBD.SelectScalar("SELECT MAX(idCurso) FROM Curso;");
             this.profesorCurso = profesorCurso;
             this.nombreCurso = nombreCurso;
             this.descripcionCurso = descripcionCurso;
@@ -54,6 +56,7 @@ namespace Grupo02PCSAS
             this.fechaFinCurso = fechaFinCurso;
             this.horaInicioCurso = horaInicioCurso;
             this.horaFinCurso = horaFinCurso;
+            this.lugarCurso = lugarCurso;
             this.aforoCurso = aforoCurso;
             this.online = online;
 
@@ -65,7 +68,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE CURSO SET IDCURSO=" + value + "WHERE IDCURSO = " + this.idCurso);
+                miBD.Update("UPDATE Curso SET idCurso =" + value + "WHERE idCurso = " + this.idCurso);
                 this.idCurso = value;
             }
         }
@@ -75,7 +78,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE CURSO SET PROFESORCURSO='" + value.NombreUsuario + "' WHERE IDCURSO = " + this.idCurso);
+                miBD.Update("UPDATE Curso SET profesorCurso='" + value.CorreoUsuario + "' WHERE idCurso = " + this.idCurso);
                 this.profesorCurso = value;
 
             }
@@ -86,7 +89,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE CURSO SET NOMBRECURSO='" + value + "' WHERE IDCURSO = " + this.idCurso);
+                miBD.Update("UPDATE Curso SET nombreCurso='" + value + "' WHERE idCurso = " + this.idCurso);
                 this.nombreCurso= value;
 
             }
@@ -97,7 +100,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE CURSO SET DESCRIPCIONCURSO='" + value + "' WHERE IDCURSO = " + this.idCurso);
+                miBD.Update("UPDATE Curso SET descripcionCurso='" + value + "' WHERE idCurso = " + this.idCurso);
                 this.descripcionCurso = value;
             }
         }
@@ -107,7 +110,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE CURSO SET FECHAINICIOCURSO='" + value + "' WHERE IDCURSO = " + this.idCurso);
+                miBD.Update("UPDATE Curso SET fechaInicioCurso='" + value + "' WHERE idCurso = " + this.idCurso);
                 this.fechaInicioCurso = value;
             }
         }
@@ -117,7 +120,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE CURSO SET FECHAFINCURSO='" + value + "' WHERE IDCURSO = " + this.idCurso);
+                miBD.Update("UPDATE Curso SET fechaFinCurso='" + value + "' WHERE idCurso = " + this.idCurso);
                 this.fechaFinCurso = value;
             }
         }
@@ -128,7 +131,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE CURSO SET HORAINICIOCURSO='" + value + "' WHERE IDCURSO = " + this.idCurso);
+                miBD.Update("UPDATE Curso SET horaInicioCurso ='" + value + "' WHERE idCurso = " + this.idCurso);
                 this.horaInicioCurso = value;
             }
         }
@@ -138,7 +141,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE CURSO SET HORAFINCURSO='" + value + "' WHERE IDCURSO = " + this.idCurso);
+                miBD.Update("UPDATE Curso SET horaFinCurso='" + value + "' WHERE idCurso = " + this.idCurso);
                 this.horaFinCurso = value;
             }
         }
@@ -148,7 +151,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE CURSO SET LUGARCURSO='" + value + "' WHERE IDCURSO = " + this.idCurso);
+                miBD.Update("UPDATE Curso SET lugarCurso ='" + value + "' WHERE idCurso = " + this.idCurso);
                 this.lugarCurso= value;
             }
         }
@@ -158,7 +161,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE CURSO SET AFOROCURSO=" + value + " WHERE IDCURSO = " + this.idCurso);
+                miBD.Update("UPDATE Curso SET aforoCurso =" + value + " WHERE idCurso = " + this.idCurso);
                 this.aforoCurso = value;
             }
         }
@@ -168,7 +171,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE CURSO SET ONLINE='" + (value ? 1 : 0) + "' WHERE IDCURSO = " + this.idCurso);
+                miBD.Update("UPDATE Curso SET onlineCurso ='" + (value ? 1 : 0) + "' WHERE idCurso = " + this.idCurso);
                 this.online = value;
             }
         }
@@ -176,7 +179,7 @@ namespace Grupo02PCSAS
         public void BorrarCurso()
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            miBD.Delete("DELETE FROM CURSO WHERE IDCURSO = " + this.idCurso);
+            miBD.Delete("DELETE FROM Curso WHERE idCurso = " + this.idCurso);
             this.idCurso = -1;
             this.profesorCurso = null;
             this.nombreCurso = null;

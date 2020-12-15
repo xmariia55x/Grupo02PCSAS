@@ -7,14 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace Grupo02PCSAS
 {
     public partial class PantallaListaUsuarios : Form
     {
-        public PantallaListaUsuarios()
+        private Curso curso;
+        public PantallaListaUsuarios( Curso curso)
         {
             InitializeComponent();
+            this.curso = curso;
+        }
+
+        public void PantallaListaUsuarios_Load(object sender, EventArgs e)
+        {
+          
+
+            lNombreCurso.Text = curso.CursoNombre;
+            lNombreProfesorCurso.Text = curso.CursoProfesor.NombreUsuario;
+            foreach (Usuario u in CursosRealizados.listaUsuarios(curso.CursoID)) lbUsuarios.Items.Add(u.NombreUsuario + " - " + u.CorreoUsuario);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -31,5 +45,6 @@ namespace Grupo02PCSAS
         {
 
         }
+
     }
 }

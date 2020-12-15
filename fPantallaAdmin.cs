@@ -32,7 +32,7 @@ namespace Grupo02PCSAS
 
         private void bCrearActividad_Click(object sender, EventArgs e)
         {
-            fCrearActividadAdmin actividad = new fCrearActividadAdmin();
+            fCrearActividadAdmin actividad = new fCrearActividadAdmin(null); //RECORDAR QUE HAY QUE CAMBIAR ESTO
             this.Visible = false;
             actividad.ShowDialog();
             this.Visible = true;
