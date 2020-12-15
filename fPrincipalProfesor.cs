@@ -35,7 +35,7 @@ namespace Grupo02PCSAS
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            fDatosPerfil datosPerfil = new fDatosPerfil(profesor); //M -> HAY QUE CAMBIARLO!!!!
+            fDatosPerfil datosPerfil = new fDatosPerfil(profesor); 
             this.Visible = false;
             datosPerfil.ShowDialog();
             this.Visible = true;
