@@ -41,7 +41,8 @@ namespace Grupo02PCSAS
         public Actividad(Usuario user, string nombreAct, string descrAct, string fIniAct, string fFinAct, string hIniAct, string hFinAct, string lugarAct, int aforoPermitido)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "INSERT INTO Actividad VALUES ('" + user.CorreoUsuario + "','" + nombreAct + "','"+ descrAct + "','" + fIniAct + "','" + fFinAct + "','" + hIniAct + "','" + hFinAct + "','" + lugarAct + "'," + aforoPermitido + ");";
+            string sentencia = "INSERT INTO Actividad VALUES (" + 0 + ",'" + user.CorreoUsuario + "','" + nombreAct + "','"+ descrAct + "','" + fIniAct 
+                + "','" + fFinAct + "','" + hIniAct + "','" + hFinAct + "','" + lugarAct + "'," + aforoPermitido + ");";
             miBD.Insert(sentencia);
             this.idActividad = (int) miBD.SelectScalar("SELECT MAX(idActividad) FROM Actividad;");
             this.usuarioCreador = user;

@@ -46,7 +46,6 @@ namespace Grupo02PCSAS
             this.label9 = new System.Windows.Forms.Label();
             this.rOnline = new System.Windows.Forms.RadioButton();
             this.rPresencial = new System.Windows.Forms.RadioButton();
-            this.lProfesor = new System.Windows.Forms.ListBox();
             this.label10 = new System.Windows.Forms.Label();
             this.bAniadirArchivosCurso = new System.Windows.Forms.Button();
             this.bGuardarCambiosCurso = new System.Windows.Forms.Button();
@@ -55,7 +54,10 @@ namespace Grupo02PCSAS
             this.dFechaFinCurso = new System.Windows.Forms.DateTimePicker();
             this.dHoraIniCurso = new System.Windows.Forms.DateTimePicker();
             this.dHoraFinCurso = new System.Windows.Forms.DateTimePicker();
+            this.listProfesor = new System.Windows.Forms.ListBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -219,23 +221,11 @@ namespace Grupo02PCSAS
             this.rPresencial.Text = "Presencial";
             this.rPresencial.UseVisualStyleBackColor = true;
             // 
-            // lProfesor
-            // 
-            this.lProfesor.FormattingEnabled = true;
-            this.lProfesor.ItemHeight = 16;
-            this.lProfesor.Items.AddRange(new object[] {
-            "Profesor 1",
-            "Profesor 2"});
-            this.lProfesor.Location = new System.Drawing.Point(1105, 754);
-            this.lProfesor.Name = "lProfesor";
-            this.lProfesor.Size = new System.Drawing.Size(196, 36);
-            this.lProfesor.TabIndex = 23;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1100, 718);
+            this.label10.Location = new System.Drawing.Point(3, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(86, 26);
             this.label10.TabIndex = 24;
@@ -319,12 +309,31 @@ namespace Grupo02PCSAS
             this.dHoraFinCurso.Size = new System.Drawing.Size(196, 31);
             this.dHoraFinCurso.TabIndex = 31;
             // 
+            // listProfesor
+            // 
+            this.listProfesor.FormattingEnabled = true;
+            this.listProfesor.ItemHeight = 16;
+            this.listProfesor.Location = new System.Drawing.Point(0, 41);
+            this.listProfesor.Name = "listProfesor";
+            this.listProfesor.Size = new System.Drawing.Size(196, 52);
+            this.listProfesor.TabIndex = 32;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.listProfesor);
+            this.panel1.Location = new System.Drawing.Point(1105, 714);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 33;
+            // 
             // fCrearCursoAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1469, 844);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dHoraFinCurso);
             this.Controls.Add(this.dHoraIniCurso);
             this.Controls.Add(this.dFechaFinCurso);
@@ -332,8 +341,6 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.bAtras);
             this.Controls.Add(this.bGuardarCambiosCurso);
             this.Controls.Add(this.bAniadirArchivosCurso);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.lProfesor);
             this.Controls.Add(this.rPresencial);
             this.Controls.Add(this.rOnline);
             this.Controls.Add(this.label9);
@@ -354,6 +361,8 @@ namespace Grupo02PCSAS
             this.Text = "fCrearCursoAdmin";
             this.Load += new System.EventHandler(this.fCrearCursoAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,7 +386,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RadioButton rOnline;
         private System.Windows.Forms.RadioButton rPresencial;
-        private System.Windows.Forms.ListBox lProfesor;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button bAniadirArchivosCurso;
         private System.Windows.Forms.Button bGuardarCambiosCurso;
@@ -386,5 +394,7 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.DateTimePicker dFechaFinCurso;
         private System.Windows.Forms.DateTimePicker dHoraIniCurso;
         private System.Windows.Forms.DateTimePicker dHoraFinCurso;
+        private System.Windows.Forms.ListBox listProfesor;
+        private System.Windows.Forms.Panel panel1;
     }
 }
