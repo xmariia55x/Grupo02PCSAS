@@ -239,11 +239,12 @@ namespace Grupo02PCSAS
             // 
             // lbUsuarios
             // 
+            this.lbUsuarios.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsuarios.FormattingEnabled = true;
-            this.lbUsuarios.ItemHeight = 20;
+            this.lbUsuarios.ItemHeight = 36;
             this.lbUsuarios.Location = new System.Drawing.Point(236, 618);
             this.lbUsuarios.Name = "lbUsuarios";
-            this.lbUsuarios.Size = new System.Drawing.Size(1025, 284);
+            this.lbUsuarios.Size = new System.Drawing.Size(1025, 256);
             this.lbUsuarios.TabIndex = 11;
             // 
             // PantallaListaUsuarios

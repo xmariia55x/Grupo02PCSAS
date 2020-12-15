@@ -7,18 +7,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Grupo02PCSAS
 {
+   
     public partial class PantallaPrincipalForo : Form
     {
-        public PantallaPrincipalForo()
+        private Usuario user;
+        public PantallaPrincipalForo(Usuario user)
         {
             InitializeComponent();
+            this.user = user;
         }
 
         private void PantallaBorrarCurso_Load(object sender, EventArgs e)
         {
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
+            conexion.Open();
+            MySqlCommand comando = new MySqlCommand("Select asuntoDebate from Debate where creadorDebate ='" + user.CorreoUsuario + "' ORDER BY fechaPublicacion DESC", conexion);
+            MySqlDataAdapter adaptador = new MySqlDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            dgvMisDebates.DataSource = tabla;
+
+            //where fechaPublicacion <'" + DateTime.Now.AddDays(-10)
+            MySqlCommand comando2 = new MySqlCommand("Select * from Debate ORDER BY fechaPublicacion DESC", conexion);
+            MySqlDataAdapter adaptador2 = new MySqlDataAdapter();
+            adaptador2.SelectCommand = comando2;
+            DataTable tabla2 = new DataTable();
+            adaptador2.Fill(tabla2);
+            dgvDebatesRecientes.DataSource = tabla2;
+
+            lNombreApellidos.Text = user.NombreUsuario;
 
         }
 
@@ -44,7 +67,7 @@ namespace Grupo02PCSAS
 
         private void bAniadirDebate_Click(object sender, EventArgs e)
         {
-            fNuevoDebateForo nuevoDebate = new fNuevoDebateForo(null); //M -> HAY QUE CAMBIARLO!!!!
+            fNuevoDebateForo nuevoDebate = new fNuevoDebateForo(user); 
             this.Visible = false;
             nuevoDebate.ShowDialog();
             this.Visible = true;
@@ -53,6 +76,11 @@ namespace Grupo02PCSAS
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
