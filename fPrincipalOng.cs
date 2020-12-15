@@ -19,7 +19,7 @@ namespace Grupo02PCSAS
 
         private void bAccederAlForo_Click(object sender, EventArgs e)
         {
-            PantallaPrincipalForo foro = new PantallaPrincipalForo();
+            PantallaPrincipalForo foro = new PantallaPrincipalForo(null);
             this.Visible = false;
             foro.ShowDialog();
             this.Visible = true;

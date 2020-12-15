@@ -7,15 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Grupo02PCSAS
 {
     public partial class PantallaBorrarCurso : Form
     {
-        public PantallaBorrarCurso()
+        private Usuario user;
+        Curso seleccionado = null;
+        public PantallaBorrarCurso(Usuario user)
         {
             InitializeComponent();
             bBasura.Visible = true;
+            this.user = user;
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -32,7 +37,17 @@ namespace Grupo02PCSAS
         {
            if( MessageBox.Show("¿Quieres borrar el curso definitivamente?","Borrar Curso",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                seleccionado.BorrarCurso();
 
+                MySqlConnection conexion = new MySqlConnection();
+                conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
+                conexion.Open();
+                MySqlCommand comando = new MySqlCommand("Select * from Curso where profesorCurso = '" + user.CorreoUsuario + "'", conexion);
+                MySqlDataAdapter adaptador = new MySqlDataAdapter();
+                adaptador.SelectCommand = comando;
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+                dgvMisCursos.DataSource = tabla;
             }
         }
 
@@ -48,14 +63,54 @@ namespace Grupo02PCSAS
 
         private void PantallaBorrarCurso_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Curso' Puede moverla o quitarla según sea necesario.
-            this.cursoTableAdapter.Fill(this.apsgrupo02DataSet.Curso);
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
+            conexion.Open();
+            MySqlCommand comando = new MySqlCommand("Select * from Curso where profesorCurso = '" + user.CorreoUsuario + "'", conexion);
+            MySqlDataAdapter adaptador = new MySqlDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            dgvMisCursos.DataSource = tabla;
 
+            lNombreApellidos.Text = user.NombreUsuario;
         }
 
         private void dgvMisCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void bCrearCurso_Click(object sender, EventArgs e)
+        {
+            fCrearCursoAdmin curso = new fCrearCursoAdmin(user);
+            this.Visible = false;
+            curso.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void bAccesoForo_Click(object sender, EventArgs e)
+        {
+            PantallaPrincipalForo foro = new PantallaPrincipalForo(user);
+            this.Visible = false;
+            foro.ShowDialog();
+            this.Visible = true;
+        }
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvMisCursos.SelectedRows.Count > 0)
+            {
+                try
+                {
+                   int u = (int)dgvMisCursos.SelectedRows[0].Cells[0].Value;
+
+                     seleccionado = new Curso(u);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR: " + ex.Message);
+                }
+            }
         }
     }
 }

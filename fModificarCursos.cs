@@ -59,7 +59,7 @@ namespace Grupo02PCSAS
                     cursoRealizado.CursoOnline = rModOnline.Checked;
                 if (cursoRealizado.CursoAforo != Convert.ToInt32(tModAforoCurso))
                     cursoRealizado.CursoAforo = Convert.ToInt32(tModAforoCurso);
-                if (cursoRealizado.CursoProfesor.CorreoUsuario != new Usuario((string)listProfesor.SelectedItem).CorreoUsuario) && panel1.Visible = true)
+               // if (cursoRealizado.CursoProfesor.CorreoUsuario != new Usuario((string)listProfesor.SelectedItem).CorreoUsuario)  panel1.Visible = true)
                     //cursoRealizado.CursoProfesor = listProfesor.SelectedItem;
                 if (user.RolUsuario.RolName.Equals("ADMIN"))
                 {
