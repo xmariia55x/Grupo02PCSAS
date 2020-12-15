@@ -246,6 +246,7 @@ namespace Grupo02PCSAS
             this.lbUsuarios.Name = "lbUsuarios";
             this.lbUsuarios.Size = new System.Drawing.Size(1025, 256);
             this.lbUsuarios.TabIndex = 11;
+            this.lbUsuarios.SelectedIndexChanged += new System.EventHandler(this.lbUsuarios_SelectedIndexChanged);
             // 
             // PantallaListaUsuarios
             // 

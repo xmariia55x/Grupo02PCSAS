@@ -35,8 +35,8 @@ namespace Grupo02PCSAS
             MySqlConnection conexion = new MySqlConnection();
             conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             conexion.Open();
-            MySqlCommand comandoC = new MySqlCommand("SELECT* FROM Curso WHERE fechaInicioCurso >= '" + DateTime.Now.ToString("dd / MM / yyyy") + "'", conexion);
-            MySqlCommand comandoA = new MySqlCommand("SELECT* FROM Actividad WHERE fechaInicioActividad >= '" + DateTime.Now.ToString("dd / MM / yyyy") + "'", conexion);
+            MySqlCommand comandoC = new MySqlCommand("SELECT nombreCurso, fechaInicioCurso, fechaFinCurso, aforoCurso FROM Curso WHERE fechaInicioCurso >= '" + DateTime.Now.ToString("dd / MM / yyyy") + "'", conexion);
+            MySqlCommand comandoA = new MySqlCommand("SELECT nombreActividad, fechaInicioActividad, fechaFinActividad, aforoActividad FROM Actividad WHERE fechaInicioActividad >= '" + DateTime.Now.ToString("dd / MM / yyyy") + "'", conexion);
             MySqlCommand comandoMC = new MySqlCommand("select c.nombreCurso from CursosRealizados cr join Curso c on cr.idCurso = c.idCurso where cr.correo = '" + alumno.CorreoUsuario + "'", conexion);
             MySqlDataAdapter adaptadorC = new MySqlDataAdapter();
             MySqlDataAdapter adaptadorA = new MySqlDataAdapter();
@@ -89,6 +89,11 @@ namespace Grupo02PCSAS
             this.Visible = false;
             foro.ShowDialog();
             this.Visible = true;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

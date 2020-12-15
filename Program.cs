@@ -68,6 +68,10 @@ namespace Grupo02PCSAS
             //Application.Run(new PantallaBorrarCurso(new Usuario("anto")));
             //Application.Run(new fRegistro());
             //Application.Run(new fPantallaPrincipalAlumno(user));
+            Usuario user = new Usuario("caritas@gmail.com");
+            Application.Run(new fPrincipalOng(user));
+            //Usuario user = new Usuario("caritas@gmail.com");
+            //Application.Run(new fPrincipalOng(user));
             //Usuario user = new Usuario("pepe");
             //Application.Run(new fPantallaAdmin(user));
             //Usuario user = new Usuario("caritas@gmail.com");

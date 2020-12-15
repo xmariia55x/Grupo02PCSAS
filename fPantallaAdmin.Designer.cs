@@ -41,17 +41,17 @@ namespace Grupo02PCSAS
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bCrearActividad = new System.Windows.Forms.Button();
-            this.bCrearCurso = new System.Windows.Forms.Button();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.correoUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contraseniaUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.niuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rolUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.apsgrupo02DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.apsgrupo02DataSet = new Grupo02PCSAS.apsgrupo02DataSet();
+            this.bCrearActividad = new System.Windows.Forms.Button();
+            this.bCrearCurso = new System.Windows.Forms.Button();
             this.usuarioTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.UsuarioTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -189,6 +189,71 @@ namespace Grupo02PCSAS
             this.dataGridView1.TabIndex = 50;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // correoUsuarioDataGridViewTextBoxColumn
+            // 
+            this.correoUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.correoUsuarioDataGridViewTextBoxColumn.DataPropertyName = "correoUsuario";
+            this.correoUsuarioDataGridViewTextBoxColumn.HeaderText = "correoUsuario";
+            this.correoUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.correoUsuarioDataGridViewTextBoxColumn.Name = "correoUsuarioDataGridViewTextBoxColumn";
+            // 
+            // nombreUsuarioDataGridViewTextBoxColumn
+            // 
+            this.nombreUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreUsuarioDataGridViewTextBoxColumn.DataPropertyName = "nombreUsuario";
+            this.nombreUsuarioDataGridViewTextBoxColumn.HeaderText = "nombreUsuario";
+            this.nombreUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nombreUsuarioDataGridViewTextBoxColumn.Name = "nombreUsuarioDataGridViewTextBoxColumn";
+            // 
+            // contraseniaUsuarioDataGridViewTextBoxColumn
+            // 
+            this.contraseniaUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.contraseniaUsuarioDataGridViewTextBoxColumn.DataPropertyName = "contraseniaUsuario";
+            this.contraseniaUsuarioDataGridViewTextBoxColumn.HeaderText = "contraseniaUsuario";
+            this.contraseniaUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.contraseniaUsuarioDataGridViewTextBoxColumn.Name = "contraseniaUsuarioDataGridViewTextBoxColumn";
+            this.contraseniaUsuarioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cifDataGridViewTextBoxColumn
+            // 
+            this.cifDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cifDataGridViewTextBoxColumn.DataPropertyName = "cif";
+            this.cifDataGridViewTextBoxColumn.HeaderText = "cif";
+            this.cifDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.cifDataGridViewTextBoxColumn.Name = "cifDataGridViewTextBoxColumn";
+            // 
+            // niuDataGridViewTextBoxColumn
+            // 
+            this.niuDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.niuDataGridViewTextBoxColumn.DataPropertyName = "niu";
+            this.niuDataGridViewTextBoxColumn.HeaderText = "niu";
+            this.niuDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.niuDataGridViewTextBoxColumn.Name = "niuDataGridViewTextBoxColumn";
+            // 
+            // rolUsuarioDataGridViewTextBoxColumn
+            // 
+            this.rolUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.rolUsuarioDataGridViewTextBoxColumn.DataPropertyName = "rolUsuario";
+            this.rolUsuarioDataGridViewTextBoxColumn.HeaderText = "rolUsuario";
+            this.rolUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.rolUsuarioDataGridViewTextBoxColumn.Name = "rolUsuarioDataGridViewTextBoxColumn";
+            this.rolUsuarioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this.apsgrupo02DataSetBindingSource;
+            // 
+            // apsgrupo02DataSetBindingSource
+            // 
+            this.apsgrupo02DataSetBindingSource.DataSource = this.apsgrupo02DataSet;
+            this.apsgrupo02DataSetBindingSource.Position = 0;
+            // 
+            // apsgrupo02DataSet
+            // 
+            this.apsgrupo02DataSet.DataSetName = "apsgrupo02DataSet";
+            this.apsgrupo02DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // bCrearActividad
             // 
             this.bCrearActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -214,69 +279,6 @@ namespace Grupo02PCSAS
             this.bCrearCurso.Text = "Crear Curso";
             this.bCrearCurso.UseVisualStyleBackColor = false;
             this.bCrearCurso.Click += new System.EventHandler(this.bCrearCurso_Click);
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this.apsgrupo02DataSetBindingSource;
-            // 
-            // correoUsuarioDataGridViewTextBoxColumn
-            // 
-            this.correoUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.correoUsuarioDataGridViewTextBoxColumn.DataPropertyName = "correoUsuario";
-            this.correoUsuarioDataGridViewTextBoxColumn.HeaderText = "correoUsuario";
-            this.correoUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.correoUsuarioDataGridViewTextBoxColumn.Name = "correoUsuarioDataGridViewTextBoxColumn";
-            // 
-            // nombreUsuarioDataGridViewTextBoxColumn
-            // 
-            this.nombreUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreUsuarioDataGridViewTextBoxColumn.DataPropertyName = "nombreUsuario";
-            this.nombreUsuarioDataGridViewTextBoxColumn.HeaderText = "nombreUsuario";
-            this.nombreUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.nombreUsuarioDataGridViewTextBoxColumn.Name = "nombreUsuarioDataGridViewTextBoxColumn";
-            // 
-            // contraseniaUsuarioDataGridViewTextBoxColumn
-            // 
-            this.contraseniaUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.contraseniaUsuarioDataGridViewTextBoxColumn.DataPropertyName = "contraseniaUsuario";
-            this.contraseniaUsuarioDataGridViewTextBoxColumn.HeaderText = "contraseniaUsuario";
-            this.contraseniaUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.contraseniaUsuarioDataGridViewTextBoxColumn.Name = "contraseniaUsuarioDataGridViewTextBoxColumn";
-            // 
-            // cifDataGridViewTextBoxColumn
-            // 
-            this.cifDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cifDataGridViewTextBoxColumn.DataPropertyName = "cif";
-            this.cifDataGridViewTextBoxColumn.HeaderText = "cif";
-            this.cifDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.cifDataGridViewTextBoxColumn.Name = "cifDataGridViewTextBoxColumn";
-            // 
-            // niuDataGridViewTextBoxColumn
-            // 
-            this.niuDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.niuDataGridViewTextBoxColumn.DataPropertyName = "niu";
-            this.niuDataGridViewTextBoxColumn.HeaderText = "niu";
-            this.niuDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.niuDataGridViewTextBoxColumn.Name = "niuDataGridViewTextBoxColumn";
-            // 
-            // rolUsuarioDataGridViewTextBoxColumn
-            // 
-            this.rolUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.rolUsuarioDataGridViewTextBoxColumn.DataPropertyName = "rolUsuario";
-            this.rolUsuarioDataGridViewTextBoxColumn.HeaderText = "rolUsuario";
-            this.rolUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.rolUsuarioDataGridViewTextBoxColumn.Name = "rolUsuarioDataGridViewTextBoxColumn";
-            // 
-            // apsgrupo02DataSetBindingSource
-            // 
-            this.apsgrupo02DataSetBindingSource.DataSource = this.apsgrupo02DataSet;
-            this.apsgrupo02DataSetBindingSource.Position = 0;
-            // 
-            // apsgrupo02DataSet
-            // 
-            this.apsgrupo02DataSet.DataSetName = "apsgrupo02DataSet";
-            this.apsgrupo02DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usuarioTableAdapter
             // 

@@ -28,6 +28,7 @@ namespace Grupo02PCSAS
 
             lNombreCurso.Text = curso.CursoNombre;
             lNombreProfesorCurso.Text = curso.CursoProfesor.NombreUsuario;
+            lbUsuarios.Items.Clear();
             foreach (Usuario u in CursosRealizados.listaUsuarios(curso.CursoID)) lbUsuarios.Items.Add(u.NombreUsuario + " - " + u.CorreoUsuario);
         }
 
@@ -46,5 +47,9 @@ namespace Grupo02PCSAS
 
         }
 
+        private void lbUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
