@@ -41,16 +41,6 @@ namespace Grupo02PCSAS
             this.lNuevosCursos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvNuevosCursos = new System.Windows.Forms.DataGridView();
-            this.dgvNuevasActividades = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dgvMisCursos = new System.Windows.Forms.DataGridView();
-            this.apsgrupo02DataSet = new Grupo02PCSAS.apsgrupo02DataSet();
-            this.apsgrupo02DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cursoTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.CursoTableAdapter();
-            this.cursoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.cursoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.idCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.profesorCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,17 +52,29 @@ namespace Grupo02PCSAS
             this.lugarCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aforoCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.onlineCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cursoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.apsgrupo02DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.apsgrupo02DataSet = new Grupo02PCSAS.apsgrupo02DataSet();
+            this.dgvNuevasActividades = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dgvMisCursos = new System.Windows.Forms.DataGridView();
+            this.cursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cursoTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.CursoTableAdapter();
+            this.cursoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNuevosCursos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNuevasActividades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -215,82 +217,6 @@ namespace Grupo02PCSAS
             this.dgvNuevosCursos.Size = new System.Drawing.Size(832, 206);
             this.dgvNuevosCursos.TabIndex = 9;
             // 
-            // dgvNuevasActividades
-            // 
-            this.dgvNuevasActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNuevasActividades.Location = new System.Drawing.Point(521, 685);
-            this.dgvNuevasActividades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvNuevasActividades.Name = "dgvNuevasActividades";
-            this.dgvNuevasActividades.RowHeadersWidth = 62;
-            this.dgvNuevasActividades.RowTemplate.Height = 28;
-            this.dgvNuevasActividades.Size = new System.Drawing.Size(832, 206);
-            this.dgvNuevasActividades.TabIndex = 10;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 912);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(312, 65);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Acceder al foro";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(12, 644);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(312, 65);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "           Mis cursos        ▼";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // dgvMisCursos
-            // 
-            this.dgvMisCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMisCursos.Location = new System.Drawing.Point(12, 701);
-            this.dgvMisCursos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvMisCursos.Name = "dgvMisCursos";
-            this.dgvMisCursos.RowHeadersWidth = 62;
-            this.dgvMisCursos.RowTemplate.Height = 28;
-            this.dgvMisCursos.Size = new System.Drawing.Size(312, 206);
-            this.dgvMisCursos.TabIndex = 15;
-            // 
-            // apsgrupo02DataSet
-            // 
-            this.apsgrupo02DataSet.DataSetName = "apsgrupo02DataSet";
-            this.apsgrupo02DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // apsgrupo02DataSetBindingSource
-            // 
-            this.apsgrupo02DataSetBindingSource.DataSource = this.apsgrupo02DataSet;
-            this.apsgrupo02DataSetBindingSource.Position = 0;
-            // 
-            // cursoBindingSource
-            // 
-            this.cursoBindingSource.DataMember = "Curso";
-            this.cursoBindingSource.DataSource = this.apsgrupo02DataSetBindingSource;
-            // 
-            // cursoTableAdapter
-            // 
-            this.cursoTableAdapter.ClearBeforeFill = true;
-            // 
-            // cursoBindingSource1
-            // 
-            this.cursoBindingSource1.DataMember = "Curso";
-            this.cursoBindingSource1.DataSource = this.apsgrupo02DataSetBindingSource;
-            // 
-            // cursoBindingSource2
-            // 
-            this.cursoBindingSource2.DataMember = "Curso";
-            this.cursoBindingSource2.DataSource = this.apsgrupo02DataSetBindingSource;
-            // 
             // idCursoDataGridViewTextBoxColumn
             // 
             this.idCursoDataGridViewTextBoxColumn.DataPropertyName = "idCurso";
@@ -379,12 +305,100 @@ namespace Grupo02PCSAS
             this.onlineCursoDataGridViewTextBoxColumn.Name = "onlineCursoDataGridViewTextBoxColumn";
             this.onlineCursoDataGridViewTextBoxColumn.Width = 150;
             // 
+            // cursoBindingSource2
+            // 
+            this.cursoBindingSource2.DataMember = "Curso";
+            this.cursoBindingSource2.DataSource = this.apsgrupo02DataSetBindingSource;
+            // 
+            // apsgrupo02DataSetBindingSource
+            // 
+            this.apsgrupo02DataSetBindingSource.DataSource = this.apsgrupo02DataSet;
+            this.apsgrupo02DataSetBindingSource.Position = 0;
+            // 
+            // apsgrupo02DataSet
+            // 
+            this.apsgrupo02DataSet.DataSetName = "apsgrupo02DataSet";
+            this.apsgrupo02DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dgvNuevasActividades
+            // 
+            this.dgvNuevasActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNuevasActividades.Location = new System.Drawing.Point(521, 685);
+            this.dgvNuevasActividades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvNuevasActividades.Name = "dgvNuevasActividades";
+            this.dgvNuevasActividades.RowHeadersWidth = 62;
+            this.dgvNuevasActividades.RowTemplate.Height = 28;
+            this.dgvNuevasActividades.Size = new System.Drawing.Size(832, 206);
+            this.dgvNuevasActividades.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(12, 912);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(312, 65);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Acceder al foro";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(12, 644);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(312, 65);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "           Mis cursos        ▼";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // dgvMisCursos
+            // 
+            this.dgvMisCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMisCursos.Location = new System.Drawing.Point(12, 701);
+            this.dgvMisCursos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvMisCursos.Name = "dgvMisCursos";
+            this.dgvMisCursos.RowHeadersWidth = 62;
+            this.dgvMisCursos.RowTemplate.Height = 28;
+            this.dgvMisCursos.Size = new System.Drawing.Size(312, 206);
+            this.dgvMisCursos.TabIndex = 15;
+            // 
+            // cursoBindingSource
+            // 
+            this.cursoBindingSource.DataMember = "Curso";
+            this.cursoBindingSource.DataSource = this.apsgrupo02DataSetBindingSource;
+            // 
+            // cursoTableAdapter
+            // 
+            this.cursoTableAdapter.ClearBeforeFill = true;
+            // 
+            // cursoBindingSource1
+            // 
+            this.cursoBindingSource1.DataMember = "Curso";
+            this.cursoBindingSource1.DataSource = this.apsgrupo02DataSetBindingSource;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
+            this.pictureBox3.Location = new System.Drawing.Point(54, 349);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(103, 86);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // fPantallaPrincipalAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1465, 1024);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.dgvMisCursos);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -402,13 +416,14 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNuevosCursos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNuevasActividades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,5 +463,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.DataGridViewTextBoxColumn onlineCursoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource cursoBindingSource2;
         private System.Windows.Forms.BindingSource cursoBindingSource1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

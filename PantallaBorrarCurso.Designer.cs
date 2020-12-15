@@ -37,10 +37,7 @@ namespace Grupo02PCSAS
             this.lNombreApellidos = new System.Windows.Forms.Label();
             this.lHola = new System.Windows.Forms.Label();
             this.lMiPerfil = new System.Windows.Forms.Label();
-            this.pbUsuario = new System.Windows.Forms.PictureBox();
-            this.pbPcsas = new System.Windows.Forms.PictureBox();
             this.lCursos = new System.Windows.Forms.Label();
-            this.bAtras = new System.Windows.Forms.Button();
             this.dgvMisCursos = new System.Windows.Forms.DataGridView();
             this.cursoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.apsgrupo02DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -48,17 +45,21 @@ namespace Grupo02PCSAS
             this.bAccesoForo = new System.Windows.Forms.Button();
             this.bEventos = new System.Windows.Forms.Button();
             this.bCrearCurso = new System.Windows.Forms.Button();
-            this.bBasura = new System.Windows.Forms.Button();
             this.cursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cursoTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.CursoTableAdapter();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bAtras = new System.Windows.Forms.Button();
+            this.pbUsuario = new System.Windows.Forms.PictureBox();
+            this.pbPcsas = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPcsas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPcsas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -129,29 +130,6 @@ namespace Grupo02PCSAS
             this.lMiPerfil.TabIndex = 2;
             this.lMiPerfil.Text = "Mi perfil";
             // 
-            // pbUsuario
-            // 
-            this.pbUsuario.ImageLocation = "C:\\Users\\Javi\\Source\\Repos\\xmariia55x\\Grupo02PCSAS\\Resources\\usuario.png";
-            this.pbUsuario.Location = new System.Drawing.Point(1277, 54);
-            this.pbUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbUsuario.Name = "pbUsuario";
-            this.pbUsuario.Size = new System.Drawing.Size(144, 151);
-            this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbUsuario.TabIndex = 1;
-            this.pbUsuario.TabStop = false;
-            // 
-            // pbPcsas
-            // 
-            this.pbPcsas.ImageLocation = "E:\\Fotos\\pcsas.JPEG";
-            this.pbPcsas.Location = new System.Drawing.Point(-14, 4);
-            this.pbPcsas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbPcsas.Name = "pbPcsas";
-            this.pbPcsas.Size = new System.Drawing.Size(276, 271);
-            this.pbPcsas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPcsas.TabIndex = 0;
-            this.pbPcsas.TabStop = false;
-            this.pbPcsas.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // lCursos
             // 
             this.lCursos.AutoSize = true;
@@ -161,18 +139,6 @@ namespace Grupo02PCSAS
             this.lCursos.Size = new System.Drawing.Size(187, 44);
             this.lCursos.TabIndex = 7;
             this.lCursos.Text = "Mis Cursos";
-            // 
-            // bAtras
-            // 
-            this.bAtras.AutoSize = true;
-            this.bAtras.Image = ((System.Drawing.Image)(resources.GetObject("bAtras.Image")));
-            this.bAtras.Location = new System.Drawing.Point(25, 294);
-            this.bAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bAtras.Name = "bAtras";
-            this.bAtras.Size = new System.Drawing.Size(119, 132);
-            this.bAtras.TabIndex = 8;
-            this.bAtras.Text = "bAtras";
-            this.bAtras.UseVisualStyleBackColor = true;
             // 
             // dgvMisCursos
             // 
@@ -241,18 +207,6 @@ namespace Grupo02PCSAS
             this.bCrearCurso.UseVisualStyleBackColor = false;
             this.bCrearCurso.Click += new System.EventHandler(this.bCrearCurso_Click);
             // 
-            // bBasura
-            // 
-            this.bBasura.AutoSize = true;
-            this.bBasura.Image = ((System.Drawing.Image)(resources.GetObject("bBasura.Image")));
-            this.bBasura.Location = new System.Drawing.Point(1274, 829);
-            this.bBasura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bBasura.Name = "bBasura";
-            this.bBasura.Size = new System.Drawing.Size(119, 132);
-            this.bBasura.TabIndex = 13;
-            this.bBasura.UseVisualStyleBackColor = true;
-            this.bBasura.Click += new System.EventHandler(this.bBasura_Click);
-            // 
             // cursoBindingSource
             // 
             this.cursoBindingSource.DataMember = "Curso";
@@ -262,13 +216,59 @@ namespace Grupo02PCSAS
             // 
             this.cursoTableAdapter.ClearBeforeFill = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.basura;
+            this.pictureBox1.Location = new System.Drawing.Point(1274, 847);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(92, 98);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.bBasura_Click);
+            // 
+            // bAtras
+            // 
+            this.bAtras.AutoSize = true;
+            this.bAtras.Image = ((System.Drawing.Image)(resources.GetObject("bAtras.Image")));
+            this.bAtras.Location = new System.Drawing.Point(25, 294);
+            this.bAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bAtras.Name = "bAtras";
+            this.bAtras.Size = new System.Drawing.Size(106, 106);
+            this.bAtras.TabIndex = 8;
+            this.bAtras.Text = "bAtras";
+            this.bAtras.UseVisualStyleBackColor = true;
+            // 
+            // pbUsuario
+            // 
+            this.pbUsuario.ImageLocation = "C:\\Users\\Javi\\Source\\Repos\\xmariia55x\\Grupo02PCSAS\\Resources\\usuario.png";
+            this.pbUsuario.Location = new System.Drawing.Point(1277, 54);
+            this.pbUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbUsuario.Name = "pbUsuario";
+            this.pbUsuario.Size = new System.Drawing.Size(144, 151);
+            this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbUsuario.TabIndex = 1;
+            this.pbUsuario.TabStop = false;
+            // 
+            // pbPcsas
+            // 
+            this.pbPcsas.ImageLocation = "E:\\Fotos\\pcsas.JPEG";
+            this.pbPcsas.Location = new System.Drawing.Point(-14, 4);
+            this.pbPcsas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbPcsas.Name = "pbPcsas";
+            this.pbPcsas.Size = new System.Drawing.Size(276, 271);
+            this.pbPcsas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPcsas.TabIndex = 0;
+            this.pbPcsas.TabStop = false;
+            this.pbPcsas.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // PantallaBorrarCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1465, 1024);
-            this.Controls.Add(this.bBasura);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bCrearCurso);
             this.Controls.Add(this.bEventos);
             this.Controls.Add(this.bAccesoForo);
@@ -282,13 +282,14 @@ namespace Grupo02PCSAS
             this.Load += new System.EventHandler(this.PantallaBorrarCurso_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPcsas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPcsas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,11 +311,11 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Button bAccesoForo;
         private System.Windows.Forms.Button bEventos;
         private System.Windows.Forms.Button bCrearCurso;
-        private System.Windows.Forms.Button bBasura;
         private System.Windows.Forms.BindingSource apsgrupo02DataSetBindingSource;
         private apsgrupo02DataSet apsgrupo02DataSet;
         private System.Windows.Forms.BindingSource cursoBindingSource;
         private apsgrupo02DataSetTableAdapters.CursoTableAdapter cursoTableAdapter;
         private System.Windows.Forms.BindingSource cursoBindingSource1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

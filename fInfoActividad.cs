@@ -33,7 +33,10 @@ namespace Grupo02PCSAS
         private void calcularPlazasDisponibles()
         {
             List<Usuario> lista = ActividadesRealizadas.listaUsuarios(act.IdActividad);
-            lPlazasDisp.Text = (act.AforoActividad - lista.Count).ToString();
+            List<Usuario> filtro = new List<Usuario>();
+            foreach (Usuario u in lista)
+                if (u.RolUsuario.RolName.Equals("ALUMNO") || u.RolUsuario.RolName.Equals("PROFESOR")) filtro.Add(u);
+            lPlazasDisp.Text = (act.AforoActividad - filtro.Count).ToString();
         }
 
         private void comprobarInscrito()
@@ -64,7 +67,7 @@ namespace Grupo02PCSAS
         {
             lNombreAct.Text = act.NombreActividad;
             lDescripcion.Text = act.DescripcionActividad;
-            lCreador.Text = act.UsuarioCreador.NombreUsuario;
+            lNombreProf.Text = act.UsuarioCreador.NombreUsuario;
             lPlazasTotales.Text = act.AforoActividad.ToString();
             lLugar.Text = act.LugarActividad;
             lFechaInicio.Text = act.FechaInicioActividad;
