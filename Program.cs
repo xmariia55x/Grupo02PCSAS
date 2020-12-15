@@ -43,7 +43,7 @@ namespace Grupo02PCSAS
             //Rol profesor = new Rol("PROFESOR", "prof", false);
             //Rol admin = new Rol("ADMIN", "adm", true);
             //Usuario user = new Usuario("prueba", "prueba", "prueba", "cif", "niu", alumno);
-            //Usuario user = new Usuario("prueba");
+            Usuario user = new Usuario("prueba");
             //Usuario user = new Usuario("prueba", "prueba", "prueba", "cif", "niu", alumno);
             //Rol admin = new Rol("ADMIN", "administrador", true);
             Rol admin = new Rol("ADMIN");
@@ -61,6 +61,8 @@ namespace Grupo02PCSAS
             //Curso c = new Curso("anto2", "aps", "aps para ninios", "13/12/2020"
             //, "13/12/2020", "12:00", "14:00", "UMA", 7, false);
             //Actividad a = new Actividad(usuario, "recogida alimentos", "random", "13/12/2020", "13/12/2020", "12:00", "14:00", "UMA", 7);
+            Application.Run(new fEditarPerfil(user));
+            //Application.Run(new fRegistro());
         }
     }
 

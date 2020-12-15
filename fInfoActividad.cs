@@ -12,9 +12,70 @@ namespace Grupo02PCSAS
 {
     public partial class fInfoActividad : Form
     {
-        public fInfoActividad()
+        Usuario user;
+        Actividad act;
+
+        public fInfoActividad(Usuario user, Actividad act)
         {
             InitializeComponent();
+            this.user = user;
+            this.act = act;
+
+            mostrarUsuario();
+            mostrarActividad();
+            comprobarInscrito();
+            calcularPlazasDisponibles();
+        }
+
+        private void calcularPlazasDisponibles()
+        {
+            List<Usuario> lista = ActividadesRealizadas.listaUsuarios(act.IdActividad);
+            lPlazasDisp.Text = (act.AforoActividad - lista.Count).ToString();
+        }
+
+        private void comprobarInscrito()
+        {
+            bool inscrito = false;
+            foreach (Usuario u in ActividadesRealizadas.listaUsuarios(act.IdActividad))
+            {
+                if (user.Equals(u)) inscrito = true;
+            }
+
+            if (inscrito)
+            {
+                lInscrito.Text = "Inscrito";
+            }
+            else
+            {
+                lInscrito.Text = "No inscrito";
+            }
+        }
+
+        private void mostrarUsuario()
+        {
+            lNombreUser.Text = user.NombreUsuario;
+            lRol.Text = user.RolUsuario.RolName;
+        }
+
+        private void mostrarActividad()
+        {
+            lNombreAct.Text = act.NombreActividad;
+            lDescripcion.Text = act.DescripcionActividad;
+            lCreador.Text = act.UsuarioCreador.NombreUsuario;
+            lPlazasTotales.Text = act.AforoActividad.ToString();
+            lLugar.Text = act.LugarActividad;
+            lFechaInicio.Text = act.FechaInicioActividad;
+            lFechaFin.Text = act.FechaFinActividad;
+            lHoraInicio.Text = act.HoraInicioActividad;
+            lHoraFin.Text = act.HoraFinActividad;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datos = new fDatosPerfil(user);
+            this.Visible = false;
+            datos.ShowDialog();
+            this.Visible = true;
         }
     }
 }

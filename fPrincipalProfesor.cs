@@ -31,16 +31,6 @@ namespace Grupo02PCSAS
             this.Visible = true;
         }
 
-        private void bEventosInscritos_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void bCrearCurso_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             fDatosPerfil datosPerfil = new fDatosPerfil(null); //M -> HAY QUE CAMBIARLO!!!!

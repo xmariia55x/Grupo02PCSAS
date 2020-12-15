@@ -77,63 +77,65 @@ namespace Grupo02PCSAS
 
         private void bRegistro_Click(object sender, EventArgs e)
         {
-            //NO SE REGISTRA EL PROFESOR Y LA ONG DA FALLO
-
-            String nombre = null, correo = null, contrasenia = null, niu = null, cif = null, rol = null;
-            Usuario user;
-
             try
             {
                 if (seleccionado == 0)  //Alumno
                 {
-                    nombre = tNombreAlumno.Text;
-                    correo = tCorreoAlumno.Text;
-                    rol = "ALUMNO";
+                    String nombreA = null, correoA = null, contraseniaA = null, niuA = null, cifA = null, rolA = null;
+                    nombreA = tNombreAlumno.Text;
+                    correoA = tCorreoAlumno.Text;
+                    rolA = "ALUMNO";
                     if (tPwdAlumno.Text.Equals(tConfirmarAlumno.Text))
                     {
-                        contrasenia = tPwdAlumno.Text;
+                        contraseniaA = tPwdAlumno.Text;
                     }
                     else
                     {
                         throw new Error("Las contraseñas no coinciden");
                     }
+                    Usuario user = new Usuario(correoA, nombreA, contraseniaA, cifA, niuA, new Rol(rolA));
+                    MessageBox.Show("Usuario con rol Alumno creado con éxito");
+                    this.Close();
                 }
                 else if (seleccionado == 1) //Profesor
                 {
-                    nombre = tNombreProfesor.Text;
-                    correo = tCorreoProfesor.Text;
-                    niu = tNiuProfesor.Text;
-                    rol = "PROFESOR";
+                    String nombreP = null, correoP = null, contraseniaP = null, niuP = null, cifP = null, rolP = null;
+                    nombreP = tNombreProfesor.Text;
+                    correoP = tCorreoProfesor.Text;
+                    niuP = tNiuProfesor.Text;
+                    rolP = "PROFESOR";
                     if (tPwdProfesor.Text.Equals(tConfirmarPwd.Text))
                     {
-                        contrasenia = tPwdProfesor.Text;
+                        contraseniaP = tPwdProfesor.Text;
                     }
                     else
                     {
                         throw new Error("Las contraseñas no coinciden");
                     }
-                    Console.WriteLine(seleccionado);
+                    Usuario user = new Usuario(correoP, nombreP, contraseniaP, cifP, niuP, new Rol(rolP));
+                    MessageBox.Show("Usuario con rol Profesor creado con éxito");
+                    this.Close();
                 }
                 else if (seleccionado == 2) //ONG
                 {
-                    nombre = tNombreOng.Text;
-                    correo = tCorreoOng.Text;
-                    cif = tCifOng.Text;
-                    rol = "ONG";
+                    String nombreO = null, correoO = null, contraseniaO = null, niuO = null, cifO = null, rolO = null;
+                    nombreO = tNombreOng.Text;
+                    correoO = tCorreoOng.Text;
+                    cifO = tCifOng.Text;
+                    rolO = "ENTIDAD";
                     if (tPwdOng.Text.Equals(tConfirmarOng.Text))
                     {
-                        contrasenia = tPwdOng.Text;
+                        contraseniaO = tPwdOng.Text;
                     }
                     else
                     {
                         throw new Error("Las contraseñas no coinciden");
                     }
+                    Usuario user = new Usuario(correoO, nombreO, contraseniaO, cifO, niuO, new Rol(rolO));
+                    MessageBox.Show("Usuario con rol Ong/Entidad creado con éxito");
+                    this.Close();
                 }
-
-                user = new Usuario(correo, nombre, contrasenia, cif, niu, new Rol(rol));
-                MessageBox.Show("Usuario creado con éxito");
-                this.Close();
-
+                
             } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
