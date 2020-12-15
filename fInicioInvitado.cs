@@ -84,7 +84,7 @@ namespace Grupo02PCSAS
                             break;
 
                         case "ENTIDAD":
-                            fPrincipalOng ong = new fPrincipalOng();  // añadir el user
+                            fPrincipalOng ong = new fPrincipalOng(null);  // añadir el user
                             this.Visible = false;
                             ong.ShowDialog();
                             this.Visible = true;

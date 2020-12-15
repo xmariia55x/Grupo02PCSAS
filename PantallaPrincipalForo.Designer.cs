@@ -47,8 +47,8 @@ namespace Grupo02PCSAS
             this.lHola = new System.Windows.Forms.Label();
             this.lForo = new System.Windows.Forms.Label();
             this.lDebates = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvDebatesRecientes = new System.Windows.Forms.DataGridView();
+            this.dgvMisDebates = new System.Windows.Forms.DataGridView();
             this.bAniadirDebate = new System.Windows.Forms.Button();
             this.bMisDebatesForo = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -58,8 +58,8 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSilueta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoPcsas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDebatesRecientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMisDebates)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -263,27 +263,28 @@ namespace Grupo02PCSAS
             this.lDebates.TabIndex = 8;
             this.lDebates.Text = "Debates más recientes...";
             // 
-            // dataGridView1
+            // dgvDebatesRecientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(481, 554);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(808, 368);
-            this.dataGridView1.TabIndex = 9;
+            this.dgvDebatesRecientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDebatesRecientes.Location = new System.Drawing.Point(453, 560);
+            this.dgvDebatesRecientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDebatesRecientes.Name = "dgvDebatesRecientes";
+            this.dgvDebatesRecientes.RowHeadersWidth = 62;
+            this.dgvDebatesRecientes.RowTemplate.Height = 28;
+            this.dgvDebatesRecientes.Size = new System.Drawing.Size(808, 368);
+            this.dgvDebatesRecientes.TabIndex = 9;
             // 
-            // dataGridView2
+            // dgvMisDebates
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(16, 604);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(217, 280);
-            this.dataGridView2.TabIndex = 14;
+            this.dgvMisDebates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMisDebates.Location = new System.Drawing.Point(16, 604);
+            this.dgvMisDebates.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvMisDebates.Name = "dgvMisDebates";
+            this.dgvMisDebates.RowHeadersWidth = 62;
+            this.dgvMisDebates.RowTemplate.Height = 28;
+            this.dgvMisDebates.Size = new System.Drawing.Size(217, 280);
+            this.dgvMisDebates.TabIndex = 14;
+            this.dgvMisDebates.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // bAniadirDebate
             // 
@@ -330,8 +331,8 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.bMisDebatesForo);
             this.Controls.Add(this.bAniadirDebate);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMisDebates);
+            this.Controls.Add(this.dgvDebatesRecientes);
             this.Controls.Add(this.lDebates);
             this.Controls.Add(this.lForo);
             this.Controls.Add(this.panel1);
@@ -347,8 +348,8 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSilueta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoPcsas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDebatesRecientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMisDebates)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -367,7 +368,7 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.PictureBox pbSilueta;
         private System.Windows.Forms.Label lForo;
         private System.Windows.Forms.Label lDebates;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDebatesRecientes;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -376,7 +377,7 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lNombreApellidos;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvMisDebates;
         private System.Windows.Forms.Button bAniadirDebate;
         private System.Windows.Forms.Button bMisDebatesForo;
         private System.Windows.Forms.PictureBox pictureBox3;

@@ -7,19 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Grupo02PCSAS
 {
     public partial class fPrincipalOng : Form
     {
-        public fPrincipalOng()
+        Usuario ong;
+        public fPrincipalOng(Usuario u)
         {
             InitializeComponent();
+            ong = u;
         }
 
         private void bAccederAlForo_Click(object sender, EventArgs e)
         {
-            PantallaPrincipalForo foro = new PantallaPrincipalForo();
+            PantallaPrincipalForo foro = new PantallaPrincipalForo(null);
             this.Visible = false;
             foro.ShowDialog();
             this.Visible = true;
@@ -27,7 +30,7 @@ namespace Grupo02PCSAS
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            fDatosPerfil datosPerfil = new fDatosPerfil(null); //M -> HAY QUE CAMBIARLO!!!!
+            fDatosPerfil datosPerfil = new fDatosPerfil(ong); 
             this.Visible = false;
             datosPerfil.ShowDialog();
             this.Visible = true;
@@ -36,8 +39,19 @@ namespace Grupo02PCSAS
         private void fPrincipalOng_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Actividad' Puede moverla o quitarla según sea necesario.
-            this.actividadTableAdapter.Fill(this.apsgrupo02DataSet.Actividad);
+            //this.actividadTableAdapter.Fill(this.apsgrupo02DataSet.Actividad);
+            lRol.Text = ong.RolUsuario.RolName;
+            lNombreUser.Text = ong.NombreUsuario;
 
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
+            conexion.Open();
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM Actividad WHERE creadorActividad = '" + ong.CorreoUsuario + "'", conexion);
+            MySqlDataAdapter adaptador = new MySqlDataAdapter();
+            adaptador.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            adaptador.Fill(tabla);
+            dataGridView1.DataSource = tabla;
         }
 
         private void bEventos_Click(object sender, EventArgs e)
