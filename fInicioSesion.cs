@@ -29,7 +29,7 @@ namespace Grupo02PCSAS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            fPantallaPrincipalAlumno alumno = new fPantallaPrincipalAlumno();
+            fPantallaPrincipalAlumno alumno = new fPantallaPrincipalAlumno(null); //A -> Cambiar el null
             this.Visible = false;
             alumno.ShowDialog();
             this.Close();
