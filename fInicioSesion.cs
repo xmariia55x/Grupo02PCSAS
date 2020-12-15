@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Grupo02PCSAS
-{
+{//hola
     public partial class fInicioSesion : Form
     {
         public fInicioSesion()
