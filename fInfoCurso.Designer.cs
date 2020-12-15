@@ -474,6 +474,7 @@
             this.Name = "fInfoCurso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fInfoCurso";
+            this.Load += new System.EventHandler(this.fInfoCurso_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);

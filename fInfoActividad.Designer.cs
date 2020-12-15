@@ -474,6 +474,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "fInfoActividad";
             this.Text = "fInfoActividad";
+            this.Load += new System.EventHandler(this.fInfoActividad_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);

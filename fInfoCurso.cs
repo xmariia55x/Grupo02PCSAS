@@ -21,13 +21,23 @@ namespace Grupo02PCSAS
             this.curso = curso;
 
             InitializeComponent();
+        }
+
+        private void fInfoCurso_Load(object sender, EventArgs e)
+        {
             mostrarUsuario();
             mostrarActividad();
-            comprobarInscrito();
+            if (user.Equals(curso.CursoProfesor))
+            {
+                label9.Visible = false;
+                lInscrito.Visible = false;
+            }
+            else
+                comprobarInscrito();
             calcularPlazasDisponibles();
         }
 
-        
+
         private void calcularPlazasDisponibles()
         {
             List<Usuario> lista = CursosRealizados.listaUsuarios(curso.CursoID);

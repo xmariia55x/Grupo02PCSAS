@@ -20,7 +20,10 @@ namespace Grupo02PCSAS
             InitializeComponent();
             this.user = user;
             this.act = act;
+        }
 
+        private void fInfoActividad_Load(object sender, EventArgs e)
+        {
             mostrarUsuario();
             mostrarActividad();
             comprobarInscrito();
@@ -77,5 +80,7 @@ namespace Grupo02PCSAS
             datos.ShowDialog();
             this.Visible = true;
         }
+
+        
     }
 }

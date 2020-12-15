@@ -37,7 +37,7 @@ namespace Grupo02PCSAS
         {
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Actividad' Puede moverla o quitarla según sea necesario.
             this.actividadTableAdapter.Fill(this.apsgrupo02DataSet.Actividad);
-
+            dataGridView1.DataSource = 
         }
 
         private void bEventos_Click(object sender, EventArgs e)
