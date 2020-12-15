@@ -12,9 +12,18 @@ namespace Grupo02PCSAS
 {
     public partial class fPantallaAdmin : Form
     {
-        public fPantallaAdmin()
+        private Usuario admin;
+        public fPantallaAdmin(Usuario u)
         {
             InitializeComponent();
+            admin = u;
+        }
+
+        private void fPantallaAdmin_Load(object sender, EventArgs e)
+        {
+            lRol.Text = admin.RolUsuario.RolName;
+            lNombre.Text = admin.NombreUsuario;
+            this.usuarioTableAdapter.Fill(this.apsgrupo02DataSet.Usuario);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -24,7 +33,7 @@ namespace Grupo02PCSAS
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            fDatosPerfil datosp = new fDatosPerfil(null); //M -> ESTO HAY QUE CAMBIARLO!!!!!
+            fDatosPerfil datosp = new fDatosPerfil(admin);
             this.Visible = false;
             datosp.ShowDialog();
             this.Visible = true;
@@ -44,6 +53,12 @@ namespace Grupo02PCSAS
             this.Visible = false;
             curso.ShowDialog();
             this.Visible = true;
+        }
+
+        private void fPantallaAdmin_Load_1(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Usuario' Puede moverla o quitarla según sea necesario.
+
         }
     }
 }

@@ -61,6 +61,22 @@ namespace Grupo02PCSAS
             this.online = online;
 
         }
+        public Curso(int idCurso)
+        {
+            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+            Object[] tupla = miBD.Select("SELECT * FROM Curso WHERE idCurso = " + idCurso + ";")[0];
+            this.idCurso = (int)tupla[0];
+            this.profesorCurso = new Usuario((string)tupla[1]);
+            this.nombreCurso = (string)tupla[2];
+            this.descripcionCurso = (string)tupla[3];
+            this.fechaInicioCurso = (string)tupla[4];
+            this.fechaFinCurso = (string)tupla[5];
+            this.horaInicioCurso = (string)tupla[6];
+            this.horaFinCurso = (string)tupla[7];
+            this.lugarCurso = (string)tupla[8];
+            this.aforoCurso = (int)tupla[9];
+            this.online = (int)tupla[10] == 1 ? true : false;
+        }
 
         public int CursoID
         {

@@ -49,7 +49,6 @@ namespace Grupo02PCSAS
             this.lRol = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.bAtras = new System.Windows.Forms.Button();
             this.panelProfesor = new System.Windows.Forms.Panel();
             this.panelEntidad = new System.Windows.Forms.Panel();
             this.lEmailEntidad = new System.Windows.Forms.Label();
@@ -66,6 +65,8 @@ namespace Grupo02PCSAS
             this.label17 = new System.Windows.Forms.Label();
             this.lNiuProfe = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelAlumno.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -73,6 +74,8 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelProfesor.SuspendLayout();
             this.panelEntidad.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // bEditarPerfil
@@ -175,25 +178,26 @@ namespace Grupo02PCSAS
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(876, 610);
+            this.dataGridView1.Location = new System.Drawing.Point(727, 610);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(378, 222);
+            this.dataGridView1.Size = new System.Drawing.Size(252, 176);
             this.dataGridView1.TabIndex = 22;
             // 
             // panelAlumno
             // 
             this.panelAlumno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelAlumno.Controls.Add(this.label3);
+            this.panelAlumno.Controls.Add(this.panelProfesor);
             this.panelAlumno.Controls.Add(this.lNombreAlumno);
             this.panelAlumno.Controls.Add(this.label5);
             this.panelAlumno.Controls.Add(this.lEmailAlumno);
             this.panelAlumno.Controls.Add(this.lPwdAlumno);
             this.panelAlumno.Controls.Add(this.label8);
-            this.panelAlumno.Location = new System.Drawing.Point(217, 482);
+            this.panelAlumno.Location = new System.Drawing.Point(64, 482);
             this.panelAlumno.Name = "panelAlumno";
-            this.panelAlumno.Size = new System.Drawing.Size(591, 374);
+            this.panelAlumno.Size = new System.Drawing.Size(572, 304);
             this.panelAlumno.TabIndex = 44;
             this.panelAlumno.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -290,16 +294,6 @@ namespace Grupo02PCSAS
             this.label4.TabIndex = 17;
             this.label4.Text = "Mi perfil";
             // 
-            // bAtras
-            // 
-            this.bAtras.Image = global::Grupo02PCSAS.Properties.Resources.Atras;
-            this.bAtras.Location = new System.Drawing.Point(64, 325);
-            this.bAtras.Name = "bAtras";
-            this.bAtras.Size = new System.Drawing.Size(100, 100);
-            this.bAtras.TabIndex = 46;
-            this.bAtras.UseVisualStyleBackColor = true;
-            this.bAtras.Click += new System.EventHandler(this.bAtras_Click);
-            // 
             // panelProfesor
             // 
             this.panelProfesor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -312,9 +306,9 @@ namespace Grupo02PCSAS
             this.panelProfesor.Controls.Add(this.label17);
             this.panelProfesor.Controls.Add(this.lNiuProfe);
             this.panelProfesor.Controls.Add(this.label20);
-            this.panelProfesor.Location = new System.Drawing.Point(216, 482);
+            this.panelProfesor.Location = new System.Drawing.Point(-1, 3);
             this.panelProfesor.Name = "panelProfesor";
-            this.panelProfesor.Size = new System.Drawing.Size(591, 374);
+            this.panelProfesor.Size = new System.Drawing.Size(572, 304);
             this.panelProfesor.TabIndex = 45;
             // 
             // panelEntidad
@@ -328,7 +322,7 @@ namespace Grupo02PCSAS
             this.panelEntidad.Controls.Add(this.label18);
             this.panelEntidad.Location = new System.Drawing.Point(-1, -1);
             this.panelEntidad.Name = "panelEntidad";
-            this.panelEntidad.Size = new System.Drawing.Size(591, 374);
+            this.panelEntidad.Size = new System.Drawing.Size(572, 304);
             this.panelEntidad.TabIndex = 46;
             // 
             // lEmailEntidad
@@ -471,14 +465,35 @@ namespace Grupo02PCSAS
             this.label20.TabIndex = 17;
             this.label20.Text = "NIU:";
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(1013, 614);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(321, 176);
+            this.dataGridView2.TabIndex = 47;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
+            this.pictureBox3.Location = new System.Drawing.Point(73, 336);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 94);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 52;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // fDatosPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1465, 1024);
-            this.Controls.Add(this.panelProfesor);
-            this.Controls.Add(this.bAtras);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelAlumno);
             this.Controls.Add(this.dataGridView1);
@@ -502,6 +517,8 @@ namespace Grupo02PCSAS
             this.panelProfesor.PerformLayout();
             this.panelEntidad.ResumeLayout(false);
             this.panelEntidad.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -528,7 +545,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label lRol;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button bAtras;
         private System.Windows.Forms.Panel panelProfesor;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lNombreProfe;
@@ -545,5 +561,7 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label lPwdEntidad;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

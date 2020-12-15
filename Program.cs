@@ -44,7 +44,9 @@ namespace Grupo02PCSAS
             //Rol admin = new Rol("ADMIN", "adm", true);
             //Usuario user = new Usuario("prueba", "prueba", "prueba", "cif", "niu", alumno);
             // Usuario user = new Usuario("prueba");
+            Usuario user = new Usuario("davidgc@gmail.com");
             //Usuario user = new Usuario("prueba", "prueba", "prueba", "cif", "niu", alumno);
+            Application.Run(new fDatosPerfil(user));
             //Rol admin = new Rol("ADMIN", "administrador", true);
             // Rol admin = new Rol("ADMIN");
             // Rol profesor = new Rol("PROFESOR");
@@ -65,6 +67,12 @@ namespace Grupo02PCSAS
             //Application.Run(new fEditarPerfil(user));
             //Application.Run(new fRegistro());
             Application.Run(new PantallaBorrarCurso(new Usuario("anto")));
+            //Application.Run(new fRegistro());
+            //Application.Run(new fPantallaPrincipalAlumno(user));
+            //Usuario user = new Usuario("pepe");
+            //Application.Run(new fPantallaAdmin(user));
+            Usuario user = new Usuario("anto");
+            Application.Run(new fPrincipalProfesor(user));
         }
     }
 

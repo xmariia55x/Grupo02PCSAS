@@ -29,6 +29,7 @@ namespace Grupo02PCSAS
 		/// </summary>
 		private void InitializeComponent()
 		{
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fEditarPerfil));
             this.label4 = new System.Windows.Forms.Label();
             this.lRol = new System.Windows.Forms.Label();
@@ -36,7 +37,6 @@ namespace Grupo02PCSAS
             this.lNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,7 +53,6 @@ namespace Grupo02PCSAS
             this.bGuardarCambios = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.bAtras = new System.Windows.Forms.Button();
             this.panelAlumno = new System.Windows.Forms.Panel();
             this.panelProfesor = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -73,13 +72,26 @@ namespace Grupo02PCSAS
             this.tPwdEntidad = new System.Windows.Forms.TextBox();
             this.tConfPwdEntidad = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.apsgrupo02DataSet = new Grupo02PCSAS.apsgrupo02DataSet();
+            this.cursosRealizadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cursosRealizadosTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.CursosRealizadosTableAdapter();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.actividadesRealizadasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.actividadesRealizadasTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.ActividadesRealizadasTableAdapter();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelAlumno.SuspendLayout();
             this.panelProfesor.SuspendLayout();
             this.panelEntidad.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosRealizadosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actividadesRealizadasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -150,16 +162,6 @@ namespace Grupo02PCSAS
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(776, 425);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(378, 222);
-            this.dataGridView1.TabIndex = 24;
             // 
             // label10
             // 
@@ -317,17 +319,6 @@ namespace Grupo02PCSAS
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // bAtras
-            // 
-            this.bAtras.Image = global::Grupo02PCSAS.Properties.Resources.Atras;
-            this.bAtras.Location = new System.Drawing.Point(165, 282);
-            this.bAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bAtras.Name = "bAtras";
-            this.bAtras.Size = new System.Drawing.Size(89, 80);
-            this.bAtras.TabIndex = 43;
-            this.bAtras.UseVisualStyleBackColor = true;
-            this.bAtras.Click += new System.EventHandler(this.bAtras_Click);
             // 
             // panelAlumno
             // 
@@ -522,25 +513,80 @@ namespace Grupo02PCSAS
             this.label18.TabIndex = 39;
             this.label18.Text = "Confirmar contraseña:";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(685, 473);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(290, 150);
+            this.dataGridView1.TabIndex = 49;
+            // 
+            // apsgrupo02DataSet
+            // 
+            this.apsgrupo02DataSet.DataSetName = "apsgrupo02DataSet";
+            this.apsgrupo02DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cursosRealizadosBindingSource
+            // 
+            this.cursosRealizadosBindingSource.DataMember = "CursosRealizados";
+            this.cursosRealizadosBindingSource.DataSource = this.apsgrupo02DataSet;
+            // 
+            // cursosRealizadosTableAdapter
+            // 
+            this.cursosRealizadosTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(981, 473);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(283, 150);
+            this.dataGridView2.TabIndex = 50;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // actividadesRealizadasBindingSource
+            // 
+            this.actividadesRealizadasBindingSource.DataMember = "ActividadesRealizadas";
+            this.actividadesRealizadasBindingSource.DataSource = this.apsgrupo02DataSet;
+            // 
+            // actividadesRealizadasTableAdapter
+            // 
+            this.actividadesRealizadasTableAdapter.ClearBeforeFill = true;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
+            this.pictureBox3.Location = new System.Drawing.Point(84, 268);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 94);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 51;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // fEditarPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1302, 819);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panelProfesor);
             this.Controls.Add(this.panelAlumno);
             this.Controls.Add(this.panelEntidad);
-            this.Controls.Add(this.bAtras);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bGuardarCambios);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label10);
             this.Name = "fEditarPerfil";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.fEditarPerfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -550,6 +596,12 @@ namespace Grupo02PCSAS
             this.panelProfesor.PerformLayout();
             this.panelEntidad.ResumeLayout(false);
             this.panelEntidad.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosRealizadosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actividadesRealizadasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -563,7 +615,6 @@ namespace Grupo02PCSAS
 		private System.Windows.Forms.Label lNombre;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label7;
@@ -580,7 +631,6 @@ namespace Grupo02PCSAS
 		private System.Windows.Forms.Button bGuardarCambios;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button bAtras;
         private System.Windows.Forms.Panel panelAlumno;
         private System.Windows.Forms.Panel panelProfesor;
         private System.Windows.Forms.Label label11;
@@ -600,5 +650,13 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.TextBox tPwdEntidad;
         private System.Windows.Forms.TextBox tConfPwdEntidad;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private apsgrupo02DataSet apsgrupo02DataSet;
+        private System.Windows.Forms.BindingSource cursosRealizadosBindingSource;
+        private apsgrupo02DataSetTableAdapters.CursosRealizadosTableAdapter cursosRealizadosTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource actividadesRealizadasBindingSource;
+        private apsgrupo02DataSetTableAdapters.ActividadesRealizadasTableAdapter actividadesRealizadasTableAdapter;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
