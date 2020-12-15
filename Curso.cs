@@ -23,10 +23,31 @@ namespace Grupo02PCSAS
         private int aforoCurso;
         private bool online;
 
+        public Curso(Usuario profesorCurso, string nombreCurso, string descripcionCurso, string fechaInicioCurso
+                    , string fechaFinCurso, string horaInicioCurso, string horaFinCurso, string lugarCurso, int aforoCurso, bool online)
+        {
+            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+
+            string sentencia = "INSERT INTO Curso VALUES (" + 0 + ",'" + profesorCurso.CorreoUsuario + "','" + nombreCurso + "','" + descripcionCurso + "','"
+                + fechaInicioCurso + "','" + fechaFinCurso + "','" + horaInicioCurso + "','" + horaFinCurso + "','" + lugarCurso + "'," + aforoCurso + "," + (online ? 1 : 0) + ");";
+            miBD.Insert(sentencia);
+            this.idCurso = (int)miBD.SelectScalar("SELECT MAX(idCurso) FROM Curso;");
+            this.profesorCurso = profesorCurso;
+            this.nombreCurso = nombreCurso;
+            this.descripcionCurso = descripcionCurso;
+            this.fechaInicioCurso = fechaInicioCurso;
+            this.fechaFinCurso = fechaFinCurso;
+            this.horaInicioCurso = horaInicioCurso;
+            this.horaFinCurso = horaFinCurso;
+            this.lugarCurso = lugarCurso;
+            this.aforoCurso = aforoCurso;
+            this.online = online;
+
+        }
         public Curso(int idCurso)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            Object[] tupla = miBD.Select("SELECT * FROM CURSO WHERE IDCURSO = "+idCurso+"")[0];
+            Object[] tupla = miBD.Select("SELECT * FROM Curso WHERE idCurso = " + idCurso + ";")[0];
             this.idCurso = (int)tupla[0];
             this.profesorCurso = new Usuario((string)tupla[1]);
             this.nombreCurso = (string)tupla[2];
@@ -35,28 +56,9 @@ namespace Grupo02PCSAS
             this.fechaFinCurso = (string)tupla[5];
             this.horaInicioCurso = (string)tupla[6];
             this.horaFinCurso = (string)tupla[7];
-            this.aforoCurso = (int)tupla[8];
-            this.online = (int)tupla[9] == 1 ? true : false;
-        }
-
-        public Curso(Usuario profesorCurso, string nombreCurso, string descripcionCurso, string fechaInicioCurso
-            , string fechaFinCurso, string horaInicioCurso, string horaFinCurso, int aforoCurso, bool online)
-        {
-            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "INSERT INTO CURSO VALUES ('" +profesorCurso+"','"+nombreCurso+"','"+descripcionCurso+"','"
-                +fechaInicioCurso+"','"+fechaFinCurso+"','"+horaInicioCurso+"','"+horaFinCurso+"',"+aforoCurso+"," + (online ? 1 : 0) + ");";
-            miBD.Insert(sentencia);
-            this.idCurso = (int) miBD.SelectScalar("SELECT MAX(idCurso) FROM CURSO;");
-            this.profesorCurso = profesorCurso;
-            this.nombreCurso = nombreCurso;
-            this.descripcionCurso = descripcionCurso;
-            this.fechaInicioCurso = fechaInicioCurso;
-            this.fechaFinCurso = fechaFinCurso;
-            this.horaInicioCurso = horaInicioCurso;
-            this.horaFinCurso = horaFinCurso;
-            this.aforoCurso = aforoCurso;
-            this.online = online;
-
+            this.lugarCurso = (string)tupla[8];
+            this.aforoCurso = (int)tupla[9];
+            this.online = (int)tupla[10] == 1 ? true : false;
         }
 
         public int CursoID

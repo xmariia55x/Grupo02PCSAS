@@ -35,7 +35,7 @@ namespace Grupo02PCSAS
 
         private void bAlumno_Click(object sender, EventArgs e)
         {
-            fPantallaPrincipalAlumno alumno = new fPantallaPrincipalAlumno();
+            fPantallaPrincipalAlumno alumno = new fPantallaPrincipalAlumno(null); //A -> Cambiar null
             this.Visible = false;
             alumno.ShowDialog();
             this.Visible = true;
@@ -43,7 +43,7 @@ namespace Grupo02PCSAS
 
         private void bProfesor_Click(object sender, EventArgs e)
         {
-            fPrincipalProfesor profesor = new fPrincipalProfesor();
+            fPrincipalProfesor profesor = new fPrincipalProfesor(null);
             this.Visible = false;
             profesor.ShowDialog();
             this.Visible = true;
@@ -56,7 +56,7 @@ namespace Grupo02PCSAS
 
         private void bAdmin_Click(object sender, EventArgs e)
         {
-            fPantallaAdmin admin = new fPantallaAdmin();
+            fPantallaAdmin admin = new fPantallaAdmin(null); //A -> Hay que cambiarlo :/
             this.Visible = false;
             admin.ShowDialog();
             this.Visible = true;

@@ -42,7 +42,7 @@ namespace Grupo02PCSAS
 
         private void bEventos_Click(object sender, EventArgs e)
         {
-            fPantallaPrincipalAlumno principal = new fPantallaPrincipalAlumno();
+            fPantallaPrincipalAlumno principal = new fPantallaPrincipalAlumno(null); //A -> Cambiar null
             this.Visible = false;
             principal.ShowDialog();
             this.Visible = true;

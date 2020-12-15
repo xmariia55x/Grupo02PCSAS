@@ -46,7 +46,12 @@ namespace Grupo02PCSAS
             //Usuario user = new Usuario("prueba");
             //Usuario user = new Usuario("prueba", "prueba", "prueba", "cif", "niu", alumno);
             //Application.Run(new fDatosPerfil(user));
-            Application.Run(new fRegistro());
+            //Application.Run(new fRegistro());
+            //Application.Run(new fPantallaPrincipalAlumno(user));
+            //Usuario user = new Usuario("pepe");
+            //Application.Run(new fPantallaAdmin(user));
+            Usuario user = new Usuario("anto");
+            Application.Run(new fPrincipalProfesor(user));
         }
     }
 

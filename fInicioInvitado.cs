@@ -70,14 +70,14 @@ namespace Grupo02PCSAS
                     switch (user.RolUsuario.RolName)
                     {
                         case "ALUMNO":
-                            fPantallaPrincipalAlumno alumno = new fPantallaPrincipalAlumno();  // añadir el user
+                            fPantallaPrincipalAlumno alumno = new fPantallaPrincipalAlumno(null);  // añadir el user
                             this.Visible = false;
                             alumno.ShowDialog();
                             this.Visible = true;
                             break;
 
                         case "ADMIN":
-                            fPantallaAdmin admin = new fPantallaAdmin();  // añadir el user
+                            fPantallaAdmin admin = new fPantallaAdmin(null);  // añadir el user
                             this.Visible = false;
                             admin.ShowDialog();
                             this.Visible = true;
@@ -91,7 +91,7 @@ namespace Grupo02PCSAS
                             break;
 
                         case "PROFESOR":
-                            fPrincipalProfesor profesor = new fPrincipalProfesor();  // añadir el user
+                            fPrincipalProfesor profesor = new fPrincipalProfesor(null);  // añadir el user
                             this.Visible = false;
                             profesor.ShowDialog();
                             this.Visible = true;

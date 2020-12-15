@@ -29,7 +29,7 @@ namespace Grupo02PCSAS
 
         private void fCrearCursoAdmin_Load(object sender, EventArgs e)
         {
-            if (!usuarioCreador.RolUsuario.RolName.Equals("ADMIN")) this.Close();
+            //if (!usuarioCreador.RolUsuario.RolName.Equals("ADMIN")) this.Close();
             bAniadirArchivosCurso.Enabled = true;
             bGuardarCambiosCurso.Enabled = true;
         }
