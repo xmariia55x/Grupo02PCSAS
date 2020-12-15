@@ -65,13 +65,13 @@ namespace Grupo02PCSAS
             //Actividad a = new Actividad(usuario, "recogida alimentos", "random", "13/12/2020", "13/12/2020", "12:00", "14:00", "UMA", 7);
             //Application.Run(new fEditarPerfil(user));
             //Application.Run(new fRegistro());
-            Application.Run(new PantallaBorrarCurso(new Usuario("anto")));
+            //Application.Run(new PantallaBorrarCurso(new Usuario("anto")));
             //Application.Run(new fRegistro());
             //Application.Run(new fPantallaPrincipalAlumno(user));
-            //Usuario user = new Usuario("pepe");
-            //Application.Run(new fPantallaAdmin(user));
             Usuario user = new Usuario("caritas@gmail.com");
             Application.Run(new fPrincipalOng(user));
+            //Usuario user = new Usuario("caritas@gmail.com");
+            //Application.Run(new fPrincipalOng(user));
         }
     }
 

@@ -41,38 +41,27 @@ namespace Grupo02PCSAS
             this.lNuevosCursos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvNuevosCursos = new System.Windows.Forms.DataGridView();
+            this.cursoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.apsgrupo02DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.apsgrupo02DataSet = new Grupo02PCSAS.apsgrupo02DataSet();
             this.dgvNuevasActividades = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dgvMisCursos = new System.Windows.Forms.DataGridView();
-            this.apsgrupo02DataSet = new Grupo02PCSAS.apsgrupo02DataSet();
-            this.apsgrupo02DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cursoTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.CursoTableAdapter();
             this.cursoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.cursoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.idCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profesorCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaInicioCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaFinCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaInicioCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaFinCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lugarCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aforoCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.onlineCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNuevosCursos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNuevasActividades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -192,21 +181,7 @@ namespace Grupo02PCSAS
             // 
             // dgvNuevosCursos
             // 
-            this.dgvNuevosCursos.AutoGenerateColumns = false;
             this.dgvNuevosCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNuevosCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idCursoDataGridViewTextBoxColumn,
-            this.profesorCursoDataGridViewTextBoxColumn,
-            this.nombreCursoDataGridViewTextBoxColumn,
-            this.descripcionCursoDataGridViewTextBoxColumn,
-            this.fechaInicioCursoDataGridViewTextBoxColumn,
-            this.fechaFinCursoDataGridViewTextBoxColumn,
-            this.horaInicioCursoDataGridViewTextBoxColumn,
-            this.horaFinCursoDataGridViewTextBoxColumn,
-            this.lugarCursoDataGridViewTextBoxColumn,
-            this.aforoCursoDataGridViewTextBoxColumn,
-            this.onlineCursoDataGridViewTextBoxColumn});
-            this.dgvNuevosCursos.DataSource = this.cursoBindingSource2;
             this.dgvNuevosCursos.Location = new System.Drawing.Point(521, 380);
             this.dgvNuevosCursos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvNuevosCursos.Name = "dgvNuevosCursos";
@@ -214,6 +189,21 @@ namespace Grupo02PCSAS
             this.dgvNuevosCursos.RowTemplate.Height = 28;
             this.dgvNuevosCursos.Size = new System.Drawing.Size(832, 206);
             this.dgvNuevosCursos.TabIndex = 9;
+            // 
+            // cursoBindingSource2
+            // 
+            this.cursoBindingSource2.DataMember = "Curso";
+            this.cursoBindingSource2.DataSource = this.apsgrupo02DataSetBindingSource;
+            // 
+            // apsgrupo02DataSetBindingSource
+            // 
+            this.apsgrupo02DataSetBindingSource.DataSource = this.apsgrupo02DataSet;
+            this.apsgrupo02DataSetBindingSource.Position = 0;
+            // 
+            // apsgrupo02DataSet
+            // 
+            this.apsgrupo02DataSet.DataSetName = "apsgrupo02DataSet";
+            this.apsgrupo02DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dgvNuevasActividades
             // 
@@ -262,16 +252,6 @@ namespace Grupo02PCSAS
             this.dgvMisCursos.Size = new System.Drawing.Size(312, 206);
             this.dgvMisCursos.TabIndex = 15;
             // 
-            // apsgrupo02DataSet
-            // 
-            this.apsgrupo02DataSet.DataSetName = "apsgrupo02DataSet";
-            this.apsgrupo02DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // apsgrupo02DataSetBindingSource
-            // 
-            this.apsgrupo02DataSetBindingSource.DataSource = this.apsgrupo02DataSet;
-            this.apsgrupo02DataSetBindingSource.Position = 0;
-            // 
             // cursoBindingSource
             // 
             this.cursoBindingSource.DataMember = "Curso";
@@ -285,99 +265,6 @@ namespace Grupo02PCSAS
             // 
             this.cursoBindingSource1.DataMember = "Curso";
             this.cursoBindingSource1.DataSource = this.apsgrupo02DataSetBindingSource;
-            // 
-            // cursoBindingSource2
-            // 
-            this.cursoBindingSource2.DataMember = "Curso";
-            this.cursoBindingSource2.DataSource = this.apsgrupo02DataSetBindingSource;
-            // 
-            // idCursoDataGridViewTextBoxColumn
-            // 
-            this.idCursoDataGridViewTextBoxColumn.DataPropertyName = "idCurso";
-            this.idCursoDataGridViewTextBoxColumn.HeaderText = "idCurso";
-            this.idCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idCursoDataGridViewTextBoxColumn.Name = "idCursoDataGridViewTextBoxColumn";
-            this.idCursoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // profesorCursoDataGridViewTextBoxColumn
-            // 
-            this.profesorCursoDataGridViewTextBoxColumn.DataPropertyName = "profesorCurso";
-            this.profesorCursoDataGridViewTextBoxColumn.HeaderText = "profesorCurso";
-            this.profesorCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.profesorCursoDataGridViewTextBoxColumn.Name = "profesorCursoDataGridViewTextBoxColumn";
-            this.profesorCursoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // nombreCursoDataGridViewTextBoxColumn
-            // 
-            this.nombreCursoDataGridViewTextBoxColumn.DataPropertyName = "nombreCurso";
-            this.nombreCursoDataGridViewTextBoxColumn.HeaderText = "nombreCurso";
-            this.nombreCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.nombreCursoDataGridViewTextBoxColumn.Name = "nombreCursoDataGridViewTextBoxColumn";
-            this.nombreCursoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // descripcionCursoDataGridViewTextBoxColumn
-            // 
-            this.descripcionCursoDataGridViewTextBoxColumn.DataPropertyName = "descripcionCurso";
-            this.descripcionCursoDataGridViewTextBoxColumn.HeaderText = "descripcionCurso";
-            this.descripcionCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.descripcionCursoDataGridViewTextBoxColumn.Name = "descripcionCursoDataGridViewTextBoxColumn";
-            this.descripcionCursoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // fechaInicioCursoDataGridViewTextBoxColumn
-            // 
-            this.fechaInicioCursoDataGridViewTextBoxColumn.DataPropertyName = "fechaInicioCurso";
-            this.fechaInicioCursoDataGridViewTextBoxColumn.HeaderText = "fechaInicioCurso";
-            this.fechaInicioCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.fechaInicioCursoDataGridViewTextBoxColumn.Name = "fechaInicioCursoDataGridViewTextBoxColumn";
-            this.fechaInicioCursoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // fechaFinCursoDataGridViewTextBoxColumn
-            // 
-            this.fechaFinCursoDataGridViewTextBoxColumn.DataPropertyName = "fechaFinCurso";
-            this.fechaFinCursoDataGridViewTextBoxColumn.HeaderText = "fechaFinCurso";
-            this.fechaFinCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.fechaFinCursoDataGridViewTextBoxColumn.Name = "fechaFinCursoDataGridViewTextBoxColumn";
-            this.fechaFinCursoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // horaInicioCursoDataGridViewTextBoxColumn
-            // 
-            this.horaInicioCursoDataGridViewTextBoxColumn.DataPropertyName = "horaInicioCurso";
-            this.horaInicioCursoDataGridViewTextBoxColumn.HeaderText = "horaInicioCurso";
-            this.horaInicioCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.horaInicioCursoDataGridViewTextBoxColumn.Name = "horaInicioCursoDataGridViewTextBoxColumn";
-            this.horaInicioCursoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // horaFinCursoDataGridViewTextBoxColumn
-            // 
-            this.horaFinCursoDataGridViewTextBoxColumn.DataPropertyName = "horaFinCurso";
-            this.horaFinCursoDataGridViewTextBoxColumn.HeaderText = "horaFinCurso";
-            this.horaFinCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.horaFinCursoDataGridViewTextBoxColumn.Name = "horaFinCursoDataGridViewTextBoxColumn";
-            this.horaFinCursoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // lugarCursoDataGridViewTextBoxColumn
-            // 
-            this.lugarCursoDataGridViewTextBoxColumn.DataPropertyName = "lugarCurso";
-            this.lugarCursoDataGridViewTextBoxColumn.HeaderText = "lugarCurso";
-            this.lugarCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.lugarCursoDataGridViewTextBoxColumn.Name = "lugarCursoDataGridViewTextBoxColumn";
-            this.lugarCursoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // aforoCursoDataGridViewTextBoxColumn
-            // 
-            this.aforoCursoDataGridViewTextBoxColumn.DataPropertyName = "aforoCurso";
-            this.aforoCursoDataGridViewTextBoxColumn.HeaderText = "aforoCurso";
-            this.aforoCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.aforoCursoDataGridViewTextBoxColumn.Name = "aforoCursoDataGridViewTextBoxColumn";
-            this.aforoCursoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // onlineCursoDataGridViewTextBoxColumn
-            // 
-            this.onlineCursoDataGridViewTextBoxColumn.DataPropertyName = "onlineCurso";
-            this.onlineCursoDataGridViewTextBoxColumn.HeaderText = "onlineCurso";
-            this.onlineCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.onlineCursoDataGridViewTextBoxColumn.Name = "onlineCursoDataGridViewTextBoxColumn";
-            this.onlineCursoDataGridViewTextBoxColumn.Width = 150;
             // 
             // fPantallaPrincipalAlumno
             // 
@@ -402,13 +289,13 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNuevosCursos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNuevasActividades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,17 +322,6 @@ namespace Grupo02PCSAS
         private apsgrupo02DataSet apsgrupo02DataSet;
         private System.Windows.Forms.BindingSource cursoBindingSource;
         private apsgrupo02DataSetTableAdapters.CursoTableAdapter cursoTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCursoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn profesorCursoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCursoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionCursoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicioCursoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaFinCursoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn horaInicioCursoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn horaFinCursoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lugarCursoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aforoCursoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn onlineCursoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource cursoBindingSource2;
         private System.Windows.Forms.BindingSource cursoBindingSource1;
     }

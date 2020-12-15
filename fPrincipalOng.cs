@@ -14,6 +14,7 @@ namespace Grupo02PCSAS
     public partial class fPrincipalOng : Form
     {
         Usuario ong;
+        Actividad seleccionado;
         public fPrincipalOng(Usuario u)
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace Grupo02PCSAS
 
         private void bAccederAlForo_Click(object sender, EventArgs e)
         {
-            PantallaPrincipalForo foro = new PantallaPrincipalForo(null);
+            PantallaPrincipalForo foro = new PantallaPrincipalForo(ong);
             this.Visible = false;
             foro.ShowDialog();
             this.Visible = true;
@@ -56,10 +57,30 @@ namespace Grupo02PCSAS
 
         private void bEventos_Click(object sender, EventArgs e)
         {
-            fPantallaPrincipalAlumno principal = new fPantallaPrincipalAlumno(null); //A -> Cambiar null
+            fPantallaPrincipalAlumno principal = new fPantallaPrincipalAlumno(ong); 
             this.Visible = false;
             principal.ShowDialog();
             this.Visible = true;
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                seleccionado = new Actividad((int)dataGridView1.SelectedRows[0].Cells[0].Value);
+                
+            }
+        }
+
+        private void bInformacion_Click(object sender, EventArgs e)
+        {
+            if(seleccionado != null)
+            {
+                fInfoActividad info = new fInfoActividad(ong, seleccionado);
+                this.Visible = false;
+                info.ShowDialog();
+                this.Visible = true;
+            }    
         }
     }
 }
