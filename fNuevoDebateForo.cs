@@ -54,6 +54,14 @@ namespace Grupo02PCSAS
             this.Visible = true;
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil ventana = new fDatosPerfil(usuario);
+            this.Visible = false;
+            ventana.ShowDialog();
+            this.Visible = true;
+        }
+
         private void bEnviarDebate_Click(object sender, EventArgs e)
         {
             try

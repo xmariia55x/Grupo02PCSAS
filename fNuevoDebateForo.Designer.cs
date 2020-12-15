@@ -62,41 +62,39 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1465, 217);
+            this.panel1.Size = new System.Drawing.Size(1302, 174);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(1300, 27);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(1156, 22);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(131, 131);
+            this.pictureBox2.Size = new System.Drawing.Size(116, 105);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lPerfil
             // 
             this.lPerfil.AutoSize = true;
             this.lPerfil.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPerfil.Location = new System.Drawing.Point(1283, 128);
+            this.lPerfil.Location = new System.Drawing.Point(1169, 130);
             this.lPerfil.Name = "lPerfil";
             this.lPerfil.Size = new System.Drawing.Size(88, 26);
             this.lPerfil.TabIndex = 7;
             this.lPerfil.Text = "Mi perfil";
-            this.lPerfil.Click += new System.EventHandler(this.lPerfil_Click);
             // 
             // lRolUsuario
             // 
             this.lRolUsuario.AutoSize = true;
             this.lRolUsuario.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRolUsuario.Location = new System.Drawing.Point(1004, 146);
+            this.lRolUsuario.Location = new System.Drawing.Point(892, 117);
             this.lRolUsuario.Name = "lRolUsuario";
-            this.lRolUsuario.Size = new System.Drawing.Size(73, 29);
+            this.lRolUsuario.Size = new System.Drawing.Size(63, 26);
             this.lRolUsuario.TabIndex = 5;
             this.lRolUsuario.Text = "Tu rol";
             // 
@@ -104,9 +102,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(954, 146);
+            this.label1.Location = new System.Drawing.Point(848, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 29);
+            this.label1.Size = new System.Drawing.Size(53, 26);
             this.label1.TabIndex = 4;
             this.label1.Text = "Rol: ";
             // 
@@ -114,10 +112,10 @@
             // 
             this.lNombreApellidosUsuario.AutoSize = true;
             this.lNombreApellidosUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreApellidosUsuario.Location = new System.Drawing.Point(699, 49);
+            this.lNombreApellidosUsuario.Location = new System.Drawing.Point(621, 39);
             this.lNombreApellidosUsuario.Name = "lNombreApellidosUsuario";
             this.lNombreApellidosUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lNombreApellidosUsuario.Size = new System.Drawing.Size(408, 52);
+            this.lNombreApellidosUsuario.Size = new System.Drawing.Size(346, 44);
             this.lNombreApellidosUsuario.TabIndex = 3;
             this.lNombreApellidosUsuario.Text = "Nombre y apellidos";
             // 
@@ -125,19 +123,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(566, 48);
+            this.label2.Location = new System.Drawing.Point(503, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 57);
+            this.label2.Size = new System.Drawing.Size(112, 49);
             this.label2.TabIndex = 2;
             this.label2.Text = "Hola,";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.pcsas;
-            this.pictureBox1.Location = new System.Drawing.Point(-17, -62);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(-15, -50);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(324, 305);
+            this.pictureBox1.Size = new System.Drawing.Size(288, 244);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -146,9 +143,9 @@
             // 
             this.lForo.AutoSize = true;
             this.lForo.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lForo.Location = new System.Drawing.Point(709, 280);
+            this.lForo.Location = new System.Drawing.Point(630, 224);
             this.lForo.Name = "lForo";
-            this.lForo.Size = new System.Drawing.Size(133, 55);
+            this.lForo.Size = new System.Drawing.Size(111, 46);
             this.lForo.TabIndex = 8;
             this.lForo.Text = "FORO";
             // 
@@ -156,9 +153,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(687, 359);
+            this.label6.Location = new System.Drawing.Point(611, 287);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(175, 29);
+            this.label6.Size = new System.Drawing.Size(147, 26);
             this.label6.TabIndex = 9;
             this.label6.Text = "NUEVO DEBATE";
             // 
@@ -166,9 +163,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(277, 436);
+            this.label7.Location = new System.Drawing.Point(246, 349);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 29);
+            this.label7.Size = new System.Drawing.Size(73, 26);
             this.label7.TabIndex = 10;
             this.label7.Text = "Asunto";
             // 
@@ -176,44 +173,39 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(277, 580);
+            this.label8.Location = new System.Drawing.Point(246, 464);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 29);
+            this.label8.Size = new System.Drawing.Size(86, 26);
             this.label8.TabIndex = 11;
             this.label8.Text = "Mensaje";
             // 
             // tAsuntoDebate
             // 
             this.tAsuntoDebate.Font = new System.Drawing.Font("Trebuchet MS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tAsuntoDebate.Location = new System.Drawing.Point(275, 438);
+            this.tAsuntoDebate.Location = new System.Drawing.Point(251, 389);
             this.tAsuntoDebate.MaxLength = 50;
-            this.tAsuntoDebate.Location = new System.Drawing.Point(282, 486);
-            this.tAsuntoDebate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tAsuntoDebate.Multiline = true;
             this.tAsuntoDebate.Name = "tAsuntoDebate";
-            this.tAsuntoDebate.Size = new System.Drawing.Size(965, 66);
+            this.tAsuntoDebate.Size = new System.Drawing.Size(858, 54);
             this.tAsuntoDebate.TabIndex = 12;
             // 
             // tMensajeDebate
             // 
-            this.tMensajeDebate.Location = new System.Drawing.Point(282, 659);
-            this.tMensajeDebate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tMensajeDebate.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tMensajeDebate.Location = new System.Drawing.Point(275, 577);
+            this.tMensajeDebate.Location = new System.Drawing.Point(244, 462);
             this.tMensajeDebate.MaxLength = 300;
             this.tMensajeDebate.Multiline = true;
             this.tMensajeDebate.Name = "tMensajeDebate";
-            this.tMensajeDebate.Size = new System.Drawing.Size(965, 168);
+            this.tMensajeDebate.Size = new System.Drawing.Size(858, 135);
             this.tMensajeDebate.TabIndex = 13;
             // 
             // bEnviarDebate
             // 
             this.bEnviarDebate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bEnviarDebate.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEnviarDebate.Location = new System.Drawing.Point(550, 888);
-            this.bEnviarDebate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bEnviarDebate.Location = new System.Drawing.Point(489, 710);
             this.bEnviarDebate.Name = "bEnviarDebate";
-            this.bEnviarDebate.Size = new System.Drawing.Size(204, 79);
+            this.bEnviarDebate.Size = new System.Drawing.Size(181, 63);
             this.bEnviarDebate.TabIndex = 14;
             this.bEnviarDebate.Text = "Enviar al foro";
             this.bEnviarDebate.UseVisualStyleBackColor = false;
@@ -223,10 +215,9 @@
             // 
             this.bCancelarDebate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bCancelarDebate.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCancelarDebate.Location = new System.Drawing.Point(858, 888);
-            this.bCancelarDebate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bCancelarDebate.Location = new System.Drawing.Point(763, 710);
             this.bCancelarDebate.Name = "bCancelarDebate";
-            this.bCancelarDebate.Size = new System.Drawing.Size(204, 79);
+            this.bCancelarDebate.Size = new System.Drawing.Size(181, 63);
             this.bCancelarDebate.TabIndex = 15;
             this.bCancelarDebate.Text = "Cancelar";
             this.bCancelarDebate.UseVisualStyleBackColor = false;
@@ -235,20 +226,20 @@
             // bAtras
             // 
             this.bAtras.Image = global::Grupo02PCSAS.Properties.Resources.Atras;
-            this.bAtras.Location = new System.Drawing.Point(69, 253);
+            this.bAtras.Location = new System.Drawing.Point(61, 202);
             this.bAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bAtras.Name = "bAtras";
-            this.bAtras.Size = new System.Drawing.Size(100, 100);
+            this.bAtras.Size = new System.Drawing.Size(89, 80);
             this.bAtras.TabIndex = 16;
             this.bAtras.UseVisualStyleBackColor = true;
             this.bAtras.Click += new System.EventHandler(this.bAtras_Click);
             // 
             // fNuevoDebateForo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1465, 1024);
+            this.ClientSize = new System.Drawing.Size(1302, 819);
             this.Controls.Add(this.bAtras);
             this.Controls.Add(this.bCancelarDebate);
             this.Controls.Add(this.bEnviarDebate);
@@ -259,7 +250,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lForo);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fNuevoDebateForo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Información del curso";
