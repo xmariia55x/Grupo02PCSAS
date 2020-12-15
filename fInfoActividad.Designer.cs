@@ -88,7 +88,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(596, 29);
+            this.label20.Location = new System.Drawing.Point(675, 18);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(173, 26);
             this.label20.TabIndex = 2;
@@ -114,16 +114,16 @@
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.lCreador);
-            this.panel4.Location = new System.Drawing.Point(694, 322);
+            this.panel4.Location = new System.Drawing.Point(766, 322);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(742, 327);
+            this.panel4.Size = new System.Drawing.Size(703, 327);
             this.panel4.TabIndex = 9;
             // 
             // lHoraFin
             // 
             this.lHoraFin.AutoSize = true;
             this.lHoraFin.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lHoraFin.Location = new System.Drawing.Point(455, 246);
+            this.lHoraFin.Location = new System.Drawing.Point(444, 246);
             this.lHoraFin.Name = "lHoraFin";
             this.lHoraFin.Size = new System.Drawing.Size(23, 26);
             this.lHoraFin.TabIndex = 15;
@@ -133,7 +133,7 @@
             // 
             this.lFechaFin.AutoSize = true;
             this.lFechaFin.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lFechaFin.Location = new System.Drawing.Point(467, 182);
+            this.lFechaFin.Location = new System.Drawing.Point(456, 182);
             this.lFechaFin.Name = "lFechaFin";
             this.lFechaFin.Size = new System.Drawing.Size(23, 26);
             this.lFechaFin.TabIndex = 14;
@@ -143,7 +143,7 @@
             // 
             this.lHoraInicio.AutoSize = true;
             this.lHoraInicio.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lHoraInicio.Location = new System.Drawing.Point(484, 117);
+            this.lHoraInicio.Location = new System.Drawing.Point(473, 117);
             this.lHoraInicio.Name = "lHoraInicio";
             this.lHoraInicio.Size = new System.Drawing.Size(23, 26);
             this.lHoraInicio.TabIndex = 13;
@@ -153,7 +153,7 @@
             // 
             this.lFechaInicio.AutoSize = true;
             this.lFechaInicio.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lFechaInicio.Location = new System.Drawing.Point(497, 55);
+            this.lFechaInicio.Location = new System.Drawing.Point(486, 55);
             this.lFechaInicio.Name = "lFechaInicio";
             this.lFechaInicio.Size = new System.Drawing.Size(23, 26);
             this.lFechaInicio.TabIndex = 12;
@@ -193,7 +193,7 @@
             // 
             this.lNombreProf.AutoSize = true;
             this.lNombreProf.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreProf.Location = new System.Drawing.Point(139, 55);
+            this.lNombreProf.Location = new System.Drawing.Point(128, 55);
             this.lNombreProf.Name = "lNombreProf";
             this.lNombreProf.Size = new System.Drawing.Size(196, 26);
             this.lNombreProf.TabIndex = 8;
@@ -203,7 +203,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(356, 246);
+            this.label16.Location = new System.Drawing.Point(345, 246);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(94, 26);
             this.label16.TabIndex = 7;
@@ -213,7 +213,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(356, 182);
+            this.label17.Location = new System.Drawing.Point(345, 182);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(106, 26);
             this.label17.TabIndex = 6;
@@ -223,7 +223,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(356, 117);
+            this.label18.Location = new System.Drawing.Point(345, 117);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(120, 26);
             this.label18.TabIndex = 5;
@@ -233,7 +233,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(356, 55);
+            this.label19.Location = new System.Drawing.Point(345, 55);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(132, 26);
             this.label19.TabIndex = 4;
@@ -287,7 +287,7 @@
             this.panel3.Controls.Add(this.label10);
             this.panel3.Location = new System.Drawing.Point(0, 322);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(702, 327);
+            this.panel3.Size = new System.Drawing.Size(769, 327);
             this.panel3.TabIndex = 8;
             // 
             // lDescripcion
@@ -295,7 +295,7 @@
             this.lDescripcion.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lDescripcion.Location = new System.Drawing.Point(24, 67);
             this.lDescripcion.Name = "lDescripcion";
-            this.lDescripcion.Size = new System.Drawing.Size(646, 231);
+            this.lDescripcion.Size = new System.Drawing.Size(712, 231);
             this.lDescripcion.TabIndex = 1;
             this.lDescripcion.Text = resources.GetString("lDescripcion.Text");
             // 
@@ -321,7 +321,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 177);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1302, 146);
+            this.panel2.Size = new System.Drawing.Size(1469, 146);
             this.panel2.TabIndex = 7;
             // 
             // lInscrito
@@ -388,7 +388,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1302, 177);
+            this.panel1.Size = new System.Drawing.Size(1469, 177);
             this.panel1.TabIndex = 6;
             // 
             // label5
@@ -466,13 +466,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1302, 819);
+            this.ClientSize = new System.Drawing.Size(1469, 1033);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "fInfoActividad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fInfoActividad";
             this.Load += new System.EventHandler(this.fInfoActividad_Load);
             this.panel5.ResumeLayout(false);
