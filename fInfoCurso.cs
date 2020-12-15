@@ -21,13 +21,23 @@ namespace Grupo02PCSAS
             this.curso = curso;
 
             InitializeComponent();
+        }
+
+        private void fInfoCurso_Load(object sender, EventArgs e)
+        {
             mostrarUsuario();
-            mostrarActividad();
-            comprobarInscrito();
+            mostrarCurso();
+            if (user.Equals(curso.CursoProfesor))
+            {
+                label9.Visible = false;
+                lInscrito.Visible = false;
+            }
+            else
+                comprobarInscrito();
             calcularPlazasDisponibles();
         }
 
-        
+
         private void calcularPlazasDisponibles()
         {
             List<Usuario> lista = CursosRealizados.listaUsuarios(curso.CursoID);
@@ -37,7 +47,7 @@ namespace Grupo02PCSAS
         private void comprobarInscrito()
         {
             bool inscrito = false;
-            foreach (Usuario u in ActividadesRealizadas.listaUsuarios(curso.CursoID))
+            foreach (Usuario u in CursosRealizados.listaUsuarios(curso.CursoID))
             {
                 if (user.Equals(u)) inscrito = true;
             }
@@ -58,16 +68,17 @@ namespace Grupo02PCSAS
             lRol.Text = user.RolUsuario.RolName;
         }
 
-        private void mostrarActividad()
+        private void mostrarCurso()
         {
             lNombreCurso.Text = curso.CursoNombre;
             lDescripcion.Text = curso.CursoDescripcion;
-            lProfesor.Text = curso.CursoProfesor.NombreUsuario;
+            lNombreProf.Text = curso.CursoProfesor.NombreUsuario;
             lPlazasTotales.Text = curso.CursoAforo.ToString();
             lFechaInicio.Text = curso.CursoFechaInicio;
             lFechaFin.Text = curso.CursoFechaFin;
             lHoraInicio.Text = curso.CursoHoraInicio;
-            lHoraFin.Text = curso.CursoHoraFin;
+            lHoraF.Text = curso.CursoHoraFin;
+            lLugar.Text = curso.CursoOnline ? "Online" : curso.CursoLugar;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

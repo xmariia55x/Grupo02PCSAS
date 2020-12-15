@@ -62,6 +62,9 @@ namespace Grupo02PCSAS
 
         }
         
+        
+        
+
         public int CursoID
         {
             get { return this.idCurso; }
