@@ -70,33 +70,12 @@ namespace Grupo02PCSAS
             dgvMisCursos.DataSource = tablaMC;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lMiPerfil_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            fDatosPerfil datos = new fDatosPerfil(alumno);
-            this.Visible = false;
-            datos.ShowDialog();
-            this.Visible = true;
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -104,11 +83,6 @@ namespace Grupo02PCSAS
             this.Visible = false;
             foro.ShowDialog();
             this.Visible = true;
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void dgvNuevosCursos_SelectionChanged(object sender, EventArgs e)
@@ -318,6 +292,22 @@ namespace Grupo02PCSAS
             {
                 MessageBox.Show("ERROR " + ex.Message);
             }
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            fPantallaPrincipalAlumno fAlumno = new fPantallaPrincipalAlumno(alumno);
+            this.Visible = false;
+            fAlumno.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            fPantallaPrincipalAlumno fAlumno = new fPantallaPrincipalAlumno(alumno);
+            this.Visible = false;
+            fAlumno.ShowDialog();
+            this.Visible = true;
         }
     }
 }
