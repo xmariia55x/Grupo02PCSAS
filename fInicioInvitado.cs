@@ -13,6 +13,8 @@ namespace Grupo02PCSAS
     public partial class fInicioInvitado : Form
     {
         private Usuario user;
+        private Curso cursoSeleccionado;
+        private Actividad actividadSeleccionada;
         public fInicioInvitado()
         {
             InitializeComponent();
@@ -100,6 +102,63 @@ namespace Grupo02PCSAS
                     }
                 }
             }
+        }
+
+        private void dgvCursos_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvCursos.SelectedRows.Count > 0)
+                {
+                    int id = (int)dgvCursos.SelectedRows[0].Cells[0].Value;
+                    cursoSeleccionado = new Curso(id);
+                }
+                else
+                {
+                    cursoSeleccionado = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+        }
+
+
+        private void dgvActividades_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvActividades.SelectedRows.Count > 0)
+                {
+                    int id = (int)dgvActividades.SelectedRows[0].Cells[0].Value;
+                   actividadSeleccionada = new Actividad(id);
+                }
+                else
+                {
+                    actividadSeleccionada = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+        }
+
+        private void bInfoCurso_Click(object sender, EventArgs e)
+        {
+            fInfoCurso info = new fInfoCurso(null, cursoSeleccionado);
+            this.Visible = false;
+            info.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void bInfoActividad_Click(object sender, EventArgs e)
+        {
+            fInfoActividad info = new fInfoActividad(null, actividadSeleccionada);
+            this.Visible = false;
+            info.ShowDialog();
+            this.Visible = true;
         }
     }
 }
