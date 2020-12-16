@@ -148,5 +148,13 @@ namespace Grupo02PCSAS
             fAlum.ShowDialog();
             this.Visible = true;
         }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            fDatosPerfil datosPerfil = new fDatosPerfil(profesor);
+            this.Visible = false;
+            datosPerfil.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
