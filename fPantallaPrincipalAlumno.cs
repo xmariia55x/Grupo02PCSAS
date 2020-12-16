@@ -296,9 +296,9 @@ namespace Grupo02PCSAS
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
-            fPantallaPrincipalAlumno fAlumno = new fPantallaPrincipalAlumno(alumno);
+            fDatosPerfil datos = new fDatosPerfil(alumno);
             this.Visible = false;
-            fAlumno.ShowDialog();
+            datos.ShowDialog();
             this.Visible = true;
         }
 
