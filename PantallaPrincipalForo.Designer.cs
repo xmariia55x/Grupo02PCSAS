@@ -74,10 +74,14 @@ namespace Grupo02PCSAS
             // 
             // dgvDebatesRecientes
             // 
+            this.dgvDebatesRecientes.AllowUserToAddRows = false;
+            this.dgvDebatesRecientes.AllowUserToDeleteRows = false;
+            this.dgvDebatesRecientes.AllowUserToOrderColumns = true;
             this.dgvDebatesRecientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDebatesRecientes.Location = new System.Drawing.Point(403, 448);
             this.dgvDebatesRecientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDebatesRecientes.Name = "dgvDebatesRecientes";
+            this.dgvDebatesRecientes.ReadOnly = true;
             this.dgvDebatesRecientes.RowHeadersWidth = 62;
             this.dgvDebatesRecientes.RowTemplate.Height = 28;
             this.dgvDebatesRecientes.Size = new System.Drawing.Size(718, 294);
@@ -85,13 +89,17 @@ namespace Grupo02PCSAS
             // 
             // dgvMisDebates
             // 
+            this.dgvMisDebates.AllowUserToAddRows = false;
+            this.dgvMisDebates.AllowUserToDeleteRows = false;
+            this.dgvMisDebates.AllowUserToOrderColumns = true;
             this.dgvMisDebates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMisDebates.Location = new System.Drawing.Point(14, 483);
             this.dgvMisDebates.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvMisDebates.Name = "dgvMisDebates";
+            this.dgvMisDebates.ReadOnly = true;
             this.dgvMisDebates.RowHeadersWidth = 62;
             this.dgvMisDebates.RowTemplate.Height = 28;
-            this.dgvMisDebates.Size = new System.Drawing.Size(193, 224);
+            this.dgvMisDebates.Size = new System.Drawing.Size(257, 224);
             this.dgvMisDebates.TabIndex = 14;
             this.dgvMisDebates.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 

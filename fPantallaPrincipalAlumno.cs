@@ -107,15 +107,22 @@ namespace Grupo02PCSAS
 
         private void bInfoCurso_Click(object sender, EventArgs e)
         {
-            if(cursoSeleccionado == null)
+            try
             {
-                throw new Exception("No hay ningun curso seleccionado");
-            } else
+                if (cursoSeleccionado == null)
+                {
+                    throw new Exception("No hay ningun curso seleccionado");
+                }
+                else
+                {
+                    fInfoCurso info = new fInfoCurso(alumno, cursoSeleccionado);
+                    this.Visible = false;
+                    info.ShowDialog();
+                    this.Visible = true;
+                }
+            } catch (Exception ex)
             {
-                fInfoCurso info = new fInfoCurso(alumno, cursoSeleccionado);
-                this.Visible = false;
-                info.ShowDialog();
-                this.Visible = true;
+                MessageBox.Show("ERROR: " + ex.Message);
             }
         }
 
@@ -215,16 +222,24 @@ namespace Grupo02PCSAS
 
         private void bInfoAct_Click(object sender, EventArgs e)
         {
-            if(actividadSeleccionada == null)
+            try
             {
-                throw new Exception("No hay ninguna actividad seleccionada");
-            } else
+                if (actividadSeleccionada == null)
+                {
+                    throw new Exception("No hay ninguna actividad seleccionada");
+                }
+                else
+                {
+                    fInfoActividad info = new fInfoActividad(alumno, actividadSeleccionada);
+                    this.Visible = false;
+                    info.ShowDialog();
+                    this.Visible = true;
+                }
+            } catch (Exception ex)
             {
-                fInfoActividad info = new fInfoActividad(alumno, actividadSeleccionada);
-                this.Visible = false;
-                info.ShowDialog();
-                this.Visible = true;
+                MessageBox.Show("ERROR: " + ex.Message);
             }
+            
         }
 
         private void bInsAct_Click(object sender, EventArgs e)

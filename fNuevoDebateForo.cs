@@ -112,7 +112,8 @@ namespace Grupo02PCSAS
                     
                     debateCreado = new Debate(usuario.CorreoUsuario, asunto, mensaje, DateTime.Now.ToShortDateString());
                     MessageBox.Show("Debate creado con éxito");
-                    debateCreado = null; 
+                    debateCreado = null;
+                    this.Close();
                 }
             } catch (MySqlException excp)
             {
