@@ -139,5 +139,10 @@ namespace Grupo02PCSAS
                 this.Visible = true;
             }
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
