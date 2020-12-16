@@ -74,57 +74,61 @@ namespace Grupo02PCSAS
 
         private void bIniciarSesión_Click(object sender, EventArgs e)
         {
-            lError.Visible = false;
-            user = new Usuario(tbUsuario.Text);
-            
-            if(user == null)
+            try
             {
-                lError.Text = "Usuario no registrado";
-                lError.Visible = true;
-            }
-            else
-            {
-                if(user.ContraseniaUsuario != tbPassword.Text)
+                user = new Usuario(tbUsuario.Text);
+
+                if (user == null)
                 {
-                    lError.Text = "Password incorrecta";
-                    lError.Visible = true;
+                    throw new Error();
                 }
                 else
                 {
-                    switch (user.RolUsuario.RolName)
+                    if (user.ContraseniaUsuario != tbPassword.Text)
                     {
-                        case "ALUMNO":
-                            fPantallaPrincipalAlumno alumno = new fPantallaPrincipalAlumno(null);  // añadir el user
-                            this.Visible = false;
-                            alumno.ShowDialog();
-                            this.Visible = true;
-                            break;
+                        throw new Error();
+                    }
+                    else
+                    {
+                        switch (user.RolUsuario.RolName)
+                        {
+                            case "ALUMNO":
+                                fPantallaPrincipalAlumno alumno = new fPantallaPrincipalAlumno(user);  // añadir el user
+                                this.Visible = false;
+                                alumno.ShowDialog();
+                                this.Visible = true;
+                                break;
 
-                        case "ADMIN":
-                            fPantallaAdmin admin = new fPantallaAdmin(null);  // añadir el user
-                            this.Visible = false;
-                            admin.ShowDialog();
-                            this.Visible = true;
-                            break;
+                            case "ADMIN":
+                                fPantallaAdmin admin = new fPantallaAdmin(user);  // añadir el user
+                                this.Visible = false;
+                                admin.ShowDialog();
+                                this.Visible = true;
+                                break;
 
-                        case "ENTIDAD":
-                            fPrincipalOng ong = new fPrincipalOng(null);  // añadir el user
-                            this.Visible = false;
-                            ong.ShowDialog();
-                            this.Visible = true;
-                            break;
+                            case "ENTIDAD":
+                                fPrincipalOng ong = new fPrincipalOng(user);  // añadir el user
+                                this.Visible = false;
+                                ong.ShowDialog();
+                                this.Visible = true;
+                                break;
 
-                        case "PROFESOR":
-                            fPrincipalProfesor profesor = new fPrincipalProfesor(null);  // añadir el user
-                            this.Visible = false;
-                            profesor.ShowDialog();
-                            this.Visible = true;
-                            break;
+                            case "PROFESOR":
+                                fPrincipalProfesor profesor = new fPrincipalProfesor(user);  // añadir el user
+                                this.Visible = false;
+                                profesor.ShowDialog();
+                                this.Visible = true;
+                                break;
 
+                        }
                     }
                 }
             }
-        }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: Usuario o contraseña incorrecta");
+            }
+        } 
 
         private void dgvCursos_SelectionChanged(object sender, EventArgs e)
         {
@@ -169,18 +173,49 @@ namespace Grupo02PCSAS
 
         private void bInfoCurso_Click(object sender, EventArgs e)
         {
-            fInfoCurso info = new fInfoCurso(null, cursoSeleccionado);
-            this.Visible = false;
-            info.ShowDialog();
-            this.Visible = true;
+            try
+            {
+                if (cursoSeleccionado == null)
+                {
+                    throw new Exception("No hay ningun curso seleccionado");
+                }
+                else
+                {
+                    fInfoCurso info = new fInfoCurso(null, cursoSeleccionado);
+                    this.Visible = false;
+                    info.ShowDialog();
+                    this.Visible = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+
         }
 
         private void bInfoActividad_Click(object sender, EventArgs e)
         {
-            fInfoActividad info = new fInfoActividad(null, actividadSeleccionada);
-            this.Visible = false;
-            info.ShowDialog();
-            this.Visible = true;
+            try
+            {
+                if (actividadSeleccionada == null)
+                {
+                    throw new Exception("No hay ninguna actividad seleccionada");
+                } else
+                {
+                    fInfoActividad info = new fInfoActividad(null, actividadSeleccionada);
+                    this.Visible = false;
+                    info.ShowDialog();
+                    this.Visible = true;
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
