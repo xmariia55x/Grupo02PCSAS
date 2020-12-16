@@ -24,6 +24,13 @@ namespace Grupo02PCSAS
 
         private void fInfoActividad_Load(object sender, EventArgs e)
         {
+            if (user == null)
+            {
+                pictureBox2.Visible = false;
+                label5.Visible = false;
+                label9.Visible = false;
+                lInscrito.Visible = false;
+            }
             mostrarUsuario();
             mostrarActividad();
             comprobarInscrito();
@@ -59,8 +66,17 @@ namespace Grupo02PCSAS
 
         private void mostrarUsuario()
         {
-            lNombreUser.Text = user.NombreUsuario;
-            lRol.Text = user.RolUsuario.RolName;
+            if (user == null)
+            {
+                lNombreUser.Text = "INVITADO";
+                lRol.Text = "INVITADO";
+            } 
+            else
+            {
+                lNombreUser.Text = user.NombreUsuario;
+                lRol.Text = user.RolUsuario.RolName;
+            }
+            
         }
 
         private void mostrarActividad()
