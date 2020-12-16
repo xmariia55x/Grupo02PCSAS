@@ -37,8 +37,8 @@ namespace Grupo02PCSAS
         {
             bEnviarDebate.Enabled = true;
             bCancelarDebate.Enabled = true;
-            lNombreApellidosUsuario.Text = usuario.NombreUsuario;
-            lRolUsuario.Text = usuario.RolUsuario.RolName;
+            lNombreUser.Text = usuario.NombreUsuario;
+            lRol.Text = usuario.RolUsuario.RolName;
         }
 
         private void bAtras_Click(object sender, EventArgs e)
@@ -46,7 +46,8 @@ namespace Grupo02PCSAS
             this.Close();
         }
 
-        private void lPerfil_Click(object sender, EventArgs e)
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
             fDatosPerfil ventana = new fDatosPerfil(usuario);
             this.Visible = false;
@@ -54,7 +55,7 @@ namespace Grupo02PCSAS
             this.Visible = true;
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
             fDatosPerfil ventana = new fDatosPerfil(usuario);
             this.Visible = false;

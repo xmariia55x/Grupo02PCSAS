@@ -62,7 +62,7 @@ namespace Grupo02PCSAS
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Beige;
+            this.pictureBox1.BackColor = System.Drawing.Color.FloralWhite;
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.ImageLocation = "C:\\Users\\maria\\OneDrive - Universidad de Málaga\\UNIVERSIDAD\\Tercer año\\1er cuatri" +
     "mestre\\Ingeniería de requisitos\\Proyecto";
@@ -331,7 +331,7 @@ namespace Grupo02PCSAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1469, 844);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dHoraFinCurso);
