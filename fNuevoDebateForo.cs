@@ -41,10 +41,6 @@ namespace Grupo02PCSAS
             lRol.Text = usuario.RolUsuario.RolName;
         }
 
-        private void bAtras_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -63,36 +59,9 @@ namespace Grupo02PCSAS
             this.Visible = true;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
-            if (user.RolUsuario.RolName.Equals("ALUMNO"))
-            {
-                fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(user);
-                this.Visible = false;
-                inicio.ShowDialog();
-                this.Visible = true;
-            }
-            else if (user.RolUsuario.RolName.Equals("PROFESOR"))
-            {
-                fPrincipalProfesor inicio = new fPrincipalProfesor(user);
-                this.Visible = false;
-                inicio.ShowDialog();
-                this.Visible = true;
-            }
-            else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
-            {
-                fPrincipalOng inicio = new fPrincipalOng(user);
-                this.Visible = false;
-                inicio.ShowDialog();
-                this.Visible = true;
-            }
-            else if (user.RolUsuario.RolName.Equals("ADMIN"))
-            {
-                fPantallaAdmin inicio = new fPantallaAdmin(user);
-                this.Visible = false;
-                inicio.ShowDialog();
-                this.Visible = true;
-            }
+            this.Close();
         }
 
         private void bEnviarDebate_Click(object sender, EventArgs e)
