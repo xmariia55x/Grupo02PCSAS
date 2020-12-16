@@ -406,7 +406,7 @@ namespace Grupo02PCSAS
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1465, 177);
+            this.panel1.Size = new System.Drawing.Size(1469, 177);
             this.panel1.TabIndex = 53;
             // 
             // label1
@@ -486,7 +486,7 @@ namespace Grupo02PCSAS
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1465, 1024);
+            this.ClientSize = new System.Drawing.Size(1469, 1033);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.dataGridView2);
