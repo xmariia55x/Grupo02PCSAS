@@ -81,6 +81,7 @@ namespace Grupo02PCSAS
                 {
 
                     actividad = new Actividad(usuarioCreador, nombreActividad, descrip, fechaIni, fechaFin, horaIni, horaFin, lugar, aforoActividad);
+                    MessageBox.Show("Actividad creada correctamente");
                 }
                 else
                 {
@@ -88,6 +89,7 @@ namespace Grupo02PCSAS
                 }
 
             }
+            this.Close();
         }
 
         

@@ -121,12 +121,14 @@ namespace Grupo02PCSAS
                 {
                     cursoCreado = new Curso(profesor, nombreDelCurso, descrip, fechaIni,
                         fechaFin, horaIni, horaFin, lugar, aforoDelCurso, onlineOPresencial);
+                    MessageBox.Show("Curso creado correctamente");
                 } else
                 {
                     MessageBox.Show("Las fechas no son correctas.");
                 }
                 
             }
+            this.Close();
         }
         
     }
