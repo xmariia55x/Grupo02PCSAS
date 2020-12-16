@@ -138,6 +138,9 @@ namespace Grupo02PCSAS
 			if (dialogResult == DialogResult.Yes)
 			{
 				this.user.BorrarUsuario();
+				fStartAplicacion start = new fStartAplicacion();
+				this.Visible = false;
+				start.ShowDialog();
 			}
 			else if (dialogResult == DialogResult.No)
 			{
