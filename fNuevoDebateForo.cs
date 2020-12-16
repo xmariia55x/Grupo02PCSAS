@@ -77,7 +77,7 @@ namespace Grupo02PCSAS
                 else if (!asunto.Equals("") && !mensaje.Equals(""))
                 {
                     
-                    debateCreado = new Debate(usuario.NombreUsuario, asunto, mensaje, DateTime.Now.ToShortDateString());
+                    debateCreado = new Debate(usuario.CorreoUsuario, asunto, mensaje, DateTime.Now.ToShortDateString());
                     debateCreado = null;
                         
                     

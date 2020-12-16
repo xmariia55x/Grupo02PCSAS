@@ -103,7 +103,7 @@
             // tMensajeDebate
             // 
             this.tMensajeDebate.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tMensajeDebate.Location = new System.Drawing.Point(244, 462);
+            this.tMensajeDebate.Location = new System.Drawing.Point(251, 502);
             this.tMensajeDebate.MaxLength = 300;
             this.tMensajeDebate.Multiline = true;
             this.tMensajeDebate.Name = "tMensajeDebate";

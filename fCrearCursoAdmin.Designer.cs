@@ -85,15 +85,17 @@ namespace Grupo02PCSAS
             // 
             // tNombreCurso
             // 
-            this.tNombreCurso.Location = new System.Drawing.Point(172, 448);
+            this.tNombreCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tNombreCurso.Location = new System.Drawing.Point(238, 448);
             this.tNombreCurso.MaxLength = 50;
             this.tNombreCurso.Name = "tNombreCurso";
-            this.tNombreCurso.Size = new System.Drawing.Size(218, 22);
+            this.tNombreCurso.Size = new System.Drawing.Size(218, 31);
             this.tNombreCurso.TabIndex = 3;
             // 
             // tDescripcionCurso
             // 
-            this.tDescripcionCurso.Location = new System.Drawing.Point(172, 549);
+            this.tDescripcionCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tDescripcionCurso.Location = new System.Drawing.Point(238, 549);
             this.tDescripcionCurso.MaxLength = 300;
             this.tDescripcionCurso.Multiline = true;
             this.tDescripcionCurso.Name = "tDescripcionCurso";
@@ -102,14 +104,16 @@ namespace Grupo02PCSAS
             // 
             // tAforoCurso
             // 
-            this.tAforoCurso.Location = new System.Drawing.Point(1105, 646);
+            this.tAforoCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tAforoCurso.Location = new System.Drawing.Point(1076, 646);
             this.tAforoCurso.MaxLength = 8;
             this.tAforoCurso.Name = "tAforoCurso";
-            this.tAforoCurso.Size = new System.Drawing.Size(196, 22);
+            this.tAforoCurso.Size = new System.Drawing.Size(196, 31);
             this.tAforoCurso.TabIndex = 5;
             // 
             // tLugarCurso
             // 
+            this.tLugarCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tLugarCurso.Location = new System.Drawing.Point(657, 646);
             this.tLugarCurso.MaxLength = 50;
             this.tLugarCurso.Multiline = true;
@@ -121,7 +125,7 @@ namespace Grupo02PCSAS
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(167, 410);
+            this.label3.Location = new System.Drawing.Point(233, 410);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 26);
             this.label3.TabIndex = 13;
@@ -131,7 +135,7 @@ namespace Grupo02PCSAS
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(168, 511);
+            this.label2.Location = new System.Drawing.Point(234, 511);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(173, 26);
             this.label2.TabIndex = 14;
@@ -171,7 +175,7 @@ namespace Grupo02PCSAS
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1100, 410);
+            this.label7.Location = new System.Drawing.Point(1071, 410);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(139, 26);
             this.label7.TabIndex = 18;
@@ -181,7 +185,7 @@ namespace Grupo02PCSAS
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1100, 511);
+            this.label8.Location = new System.Drawing.Point(1071, 511);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(195, 26);
             this.label8.TabIndex = 19;
@@ -191,7 +195,7 @@ namespace Grupo02PCSAS
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1100, 608);
+            this.label9.Location = new System.Drawing.Point(1071, 608);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 26);
             this.label9.TabIndex = 20;
@@ -235,7 +239,7 @@ namespace Grupo02PCSAS
             // 
             this.bAniadirArchivosCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bAniadirArchivosCurso.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAniadirArchivosCurso.Location = new System.Drawing.Point(172, 727);
+            this.bAniadirArchivosCurso.Location = new System.Drawing.Point(238, 727);
             this.bAniadirArchivosCurso.Name = "bAniadirArchivosCurso";
             this.bAniadirArchivosCurso.Size = new System.Drawing.Size(132, 79);
             this.bAniadirArchivosCurso.TabIndex = 25;
@@ -293,7 +297,7 @@ namespace Grupo02PCSAS
             this.dHoraIniCurso.CustomFormat = "HH:mm";
             this.dHoraIniCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dHoraIniCurso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dHoraIniCurso.Location = new System.Drawing.Point(1105, 448);
+            this.dHoraIniCurso.Location = new System.Drawing.Point(1076, 448);
             this.dHoraIniCurso.Name = "dHoraIniCurso";
             this.dHoraIniCurso.Size = new System.Drawing.Size(196, 31);
             this.dHoraIniCurso.TabIndex = 30;
@@ -304,7 +308,7 @@ namespace Grupo02PCSAS
             this.dHoraFinCurso.CustomFormat = "HH:mm";
             this.dHoraFinCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dHoraFinCurso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dHoraFinCurso.Location = new System.Drawing.Point(1105, 549);
+            this.dHoraFinCurso.Location = new System.Drawing.Point(1076, 549);
             this.dHoraFinCurso.Name = "dHoraFinCurso";
             this.dHoraFinCurso.Size = new System.Drawing.Size(196, 31);
             this.dHoraFinCurso.TabIndex = 31;
@@ -322,7 +326,7 @@ namespace Grupo02PCSAS
             // 
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.listProfesor);
-            this.panel1.Location = new System.Drawing.Point(1105, 714);
+            this.panel1.Location = new System.Drawing.Point(1076, 714);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 33;

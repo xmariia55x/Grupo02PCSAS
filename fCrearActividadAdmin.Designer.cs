@@ -84,14 +84,16 @@ namespace Grupo02PCSAS
             // 
             // tNombreAct
             // 
-            this.tNombreAct.Location = new System.Drawing.Point(165, 310);
+            this.tNombreAct.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tNombreAct.Location = new System.Drawing.Point(213, 367);
             this.tNombreAct.Name = "tNombreAct";
-            this.tNombreAct.Size = new System.Drawing.Size(218, 22);
+            this.tNombreAct.Size = new System.Drawing.Size(218, 31);
             this.tNombreAct.TabIndex = 2;
             this.tNombreAct.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tLugarAct
             // 
+            this.tLugarAct.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tLugarAct.Location = new System.Drawing.Point(626, 570);
             this.tLugarAct.Multiline = true;
             this.tLugarAct.Name = "tLugarAct";
@@ -100,7 +102,8 @@ namespace Grupo02PCSAS
             // 
             // tDescripcionAct
             // 
-            this.tDescripcionAct.Location = new System.Drawing.Point(165, 415);
+            this.tDescripcionAct.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tDescripcionAct.Location = new System.Drawing.Point(213, 472);
             this.tDescripcionAct.Multiline = true;
             this.tDescripcionAct.Name = "tDescripcionAct";
             this.tDescripcionAct.Size = new System.Drawing.Size(218, 151);
@@ -108,16 +111,17 @@ namespace Grupo02PCSAS
             // 
             // tAforoAct
             // 
+            this.tAforoAct.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tAforoAct.Location = new System.Drawing.Point(998, 570);
             this.tAforoAct.Name = "tAforoAct";
-            this.tAforoAct.Size = new System.Drawing.Size(196, 22);
+            this.tAforoAct.Size = new System.Drawing.Size(196, 31);
             this.tAforoAct.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(162, 374);
+            this.label2.Location = new System.Drawing.Point(210, 431);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(173, 26);
             this.label2.TabIndex = 11;
@@ -127,7 +131,7 @@ namespace Grupo02PCSAS
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(162, 270);
+            this.label3.Location = new System.Drawing.Point(210, 327);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(174, 26);
             this.label3.TabIndex = 12;
@@ -220,7 +224,7 @@ namespace Grupo02PCSAS
             // 
             this.lColaboradores.FormattingEnabled = true;
             this.lColaboradores.ItemHeight = 16;
-            this.lColaboradores.Location = new System.Drawing.Point(167, 622);
+            this.lColaboradores.Location = new System.Drawing.Point(215, 679);
             this.lColaboradores.Name = "lColaboradores";
             this.lColaboradores.Size = new System.Drawing.Size(224, 84);
             this.lColaboradores.TabIndex = 21;
@@ -229,7 +233,7 @@ namespace Grupo02PCSAS
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(162, 586);
+            this.label10.Location = new System.Drawing.Point(210, 643);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(142, 26);
             this.label10.TabIndex = 22;
