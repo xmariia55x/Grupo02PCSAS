@@ -33,7 +33,6 @@ namespace Grupo02PCSAS
                 lInscrito.Visible = false;
             } else
             {
-                mostrarUsuario();
                 if (user.Equals(curso.CursoProfesor))
                 {
                     label9.Visible = false;
@@ -42,6 +41,7 @@ namespace Grupo02PCSAS
                 else
                     comprobarInscrito();
             }
+            mostrarUsuario();
             mostrarCurso();
             calcularPlazasDisponibles();
         }
