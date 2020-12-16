@@ -30,14 +30,6 @@ namespace Grupo02PCSAS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lMiPerfil = new System.Windows.Forms.Label();
-            this.lProfesor = new System.Windows.Forms.Label();
-            this.lRol = new System.Windows.Forms.Label();
-            this.lNombre = new System.Windows.Forms.Label();
-            this.lHola = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lCurso = new System.Windows.Forms.Label();
             this.lNombreCurso = new System.Windows.Forms.Label();
             this.lNombreProfesorCurso = new System.Windows.Forms.Label();
@@ -51,105 +43,24 @@ namespace Grupo02PCSAS
             this.apsgrupo02DataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cursoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lbUsuarios = new System.Windows.Forms.ListBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lRol = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lNombreUser = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.lMiPerfil);
-            this.panel1.Controls.Add(this.lProfesor);
-            this.panel1.Controls.Add(this.lRol);
-            this.panel1.Controls.Add(this.lNombre);
-            this.panel1.Controls.Add(this.lHola);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(-8, -16);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1478, 287);
-            this.panel1.TabIndex = 0;
-            // 
-            // lMiPerfil
-            // 
-            this.lMiPerfil.AutoSize = true;
-            this.lMiPerfil.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lMiPerfil.Location = new System.Drawing.Point(1316, 222);
-            this.lMiPerfil.Name = "lMiPerfil";
-            this.lMiPerfil.Size = new System.Drawing.Size(102, 29);
-            this.lMiPerfil.TabIndex = 6;
-            this.lMiPerfil.Text = "Mi perfil";
-            // 
-            // lProfesor
-            // 
-            this.lProfesor.AutoSize = true;
-            this.lProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lProfesor.Location = new System.Drawing.Point(1109, 181);
-            this.lProfesor.Name = "lProfesor";
-            this.lProfesor.Size = new System.Drawing.Size(101, 29);
-            this.lProfesor.TabIndex = 5;
-            this.lProfesor.Text = "Profesor";
-            // 
-            // lRol
-            // 
-            this.lRol.AutoSize = true;
-            this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRol.Location = new System.Drawing.Point(1048, 181);
-            this.lRol.Name = "lRol";
-            this.lRol.Size = new System.Drawing.Size(55, 29);
-            this.lRol.TabIndex = 4;
-            this.lRol.Text = "Rol:";
-            // 
-            // lNombre
-            // 
-            this.lNombre.AutoSize = true;
-            this.lNombre.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombre.Location = new System.Drawing.Point(839, 110);
-            this.lNombre.Name = "lNombre";
-            this.lNombre.Size = new System.Drawing.Size(371, 55);
-            this.lNombre.TabIndex = 3;
-            this.lNombre.Text = "Nombre Apellidos";
-            // 
-            // lHola
-            // 
-            this.lHola.AutoSize = true;
-            this.lHola.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lHola.Location = new System.Drawing.Point(716, 110);
-            this.lHola.Name = "lHola";
-            this.lHola.Size = new System.Drawing.Size(129, 55);
-            this.lHola.TabIndex = 2;
-            this.lHola.Text = "Hola,";
-            this.lHola.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.ImageLocation = "E:\\Fotos\\usuario.PNG";
-            this.pictureBox2.Location = new System.Drawing.Point(1280, 71);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(159, 139);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ImageLocation = "E:\\Fotos\\pcsas.JPEG";
-            this.pictureBox1.Location = new System.Drawing.Point(-12, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(271, 271);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // lCurso
             // 
@@ -248,48 +159,131 @@ namespace Grupo02PCSAS
             this.lbUsuarios.TabIndex = 11;
             this.lbUsuarios.SelectedIndexChanged += new System.EventHandler(this.lbUsuarios_SelectedIndexChanged);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Bisque;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.lRol);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lNombreUser);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1465, 221);
+            this.panel1.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1297, 158);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 29);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Mi perfil";
+            this.label5.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
+            this.pictureBox2.Location = new System.Drawing.Point(1277, 12);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(127, 128);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // lRol
+            // 
+            this.lRol.AutoSize = true;
+            this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lRol.Location = new System.Drawing.Point(620, 145);
+            this.lRol.Name = "lRol";
+            this.lRol.Size = new System.Drawing.Size(73, 29);
+            this.lRol.TabIndex = 5;
+            this.lRol.Text = "Tu rol";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(570, 145);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 29);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Rol: ";
+            // 
+            // lNombreUser
+            // 
+            this.lNombreUser.AutoSize = true;
+            this.lNombreUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNombreUser.Location = new System.Drawing.Point(699, 49);
+            this.lNombreUser.Name = "lNombreUser";
+            this.lNombreUser.Size = new System.Drawing.Size(408, 52);
+            this.lNombreUser.TabIndex = 3;
+            this.lNombreUser.Text = "Nombre y apellidos";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(566, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 57);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Hola,";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(334, 222);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // PantallaListaUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1465, 1024);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbUsuarios);
             this.Controls.Add(this.lListaUsuarios);
             this.Controls.Add(this.lNombreProfesorCurso);
             this.Controls.Add(this.lProfesorCurso);
             this.Controls.Add(this.lNombreCurso);
             this.Controls.Add(this.lCurso);
-            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PantallaListaUsuarios";
             this.Text = "PantallaListaUSuarios";
             this.Load += new System.EventHandler(this.PantallaListaUsuarios_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lProfesor;
-        private System.Windows.Forms.Label lRol;
-        private System.Windows.Forms.Label lNombre;
-        private System.Windows.Forms.Label lHola;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lMiPerfil;
         private System.Windows.Forms.Label lCurso;
         private System.Windows.Forms.Label lNombreCurso;
         private System.Windows.Forms.Label lNombreProfesorCurso;
@@ -303,6 +297,14 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.BindingSource cursoBindingSource1;
         private System.Windows.Forms.BindingSource cursoBindingSource2;
         private System.Windows.Forms.ListBox lbUsuarios;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lRol;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lNombreUser;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

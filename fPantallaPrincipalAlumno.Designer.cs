@@ -62,11 +62,11 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).BeginInit();
-           
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Bisque;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lMiPerfil);
             this.panel1.Controls.Add(this.lAlumno);
@@ -271,9 +271,8 @@ namespace Grupo02PCSAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1465, 1024);
-            
             this.Controls.Add(this.dgvMisCursos);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -298,7 +297,6 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).EndInit();
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 
