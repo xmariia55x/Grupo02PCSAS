@@ -30,15 +30,6 @@ namespace Grupo02PCSAS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaBorrarCurso));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lProfesor = new System.Windows.Forms.Label();
-            this.lRol = new System.Windows.Forms.Label();
-            this.lNombreApellidos = new System.Windows.Forms.Label();
-            this.lHola = new System.Windows.Forms.Label();
-            this.lMiPerfil = new System.Windows.Forms.Label();
-            this.pbUsuario = new System.Windows.Forms.PictureBox();
-            this.pbPcsas = new System.Windows.Forms.PictureBox();
             this.lCursos = new System.Windows.Forms.Label();
             this.dgvMisCursos = new System.Windows.Forms.DataGridView();
             this.cursoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -50,110 +41,26 @@ namespace Grupo02PCSAS
             this.cursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cursoTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.CursoTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bAtras = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPcsas)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lRol = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lNombreApellidos = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.lProfesor);
-            this.panel1.Controls.Add(this.lRol);
-            this.panel1.Controls.Add(this.lNombreApellidos);
-            this.panel1.Controls.Add(this.lHola);
-            this.panel1.Controls.Add(this.lMiPerfil);
-            this.panel1.Controls.Add(this.pbUsuario);
-            this.panel1.Controls.Add(this.pbPcsas);
-            this.panel1.Location = new System.Drawing.Point(-4, -6);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1313, 221);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // lProfesor
-            // 
-            this.lProfesor.AutoSize = true;
-            this.lProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lProfesor.Location = new System.Drawing.Point(967, 150);
-            this.lProfesor.Name = "lProfesor";
-            this.lProfesor.Size = new System.Drawing.Size(86, 26);
-            this.lProfesor.TabIndex = 6;
-            this.lProfesor.Text = "Profesor";
-            // 
-            // lRol
-            // 
-            this.lRol.AutoSize = true;
-            this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRol.Location = new System.Drawing.Point(913, 150);
-            this.lRol.Name = "lRol";
-            this.lRol.Size = new System.Drawing.Size(47, 26);
-            this.lRol.TabIndex = 5;
-            this.lRol.Text = "Rol:";
-            // 
-            // lNombreApellidos
-            // 
-            this.lNombreApellidos.AutoSize = true;
-            this.lNombreApellidos.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreApellidos.Location = new System.Drawing.Point(751, 86);
-            this.lNombreApellidos.Name = "lNombreApellidos";
-            this.lNombreApellidos.Size = new System.Drawing.Size(311, 46);
-            this.lNombreApellidos.TabIndex = 4;
-            this.lNombreApellidos.Text = "Nombre Apellidos";
-            // 
-            // lHola
-            // 
-            this.lHola.AutoSize = true;
-            this.lHola.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lHola.Location = new System.Drawing.Point(643, 86);
-            this.lHola.Name = "lHola";
-            this.lHola.Size = new System.Drawing.Size(108, 46);
-            this.lHola.TabIndex = 3;
-            this.lHola.Text = "Hola,";
-            this.lHola.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lMiPerfil
-            // 
-            this.lMiPerfil.AutoSize = true;
-            this.lMiPerfil.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lMiPerfil.Location = new System.Drawing.Point(1151, 178);
-            this.lMiPerfil.Name = "lMiPerfil";
-            this.lMiPerfil.Size = new System.Drawing.Size(88, 26);
-            this.lMiPerfil.TabIndex = 2;
-            this.lMiPerfil.Text = "Mi perfil";
-            // 
-            // pbUsuario
-            // 
-            this.pbUsuario.Image = global::Grupo02PCSAS.Properties.Resources._16363;
-            this.pbUsuario.ImageLocation = "C:\\Users\\Javi\\Source\\Repos\\xmariia55x\\Grupo02PCSAS\\Resources\\usuario.png";
-            this.pbUsuario.Location = new System.Drawing.Point(1135, 43);
-            this.pbUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbUsuario.Name = "pbUsuario";
-            this.pbUsuario.Size = new System.Drawing.Size(128, 121);
-            this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbUsuario.TabIndex = 1;
-            this.pbUsuario.TabStop = false;
-            // 
-            // pbPcsas
-            // 
-            this.pbPcsas.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
-            this.pbPcsas.ImageLocation = "E:\\Fotos\\pcsas.JPEG";
-            this.pbPcsas.Location = new System.Drawing.Point(-12, 3);
-            this.pbPcsas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbPcsas.Name = "pbPcsas";
-            this.pbPcsas.Size = new System.Drawing.Size(245, 217);
-            this.pbPcsas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPcsas.TabIndex = 0;
-            this.pbPcsas.TabStop = false;
-            this.pbPcsas.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lCursos
             // 
@@ -253,63 +160,142 @@ namespace Grupo02PCSAS
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.bBasura_Click);
             // 
-            // bAtras
+            // panel1
             // 
-            this.bAtras.AutoSize = true;
-            this.bAtras.Image = ((System.Drawing.Image)(resources.GetObject("bAtras.Image")));
-            this.bAtras.Location = new System.Drawing.Point(22, 235);
-            this.bAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bAtras.Name = "bAtras";
-            this.bAtras.Size = new System.Drawing.Size(106, 106);
-            this.bAtras.TabIndex = 8;
-            this.bAtras.Text = "bAtras";
-            this.bAtras.UseVisualStyleBackColor = true;
+            this.panel1.BackColor = System.Drawing.Color.Bisque;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.lRol);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lNombreApellidos);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1302, 177);
+            this.panel1.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1153, 126);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 26);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Mi perfil";
+            this.label5.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
+            this.pictureBox2.Location = new System.Drawing.Point(1135, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(113, 102);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // lRol
+            // 
+            this.lRol.AutoSize = true;
+            this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lRol.Location = new System.Drawing.Point(551, 116);
+            this.lRol.Name = "lRol";
+            this.lRol.Size = new System.Drawing.Size(63, 26);
+            this.lRol.TabIndex = 5;
+            this.lRol.Text = "Tu rol";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(507, 116);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 26);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Rol: ";
+            // 
+            // lNombreApellidos
+            // 
+            this.lNombreApellidos.AutoSize = true;
+            this.lNombreApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNombreApellidos.Location = new System.Drawing.Point(621, 39);
+            this.lNombreApellidos.Name = "lNombreApellidos";
+            this.lNombreApellidos.Size = new System.Drawing.Size(346, 44);
+            this.lNombreApellidos.TabIndex = 3;
+            this.lNombreApellidos.Text = "Nombre y apellidos";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(503, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 49);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Hola,";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(297, 178);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Grupo02PCSAS.Properties.Resources._60577;
+            this.pictureBox4.Location = new System.Drawing.Point(94, 227);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(108, 85);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
             // 
             // PantallaBorrarCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1302, 819);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bCrearCurso);
             this.Controls.Add(this.bEventos);
             this.Controls.Add(this.bAccesoForo);
             this.Controls.Add(this.dgvMisCursos);
-            this.Controls.Add(this.bAtras);
             this.Controls.Add(this.lCursos);
-            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PantallaBorrarCurso";
             this.Text = "PantallaBorrarCurso";
             this.Load += new System.EventHandler(this.PantallaBorrarCurso_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPcsas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lProfesor;
-        private System.Windows.Forms.Label lRol;
-        private System.Windows.Forms.Label lNombreApellidos;
-        private System.Windows.Forms.Label lHola;
-        private System.Windows.Forms.Label lMiPerfil;
-        private System.Windows.Forms.PictureBox pbUsuario;
-        private System.Windows.Forms.PictureBox pbPcsas;
         private System.Windows.Forms.Label lCursos;
-        private System.Windows.Forms.Button bAtras;
         private System.Windows.Forms.DataGridView dgvMisCursos;
         private System.Windows.Forms.Button bAccesoForo;
         private System.Windows.Forms.Button bEventos;
@@ -320,5 +306,14 @@ namespace Grupo02PCSAS
         private apsgrupo02DataSetTableAdapters.CursoTableAdapter cursoTableAdapter;
         private System.Windows.Forms.BindingSource cursoBindingSource1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lRol;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lNombreApellidos;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

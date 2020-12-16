@@ -84,6 +84,12 @@ namespace Grupo02PCSAS
             this.Visible = true;
         }
 
-        
+        private void label5_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil edicion = new fDatosPerfil(this.user);
+            this.Visible = false;
+            edicion.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

@@ -138,5 +138,14 @@ namespace Grupo02PCSAS
             }
 
         }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datos = new fDatosPerfil(user);
+            this.Visible = false;
+            datos.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
