@@ -18,7 +18,6 @@ namespace Grupo02PCSAS
         public PantallaBorrarCurso(Usuario user)
         {
             InitializeComponent();
-            bBasura.Visible = true;
             this.user = user;
 
         }
