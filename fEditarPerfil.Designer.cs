@@ -497,6 +497,7 @@ namespace Grupo02PCSAS
             this.label1.Size = new System.Drawing.Size(88, 26);
             this.label1.TabIndex = 7;
             this.label1.Text = "Mi perfil";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox2
             // 
@@ -558,6 +559,7 @@ namespace Grupo02PCSAS
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // fEditarPerfil
             // 

@@ -61,5 +61,10 @@ namespace Grupo02PCSAS
             admin.ShowDialog();
             this.Visible = true;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

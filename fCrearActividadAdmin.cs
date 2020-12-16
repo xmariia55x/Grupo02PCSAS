@@ -15,8 +15,46 @@ namespace Grupo02PCSAS
         private string nombreActividad, descrip, lugar, fechaIni, fechaFin, horaIni, horaFin, aforo, colaborador;
         private int aforoActividad;
         private Actividad actividad;
-        
+
         private Usuario usuarioCreador;
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (usuarioCreador.RolUsuario.RolName.Equals("ALUMNO"))
+            {
+                fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(usuarioCreador);
+                this.Visible = false;
+                inicio.ShowDialog();
+                
+            }
+            else if (usuarioCreador.RolUsuario.RolName.Equals("PROFESOR"))
+            {
+                fPrincipalProfesor inicio = new fPrincipalProfesor(usuarioCreador);
+                this.Visible = false;
+                inicio.ShowDialog();
+                
+            }
+            else if (usuarioCreador.RolUsuario.RolName.Equals("ENTIDAD"))
+            {
+                fPrincipalOng inicio = new fPrincipalOng(usuarioCreador);
+                this.Visible = false;
+                inicio.ShowDialog();
+                
+            }
+            else if (usuarioCreador.RolUsuario.RolName.Equals("ADMIN"))
+            {
+                fPantallaAdmin inicio = new fPantallaAdmin(usuarioCreador);
+                this.Visible = false;
+                inicio.ShowDialog();
+                
+            }
+        }
+
+        
         private void bGuardarCambiosAct_Click(object sender, EventArgs e)
         {
             nombreActividad = tNombreAct.Text;

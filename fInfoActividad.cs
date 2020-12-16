@@ -24,6 +24,13 @@ namespace Grupo02PCSAS
 
         private void fInfoActividad_Load(object sender, EventArgs e)
         {
+            if (user == null)
+            {
+                pictureBox2.Visible = false;
+                label5.Visible = false;
+                label9.Visible = false;
+                lInscrito.Visible = false;
+            }
             mostrarUsuario();
             mostrarActividad();
             comprobarInscrito();
@@ -59,8 +66,17 @@ namespace Grupo02PCSAS
 
         private void mostrarUsuario()
         {
-            lNombreUser.Text = user.NombreUsuario;
-            lRol.Text = user.RolUsuario.RolName;
+            if (user == null)
+            {
+                lNombreUser.Text = "INVITADO";
+                lRol.Text = "INVITADO";
+            } 
+            else
+            {
+                lNombreUser.Text = user.NombreUsuario;
+                lRol.Text = user.RolUsuario.RolName;
+            }
+            
         }
 
         private void mostrarActividad()
@@ -90,6 +106,38 @@ namespace Grupo02PCSAS
             this.Visible = false;
             edicion.ShowDialog();
             this.Visible = true;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (user.RolUsuario.RolName.Equals("ALUMNO"))
+            {
+                fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(user);
+                this.Visible = false;
+                inicio.ShowDialog();
+                this.Visible = true;
+            }
+            else if (user.RolUsuario.RolName.Equals("PROFESOR"))
+            {
+                fPrincipalProfesor inicio = new fPrincipalProfesor(user);
+                this.Visible = false;
+                inicio.ShowDialog();
+                this.Visible = true;
+            }
+            else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
+            {
+                fPrincipalOng inicio = new fPrincipalOng(user);
+                this.Visible = false;
+                inicio.ShowDialog();
+                this.Visible = true;
+            }
+            else if (user.RolUsuario.RolName.Equals("ADMIN"))
+            {
+                fPantallaAdmin inicio = new fPantallaAdmin(user);
+                this.Visible = false;
+                inicio.ShowDialog();
+                this.Visible = true;
+            }
         }
     }
 }

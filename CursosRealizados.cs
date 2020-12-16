@@ -28,12 +28,12 @@ namespace Grupo02PCSAS
             return lista;
         }
 
-        public static List<Curso> listaActividades(string correo)
+        public static List<Curso> listaCursos(string correo)
         {
             List<Curso> lista = new List<Curso>();
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
 
-            foreach (object[] tupla in miBD.Select("SELECT idCurso FROM CursosRealizados WHERE correo = " + correo + ";"))
+            foreach (object[] tupla in miBD.Select("SELECT idCurso FROM CursosRealizados WHERE correo = '" + correo + "';"))
             {
                 int cursoId = (int)tupla[0];
                 lista.Add(new Curso(cursoId));
@@ -45,16 +45,19 @@ namespace Grupo02PCSAS
         public CursosRealizados(int numeroCurso, string email)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "SELECT * FROM CursosRealizados WHERE idCurso = " + idCurso + " AND correo = '" + email + "';";
-            object[] tupla = miBD.Select(sentencia)[0];
+            string sentencia = "SELECT * FROM CursosRealizados WHERE idCurso = " + numeroCurso + " AND correo = '" + email + "';";
+            List<object[]> lista = miBD.Select(sentencia);
 
-            if (tupla != null)
+
+            if (lista.Count > 0)
             {
+                object[] tupla = lista[0];
                 this.idCurso = (int)tupla[0];
                 this.correo = (string)tupla[1];
             }
             else
             {
+                Console.WriteLine("hola2");
                 sentencia = "INSERT INTO CursosRealizados VALUES (" + numeroCurso + ", '" + email + "');";
                 miBD.Insert(sentencia);
                 this.idCurso = numeroCurso;

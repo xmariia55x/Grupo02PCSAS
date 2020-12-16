@@ -29,8 +29,6 @@ namespace Grupo02PCSAS
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fCrearCursoAdmin));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tNombreCurso = new System.Windows.Forms.TextBox();
             this.tDescripcionCurso = new System.Windows.Forms.TextBox();
@@ -49,29 +47,18 @@ namespace Grupo02PCSAS
             this.label10 = new System.Windows.Forms.Label();
             this.bAniadirArchivosCurso = new System.Windows.Forms.Button();
             this.bGuardarCambiosCurso = new System.Windows.Forms.Button();
-            this.bAtras = new System.Windows.Forms.Button();
             this.dFechaIniCurso = new System.Windows.Forms.DateTimePicker();
             this.dFechaFinCurso = new System.Windows.Forms.DateTimePicker();
             this.dHoraIniCurso = new System.Windows.Forms.DateTimePicker();
             this.dHoraFinCurso = new System.Windows.Forms.DateTimePicker();
             this.listProfesor = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Beige;
-            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.ImageLocation = "C:\\Users\\maria\\OneDrive - Universidad de Málaga\\UNIVERSIDAD\\Tercer año\\1er cuatri" +
-    "mestre\\Ingeniería de requisitos\\Proyecto";
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(633, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(309, 271);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -85,15 +72,17 @@ namespace Grupo02PCSAS
             // 
             // tNombreCurso
             // 
-            this.tNombreCurso.Location = new System.Drawing.Point(172, 448);
+            this.tNombreCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tNombreCurso.Location = new System.Drawing.Point(238, 448);
             this.tNombreCurso.MaxLength = 50;
             this.tNombreCurso.Name = "tNombreCurso";
-            this.tNombreCurso.Size = new System.Drawing.Size(218, 22);
+            this.tNombreCurso.Size = new System.Drawing.Size(218, 31);
             this.tNombreCurso.TabIndex = 3;
             // 
             // tDescripcionCurso
             // 
-            this.tDescripcionCurso.Location = new System.Drawing.Point(172, 549);
+            this.tDescripcionCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tDescripcionCurso.Location = new System.Drawing.Point(238, 549);
             this.tDescripcionCurso.MaxLength = 300;
             this.tDescripcionCurso.Multiline = true;
             this.tDescripcionCurso.Name = "tDescripcionCurso";
@@ -102,14 +91,16 @@ namespace Grupo02PCSAS
             // 
             // tAforoCurso
             // 
-            this.tAforoCurso.Location = new System.Drawing.Point(1105, 646);
+            this.tAforoCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tAforoCurso.Location = new System.Drawing.Point(1076, 646);
             this.tAforoCurso.MaxLength = 8;
             this.tAforoCurso.Name = "tAforoCurso";
-            this.tAforoCurso.Size = new System.Drawing.Size(196, 22);
+            this.tAforoCurso.Size = new System.Drawing.Size(196, 31);
             this.tAforoCurso.TabIndex = 5;
             // 
             // tLugarCurso
             // 
+            this.tLugarCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tLugarCurso.Location = new System.Drawing.Point(657, 646);
             this.tLugarCurso.MaxLength = 50;
             this.tLugarCurso.Multiline = true;
@@ -121,7 +112,7 @@ namespace Grupo02PCSAS
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(167, 410);
+            this.label3.Location = new System.Drawing.Point(233, 410);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 26);
             this.label3.TabIndex = 13;
@@ -131,7 +122,7 @@ namespace Grupo02PCSAS
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(168, 511);
+            this.label2.Location = new System.Drawing.Point(234, 511);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(173, 26);
             this.label2.TabIndex = 14;
@@ -171,7 +162,7 @@ namespace Grupo02PCSAS
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1100, 410);
+            this.label7.Location = new System.Drawing.Point(1071, 410);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(139, 26);
             this.label7.TabIndex = 18;
@@ -181,7 +172,7 @@ namespace Grupo02PCSAS
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1100, 511);
+            this.label8.Location = new System.Drawing.Point(1071, 511);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(195, 26);
             this.label8.TabIndex = 19;
@@ -191,7 +182,7 @@ namespace Grupo02PCSAS
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1100, 608);
+            this.label9.Location = new System.Drawing.Point(1071, 608);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 26);
             this.label9.TabIndex = 20;
@@ -235,7 +226,7 @@ namespace Grupo02PCSAS
             // 
             this.bAniadirArchivosCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bAniadirArchivosCurso.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAniadirArchivosCurso.Location = new System.Drawing.Point(172, 727);
+            this.bAniadirArchivosCurso.Location = new System.Drawing.Point(238, 727);
             this.bAniadirArchivosCurso.Name = "bAniadirArchivosCurso";
             this.bAniadirArchivosCurso.Size = new System.Drawing.Size(132, 79);
             this.bAniadirArchivosCurso.TabIndex = 25;
@@ -253,17 +244,6 @@ namespace Grupo02PCSAS
             this.bGuardarCambiosCurso.Text = "Guardar cambios";
             this.bGuardarCambiosCurso.UseVisualStyleBackColor = false;
             this.bGuardarCambiosCurso.Click += new System.EventHandler(this.bGuardarCambiosCurso_Click);
-            // 
-            // bAtras
-            // 
-            this.bAtras.Image = global::Grupo02PCSAS.Properties.Resources.Atras;
-            this.bAtras.Location = new System.Drawing.Point(247, 200);
-            this.bAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bAtras.Name = "bAtras";
-            this.bAtras.Size = new System.Drawing.Size(89, 80);
-            this.bAtras.TabIndex = 27;
-            this.bAtras.UseVisualStyleBackColor = true;
-            this.bAtras.Click += new System.EventHandler(this.bAtras_Click);
             // 
             // dFechaIniCurso
             // 
@@ -293,7 +273,7 @@ namespace Grupo02PCSAS
             this.dHoraIniCurso.CustomFormat = "HH:mm";
             this.dHoraIniCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dHoraIniCurso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dHoraIniCurso.Location = new System.Drawing.Point(1105, 448);
+            this.dHoraIniCurso.Location = new System.Drawing.Point(1076, 448);
             this.dHoraIniCurso.Name = "dHoraIniCurso";
             this.dHoraIniCurso.Size = new System.Drawing.Size(196, 31);
             this.dHoraIniCurso.TabIndex = 30;
@@ -304,7 +284,7 @@ namespace Grupo02PCSAS
             this.dHoraFinCurso.CustomFormat = "HH:mm";
             this.dHoraFinCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dHoraFinCurso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dHoraFinCurso.Location = new System.Drawing.Point(1105, 549);
+            this.dHoraFinCurso.Location = new System.Drawing.Point(1076, 549);
             this.dHoraFinCurso.Name = "dHoraFinCurso";
             this.dHoraFinCurso.Size = new System.Drawing.Size(196, 31);
             this.dHoraFinCurso.TabIndex = 31;
@@ -322,23 +302,46 @@ namespace Grupo02PCSAS
             // 
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.listProfesor);
-            this.panel1.Location = new System.Drawing.Point(1105, 714);
+            this.panel1.Location = new System.Drawing.Point(1076, 714);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 33;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
+            this.pictureBox3.Location = new System.Drawing.Point(238, 193);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(83, 69);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 33;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
+            this.pictureBox1.Location = new System.Drawing.Point(625, 121);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(297, 178);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // fCrearCursoAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1469, 844);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dHoraFinCurso);
             this.Controls.Add(this.dHoraIniCurso);
             this.Controls.Add(this.dFechaFinCurso);
             this.Controls.Add(this.dFechaIniCurso);
-            this.Controls.Add(this.bAtras);
             this.Controls.Add(this.bGuardarCambiosCurso);
             this.Controls.Add(this.bAniadirArchivosCurso);
             this.Controls.Add(this.rPresencial);
@@ -356,21 +359,19 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.tDescripcionCurso);
             this.Controls.Add(this.tNombreCurso);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "fCrearCursoAdmin";
             this.Text = "fCrearCursoAdmin";
             this.Load += new System.EventHandler(this.fCrearCursoAdmin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tNombreCurso;
         private System.Windows.Forms.TextBox tDescripcionCurso;
@@ -389,12 +390,13 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button bAniadirArchivosCurso;
         private System.Windows.Forms.Button bGuardarCambiosCurso;
-        private System.Windows.Forms.Button bAtras;
         private System.Windows.Forms.DateTimePicker dFechaIniCurso;
         private System.Windows.Forms.DateTimePicker dFechaFinCurso;
         private System.Windows.Forms.DateTimePicker dHoraIniCurso;
         private System.Windows.Forms.DateTimePicker dHoraFinCurso;
         private System.Windows.Forms.ListBox listProfesor;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

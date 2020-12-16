@@ -37,22 +37,11 @@ namespace Grupo02PCSAS
         {
             bEnviarDebate.Enabled = true;
             bCancelarDebate.Enabled = true;
-            lNombreApellidosUsuario.Text = usuario.NombreUsuario;
-            lRolUsuario.Text = usuario.RolUsuario.RolName;
+            lNombreUser.Text = usuario.NombreUsuario;
+            lRol.Text = usuario.RolUsuario.RolName;
         }
 
-        private void bAtras_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-        private void lPerfil_Click(object sender, EventArgs e)
-        {
-            fDatosPerfil ventana = new fDatosPerfil(usuario);
-            this.Visible = false;
-            ventana.ShowDialog();
-            this.Visible = true;
-        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -60,6 +49,51 @@ namespace Grupo02PCSAS
             this.Visible = false;
             ventana.ShowDialog();
             this.Visible = true;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil ventana = new fDatosPerfil(usuario);
+            this.Visible = false;
+            ventana.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (usuario.RolUsuario.RolName.Equals("ALUMNO"))
+            {
+                fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(usuario);
+                this.Visible = false;
+                inicio.ShowDialog();
+                
+            }
+            else if (usuario.RolUsuario.RolName.Equals("PROFESOR"))
+            {
+                fPrincipalProfesor inicio = new fPrincipalProfesor(usuario);
+                this.Visible = false;
+                inicio.ShowDialog();
+                
+            }
+            else if (usuario.RolUsuario.RolName.Equals("ENTIDAD"))
+            {
+                fPrincipalOng inicio = new fPrincipalOng(usuario);
+                this.Visible = false;
+                inicio.ShowDialog();
+                
+            }
+            else if (usuario.RolUsuario.RolName.Equals("ADMIN"))
+            {
+                fPantallaAdmin inicio = new fPantallaAdmin(usuario);
+                this.Visible = false;
+                inicio.ShowDialog();
+                
+            }
         }
 
         private void bEnviarDebate_Click(object sender, EventArgs e)
@@ -76,7 +110,7 @@ namespace Grupo02PCSAS
                 else if (!asunto.Equals("") && !mensaje.Equals(""))
                 {
                     
-                    debateCreado = new Debate(usuario.NombreUsuario, asunto, mensaje, DateTime.Now.ToShortDateString());
+                    debateCreado = new Debate(usuario.CorreoUsuario, asunto, mensaje, DateTime.Now.ToShortDateString());
                     debateCreado = null;
                         
                     
