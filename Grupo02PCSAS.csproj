@@ -113,12 +113,6 @@
     <Compile Include="fDatosPerfil.Designer.cs">
       <DependentUpon>fDatosPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="fInicioSesion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fInicioSesion.Designer.cs">
-      <DependentUpon>fInicioSesion.cs</DependentUpon>
-    </Compile>
     <Compile Include="fModificarCursos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,12 +124,6 @@
     </Compile>
     <Compile Include="fNuevoDebateForo.Designer.cs">
       <DependentUpon>fNuevoDebateForo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fStartAplicacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fStartAplicacion.Designer.cs">
-      <DependentUpon>fStartAplicacion.cs</DependentUpon>
     </Compile>
     <Compile Include="fPantallaAdmin.cs">
       <SubType>Form</SubType>
@@ -208,9 +196,6 @@
     <EmbeddedResource Include="fInicioInvitado.resx">
       <DependentUpon>fInicioInvitado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fInicioSesion.resx">
-      <DependentUpon>fInicioSesion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="fModificarCursos.resx">
       <DependentUpon>fModificarCursos.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,9 +204,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fPrincipalOng.resx">
       <DependentUpon>fPrincipalOng.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fStartAplicacion.resx">
-      <DependentUpon>fStartAplicacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fPantallaAdmin.resx">
       <DependentUpon>fPantallaAdmin.cs</DependentUpon>
