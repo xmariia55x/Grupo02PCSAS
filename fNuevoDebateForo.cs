@@ -41,10 +41,6 @@ namespace Grupo02PCSAS
             lRol.Text = usuario.RolUsuario.RolName;
         }
 
-        private void bAtras_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -61,6 +57,11 @@ namespace Grupo02PCSAS
             this.Visible = false;
             ventana.ShowDialog();
             this.Visible = true;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void bEnviarDebate_Click(object sender, EventArgs e)

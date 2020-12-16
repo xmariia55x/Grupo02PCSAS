@@ -13,6 +13,12 @@ namespace Grupo02PCSAS
     public partial class fCrearActividadAdmin : Form
     {
         private string nombreActividad, descrip, lugar, fechaIni, fechaFin, horaIni, horaFin, aforo, colaborador;
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private int aforoActividad;
         private Actividad actividad;
         

@@ -13,6 +13,12 @@ namespace Grupo02PCSAS
     public partial class fCrearCursoAdmin : Form
     {
         private string nombreDelCurso, descrip, lugar, fechaIni, fechaFin, horaIni, horaFin, aforo, profesor;
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private int aforoDelCurso;
 
         
