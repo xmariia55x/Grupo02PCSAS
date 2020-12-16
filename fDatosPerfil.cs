@@ -25,54 +25,61 @@ namespace Grupo02PCSAS
 
 		}
 
+		/*
 		private void fDatosPerfil_Paint(object sender, PaintEventArgs e)
 		{
 			Graphics l = e.Graphics;
 			Pen p = new Pen(Color.Black);
 			//l.DrawLine(p, 400, 386, 400, 886);
 		}
+		*/
 
 		private void fDatosPerfil_Load(object sender, EventArgs e)
 		{
 			lRol.Text = user.RolUsuario.RolName;
 			lNombre.Text = user.NombreUsuario;
-            if (user.RolUsuario.RolName.Equals("ALUMNO"))
+			lNombreDatos.Visible = true;
+			lPassword.Visible = true;
+			lCorreo.Visible = true;
+			if (user.RolUsuario.RolName.Equals("ALUMNO"))
             {
+				lNIU.Visible = false;
+				lCIF.Visible = false;
+				tNIU.Visible = false;
+				tCIF.Visible = false;
 
-				panelAlumno.Visible = true;
-				panelProfesor.Visible = false;
-				panelProfesor.Enabled = false;
-				panelEntidad.Visible = false;
-				panelEntidad.Enabled = false;
+				lNombreDatos.Text = user.NombreUsuario;
+				lPassword.Text = user.ContraseniaUsuario;
+				lCorreo.Text = user.CorreoUsuario;
+			
 
-				lNombreAlumno.Text = user.NombreUsuario;
-				lEmailAlumno.Text = user.CorreoUsuario;
-				lPwdAlumno.Text = user.ContraseniaUsuario;
 
-			}else if (user.RolUsuario.RolName.Equals("PROFESOR"))
+			}
+			else if (user.RolUsuario.RolName.Equals("PROFESOR"))
             {
-				panelAlumno.Visible = false;
-				panelAlumno.Enabled = false;
-				panelProfesor.Visible = true;
-				panelEntidad.Visible = false;
-				panelEntidad.Enabled = false;
+				lNIU.Visible = true;
+				lCIF.Visible = false;
+				tNIU.Visible = true;
+				tCIF.Visible = false;
 
-				lNombreProfe.Text = user.NombreUsuario;
-				lEmailProfe.Text = user.CorreoUsuario;
-				lNiuProfe.Text = user.NiuUsuario;
-				lPwdProfe.Text = user.ContraseniaUsuario;
+				tNombre.Text = user.NombreUsuario;
+				tPassword.Text = user.ContraseniaUsuario;
+				tCorreo.Text = user.CorreoUsuario;
+				tNIU.Text = user.NiuUsuario;
+			
 
-            }else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
+			}
+			else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
             {
-				panelAlumno.Visible = false;
-				panelAlumno.Enabled = false;
-				panelEntidad.Visible = true;
-				panelProfesor.Visible = false;
-				panelProfesor.Enabled = false;
+				lNIU.Visible = false;
+				lCIF.Visible = true;
+				tNIU.Visible = false;
+				tCIF.Visible = true;
 
-				lEmailEntidad.Text = this.user.CorreoUsuario;
-				lCifEntidad.Text = this.user.CifUsuario;
-				lPwdEntidad.Text = this.user.ContraseniaUsuario;
+				tNombre.Text = user.NombreUsuario;
+				tPassword.Text = user.ContraseniaUsuario;
+				tCorreo.Text = user.CorreoUsuario;
+				tCIF.Text = user.CifUsuario;
 
 			}
 			//Cargar el dataGridView filtrado CursoRealizado
@@ -87,6 +94,7 @@ namespace Grupo02PCSAS
 			adaptador.Fill(tabla);
 			dataGridView1.DataSource = tabla;
 
+			/*
 			//Hazle el resize
 			dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
@@ -99,32 +107,34 @@ namespace Grupo02PCSAS
 			dataGridView1.Width = i + dataGridView1.RowHeadersWidth + 2;
 			dataGridView1.Height = dataGridView1.GetRowDisplayRectangle(dataGridView1.NewRowIndex, true).Bottom + 
 				dataGridView1.GetRowDisplayRectangle(dataGridView1.NewRowIndex, false).Height;
+			*/
 
 			//Cargar el dataGridView filtrado ActividadRealizado
 
-			conexion = new MySqlConnection();
-			conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
-			conexion.Open();
-			comando = new MySqlCommand("select a.nombreActividad from ActividadesRealizadas ar join Actividad a on ar.idActividad = a.idActividad " +
-				"where ar.correo = '" + user.CorreoUsuario + "' ;", conexion);
-			adaptador = new MySqlDataAdapter();
-			adaptador.SelectCommand = comando;
-			tabla = new DataTable();
-			adaptador.Fill(tabla);
-			dataGridView2.DataSource = tabla;
-			
+			MySqlConnection conexion2 = new MySqlConnection();
+			conexion2.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
+			conexion2.Open();
+			MySqlCommand comando2 = new MySqlCommand("select a.nombreActividad from ActividadesRealizadas ar join Actividad a on ar.idActividad = a.idActividad " +
+				"where ar.correo = '" + user.CorreoUsuario + "' ;", conexion2);
+			MySqlDataAdapter adaptador2 = new MySqlDataAdapter();
+			adaptador2.SelectCommand = comando2;
+			DataTable tabla2 = new DataTable();
+			adaptador2.Fill(tabla2);
+			dataGridView2.DataSource = tabla2;
+
+			/*
 			dataGridView2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 			 i = 0;
 			foreach (DataGridViewColumn c in dataGridView1.Columns)
 			{
 				i += c.Width;
 			}
-
+			
 			dataGridView2.Width = i + dataGridView2.RowHeadersWidth + 2;
 			dataGridView2.Height = dataGridView2.GetRowDisplayRectangle(dataGridView2.NewRowIndex, true).Bottom +
 				dataGridView2.GetRowDisplayRectangle(dataGridView2.NewRowIndex, false).Height;
 
-
+			*/
 		}
 
 		private void label3_Click(object sender, EventArgs e)
@@ -169,7 +179,10 @@ namespace Grupo02PCSAS
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-			
+			fDatosPerfil datos = new fDatosPerfil(user);
+			this.Visible = false;
+			datos.ShowDialog();
+			this.Visible = true;
 		}
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -203,5 +216,10 @@ namespace Grupo02PCSAS
 				this.Visible = true;
 			}
 		}
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
