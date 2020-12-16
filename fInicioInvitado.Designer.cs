@@ -69,9 +69,8 @@ namespace Grupo02PCSAS
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1465, 221);
+            this.panel1.Size = new System.Drawing.Size(1302, 177);
             this.panel1.TabIndex = 7;
             // 
             // lError
@@ -112,9 +111,9 @@ namespace Grupo02PCSAS
             // 
             this.lTienesCuenta.AutoSize = true;
             this.lTienesCuenta.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTienesCuenta.Location = new System.Drawing.Point(963, 131);
+            this.lTienesCuenta.Location = new System.Drawing.Point(856, 105);
             this.lTienesCuenta.Name = "lTienesCuenta";
-            this.lTienesCuenta.Size = new System.Drawing.Size(213, 29);
+            this.lTienesCuenta.Size = new System.Drawing.Size(179, 26);
             this.lTienesCuenta.TabIndex = 10;
             this.lTienesCuenta.Text = "¿No tienes cuenta?";
             this.lTienesCuenta.Click += new System.EventHandler(this.bRegistrate_Click);
@@ -152,18 +151,18 @@ namespace Grupo02PCSAS
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 326);
+            this.label1.Location = new System.Drawing.Point(53, 261);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(347, 55);
+            this.label1.Size = new System.Drawing.Size(291, 46);
             this.label1.TabIndex = 13;
             this.label1.Text = "¿Quiénes somos?";
             // 
             // lDescripcion
             // 
             this.lDescripcion.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDescripcion.Location = new System.Drawing.Point(39, 426);
+            this.lDescripcion.Location = new System.Drawing.Point(35, 341);
             this.lDescripcion.Name = "lDescripcion";
-            this.lDescripcion.Size = new System.Drawing.Size(435, 289);
+            this.lDescripcion.Size = new System.Drawing.Size(387, 231);
             this.lDescripcion.TabIndex = 14;
             this.lDescripcion.Text = resources.GetString("lDescripcion.Text");
             // 
@@ -173,7 +172,7 @@ namespace Grupo02PCSAS
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(515, 334);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 29);
+            this.label2.Size = new System.Drawing.Size(152, 26);
             this.label2.TabIndex = 13;
             this.label2.Text = "Nuestros cursos";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -206,16 +205,17 @@ namespace Grupo02PCSAS
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(515, 650);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(236, 29);
+            this.label3.Size = new System.Drawing.Size(200, 26);
             this.label3.TabIndex = 16;
             this.label3.Text = "Nuestras Actividades";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources.logo_uma;
-            this.pictureBox3.Location = new System.Drawing.Point(44, 854);
+            this.pictureBox3.Location = new System.Drawing.Point(39, 683);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(402, 147);
+            this.pictureBox3.Size = new System.Drawing.Size(357, 118);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
@@ -223,9 +223,10 @@ namespace Grupo02PCSAS
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.Logo_Informatica;
-            this.pictureBox2.Location = new System.Drawing.Point(88, 743);
+            this.pictureBox2.Location = new System.Drawing.Point(78, 594);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(333, 116);
+            this.pictureBox2.Size = new System.Drawing.Size(296, 93);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
@@ -256,7 +257,7 @@ namespace Grupo02PCSAS
             // 
             // fInicioInvitado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1465, 1024);
@@ -271,6 +272,7 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.lDescripcion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fInicioInvitado";
             this.Text = "InicioInvitado";
             this.Load += new System.EventHandler(this.fInicioInvitado_Load);
