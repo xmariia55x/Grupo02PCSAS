@@ -60,5 +60,10 @@ namespace Grupo02PCSAS
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Usuario' Puede moverla o quitarla según sea necesario.
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
