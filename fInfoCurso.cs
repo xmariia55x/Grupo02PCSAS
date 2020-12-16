@@ -31,16 +31,18 @@ namespace Grupo02PCSAS
                 label5.Visible = false;
                 label9.Visible = false;
                 lInscrito.Visible = false;
-            }
-            mostrarUsuario();
-            mostrarCurso();
-            if (user.Equals(curso.CursoProfesor))
+            } else
             {
-                label9.Visible = false;
-                lInscrito.Visible = false;
+                mostrarUsuario();
+                if (user.Equals(curso.CursoProfesor))
+                {
+                    label9.Visible = false;
+                    lInscrito.Visible = false;
+                }
+                else
+                    comprobarInscrito();
             }
-            else
-                comprobarInscrito();
+            mostrarCurso();
             calcularPlazasDisponibles();
         }
 
