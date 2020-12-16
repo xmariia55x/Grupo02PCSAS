@@ -34,20 +34,27 @@ namespace Grupo02PCSAS
 
         private void bBasura_Click(object sender, EventArgs e)
         {
-           if( MessageBox.Show("¿Quieres borrar el curso definitivamente?","Borrar Curso",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if(seleccionado != null)
             {
-                seleccionado.BorrarCurso();
+                if (MessageBox.Show("¿Quieres borrar el curso definitivamente?", "Borrar Curso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    seleccionado.BorrarCurso();
 
-                MySqlConnection conexion = new MySqlConnection();
-                conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
-                conexion.Open();
-                MySqlCommand comando = new MySqlCommand("Select * from Curso where profesorCurso = '" + user.CorreoUsuario + "'", conexion);
-                MySqlDataAdapter adaptador = new MySqlDataAdapter();
-                adaptador.SelectCommand = comando;
-                DataTable tabla = new DataTable();
-                adaptador.Fill(tabla);
-                dgvMisCursos.DataSource = tabla;
+                    MySqlConnection conexion = new MySqlConnection();
+                    conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
+                    conexion.Open();
+                    MySqlCommand comando = new MySqlCommand("Select * from Curso where profesorCurso = '" + user.CorreoUsuario + "'", conexion);
+                    MySqlDataAdapter adaptador = new MySqlDataAdapter();
+                    adaptador.SelectCommand = comando;
+                    DataTable tabla = new DataTable();
+                    adaptador.Fill(tabla);
+                    dgvMisCursos.DataSource = tabla;
+                }
+            } else
+            {
+                throw new Exception("No hay ningun curso seleccionado");
             }
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -133,35 +133,47 @@ namespace Grupo02PCSAS
 
         private void bInfoCurso_Click(object sender, EventArgs e)
         {
-            fInfoCurso info = new fInfoCurso(alumno, cursoSeleccionado);
-            this.Visible = false;
-            info.ShowDialog();
-            this.Visible = true;
+            if(cursoSeleccionado == null)
+            {
+                throw new Exception("No hay ningun curso seleccionado");
+            } else
+            {
+                fInfoCurso info = new fInfoCurso(alumno, cursoSeleccionado);
+                this.Visible = false;
+                info.ShowDialog();
+                this.Visible = true;
+            }
         }
 
         private void bInsCurso_Click(object sender, EventArgs e)
         {
             try
             {
-                int plazasDispo = calcularPlazasDisponiblesCurso();
-
-                if (plazasDispo > 0)
+                if(cursoSeleccionado == null)
                 {
-                    if (!inscritoCurso(alumno))
+                    throw new Exception("No hay ningun curso seleccionado");
+                } else
+                {
+                    int plazasDispo = calcularPlazasDisponiblesCurso();
+
+                    if (plazasDispo > 0)
                     {
-                        CursosRealizados c = new CursosRealizados(cursoSeleccionado.CursoID, alumno.CorreoUsuario);
-                        MessageBox.Show("Se ha inscrito con éxito");
-                        cargaGrid();
+                        if (!inscritoCurso(alumno))
+                        {
+                            CursosRealizados c = new CursosRealizados(cursoSeleccionado.CursoID, alumno.CorreoUsuario);
+                            MessageBox.Show("Se ha inscrito con éxito");
+                            cargaGrid();
+                        }
+                        else
+                        {
+                            throw new Error("Ya estabas inscrito en ese curso");
+                        }
+
                     }
                     else
                     {
-                        throw new Error("Ya estabas inscrito en ese curso");
+                        throw new Error("No hay plazas disponibles");
                     }
-
-                }
-                else
-                {
-                    throw new Error("No hay plazas disponibles");
                 }
             }
             catch (Exception ex)
@@ -229,32 +241,45 @@ namespace Grupo02PCSAS
 
         private void bInfoAct_Click(object sender, EventArgs e)
         {
-            fInfoActividad info = new fInfoActividad(alumno, actividadSeleccionada);
-            this.Visible = false;
-            info.ShowDialog();
-            this.Visible = true;
+            if(actividadSeleccionada == null)
+            {
+                throw new Exception("No hay ninguna actividad seleccionada");
+            } else
+            {
+                fInfoActividad info = new fInfoActividad(alumno, actividadSeleccionada);
+                this.Visible = false;
+                info.ShowDialog();
+                this.Visible = true;
+            }
         }
 
         private void bInsAct_Click(object sender, EventArgs e)
         {
             try
             {
-                int plazasDispo = calcularPlazasDisponiblesActividad();
-                if (plazasDispo > 0)
+                if (actividadSeleccionada == null)
                 {
-                    if (!inscritoActividad(alumno))
-                    {
-                        new ActividadesRealizadas(actividadSeleccionada.IdActividad, alumno.CorreoUsuario);
-                        MessageBox.Show("Se ha inscrito con éxito");
-                    }
-                    else
-                    {
-                        throw new Error("Ya estabas inscrito en esa actividad");
-                    }
+                    throw new Exception("No hay ninguna actividad seleccionada");
                 }
                 else
                 {
-                    throw new Error("No hay plazas disponibles");
+                    int plazasDispo = calcularPlazasDisponiblesActividad();
+                    if (plazasDispo > 0)
+                    {
+                        if (!inscritoActividad(alumno))
+                        {
+                            new ActividadesRealizadas(actividadSeleccionada.IdActividad, alumno.CorreoUsuario);
+                            MessageBox.Show("Se ha inscrito con éxito");
+                        }
+                        else
+                        {
+                            throw new Error("Ya estabas inscrito en esa actividad");
+                        }
+                    }
+                    else
+                    {
+                        throw new Error("No hay plazas disponibles");
+                    }
                 }
             }
             catch (Exception ex)

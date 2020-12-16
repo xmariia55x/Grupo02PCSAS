@@ -80,7 +80,10 @@ namespace Grupo02PCSAS
                 this.Visible = false;
                 info.ShowDialog();
                 this.Visible = true;
-            }    
+            } else
+            {
+                throw new Exception("No hay ninguna actividad seleccionada");
+            }
         }
     }
 }

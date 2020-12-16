@@ -92,6 +92,9 @@ namespace Grupo02PCSAS
                 modicurso.ShowDialog();
                 this.Visible = true;
                 cargaGrid();
+            } else
+            {
+                throw new Exception("No hay ningun curso seleccionado");
             }
 
             //para que no se vuelva a seleccionar el mismo
@@ -114,6 +117,10 @@ namespace Grupo02PCSAS
 
                 }
             }
+            else
+            {
+                throw new Exception("No hay ningun curso seleccionado");
+            }
 
             //para que no se vuelva a seleccionar el mismo
             seleccionado = null;
@@ -127,6 +134,10 @@ namespace Grupo02PCSAS
                 this.Visible = false;
                 infocurso.ShowDialog();
                 this.Visible = true;
+            }
+            else
+            {
+                throw new Exception("No hay ningun curso seleccionado");
             }
 
             //para que no se vuelva a seleccionar el mismo
