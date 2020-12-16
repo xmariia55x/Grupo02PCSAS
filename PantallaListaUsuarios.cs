@@ -16,10 +16,12 @@ namespace Grupo02PCSAS
     public partial class PantallaListaUsuarios : Form
     {
         private Curso curso;
-        public PantallaListaUsuarios( Curso curso)
+        private Usuario user;
+        public PantallaListaUsuarios(Curso curso, Usuario user)
         {
             InitializeComponent();
             this.curso = curso;
+            this.user = user;
         }
 
         public void PantallaListaUsuarios_Load(object sender, EventArgs e)
@@ -50,6 +52,14 @@ namespace Grupo02PCSAS
         private void lbUsuarios_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datos = new fDatosPerfil(user);
+            this.Visible = false;
+            datos.ShowDialog();
+            this.Visible = true;
         }
     }
 }
