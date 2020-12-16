@@ -150,6 +150,8 @@ namespace Grupo02PCSAS
                 {
                     cursoRealizado.CursoProfesor = new Usuario((string)listProfesor.SelectedItem);
                 }
+                MessageBox.Show("Curso modificado correctamente");
+                this.Close();
             }
             catch (Exception ex)
             {
