@@ -41,7 +41,11 @@ namespace Grupo02PCSAS
         private void calcularPlazasDisponibles()
         {
             List<Usuario> lista = CursosRealizados.listaUsuarios(curso.CursoID);
-            lPlazasDisp.Text = (curso.CursoAforo - lista.Count).ToString();
+            List<Usuario> filtro = new List<Usuario>();
+            foreach(Usuario u in lista) 
+                if (u.RolUsuario.RolName.Equals("ALUMNO") || u.RolUsuario.RolName.Equals("PROFESOR")) 
+                    filtro.Add(u);
+            lPlazasDisp.Text = (curso.CursoAforo - filtro.Count).ToString();
         }
         
         private void comprobarInscrito()
@@ -87,6 +91,52 @@ namespace Grupo02PCSAS
             this.Visible = false;
             datos.ShowDialog();
             this.Visible = true;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            fDatosPerfil datos = new fDatosPerfil(user);
+            this.Visible = false;
+            datos.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (user.RolUsuario.RolName.Equals("ALUMNO"))
+            {
+                fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(user);
+                this.Visible = false;
+                inicio.ShowDialog();
+                this.Visible = true;
+            }
+            else if (user.RolUsuario.RolName.Equals("PROFESOR"))
+            {
+                fPrincipalProfesor inicio = new fPrincipalProfesor(user);
+                this.Visible = false;
+                inicio.ShowDialog();
+                this.Visible = true;
+            }
+            else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
+            {
+                fPrincipalOng inicio = new fPrincipalOng(user);
+                this.Visible = false;
+                inicio.ShowDialog();
+                this.Visible = true;
+            }
+            else if (user.RolUsuario.RolName.Equals("ADMIN"))
+            {
+                fPantallaAdmin inicio = new fPantallaAdmin(user);
+                this.Visible = false;
+                inicio.ShowDialog();
+                this.Visible = true;
+            }
+
         }
     }
 }

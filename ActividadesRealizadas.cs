@@ -33,7 +33,7 @@ namespace Grupo02PCSAS
             List<Actividad> lista = new List<Actividad>();
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
 
-            foreach (object[] tupla in miBD.Select("SELECT idActividad FROM ActividadesRealizadas WHERE correo = " + correo + ";"))
+            foreach (object[] tupla in miBD.Select("SELECT idActividad FROM ActividadesRealizadas WHERE correo = '" + correo + "';"))
             {
                 int actId = (int)tupla[0];
                 lista.Add(new Actividad(actId));
@@ -46,10 +46,11 @@ namespace Grupo02PCSAS
         { //Constructor del select
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
             string sentencia = "SELECT * FROM ActividadesRealizadas WHERE idActividad = " + numeroActividad + " AND correo = '" + email + "';";
-            object[] tupla = miBD.Select(sentencia)[0];
+            List<object[]> lista = miBD.Select(sentencia);
 
-            if(tupla != null)
+            if(lista.Count > 0)
             {
+                object[] tupla = lista[0];
                 this.idActividad = (int)tupla[0];
                 this.correo = (string)tupla[1];
             }
