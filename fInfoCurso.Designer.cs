@@ -343,7 +343,7 @@
             // 
             this.lInscrito.AutoSize = true;
             this.lInscrito.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lInscrito.Location = new System.Drawing.Point(1153, 59);
+            this.lInscrito.Location = new System.Drawing.Point(1250, 59);
             this.lInscrito.Name = "lInscrito";
             this.lInscrito.Size = new System.Drawing.Size(80, 26);
             this.lInscrito.TabIndex = 6;
@@ -353,7 +353,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1066, 59);
+            this.label9.Location = new System.Drawing.Point(1160, 59);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 26);
             this.label9.TabIndex = 5;
@@ -363,7 +363,7 @@
             // 
             this.lNombreCurso.AutoSize = true;
             this.lNombreCurso.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreCurso.Location = new System.Drawing.Point(590, 43);
+            this.lNombreCurso.Location = new System.Drawing.Point(438, 43);
             this.lNombreCurso.Name = "lNombreCurso";
             this.lNombreCurso.Size = new System.Drawing.Size(171, 49);
             this.lNombreCurso.TabIndex = 4;
@@ -373,7 +373,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(430, 43);
+            this.label6.Location = new System.Drawing.Point(286, 43);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(154, 49);
             this.label6.TabIndex = 3;
