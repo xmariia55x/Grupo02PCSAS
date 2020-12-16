@@ -108,7 +108,6 @@ namespace Grupo02PCSAS
                     Console.WriteLine("No se puede hacer el parse");
                 }
 
-                //dModiFechaFinCurso = new DateTimePicker();
                 if (int.TryParse(fechaF[0], out dF) && int.TryParse(fechaF[1], out mesF) && int.TryParse(fechaF[2], out aF))
                 {
                     dModiFechaFinCurso.Value = new DateTime(aF, mesF, dF, 0, 0, 0);

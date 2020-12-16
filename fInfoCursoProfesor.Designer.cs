@@ -475,7 +475,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "fInfoCursoProfesor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fInfoCursoProfesor";
+            this.Text = "Información del curso";
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);

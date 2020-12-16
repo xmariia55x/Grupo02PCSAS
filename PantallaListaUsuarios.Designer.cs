@@ -254,7 +254,7 @@ namespace Grupo02PCSAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1302, 819);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbUsuarios);
@@ -265,7 +265,8 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.lCurso);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PantallaListaUsuarios";
-            this.Text = "PantallaListaUSuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.PantallaListaUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).EndInit();

@@ -194,11 +194,12 @@ namespace Grupo02PCSAS
             // 
             // lColaboradores
             // 
+            this.lColaboradores.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lColaboradores.FormattingEnabled = true;
-            this.lColaboradores.ItemHeight = 16;
+            this.lColaboradores.ItemHeight = 23;
             this.lColaboradores.Location = new System.Drawing.Point(215, 679);
             this.lColaboradores.Name = "lColaboradores";
-            this.lColaboradores.Size = new System.Drawing.Size(224, 84);
+            this.lColaboradores.Size = new System.Drawing.Size(224, 73);
             this.lColaboradores.TabIndex = 21;
             // 
             // label10
@@ -306,7 +307,8 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.tNombreAct);
             this.Controls.Add(this.label1);
             this.Name = "fCrearActividadAdmin";
-            this.Text = "fCrearActividadAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Crear actividad";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

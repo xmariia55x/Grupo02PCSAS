@@ -224,7 +224,7 @@ namespace Grupo02PCSAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1302, 819);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
@@ -236,7 +236,8 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.lForo);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PantallaPrincipalForo";
-            this.Text = "PantallaBorrarCurso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Foro";
             this.Load += new System.EventHandler(this.PantallaBorrarCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDebatesRecientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisDebates)).EndInit();

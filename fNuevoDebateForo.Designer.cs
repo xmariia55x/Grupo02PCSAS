@@ -254,7 +254,7 @@
             this.Controls.Add(this.lForo);
             this.Name = "fNuevoDebateForo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Información del curso";
+            this.Text = "Nuevo debate";
             this.Load += new System.EventHandler(this.fNuevoDebateForo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

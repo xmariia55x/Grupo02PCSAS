@@ -277,7 +277,8 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.lCursos);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PantallaBorrarCurso";
-            this.Text = "PantallaBorrarCurso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cursos";
             this.Load += new System.EventHandler(this.PantallaBorrarCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).EndInit();

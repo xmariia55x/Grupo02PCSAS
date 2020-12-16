@@ -466,7 +466,7 @@
             this.Controls.Add(this.pProfesor);
             this.Name = "fRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fRegistro";
+            this.Text = "Registro";
             this.pOng.ResumeLayout(false);
             this.pOng.PerformLayout();
             this.pProfesor.ResumeLayout(false);

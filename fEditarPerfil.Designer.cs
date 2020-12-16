@@ -179,10 +179,11 @@ namespace Grupo02PCSAS
             // 
             // tNiuProfe
             // 
+            this.tNiuProfe.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tNiuProfe.HideSelection = false;
-            this.tNiuProfe.Location = new System.Drawing.Point(278, 99);
+            this.tNiuProfe.Location = new System.Drawing.Point(278, 95);
             this.tNiuProfe.Name = "tNiuProfe";
-            this.tNiuProfe.Size = new System.Drawing.Size(193, 22);
+            this.tNiuProfe.Size = new System.Drawing.Size(193, 31);
             this.tNiuProfe.TabIndex = 37;
             // 
             // tPwdAlumno
@@ -277,18 +278,20 @@ namespace Grupo02PCSAS
             // 
             // tNombreProfesor
             // 
+            this.tNombreProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tNombreProfesor.HideSelection = false;
             this.tNombreProfesor.Location = new System.Drawing.Point(278, 30);
             this.tNombreProfesor.Name = "tNombreProfesor";
-            this.tNombreProfesor.Size = new System.Drawing.Size(193, 22);
+            this.tNombreProfesor.Size = new System.Drawing.Size(193, 31);
             this.tNombreProfesor.TabIndex = 34;
             // 
             // tCorreoProfesor
             // 
+            this.tCorreoProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tCorreoProfesor.HideSelection = false;
-            this.tCorreoProfesor.Location = new System.Drawing.Point(278, 70);
+            this.tCorreoProfesor.Location = new System.Drawing.Point(278, 62);
             this.tCorreoProfesor.Name = "tCorreoProfesor";
-            this.tCorreoProfesor.Size = new System.Drawing.Size(193, 22);
+            this.tCorreoProfesor.Size = new System.Drawing.Size(193, 31);
             this.tCorreoProfesor.TabIndex = 35;
             // 
             // label13
@@ -303,18 +306,20 @@ namespace Grupo02PCSAS
             // 
             // tPwdProfesor
             // 
-            this.tPwdProfesor.Location = new System.Drawing.Point(277, 135);
+            this.tPwdProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tPwdProfesor.Location = new System.Drawing.Point(277, 128);
             this.tPwdProfesor.Name = "tPwdProfesor";
             this.tPwdProfesor.PasswordChar = '*';
-            this.tPwdProfesor.Size = new System.Drawing.Size(193, 22);
+            this.tPwdProfesor.Size = new System.Drawing.Size(193, 31);
             this.tPwdProfesor.TabIndex = 38;
             // 
             // tConfPwdProfesor
             // 
-            this.tConfPwdProfesor.Location = new System.Drawing.Point(275, 174);
+            this.tConfPwdProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tConfPwdProfesor.Location = new System.Drawing.Point(276, 166);
             this.tConfPwdProfesor.Name = "tConfPwdProfesor";
             this.tConfPwdProfesor.PasswordChar = '*';
-            this.tConfPwdProfesor.Size = new System.Drawing.Size(195, 22);
+            this.tConfPwdProfesor.Size = new System.Drawing.Size(195, 31);
             this.tConfPwdProfesor.TabIndex = 40;
             // 
             // label14
@@ -577,7 +582,8 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.bGuardarCambios);
             this.Controls.Add(this.label10);
             this.Name = "fEditarPerfil";
-            this.Text = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Editar perfil";
             this.Load += new System.EventHandler(this.fEditarPerfil_Load);
             this.panelAlumno.ResumeLayout(false);
             this.panelAlumno.PerformLayout();

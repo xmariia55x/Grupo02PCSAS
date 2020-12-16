@@ -296,11 +296,12 @@ namespace Grupo02PCSAS
             // 
             // listProfesor
             // 
+            this.listProfesor.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listProfesor.FormattingEnabled = true;
-            this.listProfesor.ItemHeight = 16;
+            this.listProfesor.ItemHeight = 23;
             this.listProfesor.Location = new System.Drawing.Point(0, 41);
             this.listProfesor.Name = "listProfesor";
-            this.listProfesor.Size = new System.Drawing.Size(196, 52);
+            this.listProfesor.Size = new System.Drawing.Size(196, 50);
             this.listProfesor.TabIndex = 32;
             // 
             // pictureBox3
@@ -356,7 +357,8 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "fModificarCursos";
-            this.Text = "fModificarCursos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Modificar curso";
             this.Load += new System.EventHandler(this.fModificarCursos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

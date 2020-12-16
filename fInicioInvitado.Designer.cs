@@ -277,7 +277,7 @@ namespace Grupo02PCSAS
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fInicioInvitado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " Inicio";
             this.Load += new System.EventHandler(this.fInicioInvitado_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
