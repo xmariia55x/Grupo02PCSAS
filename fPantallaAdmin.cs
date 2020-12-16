@@ -23,7 +23,7 @@ namespace Grupo02PCSAS
         private void fPantallaAdmin_Load(object sender, EventArgs e)
         {
             lRol.Text = admin.RolUsuario.RolName;
-            lNombre.Text = admin.NombreUsuario;
+            lNombreApellidos.Text = admin.NombreUsuario;
             this.usuarioTableAdapter.Fill(this.apsgrupo02DataSet.Usuario);
         }
 
