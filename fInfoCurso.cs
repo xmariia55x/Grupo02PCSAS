@@ -88,5 +88,10 @@ namespace Grupo02PCSAS
             datos.ShowDialog();
             this.Visible = true;
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

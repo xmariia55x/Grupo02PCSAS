@@ -163,5 +163,10 @@ namespace Grupo02PCSAS
         {
 			this.Close();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+			this.Close();
+		}
     }
 }
