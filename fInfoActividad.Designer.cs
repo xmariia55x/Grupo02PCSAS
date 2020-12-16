@@ -400,6 +400,7 @@
             this.label5.Size = new System.Drawing.Size(88, 26);
             this.label5.TabIndex = 7;
             this.label5.Text = "Mi perfil";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBox2
             // 

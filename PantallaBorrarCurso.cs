@@ -72,6 +72,7 @@ namespace Grupo02PCSAS
             adaptador.Fill(tabla);
             dgvMisCursos.DataSource = tabla;
 
+            lRol.Text = user.RolUsuario.RolName;
             lNombreApellidos.Text = user.NombreUsuario;
         }
 
@@ -110,6 +111,14 @@ namespace Grupo02PCSAS
                     MessageBox.Show("ERROR: " + ex.Message);
                 }
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datos = new fDatosPerfil(user);
+            this.Visible = false;
+            datos.ShowDialog();
+            this.Visible = true;
         }
     }
 }
