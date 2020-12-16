@@ -42,6 +42,7 @@ namespace Grupo02PCSAS
             dgvDebatesRecientes.DataSource = tabla2;
 
             lNombreApellidos.Text = user.NombreUsuario;
+            lRol.Text = user.RolUsuario.RolName;
 
         }
 

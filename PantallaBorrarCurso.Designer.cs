@@ -74,10 +74,14 @@ namespace Grupo02PCSAS
             // 
             // dgvMisCursos
             // 
+            this.dgvMisCursos.AllowUserToAddRows = false;
+            this.dgvMisCursos.AllowUserToDeleteRows = false;
+            this.dgvMisCursos.AllowUserToOrderColumns = true;
             this.dgvMisCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMisCursos.Location = new System.Drawing.Point(49, 397);
             this.dgvMisCursos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvMisCursos.Name = "dgvMisCursos";
+            this.dgvMisCursos.ReadOnly = true;
             this.dgvMisCursos.RowHeadersWidth = 62;
             this.dgvMisCursos.RowTemplate.Height = 28;
             this.dgvMisCursos.Size = new System.Drawing.Size(1202, 240);

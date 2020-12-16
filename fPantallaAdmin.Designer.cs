@@ -41,18 +41,18 @@ namespace Grupo02PCSAS
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.correoUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contraseniaUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.niuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rolUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.apsgrupo02DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.apsgrupo02DataSet = new Grupo02PCSAS.apsgrupo02DataSet();
             this.bCrearActividad = new System.Windows.Forms.Button();
             this.bCrearCurso = new System.Windows.Forms.Button();
             this.usuarioTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.UsuarioTableAdapter();
+            this.correoUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contraseniaUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.niuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rolUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -173,6 +173,9 @@ namespace Grupo02PCSAS
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -186,27 +189,75 @@ namespace Grupo02PCSAS
             this.dataGridView1.Location = new System.Drawing.Point(231, 522);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1078, 425);
             this.dataGridView1.TabIndex = 50;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this.apsgrupo02DataSetBindingSource;
+            // 
+            // apsgrupo02DataSetBindingSource
+            // 
+            this.apsgrupo02DataSetBindingSource.DataSource = this.apsgrupo02DataSet;
+            this.apsgrupo02DataSetBindingSource.Position = 0;
+            // 
+            // apsgrupo02DataSet
+            // 
+            this.apsgrupo02DataSet.DataSetName = "apsgrupo02DataSet";
+            this.apsgrupo02DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bCrearActividad
+            // 
+            this.bCrearActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bCrearActividad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bCrearActividad.Location = new System.Drawing.Point(334, 850);
+            this.bCrearActividad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bCrearActividad.Name = "bCrearActividad";
+            this.bCrearActividad.Size = new System.Drawing.Size(334, 85);
+            this.bCrearActividad.TabIndex = 51;
+            this.bCrearActividad.Text = "Crear Actividad";
+            this.bCrearActividad.UseVisualStyleBackColor = false;
+            this.bCrearActividad.Click += new System.EventHandler(this.bCrearActividad_Click);
+            // 
+            // bCrearCurso
+            // 
+            this.bCrearCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bCrearCurso.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bCrearCurso.Location = new System.Drawing.Point(825, 850);
+            this.bCrearCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bCrearCurso.Name = "bCrearCurso";
+            this.bCrearCurso.Size = new System.Drawing.Size(334, 85);
+            this.bCrearCurso.TabIndex = 52;
+            this.bCrearCurso.Text = "Crear Curso";
+            this.bCrearCurso.UseVisualStyleBackColor = false;
+            this.bCrearCurso.Click += new System.EventHandler(this.bCrearCurso_Click);
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
+            // 
             // correoUsuarioDataGridViewTextBoxColumn
             // 
             this.correoUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.correoUsuarioDataGridViewTextBoxColumn.DataPropertyName = "correoUsuario";
-            this.correoUsuarioDataGridViewTextBoxColumn.HeaderText = "correoUsuario";
+            this.correoUsuarioDataGridViewTextBoxColumn.HeaderText = "Correo usuario";
             this.correoUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.correoUsuarioDataGridViewTextBoxColumn.Name = "correoUsuarioDataGridViewTextBoxColumn";
+            this.correoUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nombreUsuarioDataGridViewTextBoxColumn
             // 
             this.nombreUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nombreUsuarioDataGridViewTextBoxColumn.DataPropertyName = "nombreUsuario";
-            this.nombreUsuarioDataGridViewTextBoxColumn.HeaderText = "nombreUsuario";
+            this.nombreUsuarioDataGridViewTextBoxColumn.HeaderText = "Nombre usuario";
             this.nombreUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.nombreUsuarioDataGridViewTextBoxColumn.Name = "nombreUsuarioDataGridViewTextBoxColumn";
+            this.nombreUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // contraseniaUsuarioDataGridViewTextBoxColumn
             // 
@@ -215,23 +266,26 @@ namespace Grupo02PCSAS
             this.contraseniaUsuarioDataGridViewTextBoxColumn.HeaderText = "contraseniaUsuario";
             this.contraseniaUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.contraseniaUsuarioDataGridViewTextBoxColumn.Name = "contraseniaUsuarioDataGridViewTextBoxColumn";
+            this.contraseniaUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
             this.contraseniaUsuarioDataGridViewTextBoxColumn.Visible = false;
             // 
             // cifDataGridViewTextBoxColumn
             // 
             this.cifDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.cifDataGridViewTextBoxColumn.DataPropertyName = "cif";
-            this.cifDataGridViewTextBoxColumn.HeaderText = "cif";
+            this.cifDataGridViewTextBoxColumn.HeaderText = "CIF";
             this.cifDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.cifDataGridViewTextBoxColumn.Name = "cifDataGridViewTextBoxColumn";
+            this.cifDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // niuDataGridViewTextBoxColumn
             // 
             this.niuDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.niuDataGridViewTextBoxColumn.DataPropertyName = "niu";
-            this.niuDataGridViewTextBoxColumn.HeaderText = "niu";
+            this.niuDataGridViewTextBoxColumn.HeaderText = "NIU";
             this.niuDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.niuDataGridViewTextBoxColumn.Name = "niuDataGridViewTextBoxColumn";
+            this.niuDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rolUsuarioDataGridViewTextBoxColumn
             // 
@@ -240,6 +294,7 @@ namespace Grupo02PCSAS
             this.rolUsuarioDataGridViewTextBoxColumn.HeaderText = "rolUsuario";
             this.rolUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.rolUsuarioDataGridViewTextBoxColumn.Name = "rolUsuarioDataGridViewTextBoxColumn";
+            this.rolUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
             this.rolUsuarioDataGridViewTextBoxColumn.Visible = false;
             // 
             // usuarioBindingSource
