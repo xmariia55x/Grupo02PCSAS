@@ -41,7 +41,7 @@ namespace Grupo02PCSAS
 			lNombreDatos.Visible = true;
 			lPassword.Visible = true;
 			lCorreo.Visible = true;
-			if (user.RolUsuario.RolName.Equals("ALUMNO"))
+			if (user.RolUsuario.RolName.Equals("ALUMNO") || user.RolUsuario.RolName.Equals("ADMIN"))
             {
 				lNIU.Visible = false;
 				lCIF.Visible = false;
