@@ -79,12 +79,13 @@ namespace Grupo02PCSAS
             //Usuario user = new Usuario("caritas@gmail.com");
             //Application.Run(new fPrincipalOng(user));
             
-            Usuario user = new Usuario("yeray.r7@gmail.com");
+            //Usuario user = new Usuario("yeray.r7@gmail.com");
             //Application.Run(new fNuevoDebateForo(user));
             //Application.Run(new fInfoCurso(user, new Curso(22)));
             //Application.Run(new fInfoActividad(user, new Actividad(5)));
-            Application.Run(new fInfoCurso(user, new Curso(22)));
-            //Application.Run(new fPantallaPrincipalAlumno(user));
+            //Application.Run(new fInfoCurso(user, new Curso(22)));
+            Application.Run(new fInicioInvitado());
+            
         }
     }
 
