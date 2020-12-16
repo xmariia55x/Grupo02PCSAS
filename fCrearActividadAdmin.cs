@@ -13,16 +13,48 @@ namespace Grupo02PCSAS
     public partial class fCrearActividadAdmin : Form
     {
         private string nombreActividad, descrip, lugar, fechaIni, fechaFin, horaIni, horaFin, aforo, colaborador;
+        private int aforoActividad;
+        private Actividad actividad;
 
+        private Usuario usuarioCreador;
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private int aforoActividad;
-        private Actividad actividad;
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (usuarioCreador.RolUsuario.RolName.Equals("ALUMNO"))
+            {
+                fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(usuarioCreador);
+                this.Visible = false;
+                inicio.ShowDialog();
+                
+            }
+            else if (usuarioCreador.RolUsuario.RolName.Equals("PROFESOR"))
+            {
+                fPrincipalProfesor inicio = new fPrincipalProfesor(usuarioCreador);
+                this.Visible = false;
+                inicio.ShowDialog();
+                
+            }
+            else if (usuarioCreador.RolUsuario.RolName.Equals("ENTIDAD"))
+            {
+                fPrincipalOng inicio = new fPrincipalOng(usuarioCreador);
+                this.Visible = false;
+                inicio.ShowDialog();
+                
+            }
+            else if (usuarioCreador.RolUsuario.RolName.Equals("ADMIN"))
+            {
+                fPantallaAdmin inicio = new fPantallaAdmin(usuarioCreador);
+                this.Visible = false;
+                inicio.ShowDialog();
+                
+            }
+        }
+
         
-        private Usuario usuarioCreador;
         private void bGuardarCambiosAct_Click(object sender, EventArgs e)
         {
             nombreActividad = tNombreAct.Text;
