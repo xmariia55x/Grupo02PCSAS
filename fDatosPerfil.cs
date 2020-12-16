@@ -48,9 +48,9 @@ namespace Grupo02PCSAS
 				tNIU.Visible = false;
 				tCIF.Visible = false;
 
-				lNombreDatos.Text = user.NombreUsuario;
-				lPassword.Text = user.ContraseniaUsuario;
-				lCorreo.Text = user.CorreoUsuario;
+				tNombre.Text = user.NombreUsuario;
+				tPassword.Text = user.ContraseniaUsuario;
+				tCorreo.Text = user.CorreoUsuario;
 			
 
 
