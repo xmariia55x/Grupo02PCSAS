@@ -192,6 +192,7 @@ namespace Grupo02PCSAS
             this.dgvCursos.RowTemplate.Height = 28;
             this.dgvCursos.Size = new System.Drawing.Size(749, 241);
             this.dgvCursos.TabIndex = 15;
+            this.dgvCursos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCursos_CellContentClick);
             this.dgvCursos.SelectionChanged += new System.EventHandler(this.dgvCursos_SelectionChanged);
             // 
             // dgvActividades

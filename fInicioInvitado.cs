@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Grupo02PCSAS
 {
@@ -34,7 +35,28 @@ namespace Grupo02PCSAS
 
         private void fInicioInvitado_Load(object sender, EventArgs e)
         {
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
+            conexion.Open();
+            //nombreCurso 'Nombre', fechaInicioCurso, fechaFinCurso, aforoCurso
+            MySqlCommand comandoC = new MySqlCommand("SELECT * FROM Curso WHERE fechaInicioCurso >= '" + DateTime.Now.ToString("dd / MM / yyyy") + "'", conexion);
+            MySqlCommand comandoA = new MySqlCommand("SELECT * FROM Actividad WHERE fechaInicioActividad >= '" + DateTime.Now.ToString("dd / MM / yyyy") + "'", conexion);
+           
+            MySqlDataAdapter adaptadorC = new MySqlDataAdapter();
+            MySqlDataAdapter adaptadorA = new MySqlDataAdapter();
+            
+            adaptadorC.SelectCommand = comandoC;
+            adaptadorA.SelectCommand = comandoA;
+           
+            DataTable tablaC = new DataTable();
+            DataTable tablaA = new DataTable();
+          
+            adaptadorC.Fill(tablaC);
+            adaptadorA.Fill(tablaA);
 
+            dgvCursos.DataSource = tablaC;
+            dgvActividades.DataSource = tablaA;
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -191,6 +213,11 @@ namespace Grupo02PCSAS
                 inicio.ShowDialog();
                 this.Visible = true;
             }
+        }
+
+        private void dgvCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
