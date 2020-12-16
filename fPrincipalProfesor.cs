@@ -85,63 +85,84 @@ namespace Grupo02PCSAS
 
         private void bModCur_Click(object sender, EventArgs e)
         {
-            if(seleccionado != null)
+            try
             {
-                fModificarCursos modicurso = new fModificarCursos(profesor, seleccionado);
-                this.Visible = false;
-                modicurso.ShowDialog();
-                this.Visible = true;
-                cargaGrid();
-            } else
-            {
-                throw new Exception("No hay ningun curso seleccionado");
-            }
+                if (seleccionado != null)
+                {
+                    fModificarCursos modicurso = new fModificarCursos(profesor, seleccionado);
+                    this.Visible = false;
+                    modicurso.ShowDialog();
+                    this.Visible = true;
+                    cargaGrid();
+                }
+                else
+                {
+                    throw new Exception("No hay ningun curso seleccionado");
+                }
 
-            //para que no se vuelva a seleccionar el mismo
-            seleccionado = null;
+                //para que no se vuelva a seleccionar el mismo
+                seleccionado = null;
+            } catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            
         }
 
         private void bDelCur_Click(object sender, EventArgs e)
         {
-            if (seleccionado != null)
+            try
             {
-                DialogResult dialogResult = MessageBox.Show("¿Desea borrar el curso?", "ALERTA", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+                if (seleccionado != null)
                 {
-                    this.seleccionado.BorrarCurso();
-                    cargaGrid();
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-                    //do something else
+                    DialogResult dialogResult = MessageBox.Show("¿Desea borrar el curso?", "ALERTA", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        this.seleccionado.BorrarCurso();
+                        cargaGrid();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        //do something else
 
+                    }
                 }
-            }
-            else
+                else
+                {
+                    throw new Exception("No hay ningun curso seleccionado");
+                }
+
+                //para que no se vuelva a seleccionar el mismo
+                seleccionado = null;
+            } catch(Exception ex)
             {
-                throw new Exception("No hay ningun curso seleccionado");
+                MessageBox.Show("ERROR: " + ex.Message);
             }
-
-            //para que no se vuelva a seleccionar el mismo
-            seleccionado = null;
         }
 
         private void bInfCur_Click(object sender, EventArgs e)
         {
-            if (seleccionado != null)
+            try
             {
-                fInfoCurso infocurso = new fInfoCurso(profesor, seleccionado);
-                this.Visible = false;
-                infocurso.ShowDialog();
-                this.Visible = true;
-            }
-            else
-            {
-                throw new Exception("No hay ningun curso seleccionado");
-            }
+                if (seleccionado != null)
+                {
+                    fInfoCurso infocurso = new fInfoCurso(profesor, seleccionado);
+                    this.Visible = false;
+                    infocurso.ShowDialog();
+                    this.Visible = true;
+                }
+                else
+                {
+                    throw new Exception("No hay ningun curso seleccionado");
+                }
 
-            //para que no se vuelva a seleccionar el mismo
-            seleccionado = null;
+                //para que no se vuelva a seleccionar el mismo
+                seleccionado = null;
+            } catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+            
         }
 
         private void label5_Click(object sender, EventArgs e)
