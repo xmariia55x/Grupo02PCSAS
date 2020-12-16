@@ -33,11 +33,32 @@ namespace Grupo02PCSAS
             this.lNuevosCursos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvNuevosCursos = new System.Windows.Forms.DataGridView();
+            this.idCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profesorCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaInicioCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaFinCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaInicioCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaFinCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lugarCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aforoCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.onlineCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cursoBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.apsgrupo02DataSet = new Grupo02PCSAS.apsgrupo02DataSet();
             this.cursoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.apsgrupo02DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvNuevasActividades = new System.Windows.Forms.DataGridView();
+            this.idActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.creadorActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaInicioActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaFinActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaInicioActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaFinActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lugarActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aforoActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -66,27 +87,6 @@ namespace Grupo02PCSAS
             this.bInsCurso = new System.Windows.Forms.Button();
             this.bInsAct = new System.Windows.Forms.Button();
             this.bInfoAct = new System.Windows.Forms.Button();
-            this.idCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profesorCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaInicioCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaFinCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaInicioCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaFinCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lugarCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aforoCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.onlineCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.creadorActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaInicioActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaFinActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaInicioActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaFinActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lugarActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aforoActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -164,6 +164,116 @@ namespace Grupo02PCSAS
             this.dgvNuevosCursos.TabIndex = 9;
             this.dgvNuevosCursos.SelectionChanged += new System.EventHandler(this.dgvNuevosCursos_SelectionChanged);
             // 
+            // idCursoDataGridViewTextBoxColumn
+            // 
+            this.idCursoDataGridViewTextBoxColumn.DataPropertyName = "idCurso";
+            this.idCursoDataGridViewTextBoxColumn.HeaderText = "idCurso";
+            this.idCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idCursoDataGridViewTextBoxColumn.Name = "idCursoDataGridViewTextBoxColumn";
+            this.idCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idCursoDataGridViewTextBoxColumn.Visible = false;
+            this.idCursoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // profesorCursoDataGridViewTextBoxColumn
+            // 
+            this.profesorCursoDataGridViewTextBoxColumn.DataPropertyName = "profesorCurso";
+            this.profesorCursoDataGridViewTextBoxColumn.HeaderText = "profesorCurso";
+            this.profesorCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.profesorCursoDataGridViewTextBoxColumn.Name = "profesorCursoDataGridViewTextBoxColumn";
+            this.profesorCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.profesorCursoDataGridViewTextBoxColumn.Visible = false;
+            this.profesorCursoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nombreCursoDataGridViewTextBoxColumn
+            // 
+            this.nombreCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreCursoDataGridViewTextBoxColumn.DataPropertyName = "nombreCurso";
+            this.nombreCursoDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreCursoDataGridViewTextBoxColumn.Name = "nombreCursoDataGridViewTextBoxColumn";
+            this.nombreCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionCursoDataGridViewTextBoxColumn
+            // 
+            this.descripcionCursoDataGridViewTextBoxColumn.DataPropertyName = "descripcionCurso";
+            this.descripcionCursoDataGridViewTextBoxColumn.HeaderText = "descripcionCurso";
+            this.descripcionCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descripcionCursoDataGridViewTextBoxColumn.Name = "descripcionCursoDataGridViewTextBoxColumn";
+            this.descripcionCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descripcionCursoDataGridViewTextBoxColumn.Visible = false;
+            this.descripcionCursoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // fechaInicioCursoDataGridViewTextBoxColumn
+            // 
+            this.fechaInicioCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.fechaInicioCursoDataGridViewTextBoxColumn.DataPropertyName = "fechaInicioCurso";
+            this.fechaInicioCursoDataGridViewTextBoxColumn.HeaderText = "Fecha inicio";
+            this.fechaInicioCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fechaInicioCursoDataGridViewTextBoxColumn.Name = "fechaInicioCursoDataGridViewTextBoxColumn";
+            this.fechaInicioCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaInicioCursoDataGridViewTextBoxColumn.Width = 112;
+            // 
+            // fechaFinCursoDataGridViewTextBoxColumn
+            // 
+            this.fechaFinCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.fechaFinCursoDataGridViewTextBoxColumn.DataPropertyName = "fechaFinCurso";
+            this.fechaFinCursoDataGridViewTextBoxColumn.HeaderText = "Fecha fin";
+            this.fechaFinCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fechaFinCursoDataGridViewTextBoxColumn.Name = "fechaFinCursoDataGridViewTextBoxColumn";
+            this.fechaFinCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaFinCursoDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // horaInicioCursoDataGridViewTextBoxColumn
+            // 
+            this.horaInicioCursoDataGridViewTextBoxColumn.DataPropertyName = "horaInicioCurso";
+            this.horaInicioCursoDataGridViewTextBoxColumn.HeaderText = "horaInicioCurso";
+            this.horaInicioCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.horaInicioCursoDataGridViewTextBoxColumn.Name = "horaInicioCursoDataGridViewTextBoxColumn";
+            this.horaInicioCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.horaInicioCursoDataGridViewTextBoxColumn.Visible = false;
+            this.horaInicioCursoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // horaFinCursoDataGridViewTextBoxColumn
+            // 
+            this.horaFinCursoDataGridViewTextBoxColumn.DataPropertyName = "horaFinCurso";
+            this.horaFinCursoDataGridViewTextBoxColumn.HeaderText = "horaFinCurso";
+            this.horaFinCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.horaFinCursoDataGridViewTextBoxColumn.Name = "horaFinCursoDataGridViewTextBoxColumn";
+            this.horaFinCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.horaFinCursoDataGridViewTextBoxColumn.Visible = false;
+            this.horaFinCursoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // lugarCursoDataGridViewTextBoxColumn
+            // 
+            this.lugarCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.lugarCursoDataGridViewTextBoxColumn.DataPropertyName = "lugarCurso";
+            this.lugarCursoDataGridViewTextBoxColumn.HeaderText = "Lugar";
+            this.lugarCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lugarCursoDataGridViewTextBoxColumn.Name = "lugarCursoDataGridViewTextBoxColumn";
+            this.lugarCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lugarCursoDataGridViewTextBoxColumn.Width = 74;
+            // 
+            // aforoCursoDataGridViewTextBoxColumn
+            // 
+            this.aforoCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.aforoCursoDataGridViewTextBoxColumn.DataPropertyName = "aforoCurso";
+            this.aforoCursoDataGridViewTextBoxColumn.HeaderText = "Aforo";
+            this.aforoCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.aforoCursoDataGridViewTextBoxColumn.Name = "aforoCursoDataGridViewTextBoxColumn";
+            this.aforoCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aforoCursoDataGridViewTextBoxColumn.Width = 71;
+            // 
+            // onlineCursoDataGridViewTextBoxColumn
+            // 
+            this.onlineCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.onlineCursoDataGridViewTextBoxColumn.DataPropertyName = "onlineCurso";
+            this.onlineCursoDataGridViewTextBoxColumn.HeaderText = "Online";
+            this.onlineCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.onlineCursoDataGridViewTextBoxColumn.Name = "onlineCursoDataGridViewTextBoxColumn";
+            this.onlineCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.onlineCursoDataGridViewTextBoxColumn.Visible = false;
+            this.onlineCursoDataGridViewTextBoxColumn.Width = 125;
+            // 
             // cursoBindingSource3
             // 
             this.cursoBindingSource3.DataMember = "Curso";
@@ -212,6 +322,105 @@ namespace Grupo02PCSAS
             this.dgvNuevasActividades.Size = new System.Drawing.Size(740, 165);
             this.dgvNuevasActividades.TabIndex = 10;
             this.dgvNuevasActividades.SelectionChanged += new System.EventHandler(this.dgvNuevasActividades_SelectionChanged);
+            // 
+            // idActividadDataGridViewTextBoxColumn
+            // 
+            this.idActividadDataGridViewTextBoxColumn.DataPropertyName = "idActividad";
+            this.idActividadDataGridViewTextBoxColumn.HeaderText = "idActividad";
+            this.idActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idActividadDataGridViewTextBoxColumn.Name = "idActividadDataGridViewTextBoxColumn";
+            this.idActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idActividadDataGridViewTextBoxColumn.Visible = false;
+            this.idActividadDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // creadorActividadDataGridViewTextBoxColumn
+            // 
+            this.creadorActividadDataGridViewTextBoxColumn.DataPropertyName = "creadorActividad";
+            this.creadorActividadDataGridViewTextBoxColumn.HeaderText = "creadorActividad";
+            this.creadorActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.creadorActividadDataGridViewTextBoxColumn.Name = "creadorActividadDataGridViewTextBoxColumn";
+            this.creadorActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.creadorActividadDataGridViewTextBoxColumn.Visible = false;
+            this.creadorActividadDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nombreActividadDataGridViewTextBoxColumn
+            // 
+            this.nombreActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreActividadDataGridViewTextBoxColumn.DataPropertyName = "nombreActividad";
+            this.nombreActividadDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreActividadDataGridViewTextBoxColumn.Name = "nombreActividadDataGridViewTextBoxColumn";
+            this.nombreActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionActividadDataGridViewTextBoxColumn
+            // 
+            this.descripcionActividadDataGridViewTextBoxColumn.DataPropertyName = "descripcionActividad";
+            this.descripcionActividadDataGridViewTextBoxColumn.HeaderText = "descripcionActividad";
+            this.descripcionActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descripcionActividadDataGridViewTextBoxColumn.Name = "descripcionActividadDataGridViewTextBoxColumn";
+            this.descripcionActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descripcionActividadDataGridViewTextBoxColumn.Visible = false;
+            this.descripcionActividadDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // fechaInicioActividadDataGridViewTextBoxColumn
+            // 
+            this.fechaInicioActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.fechaInicioActividadDataGridViewTextBoxColumn.DataPropertyName = "fechaInicioActividad";
+            this.fechaInicioActividadDataGridViewTextBoxColumn.HeaderText = "Fecha inicio";
+            this.fechaInicioActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fechaInicioActividadDataGridViewTextBoxColumn.Name = "fechaInicioActividadDataGridViewTextBoxColumn";
+            this.fechaInicioActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaInicioActividadDataGridViewTextBoxColumn.Width = 112;
+            // 
+            // fechaFinActividadDataGridViewTextBoxColumn
+            // 
+            this.fechaFinActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.fechaFinActividadDataGridViewTextBoxColumn.DataPropertyName = "fechaFinActividad";
+            this.fechaFinActividadDataGridViewTextBoxColumn.HeaderText = "Fecha fin";
+            this.fechaFinActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fechaFinActividadDataGridViewTextBoxColumn.Name = "fechaFinActividadDataGridViewTextBoxColumn";
+            this.fechaFinActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaFinActividadDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // horaInicioActividadDataGridViewTextBoxColumn
+            // 
+            this.horaInicioActividadDataGridViewTextBoxColumn.DataPropertyName = "horaInicioActividad";
+            this.horaInicioActividadDataGridViewTextBoxColumn.HeaderText = "horaInicioActividad";
+            this.horaInicioActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.horaInicioActividadDataGridViewTextBoxColumn.Name = "horaInicioActividadDataGridViewTextBoxColumn";
+            this.horaInicioActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.horaInicioActividadDataGridViewTextBoxColumn.Visible = false;
+            this.horaInicioActividadDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // horaFinActividadDataGridViewTextBoxColumn
+            // 
+            this.horaFinActividadDataGridViewTextBoxColumn.DataPropertyName = "horaFinActividad";
+            this.horaFinActividadDataGridViewTextBoxColumn.HeaderText = "horaFinActividad";
+            this.horaFinActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.horaFinActividadDataGridViewTextBoxColumn.Name = "horaFinActividadDataGridViewTextBoxColumn";
+            this.horaFinActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.horaFinActividadDataGridViewTextBoxColumn.Visible = false;
+            this.horaFinActividadDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // lugarActividadDataGridViewTextBoxColumn
+            // 
+            this.lugarActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.lugarActividadDataGridViewTextBoxColumn.DataPropertyName = "lugarActividad";
+            this.lugarActividadDataGridViewTextBoxColumn.HeaderText = "Lugar";
+            this.lugarActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lugarActividadDataGridViewTextBoxColumn.Name = "lugarActividadDataGridViewTextBoxColumn";
+            this.lugarActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lugarActividadDataGridViewTextBoxColumn.Width = 74;
+            // 
+            // aforoActividadDataGridViewTextBoxColumn
+            // 
+            this.aforoActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.aforoActividadDataGridViewTextBoxColumn.DataPropertyName = "aforoActividad";
+            this.aforoActividadDataGridViewTextBoxColumn.HeaderText = "Aforo";
+            this.aforoActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.aforoActividadDataGridViewTextBoxColumn.Name = "aforoActividadDataGridViewTextBoxColumn";
+            this.aforoActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aforoActividadDataGridViewTextBoxColumn.Width = 71;
             // 
             // actividadBindingSource
             // 
@@ -279,6 +488,7 @@ namespace Grupo02PCSAS
             this.idCursoDataGridViewTextBoxColumn1.HeaderText = "idCurso";
             this.idCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.idCursoDataGridViewTextBoxColumn1.Name = "idCursoDataGridViewTextBoxColumn1";
+            this.idCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.idCursoDataGridViewTextBoxColumn1.Visible = false;
             this.idCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
@@ -288,6 +498,7 @@ namespace Grupo02PCSAS
             this.profesorCursoDataGridViewTextBoxColumn1.HeaderText = "profesorCurso";
             this.profesorCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.profesorCursoDataGridViewTextBoxColumn1.Name = "profesorCursoDataGridViewTextBoxColumn1";
+            this.profesorCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.profesorCursoDataGridViewTextBoxColumn1.Visible = false;
             this.profesorCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
@@ -298,6 +509,7 @@ namespace Grupo02PCSAS
             this.nombreCursoDataGridViewTextBoxColumn1.HeaderText = "Nombre";
             this.nombreCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.nombreCursoDataGridViewTextBoxColumn1.Name = "nombreCursoDataGridViewTextBoxColumn1";
+            this.nombreCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // descripcionCursoDataGridViewTextBoxColumn1
             // 
@@ -305,6 +517,7 @@ namespace Grupo02PCSAS
             this.descripcionCursoDataGridViewTextBoxColumn1.HeaderText = "descripcionCurso";
             this.descripcionCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.descripcionCursoDataGridViewTextBoxColumn1.Name = "descripcionCursoDataGridViewTextBoxColumn1";
+            this.descripcionCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.descripcionCursoDataGridViewTextBoxColumn1.Visible = false;
             this.descripcionCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
@@ -314,6 +527,7 @@ namespace Grupo02PCSAS
             this.fechaInicioCursoDataGridViewTextBoxColumn1.HeaderText = "fechaInicioCurso";
             this.fechaInicioCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.fechaInicioCursoDataGridViewTextBoxColumn1.Name = "fechaInicioCursoDataGridViewTextBoxColumn1";
+            this.fechaInicioCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.fechaInicioCursoDataGridViewTextBoxColumn1.Visible = false;
             this.fechaInicioCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
@@ -323,6 +537,7 @@ namespace Grupo02PCSAS
             this.fechaFinCursoDataGridViewTextBoxColumn1.HeaderText = "fechaFinCurso";
             this.fechaFinCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.fechaFinCursoDataGridViewTextBoxColumn1.Name = "fechaFinCursoDataGridViewTextBoxColumn1";
+            this.fechaFinCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.fechaFinCursoDataGridViewTextBoxColumn1.Visible = false;
             this.fechaFinCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
@@ -332,6 +547,7 @@ namespace Grupo02PCSAS
             this.horaInicioCursoDataGridViewTextBoxColumn1.HeaderText = "horaInicioCurso";
             this.horaInicioCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.horaInicioCursoDataGridViewTextBoxColumn1.Name = "horaInicioCursoDataGridViewTextBoxColumn1";
+            this.horaInicioCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.horaInicioCursoDataGridViewTextBoxColumn1.Visible = false;
             this.horaInicioCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
@@ -341,6 +557,7 @@ namespace Grupo02PCSAS
             this.horaFinCursoDataGridViewTextBoxColumn1.HeaderText = "horaFinCurso";
             this.horaFinCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.horaFinCursoDataGridViewTextBoxColumn1.Name = "horaFinCursoDataGridViewTextBoxColumn1";
+            this.horaFinCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.horaFinCursoDataGridViewTextBoxColumn1.Visible = false;
             this.horaFinCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
@@ -350,6 +567,7 @@ namespace Grupo02PCSAS
             this.lugarCursoDataGridViewTextBoxColumn1.HeaderText = "lugarCurso";
             this.lugarCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.lugarCursoDataGridViewTextBoxColumn1.Name = "lugarCursoDataGridViewTextBoxColumn1";
+            this.lugarCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.lugarCursoDataGridViewTextBoxColumn1.Visible = false;
             this.lugarCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
@@ -359,6 +577,7 @@ namespace Grupo02PCSAS
             this.aforoCursoDataGridViewTextBoxColumn1.HeaderText = "aforoCurso";
             this.aforoCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.aforoCursoDataGridViewTextBoxColumn1.Name = "aforoCursoDataGridViewTextBoxColumn1";
+            this.aforoCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.aforoCursoDataGridViewTextBoxColumn1.Visible = false;
             this.aforoCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
@@ -368,6 +587,7 @@ namespace Grupo02PCSAS
             this.onlineCursoDataGridViewTextBoxColumn1.HeaderText = "onlineCurso";
             this.onlineCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.onlineCursoDataGridViewTextBoxColumn1.Name = "onlineCursoDataGridViewTextBoxColumn1";
+            this.onlineCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.onlineCursoDataGridViewTextBoxColumn1.Visible = false;
             this.onlineCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
@@ -463,194 +683,6 @@ namespace Grupo02PCSAS
             this.bInfoAct.Text = "Info";
             this.bInfoAct.UseVisualStyleBackColor = false;
             this.bInfoAct.Click += new System.EventHandler(this.bInfoAct_Click);
-            // 
-            // idCursoDataGridViewTextBoxColumn
-            // 
-            this.idCursoDataGridViewTextBoxColumn.DataPropertyName = "idCurso";
-            this.idCursoDataGridViewTextBoxColumn.HeaderText = "idCurso";
-            this.idCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idCursoDataGridViewTextBoxColumn.Name = "idCursoDataGridViewTextBoxColumn";
-            this.idCursoDataGridViewTextBoxColumn.Visible = false;
-            this.idCursoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // profesorCursoDataGridViewTextBoxColumn
-            // 
-            this.profesorCursoDataGridViewTextBoxColumn.DataPropertyName = "profesorCurso";
-            this.profesorCursoDataGridViewTextBoxColumn.HeaderText = "profesorCurso";
-            this.profesorCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.profesorCursoDataGridViewTextBoxColumn.Name = "profesorCursoDataGridViewTextBoxColumn";
-            this.profesorCursoDataGridViewTextBoxColumn.Visible = false;
-            this.profesorCursoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nombreCursoDataGridViewTextBoxColumn
-            // 
-            this.nombreCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreCursoDataGridViewTextBoxColumn.DataPropertyName = "nombreCurso";
-            this.nombreCursoDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreCursoDataGridViewTextBoxColumn.Name = "nombreCursoDataGridViewTextBoxColumn";
-            // 
-            // descripcionCursoDataGridViewTextBoxColumn
-            // 
-            this.descripcionCursoDataGridViewTextBoxColumn.DataPropertyName = "descripcionCurso";
-            this.descripcionCursoDataGridViewTextBoxColumn.HeaderText = "descripcionCurso";
-            this.descripcionCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descripcionCursoDataGridViewTextBoxColumn.Name = "descripcionCursoDataGridViewTextBoxColumn";
-            this.descripcionCursoDataGridViewTextBoxColumn.Visible = false;
-            this.descripcionCursoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // fechaInicioCursoDataGridViewTextBoxColumn
-            // 
-            this.fechaInicioCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.fechaInicioCursoDataGridViewTextBoxColumn.DataPropertyName = "fechaInicioCurso";
-            this.fechaInicioCursoDataGridViewTextBoxColumn.HeaderText = "Fecha inicio";
-            this.fechaInicioCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechaInicioCursoDataGridViewTextBoxColumn.Name = "fechaInicioCursoDataGridViewTextBoxColumn";
-            this.fechaInicioCursoDataGridViewTextBoxColumn.Width = 112;
-            // 
-            // fechaFinCursoDataGridViewTextBoxColumn
-            // 
-            this.fechaFinCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.fechaFinCursoDataGridViewTextBoxColumn.DataPropertyName = "fechaFinCurso";
-            this.fechaFinCursoDataGridViewTextBoxColumn.HeaderText = "Fecha fin";
-            this.fechaFinCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechaFinCursoDataGridViewTextBoxColumn.Name = "fechaFinCursoDataGridViewTextBoxColumn";
-            this.fechaFinCursoDataGridViewTextBoxColumn.Width = 95;
-            // 
-            // horaInicioCursoDataGridViewTextBoxColumn
-            // 
-            this.horaInicioCursoDataGridViewTextBoxColumn.DataPropertyName = "horaInicioCurso";
-            this.horaInicioCursoDataGridViewTextBoxColumn.HeaderText = "horaInicioCurso";
-            this.horaInicioCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.horaInicioCursoDataGridViewTextBoxColumn.Name = "horaInicioCursoDataGridViewTextBoxColumn";
-            this.horaInicioCursoDataGridViewTextBoxColumn.Visible = false;
-            this.horaInicioCursoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // horaFinCursoDataGridViewTextBoxColumn
-            // 
-            this.horaFinCursoDataGridViewTextBoxColumn.DataPropertyName = "horaFinCurso";
-            this.horaFinCursoDataGridViewTextBoxColumn.HeaderText = "horaFinCurso";
-            this.horaFinCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.horaFinCursoDataGridViewTextBoxColumn.Name = "horaFinCursoDataGridViewTextBoxColumn";
-            this.horaFinCursoDataGridViewTextBoxColumn.Visible = false;
-            this.horaFinCursoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // lugarCursoDataGridViewTextBoxColumn
-            // 
-            this.lugarCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.lugarCursoDataGridViewTextBoxColumn.DataPropertyName = "lugarCurso";
-            this.lugarCursoDataGridViewTextBoxColumn.HeaderText = "Lugar";
-            this.lugarCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lugarCursoDataGridViewTextBoxColumn.Name = "lugarCursoDataGridViewTextBoxColumn";
-            this.lugarCursoDataGridViewTextBoxColumn.Width = 74;
-            // 
-            // aforoCursoDataGridViewTextBoxColumn
-            // 
-            this.aforoCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.aforoCursoDataGridViewTextBoxColumn.DataPropertyName = "aforoCurso";
-            this.aforoCursoDataGridViewTextBoxColumn.HeaderText = "Aforo";
-            this.aforoCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.aforoCursoDataGridViewTextBoxColumn.Name = "aforoCursoDataGridViewTextBoxColumn";
-            this.aforoCursoDataGridViewTextBoxColumn.Width = 71;
-            // 
-            // onlineCursoDataGridViewTextBoxColumn
-            // 
-            this.onlineCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.onlineCursoDataGridViewTextBoxColumn.DataPropertyName = "onlineCurso";
-            this.onlineCursoDataGridViewTextBoxColumn.HeaderText = "Online";
-            this.onlineCursoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.onlineCursoDataGridViewTextBoxColumn.Name = "onlineCursoDataGridViewTextBoxColumn";
-            this.onlineCursoDataGridViewTextBoxColumn.Visible = false;
-            this.onlineCursoDataGridViewTextBoxColumn.Width = 78;
-            // 
-            // idActividadDataGridViewTextBoxColumn
-            // 
-            this.idActividadDataGridViewTextBoxColumn.DataPropertyName = "idActividad";
-            this.idActividadDataGridViewTextBoxColumn.HeaderText = "idActividad";
-            this.idActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idActividadDataGridViewTextBoxColumn.Name = "idActividadDataGridViewTextBoxColumn";
-            this.idActividadDataGridViewTextBoxColumn.Visible = false;
-            this.idActividadDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // creadorActividadDataGridViewTextBoxColumn
-            // 
-            this.creadorActividadDataGridViewTextBoxColumn.DataPropertyName = "creadorActividad";
-            this.creadorActividadDataGridViewTextBoxColumn.HeaderText = "creadorActividad";
-            this.creadorActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.creadorActividadDataGridViewTextBoxColumn.Name = "creadorActividadDataGridViewTextBoxColumn";
-            this.creadorActividadDataGridViewTextBoxColumn.Visible = false;
-            this.creadorActividadDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nombreActividadDataGridViewTextBoxColumn
-            // 
-            this.nombreActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreActividadDataGridViewTextBoxColumn.DataPropertyName = "nombreActividad";
-            this.nombreActividadDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreActividadDataGridViewTextBoxColumn.Name = "nombreActividadDataGridViewTextBoxColumn";
-            // 
-            // descripcionActividadDataGridViewTextBoxColumn
-            // 
-            this.descripcionActividadDataGridViewTextBoxColumn.DataPropertyName = "descripcionActividad";
-            this.descripcionActividadDataGridViewTextBoxColumn.HeaderText = "descripcionActividad";
-            this.descripcionActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descripcionActividadDataGridViewTextBoxColumn.Name = "descripcionActividadDataGridViewTextBoxColumn";
-            this.descripcionActividadDataGridViewTextBoxColumn.Visible = false;
-            this.descripcionActividadDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // fechaInicioActividadDataGridViewTextBoxColumn
-            // 
-            this.fechaInicioActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.fechaInicioActividadDataGridViewTextBoxColumn.DataPropertyName = "fechaInicioActividad";
-            this.fechaInicioActividadDataGridViewTextBoxColumn.HeaderText = "Fecha inicio";
-            this.fechaInicioActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechaInicioActividadDataGridViewTextBoxColumn.Name = "fechaInicioActividadDataGridViewTextBoxColumn";
-            this.fechaInicioActividadDataGridViewTextBoxColumn.Width = 112;
-            // 
-            // fechaFinActividadDataGridViewTextBoxColumn
-            // 
-            this.fechaFinActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.fechaFinActividadDataGridViewTextBoxColumn.DataPropertyName = "fechaFinActividad";
-            this.fechaFinActividadDataGridViewTextBoxColumn.HeaderText = "Fecha fin";
-            this.fechaFinActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechaFinActividadDataGridViewTextBoxColumn.Name = "fechaFinActividadDataGridViewTextBoxColumn";
-            this.fechaFinActividadDataGridViewTextBoxColumn.Width = 95;
-            // 
-            // horaInicioActividadDataGridViewTextBoxColumn
-            // 
-            this.horaInicioActividadDataGridViewTextBoxColumn.DataPropertyName = "horaInicioActividad";
-            this.horaInicioActividadDataGridViewTextBoxColumn.HeaderText = "horaInicioActividad";
-            this.horaInicioActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.horaInicioActividadDataGridViewTextBoxColumn.Name = "horaInicioActividadDataGridViewTextBoxColumn";
-            this.horaInicioActividadDataGridViewTextBoxColumn.Visible = false;
-            this.horaInicioActividadDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // horaFinActividadDataGridViewTextBoxColumn
-            // 
-            this.horaFinActividadDataGridViewTextBoxColumn.DataPropertyName = "horaFinActividad";
-            this.horaFinActividadDataGridViewTextBoxColumn.HeaderText = "horaFinActividad";
-            this.horaFinActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.horaFinActividadDataGridViewTextBoxColumn.Name = "horaFinActividadDataGridViewTextBoxColumn";
-            this.horaFinActividadDataGridViewTextBoxColumn.Visible = false;
-            this.horaFinActividadDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // lugarActividadDataGridViewTextBoxColumn
-            // 
-            this.lugarActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.lugarActividadDataGridViewTextBoxColumn.DataPropertyName = "lugarActividad";
-            this.lugarActividadDataGridViewTextBoxColumn.HeaderText = "Lugar";
-            this.lugarActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lugarActividadDataGridViewTextBoxColumn.Name = "lugarActividadDataGridViewTextBoxColumn";
-            this.lugarActividadDataGridViewTextBoxColumn.Width = 74;
-            // 
-            // aforoActividadDataGridViewTextBoxColumn
-            // 
-            this.aforoActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.aforoActividadDataGridViewTextBoxColumn.DataPropertyName = "aforoActividad";
-            this.aforoActividadDataGridViewTextBoxColumn.HeaderText = "Aforo";
-            this.aforoActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.aforoActividadDataGridViewTextBoxColumn.Name = "aforoActividadDataGridViewTextBoxColumn";
-            this.aforoActividadDataGridViewTextBoxColumn.Width = 71;
             // 
             // panel1
             // 
