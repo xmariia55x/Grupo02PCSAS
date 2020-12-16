@@ -41,10 +41,6 @@ namespace Grupo02PCSAS
             lRol.Text = usuario.RolUsuario.RolName;
         }
 
-        private void bAtras_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -63,35 +59,40 @@ namespace Grupo02PCSAS
             this.Visible = true;
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (user.RolUsuario.RolName.Equals("ALUMNO"))
+            if (usuario.RolUsuario.RolName.Equals("ALUMNO"))
             {
-                fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(user);
+                fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(usuario);
                 this.Visible = false;
                 inicio.ShowDialog();
-                this.Visible = true;
+                
             }
-            else if (user.RolUsuario.RolName.Equals("PROFESOR"))
+            else if (usuario.RolUsuario.RolName.Equals("PROFESOR"))
             {
-                fPrincipalProfesor inicio = new fPrincipalProfesor(user);
+                fPrincipalProfesor inicio = new fPrincipalProfesor(usuario);
                 this.Visible = false;
                 inicio.ShowDialog();
-                this.Visible = true;
+                
             }
-            else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
+            else if (usuario.RolUsuario.RolName.Equals("ENTIDAD"))
             {
-                fPrincipalOng inicio = new fPrincipalOng(user);
+                fPrincipalOng inicio = new fPrincipalOng(usuario);
                 this.Visible = false;
                 inicio.ShowDialog();
-                this.Visible = true;
+                
             }
-            else if (user.RolUsuario.RolName.Equals("ADMIN"))
+            else if (usuario.RolUsuario.RolName.Equals("ADMIN"))
             {
-                fPantallaAdmin inicio = new fPantallaAdmin(user);
+                fPantallaAdmin inicio = new fPantallaAdmin(usuario);
                 this.Visible = false;
                 inicio.ShowDialog();
-                this.Visible = true;
+                
             }
         }
 

@@ -14,10 +14,12 @@ namespace Grupo02PCSAS
     public partial class fPrincipalProfesor : Form
     {
         Usuario profesor;
+        Curso seleccionado;
         public fPrincipalProfesor(Usuario u)
         {
             InitializeComponent();
             profesor = u;
+            seleccionado = null;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -43,9 +45,16 @@ namespace Grupo02PCSAS
 
         private void fPrincipalProfesor_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Curso' Puede moverla o quitarla según sea necesario.
+            this.cursoTableAdapter.Fill(this.apsgrupo02DataSet.Curso);
             lRol.Text = profesor.RolUsuario.RolName;
-            lNombre.Text = profesor.NombreUsuario;
+            lNombreUser.Text = profesor.NombreUsuario;
+            cargaGrid();
+            
+        }
 
+        private void cargaGrid()
+        {
             MySqlConnection conexion = new MySqlConnection();
             conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             conexion.Open();
@@ -62,6 +71,81 @@ namespace Grupo02PCSAS
             fCrearCursoAdmin crearCurso = new fCrearCursoAdmin(profesor);
             this.Visible = false;
             crearCurso.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dataGridView1.SelectedRows.Count > 0)
+            {
+                int idSel = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
+                seleccionado = new Curso(idSel);
+            }
+        }
+
+        private void bModCur_Click(object sender, EventArgs e)
+        {
+            if(seleccionado != null)
+            {
+                fModificarCursos modicurso = new fModificarCursos(profesor, seleccionado);
+                this.Visible = false;
+                modicurso.ShowDialog();
+                this.Visible = true;
+                cargaGrid();
+            }
+
+            //para que no se vuelva a seleccionar el mismo
+            seleccionado = null;
+        }
+
+        private void bDelCur_Click(object sender, EventArgs e)
+        {
+            if (seleccionado != null)
+            {
+                DialogResult dialogResult = MessageBox.Show("¿Desea borrar el curso?", "ALERTA", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    this.seleccionado.BorrarCurso();
+                    cargaGrid();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //do something else
+
+                }
+            }
+
+            //para que no se vuelva a seleccionar el mismo
+            seleccionado = null;
+        }
+
+        private void bInfCur_Click(object sender, EventArgs e)
+        {
+            if (seleccionado != null)
+            {
+                fInfoCurso infocurso = new fInfoCurso(profesor, seleccionado);
+                this.Visible = false;
+                infocurso.ShowDialog();
+                this.Visible = true;
+            }
+
+            //para que no se vuelva a seleccionar el mismo
+            seleccionado = null;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datosPerfil = new fDatosPerfil(profesor);
+            this.Visible = false;
+            datosPerfil.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void bEventosInscritos_Click(object sender, EventArgs e)
+        {
+            fPantallaPrincipalAlumno fAlum = new fPantallaPrincipalAlumno(profesor);
+            this.Visible = false;
+            fAlum.ShowDialog();
             this.Visible = true;
         }
     }
