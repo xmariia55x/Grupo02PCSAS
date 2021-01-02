@@ -176,7 +176,6 @@ namespace Grupo02PCSAS
             // 
             // bCrearActividad
             // 
-            this.bCrearActividad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bCrearActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bCrearActividad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCrearActividad.Location = new System.Drawing.Point(187, 716);
@@ -190,7 +189,7 @@ namespace Grupo02PCSAS
             // 
             // bCrearCurso
             // 
-            this.bCrearCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bCrearCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bCrearCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bCrearCurso.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCrearCurso.Location = new System.Drawing.Point(677, 716);
@@ -208,7 +207,7 @@ namespace Grupo02PCSAS
             // 
             // bBorrarUsuario
             // 
-            this.bBorrarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bBorrarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bBorrarUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bBorrarUsuario.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBorrarUsuario.Location = new System.Drawing.Point(1092, 367);

@@ -241,7 +241,6 @@ namespace Grupo02PCSAS
             // 
             // bAccederAlForo
             // 
-            this.bAccederAlForo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bAccederAlForo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bAccederAlForo.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAccederAlForo.Location = new System.Drawing.Point(92, 684);
@@ -254,7 +253,7 @@ namespace Grupo02PCSAS
             // 
             // bEventosInscritos
             // 
-            this.bEventosInscritos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bEventosInscritos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bEventosInscritos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bEventosInscritos.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bEventosInscritos.Location = new System.Drawing.Point(419, 684);
@@ -267,7 +266,7 @@ namespace Grupo02PCSAS
             // 
             // bCrearCurso
             // 
-            this.bCrearCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bCrearCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bCrearCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bCrearCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCrearCurso.Location = new System.Drawing.Point(766, 684);
@@ -280,7 +279,7 @@ namespace Grupo02PCSAS
             // 
             // bModCur
             // 
-            this.bModCur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bModCur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bModCur.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bModCur.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.bModCur.Location = new System.Drawing.Point(1040, 549);
@@ -294,7 +293,7 @@ namespace Grupo02PCSAS
             // 
             // bDelCur
             // 
-            this.bDelCur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bDelCur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bDelCur.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bDelCur.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.bDelCur.Location = new System.Drawing.Point(1040, 372);
@@ -308,7 +307,7 @@ namespace Grupo02PCSAS
             // 
             // bInfCur
             // 
-            this.bInfCur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bInfCur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInfCur.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInfCur.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.bInfCur.Location = new System.Drawing.Point(1040, 462);

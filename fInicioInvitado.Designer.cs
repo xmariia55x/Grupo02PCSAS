@@ -540,7 +540,7 @@ namespace Grupo02PCSAS
             // 
             // bInfoCurso
             // 
-            this.bInfoCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bInfoCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInfoCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInfoCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bInfoCurso.Location = new System.Drawing.Point(1123, 298);
@@ -553,7 +553,7 @@ namespace Grupo02PCSAS
             // 
             // bInfoActividad
             // 
-            this.bInfoActividad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bInfoActividad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInfoActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInfoActividad.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bInfoActividad.Location = new System.Drawing.Point(1123, 620);

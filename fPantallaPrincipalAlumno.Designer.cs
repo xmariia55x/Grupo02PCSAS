@@ -646,7 +646,7 @@ namespace Grupo02PCSAS
             // 
             // bInfoCurso
             // 
-            this.bInfoCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bInfoCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInfoCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInfoCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bInfoCurso.Location = new System.Drawing.Point(1123, 311);
@@ -660,7 +660,7 @@ namespace Grupo02PCSAS
             // 
             // bInsCurso
             // 
-            this.bInsCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bInsCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInsCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInsCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bInsCurso.Location = new System.Drawing.Point(1123, 382);
@@ -674,7 +674,7 @@ namespace Grupo02PCSAS
             // 
             // bInsAct
             // 
-            this.bInsAct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bInsAct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInsAct.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInsAct.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bInsAct.Location = new System.Drawing.Point(1123, 625);
@@ -688,7 +688,7 @@ namespace Grupo02PCSAS
             // 
             // bInfoAct
             // 
-            this.bInfoAct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bInfoAct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInfoAct.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInfoAct.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bInfoAct.Location = new System.Drawing.Point(1123, 554);

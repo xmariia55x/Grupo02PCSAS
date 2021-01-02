@@ -161,7 +161,7 @@
             // 
             // bEventos
             // 
-            this.bEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bEventos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bEventos.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bEventos.Location = new System.Drawing.Point(850, 692);
@@ -174,7 +174,6 @@
             // 
             // bAccederAlForo
             // 
-            this.bAccederAlForo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bAccederAlForo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bAccederAlForo.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAccederAlForo.Location = new System.Drawing.Point(155, 692);
@@ -339,7 +338,7 @@
             // 
             // bInformacion
             // 
-            this.bInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInformacion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInformacion.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bInformacion.Location = new System.Drawing.Point(1105, 469);
