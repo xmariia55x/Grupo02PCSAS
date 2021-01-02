@@ -72,6 +72,7 @@ namespace Grupo02PCSAS
             this.Visible = false;
             crearCurso.ShowDialog();
             this.Visible = true;
+            cargaGrid();
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
