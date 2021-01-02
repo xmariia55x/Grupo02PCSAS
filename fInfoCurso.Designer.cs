@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fInfoCurso));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.bParticipantes = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lHoraF = new System.Windows.Forms.Label();
@@ -78,11 +79,25 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FloralWhite;
+            this.panel5.Controls.Add(this.bParticipantes);
             this.panel5.Controls.Add(this.label20);
             this.panel5.Location = new System.Drawing.Point(0, 651);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1469, 385);
             this.panel5.TabIndex = 11;
+            // 
+            // bParticipantes
+            // 
+            this.bParticipantes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bParticipantes.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bParticipantes.Location = new System.Drawing.Point(579, 67);
+            this.bParticipantes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bParticipantes.Name = "bParticipantes";
+            this.bParticipantes.Size = new System.Drawing.Size(328, 72);
+            this.bParticipantes.TabIndex = 3;
+            this.bParticipantes.Text = "Lista de Participantes";
+            this.bParticipantes.UseVisualStyleBackColor = false;
+            this.bParticipantes.Click += new System.EventHandler(this.bParticipantes_Click);
             // 
             // label20
             // 
@@ -321,14 +336,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 177);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1302, 146);
+            this.panel2.Size = new System.Drawing.Size(1469, 146);
             this.panel2.TabIndex = 8;
             // 
             // lInscrito
             // 
             this.lInscrito.AutoSize = true;
             this.lInscrito.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lInscrito.Location = new System.Drawing.Point(1153, 59);
+            this.lInscrito.Location = new System.Drawing.Point(1250, 59);
             this.lInscrito.Name = "lInscrito";
             this.lInscrito.Size = new System.Drawing.Size(80, 26);
             this.lInscrito.TabIndex = 6;
@@ -338,7 +353,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1066, 59);
+            this.label9.Location = new System.Drawing.Point(1160, 59);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 26);
             this.label9.TabIndex = 5;
@@ -348,7 +363,7 @@
             // 
             this.lNombreCurso.AutoSize = true;
             this.lNombreCurso.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreCurso.Location = new System.Drawing.Point(590, 43);
+            this.lNombreCurso.Location = new System.Drawing.Point(438, 43);
             this.lNombreCurso.Name = "lNombreCurso";
             this.lNombreCurso.Size = new System.Drawing.Size(171, 49);
             this.lNombreCurso.TabIndex = 4;
@@ -358,7 +373,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(430, 43);
+            this.label6.Location = new System.Drawing.Point(286, 43);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(154, 49);
             this.label6.TabIndex = 3;
@@ -389,7 +404,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1302, 177);
+            this.panel1.Size = new System.Drawing.Size(1469, 177);
             this.panel1.TabIndex = 7;
             // 
             // label5
@@ -469,7 +484,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1302, 819);
+            this.ClientSize = new System.Drawing.Size(1469, 1033);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -534,5 +549,6 @@
         private System.Windows.Forms.Label lNombreUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button bParticipantes;
     }
 }

@@ -26,7 +26,7 @@ namespace Grupo02PCSAS
             MySqlConnection conexion = new MySqlConnection();
             conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             conexion.Open();
-            MySqlCommand comando = new MySqlCommand("Select asuntoDebate from Debate where creadorDebate ='" + user.CorreoUsuario + "' ORDER BY fechaPublicacion DESC", conexion);
+            MySqlCommand comando = new MySqlCommand("Select asuntoDebate as `Asunto` from Debate where creadorDebate ='" + user.CorreoUsuario + "' ORDER BY fechaPublicacion DESC", conexion);
             MySqlDataAdapter adaptador = new MySqlDataAdapter();
             adaptador.SelectCommand = comando;
             DataTable tabla = new DataTable();
@@ -34,7 +34,7 @@ namespace Grupo02PCSAS
             dgvMisDebates.DataSource = tabla;
 
             //where fechaPublicacion <'" + DateTime.Now.AddDays(-10)
-            MySqlCommand comando2 = new MySqlCommand("Select * from Debate ORDER BY fechaPublicacion DESC", conexion);
+            MySqlCommand comando2 = new MySqlCommand("Select creadorDebate as `Creador`, asuntoDebate as `Asunto`, mensajeDebate as `Mensaje`, fechaPublicacion as `Fecha publicacion` from Debate ORDER BY fechaPublicacion DESC", conexion);
             MySqlDataAdapter adaptador2 = new MySqlDataAdapter();
             adaptador2.SelectCommand = comando2;
             DataTable tabla2 = new DataTable();

@@ -41,7 +41,7 @@ namespace Grupo02PCSAS
 			lNombreDatos.Visible = true;
 			lPassword.Visible = true;
 			lCorreo.Visible = true;
-			if (user.RolUsuario.RolName.Equals("ALUMNO"))
+			if (user.RolUsuario.RolName.Equals("ALUMNO") || user.RolUsuario.RolName.Equals("ADMIN"))
             {
 				lNIU.Visible = false;
 				lCIF.Visible = false;
@@ -148,9 +148,7 @@ namespace Grupo02PCSAS
 			if (dialogResult == DialogResult.Yes)
 			{
 				this.user.BorrarUsuario();
-				fStartAplicacion start = new fStartAplicacion();
-				this.Visible = false;
-				start.ShowDialog();
+				Application.Exit();
 			}
 			else if (dialogResult == DialogResult.No)
 			{

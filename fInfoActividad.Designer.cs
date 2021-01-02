@@ -328,7 +328,7 @@
             // 
             this.lInscrito.AutoSize = true;
             this.lInscrito.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lInscrito.Location = new System.Drawing.Point(1152, 59);
+            this.lInscrito.Location = new System.Drawing.Point(1234, 59);
             this.lInscrito.Name = "lInscrito";
             this.lInscrito.Size = new System.Drawing.Size(80, 26);
             this.lInscrito.TabIndex = 6;
@@ -338,7 +338,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1065, 59);
+            this.label9.Location = new System.Drawing.Point(1147, 59);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 26);
             this.label9.TabIndex = 5;
@@ -348,7 +348,7 @@
             // 
             this.lNombreAct.AutoSize = true;
             this.lNombreAct.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreAct.Location = new System.Drawing.Point(590, 43);
+            this.lNombreAct.Location = new System.Drawing.Point(429, 43);
             this.lNombreAct.Name = "lNombreAct";
             this.lNombreAct.Size = new System.Drawing.Size(171, 49);
             this.lNombreAct.TabIndex = 4;
@@ -358,7 +358,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(360, 43);
+            this.label6.Location = new System.Drawing.Point(213, 43);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(224, 49);
             this.label6.TabIndex = 3;
@@ -469,7 +469,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1469, 844);
+            this.ClientSize = new System.Drawing.Size(1469, 1033);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);

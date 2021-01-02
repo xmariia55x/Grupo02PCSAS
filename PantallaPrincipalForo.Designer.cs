@@ -74,10 +74,14 @@ namespace Grupo02PCSAS
             // 
             // dgvDebatesRecientes
             // 
+            this.dgvDebatesRecientes.AllowUserToAddRows = false;
+            this.dgvDebatesRecientes.AllowUserToDeleteRows = false;
+            this.dgvDebatesRecientes.AllowUserToOrderColumns = true;
             this.dgvDebatesRecientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDebatesRecientes.Location = new System.Drawing.Point(403, 448);
             this.dgvDebatesRecientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDebatesRecientes.Name = "dgvDebatesRecientes";
+            this.dgvDebatesRecientes.ReadOnly = true;
             this.dgvDebatesRecientes.RowHeadersWidth = 62;
             this.dgvDebatesRecientes.RowTemplate.Height = 28;
             this.dgvDebatesRecientes.Size = new System.Drawing.Size(718, 294);
@@ -85,13 +89,17 @@ namespace Grupo02PCSAS
             // 
             // dgvMisDebates
             // 
+            this.dgvMisDebates.AllowUserToAddRows = false;
+            this.dgvMisDebates.AllowUserToDeleteRows = false;
+            this.dgvMisDebates.AllowUserToOrderColumns = true;
             this.dgvMisDebates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMisDebates.Location = new System.Drawing.Point(14, 483);
             this.dgvMisDebates.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvMisDebates.Name = "dgvMisDebates";
+            this.dgvMisDebates.ReadOnly = true;
             this.dgvMisDebates.RowHeadersWidth = 62;
             this.dgvMisDebates.RowTemplate.Height = 28;
-            this.dgvMisDebates.Size = new System.Drawing.Size(193, 224);
+            this.dgvMisDebates.Size = new System.Drawing.Size(257, 224);
             this.dgvMisDebates.TabIndex = 14;
             this.dgvMisDebates.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -144,7 +152,7 @@ namespace Grupo02PCSAS
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1302, 177);
+            this.panel1.Size = new System.Drawing.Size(1469, 177);
             this.panel1.TabIndex = 18;
             // 
             // label5
@@ -225,7 +233,7 @@ namespace Grupo02PCSAS
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1302, 819);
+            this.ClientSize = new System.Drawing.Size(1469, 1033);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.bMisDebatesForo);

@@ -74,16 +74,24 @@ namespace Grupo02PCSAS
 
         private void bInformacion_Click(object sender, EventArgs e)
         {
-            if(seleccionado != null)
+            try
             {
-                fInfoActividad info = new fInfoActividad(ong, seleccionado);
-                this.Visible = false;
-                info.ShowDialog();
-                this.Visible = true;
-            } else
+                if (seleccionado != null)
+                {
+                    fInfoActividad info = new fInfoActividad(ong, seleccionado);
+                    this.Visible = false;
+                    info.ShowDialog();
+                    this.Visible = true;
+                }
+                else
+                {
+                    throw new Exception("No hay ninguna actividad seleccionada");
+                }
+            } catch (Exception ex)
             {
-                throw new Exception("No hay ninguna actividad seleccionada");
+                MessageBox.Show("ERROR: " + ex.Message);
             }
+            
         }
     }
 }

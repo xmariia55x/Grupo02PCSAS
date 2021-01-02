@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -113,12 +128,6 @@
     <Compile Include="fDatosPerfil.Designer.cs">
       <DependentUpon>fDatosPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="fInicioSesion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fInicioSesion.Designer.cs">
-      <DependentUpon>fInicioSesion.cs</DependentUpon>
-    </Compile>
     <Compile Include="fModificarCursos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,12 +139,6 @@
     </Compile>
     <Compile Include="fNuevoDebateForo.Designer.cs">
       <DependentUpon>fNuevoDebateForo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fStartAplicacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fStartAplicacion.Designer.cs">
-      <DependentUpon>fStartAplicacion.cs</DependentUpon>
     </Compile>
     <Compile Include="fPantallaAdmin.cs">
       <SubType>Form</SubType>
@@ -208,9 +211,6 @@
     <EmbeddedResource Include="fInicioInvitado.resx">
       <DependentUpon>fInicioInvitado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fInicioSesion.resx">
-      <DependentUpon>fInicioSesion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="fModificarCursos.resx">
       <DependentUpon>fModificarCursos.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,9 +219,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fPrincipalOng.resx">
       <DependentUpon>fPrincipalOng.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fStartAplicacion.resx">
-      <DependentUpon>fStartAplicacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fPantallaAdmin.resx">
       <DependentUpon>fPantallaAdmin.cs</DependentUpon>
@@ -298,6 +295,18 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

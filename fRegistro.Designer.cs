@@ -454,7 +454,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
-            this.ClientSize = new System.Drawing.Size(1302, 819);
+            this.ClientSize = new System.Drawing.Size(1469, 1033);
             this.Controls.Add(this.pAtras);
             this.Controls.Add(this.bOng);
             this.Controls.Add(this.bProfesor);

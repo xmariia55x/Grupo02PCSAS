@@ -49,18 +49,23 @@ namespace Grupo02PCSAS
         private void comprobarInscrito()
         {
             bool inscrito = false;
-            foreach (Usuario u in ActividadesRealizadas.listaUsuarios(act.IdActividad))
+            if (user != null)
             {
-                if (user.Equals(u)) inscrito = true;
-            }
 
-            if (inscrito)
-            {
-                lInscrito.Text = "Inscrito";
-            }
-            else
-            {
-                lInscrito.Text = "No inscrito";
+
+                foreach (Usuario u in ActividadesRealizadas.listaUsuarios(act.IdActividad))
+                {
+                    if (user.CorreoUsuario.Equals(u.CorreoUsuario)) inscrito = true;
+                }
+
+                if (inscrito)
+                {
+                    lInscrito.Text = "Inscrito";
+                }
+                else
+                {
+                    lInscrito.Text = "No inscrito";
+                }
             }
         }
 

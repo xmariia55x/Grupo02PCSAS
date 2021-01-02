@@ -51,6 +51,7 @@ namespace Grupo02PCSAS
             this.lNombreUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).BeginInit();
@@ -60,6 +61,7 @@ namespace Grupo02PCSAS
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // lCurso
@@ -156,7 +158,7 @@ namespace Grupo02PCSAS
             this.lbUsuarios.Location = new System.Drawing.Point(210, 494);
             this.lbUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbUsuarios.Name = "lbUsuarios";
-            this.lbUsuarios.Size = new System.Drawing.Size(912, 200);
+            this.lbUsuarios.Size = new System.Drawing.Size(912, 172);
             this.lbUsuarios.TabIndex = 11;
             this.lbUsuarios.SelectedIndexChanged += new System.EventHandler(this.lbUsuarios_SelectedIndexChanged);
             // 
@@ -174,7 +176,7 @@ namespace Grupo02PCSAS
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1302, 177);
+            this.panel1.Size = new System.Drawing.Size(1469, 177);
             this.panel1.TabIndex = 12;
             // 
             // label5
@@ -250,12 +252,25 @@ namespace Grupo02PCSAS
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
+            this.pictureBox3.Location = new System.Drawing.Point(113, 241);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(97, 76);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // PantallaListaUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1302, 819);
+            this.ClientSize = new System.Drawing.Size(1469, 1033);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbUsuarios);
             this.Controls.Add(this.lListaUsuarios);
@@ -278,6 +293,7 @@ namespace Grupo02PCSAS
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,6 +321,7 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label lNombreUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

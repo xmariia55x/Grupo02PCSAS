@@ -65,7 +65,7 @@ namespace Grupo02PCSAS
             // 
             this.bEditarPerfil.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bEditarPerfil.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
-            this.bEditarPerfil.Location = new System.Drawing.Point(84, 815);
+            this.bEditarPerfil.Location = new System.Drawing.Point(94, 601);
             this.bEditarPerfil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bEditarPerfil.Name = "bEditarPerfil";
             this.bEditarPerfil.Size = new System.Drawing.Size(204, 91);
@@ -78,7 +78,7 @@ namespace Grupo02PCSAS
             // 
             this.bBorrarPerfil.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bBorrarPerfil.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
-            this.bBorrarPerfil.Location = new System.Drawing.Point(339, 815);
+            this.bBorrarPerfil.Location = new System.Drawing.Point(339, 601);
             this.bBorrarPerfil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bBorrarPerfil.Name = "bBorrarPerfil";
             this.bBorrarPerfil.Size = new System.Drawing.Size(204, 91);
@@ -91,9 +91,9 @@ namespace Grupo02PCSAS
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(831, 266);
+            this.label10.Location = new System.Drawing.Point(828, 217);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(458, 36);
+            this.label10.Size = new System.Drawing.Size(395, 29);
             this.label10.TabIndex = 21;
             this.label10.Text = "Mis Actividades y cursos realizados:";
             // 
@@ -103,12 +103,12 @@ namespace Grupo02PCSAS
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(767, 362);
+            this.dataGridView1.Location = new System.Drawing.Point(758, 272);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(557, 229);
+            this.dataGridView1.Size = new System.Drawing.Size(541, 145);
             this.dataGridView1.TabIndex = 22;
             // 
             // dataGridView2
@@ -117,12 +117,12 @@ namespace Grupo02PCSAS
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AllowUserToOrderColumns = true;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(767, 671);
+            this.dataGridView2.Location = new System.Drawing.Point(758, 472);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(557, 235);
+            this.dataGridView2.Size = new System.Drawing.Size(541, 148);
             this.dataGridView2.TabIndex = 47;
             // 
             // pictureBox3
@@ -150,7 +150,7 @@ namespace Grupo02PCSAS
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1465, 177);
+            this.panel1.Size = new System.Drawing.Size(1469, 177);
             this.panel1.TabIndex = 53;
             // 
             // label1
@@ -159,7 +159,7 @@ namespace Grupo02PCSAS
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(1153, 126);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 29);
+            this.label1.Size = new System.Drawing.Size(88, 26);
             this.label1.TabIndex = 7;
             this.label1.Text = "Mi perfil";
             this.label1.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -181,7 +181,7 @@ namespace Grupo02PCSAS
             this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lRol.Location = new System.Drawing.Point(551, 116);
             this.lRol.Name = "lRol";
-            this.lRol.Size = new System.Drawing.Size(73, 29);
+            this.lRol.Size = new System.Drawing.Size(63, 26);
             this.lRol.TabIndex = 5;
             this.lRol.Text = "Tu rol";
             // 
@@ -191,7 +191,7 @@ namespace Grupo02PCSAS
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(507, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 29);
+            this.label2.Size = new System.Drawing.Size(53, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "Rol: ";
             // 
@@ -201,7 +201,7 @@ namespace Grupo02PCSAS
             this.lNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNombre.Location = new System.Drawing.Point(621, 39);
             this.lNombre.Name = "lNombre";
-            this.lNombre.Size = new System.Drawing.Size(408, 52);
+            this.lNombre.Size = new System.Drawing.Size(346, 44);
             this.lNombre.TabIndex = 3;
             this.lNombre.Text = "Nombre y apellidos";
             // 
@@ -211,7 +211,7 @@ namespace Grupo02PCSAS
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(503, 38);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 57);
+            this.label4.Size = new System.Drawing.Size(112, 49);
             this.label4.TabIndex = 2;
             this.label4.Text = "Hola,";
             // 
@@ -230,9 +230,9 @@ namespace Grupo02PCSAS
             // 
             this.lNombreDatos.AutoSize = true;
             this.lNombreDatos.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreDatos.Location = new System.Drawing.Point(139, 388);
+            this.lNombreDatos.Location = new System.Drawing.Point(214, 262);
             this.lNombreDatos.Name = "lNombreDatos";
-            this.lNombreDatos.Size = new System.Drawing.Size(123, 36);
+            this.lNombreDatos.Size = new System.Drawing.Size(105, 29);
             this.lNombreDatos.TabIndex = 54;
             this.lNombreDatos.Text = "Nombre:";
             this.lNombreDatos.Click += new System.EventHandler(this.label6_Click);
@@ -241,9 +241,9 @@ namespace Grupo02PCSAS
             // 
             this.lCorreo.AutoSize = true;
             this.lCorreo.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCorreo.Location = new System.Drawing.Point(139, 472);
+            this.lCorreo.Location = new System.Drawing.Point(214, 346);
             this.lCorreo.Name = "lCorreo";
-            this.lCorreo.Size = new System.Drawing.Size(109, 36);
+            this.lCorreo.Size = new System.Drawing.Size(93, 29);
             this.lCorreo.TabIndex = 55;
             this.lCorreo.Text = "Correo:";
             // 
@@ -251,9 +251,9 @@ namespace Grupo02PCSAS
             // 
             this.lNIU.AutoSize = true;
             this.lNIU.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNIU.Location = new System.Drawing.Point(179, 634);
+            this.lNIU.Location = new System.Drawing.Point(247, 508);
             this.lNIU.Name = "lNIU";
-            this.lNIU.Size = new System.Drawing.Size(69, 36);
+            this.lNIU.Size = new System.Drawing.Size(60, 29);
             this.lNIU.TabIndex = 56;
             this.lNIU.Text = "NIU:";
             // 
@@ -261,9 +261,9 @@ namespace Grupo02PCSAS
             // 
             this.lCIF.AutoSize = true;
             this.lCIF.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCIF.Location = new System.Drawing.Point(179, 634);
+            this.lCIF.Location = new System.Drawing.Point(254, 508);
             this.lCIF.Name = "lCIF";
-            this.lCIF.Size = new System.Drawing.Size(65, 36);
+            this.lCIF.Size = new System.Drawing.Size(56, 29);
             this.lCIF.TabIndex = 57;
             this.lCIF.Text = "CIF:";
             // 
@@ -271,9 +271,9 @@ namespace Grupo02PCSAS
             // 
             this.tCIF.AutoSize = true;
             this.tCIF.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tCIF.Location = new System.Drawing.Point(285, 634);
+            this.tCIF.Location = new System.Drawing.Point(360, 508);
             this.tCIF.Name = "tCIF";
-            this.tCIF.Size = new System.Drawing.Size(92, 36);
+            this.tCIF.Size = new System.Drawing.Size(79, 29);
             this.tCIF.TabIndex = 61;
             this.tCIF.Text = "label8";
             // 
@@ -281,9 +281,9 @@ namespace Grupo02PCSAS
             // 
             this.tNIU.AutoSize = true;
             this.tNIU.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tNIU.Location = new System.Drawing.Point(285, 634);
+            this.tNIU.Location = new System.Drawing.Point(360, 508);
             this.tNIU.Name = "tNIU";
-            this.tNIU.Size = new System.Drawing.Size(92, 36);
+            this.tNIU.Size = new System.Drawing.Size(79, 29);
             this.tNIU.TabIndex = 60;
             this.tNIU.Text = "label9";
             // 
@@ -291,9 +291,9 @@ namespace Grupo02PCSAS
             // 
             this.tCorreo.AutoSize = true;
             this.tCorreo.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tCorreo.Location = new System.Drawing.Point(285, 472);
+            this.tCorreo.Location = new System.Drawing.Point(360, 346);
             this.tCorreo.Name = "tCorreo";
-            this.tCorreo.Size = new System.Drawing.Size(107, 36);
+            this.tCorreo.Size = new System.Drawing.Size(92, 29);
             this.tCorreo.TabIndex = 59;
             this.tCorreo.Text = "label11";
             // 
@@ -301,9 +301,9 @@ namespace Grupo02PCSAS
             // 
             this.tNombre.AutoSize = true;
             this.tNombre.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tNombre.Location = new System.Drawing.Point(285, 388);
+            this.tNombre.Location = new System.Drawing.Point(360, 262);
             this.tNombre.Name = "tNombre";
-            this.tNombre.Size = new System.Drawing.Size(107, 36);
+            this.tNombre.Size = new System.Drawing.Size(92, 29);
             this.tNombre.TabIndex = 58;
             this.tNombre.Text = "label12";
             // 
@@ -311,9 +311,9 @@ namespace Grupo02PCSAS
             // 
             this.tPassword.AutoSize = true;
             this.tPassword.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tPassword.Location = new System.Drawing.Point(285, 555);
+            this.tPassword.Location = new System.Drawing.Point(360, 429);
             this.tPassword.Name = "tPassword";
-            this.tPassword.Size = new System.Drawing.Size(140, 36);
+            this.tPassword.Size = new System.Drawing.Size(120, 29);
             this.tPassword.TabIndex = 63;
             this.tPassword.Text = "Password:";
             // 
@@ -321,18 +321,19 @@ namespace Grupo02PCSAS
             // 
             this.lPassword.AutoSize = true;
             this.lPassword.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPassword.Location = new System.Drawing.Point(108, 555);
+            this.lPassword.Location = new System.Drawing.Point(183, 429);
             this.lPassword.Name = "lPassword";
-            this.lPassword.Size = new System.Drawing.Size(140, 36);
+            this.lPassword.Size = new System.Drawing.Size(120, 29);
             this.lPassword.TabIndex = 62;
             this.lPassword.Text = "Password:";
             // 
             // fDatosPerfil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = false;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1465, 1024);
+            this.ClientSize = new System.Drawing.Size(1469, 1033);
             this.Controls.Add(this.tPassword);
             this.Controls.Add(this.lPassword);
             this.Controls.Add(this.tCIF);
@@ -351,7 +352,6 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.bBorrarPerfil);
             this.Controls.Add(this.bEditarPerfil);
             this.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fDatosPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos del perfil";
