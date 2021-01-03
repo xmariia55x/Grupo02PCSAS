@@ -64,6 +64,8 @@ namespace Grupo02PCSAS
             // 
             // lCursos
             // 
+            this.lCursos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lCursos.AutoSize = true;
             this.lCursos.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lCursos.Location = new System.Drawing.Point(553, 265);
@@ -77,6 +79,8 @@ namespace Grupo02PCSAS
             this.dgvMisCursos.AllowUserToAddRows = false;
             this.dgvMisCursos.AllowUserToDeleteRows = false;
             this.dgvMisCursos.AllowUserToOrderColumns = true;
+            this.dgvMisCursos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMisCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMisCursos.Location = new System.Drawing.Point(49, 397);
             this.dgvMisCursos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -119,6 +123,7 @@ namespace Grupo02PCSAS
             // 
             // bEventos
             // 
+            this.bEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.bEventos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bEventos.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bEventos.Location = new System.Drawing.Point(426, 697);
@@ -132,6 +137,7 @@ namespace Grupo02PCSAS
             // 
             // bCrearCurso
             // 
+            this.bCrearCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bCrearCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bCrearCurso.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCrearCurso.Location = new System.Drawing.Point(756, 697);
@@ -154,6 +160,7 @@ namespace Grupo02PCSAS
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.basura;
             this.pictureBox1.Location = new System.Drawing.Point(1132, 678);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -207,7 +214,7 @@ namespace Grupo02PCSAS
             // 
             this.lRol.AutoSize = true;
             this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRol.Location = new System.Drawing.Point(551, 116);
+            this.lRol.Location = new System.Drawing.Point(674, 116);
             this.lRol.Name = "lRol";
             this.lRol.Size = new System.Drawing.Size(63, 26);
             this.lRol.TabIndex = 5;
@@ -217,7 +224,7 @@ namespace Grupo02PCSAS
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(507, 116);
+            this.label1.Location = new System.Drawing.Point(615, 116);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 26);
             this.label1.TabIndex = 4;
@@ -227,7 +234,7 @@ namespace Grupo02PCSAS
             // 
             this.lNombreApellidos.AutoSize = true;
             this.lNombreApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreApellidos.Location = new System.Drawing.Point(621, 39);
+            this.lNombreApellidos.Location = new System.Drawing.Point(729, 38);
             this.lNombreApellidos.Name = "lNombreApellidos";
             this.lNombreApellidos.Size = new System.Drawing.Size(346, 44);
             this.lNombreApellidos.TabIndex = 3;
@@ -237,7 +244,7 @@ namespace Grupo02PCSAS
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(503, 38);
+            this.label2.Location = new System.Drawing.Point(611, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 49);
             this.label2.TabIndex = 2;
@@ -269,6 +276,8 @@ namespace Grupo02PCSAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1469, 1033);
             this.Controls.Add(this.pictureBox4);
@@ -280,9 +289,11 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.dgvMisCursos);
             this.Controls.Add(this.lCursos);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "PantallaBorrarCurso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cursos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PantallaBorrarCurso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource1)).EndInit();
