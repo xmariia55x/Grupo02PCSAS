@@ -16,8 +16,9 @@ namespace Grupo02PCSAS
 		private Usuario user;
         public fDatosPerfil(Usuario user)
 		{
-			InitializeComponent();
 			this.user = user;
+			InitializeComponent();
+			
 		}
 
 		private void label1_Click(object sender, EventArgs e)
@@ -164,7 +165,7 @@ namespace Grupo02PCSAS
 
         private void bEditarPerfil_Click(object sender, EventArgs e)
         {
-			fEditarPerfil edicion = new fEditarPerfil(this.user);
+			fEditarPerfil edicion = new fEditarPerfil(user);
 			this.Visible = false;
 			edicion.ShowDialog();
 			this.Visible = true;

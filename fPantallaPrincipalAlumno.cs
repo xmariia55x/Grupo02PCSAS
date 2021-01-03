@@ -319,9 +319,9 @@ namespace Grupo02PCSAS
 
         private void label5_Click(object sender, EventArgs e)
         {
-            fPantallaPrincipalAlumno fAlumno = new fPantallaPrincipalAlumno(alumno);
+            fDatosPerfil datos = new fDatosPerfil(alumno);
             this.Visible = false;
-            fAlumno.ShowDialog();
+            datos.ShowDialog();
             this.Visible = true;
         }
     }

@@ -17,8 +17,9 @@ namespace Grupo02PCSAS
         private Usuario user;
 		public fEditarPerfil(Usuario user)
 		{
+			this.user = user;
 			InitializeComponent();
-            this.user = user;
+            
 		}
         private void fEditarPerfil_Load(object sender, EventArgs e)
         {
