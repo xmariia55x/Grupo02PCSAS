@@ -16,8 +16,9 @@ namespace Grupo02PCSAS
 		private Usuario user;
         public fDatosPerfil(Usuario user)
 		{
-			InitializeComponent();
 			this.user = user;
+			InitializeComponent();
+			
 		}
 
 		private void label1_Click(object sender, EventArgs e)
@@ -36,8 +37,8 @@ namespace Grupo02PCSAS
 
 		private void fDatosPerfil_Load(object sender, EventArgs e)
 		{
-			lRol.Text = user.RolUsuario.RolName;
-			lNombre.Text = user.NombreUsuario;
+			label20.Text = user.RolUsuario.RolName;
+			lNombreUser.Text = user.NombreUsuario;
 			lNombreDatos.Visible = true;
 			lPassword.Visible = true;
 			lCorreo.Visible = true;
