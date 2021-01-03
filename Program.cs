@@ -88,8 +88,8 @@ namespace Grupo02PCSAS
             //Application.Run(new fInfoCurso(user, new Curso(22)));
 
 
-            Usuario user = new Usuario("av@gmail.com");
-            Application.Run(new PantallaBorrarCurso(user));
+           
+            Application.Run(new fInicioInvitado());
 
         }
     }
