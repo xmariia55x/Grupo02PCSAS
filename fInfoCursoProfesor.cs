@@ -20,11 +20,6 @@ namespace Grupo02PCSAS
             this.user = user;
             this.curso = curso;
             InitializeComponent();
-            InitializeComponent();
-            mostrarUsuario();
-            mostrarActividad();
-            comprobarInscrito();
-            calcularPlazasDisponibles();
             
         }
 
@@ -134,6 +129,14 @@ namespace Grupo02PCSAS
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void fInfoCursoProfesor_Load(object sender, EventArgs e)
+        {
+            mostrarUsuario();
+            mostrarActividad();
+            comprobarInscrito();
+            calcularPlazasDisponibles();
         }
     }
 }
