@@ -327,8 +327,6 @@ namespace Grupo02PCSAS
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
             this.pictureBox3.Location = new System.Drawing.Point(238, 103);
             this.pictureBox3.Name = "pictureBox3";
