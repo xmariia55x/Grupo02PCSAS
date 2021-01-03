@@ -37,8 +37,8 @@ namespace Grupo02PCSAS
 
 		private void fDatosPerfil_Load(object sender, EventArgs e)
 		{
-			lRol.Text = user.RolUsuario.RolName;
-			lNombre.Text = user.NombreUsuario;
+			label20.Text = user.RolUsuario.RolName;
+			lNombreUser.Text = user.NombreUsuario;
 			lNombreDatos.Visible = true;
 			lPassword.Visible = true;
 			lCorreo.Visible = true;
@@ -165,7 +165,7 @@ namespace Grupo02PCSAS
 
         private void bEditarPerfil_Click(object sender, EventArgs e)
         {
-			fEditarPerfil edicion = new fEditarPerfil(user);
+			fEditarPerfil edicion = new fEditarPerfil(this.user);
 			this.Visible = false;
 			edicion.ShowDialog();
 			this.Visible = true;

@@ -23,12 +23,12 @@ namespace Grupo02PCSAS
 		}
         private void fEditarPerfil_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.ActividadesRealizadas' Puede moverla o quitarla según sea necesario.
-            this.actividadesRealizadasTableAdapter.Fill(this.apsgrupo02DataSet.ActividadesRealizadas);
+			label20.Text = user.RolUsuario.RolName;
+			lNombreUser.Text = user.NombreUsuario;
+			// TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.ActividadesRealizadas' Puede moverla o quitarla según sea necesario.
+			this.actividadesRealizadasTableAdapter.Fill(this.apsgrupo02DataSet.ActividadesRealizadas);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.CursosRealizados' Puede moverla o quitarla según sea necesario.
             this.cursosRealizadosTableAdapter.Fill(this.apsgrupo02DataSet.CursosRealizados);
-            lRol.Text = user.RolUsuario.RolName;
-			lNombre.Text = user.NombreUsuario;
 			if (user.RolUsuario.RolName.Equals("ALUMNO"))
 			{
 				
@@ -64,7 +64,7 @@ namespace Grupo02PCSAS
 			MySqlConnection conexion = new MySqlConnection();
 			conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
 			conexion.Open();
-			MySqlCommand comando = new MySqlCommand("select c.nombreCurso from CursosRealizados cr join Curso c on cr.idCurso=c.idCurso where cr.correo = '" +user.CorreoUsuario+ "';", conexion);
+			MySqlCommand comando = new MySqlCommand("select c.nombreCurso as `Nombre curso` from CursosRealizados cr join Curso c on cr.idCurso=c.idCurso where cr.correo = '" +user.CorreoUsuario+ "';", conexion);
 			MySqlDataAdapter adaptador = new MySqlDataAdapter();
 			adaptador.SelectCommand = comando;
 			DataTable tabla = new DataTable();
@@ -88,7 +88,7 @@ namespace Grupo02PCSAS
 			conexion = new MySqlConnection();
 			conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
 			conexion.Open();
-			comando = new MySqlCommand("select a.nombreActividad from ActividadesRealizadas ar join Actividad a on ar.idActividad = a.idActividad " +
+			comando = new MySqlCommand("select a.nombreActividad as `Nombre actividad` from ActividadesRealizadas ar join Actividad a on ar.idActividad = a.idActividad " +
 				"where ar.correo = '" + user.CorreoUsuario+"' ;", conexion);
 			adaptador = new MySqlDataAdapter();
 			adaptador.SelectCommand = comando;
