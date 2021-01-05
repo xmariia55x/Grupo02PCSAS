@@ -72,6 +72,7 @@
       <DependentUpon>apsgrupo02DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="BDLibrary.cs" />
+    <Compile Include="MaterialActividad.cs" />
     <Compile Include="Curso.cs" />
     <Compile Include="Error.cs" />
     <Compile Include="fInicioInvitado.cs">
@@ -92,6 +93,9 @@
     <Compile Include="fPrincipalOng.Designer.cs">
       <DependentUpon>fPrincipalOng.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaterialCurso.cs" />
+    <Compile Include="Noticias.cs" />
+    <Compile Include="Mensaje.cs" />
     <Compile Include="Respuesta.cs" />
     <Compile Include="Rol.cs" />
     <Compile Include="Usuario.cs" />
