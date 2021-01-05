@@ -19,14 +19,16 @@ namespace Grupo02PCSAS
         private Usuario user;
         public PantallaListaUsuarios(Curso curso, Usuario user)
         {
-            InitializeComponent();
             this.curso = curso;
             this.user = user;
+            InitializeComponent();
+            
         }
 
         public void PantallaListaUsuarios_Load(object sender, EventArgs e)
         {
-          
+            lRol.Text = user.RolUsuario.RolName;
+            lNombreUser.Text = user.NombreUsuario;
 
             lNombreCurso.Text = curso.CursoNombre;
             lNombreProfesorCurso.Text = curso.CursoProfesor.NombreUsuario;

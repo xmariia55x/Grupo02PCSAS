@@ -88,8 +88,8 @@ namespace Grupo02PCSAS
             //Application.Run(new fInfoCurso(user, new Curso(22)));
 
 
-            
-            Application.Run(new fPantallaAdminFinal(new Usuario("admin")));
+           
+            Application.Run(new fInicioInvitado());
 
         }
     }
