@@ -104,7 +104,7 @@ namespace Grupo02PCSAS
                                 break;
 
                             case "ADMIN":
-                                fPantallaAdmin admin = new fPantallaAdmin(user);  // añadir el user
+                                fPantallaAdminFinal admin = new fPantallaAdminFinal(user);  // añadir el user
                                 this.Visible = false;
                                 admin.ShowDialog();
                                 this.Visible = true;
@@ -247,7 +247,7 @@ namespace Grupo02PCSAS
             }
             else if (user.RolUsuario.RolName.Equals("ADMIN"))
             {
-                fPantallaAdmin inicio = new fPantallaAdmin(user);
+                fPantallaAdminFinal inicio = new fPantallaAdminFinal(user);
                 this.Visible = false;
                 inicio.ShowDialog();
                 this.Visible = true;

@@ -50,7 +50,7 @@ namespace Grupo02PCSAS
             }
             else if (usuarioCreador.RolUsuario.RolName.Equals("ADMIN"))
             {
-                fPantallaAdmin inicio = new fPantallaAdmin(usuarioCreador);
+                fPantallaAdminFinal inicio = new fPantallaAdminFinal(usuarioCreador);
                 this.Visible = false;
                 inicio.ShowDialog();
                 

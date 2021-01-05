@@ -209,7 +209,7 @@ namespace Grupo02PCSAS
 			}
 			else if (user.RolUsuario.RolName.Equals("ADMIN"))
 			{
-				fPantallaAdmin inicio = new fPantallaAdmin(user);
+				fPantallaAdminFinal inicio = new fPantallaAdminFinal(user);
 				this.Visible = false;
 				inicio.ShowDialog();
 				this.Visible = true;
