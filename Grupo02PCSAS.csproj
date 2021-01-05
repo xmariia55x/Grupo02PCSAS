@@ -92,6 +92,7 @@
     <Compile Include="fPrincipalOng.Designer.cs">
       <DependentUpon>fPrincipalOng.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mensaje.cs" />
     <Compile Include="Rol.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Actividad.cs" />
