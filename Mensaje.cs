@@ -18,7 +18,7 @@ namespace Grupo02PCSAS
         private string cuerpo;
         private string fecha;
 
-
+        //Select
         public Mensaje(int id)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
@@ -31,7 +31,7 @@ namespace Grupo02PCSAS
             this.cuerpo= (string)tupla[4];
             this.fecha = (string)tupla[5];
         }
-
+        //Insert
         public Mensaje(string emisor, string receptor,int idMensaje,string asunto, string cuerpo, string fecha)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
