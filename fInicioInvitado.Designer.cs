@@ -115,6 +115,7 @@ namespace Grupo02PCSAS
             // 
             // bRegistrate
             // 
+            this.bRegistrate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bRegistrate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bRegistrate.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegistrate.Location = new System.Drawing.Point(1052, 87);
@@ -127,6 +128,7 @@ namespace Grupo02PCSAS
             // 
             // bIniciarSesión
             // 
+            this.bIniciarSesión.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bIniciarSesión.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bIniciarSesión.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bIniciarSesión.Location = new System.Drawing.Point(1052, 8);
@@ -139,9 +141,10 @@ namespace Grupo02PCSAS
             // 
             // lTienesCuenta
             // 
+            this.lTienesCuenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lTienesCuenta.AutoSize = true;
             this.lTienesCuenta.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTienesCuenta.Location = new System.Drawing.Point(707, 80);
+            this.lTienesCuenta.Location = new System.Drawing.Point(813, 111);
             this.lTienesCuenta.Name = "lTienesCuenta";
             this.lTienesCuenta.Size = new System.Drawing.Size(179, 26);
             this.lTienesCuenta.TabIndex = 10;
@@ -150,6 +153,7 @@ namespace Grupo02PCSAS
             // 
             // tbPassword
             // 
+            this.tbPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tbPassword.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.Location = new System.Drawing.Point(701, 19);
             this.tbPassword.Name = "tbPassword";
@@ -160,6 +164,7 @@ namespace Grupo02PCSAS
             // 
             // tbUsuario
             // 
+            this.tbUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tbUsuario.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUsuario.Location = new System.Drawing.Point(362, 19);
             this.tbUsuario.Name = "tbUsuario";
@@ -199,6 +204,9 @@ namespace Grupo02PCSAS
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(405, 194);
@@ -213,6 +221,8 @@ namespace Grupo02PCSAS
             this.dgvCursos.AllowUserToAddRows = false;
             this.dgvCursos.AllowUserToDeleteRows = false;
             this.dgvCursos.AllowUserToOrderColumns = true;
+            this.dgvCursos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCursos.AutoGenerateColumns = false;
             this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -362,6 +372,8 @@ namespace Grupo02PCSAS
             this.dgvActividades.AllowUserToAddRows = false;
             this.dgvActividades.AllowUserToDeleteRows = false;
             this.dgvActividades.AllowUserToOrderColumns = true;
+            this.dgvActividades.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvActividades.AutoGenerateColumns = false;
             this.dgvActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvActividades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -491,6 +503,9 @@ namespace Grupo02PCSAS
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(405, 510);
@@ -523,6 +538,7 @@ namespace Grupo02PCSAS
             // 
             // bInfoCurso
             // 
+            this.bInfoCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInfoCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInfoCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bInfoCurso.Location = new System.Drawing.Point(1123, 298);
@@ -535,6 +551,7 @@ namespace Grupo02PCSAS
             // 
             // bInfoActividad
             // 
+            this.bInfoActividad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInfoActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInfoActividad.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bInfoActividad.Location = new System.Drawing.Point(1123, 620);
@@ -557,8 +574,10 @@ namespace Grupo02PCSAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1469, 1033);
+            this.ClientSize = new System.Drawing.Size(1469, 840);
             this.Controls.Add(this.bInfoActividad);
             this.Controls.Add(this.bInfoCurso);
             this.Controls.Add(this.pictureBox3);
@@ -571,9 +590,11 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "fInicioInvitado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Inicio";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fInicioInvitado_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

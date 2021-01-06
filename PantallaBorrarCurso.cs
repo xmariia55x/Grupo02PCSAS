@@ -17,8 +17,9 @@ namespace Grupo02PCSAS
         Curso seleccionado = null;
         public PantallaBorrarCurso(Usuario user)
         {
-            InitializeComponent();
             this.user = user;
+            InitializeComponent();
+            
 
         }
 
@@ -43,7 +44,7 @@ namespace Grupo02PCSAS
                     MySqlConnection conexion = new MySqlConnection();
                     conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
                     conexion.Open();
-                    MySqlCommand comando = new MySqlCommand("Select * from Curso where profesorCurso = '" + user.CorreoUsuario + "'", conexion);
+                    MySqlCommand comando = new MySqlCommand("Select idCurso as `ID Curso`, profesorCurso as `Profesor`, nombreCurso as `Nombre`, descripcionCurso as `Descripcion`, fechaInicioCurso as `Fecha Inicio`, fechaFinCurso as `Fecha Fin`, horaInicioCurso as `Hora Inicio`, horaFinCurso as `Hora Fin`, lugarCurso as `Lugar`, aforoCurso as `Aforo`, onlineCurso as `Online` from Curso where profesorCurso = '" + user.CorreoUsuario + "'", conexion);
                     MySqlDataAdapter adaptador = new MySqlDataAdapter();
                     adaptador.SelectCommand = comando;
                     DataTable tabla = new DataTable();
@@ -63,7 +64,7 @@ namespace Grupo02PCSAS
             MySqlConnection conexion = new MySqlConnection();
             conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             conexion.Open();
-            MySqlCommand comando = new MySqlCommand("Select * from Curso where profesorCurso = '" + user.CorreoUsuario + "'", conexion);
+            MySqlCommand comando = new MySqlCommand("Select idCurso as `ID Curso`, profesorCurso as `Profesor`, nombreCurso as `Nombre`, descripcionCurso as `Descripcion`, fechaInicioCurso as `Fecha Inicio`, fechaFinCurso as `Fecha Fin`, horaInicioCurso as `Hora Inicio`, horaFinCurso as `Hora Fin`, lugarCurso as `Lugar`, aforoCurso as `Aforo`, onlineCurso as `Online`  from Curso where profesorCurso = '" + user.CorreoUsuario + "'", conexion);
             MySqlDataAdapter adaptador = new MySqlDataAdapter();
             adaptador.SelectCommand = comando;
             DataTable tabla = new DataTable();
@@ -144,7 +145,7 @@ namespace Grupo02PCSAS
             }
             else if (user.RolUsuario.RolName.Equals("ADMIN"))
             {
-                fPantallaAdmin inicio = new fPantallaAdmin(user);
+                fPantallaAdminFinal inicio = new fPantallaAdminFinal(user);
                 this.Visible = false;
                 inicio.ShowDialog();
                 this.Visible = true;

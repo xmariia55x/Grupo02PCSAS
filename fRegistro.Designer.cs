@@ -74,6 +74,7 @@
             // 
             // pOng
             // 
+            this.pOng.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pOng.Controls.Add(this.tConfirmarOng);
             this.pOng.Controls.Add(this.label9);
             this.pOng.Controls.Add(this.tPwdOng);
@@ -183,6 +184,7 @@
             // 
             // bOng
             // 
+            this.bOng.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bOng.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bOng.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bOng.Location = new System.Drawing.Point(791, 251);
@@ -195,6 +197,7 @@
             // 
             // bProfesor
             // 
+            this.bProfesor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bProfesor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bProfesor.Location = new System.Drawing.Point(610, 251);
@@ -207,6 +210,7 @@
             // 
             // bAlumno
             // 
+            this.bAlumno.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bAlumno.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.bAlumno.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAlumno.Location = new System.Drawing.Point(429, 251);
@@ -219,6 +223,7 @@
             // 
             // bRegistro
             // 
+            this.bRegistro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bRegistro.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bRegistro.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRegistro.Location = new System.Drawing.Point(620, 720);
@@ -232,6 +237,7 @@
             // 
             // pProfesor
             // 
+            this.pProfesor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pProfesor.Controls.Add(this.tConfirmarPwd);
             this.pProfesor.Controls.Add(this.label4);
             this.pProfesor.Controls.Add(this.tPwdProfesor);
@@ -341,6 +347,7 @@
             // 
             // pAlumno
             // 
+            this.pAlumno.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pAlumno.Controls.Add(this.tConfirmarAlumno);
             this.pAlumno.Controls.Add(this.label3);
             this.pAlumno.Controls.Add(this.tPwdAlumno);
@@ -430,6 +437,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
             this.pictureBox1.Location = new System.Drawing.Point(520, 24);
             this.pictureBox1.Name = "pictureBox1";
@@ -440,6 +448,7 @@
             // 
             // pAtras
             // 
+            this.pAtras.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pAtras.Image = global::Grupo02PCSAS.Properties.Resources._60577;
             this.pAtras.Location = new System.Drawing.Point(252, 93);
             this.pAtras.Name = "pAtras";
@@ -453,8 +462,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Bisque;
-            this.ClientSize = new System.Drawing.Size(1469, 1033);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.ClientSize = new System.Drawing.Size(1469, 844);
             this.Controls.Add(this.pAtras);
             this.Controls.Add(this.bOng);
             this.Controls.Add(this.bProfesor);
@@ -464,9 +475,11 @@
             this.Controls.Add(this.pOng);
             this.Controls.Add(this.pAlumno);
             this.Controls.Add(this.pProfesor);
+            this.MaximizeBox = false;
             this.Name = "fRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pOng.ResumeLayout(false);
             this.pOng.PerformLayout();
             this.pProfesor.ResumeLayout(false);

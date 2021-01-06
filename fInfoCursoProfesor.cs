@@ -15,14 +15,12 @@ namespace Grupo02PCSAS
         Usuario user;
         Curso curso;
 
-        public fInfoCursoProfesor()
+        public fInfoCursoProfesor(Usuario user, Curso curso)
         {
+            this.user = user;
+            this.curso = curso;
             InitializeComponent();
-            InitializeComponent();
-            mostrarUsuario();
-            mostrarActividad();
-            comprobarInscrito();
-            calcularPlazasDisponibles();
+            
         }
 
 
@@ -101,11 +99,44 @@ namespace Grupo02PCSAS
             }
             else if (user.RolUsuario.RolName.Equals("ADMIN"))
             {
-                fPantallaAdmin inicio = new fPantallaAdmin(user);
+                fPantallaAdminFinal inicio = new fPantallaAdminFinal(user);
                 this.Visible = false;
                 inicio.ShowDialog();
                 this.Visible = true;
             }
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void fInfoCursoProfesor_Load(object sender, EventArgs e)
+        {
+            mostrarUsuario();
+            mostrarActividad();
+            comprobarInscrito();
+            calcularPlazasDisponibles();
         }
     }
 }

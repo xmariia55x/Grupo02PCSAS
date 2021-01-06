@@ -11,32 +11,40 @@ namespace Grupo02PCSAS
         private static string BD_SERVER = Properties.Settings.Default.BD_SERVER;
         private static string BD_NAME = Properties.Settings.Default.BD_NAME;
 
+        private int id;
         private string creadorDebate;
         private string asuntoDebate;
         private string mensajeDebate;
         private string fechaPublicacion;
 
-        public Debate(string creador, string asunto)
+        public Debate(int id)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "SELECT * FROM Debate WHERE creadorDebate = '" + creador + "' AND asuntoDebate = '" + asunto + "';";
+            string sentencia = "SELECT * FROM Debate WHERE id = " + id + ";";
             object[] tupla = miBD.Select(sentencia)[0];
 
-            this.creadorDebate = creador;
-            this.asuntoDebate = asunto;
-            this.mensajeDebate = (string)tupla[2];
-            this.fechaPublicacion = (string)tupla[3];
+            this.creadorDebate = (string)tupla[1];
+            this.asuntoDebate = (string)tupla[2];
+            this.mensajeDebate = (string)tupla[3];
+            this.fechaPublicacion = (string)tupla[4];
         }
 
-        public Debate(string creador, string asunto, string mensaje, string fecha)
+        public Debate(int id,string creador, string asunto, string mensaje, string fecha)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "INSERT INTO Debate VALUES ('" + creador + "', '" + asunto + "','" + mensaje + "','" + fecha + "');";
+            string sentencia = "INSERT INTO Debate VALUES (" + id + ",'" + creador + "', '" + asunto + "','" + mensaje + "','" + fecha + "');";
             miBD.Insert(sentencia);
+            this.id = id;
             this.creadorDebate = creador;
             this.asuntoDebate = asunto;
             this.mensajeDebate = mensaje;
             this.fechaPublicacion = fecha;
+        }
+
+        public int ID
+        {
+            get { return this.id; }
+           
         }
 
         public string CreadorDebate
@@ -45,7 +53,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                string sentencia = "UPDATE Debate SET creadorDebate = '" + value + "' WHERE creadorDebate = '" + creadorDebate + "' AND asuntoDebate = '" + asuntoDebate +"';";
+                string sentencia = "UPDATE Debate SET creadorDebate = '" + value + "' WHERE id = " + id + ";";
                 miBD.Update(sentencia);
                 creadorDebate = value;
             }
@@ -57,7 +65,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                string sentencia = "UPDATE Debate SET asuntoDebate = '" + value + "' WHERE creadorDebate = '" + creadorDebate + "' AND asuntoDebate = '" + asuntoDebate + "';";
+                string sentencia = "UPDATE Debate SET asuntoDebate = '" + value + "' WHERE id = " + id + ";";
                 miBD.Update(sentencia);
                 asuntoDebate = value;
             }
@@ -69,7 +77,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                string sentencia = "UPDATE Debate SET mensajeDebate = '" + value + "' WHERE creadorDebate = '" + creadorDebate + "' AND asuntoDebate = '" + asuntoDebate + "';";
+                string sentencia = "UPDATE Debate SET mensajeDebate = '" + value + "' WHERE id = " + id + ";";
                 miBD.Update(sentencia);
                 mensajeDebate = value;
             }
@@ -81,7 +89,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                string sentencia = "UPDATE Debate SET fechaPublicacion = '" + value + "' WHERE creadorDebate = '" + creadorDebate + "' AND asuntoDebate = '" + asuntoDebate + "';";
+                string sentencia = "UPDATE Debate SET fechaPublicacion = '" + value + "' WHERE id = " + id + ";";
                 miBD.Update(sentencia);
                 fechaPublicacion = value;
             }
@@ -90,8 +98,7 @@ namespace Grupo02PCSAS
         public void BorrarDebate()
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "DELETE FROM Debate "
-                + "WHERE creadorDebate = '" + creadorDebate + "' AND asuntoDebate = '" + asuntoDebate + "';";
+            string sentencia = "DELETE * FROM Debate WHERE id = " + id + ";";
             miBD.Delete(sentencia);
             creadorDebate = null;
             asuntoDebate = null;
@@ -101,12 +108,12 @@ namespace Grupo02PCSAS
 
         public override bool Equals(object obj)
         {
-            return (obj is Debate) && (creadorDebate.Equals(((Debate)obj).creadorDebate)) && (asuntoDebate.Equals(((Debate)obj).asuntoDebate));
+            return (obj is Debate) && (id == ((Debate)obj).id);
         }
 
         public override int GetHashCode()
         {
-            return creadorDebate.GetHashCode() + asuntoDebate.GetHashCode();
+            return this.id;
         }
     }
 }

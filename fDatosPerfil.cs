@@ -16,8 +16,9 @@ namespace Grupo02PCSAS
 		private Usuario user;
         public fDatosPerfil(Usuario user)
 		{
-			InitializeComponent();
 			this.user = user;
+			InitializeComponent();
+			
 		}
 
 		private void label1_Click(object sender, EventArgs e)
@@ -36,8 +37,8 @@ namespace Grupo02PCSAS
 
 		private void fDatosPerfil_Load(object sender, EventArgs e)
 		{
-			lRol.Text = user.RolUsuario.RolName;
-			lNombre.Text = user.NombreUsuario;
+			label20.Text = user.RolUsuario.RolName;
+			lNombreUser.Text = user.NombreUsuario;
 			lNombreDatos.Visible = true;
 			lPassword.Visible = true;
 			lCorreo.Visible = true;
@@ -87,7 +88,7 @@ namespace Grupo02PCSAS
 			MySqlConnection conexion = new MySqlConnection();
 			conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
 			conexion.Open();
-			MySqlCommand comando = new MySqlCommand("select c.nombreCurso, c.fechaInicioCurso, c.fechaFinCurso, c.profesorCurso, c.lugarCurso from CursosRealizados cr join Curso c on cr.idCurso=c.idCurso where cr.correo = '" + user.CorreoUsuario + "';", conexion);
+			MySqlCommand comando = new MySqlCommand("select c.nombreCurso as `Nombre Curso`, c.fechaInicioCurso as `Fecha Inicio`, c.fechaFinCurso as `Fecha Fin`, c.profesorCurso as `Profesor`, c.lugarCurso as `Lugar` from CursosRealizados cr join Curso c on cr.idCurso=c.idCurso where cr.correo = '" + user.CorreoUsuario + "';", conexion);
 			MySqlDataAdapter adaptador = new MySqlDataAdapter();
 			adaptador.SelectCommand = comando;
 			DataTable tabla = new DataTable();
@@ -114,7 +115,7 @@ namespace Grupo02PCSAS
 			MySqlConnection conexion2 = new MySqlConnection();
 			conexion2.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
 			conexion2.Open();
-			MySqlCommand comando2 = new MySqlCommand("select a.nombreActividad, a.fechaInicioActividad, a.fechaFinActividad, a.creadorActividad, a.lugarActividad from ActividadesRealizadas ar join Actividad a on ar.idActividad = a.idActividad " +
+			MySqlCommand comando2 = new MySqlCommand("select a.nombreActividad as `Nombre Actividad`, a.fechaInicioActividad as `Fecha Inicio`, a.fechaFinActividad as `Fecha Fin`, a.creadorActividad as `Creador`, a.lugarActividad as `Lugar` from ActividadesRealizadas ar join Actividad a on ar.idActividad = a.idActividad " +
 				"where ar.correo = '" + user.CorreoUsuario + "' ;", conexion2);
 			MySqlDataAdapter adaptador2 = new MySqlDataAdapter();
 			adaptador2.SelectCommand = comando2;
@@ -148,7 +149,9 @@ namespace Grupo02PCSAS
 			if (dialogResult == DialogResult.Yes)
 			{
 				this.user.BorrarUsuario();
-				Application.Exit();
+				fInicioInvitado inicio = new fInicioInvitado();
+				this.Visible = false;
+				inicio.ShowDialog();
 			}
 			else if (dialogResult == DialogResult.No)
 			{
@@ -208,7 +211,7 @@ namespace Grupo02PCSAS
 			}
 			else if (user.RolUsuario.RolName.Equals("ADMIN"))
 			{
-				fPantallaAdmin inicio = new fPantallaAdmin(user);
+				fPantallaAdminFinal inicio = new fPantallaAdminFinal(user);
 				this.Visible = false;
 				inicio.ShowDialog();
 				this.Visible = true;

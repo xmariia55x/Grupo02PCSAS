@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,7 +51,7 @@
     <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\OneDrive\Escritorio\UNIVERSIDAD\TERCERO\GESTIÓN\MySql.Data.DLL</HintPath>
-      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\PrivateAssemblies\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -57,6 +72,7 @@
       <DependentUpon>apsgrupo02DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="BDLibrary.cs" />
+    <Compile Include="MaterialActividad.cs" />
     <Compile Include="Curso.cs" />
     <Compile Include="Error.cs" />
     <Compile Include="fInicioInvitado.cs">
@@ -65,12 +81,22 @@
     <Compile Include="fInicioInvitado.Designer.cs">
       <DependentUpon>fInicioInvitado.cs</DependentUpon>
     </Compile>
+    <Compile Include="fPantallaAdminFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPantallaAdminFinal.Designer.cs">
+      <DependentUpon>fPantallaAdminFinal.cs</DependentUpon>
+    </Compile>
     <Compile Include="fPrincipalOng.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fPrincipalOng.Designer.cs">
       <DependentUpon>fPrincipalOng.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaterialCurso.cs" />
+    <Compile Include="Noticias.cs" />
+    <Compile Include="Mensaje.cs" />
+    <Compile Include="Respuesta.cs" />
     <Compile Include="Rol.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Actividad.cs" />
@@ -124,12 +150,6 @@
     </Compile>
     <Compile Include="fNuevoDebateForo.Designer.cs">
       <DependentUpon>fNuevoDebateForo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fPantallaAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fPantallaAdmin.Designer.cs">
-      <DependentUpon>fPantallaAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="fPantallaPrincipalAlumno.cs">
       <SubType>Form</SubType>
@@ -202,11 +222,11 @@
     <EmbeddedResource Include="fNuevoDebateForo.resx">
       <DependentUpon>fNuevoDebateForo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fPantallaAdminFinal.resx">
+      <DependentUpon>fPantallaAdminFinal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fPrincipalOng.resx">
       <DependentUpon>fPrincipalOng.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fPantallaAdmin.resx">
-      <DependentUpon>fPantallaAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fPantallaPrincipalAlumno.resx">
       <DependentUpon>fPantallaPrincipalAlumno.cs</DependentUpon>
@@ -280,6 +300,18 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
