@@ -96,6 +96,7 @@
     <Compile Include="MaterialCurso.cs" />
     <Compile Include="Noticias.cs" />
     <Compile Include="Mensaje.cs" />
+    <Compile Include="PruebaConocimiento.cs" />
     <Compile Include="Respuesta.cs" />
     <Compile Include="Rol.cs" />
     <Compile Include="Usuario.cs" />
