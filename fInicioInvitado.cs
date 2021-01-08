@@ -98,9 +98,8 @@ namespace Grupo02PCSAS
                         {
                             case "ALUMNO":
                                 fPantallaPrincipalAlumno alumno = new fPantallaPrincipalAlumno(user);  // añadir el user
-                                this.Visible = false;
-                                alumno.ShowDialog();
-                                this.Visible = true;
+                                alumno.Show();
+                                this.Close();
                                 break;
 
                             case "ADMIN":
