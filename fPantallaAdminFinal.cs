@@ -35,7 +35,7 @@ namespace Grupo02PCSAS
             dgvActividades.Visible = true;
             dgvCursos.Visible = false;
             dgvUsuarios.Visible = false;
-            dgvForos.Visible = false;
+            dgvDebates.Visible = false;
             bCrear.Visible = true;
         }
 
@@ -52,7 +52,7 @@ namespace Grupo02PCSAS
             dgvActividades.Visible = false;
             dgvCursos.Visible = true;
             dgvUsuarios.Visible = false;
-            dgvForos.Visible = false; 
+            dgvDebates.Visible = false; 
             bCrear.Visible = true;
 
         }
@@ -70,7 +70,7 @@ namespace Grupo02PCSAS
             dgvActividades.Visible = false;
             dgvCursos.Visible = false;
             dgvUsuarios.Visible = true;
-            dgvForos.Visible = false;
+            dgvDebates.Visible = false;
             bCrear.Visible = false;
         }
 
@@ -87,7 +87,7 @@ namespace Grupo02PCSAS
             dgvActividades.Visible = false;
             dgvCursos.Visible = false;
             dgvUsuarios.Visible = false;
-            dgvForos.Visible = true;
+            dgvDebates.Visible = true;
             bCrear.Visible = true;
         }
 
@@ -96,7 +96,7 @@ namespace Grupo02PCSAS
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet1.Debate' Puede moverla o quitarla según sea necesario.
             this.debateTableAdapter1.Fill(this.apsgrupo02DataSet1.Debate);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Debate' Puede moverla o quitarla según sea necesario.
-            this.debateTableAdapter.Fill(this.apsgrupo02DataSet.Debate);
+            //this.debateTableAdapter.Fill(this.apsgrupo02DataSet.Debate);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.apsgrupo02DataSet.Usuario);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Curso' Puede moverla o quitarla según sea necesario.
@@ -104,11 +104,12 @@ namespace Grupo02PCSAS
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Actividad' Puede moverla o quitarla según sea necesario.
             this.actividadTableAdapter.Fill(this.apsgrupo02DataSet.Actividad);
 
-
+            lNombreApellidos.Text = user.NombreUsuario;
+            lRol.Text = user.RolUsuario.RolName;
             dgvActividades.Visible = true;
             dgvCursos.Visible = false;
             dgvUsuarios.Visible = false;
-            dgvForos.Visible = false;
+            dgvDebates.Visible = false;
             bCrear.Visible = true;
         }
 
@@ -139,7 +140,7 @@ namespace Grupo02PCSAS
                 fNuevoDebateForo foro = new fNuevoDebateForo(user);
                 this.Visible = false;
                 foro.ShowDialog();
-                this.debateTableAdapter.Fill(this.apsgrupo02DataSet.Debate);
+                this.debateTableAdapter1.Fill(this.apsgrupo02DataSet1.Debate);
                 this.Visible = true;
             }
         }
@@ -197,11 +198,11 @@ namespace Grupo02PCSAS
         }
         private void dgvForos_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvForos.SelectedRows.Count > 0)
+            if (dgvDebates.SelectedRows.Count > 0)
             {
                 try
                 {
-                    int id = (int)dgvForos.SelectedRows[0].Cells[0].Value;
+                    int id = (int)dgvDebates.SelectedRows[0].Cells[0].Value;
                     elementoSeleccionado = new Debate(id);
                 }
                 catch (Exception ex)
@@ -242,7 +243,7 @@ namespace Grupo02PCSAS
                         {
                             Debate d = (Debate)elementoSeleccionado;
                             d.BorrarDebate();
-                            this.debateTableAdapter.Fill(this.apsgrupo02DataSet.Debate);
+                            this.debateTableAdapter1.Fill(this.apsgrupo02DataSet1.Debate);
                         }
                     
                 }
@@ -252,6 +253,22 @@ namespace Grupo02PCSAS
                 MessageBox.Show("ERROR: Ningun elemento seleccionado");
             }
 
+        }
+
+        private void dgvDebates_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvDebates.SelectedRows.Count > 0)
+            {
+                try
+                {
+                    int id = (int)dgvDebates.SelectedRows[0].Cells[0].Value;
+                    elementoSeleccionado = new Debate(id);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR: " + ex.Message);
+                }
+            }
         }
     }
 }
