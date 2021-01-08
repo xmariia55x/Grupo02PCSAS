@@ -88,8 +88,10 @@ namespace Grupo02PCSAS
             //Application.Run(new fInfoCurso(user, new Curso(22)));
 
 
-           
-            Application.Run(new fInicioInvitado());
+
+            //Application.Run(new fInicioInvitado());
+            Curso c = new Curso(24);
+            MaterialCurso material = new MaterialCurso("curso prueba", "google drive", c);
 
         }
     }

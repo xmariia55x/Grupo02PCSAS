@@ -72,22 +72,32 @@ namespace Grupo02PCSAS
             this.rolUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.UsuarioTableAdapter();
-            this.debateBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.debateTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.DebateTableAdapter();
-            this.bBorrar = new System.Windows.Forms.Button();
-            this.bNoticias = new System.Windows.Forms.Button();
-            this.debateBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.debateBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvForos = new System.Windows.Forms.DataGridView();
             this.creadorDebateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.asuntoDebateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mensajeDebateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaPublicacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.debateBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.debateBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.apsgrupo02DataSet1 = new Grupo02PCSAS.apsgrupo02DataSet1();
+            this.debateBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.debateTableAdapter1 = new Grupo02PCSAS.apsgrupo02DataSet1TableAdapters.DebateTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.creadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.asuntoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mensajeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaInicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.creadorDebateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.asuntoDebateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mensajeDebateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaPublicacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.debateBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.debateTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.DebateTableAdapter();
+            this.bBorrar = new System.Windows.Forms.Button();
+            this.bNoticias = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).BeginInit();
@@ -96,11 +106,6 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -542,6 +547,58 @@ namespace Grupo02PCSAS
             this.bNoticias.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bNoticias.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bNoticias.Location = new System.Drawing.Point(538, 699);
+            this.dgvForos.AllowUserToAddRows = false;
+            this.dgvForos.AllowUserToDeleteRows = false;
+            this.dgvForos.AllowUserToOrderColumns = true;
+            this.dgvForos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvForos.AutoGenerateColumns = false;
+            this.dgvForos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvForos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.creadorDataGridViewTextBoxColumn,
+            this.asuntoDataGridViewTextBoxColumn,
+            this.mensajeDataGridViewTextBoxColumn,
+            this.fechaInicioDataGridViewTextBoxColumn});
+            this.dgvForos.DataSource = this.debateBindingSource1;
+            this.dgvForos.Location = new System.Drawing.Point(97, 334);
+            this.dgvForos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvForos.Name = "dgvForos";
+            this.dgvForos.ReadOnly = true;
+            this.dgvForos.RowHeadersWidth = 62;
+            this.dgvForos.RowTemplate.Height = 28;
+            this.dgvForos.Size = new System.Drawing.Size(1012, 326);
+            this.dgvForos.TabIndex = 67;
+            this.dgvForos.SelectionChanged += new System.EventHandler(this.dgvForos_SelectionChanged);
+            this.dgvForos.RowTemplate.Height = 28;
+            // debateBindingSource
+            this.fechaPublicacionDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.debateBindingSource.DataMember = "Debate";
+            this.debateBindingSource.DataSource = this.apsgrupo02DataSet;
+            // 
+            // debateTableAdapter
+            // 
+            this.debateTableAdapter.ClearBeforeFill = true;
+            // 
+            // bBorrar
+            // 
+            this.bBorrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bBorrar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bBorrar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBorrar.Location = new System.Drawing.Point(784, 699);
+            this.bBorrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bBorrar.Name = "bBorrar";
+            this.bBorrar.Size = new System.Drawing.Size(172, 50);
+            this.bBorrar.TabIndex = 68;
+            this.bBorrar.Text = "Borrar";
+            this.bBorrar.UseVisualStyleBackColor = false;
+            this.bBorrar.Click += new System.EventHandler(this.bBorrar_Click);
+            this.bBorrar.TabIndex = 68;
+            this.bBorrar.Text = "Borrar";
+            this.bBorrar.UseVisualStyleBackColor = false;
+            this.bNoticias.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bNoticias.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bNoticias.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bNoticias.Location = new System.Drawing.Point(538, 699);
             this.bNoticias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bNoticias.Name = "bNoticias";
             this.bNoticias.Size = new System.Drawing.Size(172, 50);
@@ -549,85 +606,86 @@ namespace Grupo02PCSAS
             this.bNoticias.Text = "Noticias";
             this.bNoticias.UseVisualStyleBackColor = false;
             this.bNoticias.Click += new System.EventHandler(this.bNoticias_Click);
+            this.bNoticias.TabIndex = 69;
+            this.bNoticias.Text = "Noticias";
+            this.bNoticias.UseVisualStyleBackColor = false;
+            this.bNoticias.Click += new System.EventHandler(this.bNoticias_Click);
+            this.bNoticias.TabIndex = 69;
+            this.bNoticias.Text = "Noticias";
+            this.bNoticias.UseVisualStyleBackColor = false;
+            this.bNoticias.Click += new System.EventHandler(this.bNoticias_Click);
+            // 
+            // apsgrupo02DataSet1
+            // 
+            this.apsgrupo02DataSet1.DataSetName = "apsgrupo02DataSet1";
+            this.apsgrupo02DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // debateBindingSource1
             // 
             this.debateBindingSource1.DataMember = "Debate";
-            this.debateBindingSource1.DataSource = this.apsgrupo02DataSet;
+            this.debateBindingSource1.DataSource = this.apsgrupo02DataSet1;
             // 
-            // debateBindingSource2
+            // debateTableAdapter1
             // 
-            this.debateBindingSource2.DataMember = "Debate";
-            this.debateBindingSource2.DataSource = this.apsgrupo02DataSet;
+            this.debateTableAdapter1.ClearBeforeFill = true;
             // 
-            // dataGridView1
+            // idDataGridViewTextBoxColumn
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.creadorDebateDataGridViewTextBoxColumn,
-            this.asuntoDebateDataGridViewTextBoxColumn,
-            this.mensajeDebateDataGridViewTextBoxColumn,
-            this.fechaPublicacionDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.debateBindingSource4;
-            this.dataGridView1.Location = new System.Drawing.Point(326, 411);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(607, 150);
-            this.dataGridView1.TabIndex = 70;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            this.idDataGridViewTextBoxColumn.Width = 125;
             // 
-            // creadorDebateDataGridViewTextBoxColumn
+            // creadorDataGridViewTextBoxColumn
             // 
-            this.creadorDebateDataGridViewTextBoxColumn.DataPropertyName = "creadorDebate";
-            this.creadorDebateDataGridViewTextBoxColumn.HeaderText = "creadorDebate";
-            this.creadorDebateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.creadorDebateDataGridViewTextBoxColumn.Name = "creadorDebateDataGridViewTextBoxColumn";
-            this.creadorDebateDataGridViewTextBoxColumn.Width = 125;
+            this.creadorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.creadorDataGridViewTextBoxColumn.DataPropertyName = "creador";
+            this.creadorDataGridViewTextBoxColumn.HeaderText = "Creador";
+            this.creadorDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.creadorDataGridViewTextBoxColumn.Name = "creadorDataGridViewTextBoxColumn";
+            this.creadorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.creadorDataGridViewTextBoxColumn.Width = 88;
             // 
-            // asuntoDebateDataGridViewTextBoxColumn
+            // asuntoDataGridViewTextBoxColumn
             // 
-            this.asuntoDebateDataGridViewTextBoxColumn.DataPropertyName = "asuntoDebate";
-            this.asuntoDebateDataGridViewTextBoxColumn.HeaderText = "asuntoDebate";
-            this.asuntoDebateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.asuntoDebateDataGridViewTextBoxColumn.Name = "asuntoDebateDataGridViewTextBoxColumn";
-            this.asuntoDebateDataGridViewTextBoxColumn.Width = 125;
+            this.asuntoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.asuntoDataGridViewTextBoxColumn.DataPropertyName = "asunto";
+            this.asuntoDataGridViewTextBoxColumn.HeaderText = "Asunto";
+            this.asuntoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.asuntoDataGridViewTextBoxColumn.Name = "asuntoDataGridViewTextBoxColumn";
+            this.asuntoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.asuntoDataGridViewTextBoxColumn.Width = 81;
             // 
-            // mensajeDebateDataGridViewTextBoxColumn
+            // mensajeDataGridViewTextBoxColumn
             // 
-            this.mensajeDebateDataGridViewTextBoxColumn.DataPropertyName = "mensajeDebate";
-            this.mensajeDebateDataGridViewTextBoxColumn.HeaderText = "mensajeDebate";
-            this.mensajeDebateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mensajeDebateDataGridViewTextBoxColumn.Name = "mensajeDebateDataGridViewTextBoxColumn";
-            this.mensajeDebateDataGridViewTextBoxColumn.Width = 125;
+            this.mensajeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mensajeDataGridViewTextBoxColumn.DataPropertyName = "mensaje";
+            this.mensajeDataGridViewTextBoxColumn.HeaderText = "Mensaje";
+            this.mensajeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.mensajeDataGridViewTextBoxColumn.Name = "mensajeDataGridViewTextBoxColumn";
+            this.mensajeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // fechaPublicacionDataGridViewTextBoxColumn
+            // fechaInicioDataGridViewTextBoxColumn
             // 
-            this.fechaPublicacionDataGridViewTextBoxColumn.DataPropertyName = "fechaPublicacion";
-            this.fechaPublicacionDataGridViewTextBoxColumn.HeaderText = "fechaPublicacion";
-            this.fechaPublicacionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechaPublicacionDataGridViewTextBoxColumn.Name = "fechaPublicacionDataGridViewTextBoxColumn";
-            this.fechaPublicacionDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // debateBindingSource4
-            // 
-            this.debateBindingSource4.DataMember = "Debate";
-            this.debateBindingSource4.DataSource = this.apsgrupo02DataSet;
-            // 
-            // debateBindingSource3
-            // 
-            this.debateBindingSource3.DataMember = "Debate";
-            this.debateBindingSource3.DataSource = this.apsgrupo02DataSet;
-            // 
+            this.fechaInicioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.fechaInicioDataGridViewTextBoxColumn.DataPropertyName = "fechaInicio";
+            this.fechaInicioDataGridViewTextBoxColumn.HeaderText = "Fecha de Inicio";
+            this.fechaInicioDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fechaInicioDataGridViewTextBoxColumn.Name = "fechaInicioDataGridViewTextBoxColumn";
+            this.fechaInicioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaInicioDataGridViewTextBoxColumn.Width = 92;
+            this.ClientSize = new System.Drawing.Size(1302, 819);
             // fPantallaAdminFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1465, 1024);
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1302, 819);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1465, 1024);
             this.Controls.Add(this.bNoticias);
             this.Controls.Add(this.bBorrar);
             this.Controls.Add(this.dgvUsuarios);
@@ -650,6 +708,8 @@ namespace Grupo02PCSAS
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).EndInit();
@@ -658,11 +718,6 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -705,24 +760,23 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private apsgrupo02DataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn correoUsuarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreUsuarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contraseniaUsuarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cifDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn niuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rolUsuarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource debateBindingSource;
-        private apsgrupo02DataSetTableAdapters.DebateTableAdapter debateTableAdapter;
         private System.Windows.Forms.Button bBorrar;
         private System.Windows.Forms.Button bNoticias;
+        private apsgrupo02DataSet1 apsgrupo02DataSet1;
         private System.Windows.Forms.BindingSource debateBindingSource1;
-        private System.Windows.Forms.BindingSource debateBindingSource2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource debateBindingSource3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn creadorDebateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn asuntoDebateDataGridViewTextBoxColumn;
+        private apsgrupo02DataSet1TableAdapters.DebateTableAdapter debateTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn creadorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn asuntoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mensajeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mensajeDebateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaPublicacionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource debateBindingSource4;
+        private System.Windows.Forms.Button bBorrar;
+        private System.Windows.Forms.Button bNoticias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mensajeDebateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaPublicacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button bBorrar;
+        private System.Windows.Forms.Button bNoticias;
     }
 }
