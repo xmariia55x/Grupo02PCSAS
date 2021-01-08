@@ -46,15 +46,8 @@ namespace Grupo02PCSAS
             this.bCrear = new System.Windows.Forms.Button();
             this.bForos = new System.Windows.Forms.Button();
             this.dgvActividades = new System.Windows.Forms.DataGridView();
-            this.actividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.apsgrupo02DataSet = new Grupo02PCSAS.apsgrupo02DataSet();
-            this.actividadTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.ActividadTableAdapter();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
-            this.cursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cursoTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.CursoTableAdapter();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuarioTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.UsuarioTableAdapter();
             this.dgvForos = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,18 +64,20 @@ namespace Grupo02PCSAS
             this.bBorrar = new System.Windows.Forms.Button();
             this.bNoticias = new System.Windows.Forms.Button();
             this.dgvDebates = new System.Windows.Forms.DataGridView();
-            this.debateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creadorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.asuntoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mensajeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInicioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.debateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.correoUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contraseniaUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.niuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rolUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.apsgrupo02DataSet = new Grupo02PCSAS.apsgrupo02DataSet();
             this.idCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.profesorCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,27 +85,32 @@ namespace Grupo02PCSAS
             this.horaInicioCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lugarCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.onlineCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creadorActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInicioActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horaInicioActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lugarActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.actividadTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.ActividadTableAdapter();
+            this.cursoTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.CursoTableAdapter();
+            this.usuarioTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.UsuarioTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvForos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDebates)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -137,7 +137,7 @@ namespace Grupo02PCSAS
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(1161, 138);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 26);
+            this.label1.Size = new System.Drawing.Size(102, 29);
             this.label1.TabIndex = 7;
             this.label1.Text = "Mi perfil";
             // 
@@ -159,7 +159,7 @@ namespace Grupo02PCSAS
             this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lRol.Location = new System.Drawing.Point(671, 116);
             this.lRol.Name = "lRol";
-            this.lRol.Size = new System.Drawing.Size(63, 26);
+            this.lRol.Size = new System.Drawing.Size(73, 29);
             this.lRol.TabIndex = 5;
             this.lRol.Text = "Tu rol";
             // 
@@ -170,7 +170,7 @@ namespace Grupo02PCSAS
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(612, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 26);
+            this.label2.Size = new System.Drawing.Size(62, 29);
             this.label2.TabIndex = 4;
             this.label2.Text = "Rol: ";
             // 
@@ -181,7 +181,7 @@ namespace Grupo02PCSAS
             this.lNombreApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNombreApellidos.Location = new System.Drawing.Point(726, 38);
             this.lNombreApellidos.Name = "lNombreApellidos";
-            this.lNombreApellidos.Size = new System.Drawing.Size(346, 44);
+            this.lNombreApellidos.Size = new System.Drawing.Size(408, 52);
             this.lNombreApellidos.TabIndex = 3;
             this.lNombreApellidos.Text = "Nombre y apellidos";
             // 
@@ -192,7 +192,7 @@ namespace Grupo02PCSAS
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(607, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 49);
+            this.label3.Size = new System.Drawing.Size(132, 57);
             this.label3.TabIndex = 2;
             this.label3.Text = "Hola,";
             // 
@@ -247,7 +247,6 @@ namespace Grupo02PCSAS
             // 
             // bCrear
             // 
-            this.bCrear.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bCrear.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bCrear.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCrear.Location = new System.Drawing.Point(298, 699);
@@ -277,7 +276,8 @@ namespace Grupo02PCSAS
             this.dgvActividades.AllowUserToAddRows = false;
             this.dgvActividades.AllowUserToDeleteRows = false;
             this.dgvActividades.AllowUserToOrderColumns = true;
-            this.dgvActividades.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvActividades.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvActividades.AutoGenerateColumns = false;
             this.dgvActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvActividades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -298,26 +298,13 @@ namespace Grupo02PCSAS
             this.dgvActividades.TabIndex = 64;
             this.dgvActividades.SelectionChanged += new System.EventHandler(this.dgvActividades_SelectionChanged);
             // 
-            // actividadBindingSource
-            // 
-            this.actividadBindingSource.DataMember = "Actividad";
-            this.actividadBindingSource.DataSource = this.apsgrupo02DataSet;
-            // 
-            // apsgrupo02DataSet
-            // 
-            this.apsgrupo02DataSet.DataSetName = "apsgrupo02DataSet";
-            this.apsgrupo02DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // actividadTableAdapter
-            // 
-            this.actividadTableAdapter.ClearBeforeFill = true;
-            // 
             // dgvCursos
             // 
             this.dgvCursos.AllowUserToAddRows = false;
             this.dgvCursos.AllowUserToDeleteRows = false;
             this.dgvCursos.AllowUserToOrderColumns = true;
-            this.dgvCursos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvCursos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCursos.AutoGenerateColumns = false;
             this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -338,15 +325,6 @@ namespace Grupo02PCSAS
             this.dgvCursos.Size = new System.Drawing.Size(1012, 326);
             this.dgvCursos.TabIndex = 65;
             this.dgvCursos.SelectionChanged += new System.EventHandler(this.dgvCursos_SelectionChanged);
-            // 
-            // cursoBindingSource
-            // 
-            this.cursoBindingSource.DataMember = "Curso";
-            this.cursoBindingSource.DataSource = this.apsgrupo02DataSet;
-            // 
-            // cursoTableAdapter
-            // 
-            this.cursoTableAdapter.ClearBeforeFill = true;
             // 
             // dgvUsuarios
             // 
@@ -373,15 +351,6 @@ namespace Grupo02PCSAS
             this.dgvUsuarios.Size = new System.Drawing.Size(1012, 326);
             this.dgvUsuarios.TabIndex = 66;
             this.dgvUsuarios.SelectionChanged += new System.EventHandler(this.dgvUsuarios_SelectionChanged);
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this.apsgrupo02DataSet;
-            // 
-            // usuarioTableAdapter
-            // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
             // dgvForos
             // 
@@ -427,7 +396,7 @@ namespace Grupo02PCSAS
             this.creadorDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.creadorDataGridViewTextBoxColumn.Name = "creadorDataGridViewTextBoxColumn";
             this.creadorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.creadorDataGridViewTextBoxColumn.Width = 125;
+            this.creadorDataGridViewTextBoxColumn.Width = 102;
             // 
             // asuntoDataGridViewTextBoxColumn
             // 
@@ -437,7 +406,7 @@ namespace Grupo02PCSAS
             this.asuntoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.asuntoDataGridViewTextBoxColumn.Name = "asuntoDataGridViewTextBoxColumn";
             this.asuntoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.asuntoDataGridViewTextBoxColumn.Width = 125;
+            this.asuntoDataGridViewTextBoxColumn.Width = 96;
             // 
             // mensajeDataGridViewTextBoxColumn
             // 
@@ -456,7 +425,7 @@ namespace Grupo02PCSAS
             this.fechaInicioDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fechaInicioDataGridViewTextBoxColumn.Name = "fechaInicioDataGridViewTextBoxColumn";
             this.fechaInicioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaInicioDataGridViewTextBoxColumn.Width = 125;
+            this.fechaInicioDataGridViewTextBoxColumn.Width = 153;
             // 
             // debateBindingSource1
             // 
@@ -498,7 +467,7 @@ namespace Grupo02PCSAS
             // 
             // bBorrar
             // 
-            this.bBorrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bBorrar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bBorrar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBorrar.Location = new System.Drawing.Point(784, 699);
@@ -547,11 +516,6 @@ namespace Grupo02PCSAS
             this.dgvDebates.TabIndex = 70;
             this.dgvDebates.SelectionChanged += new System.EventHandler(this.dgvDebates_SelectionChanged);
             // 
-            // debateBindingSource
-            // 
-            this.debateBindingSource.DataMember = "Debate";
-            this.debateBindingSource.DataSource = this.apsgrupo02DataSet1;
-            // 
             // idDataGridViewTextBoxColumn1
             // 
             this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
@@ -570,7 +534,7 @@ namespace Grupo02PCSAS
             this.creadorDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.creadorDataGridViewTextBoxColumn1.Name = "creadorDataGridViewTextBoxColumn1";
             this.creadorDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.creadorDataGridViewTextBoxColumn1.Width = 88;
+            this.creadorDataGridViewTextBoxColumn1.Width = 102;
             // 
             // asuntoDataGridViewTextBoxColumn1
             // 
@@ -580,7 +544,7 @@ namespace Grupo02PCSAS
             this.asuntoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.asuntoDataGridViewTextBoxColumn1.Name = "asuntoDataGridViewTextBoxColumn1";
             this.asuntoDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.asuntoDataGridViewTextBoxColumn1.Width = 81;
+            this.asuntoDataGridViewTextBoxColumn1.Width = 96;
             // 
             // mensajeDataGridViewTextBoxColumn1
             // 
@@ -599,7 +563,12 @@ namespace Grupo02PCSAS
             this.fechaInicioDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.fechaInicioDataGridViewTextBoxColumn1.Name = "fechaInicioDataGridViewTextBoxColumn1";
             this.fechaInicioDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.fechaInicioDataGridViewTextBoxColumn1.Width = 92;
+            this.fechaInicioDataGridViewTextBoxColumn1.Width = 153;
+            // 
+            // debateBindingSource
+            // 
+            this.debateBindingSource.DataMember = "Debate";
+            this.debateBindingSource.DataSource = this.apsgrupo02DataSet1;
             // 
             // correoUsuarioDataGridViewTextBoxColumn
             // 
@@ -654,7 +623,17 @@ namespace Grupo02PCSAS
             this.rolUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.rolUsuarioDataGridViewTextBoxColumn.Name = "rolUsuarioDataGridViewTextBoxColumn";
             this.rolUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rolUsuarioDataGridViewTextBoxColumn.Width = 58;
+            this.rolUsuarioDataGridViewTextBoxColumn.Width = 69;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this.apsgrupo02DataSet;
+            // 
+            // apsgrupo02DataSet
+            // 
+            this.apsgrupo02DataSet.DataSetName = "apsgrupo02DataSet";
+            this.apsgrupo02DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // idCursoDataGridViewTextBoxColumn
             // 
@@ -692,7 +671,7 @@ namespace Grupo02PCSAS
             this.fechaInicioCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.fechaInicioCursoDataGridViewTextBoxColumn.Name = "fechaInicioCursoDataGridViewTextBoxColumn";
             this.fechaInicioCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaInicioCursoDataGridViewTextBoxColumn.Width = 132;
+            this.fechaInicioCursoDataGridViewTextBoxColumn.Width = 153;
             // 
             // horaInicioCursoDataGridViewTextBoxColumn
             // 
@@ -702,7 +681,7 @@ namespace Grupo02PCSAS
             this.horaInicioCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.horaInicioCursoDataGridViewTextBoxColumn.Name = "horaInicioCursoDataGridViewTextBoxColumn";
             this.horaInicioCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.horaInicioCursoDataGridViewTextBoxColumn.Width = 124;
+            this.horaInicioCursoDataGridViewTextBoxColumn.Width = 143;
             // 
             // lugarCursoDataGridViewTextBoxColumn
             // 
@@ -721,7 +700,12 @@ namespace Grupo02PCSAS
             this.onlineCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.onlineCursoDataGridViewTextBoxColumn.Name = "onlineCursoDataGridViewTextBoxColumn";
             this.onlineCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.onlineCursoDataGridViewTextBoxColumn.Width = 78;
+            this.onlineCursoDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // cursoBindingSource
+            // 
+            this.cursoBindingSource.DataMember = "Curso";
+            this.cursoBindingSource.DataSource = this.apsgrupo02DataSet;
             // 
             // idActividadDataGridViewTextBoxColumn
             // 
@@ -759,7 +743,7 @@ namespace Grupo02PCSAS
             this.fechaInicioActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.fechaInicioActividadDataGridViewTextBoxColumn.Name = "fechaInicioActividadDataGridViewTextBoxColumn";
             this.fechaInicioActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaInicioActividadDataGridViewTextBoxColumn.Width = 132;
+            this.fechaInicioActividadDataGridViewTextBoxColumn.Width = 153;
             // 
             // horaInicioActividadDataGridViewTextBoxColumn
             // 
@@ -769,7 +753,7 @@ namespace Grupo02PCSAS
             this.horaInicioActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.horaInicioActividadDataGridViewTextBoxColumn.Name = "horaInicioActividadDataGridViewTextBoxColumn";
             this.horaInicioActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.horaInicioActividadDataGridViewTextBoxColumn.Width = 124;
+            this.horaInicioActividadDataGridViewTextBoxColumn.Width = 143;
             // 
             // lugarActividadDataGridViewTextBoxColumn
             // 
@@ -779,6 +763,23 @@ namespace Grupo02PCSAS
             this.lugarActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.lugarActividadDataGridViewTextBoxColumn.Name = "lugarActividadDataGridViewTextBoxColumn";
             this.lugarActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // actividadBindingSource
+            // 
+            this.actividadBindingSource.DataMember = "Actividad";
+            this.actividadBindingSource.DataSource = this.apsgrupo02DataSet;
+            // 
+            // actividadTableAdapter
+            // 
+            this.actividadTableAdapter.ClearBeforeFill = true;
+            // 
+            // cursoTableAdapter
+            // 
+            this.cursoTableAdapter.ClearBeforeFill = true;
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
             // fPantallaAdminFinal
             // 
@@ -810,17 +811,17 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvForos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDebates)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.debateBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
