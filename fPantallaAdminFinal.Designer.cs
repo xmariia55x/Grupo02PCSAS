@@ -516,7 +516,8 @@ namespace Grupo02PCSAS
             this.dgvForos.AllowUserToAddRows = false;
             this.dgvForos.AllowUserToDeleteRows = false;
             this.dgvForos.AllowUserToOrderColumns = true;
-            this.dgvForos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvForos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvForos.AutoGenerateColumns = false;
             this.dgvForos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvForos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

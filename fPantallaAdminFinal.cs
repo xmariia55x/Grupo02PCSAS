@@ -201,10 +201,8 @@ namespace Grupo02PCSAS
             {
                 try
                 {
-                    String u = (String)dgvForos.SelectedRows[0].Cells[0].Value;
-                    String u2 = (String)dgvForos.SelectedRows[0].Cells[1].Value;
-
-                    elementoSeleccionado = new Debate(u,u2);
+                    int id = (int)dgvForos.SelectedRows[0].Cells[0].Value;
+                    elementoSeleccionado = new Debate(id);
                 }
                 catch (Exception ex)
                 {
