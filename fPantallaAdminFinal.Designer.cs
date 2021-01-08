@@ -46,13 +46,32 @@ namespace Grupo02PCSAS
             this.bCrear = new System.Windows.Forms.Button();
             this.bForos = new System.Windows.Forms.Button();
             this.dgvActividades = new System.Windows.Forms.DataGridView();
+            this.idActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.creadorActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaInicioActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaInicioActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lugarActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.apsgrupo02DataSet = new Grupo02PCSAS.apsgrupo02DataSet();
             this.actividadTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.ActividadTableAdapter();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
+            this.idCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profesorCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaInicioCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaInicioCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lugarCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.onlineCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cursoTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.CursoTableAdapter();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.correoUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contraseniaUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.niuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rolUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.UsuarioTableAdapter();
             this.dgvForos = new System.Windows.Forms.DataGridView();
@@ -71,31 +90,12 @@ namespace Grupo02PCSAS
             this.bBorrar = new System.Windows.Forms.Button();
             this.bNoticias = new System.Windows.Forms.Button();
             this.dgvDebates = new System.Windows.Forms.DataGridView();
-            this.debateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creadorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.asuntoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mensajeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInicioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contraseniaUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cifDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.niuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rolUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profesorCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaInicioCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaInicioCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lugarCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.onlineCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.creadorActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaInicioActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaInicioActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lugarActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.debateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -298,6 +298,63 @@ namespace Grupo02PCSAS
             this.dgvActividades.TabIndex = 64;
             this.dgvActividades.SelectionChanged += new System.EventHandler(this.dgvActividades_SelectionChanged);
             // 
+            // idActividadDataGridViewTextBoxColumn
+            // 
+            this.idActividadDataGridViewTextBoxColumn.DataPropertyName = "idActividad";
+            this.idActividadDataGridViewTextBoxColumn.HeaderText = "idActividad";
+            this.idActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idActividadDataGridViewTextBoxColumn.Name = "idActividadDataGridViewTextBoxColumn";
+            this.idActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idActividadDataGridViewTextBoxColumn.Visible = false;
+            this.idActividadDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // creadorActividadDataGridViewTextBoxColumn
+            // 
+            this.creadorActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.creadorActividadDataGridViewTextBoxColumn.DataPropertyName = "creadorActividad";
+            this.creadorActividadDataGridViewTextBoxColumn.HeaderText = "Creador";
+            this.creadorActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.creadorActividadDataGridViewTextBoxColumn.Name = "creadorActividadDataGridViewTextBoxColumn";
+            this.creadorActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreActividadDataGridViewTextBoxColumn
+            // 
+            this.nombreActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreActividadDataGridViewTextBoxColumn.DataPropertyName = "nombreActividad";
+            this.nombreActividadDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nombreActividadDataGridViewTextBoxColumn.Name = "nombreActividadDataGridViewTextBoxColumn";
+            this.nombreActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaInicioActividadDataGridViewTextBoxColumn
+            // 
+            this.fechaInicioActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.fechaInicioActividadDataGridViewTextBoxColumn.DataPropertyName = "fechaInicioActividad";
+            this.fechaInicioActividadDataGridViewTextBoxColumn.HeaderText = "Fecha de Inicio";
+            this.fechaInicioActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.fechaInicioActividadDataGridViewTextBoxColumn.Name = "fechaInicioActividadDataGridViewTextBoxColumn";
+            this.fechaInicioActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaInicioActividadDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // horaInicioActividadDataGridViewTextBoxColumn
+            // 
+            this.horaInicioActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.horaInicioActividadDataGridViewTextBoxColumn.DataPropertyName = "horaInicioActividad";
+            this.horaInicioActividadDataGridViewTextBoxColumn.HeaderText = "Hora de Inicio";
+            this.horaInicioActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.horaInicioActividadDataGridViewTextBoxColumn.Name = "horaInicioActividadDataGridViewTextBoxColumn";
+            this.horaInicioActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.horaInicioActividadDataGridViewTextBoxColumn.Width = 114;
+            // 
+            // lugarActividadDataGridViewTextBoxColumn
+            // 
+            this.lugarActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lugarActividadDataGridViewTextBoxColumn.DataPropertyName = "lugarActividad";
+            this.lugarActividadDataGridViewTextBoxColumn.HeaderText = "Lugar";
+            this.lugarActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.lugarActividadDataGridViewTextBoxColumn.Name = "lugarActividadDataGridViewTextBoxColumn";
+            this.lugarActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // actividadBindingSource
             // 
             this.actividadBindingSource.DataMember = "Actividad";
@@ -339,6 +396,73 @@ namespace Grupo02PCSAS
             this.dgvCursos.TabIndex = 65;
             this.dgvCursos.SelectionChanged += new System.EventHandler(this.dgvCursos_SelectionChanged);
             // 
+            // idCursoDataGridViewTextBoxColumn
+            // 
+            this.idCursoDataGridViewTextBoxColumn.DataPropertyName = "idCurso";
+            this.idCursoDataGridViewTextBoxColumn.HeaderText = "idCurso";
+            this.idCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idCursoDataGridViewTextBoxColumn.Name = "idCursoDataGridViewTextBoxColumn";
+            this.idCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idCursoDataGridViewTextBoxColumn.Visible = false;
+            this.idCursoDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // profesorCursoDataGridViewTextBoxColumn
+            // 
+            this.profesorCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.profesorCursoDataGridViewTextBoxColumn.DataPropertyName = "profesorCurso";
+            this.profesorCursoDataGridViewTextBoxColumn.HeaderText = "Profesor";
+            this.profesorCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.profesorCursoDataGridViewTextBoxColumn.Name = "profesorCursoDataGridViewTextBoxColumn";
+            this.profesorCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreCursoDataGridViewTextBoxColumn
+            // 
+            this.nombreCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreCursoDataGridViewTextBoxColumn.DataPropertyName = "nombreCurso";
+            this.nombreCursoDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nombreCursoDataGridViewTextBoxColumn.Name = "nombreCursoDataGridViewTextBoxColumn";
+            this.nombreCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaInicioCursoDataGridViewTextBoxColumn
+            // 
+            this.fechaInicioCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.fechaInicioCursoDataGridViewTextBoxColumn.DataPropertyName = "fechaInicioCurso";
+            this.fechaInicioCursoDataGridViewTextBoxColumn.HeaderText = "Fecha de Inicio";
+            this.fechaInicioCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.fechaInicioCursoDataGridViewTextBoxColumn.Name = "fechaInicioCursoDataGridViewTextBoxColumn";
+            this.fechaInicioCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaInicioCursoDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // horaInicioCursoDataGridViewTextBoxColumn
+            // 
+            this.horaInicioCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.horaInicioCursoDataGridViewTextBoxColumn.DataPropertyName = "horaInicioCurso";
+            this.horaInicioCursoDataGridViewTextBoxColumn.HeaderText = "Hora de Inicio";
+            this.horaInicioCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.horaInicioCursoDataGridViewTextBoxColumn.Name = "horaInicioCursoDataGridViewTextBoxColumn";
+            this.horaInicioCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.horaInicioCursoDataGridViewTextBoxColumn.Width = 114;
+            // 
+            // lugarCursoDataGridViewTextBoxColumn
+            // 
+            this.lugarCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lugarCursoDataGridViewTextBoxColumn.DataPropertyName = "lugarCurso";
+            this.lugarCursoDataGridViewTextBoxColumn.HeaderText = "Lugar";
+            this.lugarCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.lugarCursoDataGridViewTextBoxColumn.Name = "lugarCursoDataGridViewTextBoxColumn";
+            this.lugarCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // onlineCursoDataGridViewTextBoxColumn
+            // 
+            this.onlineCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.onlineCursoDataGridViewTextBoxColumn.DataPropertyName = "onlineCurso";
+            this.onlineCursoDataGridViewTextBoxColumn.HeaderText = "Online";
+            this.onlineCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.onlineCursoDataGridViewTextBoxColumn.Name = "onlineCursoDataGridViewTextBoxColumn";
+            this.onlineCursoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.onlineCursoDataGridViewTextBoxColumn.Width = 78;
+            // 
             // cursoBindingSource
             // 
             this.cursoBindingSource.DataMember = "Curso";
@@ -353,7 +477,8 @@ namespace Grupo02PCSAS
             this.dgvUsuarios.AllowUserToAddRows = false;
             this.dgvUsuarios.AllowUserToDeleteRows = false;
             this.dgvUsuarios.AllowUserToOrderColumns = true;
-            this.dgvUsuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUsuarios.AutoGenerateColumns = false;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -373,6 +498,61 @@ namespace Grupo02PCSAS
             this.dgvUsuarios.Size = new System.Drawing.Size(1012, 326);
             this.dgvUsuarios.TabIndex = 66;
             this.dgvUsuarios.SelectionChanged += new System.EventHandler(this.dgvUsuarios_SelectionChanged);
+            // 
+            // correoUsuarioDataGridViewTextBoxColumn
+            // 
+            this.correoUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.correoUsuarioDataGridViewTextBoxColumn.DataPropertyName = "correoUsuario";
+            this.correoUsuarioDataGridViewTextBoxColumn.HeaderText = "Correo";
+            this.correoUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.correoUsuarioDataGridViewTextBoxColumn.Name = "correoUsuarioDataGridViewTextBoxColumn";
+            this.correoUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreUsuarioDataGridViewTextBoxColumn
+            // 
+            this.nombreUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreUsuarioDataGridViewTextBoxColumn.DataPropertyName = "nombreUsuario";
+            this.nombreUsuarioDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nombreUsuarioDataGridViewTextBoxColumn.Name = "nombreUsuarioDataGridViewTextBoxColumn";
+            this.nombreUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // contraseniaUsuarioDataGridViewTextBoxColumn
+            // 
+            this.contraseniaUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.contraseniaUsuarioDataGridViewTextBoxColumn.DataPropertyName = "contraseniaUsuario";
+            this.contraseniaUsuarioDataGridViewTextBoxColumn.HeaderText = "Contraseña";
+            this.contraseniaUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.contraseniaUsuarioDataGridViewTextBoxColumn.Name = "contraseniaUsuarioDataGridViewTextBoxColumn";
+            this.contraseniaUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cifDataGridViewTextBoxColumn
+            // 
+            this.cifDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cifDataGridViewTextBoxColumn.DataPropertyName = "cif";
+            this.cifDataGridViewTextBoxColumn.HeaderText = "CIF";
+            this.cifDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.cifDataGridViewTextBoxColumn.Name = "cifDataGridViewTextBoxColumn";
+            this.cifDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // niuDataGridViewTextBoxColumn
+            // 
+            this.niuDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.niuDataGridViewTextBoxColumn.DataPropertyName = "niu";
+            this.niuDataGridViewTextBoxColumn.HeaderText = "NIU";
+            this.niuDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.niuDataGridViewTextBoxColumn.Name = "niuDataGridViewTextBoxColumn";
+            this.niuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rolUsuarioDataGridViewTextBoxColumn
+            // 
+            this.rolUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.rolUsuarioDataGridViewTextBoxColumn.DataPropertyName = "rolUsuario";
+            this.rolUsuarioDataGridViewTextBoxColumn.HeaderText = "Rol";
+            this.rolUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.rolUsuarioDataGridViewTextBoxColumn.Name = "rolUsuarioDataGridViewTextBoxColumn";
+            this.rolUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rolUsuarioDataGridViewTextBoxColumn.Width = 58;
             // 
             // usuarioBindingSource
             // 
@@ -529,6 +709,8 @@ namespace Grupo02PCSAS
             this.dgvDebates.AllowUserToAddRows = false;
             this.dgvDebates.AllowUserToDeleteRows = false;
             this.dgvDebates.AllowUserToOrderColumns = true;
+            this.dgvDebates.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDebates.AutoGenerateColumns = false;
             this.dgvDebates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDebates.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -546,11 +728,6 @@ namespace Grupo02PCSAS
             this.dgvDebates.Size = new System.Drawing.Size(1012, 326);
             this.dgvDebates.TabIndex = 70;
             this.dgvDebates.SelectionChanged += new System.EventHandler(this.dgvDebates_SelectionChanged);
-            // 
-            // debateBindingSource
-            // 
-            this.debateBindingSource.DataMember = "Debate";
-            this.debateBindingSource.DataSource = this.apsgrupo02DataSet1;
             // 
             // idDataGridViewTextBoxColumn1
             // 
@@ -601,184 +778,10 @@ namespace Grupo02PCSAS
             this.fechaInicioDataGridViewTextBoxColumn1.ReadOnly = true;
             this.fechaInicioDataGridViewTextBoxColumn1.Width = 92;
             // 
-            // correoUsuarioDataGridViewTextBoxColumn
+            // debateBindingSource
             // 
-            this.correoUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.correoUsuarioDataGridViewTextBoxColumn.DataPropertyName = "correoUsuario";
-            this.correoUsuarioDataGridViewTextBoxColumn.HeaderText = "Correo";
-            this.correoUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.correoUsuarioDataGridViewTextBoxColumn.Name = "correoUsuarioDataGridViewTextBoxColumn";
-            this.correoUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreUsuarioDataGridViewTextBoxColumn
-            // 
-            this.nombreUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreUsuarioDataGridViewTextBoxColumn.DataPropertyName = "nombreUsuario";
-            this.nombreUsuarioDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.nombreUsuarioDataGridViewTextBoxColumn.Name = "nombreUsuarioDataGridViewTextBoxColumn";
-            this.nombreUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // contraseniaUsuarioDataGridViewTextBoxColumn
-            // 
-            this.contraseniaUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.contraseniaUsuarioDataGridViewTextBoxColumn.DataPropertyName = "contraseniaUsuario";
-            this.contraseniaUsuarioDataGridViewTextBoxColumn.HeaderText = "Contraseña";
-            this.contraseniaUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.contraseniaUsuarioDataGridViewTextBoxColumn.Name = "contraseniaUsuarioDataGridViewTextBoxColumn";
-            this.contraseniaUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cifDataGridViewTextBoxColumn
-            // 
-            this.cifDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cifDataGridViewTextBoxColumn.DataPropertyName = "cif";
-            this.cifDataGridViewTextBoxColumn.HeaderText = "CIF";
-            this.cifDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.cifDataGridViewTextBoxColumn.Name = "cifDataGridViewTextBoxColumn";
-            this.cifDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // niuDataGridViewTextBoxColumn
-            // 
-            this.niuDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.niuDataGridViewTextBoxColumn.DataPropertyName = "niu";
-            this.niuDataGridViewTextBoxColumn.HeaderText = "NIU";
-            this.niuDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.niuDataGridViewTextBoxColumn.Name = "niuDataGridViewTextBoxColumn";
-            this.niuDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rolUsuarioDataGridViewTextBoxColumn
-            // 
-            this.rolUsuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.rolUsuarioDataGridViewTextBoxColumn.DataPropertyName = "rolUsuario";
-            this.rolUsuarioDataGridViewTextBoxColumn.HeaderText = "Rol";
-            this.rolUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.rolUsuarioDataGridViewTextBoxColumn.Name = "rolUsuarioDataGridViewTextBoxColumn";
-            this.rolUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rolUsuarioDataGridViewTextBoxColumn.Width = 58;
-            // 
-            // idCursoDataGridViewTextBoxColumn
-            // 
-            this.idCursoDataGridViewTextBoxColumn.DataPropertyName = "idCurso";
-            this.idCursoDataGridViewTextBoxColumn.HeaderText = "idCurso";
-            this.idCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idCursoDataGridViewTextBoxColumn.Name = "idCursoDataGridViewTextBoxColumn";
-            this.idCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idCursoDataGridViewTextBoxColumn.Visible = false;
-            this.idCursoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // profesorCursoDataGridViewTextBoxColumn
-            // 
-            this.profesorCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.profesorCursoDataGridViewTextBoxColumn.DataPropertyName = "profesorCurso";
-            this.profesorCursoDataGridViewTextBoxColumn.HeaderText = "Profesor";
-            this.profesorCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.profesorCursoDataGridViewTextBoxColumn.Name = "profesorCursoDataGridViewTextBoxColumn";
-            this.profesorCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreCursoDataGridViewTextBoxColumn
-            // 
-            this.nombreCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreCursoDataGridViewTextBoxColumn.DataPropertyName = "nombreCurso";
-            this.nombreCursoDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.nombreCursoDataGridViewTextBoxColumn.Name = "nombreCursoDataGridViewTextBoxColumn";
-            this.nombreCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaInicioCursoDataGridViewTextBoxColumn
-            // 
-            this.fechaInicioCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.fechaInicioCursoDataGridViewTextBoxColumn.DataPropertyName = "fechaInicioCurso";
-            this.fechaInicioCursoDataGridViewTextBoxColumn.HeaderText = "Fecha de Inicio";
-            this.fechaInicioCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.fechaInicioCursoDataGridViewTextBoxColumn.Name = "fechaInicioCursoDataGridViewTextBoxColumn";
-            this.fechaInicioCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaInicioCursoDataGridViewTextBoxColumn.Width = 132;
-            // 
-            // horaInicioCursoDataGridViewTextBoxColumn
-            // 
-            this.horaInicioCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.horaInicioCursoDataGridViewTextBoxColumn.DataPropertyName = "horaInicioCurso";
-            this.horaInicioCursoDataGridViewTextBoxColumn.HeaderText = "Hora de Inicio";
-            this.horaInicioCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.horaInicioCursoDataGridViewTextBoxColumn.Name = "horaInicioCursoDataGridViewTextBoxColumn";
-            this.horaInicioCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.horaInicioCursoDataGridViewTextBoxColumn.Width = 124;
-            // 
-            // lugarCursoDataGridViewTextBoxColumn
-            // 
-            this.lugarCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lugarCursoDataGridViewTextBoxColumn.DataPropertyName = "lugarCurso";
-            this.lugarCursoDataGridViewTextBoxColumn.HeaderText = "Lugar";
-            this.lugarCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.lugarCursoDataGridViewTextBoxColumn.Name = "lugarCursoDataGridViewTextBoxColumn";
-            this.lugarCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // onlineCursoDataGridViewTextBoxColumn
-            // 
-            this.onlineCursoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.onlineCursoDataGridViewTextBoxColumn.DataPropertyName = "onlineCurso";
-            this.onlineCursoDataGridViewTextBoxColumn.HeaderText = "Online";
-            this.onlineCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.onlineCursoDataGridViewTextBoxColumn.Name = "onlineCursoDataGridViewTextBoxColumn";
-            this.onlineCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.onlineCursoDataGridViewTextBoxColumn.Width = 78;
-            // 
-            // idActividadDataGridViewTextBoxColumn
-            // 
-            this.idActividadDataGridViewTextBoxColumn.DataPropertyName = "idActividad";
-            this.idActividadDataGridViewTextBoxColumn.HeaderText = "idActividad";
-            this.idActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idActividadDataGridViewTextBoxColumn.Name = "idActividadDataGridViewTextBoxColumn";
-            this.idActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idActividadDataGridViewTextBoxColumn.Visible = false;
-            this.idActividadDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // creadorActividadDataGridViewTextBoxColumn
-            // 
-            this.creadorActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.creadorActividadDataGridViewTextBoxColumn.DataPropertyName = "creadorActividad";
-            this.creadorActividadDataGridViewTextBoxColumn.HeaderText = "Creador";
-            this.creadorActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.creadorActividadDataGridViewTextBoxColumn.Name = "creadorActividadDataGridViewTextBoxColumn";
-            this.creadorActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreActividadDataGridViewTextBoxColumn
-            // 
-            this.nombreActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreActividadDataGridViewTextBoxColumn.DataPropertyName = "nombreActividad";
-            this.nombreActividadDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.nombreActividadDataGridViewTextBoxColumn.Name = "nombreActividadDataGridViewTextBoxColumn";
-            this.nombreActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaInicioActividadDataGridViewTextBoxColumn
-            // 
-            this.fechaInicioActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.fechaInicioActividadDataGridViewTextBoxColumn.DataPropertyName = "fechaInicioActividad";
-            this.fechaInicioActividadDataGridViewTextBoxColumn.HeaderText = "Fecha de Inicio";
-            this.fechaInicioActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.fechaInicioActividadDataGridViewTextBoxColumn.Name = "fechaInicioActividadDataGridViewTextBoxColumn";
-            this.fechaInicioActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaInicioActividadDataGridViewTextBoxColumn.Width = 132;
-            // 
-            // horaInicioActividadDataGridViewTextBoxColumn
-            // 
-            this.horaInicioActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.horaInicioActividadDataGridViewTextBoxColumn.DataPropertyName = "horaInicioActividad";
-            this.horaInicioActividadDataGridViewTextBoxColumn.HeaderText = "Hora de Inicio";
-            this.horaInicioActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.horaInicioActividadDataGridViewTextBoxColumn.Name = "horaInicioActividadDataGridViewTextBoxColumn";
-            this.horaInicioActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.horaInicioActividadDataGridViewTextBoxColumn.Width = 124;
-            // 
-            // lugarActividadDataGridViewTextBoxColumn
-            // 
-            this.lugarActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lugarActividadDataGridViewTextBoxColumn.DataPropertyName = "lugarActividad";
-            this.lugarActividadDataGridViewTextBoxColumn.HeaderText = "Lugar";
-            this.lugarActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.lugarActividadDataGridViewTextBoxColumn.Name = "lugarActividadDataGridViewTextBoxColumn";
-            this.lugarActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.debateBindingSource.DataMember = "Debate";
+            this.debateBindingSource.DataSource = this.apsgrupo02DataSet1;
             // 
             // fPantallaAdminFinal
             // 
