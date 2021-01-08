@@ -93,6 +93,8 @@ namespace Grupo02PCSAS
 
         private void fpantallaAdminFinal_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet1.Debate' Puede moverla o quitarla según sea necesario.
+            this.debateTableAdapter1.Fill(this.apsgrupo02DataSet1.Debate);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Debate' Puede moverla o quitarla según sea necesario.
             this.debateTableAdapter.Fill(this.apsgrupo02DataSet.Debate);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Usuario' Puede moverla o quitarla según sea necesario.
