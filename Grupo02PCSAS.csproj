@@ -77,6 +77,12 @@
       <DependentUpon>apsgrupo02DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="BDLibrary.cs" />
+    <Compile Include="fBandejaMensajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBandejaMensajes.Designer.cs">
+      <DependentUpon>fBandejaMensajes.cs</DependentUpon>
+    </Compile>
     <Compile Include="MaterialActividad.cs" />
     <Compile Include="Curso.cs" />
     <Compile Include="Error.cs" />
@@ -201,6 +207,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fBandejaMensajes.resx">
+      <DependentUpon>fBandejaMensajes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fCrearActividadAdmin.resx">
       <DependentUpon>fCrearActividadAdmin.cs</DependentUpon>
     </EmbeddedResource>
