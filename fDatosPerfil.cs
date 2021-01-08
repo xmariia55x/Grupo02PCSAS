@@ -222,5 +222,13 @@ namespace Grupo02PCSAS
         {
 
         }
+
+        private void bMensajes_Click(object sender, EventArgs e)
+        {
+			fBandejaMensajes f = new fBandejaMensajes(this.user);
+			this.Visible = false;
+			f.ShowDialog();
+			this.Visible = true;
+		}
     }
 }
