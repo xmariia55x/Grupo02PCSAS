@@ -31,6 +31,7 @@ namespace Grupo02PCSAS
             this.cuerpo= (string)tupla[4];
             this.fecha = (string)tupla[5];
         }
+
         //Insert
         public Mensaje(string emisor, string receptor,int idMensaje,string asunto, string cuerpo, string fecha)
         {
