@@ -29,12 +29,12 @@ namespace Grupo02PCSAS
             this.fechaPublicacion = (string)tupla[4];
         }
 
-        public Debate(int id,string creador, string asunto, string mensaje, string fecha)
+        public Debate(string creador, string asunto, string mensaje, string fecha)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "INSERT INTO Debate VALUES (" + id + ",'" + creador + "', '" + asunto + "','" + mensaje + "','" + fecha + "');";
+            string sentencia = "INSERT INTO Debate VALUES ('" + creador + "', '" + asunto + "','" + mensaje + "','" + fecha + "');";
             miBD.Insert(sentencia);
-            this.id = id;
+            this.id = (int) miBD.SelectScalar("SELECT MAX(id) FROM Debate");
             this.creadorDebate = creador;
             this.asuntoDebate = asunto;
             this.mensajeDebate = mensaje;

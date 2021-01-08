@@ -29,14 +29,14 @@ namespace Grupo02PCSAS
             this.creador = new Usuario((string)tupla[2]);
             this.mensaje = (string)tupla[3];
             this.fecha = (string)tupla[4];
-           
+
         }
 
         public Respuesta(int idRespuesta, Debate debate, Usuario creador, string mensaje, string fecha)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
 
-            string sentencia = "INSERT INTO Respuesta VALUES (" + 0 + "," + debate.ID + ", '"+ creador.CorreoUsuario +"', '" + mensaje + "','" + fecha + "');";
+            string sentencia = "INSERT INTO Respuesta VALUES (" + 0 + "," + debate.ID + ", '" + creador.CorreoUsuario + "', '" + mensaje + "','" + fecha + "');";
             miBD.Insert(sentencia);
 
             this.idRespuesta = (int)miBD.SelectScalar("SELECT MAX(idRespuesta) FROM Respuesta;"); ;
@@ -95,7 +95,7 @@ namespace Grupo02PCSAS
         }
         public string FechaRespuesta
         {
-            get { return this.fecha;}
+            get { return this.fecha; }
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
@@ -103,10 +103,10 @@ namespace Grupo02PCSAS
                 this.fecha = value;
             }
         }
-        
 
-       
-     
+
+
+
 
         public void BorrarRespuesta()
         {
@@ -134,9 +134,4 @@ namespace Grupo02PCSAS
 
 
     }
-
-
-
-
-}
 }
