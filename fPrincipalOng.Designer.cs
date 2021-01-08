@@ -56,6 +56,7 @@
             this.bInformacion = new System.Windows.Forms.Button();
             this.actividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.actividadTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.ActividadTableAdapter();
+            this.bCrearActividad = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -365,6 +366,19 @@
             // 
             this.actividadTableAdapter.ClearBeforeFill = true;
             // 
+            // bCrearActividad
+            // 
+            this.bCrearActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bCrearActividad.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bCrearActividad.Location = new System.Drawing.Point(568, 865);
+            this.bCrearActividad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bCrearActividad.Name = "bCrearActividad";
+            this.bCrearActividad.Size = new System.Drawing.Size(204, 79);
+            this.bCrearActividad.TabIndex = 57;
+            this.bCrearActividad.Text = "Crear Actividad";
+            this.bCrearActividad.UseVisualStyleBackColor = false;
+            this.bCrearActividad.Click += new System.EventHandler(this.bCrearActividad_Click);
+            // 
             // fPrincipalOng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -373,6 +387,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1653, 1050);
+            this.Controls.Add(this.bCrearActividad);
             this.Controls.Add(this.bInformacion);
             this.Controls.Add(this.bEventos);
             this.Controls.Add(this.bAccederAlForo);
@@ -428,5 +443,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn horaFinActividadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lugarActividadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aforoActividadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button bCrearActividad;
     }
 }

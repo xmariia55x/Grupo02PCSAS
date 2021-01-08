@@ -93,5 +93,13 @@ namespace Grupo02PCSAS
             }
             
         }
+
+        private void bCrearActividad_Click(object sender, EventArgs e)
+        {
+            fCrearActividadAdmin a = new fCrearActividadAdmin(ong);
+            this.Visible = false;
+            a.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

@@ -80,9 +80,8 @@ namespace Grupo02PCSAS
         private void button1_Click(object sender, EventArgs e)
         {
             PantallaPrincipalForo foro = new PantallaPrincipalForo(alumno);
-            this.Visible = false;
-            foro.ShowDialog();
-            this.Visible = true;
+            foro.Show();
+            this.Close();
         }
 
         private void dgvNuevosCursos_SelectionChanged(object sender, EventArgs e)
@@ -116,9 +115,8 @@ namespace Grupo02PCSAS
                 else
                 {
                     fInfoCurso info = new fInfoCurso(alumno, cursoSeleccionado);
-                    this.Visible = false;
-                    info.ShowDialog();
-                    this.Visible = true;
+                    info.Show();
+                    this.Close();
                 }
             } catch (Exception ex)
             {
@@ -231,9 +229,8 @@ namespace Grupo02PCSAS
                 else
                 {
                     fInfoActividad info = new fInfoActividad(alumno, actividadSeleccionada);
-                    this.Visible = false;
-                    info.ShowDialog();
-                    this.Visible = true;
+                    info.Show();
+                    this.Close();
                 }
             } catch (Exception ex)
             {
@@ -298,9 +295,8 @@ namespace Grupo02PCSAS
                 {
                     int id = (int) dgvMisCursos.SelectedRows[0].Cells[0].Value;
                     fInfoCurso info = new fInfoCurso(alumno, new Curso(id));
-                    this.Visible = false;
-                    info.ShowDialog();
-                    this.Visible = true;
+                    info.Show();
+                    this.Close();
                 }
             }
             catch (Exception ex)
@@ -312,17 +308,15 @@ namespace Grupo02PCSAS
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(alumno);
-            this.Visible = false;
-            datos.ShowDialog();
-            this.Visible = true;
+            datos.Show();
+            this.Close();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(alumno);
-            this.Visible = false;
-            datos.ShowDialog();
-            this.Visible = true;
+            datos.Show();
+            this.Close();
         }
     }
 }
