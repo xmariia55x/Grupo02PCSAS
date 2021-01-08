@@ -18,6 +18,21 @@ namespace Grupo02PCSAS
         private string cuerpo;
         private string fecha;
 
+        public static List<Mensaje> listaMensajesRecibidos(string correo)
+        {
+            List<Mensaje> lista = new List<Mensaje>();
+            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+
+            foreach (object[] tupla in miBD.Select("SELECT idMensaje FROM Mensaje WHERE receptor = '" + correo + "';"))
+            {
+                int idMensaje = (int)tupla[0];
+                lista.Add(new Mensaje(idMensaje));
+            }
+
+            return lista;
+        }
+
+
         //Select
         public Mensaje(int id)
         {
