@@ -166,8 +166,8 @@ namespace Grupo02PCSAS
         private void bParticipantes_Click(object sender, EventArgs e)
         {
             PantallaListaUsuarios usu = new PantallaListaUsuarios(curso, user);
-            this.Visible = false;
-            usu.ShowDialog();
+            usu.Show();
+            this.Close();
             //this.Visible = true;
         }
     }

@@ -450,6 +450,7 @@ namespace Grupo02PCSAS
             this.bMensajes.TabIndex = 64;
             this.bMensajes.Text = "Mis Mensajes";
             this.bMensajes.UseVisualStyleBackColor = false;
+            this.bMensajes.Click += new System.EventHandler(this.bMensajes_Click);
             // 
             // fDatosPerfil
             // 

@@ -12,9 +12,21 @@ namespace Grupo02PCSAS
 {
     public partial class fBandejaMensajes : Form
     {
-        public fBandejaMensajes()
+        private Usuario user;
+        public fBandejaMensajes(Usuario u)
         {
             InitializeComponent();
+            this.user = u;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fBandejaMensajes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
