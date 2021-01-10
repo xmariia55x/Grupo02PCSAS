@@ -24,12 +24,13 @@ namespace Grupo02PCSAS
         {
             this.user = user;
             this.curso = curso;
-
+            this.enlace = null;
             InitializeComponent();
         }
 
         private void fInfoCurso_Load(object sender, EventArgs e)
         {
+            
             if (user == null)
             {
                 pictureBox2.Visible = false;
@@ -50,12 +51,20 @@ namespace Grupo02PCSAS
             mostrarCurso();
             calcularPlazasDisponibles();
 
+            Console.WriteLine(curso.CursoID);
+
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
             string sentencia = "SELECT enlace FROM MaterialCurso WHERE idCurso = " + curso.CursoID + ";";
+            Console.WriteLine("Llegue aqui");
             object[] tupla = miBD.Select(sentencia)[0];
+            
+            this.enlace = Convert.ToString(tupla[0]);
 
-            enlace = (string)tupla[0];
-            if (enlace == null || enlace.Equals("")) pictureBox4.Visible = false;
+            Console.WriteLine("Llegue aqui");
+
+            if (this.enlace == null || this.enlace.Equals("")) pictureBox4.Visible = false;
+
+
         }
 
         private void calcularPlazasDisponibles()
@@ -185,7 +194,7 @@ namespace Grupo02PCSAS
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Process.Start(enlace);
+            Process.Start(this.enlace);
         }
     }
 
