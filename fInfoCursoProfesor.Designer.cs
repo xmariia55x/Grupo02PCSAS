@@ -65,6 +65,9 @@
             this.lNombreUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bRecordar = new System.Windows.Forms.Button();
+            this.bEditarPrueba = new System.Windows.Forms.Button();
+            this.bEliminarPrueba = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,6 +84,9 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FloralWhite;
+            this.panel5.Controls.Add(this.bEliminarPrueba);
+            this.panel5.Controls.Add(this.bEditarPrueba);
+            this.panel5.Controls.Add(this.bRecordar);
             this.panel5.Controls.Add(this.label20);
             this.panel5.Location = new System.Drawing.Point(1, 651);
             this.panel5.Name = "panel5";
@@ -539,6 +545,40 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // bRecordar
+            // 
+            this.bRecordar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bRecordar.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bRecordar.Location = new System.Drawing.Point(1172, 22);
+            this.bRecordar.Name = "bRecordar";
+            this.bRecordar.Size = new System.Drawing.Size(160, 48);
+            this.bRecordar.TabIndex = 3;
+            this.bRecordar.Text = "Recordar";
+            this.bRecordar.UseVisualStyleBackColor = false;
+            this.bRecordar.Click += new System.EventHandler(this.bRecordar_Click);
+            // 
+            // bEditarPrueba
+            // 
+            this.bEditarPrueba.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bEditarPrueba.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bEditarPrueba.Location = new System.Drawing.Point(1172, 76);
+            this.bEditarPrueba.Name = "bEditarPrueba";
+            this.bEditarPrueba.Size = new System.Drawing.Size(160, 48);
+            this.bEditarPrueba.TabIndex = 4;
+            this.bEditarPrueba.Text = "Editar prueba";
+            this.bEditarPrueba.UseVisualStyleBackColor = false;
+            // 
+            // bEliminarPrueba
+            // 
+            this.bEliminarPrueba.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bEliminarPrueba.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bEliminarPrueba.Location = new System.Drawing.Point(1172, 130);
+            this.bEliminarPrueba.Name = "bEliminarPrueba";
+            this.bEliminarPrueba.Size = new System.Drawing.Size(160, 48);
+            this.bEliminarPrueba.TabIndex = 5;
+            this.bEliminarPrueba.Text = "Eliminar prueba";
+            this.bEliminarPrueba.UseVisualStyleBackColor = false;
+            // 
             // fInfoCursoProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -613,5 +653,8 @@
         private System.Windows.Forms.Label lNombreUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button bRecordar;
+        private System.Windows.Forms.Button bEliminarPrueba;
+        private System.Windows.Forms.Button bEditarPrueba;
     }
 }

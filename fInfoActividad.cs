@@ -35,6 +35,15 @@ namespace Grupo02PCSAS
             mostrarActividad();
             comprobarInscrito();
             calcularPlazasDisponibles();
+            if (act.FechaInicioActividad.CompareTo(DateTime.Now.ToString("dd/MM/yyyy")) > 0)
+            {
+                
+                bRecordar.Enabled = true;
+            }
+            else
+            {
+                bRecordar.Enabled = false;
+            }
         }
 
         private void calcularPlazasDisponibles()
@@ -148,6 +157,26 @@ namespace Grupo02PCSAS
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void bRecordar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Se enviará un correo a todos los usuarios inscritos", "ALERTA", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string recordatorio;
+                foreach (Usuario u in ActividadesRealizadas.listaUsuarios(act.IdActividad))
+                {
+                    Console.WriteLine(u.CorreoUsuario);
+                    recordatorio = Correo.recordatorioActividad(act);
+                    Correo.sendEmail(recordatorio, "Eventos próximos", u);
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+
+            }
         }
     }
 }

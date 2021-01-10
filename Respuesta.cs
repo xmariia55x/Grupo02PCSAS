@@ -20,11 +20,11 @@ namespace Grupo02PCSAS
         private String mensaje;
         private String fecha;
 
-        public Respuesta(int idRespuesta)
+        public Respuesta(int idRespuesta, int idDebate)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            Object[] tupla = miBD.Select("SELECT * FROM Respuesta WHERE idRespuesta = " + idRespuesta + ";")[0];
-            this.idRespuesta = (int)tupla[0];
+            Object[] tupla = miBD.Select("SELECT * FROM Respuesta WHERE idRespuesta = " + idRespuesta + " AND idDebate = " + idDebate + ";")[0];
+            this.idRespuesta = idRespuesta;
             this.debate = new Debate((int)tupla[1]);
             this.creador = new Usuario((string)tupla[2]);
             this.mensaje = (string)tupla[3];

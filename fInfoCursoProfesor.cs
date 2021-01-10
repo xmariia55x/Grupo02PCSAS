@@ -34,6 +34,7 @@ namespace Grupo02PCSAS
         {
             bool inscrito = false;
             foreach (Usuario u in ActividadesRealizadas.listaUsuarios(curso.CursoID))
+            //foreach (Usuario u in CursosRealizados.listaUsuarios(curso.CursoID))
             {
                 if (user.Equals(u)) inscrito = true;
             }
@@ -58,12 +59,13 @@ namespace Grupo02PCSAS
         {
             lNombreCurso.Text = curso.CursoNombre;
             lDescripcion.Text = curso.CursoDescripcion;
-            lProfesor.Text = curso.CursoProfesor.NombreUsuario;
+            lNombreProf.Text = curso.CursoProfesor.NombreUsuario;
             lPlazasTotales.Text = curso.CursoAforo.ToString();
             lFechaInicio.Text = curso.CursoFechaInicio;
             lFechaFin.Text = curso.CursoFechaFin;
             lHoraInicio.Text = curso.CursoHoraInicio;
-            lHoraFin.Text = curso.CursoHoraFin;
+            label21.Text = curso.CursoHoraFin;
+            lLugar.Text = curso.CursoLugar;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -137,6 +139,33 @@ namespace Grupo02PCSAS
             mostrarActividad();
             comprobarInscrito();
             calcularPlazasDisponibles();
+            if(curso.CursoFechaInicio.CompareTo(DateTime.Now.ToString("dd/MM/yyyy")) < 0)
+            {
+                bRecordar.Enabled = true;
+            } else
+            {
+                bRecordar.Enabled = false;
+            }
+        }
+
+        private void bRecordar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Se enviará un correo a todos los usuarios inscritos", "ALERTA", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string recordatorio;
+                foreach (Usuario u in CursosRealizados.listaUsuarios(curso.CursoID))
+                {
+                    Console.WriteLine(u.CorreoUsuario);
+                    recordatorio = Correo.recordatorioCurso(curso);
+                    Correo.sendEmail(recordatorio, "Eventos próximos", u);
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+
+            }
         }
     }
 }

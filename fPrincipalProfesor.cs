@@ -147,10 +147,13 @@ namespace Grupo02PCSAS
             {
                 if (seleccionado != null)
                 {
-                    fInfoCurso infocurso = new fInfoCurso(profesor, seleccionado);
-                    this.Visible = false;
-                    infocurso.ShowDialog();
-                    this.Visible = true;
+                    if(profesor != null)
+                    {
+                        fInfoCursoProfesor infocurso = new fInfoCursoProfesor(profesor, seleccionado);
+                        this.Visible = false;
+                        infocurso.ShowDialog();
+                        this.Visible = true;
+                    }
                 }
                 else
                 {
