@@ -147,7 +147,7 @@ namespace Grupo02PCSAS
             {
                 if (seleccionado != null)
                 {
-                    fInfoCurso infocurso = new fInfoCurso(profesor, seleccionado);
+                    fInfoCursoProfesor infocurso = new fInfoCursoProfesor(profesor, seleccionado);
                     this.Visible = false;
                     infocurso.ShowDialog();
                     this.Visible = true;

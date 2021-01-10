@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Grupo02PCSAS
 {
@@ -14,6 +15,10 @@ namespace Grupo02PCSAS
     {
         Usuario user;
         Curso curso;
+        String enlace;
+        private static string BD_SERVER = Properties.Settings.Default.BD_SERVER;
+        private static string BD_NAME = Properties.Settings.Default.BD_NAME;
+
 
         public fInfoCurso(Usuario user, Curso curso)
         {
@@ -44,6 +49,13 @@ namespace Grupo02PCSAS
             mostrarUsuario();
             mostrarCurso();
             calcularPlazasDisponibles();
+
+            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+            string sentencia = "SELECT enlace FROM MaterialCurso WHERE idCurso = " + curso.CursoID + ";";
+            object[] tupla = miBD.Select(sentencia)[0];
+
+            enlace = (string)tupla[0];
+            if (enlace == null || enlace.Equals("")) pictureBox4.Visible = false;
         }
 
         private void calcularPlazasDisponibles()
@@ -169,6 +181,11 @@ namespace Grupo02PCSAS
             usu.Show();
             this.Close();
             //this.Visible = true;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Process.Start(enlace);
         }
     }
 

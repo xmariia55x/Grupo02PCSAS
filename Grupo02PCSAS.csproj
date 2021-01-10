@@ -332,6 +332,9 @@
     <None Include="Resources\Logo-Informatica.png" />
     <None Include="Resources\logo-uma.png" />
     <None Include="Resources\basura.png" />
+    <None Include="Resources\carpeta.png" />
+    <None Include="Resources\carpeta2.png" />
+    <None Include="Resources\carpeta3.png" />
     <Content Include="Resources\pcsas.jpeg" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
