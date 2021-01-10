@@ -208,6 +208,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValoracionActividad.cs" />
     <EmbeddedResource Include="fBandejaMensajes.resx">
       <DependentUpon>fBandejaMensajes.cs</DependentUpon>
     </EmbeddedResource>
