@@ -77,6 +77,7 @@
       <DependentUpon>apsgrupo02DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="BDLibrary.cs" />
+    <Compile Include="ValoracionCurso.cs" />
     <Compile Include="fBandejaMensajes.cs">
       <SubType>Form</SubType>
     </Compile>
