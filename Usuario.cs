@@ -21,6 +21,7 @@ namespace Grupo02PCSAS
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
             object[] tupla =  miBD.Select("SELECT * FROM Usuario WHERE correoUsuario = '" + correo + "';")[0];
+            
             this.correoUsuario = (string) tupla[0];
             this.nombreUsuario = (string) tupla[1];
             this.contraseniaUsuario = (string) tupla[2];

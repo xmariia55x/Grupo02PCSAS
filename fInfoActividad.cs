@@ -35,15 +35,24 @@ namespace Grupo02PCSAS
             mostrarActividad();
             comprobarInscrito();
             calcularPlazasDisponibles();
-            if (act.FechaInicioActividad.CompareTo(DateTime.Now.ToString("dd/MM/yyyy")) > 0)
+            if(user != null && (user.RolUsuario.RolName.Equals("PROFESOR") || user.RolUsuario.RolName.Equals("ENTIDAD")))
             {
-                
-                bRecordar.Enabled = true;
-            }
-            else
+                string[] fechaSplit = act.FechaInicioActividad.Split('/');
+                DateTime fecha = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]));
+                if (fecha.CompareTo(DateTime.Now) >= 0)
+                {
+
+                    bRecordar.Enabled = true;
+                }
+                else
+                {
+                    bRecordar.Enabled = false;
+                }
+            } else
             {
-                bRecordar.Enabled = false;
+                bRecordar.Hide();
             }
+            
         }
 
         private void calcularPlazasDisponibles()
@@ -167,9 +176,9 @@ namespace Grupo02PCSAS
                 string recordatorio;
                 foreach (Usuario u in ActividadesRealizadas.listaUsuarios(act.IdActividad))
                 {
-                    Console.WriteLine(u.CorreoUsuario);
+                    //Console.WriteLine(u.CorreoUsuario);
                     recordatorio = Correo.recordatorioActividad(act);
-                    Correo.sendEmail(recordatorio, "Eventos próximos", u);
+                    Correo.sendEmail(recordatorio, "Actividad próxima", u);
                 }
             }
             else if (dialogResult == DialogResult.No)
