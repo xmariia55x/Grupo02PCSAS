@@ -257,5 +257,13 @@ namespace Grupo02PCSAS
         {
 
         }
+
+        private void bNoticias_Click(object sender, EventArgs e)
+        {
+            fNoticia noticias = new fNoticia(null);
+            this.Visible = false;
+            noticias.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

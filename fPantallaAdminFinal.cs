@@ -115,7 +115,10 @@ namespace Grupo02PCSAS
 
         private void bNoticias_Click(object sender, EventArgs e)
         {
-
+            fNoticia noticias = new fNoticia(user);
+            this.Visible = false;
+            noticias.ShowDialog();
+            this.Visible = true;
         }
 
         private void bCrear_Click(object sender, EventArgs e)

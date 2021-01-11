@@ -318,5 +318,13 @@ namespace Grupo02PCSAS
             datos.Show();
             this.Close();
         }
+
+        private void Noticias_Click(object sender, EventArgs e)
+        {
+            fNoticia noticias = new fNoticia(alumno);
+            this.Visible = false;
+            noticias.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
