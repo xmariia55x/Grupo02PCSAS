@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using MySql.Data.MySqlClient;
 
 namespace Grupo02PCSAS
 {
@@ -15,7 +16,7 @@ namespace Grupo02PCSAS
     {
         Usuario user;
         Curso curso;
-        String enlace;
+        MaterialCurso materialSeleccionado;
         private static string BD_SERVER = Properties.Settings.Default.BD_SERVER;
         private static string BD_NAME = Properties.Settings.Default.BD_NAME;
 
@@ -24,7 +25,7 @@ namespace Grupo02PCSAS
         {
             this.user = user;
             this.curso = curso;
-            this.enlace = null;
+            this.materialSeleccionado = null;
             InitializeComponent();
         }
 
@@ -51,18 +52,7 @@ namespace Grupo02PCSAS
             mostrarCurso();
             calcularPlazasDisponibles();
 
-            Console.WriteLine(curso.CursoID);
-
-            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "SELECT enlace FROM MaterialCurso WHERE idCurso = " + curso.CursoID + ";";
-            Console.WriteLine("Llegue aqui");
-            object[] tupla = miBD.Select(sentencia)[0];
-            
-            this.enlace = Convert.ToString(tupla[0]);
-
-            Console.WriteLine("Llegue aqui");
-
-            if (this.enlace == null || this.enlace.Equals("")) pictureBox4.Visible = false;
+            cargaGrid();
 
 
         }
@@ -76,7 +66,29 @@ namespace Grupo02PCSAS
                     filtro.Add(u);
             lPlazasDisp.Text = (curso.CursoAforo - filtro.Count).ToString();
         }
-        
+
+        private void dgvDescargas_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvDescargas.SelectedRows.Count > 0)
+                {
+                    String nombre = (String)dgvDescargas.SelectedRows[0].Cells[0].Value;
+                    if(MessageBox.Show("¿Está seguro que quiere descargar el archivo?", "Descargar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        Process.Start(new MaterialCurso(curso.CursoID,nombre).Enlace);
+                    }
+                }
+                else
+                {
+                    materialSeleccionado = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+        }
         private void comprobarInscrito()
         {
             bool inscrito = false;
@@ -192,10 +204,28 @@ namespace Grupo02PCSAS
             //this.Visible = true;
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
         {
-            Process.Start(this.enlace);
+
         }
+
+
+        private void cargaGrid()
+        {
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
+            conexion.Open();
+            //nombreCurso 'Nombre', fechaInicioCurso, fechaFinCurso, aforoCurso
+            MySqlCommand comandoC = new MySqlCommand("SELECT nombre FROM MaterialCurso WHERE idCurso = " + curso.CursoID , conexion);
+            MySqlDataAdapter adaptadorC = new MySqlDataAdapter();
+            adaptadorC.SelectCommand = comandoC;
+            DataTable tablaC = new DataTable();
+            adaptadorC.Fill(tablaC);
+            dgvDescargas.DataSource = tablaC;
+        }
+
     }
 
 }
