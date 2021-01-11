@@ -372,6 +372,7 @@
     <None Include="Resources\carpeta.png" />
     <None Include="Resources\carpeta2.png" />
     <None Include="Resources\carpeta3.png" />
+    <None Include="Resources\estrella.png" />
     <Content Include="Resources\pcsas.jpeg" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>

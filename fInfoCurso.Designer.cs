@@ -1,4 +1,7 @@
-﻿namespace Grupo02PCSAS
+﻿using System;
+using System.Windows.Forms;
+
+namespace Grupo02PCSAS
 {
     partial class fInfoCurso
     {
@@ -30,8 +33,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fInfoCurso));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lValorar = new System.Windows.Forms.Label();
+            this.bValorar = new System.Windows.Forms.Button();
             this.dgvDescargas = new System.Windows.Forms.DataGridView();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bParticipantes = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -68,9 +72,9 @@
             this.lNombreUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescargas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,6 +82,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -85,6 +90,8 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FloralWhite;
+            this.panel5.Controls.Add(this.lValorar);
+            this.panel5.Controls.Add(this.bValorar);
             this.panel5.Controls.Add(this.dgvDescargas);
             this.panel5.Controls.Add(this.bParticipantes);
             this.panel5.Controls.Add(this.label20);
@@ -94,13 +101,35 @@
             this.panel5.TabIndex = 11;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
+            // lValorar
+            // 
+            this.lValorar.AutoSize = true;
+            this.lValorar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lValorar.Location = new System.Drawing.Point(1240, 45);
+            this.lValorar.Name = "lValorar";
+            this.lValorar.Size = new System.Drawing.Size(131, 26);
+            this.lValorar.TabIndex = 16;
+            this.lValorar.Text = "Valorar curso";
+            // 
+            // bValorar
+            // 
+            this.bValorar.BackColor = System.Drawing.Color.White;
+            this.bValorar.BackgroundImage = global::Grupo02PCSAS.Properties.Resources.estrella;
+            this.bValorar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bValorar.Location = new System.Drawing.Point(1167, 30);
+            this.bValorar.Name = "bValorar";
+            this.bValorar.Size = new System.Drawing.Size(67, 60);
+            this.bValorar.TabIndex = 5;
+            this.bValorar.UseVisualStyleBackColor = false;
+            this.bValorar.Click += new System.EventHandler(this.bValorar_Click);
+            // 
             // dgvDescargas
             // 
             this.dgvDescargas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvDescargas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDescargas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDescargas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDescargas.Location = new System.Drawing.Point(630, 62);
+            this.dgvDescargas.Location = new System.Drawing.Point(460, 70);
             this.dgvDescargas.Name = "dgvDescargas";
             this.dgvDescargas.RowHeadersWidth = 62;
             this.dgvDescargas.RowTemplate.Height = 28;
@@ -108,24 +137,12 @@
             this.dgvDescargas.TabIndex = 4;
             this.dgvDescargas.SelectionChanged += new System.EventHandler(this.dgvDescargas_SelectionChanged);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Grupo02PCSAS.Properties.Resources.carpeta3;
-            this.pictureBox4.Location = new System.Drawing.Point(677, 72);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(89, 80);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
             // bParticipantes
             // 
             this.bParticipantes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bParticipantes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bParticipantes.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bParticipantes.Location = new System.Drawing.Point(1071, 90);
+            this.bParticipantes.Location = new System.Drawing.Point(1071, 113);
             this.bParticipantes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bParticipantes.Name = "bParticipantes";
             this.bParticipantes.Size = new System.Drawing.Size(339, 86);
@@ -140,7 +157,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(638, 15);
+            this.label20.Location = new System.Drawing.Point(596, 30);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(211, 26);
             this.label20.TabIndex = 2;
@@ -168,9 +185,9 @@
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.lProfesor);
-            this.panel4.Location = new System.Drawing.Point(718, 322);
+            this.panel4.Location = new System.Drawing.Point(718, 344);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(840, 408);
+            this.panel4.Size = new System.Drawing.Size(840, 308);
             this.panel4.TabIndex = 10;
             // 
             // lHoraF
@@ -341,9 +358,9 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.lDescripcion);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Location = new System.Drawing.Point(0, 322);
+            this.panel3.Location = new System.Drawing.Point(0, 344);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(807, 408);
+            this.panel3.Size = new System.Drawing.Size(807, 308);
             this.panel3.TabIndex = 9;
             // 
             // lDescripcion
@@ -375,16 +392,16 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 177);
+            this.panel2.Location = new System.Drawing.Point(0, 178);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1465, 182);
+            this.panel2.Size = new System.Drawing.Size(1465, 166);
             this.panel2.TabIndex = 8;
             // 
             // lInscrito
             // 
             this.lInscrito.AutoSize = true;
             this.lInscrito.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lInscrito.Location = new System.Drawing.Point(1358, 66);
+            this.lInscrito.Location = new System.Drawing.Point(1303, 67);
             this.lInscrito.Name = "lInscrito";
             this.lInscrito.Size = new System.Drawing.Size(80, 26);
             this.lInscrito.TabIndex = 6;
@@ -394,7 +411,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1237, 66);
+            this.label9.Location = new System.Drawing.Point(1215, 66);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 26);
             this.label9.TabIndex = 5;
@@ -406,7 +423,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lNombreCurso.AutoSize = true;
             this.lNombreCurso.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreCurso.Location = new System.Drawing.Point(438, 43);
+            this.lNombreCurso.Location = new System.Drawing.Point(438, 51);
             this.lNombreCurso.Name = "lNombreCurso";
             this.lNombreCurso.Size = new System.Drawing.Size(171, 49);
             this.lNombreCurso.TabIndex = 4;
@@ -418,7 +435,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(286, 43);
+            this.label6.Location = new System.Drawing.Point(286, 51);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(154, 49);
             this.label6.TabIndex = 3;
@@ -450,7 +467,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1465, 221);
+            this.panel1.Size = new System.Drawing.Size(1465, 178);
             this.panel1.TabIndex = 7;
             // 
             // label5
@@ -527,6 +544,18 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Grupo02PCSAS.Properties.Resources.carpeta3;
+            this.pictureBox4.Location = new System.Drawing.Point(677, 72);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(89, 80);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // fInfoCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -560,8 +589,14 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -604,5 +639,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bParticipantes;
         private System.Windows.Forms.DataGridView dgvDescargas;
+        private PictureBox pictureBox4;
+        private Button bValorar;
+        private Label lValorar;
     }
 }

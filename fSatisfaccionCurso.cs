@@ -17,9 +17,8 @@ namespace Grupo02PCSAS
 
         public fSatisfaccionCurso(Usuario user, Curso curso)
         {
-            lRol.Text = user.RolUsuario.RolName;
-            lNombreUser.Text = user.NombreUsuario;
-
+            this.user = user;
+            this.curso = curso;
             InitializeComponent();
         }
 
@@ -27,14 +26,39 @@ namespace Grupo02PCSAS
         {
             lRol.Text = user.RolUsuario.RolName;
             lNombreUser.Text = user.NombreUsuario;
+            lNombreCurso.Text = curso.CursoNombre;
+            comprobarInscrito();
+        }
+
+        private void comprobarInscrito()
+        {
+            bool inscrito = false;
+            foreach (Usuario u in CursosRealizados.listaUsuarios(curso.CursoID))
+            {
+                if (user.Equals(u)) inscrito = true;
+            }
+
+            if (inscrito)
+            {
+                lInscrito.Text = "Inscrito";
+            }
+            else
+            {
+                lInscrito.Text = "No inscrito";
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            cerrar();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(user);
-            this.Visible = false;
+            this.Hide();
             datos.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -43,6 +67,29 @@ namespace Grupo02PCSAS
             this.Visible = false;
             datos.ShowDialog();
             this.Visible = true;
+        }
+
+        private void bEnviar_Click(object sender, EventArgs e)
+        {
+            int satisfaccion = (int)nSatisfaccion.Value;
+            int lugar = (int)nLugar.Value;
+            int horario = (int)nHora.Value;
+            int organizadores = (int)nOrganizadores.Value;
+            bool repetir = cRepetir.Checked;
+            string comentario = tComentarios.Text;
+
+            new ValoracionCurso(user, curso, satisfaccion, lugar, horario, organizadores, repetir, comentario);
+            MessageBox.Show("Se ha enviado la valoracion con éxito");
+
+            cerrar();
+        }
+
+        private void cerrar()
+        {
+            fInfoCurso f = new fInfoCurso(user, curso);
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Grupo02PCSAS
         private static string BD_SERVER = Properties.Settings.Default.BD_SERVER;
         private static string BD_NAME = Properties.Settings.Default.BD_NAME;
 
-        private int id;
+        private Usuario user;
         private Curso curso;
         private int satisfaccion;
         private int lugar;
@@ -19,13 +19,27 @@ namespace Grupo02PCSAS
         private int organizacion;
         private bool repetir;
         private string comentario;
+
+        public static List<Curso> listaCursosValorados(Usuario u)
+        {
+            List<Curso> lista = new List<Curso>();
+            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+
+            foreach (object[] tupla in miBD.Select("SELECT idCurso FROM ValoracionCurso WHERE correoUsuario = '" + u.CorreoUsuario + "';"))
+            {
+                int idCurso = (int)tupla[0];
+                lista.Add(new Curso(idCurso));
+            }
+
+            return lista;
+        }
         
-        public ValoracionCurso(int id, Curso c)
+        public ValoracionCurso(Usuario user, Curso c)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "SELECT * FROM ValoracionCurso WHERE id = " + id + " AND idCurso = " + curso.CursoID + ";";
+            string sentencia = "SELECT * FROM ValoracionCurso WHERE correoUsuario = '" + user.CorreoUsuario + "' AND idCurso = " + c.CursoID + ";";
             object[] tupla = miBD.Select(sentencia)[0];
-            this.id = (int)tupla[0];
+            this.user = new Usuario((string)tupla[0]);
             this.curso = new Curso((int)tupla[1]);
             this.satisfaccion = (int)tupla[2];
             this.lugar = (int)tupla[3];
@@ -35,12 +49,12 @@ namespace Grupo02PCSAS
             this.comentario = (string)tupla[7];
         }
 
-        public ValoracionCurso(Curso curso, int satisfaccion, int lugar, int horario, int organizacion, bool repetir, string comentario)
+        public ValoracionCurso(Usuario usuario, Curso curso, int satisfaccion, int lugar, int horario, int organizacion, bool repetir, string comentario)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "INSERT INTO ValoracionCurso VALUES (" + 0 + "," + curso + "," + satisfaccion + ";" + lugar + "," + horario + ";" + organizacion + ";" + (repetir == true ? 1 : 0) + ";'" + comentario + "');";
+            string sentencia = "INSERT INTO ValoracionCurso VALUES ('" + usuario.CorreoUsuario + "'," + curso.CursoID + "," + satisfaccion + "," + lugar + "," + horario + "," + organizacion + "," + (repetir == true ? 1 : 0) + ",'" + comentario + "');";
             miBD.Insert(sentencia);
-            this.id = (int)miBD.SelectScalar("SELECT MAX(id) FROM ValoracionCurso;");
+            this.user = usuario;
             this.curso = curso;
             this.satisfaccion = satisfaccion;
             this.lugar = lugar;
@@ -50,19 +64,19 @@ namespace Grupo02PCSAS
             this.comentario = comentario;
         }
 
-        public int ID
+        public Usuario UsuarioValoracion
         {
             get
             {
-                return this.id;
+                return this.user;
             }
 
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                string sentencia = "UPDATE ValoracionCurso SET id = " + value + " WHERE id = " + this.id + " AND idCurso = " + this.curso.CursoID + ";";
+                string sentencia = "UPDATE ValoracionCurso SET correoUsuario = '" + value + "' WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idCurso = " + this.curso.CursoID + ";";
                 miBD.Update(sentencia);
-                this.id = value;
+                this.user = value;
             }
         }
 
@@ -76,7 +90,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                string sentencia = "UPDATE ValoracionCurso SET idCurso = " + value.CursoID + " WHERE id = " + this.id + " AND idCurso = " + this.curso.CursoID + ";";
+                string sentencia = "UPDATE ValoracionCurso SET idCurso = " + value.CursoID + " WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idCurso = " + this.curso.CursoID + ";";
                 miBD.Update(sentencia);
                 this.curso = value;
             }
@@ -92,7 +106,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                string sentencia = "UPDATE ValoracionCurso SET satisfaccion = " + value + " WHERE id = " + this.id + " AND idCurso = " + this.curso.CursoID + ";";
+                string sentencia = "UPDATE ValoracionCurso SET satisfaccion = " + value + " WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idCurso = " + this.curso.CursoID + ";";
                 miBD.Update(sentencia);
                 this.satisfaccion = value;
             }
@@ -108,7 +122,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                string sentencia = "UPDATE ValoracionCurso SET lugar = " + value + " WHERE id = " + this.id + " AND idCurso = " + this.curso.CursoID + ";";
+                string sentencia = "UPDATE ValoracionCurso SET lugar = " + value + " WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idCurso = " + this.curso.CursoID + ";";
                 miBD.Update(sentencia);
                 this.lugar = value;
             }
@@ -124,7 +138,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                string sentencia = "UPDATE ValoracionCurso SET horario = " + value + " WHERE id = " + this.id + " AND idCurso = " + this.curso.CursoID + ";";
+                string sentencia = "UPDATE ValoracionCurso SET horario = " + value + " WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idCurso = " + this.curso.CursoID + ";";
                 miBD.Update(sentencia);
                 this.horario = value;
             }
@@ -140,7 +154,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                string sentencia = "UPDATE ValoracionCurso SET organizacion = " + value + " WHERE id = " + this.id + " AND idCurso = " + this.curso.CursoID + ";";
+                string sentencia = "UPDATE ValoracionCurso SET organizacion = " + value + " WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idCurso = " + this.curso.CursoID + ";";
                 miBD.Update(sentencia);
                 this.organizacion = value;
             }
@@ -156,7 +170,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                string sentencia = "UPDATE ValoracionCurso SET repetir = " + (value ? 1 : 0) + " WHERE id = " + this.id + " AND idCurso = " + this.curso.CursoID + ";";
+                string sentencia = "UPDATE ValoracionCurso SET repetir = " + (value ? 1 : 0) + " WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idCurso = " + this.curso.CursoID + ";";
                 miBD.Update(sentencia);
                 this.repetir = value;
             }
@@ -172,7 +186,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                string sentencia = "UPDATE ValoracionCurso SET comentario = " + value + " WHERE id = " + this.id + " AND idCurso = " + this.curso.CursoID + ";";
+                string sentencia = "UPDATE ValoracionCurso SET comentario = " + value + " WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idCurso = " + this.curso.CursoID + ";";
                 miBD.Update(sentencia);
                 this.comentario = value;
             }

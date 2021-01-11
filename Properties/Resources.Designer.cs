@@ -143,6 +143,16 @@ namespace Grupo02PCSAS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap estrella {
+            get {
+                object obj = ResourceManager.GetObject("estrella", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lineaSeparadora {
             get {
                 object obj = ResourceManager.GetObject("lineaSeparadora", resourceCulture);

@@ -36,6 +36,8 @@ namespace Grupo02PCSAS
                 label5.Visible = false;
                 label9.Visible = false;
                 lInscrito.Visible = false;
+                bValorar.Visible = false;
+                lValorar.Visible = false;
             } else
             {
                 if (user.Equals(curso.CursoProfesor))
@@ -45,6 +47,13 @@ namespace Grupo02PCSAS
                 }
                 else
                     comprobarInscrito();
+
+                //Comprueba si el curso ha acabado
+                //if (curso.CursoFechaFin.CompareTo(DateTime.Now.ToString("dd / MM / yyyy")) >= 0)
+                //{
+                //    bValorar.Visible = false;
+                //    lValorar.Visible = false;
+                //}
             }
             mostrarUsuario();
             mostrarCurso();
@@ -224,7 +233,34 @@ namespace Grupo02PCSAS
             dgvDescargas.DataSource = tablaC;
         }
 
-        
+        private void bValorar_Click(object sender, EventArgs e)
+        {
+            if (estaValorado())
+            {
+                MessageBox.Show("El curso ya se ha valorado");
+            } else
+            {
+                fSatisfaccionCurso f = new fSatisfaccionCurso(user, curso);
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private bool estaValorado()
+        {
+            bool res = false;
+
+            foreach (Curso c in ValoracionCurso.listaCursosValorados(user))
+            {
+                if (c.Equals(curso))
+                {
+                    res = true;
+                }
+            }
+
+            return res;
+        }
     }
 
 }
