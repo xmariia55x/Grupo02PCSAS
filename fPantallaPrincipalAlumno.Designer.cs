@@ -95,6 +95,7 @@ namespace Grupo02PCSAS
             this.lNombreUser = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Noticias = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNuevosCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet)).BeginInit();
@@ -797,6 +798,20 @@ namespace Grupo02PCSAS
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // Noticias
+            // 
+            this.Noticias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Noticias.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Noticias.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Noticias.Location = new System.Drawing.Point(396, 925);
+            this.Noticias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Noticias.Name = "Noticias";
+            this.Noticias.Size = new System.Drawing.Size(834, 65);
+            this.Noticias.TabIndex = 22;
+            this.Noticias.Text = "Noticias";
+            this.Noticias.UseVisualStyleBackColor = false;
+            this.Noticias.Click += new System.EventHandler(this.Noticias_Click);
+            // 
             // fPantallaPrincipalAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -805,6 +820,7 @@ namespace Grupo02PCSAS
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1653, 1050);
+            this.Controls.Add(this.Noticias);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bInsAct);
             this.Controls.Add(this.bInfoAct);
@@ -912,5 +928,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label lNombreUser;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Noticias;
     }
 }

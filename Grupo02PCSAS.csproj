@@ -77,6 +77,18 @@
       <DependentUpon>apsgrupo02DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="BDLibrary.cs" />
+    <Compile Include="fInfoNoticia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInfoNoticia.Designer.cs">
+      <DependentUpon>fInfoNoticia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNoticia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNoticia.Designer.cs">
+      <DependentUpon>fNoticia.cs</DependentUpon>
+    </Compile>
     <Compile Include="ValoracionCurso.cs" />
     <Compile Include="Correo.cs" />
     <Compile Include="fBandejaMensajes.cs">
@@ -237,11 +249,17 @@
     <EmbeddedResource Include="fDatosPerfil.resx">
       <DependentUpon>fDatosPerfil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fInfoNoticia.resx">
+      <DependentUpon>fInfoNoticia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fInicioInvitado.resx">
       <DependentUpon>fInicioInvitado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fModificarCursos.resx">
       <DependentUpon>fModificarCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNoticia.resx">
+      <DependentUpon>fNoticia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fNuevoDebateForo.resx">
       <DependentUpon>fNuevoDebateForo.cs</DependentUpon>

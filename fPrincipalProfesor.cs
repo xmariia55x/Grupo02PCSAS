@@ -193,6 +193,14 @@ namespace Grupo02PCSAS
             this.Visible = true;
         }
 
+        private void bNotProf_Click(object sender, EventArgs e)
+        {
+            fNoticia noticias = new fNoticia(profesor);
+            this.Visible = false;
+            noticias.ShowDialog();
+            this.Visible = true;
+        }
+
         private void bListaParticipantes_Click(object sender, EventArgs e)
         {
             try

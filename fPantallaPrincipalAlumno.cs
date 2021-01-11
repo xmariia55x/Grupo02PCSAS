@@ -320,9 +320,12 @@ namespace Grupo02PCSAS
             this.Close();
         }
 
-        private void dgvMisCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Noticias_Click(object sender, EventArgs e)
         {
-
+            fNoticia noticias = new fNoticia(alumno);
+            this.Visible = false;
+            noticias.ShowDialog();
+            this.Visible = true;
         }
     }
 }
