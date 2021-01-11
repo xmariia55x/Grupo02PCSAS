@@ -16,7 +16,6 @@ namespace Grupo02PCSAS
     {
         Usuario user;
         Curso curso;
-        MaterialCurso materialSeleccionado;
         private static string BD_SERVER = Properties.Settings.Default.BD_SERVER;
         private static string BD_NAME = Properties.Settings.Default.BD_NAME;
 
@@ -25,7 +24,6 @@ namespace Grupo02PCSAS
         {
             this.user = user;
             this.curso = curso;
-            this.materialSeleccionado = null;
             InitializeComponent();
         }
 
@@ -81,7 +79,7 @@ namespace Grupo02PCSAS
                 }
                 else
                 {
-                    materialSeleccionado = null;
+                    
                 }
             }
             catch (Exception ex)
@@ -226,6 +224,7 @@ namespace Grupo02PCSAS
             dgvDescargas.DataSource = tablaC;
         }
 
+        
     }
 
 }

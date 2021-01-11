@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using MySql.Data.MySqlClient;
 
 namespace Grupo02PCSAS
 {
@@ -157,18 +158,31 @@ namespace Grupo02PCSAS
             }
 
 
-            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "SELECT enlace FROM MaterialCurso WHERE idCurso = " + curso.CursoID + ";";
-            object[] tupla = miBD.Select(sentencia)[0];
-
-            enlace = (string)tupla[0];
-            if (enlace == null || enlace.Equals("")) pictureBox5.Visible = false;
+            cargaGrid();
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+
+        private void dgvDescargas_SelectionChanged(object sender, EventArgs e)
         {
-            Process.Start(enlace);
-            
+            try
+            {
+                if (dgvDescargas.SelectedRows.Count > 0)
+                {
+                    String nombre = (String)dgvDescargas.SelectedRows[0].Cells[0].Value;
+                    if (MessageBox.Show("¿Está seguro que quiere descargar el archivo?", "Descargar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        Process.Start(new MaterialCurso(curso.CursoID, nombre).Enlace);
+                    }
+                }
+                else
+                {
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
         }
 
         private void bRecordar_Click(object sender, EventArgs e)
@@ -189,6 +203,25 @@ namespace Grupo02PCSAS
                 //do something else
 
             }
+        }
+
+        private void cargaGrid()
+        {
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
+            conexion.Open();
+            //nombreCurso 'Nombre', fechaInicioCurso, fechaFinCurso, aforoCurso
+            MySqlCommand comandoC = new MySqlCommand("SELECT nombre FROM MaterialCurso WHERE idCurso = " + curso.CursoID, conexion);
+            MySqlDataAdapter adaptadorC = new MySqlDataAdapter();
+            adaptadorC.SelectCommand = comandoC;
+            DataTable tablaC = new DataTable();
+            adaptadorC.Fill(tablaC);
+            dgvDescargas.DataSource = tablaC;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
