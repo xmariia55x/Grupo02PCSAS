@@ -13,28 +13,33 @@ namespace Grupo02PCSAS
 
         private string enlace;
         private int idCurso;
+        private String nombre;
 
-        public MaterialCurso(int idCurso)
+        public MaterialCurso(int idCurso, String nombre)
         {
+           
             //Select
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "SELECT * FROM MaterialCurso WHERE  idCurso = " + idCurso + ";";
+            string sentencia = "SELECT * FROM MaterialCurso WHERE  idCurso = " + idCurso + "  AND nombre = '"+ nombre + "';";
             object[] tupla = miBD.Select(sentencia)[0];
 
-            this.enlace = (string)tupla[1];
             this.idCurso = idCurso;
+            this.nombre = nombre;
+            this.enlace = (string)tupla[2];
+
         }
 
-        public MaterialCurso(string enlace, Curso curso)
+        public MaterialCurso(string enlace, Curso curso, String nombre)
         {
             //Insert
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "INSERT INTO MaterialCurso VALUES ('" + enlace + "'," + curso.CursoID + ");";
+            string sentencia = "INSERT INTO MaterialCurso VALUES ("+ curso.CursoID +", '"+ nombre + "' ,'" + enlace + "');";
             miBD.Insert(sentencia);
 
            
             this.enlace = enlace;
             this.idCurso = curso.CursoID;
+            this.nombre = nombre;
         }
 
         
@@ -45,7 +50,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                string sentencia = "UPDATE MaterialCurso SET enlace = '" + value + "' WHERE idCurso = " + idCurso + ";";
+                string sentencia = "UPDATE MaterialCurso SET enlace = '" + value + "' WHERE idCurso = " + idCurso + " AND nombre = '" + nombre + "';";
                 miBD.Update(sentencia);
 
                 this.enlace = value;
@@ -59,7 +64,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                string sentencia = "UPDATE MaterialCurso SET idCurso = " + value + " WHERE idCurso = " + idCurso + ";";
+                string sentencia = "UPDATE MaterialCurso SET idCurso = " + value + " WHERE idCurso = " + idCurso + " AND nombre = '" + nombre + "';";
                 miBD.Update(sentencia);
 
                 this.idCurso = value;
@@ -67,24 +72,39 @@ namespace Grupo02PCSAS
             }
         }
 
+        public String Nombre
+        {
+            get { return nombre; }
+            set
+            {
+                SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+                string sentencia = "UPDATE MaterialCurso SET nombre = " + value + " WHERE idCurso = " + idCurso + " AND nombre = '" + nombre + "';";
+                miBD.Update(sentencia);
+
+                this.nombre = value;
+
+            }
+        }
+
         public void BorrarMaterialCurso()
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "DELETE FROM MaterialCurso WHERE idCurso = " + idCurso + ";";
+            string sentencia = "DELETE FROM MaterialCurso WHERE idCurso = " + idCurso + " AND nombre = '" + nombre + "';";
             miBD.Delete(sentencia);
             
             idCurso = -1;
             enlace = null;
+            nombre = null;
         }
 
         public override bool Equals(object obj)
         {
-            return (obj is MaterialCurso) && (idCurso.Equals(((MaterialCurso)obj).idCurso));
+            return (obj is MaterialCurso) && (idCurso.Equals(((MaterialCurso)obj).idCurso)) && (nombre.Equals(((MaterialCurso)obj).nombre));
         }
 
         public override int GetHashCode()
         {
-            return idCurso.GetHashCode();
+            return idCurso.GetHashCode() + nombre.GetHashCode();
         }
     }
 }
