@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fInfoCursoProfesor));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.bEliminarPrueba = new System.Windows.Forms.Button();
+            this.bEditarPrueba = new System.Windows.Forms.Button();
+            this.bRecordar = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
@@ -52,34 +55,31 @@
             this.lDescripcion = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lInscrito = new System.Windows.Forms.Label();
             this.lNombreCurso = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lRol = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lNombreUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.actividadesRealizadasTableAdapter1 = new Grupo02PCSAS.apsgrupo02DataSet1TableAdapters.ActividadesRealizadasTableAdapter();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bRecordar = new System.Windows.Forms.Button();
-            this.bEditarPrueba = new System.Windows.Forms.Button();
-            this.bEliminarPrueba = new System.Windows.Forms.Button();
+            this.actividadesRealizadasTableAdapter1 = new Grupo02PCSAS.apsgrupo02DataSet1TableAdapters.ActividadesRealizadasTableAdapter();
+            this.dgvDescargas = new System.Windows.Forms.DataGridView();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDescargas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -87,10 +87,10 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FloralWhite;
+            this.panel5.Controls.Add(this.dgvDescargas);
             this.panel5.Controls.Add(this.bEliminarPrueba);
             this.panel5.Controls.Add(this.bEditarPrueba);
             this.panel5.Controls.Add(this.bRecordar);
-            this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Controls.Add(this.label20);
             this.panel5.Location = new System.Drawing.Point(1, 814);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -98,6 +98,40 @@
             this.panel5.Size = new System.Drawing.Size(1652, 481);
             this.panel5.TabIndex = 13;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // bEliminarPrueba
+            // 
+            this.bEliminarPrueba.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bEliminarPrueba.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bEliminarPrueba.Location = new System.Drawing.Point(1172, 130);
+            this.bEliminarPrueba.Name = "bEliminarPrueba";
+            this.bEliminarPrueba.Size = new System.Drawing.Size(160, 48);
+            this.bEliminarPrueba.TabIndex = 5;
+            this.bEliminarPrueba.Text = "Eliminar prueba";
+            this.bEliminarPrueba.UseVisualStyleBackColor = false;
+            // 
+            // bEditarPrueba
+            // 
+            this.bEditarPrueba.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bEditarPrueba.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bEditarPrueba.Location = new System.Drawing.Point(1172, 76);
+            this.bEditarPrueba.Name = "bEditarPrueba";
+            this.bEditarPrueba.Size = new System.Drawing.Size(160, 48);
+            this.bEditarPrueba.TabIndex = 4;
+            this.bEditarPrueba.Text = "Editar prueba";
+            this.bEditarPrueba.UseVisualStyleBackColor = false;
+            // 
+            // bRecordar
+            // 
+            this.bRecordar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bRecordar.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bRecordar.Location = new System.Drawing.Point(1172, 22);
+            this.bRecordar.Name = "bRecordar";
+            this.bRecordar.Size = new System.Drawing.Size(160, 48);
+            this.bRecordar.TabIndex = 3;
+            this.bRecordar.Text = "Recordar";
+            this.bRecordar.UseVisualStyleBackColor = false;
+            this.bRecordar.Click += new System.EventHandler(this.bRecordar_Click);
             // 
             // label20
             // 
@@ -403,6 +437,18 @@
             this.panel2.TabIndex = 10;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = global::Grupo02PCSAS.Properties.Resources._17656;
+            this.pictureBox4.Location = new System.Drawing.Point(1259, 18);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(120, 118);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            // 
             // lInscrito
             // 
             this.lInscrito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -436,6 +482,18 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "CURSO:";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
+            this.pictureBox3.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(93, 86);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -466,6 +524,18 @@
             this.label5.Size = new System.Drawing.Size(102, 29);
             this.label5.TabIndex = 7;
             this.label5.Text = "Mi perfil";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
+            this.pictureBox2.Location = new System.Drawing.Point(1249, 12);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(130, 129);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // lRol
             // 
@@ -511,57 +581,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Hola,";
             // 
-            // actividadesRealizadasTableAdapter1
-            // 
-            this.actividadesRealizadasTableAdapter1.ClearBeforeFill = true;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox5.Image = global::Grupo02PCSAS.Properties.Resources.carpeta3;
-            this.pictureBox5.Location = new System.Drawing.Point(717, 84);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(131, 110);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = global::Grupo02PCSAS.Properties.Resources._17656;
-            this.pictureBox4.Location = new System.Drawing.Point(1259, 18);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(120, 118);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
-            this.pictureBox3.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(93, 86);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(1249, 12);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(130, 129);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
@@ -574,39 +593,23 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // bRecordar
+            // actividadesRealizadasTableAdapter1
             // 
-            this.bRecordar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bRecordar.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bRecordar.Location = new System.Drawing.Point(1172, 22);
-            this.bRecordar.Name = "bRecordar";
-            this.bRecordar.Size = new System.Drawing.Size(160, 48);
-            this.bRecordar.TabIndex = 3;
-            this.bRecordar.Text = "Recordar";
-            this.bRecordar.UseVisualStyleBackColor = false;
-            this.bRecordar.Click += new System.EventHandler(this.bRecordar_Click);
+            this.actividadesRealizadasTableAdapter1.ClearBeforeFill = true;
             // 
-            // bEditarPrueba
+            // dgvDescargas
             // 
-            this.bEditarPrueba.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bEditarPrueba.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEditarPrueba.Location = new System.Drawing.Point(1172, 76);
-            this.bEditarPrueba.Name = "bEditarPrueba";
-            this.bEditarPrueba.Size = new System.Drawing.Size(160, 48);
-            this.bEditarPrueba.TabIndex = 4;
-            this.bEditarPrueba.Text = "Editar prueba";
-            this.bEditarPrueba.UseVisualStyleBackColor = false;
-            // 
-            // bEliminarPrueba
-            // 
-            this.bEliminarPrueba.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bEliminarPrueba.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEliminarPrueba.Location = new System.Drawing.Point(1172, 130);
-            this.bEliminarPrueba.Name = "bEliminarPrueba";
-            this.bEliminarPrueba.Size = new System.Drawing.Size(160, 48);
-            this.bEliminarPrueba.TabIndex = 5;
-            this.bEliminarPrueba.Text = "Eliminar prueba";
-            this.bEliminarPrueba.UseVisualStyleBackColor = false;
+            this.dgvDescargas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvDescargas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDescargas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvDescargas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDescargas.Location = new System.Drawing.Point(564, 76);
+            this.dgvDescargas.Name = "dgvDescargas";
+            this.dgvDescargas.RowHeadersWidth = 62;
+            this.dgvDescargas.RowTemplate.Height = 28;
+            this.dgvDescargas.Size = new System.Drawing.Size(412, 129);
+            this.dgvDescargas.TabIndex = 6;
+            this.dgvDescargas.SelectionChanged += new System.EventHandler(this.dgvDescargas_SelectionChanged);
             // 
             // fInfoCursoProfesor
             // 
@@ -635,13 +638,13 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDescargas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -684,10 +687,10 @@
         private System.Windows.Forms.Label lNombreUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private apsgrupo02DataSet1TableAdapters.ActividadesRealizadasTableAdapter actividadesRealizadasTableAdapter1;
         private System.Windows.Forms.Button bRecordar;
         private System.Windows.Forms.Button bEliminarPrueba;
         private System.Windows.Forms.Button bEditarPrueba;
+        private System.Windows.Forms.DataGridView dgvDescargas;
     }
 }

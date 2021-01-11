@@ -32,6 +32,7 @@ namespace Grupo02PCSAS
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fInicioInvitado));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lRecuperarContrasenia = new System.Windows.Forms.Label();
             this.lError = new System.Windows.Forms.Label();
             this.bRegistrate = new System.Windows.Forms.Button();
             this.bIniciarSesión = new System.Windows.Forms.Button();
@@ -75,7 +76,7 @@ namespace Grupo02PCSAS
             this.bInfoActividad = new System.Windows.Forms.Button();
             this.cursoTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.CursoTableAdapter();
             this.actividadTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.ActividadTableAdapter();
-            this.lRecuperarContrasenia = new System.Windows.Forms.Label();
+            this.bNoticias = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
@@ -104,6 +105,18 @@ namespace Grupo02PCSAS
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1469, 177);
             this.panel1.TabIndex = 7;
+            // 
+            // lRecuperarContrasenia
+            // 
+            this.lRecuperarContrasenia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lRecuperarContrasenia.AutoSize = true;
+            this.lRecuperarContrasenia.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lRecuperarContrasenia.Location = new System.Drawing.Point(486, 111);
+            this.lRecuperarContrasenia.Name = "lRecuperarContrasenia";
+            this.lRecuperarContrasenia.Size = new System.Drawing.Size(210, 26);
+            this.lRecuperarContrasenia.TabIndex = 14;
+            this.lRecuperarContrasenia.Text = "Recuperar contraseña";
+            this.lRecuperarContrasenia.Click += new System.EventHandler(this.lRecuperarContrasenia_Click);
             // 
             // lError
             // 
@@ -390,7 +403,7 @@ namespace Grupo02PCSAS
             this.lugarActividadDataGridViewTextBoxColumn,
             this.aforoActividadDataGridViewTextBoxColumn});
             this.dgvActividades.DataSource = this.actividadBindingSource;
-            this.dgvActividades.Location = new System.Drawing.Point(411, 578);
+            this.dgvActividades.Location = new System.Drawing.Point(411, 538);
             this.dgvActividades.Name = "dgvActividades";
             this.dgvActividades.ReadOnly = true;
             this.dgvActividades.RowHeadersWidth = 62;
@@ -510,7 +523,7 @@ namespace Grupo02PCSAS
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(405, 510);
+            this.label3.Location = new System.Drawing.Point(405, 486);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(200, 26);
             this.label3.TabIndex = 16;
@@ -556,7 +569,7 @@ namespace Grupo02PCSAS
             this.bInfoActividad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInfoActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInfoActividad.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInfoActividad.Location = new System.Drawing.Point(1123, 620);
+            this.bInfoActividad.Location = new System.Drawing.Point(1123, 591);
             this.bInfoActividad.Name = "bInfoActividad";
             this.bInfoActividad.Size = new System.Drawing.Size(157, 110);
             this.bInfoActividad.TabIndex = 21;
@@ -572,16 +585,18 @@ namespace Grupo02PCSAS
             // 
             this.actividadTableAdapter.ClearBeforeFill = true;
             // 
-            // lRecuperarContrasenia
+            // bNoticias
             // 
-            this.lRecuperarContrasenia.AutoSize = true;
-            this.lRecuperarContrasenia.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRecuperarContrasenia.Location = new System.Drawing.Point(425, 87);
-            this.lRecuperarContrasenia.Name = "lRecuperarContrasenia";
-            this.lRecuperarContrasenia.Size = new System.Drawing.Size(210, 26);
-            this.lRecuperarContrasenia.TabIndex = 14;
-            this.lRecuperarContrasenia.Text = "Recuperar contraseña";
-            this.lRecuperarContrasenia.Click += new System.EventHandler(this.lRecuperarContrasenia_Click);
+            this.bNoticias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bNoticias.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bNoticias.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bNoticias.Location = new System.Drawing.Point(410, 755);
+            this.bNoticias.Name = "bNoticias";
+            this.bNoticias.Size = new System.Drawing.Size(667, 63);
+            this.bNoticias.TabIndex = 57;
+            this.bNoticias.Text = "Noticias";
+            this.bNoticias.UseVisualStyleBackColor = false;
+            this.bNoticias.Click += new System.EventHandler(this.bNoticias_Click);
             // 
             // fInicioInvitado
             // 
@@ -591,6 +606,7 @@ namespace Grupo02PCSAS
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1469, 840);
+            this.Controls.Add(this.bNoticias);
             this.Controls.Add(this.bInfoActividad);
             this.Controls.Add(this.bInfoCurso);
             this.Controls.Add(this.pictureBox3);
@@ -670,6 +686,7 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.DataGridViewTextBoxColumn horaFinActividadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lugarActividadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aforoActividadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button bNoticias;
         private System.Windows.Forms.Label lRecuperarContrasenia;
     }
 }

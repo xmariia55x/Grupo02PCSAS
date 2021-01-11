@@ -6,30 +6,30 @@ using System.Threading.Tasks;
 
 namespace Grupo02PCSAS
 {
-    class Noticias
+    public class Noticias
     {
         private static string BD_SERVER = Properties.Settings.Default.BD_SERVER;
         private static string BD_NAME = Properties.Settings.Default.BD_NAME;
 
         private string titulo;
-        private Usuario autor;
+        private string autor;
         private string cuerpo;
         private string fecha;
 
-        public Noticias(string t, Usuario a)
+        public Noticias(string t, string a)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            Object[] tupla = miBD.Select("SELECT * FROM Noticias WHERE titulo = '" + t + "' and autor = '" + a.CorreoUsuario + "';")[0];
+            Object[] tupla = miBD.Select("SELECT * FROM Noticias WHERE titulo = '" + t + "' and autor = '" + a + "';")[0];
             this.titulo = (string)tupla[0];
-            this.autor = new Usuario((string)tupla[1]);
+            this.autor = (string)tupla[1];
             this.cuerpo = (string)tupla[2];
             this.fecha = (string)tupla[3];
         }
 
-        public Noticias(string t, Usuario a, string c, string f)
+        public Noticias(string t, string a, string c, string f)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            miBD.Insert("INSERT INTO Noticias VALUES ('" + t + "','" + a.CorreoUsuario + "','" + c + "','" + f + "');");
+            miBD.Insert("INSERT INTO Noticias VALUES ('" + t + "','" + a + "','" + c + "','" + f + "');");
             this.titulo = t;
             this.autor = a;
             this.cuerpo = c;
@@ -46,12 +46,12 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE Noticias SET titulo = '" + value + "' WHERE titulo = '" + this.titulo + "and autor = '" + this.autor.CorreoUsuario + "';");
+                miBD.Update("UPDATE Noticias SET titulo = '" + value + "' WHERE titulo = '" + this.titulo + "and autor = '" + this.autor + "';");
                 this.titulo = value;
             }
         }
 
-        public Usuario Autor
+        public string Autor
         {
             get
             {
@@ -61,7 +61,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE Noticias SET autor = '" + value.CorreoUsuario + "' WHERE titulo = '" + this.titulo + "and autor = '" + this.autor.CorreoUsuario + "';");
+                miBD.Update("UPDATE Noticias SET autor = '" + value + "' WHERE titulo = '" + this.titulo + "and autor = '" + this.autor + "';");
                 this.autor = value;
             }
         }
@@ -76,7 +76,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE Noticias SET cuerpo = '" + value + "' WHERE titulo = '" + this.titulo + "and autor = '" + this.autor.CorreoUsuario + "';");
+                miBD.Update("UPDATE Noticias SET cuerpo = '" + value + "' WHERE titulo = '" + this.titulo + "and autor = '" + this.autor + "';");
                 this.cuerpo = value;
             }
         }
@@ -92,7 +92,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE Noticias SET fecha = '" + value + "' WHERE titulo = '" + this.titulo + "and autor = '" + this.autor.CorreoUsuario + "';");
+                miBD.Update("UPDATE Noticias SET fecha = '" + value + "' WHERE titulo = '" + this.titulo + "and autor = '" + this.autor + "';");
                 this.fecha = value;
             }
         }
@@ -100,7 +100,7 @@ namespace Grupo02PCSAS
         public void borrarNoticia()
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            miBD.Delete("DELETE FROM Noticias WHERE titulo = '" + this.titulo + "and autor = '" + this.autor.CorreoUsuario + "';");
+            miBD.Delete("DELETE FROM Noticias WHERE titulo = '" + this.titulo + "' AND autor = '" + this.autor + "';");
             this.titulo = null;
             this.autor = null;
             this.cuerpo = null;
