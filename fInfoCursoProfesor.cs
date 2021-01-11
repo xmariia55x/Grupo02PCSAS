@@ -168,13 +168,7 @@ namespace Grupo02PCSAS
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             Process.Start(enlace);
-            if(curso.CursoFechaInicio.CompareTo(DateTime.Now.ToString("dd/MM/yyyy")) < 0)
-            {
-                bRecordar.Enabled = true;
-            } else
-            {
-                bRecordar.Enabled = false;
-            }
+            
         }
 
         private void bRecordar_Click(object sender, EventArgs e)
