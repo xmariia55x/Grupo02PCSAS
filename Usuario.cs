@@ -45,6 +45,28 @@ namespace Grupo02PCSAS
 
             this.rol = new Rol((string)tupla[5]);
         }
+        private static List<string> listaCorreos()
+        {
+            List<string> lista = new List<string>();
+            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+            foreach (object[] tupla in miBD.Select("SELECT correoUsuario FROM Usuario;"))
+            {
+                string r = (string)tupla[0];
+                lista.Add(r);
+            }
+            return lista;
+        }
+
+        public static Boolean emailEnBD(string email)
+        {
+            List<string> lista = listaCorreos();
+            Boolean encontrado = false;
+            foreach(string correo in lista)
+            {
+                if (correo.Equals(email)) encontrado = true;
+            }
+            return encontrado;
+        }
 
         public static List<Usuario> listaColaboradores()
         {

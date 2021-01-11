@@ -32,6 +32,7 @@ namespace Grupo02PCSAS
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fInicioInvitado));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lRecuperarContrasenia = new System.Windows.Forms.Label();
             this.lError = new System.Windows.Forms.Label();
             this.bRegistrate = new System.Windows.Forms.Button();
             this.bIniciarSesión = new System.Windows.Forms.Button();
@@ -75,7 +76,6 @@ namespace Grupo02PCSAS
             this.bInfoActividad = new System.Windows.Forms.Button();
             this.cursoTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.CursoTableAdapter();
             this.actividadTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.ActividadTableAdapter();
-            this.lRecuperarContrasenia = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
@@ -104,6 +104,18 @@ namespace Grupo02PCSAS
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1469, 177);
             this.panel1.TabIndex = 7;
+            // 
+            // lRecuperarContrasenia
+            // 
+            this.lRecuperarContrasenia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lRecuperarContrasenia.AutoSize = true;
+            this.lRecuperarContrasenia.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lRecuperarContrasenia.Location = new System.Drawing.Point(425, 87);
+            this.lRecuperarContrasenia.Name = "lRecuperarContrasenia";
+            this.lRecuperarContrasenia.Size = new System.Drawing.Size(210, 26);
+            this.lRecuperarContrasenia.TabIndex = 14;
+            this.lRecuperarContrasenia.Text = "Recuperar contraseña";
+            this.lRecuperarContrasenia.Click += new System.EventHandler(this.lRecuperarContrasenia_Click);
             // 
             // lError
             // 
@@ -571,17 +583,6 @@ namespace Grupo02PCSAS
             // actividadTableAdapter
             // 
             this.actividadTableAdapter.ClearBeforeFill = true;
-            // 
-            // lRecuperarContrasenia
-            // 
-            this.lRecuperarContrasenia.AutoSize = true;
-            this.lRecuperarContrasenia.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRecuperarContrasenia.Location = new System.Drawing.Point(425, 87);
-            this.lRecuperarContrasenia.Name = "lRecuperarContrasenia";
-            this.lRecuperarContrasenia.Size = new System.Drawing.Size(210, 26);
-            this.lRecuperarContrasenia.TabIndex = 14;
-            this.lRecuperarContrasenia.Text = "Recuperar contraseña";
-            this.lRecuperarContrasenia.Click += new System.EventHandler(this.lRecuperarContrasenia_Click);
             // 
             // fInicioInvitado
             // 

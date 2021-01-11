@@ -70,15 +70,8 @@ namespace Grupo02PCSAS
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.actividadesRealizadasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.actividadesRealizadasTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.ActividadesRealizadasTableAdapter();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.bAtras = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lRol = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lNombre = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -87,6 +80,13 @@ namespace Grupo02PCSAS
             this.lNombreUser = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lRol = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lNombre = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelAlumno.SuspendLayout();
             this.panelProfesor.SuspendLayout();
             this.panelEntidad.SuspendLayout();
@@ -95,13 +95,13 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.cursosRealizadosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.actividadesRealizadasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bAtras)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -267,7 +267,7 @@ namespace Grupo02PCSAS
             this.panelProfesor.Controls.Add(this.tConfPwdProfesor);
             this.panelProfesor.Controls.Add(this.label14);
             this.panelProfesor.Controls.Add(this.label7);
-            this.panelProfesor.Location = new System.Drawing.Point(88, 443);
+            this.panelProfesor.Location = new System.Drawing.Point(0, 0);
             this.panelProfesor.Name = "panelProfesor";
             this.panelProfesor.Size = new System.Drawing.Size(491, 250);
             this.panelProfesor.TabIndex = 47;
@@ -362,6 +362,7 @@ namespace Grupo02PCSAS
             this.panelEntidad.Controls.Add(this.label16);
             this.panelEntidad.Controls.Add(this.tNombreEntidad);
             this.panelEntidad.Controls.Add(this.tCorreoEntidad);
+            this.panelEntidad.Controls.Add(this.panelProfesor);
             this.panelEntidad.Controls.Add(this.label17);
             this.panelEntidad.Controls.Add(this.tCifEntidad);
             this.panelEntidad.Controls.Add(this.tPwdEntidad);
@@ -493,16 +494,16 @@ namespace Grupo02PCSAS
             // 
             this.actividadesRealizadasTableAdapter.ClearBeforeFill = true;
             // 
-            // pictureBox3
+            // bAtras
             // 
-            this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
-            this.pictureBox3.Location = new System.Drawing.Point(84, 268);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 94);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 51;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.bAtras.Image = global::Grupo02PCSAS.Properties.Resources._60577;
+            this.bAtras.Location = new System.Drawing.Point(84, 268);
+            this.bAtras.Name = "bAtras";
+            this.bAtras.Size = new System.Drawing.Size(100, 94);
+            this.bAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bAtras.TabIndex = 51;
+            this.bAtras.TabStop = false;
+            this.bAtras.Click += new System.EventHandler(this.bAtras_Click);
             // 
             // panel1
             // 
@@ -521,79 +522,6 @@ namespace Grupo02PCSAS
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1469, 177);
             this.panel1.TabIndex = 52;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1153, 126);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 26);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Mi perfil";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(1135, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(113, 102);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
-            // 
-            // lRol
-            // 
-            this.lRol.AutoSize = true;
-            this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRol.Location = new System.Drawing.Point(551, 116);
-            this.lRol.Name = "lRol";
-            this.lRol.Size = new System.Drawing.Size(63, 26);
-            this.lRol.TabIndex = 5;
-            this.lRol.Text = "Tu rol";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(507, 116);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 26);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Rol: ";
-            // 
-            // lNombre
-            // 
-            this.lNombre.AutoSize = true;
-            this.lNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombre.Location = new System.Drawing.Point(621, 39);
-            this.lNombre.Name = "lNombre";
-            this.lNombre.Size = new System.Drawing.Size(346, 44);
-            this.lNombre.TabIndex = 3;
-            this.lNombre.Text = "Nombre y apellidos";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(503, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 49);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Hola,";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(297, 178);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
@@ -688,6 +616,79 @@ namespace Grupo02PCSAS
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1153, 126);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 26);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Mi perfil";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
+            this.pictureBox2.Location = new System.Drawing.Point(1135, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(113, 102);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            // 
+            // lRol
+            // 
+            this.lRol.AutoSize = true;
+            this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lRol.Location = new System.Drawing.Point(551, 116);
+            this.lRol.Name = "lRol";
+            this.lRol.Size = new System.Drawing.Size(63, 26);
+            this.lRol.TabIndex = 5;
+            this.lRol.Text = "Tu rol";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(507, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 26);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Rol: ";
+            // 
+            // lNombre
+            // 
+            this.lNombre.AutoSize = true;
+            this.lNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNombre.Location = new System.Drawing.Point(621, 39);
+            this.lNombre.Name = "lNombre";
+            this.lNombre.Size = new System.Drawing.Size(346, 44);
+            this.lNombre.TabIndex = 3;
+            this.lNombre.Text = "Nombre y apellidos";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(503, 38);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 49);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Hola,";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(297, 178);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // fEditarPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -697,10 +698,9 @@ namespace Grupo02PCSAS
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1469, 1033);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.bAtras);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panelProfesor);
             this.Controls.Add(this.panelAlumno);
             this.Controls.Add(this.panelEntidad);
             this.Controls.Add(this.bGuardarCambios);
@@ -722,15 +722,15 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.cursosRealizadosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.actividadesRealizadasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bAtras)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -777,7 +777,7 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource actividadesRealizadasBindingSource;
         private apsgrupo02DataSetTableAdapters.ActividadesRealizadasTableAdapter actividadesRealizadasTableAdapter;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox bAtras;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
