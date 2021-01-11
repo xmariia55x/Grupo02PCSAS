@@ -110,7 +110,7 @@ namespace Grupo02PCSAS
             this.lRecuperarContrasenia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lRecuperarContrasenia.AutoSize = true;
             this.lRecuperarContrasenia.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRecuperarContrasenia.Location = new System.Drawing.Point(425, 87);
+            this.lRecuperarContrasenia.Location = new System.Drawing.Point(486, 111);
             this.lRecuperarContrasenia.Name = "lRecuperarContrasenia";
             this.lRecuperarContrasenia.Size = new System.Drawing.Size(210, 26);
             this.lRecuperarContrasenia.TabIndex = 14;
