@@ -34,30 +34,22 @@ namespace Grupo02PCSAS
 				
 				panelAlumno.Visible = true;
 				panelProfesor.Visible = false;
-				
 				panelEntidad.Visible = false;
-				
-
-				
-
+				MostrarAlumno();
 			}
 			else if (user.RolUsuario.RolName.Equals("PROFESOR"))
 			{
 				panelAlumno.Visible = false;
-				
 				panelProfesor.Visible = true;
 				panelEntidad.Visible = false;
-				
-				
-
+				MostrarProfesor();
 			}
 			else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
 			{
 				panelAlumno.Visible = false;
 				panelEntidad.Visible = true;
 				panelProfesor.Visible = false;
-				
-
+				MostrarEntidad();
 			}
 			//Cargar el dataGridView filtrado CursoRealizado
 
@@ -109,52 +101,64 @@ namespace Grupo02PCSAS
 
 
 		}
-		private void panel1_Paint(object sender, PaintEventArgs e)
+
+        private void MostrarEntidad()
         {
+			tCorreoEntidad.Text = user.CorreoUsuario;
+			tNombreEntidad.Text = user.NombreUsuario;
+			tPwdEntidad.Text = user.ContraseniaUsuario;
+			tCifEntidad.Text = user.CifUsuario;
+		}
 
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void MostrarProfesor()
         {
+			tCorreoProfesor.Text = user.CorreoUsuario;
+			tNombreProfesor.Text = user.NombreUsuario;
+			tPwdProfesor.Text = user.ContraseniaUsuario;
+			tNiuProfe.Text = user.NiuUsuario;
+		}
 
-        }
+        private void MostrarAlumno()
+        {
+			tEmailAlumno.Text = user.CorreoUsuario;
+			tNombreAlumno.Text=  user.NombreUsuario;
+			tPwdAlumno.Text = user.ContraseniaUsuario;
+		}
 
+        
+        
         private void bAtras_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void bGuardarCambios_Click(object sender, EventArgs e)
         {
             if (user.RolUsuario.RolName.Equals("ALUMNO"))
             {
-                
-					if(tEmailAlumno.Text != null ) user.CorreoUsuario = tEmailAlumno.Text;
-					if (tNombreAlumno.Text != null) user.NombreUsuario = tNombreAlumno.Text;
-					if(tPwdAlumno.Text.Equals(tConfPwdAlumno.Text))user.ContraseniaUsuario = tPwdAlumno.Text;
-				
+					if(!tEmailAlumno.Text.Equals(user.CorreoUsuario)) user.CorreoUsuario = tEmailAlumno.Text;
+					if (!tNombreAlumno.Text.Equals(user.NombreUsuario)) user.NombreUsuario = tNombreAlumno.Text;
+					if(tPwdAlumno.Text.Equals(tConfPwdAlumno.Text) && !tPwdAlumno.Text.Equals(user.ContraseniaUsuario)) user.ContraseniaUsuario = tPwdAlumno.Text;
             }
 			else if (user.RolUsuario.RolName.Equals("PROFESOR"))
 			{
-				
-					if (tCorreoProfesor.Text != null) user.CorreoUsuario = tCorreoProfesor.Text;
-					if (tNombreProfesor.Text != null) user.NombreUsuario = tNombreProfesor.Text;
-					if (tPwdAlumno.Text.Equals(tConfPwdProfesor.Text)) user.ContraseniaUsuario = tPwdProfesor.Text;
-					if (tNiuProfe.Text != null) user.NiuUsuario = tNiuProfe.Text;
+					if (!tCorreoProfesor.Text.Equals(user.CorreoUsuario)) user.CorreoUsuario = tCorreoProfesor.Text;
+					if (!tNombreProfesor.Text.Equals(user.NombreUsuario)) user.NombreUsuario = tNombreProfesor.Text;
+					if (tPwdProfesor.Text.Equals(tConfPwdProfesor.Text) && !tPwdProfesor.Text.Equals(user.ContraseniaUsuario)) user.ContraseniaUsuario = tPwdProfesor.Text;
+					if (!tNiuProfe.Text.Equals(user.NiuUsuario)) user.NiuUsuario = tNiuProfe.Text;
 			}else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
 			{
-				
-					if (tCorreoEntidad.Text != null) user.CorreoUsuario = tCorreoEntidad.Text;
-					if (tNombreEntidad.Text != null) user.NombreUsuario = tNombreEntidad.Text;
-					if (tPwdEntidad.Text.Equals(tConfPwdEntidad.Text)) user.ContraseniaUsuario = tPwdEntidad.Text;
-					if (tCifEntidad.Text != null) user.CifUsuario = tCifEntidad.Text;
-				
+					if (!tCorreoEntidad.Text.Equals(user.CorreoUsuario)) user.CorreoUsuario = tCorreoEntidad.Text;
+					if (!tNombreEntidad.Text.Equals(user.NombreUsuario)) user.NombreUsuario = tNombreEntidad.Text;
+					if (tPwdEntidad.Text.Equals(tConfPwdEntidad.Text) && !tPwdEntidad.Text.Equals(user.ContraseniaUsuario)) user.ContraseniaUsuario = tPwdEntidad.Text;
+					if (!tCifEntidad.Text.Equals(user.CifUsuario)) user.CifUsuario = tCifEntidad.Text;
 			}
+			fDatosPerfil f = new fDatosPerfil(user);
+			this.Hide();
+			f.ShowDialog();
+			this.Close();
 		}
 
         private void lNombre_Click(object sender, EventArgs e)
@@ -172,10 +176,7 @@ namespace Grupo02PCSAS
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-			this.Close();
-        }
+        
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {

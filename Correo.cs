@@ -45,7 +45,7 @@ namespace Grupo02PCSAS
         {
             try
             {
-                string nuevaContrasenia = usuario.NombreUsuario.ToLower() + "2021";
+                string nuevaContrasenia = usuario.NombreUsuario.Replace(" ", "").ToLower() + "2021";
                 string messageBody = "<font>Hola, desde PCSAS te mandamos una nueva contraseña para que puedas iniciar sesion: " + nuevaContrasenia + ". </font><br><br>";
                 messageBody = messageBody + "<font> Puedes cambiarla desde tu perfil, muchas gracias. Un saludo. NO RESPONDER A ESTE CORREO. </font><br><br>";
                 usuario.ContraseniaUsuario = nuevaContrasenia;

@@ -260,6 +260,33 @@ namespace Grupo02PCSAS
 
         private void bNoticias_Click(object sender, EventArgs e)
         {
+            if(tbUsuario.Text.Equals(""))
+            {
+                MessageBox.Show("ERROR: NO SE HA ESCRITO NADA EN EL CAMPO USUARIO");
+            } else
+            {
+                
+                if (!Usuario.emailEnBD(tbUsuario.Text))
+                {
+                    MessageBox.Show("ERROR: CORREO ELECTRÓNICO NO VÁLIDO"); 
+                } else
+                {
+                    DialogResult dialogResult = MessageBox.Show("Se enviará un correo con tu nueva contraseña a la dirección " + tbUsuario.Text + " ¿Estás seguro?", "ALERTA", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        user = new Usuario(tbUsuario.Text);
+                        string recordatorio = Correo.recuperarContrasenia(user);
+                        Correo.sendEmail(recordatorio, "Nueva contraseña", user);
+
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        //do something else
+
+                    }
+                }
+                
+            }
             fNoticia noticias = new fNoticia(null);
             this.Visible = false;
             noticias.ShowDialog();
