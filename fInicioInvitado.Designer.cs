@@ -75,6 +75,7 @@ namespace Grupo02PCSAS
             this.bInfoActividad = new System.Windows.Forms.Button();
             this.cursoTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.CursoTableAdapter();
             this.actividadTableAdapter = new Grupo02PCSAS.apsgrupo02DataSetTableAdapters.ActividadTableAdapter();
+            this.lRecuperarContrasenia = new System.Windows.Forms.Label();
             this.bNoticias = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,6 +92,7 @@ namespace Grupo02PCSAS
             // 
             this.panel1.BackColor = System.Drawing.Color.Bisque;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lRecuperarContrasenia);
             this.panel1.Controls.Add(this.lError);
             this.panel1.Controls.Add(this.bRegistrate);
             this.panel1.Controls.Add(this.bIniciarSesión);
@@ -594,6 +596,17 @@ namespace Grupo02PCSAS
             this.bNoticias.UseVisualStyleBackColor = false;
             this.bNoticias.Click += new System.EventHandler(this.bNoticias_Click);
             // 
+            // lRecuperarContrasenia
+            // 
+            this.lRecuperarContrasenia.AutoSize = true;
+            this.lRecuperarContrasenia.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lRecuperarContrasenia.Location = new System.Drawing.Point(425, 87);
+            this.lRecuperarContrasenia.Name = "lRecuperarContrasenia";
+            this.lRecuperarContrasenia.Size = new System.Drawing.Size(210, 26);
+            this.lRecuperarContrasenia.TabIndex = 14;
+            this.lRecuperarContrasenia.Text = "Recuperar contraseña";
+            this.lRecuperarContrasenia.Click += new System.EventHandler(this.lRecuperarContrasenia_Click);
+            // 
             // fInicioInvitado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -683,5 +696,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.DataGridViewTextBoxColumn lugarActividadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aforoActividadDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button bNoticias;
+        private System.Windows.Forms.Label lRecuperarContrasenia;
     }
 }

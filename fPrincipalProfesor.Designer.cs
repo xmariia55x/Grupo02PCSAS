@@ -62,6 +62,7 @@ namespace Grupo02PCSAS
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bNotProf = new System.Windows.Forms.Button();
+            this.bListaParticipantes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).BeginInit();
@@ -439,6 +440,20 @@ namespace Grupo02PCSAS
             this.bNotProf.UseVisualStyleBackColor = false;
             this.bNotProf.Click += new System.EventHandler(this.bNotProf_Click);
             // 
+            // bListaParticipantes
+            // 
+            this.bListaParticipantes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bListaParticipantes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bListaParticipantes.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.bListaParticipantes.Location = new System.Drawing.Point(1040, 291);
+            this.bListaParticipantes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bListaParticipantes.Name = "bListaParticipantes";
+            this.bListaParticipantes.Size = new System.Drawing.Size(198, 59);
+            this.bListaParticipantes.TabIndex = 56;
+            this.bListaParticipantes.Text = "Ver participantes";
+            this.bListaParticipantes.UseVisualStyleBackColor = false;
+            this.bListaParticipantes.Click += new System.EventHandler(this.bListaParticipantes_Click);
+            // 
             // fPrincipalProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -448,6 +463,8 @@ namespace Grupo02PCSAS
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1653, 1050);
             this.Controls.Add(this.bNotProf);
+            this.ClientSize = new System.Drawing.Size(1469, 840);
+            this.Controls.Add(this.bListaParticipantes);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bInfCur);
             this.Controls.Add(this.bDelCur);
@@ -511,5 +528,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bNotProf;
+        private System.Windows.Forms.Button bListaParticipantes;
     }
 }

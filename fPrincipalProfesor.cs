@@ -147,10 +147,13 @@ namespace Grupo02PCSAS
             {
                 if (seleccionado != null)
                 {
-                    fInfoCurso infocurso = new fInfoCurso(profesor, seleccionado);
-                    this.Visible = false;
-                    infocurso.ShowDialog();
-                    this.Visible = true;
+                    if(profesor != null)
+                    {
+                        fInfoCursoProfesor infocurso = new fInfoCursoProfesor(profesor, seleccionado);
+                        this.Visible = false;
+                        infocurso.ShowDialog();
+                        this.Visible = true;
+                    }
                 }
                 else
                 {
@@ -196,6 +199,31 @@ namespace Grupo02PCSAS
             this.Visible = false;
             noticias.ShowDialog();
             this.Visible = true;
+        }
+
+        private void bListaParticipantes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (seleccionado != null)
+                {
+                    PantallaListaUsuarios f = new PantallaListaUsuarios(seleccionado, profesor);
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    throw new Exception("No hay ningun curso seleccionado");
+                }
+
+                //para que no se vuelva a seleccionar el mismo
+                seleccionado = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
         }
     }
 }

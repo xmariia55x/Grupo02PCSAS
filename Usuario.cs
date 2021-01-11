@@ -20,12 +20,29 @@ namespace Grupo02PCSAS
         public Usuario(string correo)//constructor SELECT
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-           Object[] tupla =  miBD.Select("SELECT * FROM Usuario WHERE correoUsuario = '" + correo + "';")[0];
+            object[] tupla =  miBD.Select("SELECT * FROM Usuario WHERE correoUsuario = '" + correo + "';")[0];
+            
             this.correoUsuario = (string) tupla[0];
             this.nombreUsuario = (string) tupla[1];
             this.contraseniaUsuario = (string) tupla[2];
-            this.cif = (string) tupla[3];
-            this.niu = (string) tupla[4];
+            this.cif = Convert.ToString(tupla[3]);
+            this.niu = Convert.ToString(tupla[4]);
+            /*if (tupla[3] != null)
+            {
+                //this.cif = (string)tupla[3];
+                this.cif = Convert.ToString(tupla[3]);
+            } else
+            {
+                this.cif = null;
+            }
+            if(tupla[4] != null)
+            {
+                this.niu = (string)tupla[4];
+            } else
+            {
+                this.niu = null;
+            }*/
+
             this.rol = new Rol((string)tupla[5]);
         }
 
@@ -60,8 +77,21 @@ namespace Grupo02PCSAS
             this.correoUsuario = correo;
             this.nombreUsuario = nombre;
             this.contraseniaUsuario = contrasenia;
-            this.cif = cif;
-            this.niu = niu;
+            if(cif == null || cif.Equals(""))
+            {
+                this.cif = "";
+            } else
+            {
+                this.cif = cif;
+            }
+            
+            if(niu == null || niu.Equals(""))
+            {
+                this.niu = "";
+            } else
+            {
+                this.niu = niu;
+            }
             this.rol = rol;
         }
 

@@ -65,7 +65,7 @@ namespace Grupo02PCSAS
             horaIni = dHoraIniAct.Value.ToString("HH:mm");
             horaFin = dHoraFinAct.Value.ToString("HH:mm");
 
-            int comparacion = dFechaFinAct.Value.CompareTo(dHoraIniAct.Value);
+            int comparacion = dFechaFinAct.Value.CompareTo(dFechaIniAct.Value);
 
             aforo = tAforoAct.Text.ToString(); //Pasar el aforo a entero 
             aforoActividad = int.Parse(aforo);

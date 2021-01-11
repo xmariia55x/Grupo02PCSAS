@@ -17,6 +17,8 @@ namespace Grupo02PCSAS
     {
         private Curso curso;
         private Usuario user;
+        private Usuario seleccionado;
+
         public PantallaListaUsuarios(Curso curso, Usuario user)
         {
             this.curso = curso;
@@ -32,8 +34,13 @@ namespace Grupo02PCSAS
 
             lNombreCurso.Text = curso.CursoNombre;
             lNombreProfesorCurso.Text = curso.CursoProfesor.NombreUsuario;
+            cargaLista();
+        }
+
+        private void cargaLista()
+        {
             lbUsuarios.Items.Clear();
-            foreach (Usuario u in CursosRealizados.listaUsuarios(curso.CursoID)) lbUsuarios.Items.Add(u.NombreUsuario + " - " + u.CorreoUsuario);
+            foreach (Usuario u in CursosRealizados.listaUsuarios(curso.CursoID)) lbUsuarios.Items.Add(u.NombreUsuario + "-" + u.CorreoUsuario);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -47,11 +54,6 @@ namespace Grupo02PCSAS
         }
 
         private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbUsuarios_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -98,7 +100,47 @@ namespace Grupo02PCSAS
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            fPrincipalProfesor f = new fPrincipalProfesor(user);
+            this.Hide();
+            f.ShowDialog();
             this.Close();
+        }
+
+        private void bDelUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (seleccionado != null)
+                {
+                    if (MessageBox.Show("¿Quieres expulsar al usuario " + seleccionado.NombreUsuario + " del curso?", "Borrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        CursosRealizados c = new CursosRealizados(curso.CursoID, seleccionado.CorreoUsuario);
+                        c.BorrarCursoRealizado();
+                        cargaLista();
+                    }
+                }
+                else
+                {
+                    throw new Exception("No hay ningun curso seleccionado");
+                }
+
+                //para que no se vuelva a seleccionar el mismo
+                seleccionado = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+        }
+
+        private void lbUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbUsuarios.SelectedItems.Count > 0)
+            {
+                string aux = (string)lbUsuarios.SelectedItem;
+                string[] cadena = aux.Split('-');
+                seleccionado = new Usuario(cadena[1]);
+            }
         }
     }
 }

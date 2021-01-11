@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Grupo02PCSAS
 {
@@ -14,12 +15,16 @@ namespace Grupo02PCSAS
     {
         Usuario user;
         Curso curso;
+        String enlace;
+        private static string BD_SERVER = Properties.Settings.Default.BD_SERVER;
+        private static string BD_NAME = Properties.Settings.Default.BD_NAME;
 
         public fInfoCursoProfesor(Usuario user, Curso curso)
         {
             this.user = user;
             this.curso = curso;
             InitializeComponent();
+           
             
         }
 
@@ -34,6 +39,7 @@ namespace Grupo02PCSAS
         {
             bool inscrito = false;
             foreach (Usuario u in ActividadesRealizadas.listaUsuarios(curso.CursoID))
+            //foreach (Usuario u in CursosRealizados.listaUsuarios(curso.CursoID))
             {
                 if (user.Equals(u)) inscrito = true;
             }
@@ -58,12 +64,13 @@ namespace Grupo02PCSAS
         {
             lNombreCurso.Text = curso.CursoNombre;
             lDescripcion.Text = curso.CursoDescripcion;
-            lProfesor.Text = curso.CursoProfesor.NombreUsuario;
+            lNombreProf.Text = curso.CursoProfesor.NombreUsuario;
             lPlazasTotales.Text = curso.CursoAforo.ToString();
             lFechaInicio.Text = curso.CursoFechaInicio;
             lFechaFin.Text = curso.CursoFechaFin;
             lHoraInicio.Text = curso.CursoHoraInicio;
-            lHoraFin.Text = curso.CursoHoraFin;
+            label21.Text = curso.CursoHoraFin;
+            lLugar.Text = curso.CursoLugar;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -137,6 +144,57 @@ namespace Grupo02PCSAS
             mostrarActividad();
             comprobarInscrito();
             calcularPlazasDisponibles();
+            string[] fechaSplit = curso.CursoFechaInicio.Split('/');
+            DateTime fecha = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]));
+            if (fecha.CompareTo(DateTime.Now) >= 0)
+            {
+
+                bRecordar.Enabled = true;
+            }
+            else
+            {
+                bRecordar.Enabled = false;
+            }
+
+
+            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+            string sentencia = "SELECT enlace FROM MaterialCurso WHERE idCurso = " + curso.CursoID + ";";
+            object[] tupla = miBD.Select(sentencia)[0];
+
+            enlace = (string)tupla[0];
+            if (enlace == null || enlace.Equals("")) pictureBox5.Visible = false;
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Process.Start(enlace);
+            if(curso.CursoFechaInicio.CompareTo(DateTime.Now.ToString("dd/MM/yyyy")) < 0)
+            {
+                bRecordar.Enabled = true;
+            } else
+            {
+                bRecordar.Enabled = false;
+            }
+        }
+
+        private void bRecordar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Se enviará un correo a todos los usuarios inscritos", "ALERTA", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string recordatorio;
+                foreach (Usuario u in CursosRealizados.listaUsuarios(curso.CursoID))
+                {
+                    //Console.WriteLine(u.CorreoUsuario);
+                    recordatorio = Correo.recordatorioCurso(curso);
+                    Correo.sendEmail(recordatorio, "Curso próximo", u);
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+
+            }
         }
     }
 }

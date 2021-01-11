@@ -80,9 +80,8 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1653, 221);
+            this.panel1.Size = new System.Drawing.Size(1469, 177);
             this.panel1.TabIndex = 10;
             // 
             // label5
@@ -90,9 +89,9 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1324, 170);
+            this.label5.Location = new System.Drawing.Point(1176, 136);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 29);
+            this.label5.Size = new System.Drawing.Size(88, 26);
             this.label5.TabIndex = 7;
             this.label5.Text = "Mi perfil";
             // 
@@ -100,10 +99,9 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(1303, 28);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(1157, 22);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(134, 129);
+            this.pictureBox2.Size = new System.Drawing.Size(119, 103);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
@@ -114,9 +112,9 @@
             this.lRol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lRol.AutoSize = true;
             this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRol.Location = new System.Drawing.Point(810, 145);
+            this.lRol.Location = new System.Drawing.Point(719, 116);
             this.lRol.Name = "lRol";
-            this.lRol.Size = new System.Drawing.Size(73, 29);
+            this.lRol.Size = new System.Drawing.Size(63, 26);
             this.lRol.TabIndex = 5;
             this.lRol.Text = "Tu rol";
             // 
@@ -125,9 +123,9 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(757, 145);
+            this.label1.Location = new System.Drawing.Point(672, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 29);
+            this.label1.Size = new System.Drawing.Size(53, 26);
             this.label1.TabIndex = 4;
             this.label1.Text = "Rol: ";
             // 
@@ -136,9 +134,9 @@
             this.lNombreUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lNombreUser.AutoSize = true;
             this.lNombreUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreUser.Location = new System.Drawing.Point(885, 48);
+            this.lNombreUser.Location = new System.Drawing.Point(786, 38);
             this.lNombreUser.Name = "lNombreUser";
-            this.lNombreUser.Size = new System.Drawing.Size(408, 52);
+            this.lNombreUser.Size = new System.Drawing.Size(346, 44);
             this.lNombreUser.TabIndex = 3;
             this.lNombreUser.Text = "Nombre y apellidos";
             // 
@@ -147,9 +145,9 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(753, 48);
+            this.label2.Location = new System.Drawing.Point(668, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 57);
+            this.label2.Size = new System.Drawing.Size(112, 49);
             this.label2.TabIndex = 2;
             this.label2.Text = "Hola,";
             // 
@@ -157,9 +155,8 @@
             // 
             this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(334, 222);
+            this.pictureBox1.Size = new System.Drawing.Size(297, 178);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -169,10 +166,9 @@
             this.bEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bEventos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bEventos.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEventos.Location = new System.Drawing.Point(956, 865);
-            this.bEventos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bEventos.Location = new System.Drawing.Point(850, 692);
             this.bEventos.Name = "bEventos";
-            this.bEventos.Size = new System.Drawing.Size(204, 79);
+            this.bEventos.Size = new System.Drawing.Size(181, 63);
             this.bEventos.TabIndex = 55;
             this.bEventos.Text = "Eventos";
             this.bEventos.UseVisualStyleBackColor = false;
@@ -182,10 +178,9 @@
             // 
             this.bAccederAlForo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bAccederAlForo.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAccederAlForo.Location = new System.Drawing.Point(174, 865);
-            this.bAccederAlForo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bAccederAlForo.Location = new System.Drawing.Point(155, 692);
             this.bAccederAlForo.Name = "bAccederAlForo";
-            this.bAccederAlForo.Size = new System.Drawing.Size(204, 79);
+            this.bAccederAlForo.Size = new System.Drawing.Size(181, 63);
             this.bAccederAlForo.TabIndex = 54;
             this.bAccederAlForo.Text = "Acceder al foro";
             this.bAccederAlForo.UseVisualStyleBackColor = false;
@@ -195,8 +190,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -212,13 +206,12 @@
             this.lugarActividadDataGridViewTextBoxColumn,
             this.aforoActividadDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.actividadBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(127, 412);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(113, 330);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1080, 399);
+            this.dataGridView1.Size = new System.Drawing.Size(960, 319);
             this.dataGridView1.TabIndex = 53;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -250,7 +243,7 @@
             this.nombreActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nombreActividadDataGridViewTextBoxColumn.Name = "nombreActividadDataGridViewTextBoxColumn";
             this.nombreActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreActividadDataGridViewTextBoxColumn.Width = 101;
+            this.nombreActividadDataGridViewTextBoxColumn.Width = 87;
             // 
             // descripcionActividadDataGridViewTextBoxColumn
             // 
@@ -270,7 +263,7 @@
             this.fechaInicioActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fechaInicioActividadDataGridViewTextBoxColumn.Name = "fechaInicioActividadDataGridViewTextBoxColumn";
             this.fechaInicioActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaInicioActividadDataGridViewTextBoxColumn.Width = 129;
+            this.fechaInicioActividadDataGridViewTextBoxColumn.Width = 112;
             // 
             // fechaFinActividadDataGridViewTextBoxColumn
             // 
@@ -280,7 +273,7 @@
             this.fechaFinActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fechaFinActividadDataGridViewTextBoxColumn.Name = "fechaFinActividadDataGridViewTextBoxColumn";
             this.fechaFinActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaFinActividadDataGridViewTextBoxColumn.Width = 111;
+            this.fechaFinActividadDataGridViewTextBoxColumn.Width = 95;
             // 
             // horaInicioActividadDataGridViewTextBoxColumn
             // 
@@ -319,7 +312,7 @@
             this.aforoActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.aforoActividadDataGridViewTextBoxColumn.Name = "aforoActividadDataGridViewTextBoxColumn";
             this.aforoActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aforoActividadDataGridViewTextBoxColumn.Width = 84;
+            this.aforoActividadDataGridViewTextBoxColumn.Width = 71;
             // 
             // actividadBindingSource1
             // 
@@ -338,9 +331,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(567, 270);
+            this.label3.Location = new System.Drawing.Point(504, 216);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(331, 57);
+            this.label3.Size = new System.Drawing.Size(279, 49);
             this.label3.TabIndex = 52;
             this.label3.Text = "Mis actividades";
             // 
@@ -349,10 +342,9 @@
             this.bInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInformacion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInformacion.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInformacion.Location = new System.Drawing.Point(1243, 586);
-            this.bInformacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bInformacion.Location = new System.Drawing.Point(1105, 469);
             this.bInformacion.Name = "bInformacion";
-            this.bInformacion.Size = new System.Drawing.Size(204, 79);
+            this.bInformacion.Size = new System.Drawing.Size(181, 63);
             this.bInformacion.TabIndex = 56;
             this.bInformacion.Text = "Información";
             this.bInformacion.UseVisualStyleBackColor = false;
@@ -371,10 +363,9 @@
             // 
             this.bCrearActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bCrearActividad.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCrearActividad.Location = new System.Drawing.Point(568, 865);
-            this.bCrearActividad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bCrearActividad.Location = new System.Drawing.Point(505, 692);
             this.bCrearActividad.Name = "bCrearActividad";
-            this.bCrearActividad.Size = new System.Drawing.Size(204, 79);
+            this.bCrearActividad.Size = new System.Drawing.Size(181, 63);
             this.bCrearActividad.TabIndex = 57;
             this.bCrearActividad.Text = "Crear Actividad";
             this.bCrearActividad.UseVisualStyleBackColor = false;
@@ -396,7 +387,7 @@
             // 
             // fPrincipalOng
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -410,7 +401,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "fPrincipalOng";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

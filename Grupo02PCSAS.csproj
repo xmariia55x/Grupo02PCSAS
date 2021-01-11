@@ -90,11 +90,18 @@
       <DependentUpon>fNoticia.cs</DependentUpon>
     </Compile>
     <Compile Include="ValoracionCurso.cs" />
+    <Compile Include="Correo.cs" />
     <Compile Include="fBandejaMensajes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fBandejaMensajes.Designer.cs">
       <DependentUpon>fBandejaMensajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRedactarMensaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRedactarMensaje.Designer.cs">
+      <DependentUpon>fRedactarMensaje.cs</DependentUpon>
     </Compile>
     <Compile Include="MaterialActividad.cs" />
     <Compile Include="Curso.cs" />
@@ -269,6 +276,9 @@
     <EmbeddedResource Include="fPrincipalProfesor.resx">
       <DependentUpon>fPrincipalProfesor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fRedactarMensaje.resx">
+      <DependentUpon>fRedactarMensaje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fRegistro.resx">
       <DependentUpon>fRegistro.cs</DependentUpon>
     </EmbeddedResource>
@@ -341,6 +351,9 @@
     <None Include="Resources\Logo-Informatica.png" />
     <None Include="Resources\logo-uma.png" />
     <None Include="Resources\basura.png" />
+    <None Include="Resources\carpeta.png" />
+    <None Include="Resources\carpeta2.png" />
+    <None Include="Resources\carpeta3.png" />
     <Content Include="Resources\pcsas.jpeg" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
