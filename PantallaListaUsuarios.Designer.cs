@@ -168,10 +168,10 @@ namespace Grupo02PCSAS
             this.lbUsuarios.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsuarios.FormattingEnabled = true;
             this.lbUsuarios.ItemHeight = 28;
-            this.lbUsuarios.Location = new System.Drawing.Point(210, 466);
+            this.lbUsuarios.Location = new System.Drawing.Point(330, 468);
             this.lbUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbUsuarios.Name = "lbUsuarios";
-            this.lbUsuarios.Size = new System.Drawing.Size(912, 284);
+            this.lbUsuarios.Size = new System.Drawing.Size(668, 284);
             this.lbUsuarios.TabIndex = 11;
             this.lbUsuarios.SelectedIndexChanged += new System.EventHandler(this.lbUsuarios_SelectedIndexChanged);
             // 
@@ -288,7 +288,7 @@ namespace Grupo02PCSAS
             this.bDelUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bDelUser.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bDelUser.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.bDelUser.Location = new System.Drawing.Point(555, 801);
+            this.bDelUser.Location = new System.Drawing.Point(568, 796);
             this.bDelUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bDelUser.Name = "bDelUser";
             this.bDelUser.Size = new System.Drawing.Size(198, 59);

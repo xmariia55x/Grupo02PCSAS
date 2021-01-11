@@ -200,7 +200,8 @@ namespace Grupo02PCSAS
                 if (seleccionado != null)
                 {
                     PantallaListaUsuarios f = new PantallaListaUsuarios(seleccionado, profesor);
-                    f.Show();
+                    this.Hide();
+                    f.ShowDialog();
                     this.Close();
                 }
                 else
