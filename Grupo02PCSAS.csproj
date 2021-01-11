@@ -89,6 +89,12 @@
     <Compile Include="fNoticia.Designer.cs">
       <DependentUpon>fNoticia.cs</DependentUpon>
     </Compile>
+    <Compile Include="fPruebaConocimientoCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPruebaConocimientoCurso.Designer.cs">
+      <DependentUpon>fPruebaConocimientoCurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="ValoracionCurso.cs" />
     <Compile Include="Correo.cs" />
     <Compile Include="fBandejaMensajes.cs">
@@ -275,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fPrincipalProfesor.resx">
       <DependentUpon>fPrincipalProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPruebaConocimientoCurso.resx">
+      <DependentUpon>fPruebaConocimientoCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fRedactarMensaje.resx">
       <DependentUpon>fRedactarMensaje.cs</DependentUpon>
