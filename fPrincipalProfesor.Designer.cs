@@ -61,6 +61,7 @@ namespace Grupo02PCSAS
             this.lNombreUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bListaParticipantes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).BeginInit();
@@ -77,7 +78,7 @@ namespace Grupo02PCSAS
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(585, 269);
+            this.label3.Location = new System.Drawing.Point(586, 224);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(191, 49);
             this.label3.TabIndex = 47;
@@ -105,12 +106,12 @@ namespace Grupo02PCSAS
             this.aforoCursoDataGridViewTextBoxColumn,
             this.onlineCursoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.cursoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(92, 372);
+            this.dataGridView1.Location = new System.Drawing.Point(92, 291);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(872, 236);
+            this.dataGridView1.Size = new System.Drawing.Size(872, 317);
             this.dataGridView1.TabIndex = 48;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -295,7 +296,7 @@ namespace Grupo02PCSAS
             this.bDelCur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bDelCur.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bDelCur.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.bDelCur.Location = new System.Drawing.Point(1040, 372);
+            this.bDelCur.Location = new System.Drawing.Point(1040, 374);
             this.bDelCur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bDelCur.Name = "bDelCur";
             this.bDelCur.Size = new System.Drawing.Size(198, 59);
@@ -309,7 +310,7 @@ namespace Grupo02PCSAS
             this.bInfCur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInfCur.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInfCur.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.bInfCur.Location = new System.Drawing.Point(1040, 462);
+            this.bInfCur.Location = new System.Drawing.Point(1040, 460);
             this.bInfCur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bInfCur.Name = "bInfCur";
             this.bInfCur.Size = new System.Drawing.Size(198, 59);
@@ -417,6 +418,20 @@ namespace Grupo02PCSAS
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // bListaParticipantes
+            // 
+            this.bListaParticipantes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bListaParticipantes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bListaParticipantes.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.bListaParticipantes.Location = new System.Drawing.Point(1040, 291);
+            this.bListaParticipantes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bListaParticipantes.Name = "bListaParticipantes";
+            this.bListaParticipantes.Size = new System.Drawing.Size(198, 59);
+            this.bListaParticipantes.TabIndex = 56;
+            this.bListaParticipantes.Text = "Ver participantes";
+            this.bListaParticipantes.UseVisualStyleBackColor = false;
+            this.bListaParticipantes.Click += new System.EventHandler(this.bListaParticipantes_Click);
+            // 
             // fPrincipalProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -425,6 +440,7 @@ namespace Grupo02PCSAS
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1469, 840);
+            this.Controls.Add(this.bListaParticipantes);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bInfCur);
             this.Controls.Add(this.bDelCur);
@@ -486,5 +502,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label lNombreUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button bListaParticipantes;
     }
 }
