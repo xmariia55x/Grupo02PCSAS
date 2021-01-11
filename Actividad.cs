@@ -203,5 +203,13 @@ namespace Grupo02PCSAS
         {
             return idActividad.GetHashCode();
         }
+
+        public override string ToString()
+        {
+            string res = "Creador de la actividad: " + usuarioCreador.NombreUsuario + ", Nombre de la actividad: " + nombreActividad + ", Descripcion de la actividad: " + descripcionActividad
+               + ", Fecha de inicio de la actividad: " + fechaInicioActividad + ", Fecha de fin de la actividad: " + fechaFinActividad + ", Hora de inicio de la actividad: " + horaInicioActividad +
+               ", Hora de fin de la actividad: " + horaFinActividad + ", Lugar de la actividad: " + lugarActividad + ", Aforo de la actividad: " + aforoActividad;
+            return res;
+        }
     }
 }

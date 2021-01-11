@@ -257,5 +257,35 @@ namespace Grupo02PCSAS
         {
 
         }
+
+        private void lRecuperarContrasenia_Click(object sender, EventArgs e)
+        {
+            /*if(tbUsuario.Text.Equals(""))
+            {
+                MessageBox.Show("ERROR: NO SE HA ESCRITO NADA EN EL CAMPO USUARIO");
+            } else
+            {
+                user = new Usuario(tbUsuario.Text);
+                if (user == null)
+                {
+                    MessageBox.Show("ERROR: CORREO ELECTRÓNICO NO VÁLIDO"); //NO SE COMO HACER ESTO, AQUI PETA
+                } else
+                {
+                    DialogResult dialogResult = MessageBox.Show("Se enviará un correo con tu nueva contraseña a la dirección " + tbUsuario.Text + " ¿Estás seguro?", "ALERTA", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        string recordatorio = Correo.recuperarContrasenia(user);
+                        Correo.sendEmail(recordatorio, "Nueva contraseña", user);
+
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        //do something else
+
+                    }
+                }
+                
+            }*/
+        }
     }
 }

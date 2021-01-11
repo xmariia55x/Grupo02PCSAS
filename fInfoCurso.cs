@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Grupo02PCSAS
 {
@@ -14,17 +15,22 @@ namespace Grupo02PCSAS
     {
         Usuario user;
         Curso curso;
+        String enlace;
+        private static string BD_SERVER = Properties.Settings.Default.BD_SERVER;
+        private static string BD_NAME = Properties.Settings.Default.BD_NAME;
+
 
         public fInfoCurso(Usuario user, Curso curso)
         {
             this.user = user;
             this.curso = curso;
-
+            this.enlace = null;
             InitializeComponent();
         }
 
         private void fInfoCurso_Load(object sender, EventArgs e)
         {
+            
             if (user == null)
             {
                 pictureBox2.Visible = false;
@@ -44,6 +50,21 @@ namespace Grupo02PCSAS
             mostrarUsuario();
             mostrarCurso();
             calcularPlazasDisponibles();
+
+            Console.WriteLine(curso.CursoID);
+
+            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+            string sentencia = "SELECT enlace FROM MaterialCurso WHERE idCurso = " + curso.CursoID + ";";
+            Console.WriteLine("Llegue aqui");
+            object[] tupla = miBD.Select(sentencia)[0];
+            
+            this.enlace = Convert.ToString(tupla[0]);
+
+            Console.WriteLine("Llegue aqui");
+
+            if (this.enlace == null || this.enlace.Equals("")) pictureBox4.Visible = false;
+
+
         }
 
         private void calcularPlazasDisponibles()
@@ -166,9 +187,14 @@ namespace Grupo02PCSAS
         private void bParticipantes_Click(object sender, EventArgs e)
         {
             PantallaListaUsuarios usu = new PantallaListaUsuarios(curso, user);
-            this.Visible = false;
-            usu.ShowDialog();
+            usu.Show();
+            this.Close();
             //this.Visible = true;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Process.Start(this.enlace);
         }
     }
 

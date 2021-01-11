@@ -207,6 +207,20 @@ namespace Grupo02PCSAS
             return idCurso.GetHashCode();
         }
 
+        public override string ToString()
+        {
+            string res = "Profesor del curso: " + profesorCurso.NombreUsuario + ", Nombre del curso: " + nombreCurso + ", Descripcion del curso: " + descripcionCurso
+                + ", Fecha de inicio del curso: " + fechaInicioCurso + ", Fecha de fin del curso: " + fechaFinCurso + ", Hora de inicio del curso: " + horaInicioCurso +
+                ", Hora de fin del curso: " + horaFinCurso + ", Lugar del curso: " + lugarCurso + ", Aforo del curso: " + aforoCurso;
+            if (online)
+            {
+                res += ", Curso online.";
+            } else
+            {
+                res += ", Curso presencial en el lugar especificado";
+            }
+            return res;
+        }
 
     }
     

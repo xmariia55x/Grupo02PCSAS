@@ -88,11 +88,29 @@ namespace Grupo02PCSAS
             //Application.Run(new fInfoCurso(user, new Curso(22)));
 
 
+            fInicioInvitado main = new fInicioInvitado();
+            main.FormClosed += MainForm_Closed;
+            main.Show();
+            Application.Run();
 
-            //Application.Run(new fInicioInvitado());
-            Curso c = new Curso(24);
-            MaterialCurso material = new MaterialCurso("curso prueba", "google drive", c);
+            
+            //Correo.sendEmail(Correo.recordatorioEvento("12/1/2021"), "Recordatorio", new Usuario("mariagalvez12345@gmail.com"));
+            //Curso c = new Curso(24);
+            //MaterialCurso material = new MaterialCurso("curso prueba", "google drive", c);
 
+        }
+        private static void MainForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            ((Form)sender).FormClosed -= MainForm_Closed;
+
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.ExitThread();
+            }
+            else
+            {
+                Application.OpenForms[0].FormClosed += MainForm_Closed;
+            }
         }
     }
 
