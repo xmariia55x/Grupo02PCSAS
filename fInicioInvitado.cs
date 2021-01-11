@@ -258,7 +258,7 @@ namespace Grupo02PCSAS
 
         }
 
-        private void lRecuperarContrasenia_Click(object sender, EventArgs e)
+        private void bNoticias_Click(object sender, EventArgs e)
         {
             if(tbUsuario.Text.Equals(""))
             {
@@ -287,6 +287,10 @@ namespace Grupo02PCSAS
                 }
                 
             }
+            fNoticia noticias = new fNoticia(null);
+            this.Visible = false;
+            noticias.ShowDialog();
+            this.Visible = true;
         }
     }
 }
