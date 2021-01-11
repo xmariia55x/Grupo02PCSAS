@@ -192,5 +192,30 @@ namespace Grupo02PCSAS
             datosPerfil.ShowDialog();
             this.Visible = true;
         }
+
+        private void bListaParticipantes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (seleccionado != null)
+                {
+                    PantallaListaUsuarios f = new PantallaListaUsuarios(seleccionado, profesor);
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    throw new Exception("No hay ningun curso seleccionado");
+                }
+
+                //para que no se vuelva a seleccionar el mismo
+                seleccionado = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+        }
     }
 }
