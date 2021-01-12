@@ -33,13 +33,12 @@ namespace Grupo02PCSAS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fInfoCurso));
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lDescargaInsritos = new System.Windows.Forms.Label();
             this.lInvitado = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.bAccederPruebaConocimiento = new System.Windows.Forms.Button();
             this.lValorar = new System.Windows.Forms.Label();
             this.bValorar = new System.Windows.Forms.Button();
-            this.lInvitado = new System.Windows.Forms.Label();
+            this.lDescargasInscritos = new System.Windows.Forms.Label();
             this.dgvDescargas = new System.Windows.Forms.DataGridView();
             this.label20 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -77,7 +76,6 @@ namespace Grupo02PCSAS
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.lDescargasInscritos = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescargas)).BeginInit();
             this.panel4.SuspendLayout();
@@ -95,14 +93,12 @@ namespace Grupo02PCSAS
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FloralWhite;
-            this.panel5.Controls.Add(this.lDescargaInsritos);
             this.panel5.Controls.Add(this.lInvitado);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.bAccederPruebaConocimiento);
             this.panel5.Controls.Add(this.lValorar);
             this.panel5.Controls.Add(this.bValorar);
             this.panel5.Controls.Add(this.lDescargasInscritos);
-            this.panel5.Controls.Add(this.lInvitado);
             this.panel5.Controls.Add(this.dgvDescargas);
             this.panel5.Controls.Add(this.label20);
             this.panel5.Location = new System.Drawing.Point(0, 814);
@@ -111,22 +107,11 @@ namespace Grupo02PCSAS
             this.panel5.Size = new System.Drawing.Size(1855, 601);
             this.panel5.TabIndex = 11;
             // 
-            // lDescargaInsritos
-            // 
-            this.lDescargaInsritos.AutoSize = true;
-            this.lDescargaInsritos.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDescargaInsritos.Location = new System.Drawing.Point(548, 157);
-            this.lDescargaInsritos.Name = "lDescargaInsritos";
-            this.lDescargaInsritos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lDescargaInsritos.Size = new System.Drawing.Size(505, 27);
-            this.lDescargaInsritos.TabIndex = 20;
-            this.lDescargaInsritos.Text = "Inscribase en el curso para descargar los archivos";
-            // 
             // lInvitado
             // 
             this.lInvitado.AutoSize = true;
             this.lInvitado.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lInvitado.Location = new System.Drawing.Point(609, 157);
+            this.lInvitado.Location = new System.Drawing.Point(587, 157);
             this.lInvitado.Name = "lInvitado";
             this.lInvitado.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lInvitado.Size = new System.Drawing.Size(411, 27);
@@ -183,13 +168,24 @@ namespace Grupo02PCSAS
             this.bValorar.UseVisualStyleBackColor = false;
             this.bValorar.Click += new System.EventHandler(this.bValorar_Click);
             // 
+            // lDescargasInscritos
+            // 
+            this.lDescargasInscritos.AutoSize = true;
+            this.lDescargasInscritos.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lDescargasInscritos.Location = new System.Drawing.Point(563, 102);
+            this.lDescargasInscritos.Name = "lDescargasInscritos";
+            this.lDescargasInscritos.Size = new System.Drawing.Size(505, 27);
+            this.lDescargasInscritos.TabIndex = 6;
+            this.lDescargasInscritos.Text = "Inscribase en el curso para descargar los archivos";
+            this.lDescargasInscritos.UseMnemonic = false;
+            // 
             // dgvDescargas
             // 
             this.dgvDescargas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvDescargas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDescargas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDescargas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDescargas.Location = new System.Drawing.Point(518, 88);
+            this.dgvDescargas.Location = new System.Drawing.Point(544, 89);
             this.dgvDescargas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvDescargas.Name = "dgvDescargas";
             this.dgvDescargas.RowHeadersWidth = 62;
@@ -608,18 +604,6 @@ namespace Grupo02PCSAS
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // lDescargasInscritos
-            // 
-            this.lDescargasInscritos.AutoSize = true;
-            this.lDescargasInscritos.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDescargasInscritos.Location = new System.Drawing.Point(582, 102);
-            this.lDescargasInscritos.Name = "lDescargasInscritos";
-            this.lDescargasInscritos.Size = new System.Drawing.Size(505, 27);
-            this.lDescargasInscritos.TabIndex = 6;
-            this.lDescargasInscritos.Text = "Inscribase en el curso para descargar los archivos";
-            this.lDescargasInscritos.UseMnemonic = false;
-
-            // 
             // fInfoCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -709,6 +693,5 @@ namespace Grupo02PCSAS
         private Label label3;
         private Button bAccederPruebaConocimiento;
         private Label lInvitado;
-        private Label lDescargaInsritos;
     }
 }

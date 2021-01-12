@@ -57,19 +57,19 @@ namespace Grupo02PCSAS
             if(user == null)
             {
                 lInvitado.Visible = true;
-                lDescargaInsritos.Visible = false;
+                lDescargasInscritos.Visible = false;
                 dgvDescargas.Visible = false;
 
             }else if (!InscritoEnCurso())
             {
                 lInvitado.Visible = false;
-                lDescargaInsritos.Visible = true;
+                lDescargasInscritos.Visible = true;
                 dgvDescargas.Visible = false;
             }
             else
             {
                 lInvitado.Visible = false;
-                lDescargaInsritos.Visible = false;
+                lDescargasInscritos.Visible = false;
                 dgvDescargas.Visible = true;
                 cargaGrid();
             }
