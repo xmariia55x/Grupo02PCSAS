@@ -96,7 +96,7 @@ namespace Grupo02PCSAS
                 MessageBox.Show("ERROR: " + ex.Message);
             }
         }
-        private void comprobarInscrito()
+        private bool comprobarInscrito()
         {
             bool inscrito = false;
             foreach (Usuario u in CursosRealizados.listaUsuarios(curso.CursoID))
@@ -112,6 +112,7 @@ namespace Grupo02PCSAS
             {
                 lInscrito.Text = "No inscrito";
             }
+            return inscrito;
         }
 
         private void mostrarUsuario()

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fInfoCursoProfesor));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dgvDescargas = new System.Windows.Forms.DataGridView();
             this.bEliminarPrueba = new System.Windows.Forms.Button();
             this.bEditarPrueba = new System.Windows.Forms.Button();
             this.bRecordar = new System.Windows.Forms.Button();
@@ -69,8 +70,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.actividadesRealizadasTableAdapter1 = new Grupo02PCSAS.apsgrupo02DataSet1TableAdapters.ActividadesRealizadasTableAdapter();
-            this.dgvDescargas = new System.Windows.Forms.DataGridView();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDescargas)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,7 +80,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDescargas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -99,6 +99,20 @@
             this.panel5.TabIndex = 13;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
+            // dgvDescargas
+            // 
+            this.dgvDescargas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvDescargas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDescargas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvDescargas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDescargas.Location = new System.Drawing.Point(564, 76);
+            this.dgvDescargas.Name = "dgvDescargas";
+            this.dgvDescargas.RowHeadersWidth = 62;
+            this.dgvDescargas.RowTemplate.Height = 28;
+            this.dgvDescargas.Size = new System.Drawing.Size(412, 129);
+            this.dgvDescargas.TabIndex = 6;
+            this.dgvDescargas.SelectionChanged += new System.EventHandler(this.dgvDescargas_SelectionChanged);
+            // 
             // bEliminarPrueba
             // 
             this.bEliminarPrueba.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -109,6 +123,7 @@
             this.bEliminarPrueba.TabIndex = 5;
             this.bEliminarPrueba.Text = "Eliminar prueba";
             this.bEliminarPrueba.UseVisualStyleBackColor = false;
+            this.bEliminarPrueba.Click += new System.EventHandler(this.bEliminarPrueba_Click);
             // 
             // bEditarPrueba
             // 
@@ -597,27 +612,13 @@
             // 
             this.actividadesRealizadasTableAdapter1.ClearBeforeFill = true;
             // 
-            // dgvDescargas
-            // 
-            this.dgvDescargas.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dgvDescargas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDescargas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvDescargas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDescargas.Location = new System.Drawing.Point(564, 76);
-            this.dgvDescargas.Name = "dgvDescargas";
-            this.dgvDescargas.RowHeadersWidth = 62;
-            this.dgvDescargas.RowTemplate.Height = 28;
-            this.dgvDescargas.Size = new System.Drawing.Size(412, 129);
-            this.dgvDescargas.TabIndex = 6;
-            this.dgvDescargas.SelectionChanged += new System.EventHandler(this.dgvDescargas_SelectionChanged);
-            // 
             // fInfoCursoProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1653, 1055);
+            this.ClientSize = new System.Drawing.Size(1653, 1050);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -632,6 +633,7 @@
             this.Load += new System.EventHandler(this.fInfoCursoProfesor_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDescargas)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -644,7 +646,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDescargas)).EndInit();
             this.ResumeLayout(false);
 
         }
