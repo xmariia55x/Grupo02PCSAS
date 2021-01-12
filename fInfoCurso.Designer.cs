@@ -39,6 +39,7 @@ namespace Grupo02PCSAS
             this.bAccederPruebaConocimiento = new System.Windows.Forms.Button();
             this.lValorar = new System.Windows.Forms.Label();
             this.bValorar = new System.Windows.Forms.Button();
+            this.lInvitado = new System.Windows.Forms.Label();
             this.dgvDescargas = new System.Windows.Forms.DataGridView();
             this.label20 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -76,6 +77,7 @@ namespace Grupo02PCSAS
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lDescargasInscritos = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescargas)).BeginInit();
             this.panel4.SuspendLayout();
@@ -99,6 +101,8 @@ namespace Grupo02PCSAS
             this.panel5.Controls.Add(this.bAccederPruebaConocimiento);
             this.panel5.Controls.Add(this.lValorar);
             this.panel5.Controls.Add(this.bValorar);
+            this.panel5.Controls.Add(this.lDescargasInscritos);
+            this.panel5.Controls.Add(this.lInvitado);
             this.panel5.Controls.Add(this.dgvDescargas);
             this.panel5.Controls.Add(this.label20);
             this.panel5.Location = new System.Drawing.Point(0, 814);
@@ -603,6 +607,18 @@ namespace Grupo02PCSAS
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // lDescargasInscritos
+            // 
+            this.lDescargasInscritos.AutoSize = true;
+            this.lDescargasInscritos.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lDescargasInscritos.Location = new System.Drawing.Point(582, 102);
+            this.lDescargasInscritos.Name = "lDescargasInscritos";
+            this.lDescargasInscritos.Size = new System.Drawing.Size(505, 27);
+            this.lDescargasInscritos.TabIndex = 6;
+            this.lDescargasInscritos.Text = "Inscribase en el curso para descargar los archivos";
+            this.lDescargasInscritos.UseMnemonic = false;
+            this.lDescargasInscritos.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // fInfoCurso
             // 
