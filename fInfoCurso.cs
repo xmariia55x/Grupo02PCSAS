@@ -54,7 +54,27 @@ namespace Grupo02PCSAS
             mostrarCurso();
             calcularPlazasDisponibles();
 
-            cargaGrid();
+            if(user == null)
+            {
+                lInvitado.Visible = true;
+                lDescargaInsritos.Visible = false;
+                dgvDescargas.Visible = false;
+
+            }else if (!InscritoEnCurso())
+            {
+                lInvitado.Visible = false;
+                lDescargaInsritos.Visible = true;
+                dgvDescargas.Visible = false;
+            }
+            else
+            {
+                lInvitado.Visible = false;
+                lDescargaInsritos.Visible = false;
+                dgvDescargas.Visible = true;
+                cargaGrid();
+            }
+
+            
 
 
         }
@@ -91,15 +111,22 @@ namespace Grupo02PCSAS
                 MessageBox.Show("ERROR: " + ex.Message);
             }
         }
-        private bool comprobarInscrito()
+
+        private bool InscritoEnCurso()
         {
             bool inscrito = false;
             foreach (Usuario u in CursosRealizados.listaUsuarios(curso.CursoID))
             {
                 if (user.Equals(u)) inscrito = true;
             }
+            return inscrito;
+        }
 
-            if (inscrito)
+        private void comprobarInscrito()
+        {
+            
+
+            if (InscritoEnCurso())
             {
                 lInscrito.Text = "Inscrito";
                 if (comprobarSiAcabado())
@@ -130,7 +157,7 @@ namespace Grupo02PCSAS
                 bValorar.Visible = false;
                 lValorar.Visible = false;
             }
-            return inscrito;
+            
         }
 
         private Boolean comprobarSiAcabado()
