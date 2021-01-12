@@ -92,7 +92,7 @@ namespace Grupo02PCSAS
             main.FormClosed += MainForm_Closed;
             main.Show();
             Application.Run();
-            //Application.Run(new fPruebaConocimientoCurso(new Usuario("mgm7cns@uma.es"), new Curso(24)));
+           
 
             //Correo.sendEmail(Correo.recordatorioEvento("12/1/2021"), "Recordatorio", new Usuario("mariagalvez12345@gmail.com"));
             //Curso c = new Curso(24);
