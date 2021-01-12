@@ -94,6 +94,7 @@ namespace Grupo02PCSAS
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FloralWhite;
             this.panel5.Controls.Add(this.lInvitado);
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.bAccederPruebaConocimiento);
             this.panel5.Controls.Add(this.lValorar);
@@ -123,7 +124,7 @@ namespace Grupo02PCSAS
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1334, 154);
+            this.label3.Location = new System.Drawing.Point(1184, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(272, 29);
             this.label3.TabIndex = 18;
@@ -148,7 +149,7 @@ namespace Grupo02PCSAS
             this.lValorar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lValorar.AutoSize = true;
             this.lValorar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lValorar.Location = new System.Drawing.Point(1335, 56);
+            this.lValorar.Location = new System.Drawing.Point(1185, 45);
             this.lValorar.Name = "lValorar";
             this.lValorar.Size = new System.Drawing.Size(153, 29);
             this.lValorar.TabIndex = 16;

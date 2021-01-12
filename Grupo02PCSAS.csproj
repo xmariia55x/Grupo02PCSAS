@@ -89,6 +89,12 @@
     <Compile Include="fCrearPruebaConocimiento.Designer.cs">
       <DependentUpon>fCrearPruebaConocimiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="fEditarPruebaConocimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fEditarPruebaConocimiento.Designer.cs">
+      <DependentUpon>fEditarPruebaConocimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="fInfoNoticia.cs">
       <SubType>Form</SubType>
     </Compile>
