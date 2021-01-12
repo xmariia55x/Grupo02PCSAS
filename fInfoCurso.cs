@@ -36,6 +36,8 @@ namespace Grupo02PCSAS
                 label5.Visible = false;
                 label9.Visible = false;
                 lInscrito.Visible = false;
+                bAccederPruebaConocimiento.Visible = false;
+                label3.Visible = false;
                 bValorar.Visible = false;
                 lValorar.Visible = false;
             } else
@@ -47,13 +49,6 @@ namespace Grupo02PCSAS
                 }
                 else
                     comprobarInscrito();
-
-                //Comprueba si el curso ha acabado
-                //if (curso.CursoFechaFin.CompareTo(DateTime.Now.ToString("dd / MM / yyyy")) >= 0)
-                //{
-                //    bValorar.Visible = false;
-                //    lValorar.Visible = false;
-                //}
             }
             mostrarUsuario();
             mostrarCurso();
@@ -128,6 +123,12 @@ namespace Grupo02PCSAS
             else
             {
                 lInscrito.Text = "No inscrito";
+
+                bAccederPruebaConocimiento.Visible = false;
+                label3.Visible = false;
+
+                bValorar.Visible = false;
+                lValorar.Visible = false;
             }
             return inscrito;
         }
@@ -227,22 +228,7 @@ namespace Grupo02PCSAS
             this.Visible = false;
             datos.ShowDialog();
             this.Visible = true;
-        }
-
-        private void bParticipantes_Click(object sender, EventArgs e)
-        {
-            PantallaListaUsuarios usu = new PantallaListaUsuarios(curso, user);
-            usu.Show();
-            this.Close();
-            //this.Visible = true;
-        }
-
-        
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        }        
 
 
         private void cargaGrid()

@@ -38,7 +38,6 @@ namespace Grupo02PCSAS
             this.lValorar = new System.Windows.Forms.Label();
             this.bValorar = new System.Windows.Forms.Button();
             this.dgvDescargas = new System.Windows.Forms.DataGridView();
-            this.bParticipantes = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lHoraF = new System.Windows.Forms.Label();
@@ -97,20 +96,18 @@ namespace Grupo02PCSAS
             this.panel5.Controls.Add(this.lValorar);
             this.panel5.Controls.Add(this.bValorar);
             this.panel5.Controls.Add(this.dgvDescargas);
-            this.panel5.Controls.Add(this.bParticipantes);
             this.panel5.Controls.Add(this.label20);
             this.panel5.Location = new System.Drawing.Point(0, 651);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1649, 481);
             this.panel5.TabIndex = 11;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1187, 133);
+            this.label3.Location = new System.Drawing.Point(1186, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(231, 26);
             this.label3.TabIndex = 18;
@@ -166,20 +163,6 @@ namespace Grupo02PCSAS
             this.dgvDescargas.Size = new System.Drawing.Size(412, 129);
             this.dgvDescargas.TabIndex = 4;
             this.dgvDescargas.SelectionChanged += new System.EventHandler(this.dgvDescargas_SelectionChanged);
-            // 
-            // bParticipantes
-            // 
-            this.bParticipantes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bParticipantes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bParticipantes.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bParticipantes.Location = new System.Drawing.Point(1071, 184);
-            this.bParticipantes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bParticipantes.Name = "bParticipantes";
-            this.bParticipantes.Size = new System.Drawing.Size(339, 86);
-            this.bParticipantes.TabIndex = 3;
-            this.bParticipantes.Text = "Lista de Participantes";
-            this.bParticipantes.UseVisualStyleBackColor = false;
-            this.bParticipantes.Click += new System.EventHandler(this.bParticipantes_Click);
             // 
             // label20
             // 
@@ -667,7 +650,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label lNombreUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button bParticipantes;
         private System.Windows.Forms.DataGridView dgvDescargas;
         private PictureBox pictureBox4;
         private Button bValorar;

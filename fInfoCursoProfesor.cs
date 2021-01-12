@@ -223,10 +223,5 @@ namespace Grupo02PCSAS
         {
             this.Close();
         }
-
-        private void bEliminarPrueba_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

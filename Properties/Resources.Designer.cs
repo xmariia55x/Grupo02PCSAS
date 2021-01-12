@@ -83,6 +83,26 @@ namespace Grupo02PCSAS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _189689 {
+            get {
+                object obj = ResourceManager.GetObject("189689", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _580b585b2edbce24c47b2769 {
+            get {
+                object obj = ResourceManager.GetObject("580b585b2edbce24c47b2769", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _60577 {
             get {
                 object obj = ResourceManager.GetObject("60577", resourceCulture);
@@ -113,6 +133,16 @@ namespace Grupo02PCSAS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap borrar_plugins_wordpress {
+            get {
+                object obj = ResourceManager.GetObject("borrar-plugins-wordpress", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carpeta {
             get {
                 object obj = ResourceManager.GetObject("carpeta", resourceCulture);
@@ -136,6 +166,16 @@ namespace Grupo02PCSAS.Properties {
         internal static System.Drawing.Bitmap carpeta3 {
             get {
                 object obj = ResourceManager.GetObject("carpeta3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_155387_960_720 {
+            get {
+                object obj = ResourceManager.GetObject("edit-155387_960_720", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

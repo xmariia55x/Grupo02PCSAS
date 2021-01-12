@@ -83,6 +83,12 @@
     <Compile Include="fCrearNoticia.Designer.cs">
       <DependentUpon>fCrearNoticia.cs</DependentUpon>
     </Compile>
+    <Compile Include="fCrearPruebaConocimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCrearPruebaConocimiento.Designer.cs">
+      <DependentUpon>fCrearPruebaConocimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="fInfoNoticia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,6 +271,9 @@
     <EmbeddedResource Include="fCrearNoticia.resx">
       <DependentUpon>fCrearNoticia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fCrearPruebaConocimiento.resx">
+      <DependentUpon>fCrearPruebaConocimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fInfoActividad.resx">
       <DependentUpon>fInfoActividad.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,6 +401,10 @@
     <None Include="Resources\carpeta2.png" />
     <None Include="Resources\carpeta3.png" />
     <None Include="Resources\estrella.png" />
+    <None Include="Resources\borrar-plugins-wordpress.png" />
+    <None Include="Resources\edit-155387_960_720.png" />
+    <None Include="Resources\580b585b2edbce24c47b2769.png" />
+    <None Include="Resources\189689.png" />
     <Content Include="Resources\pcsas.jpeg" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
