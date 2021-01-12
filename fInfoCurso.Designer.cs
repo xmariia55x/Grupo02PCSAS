@@ -33,6 +33,8 @@ namespace Grupo02PCSAS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fInfoCurso));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bAccederPruebaConocimiento = new System.Windows.Forms.Button();
             this.lValorar = new System.Windows.Forms.Label();
             this.bValorar = new System.Windows.Forms.Button();
             this.dgvDescargas = new System.Windows.Forms.DataGridView();
@@ -90,6 +92,8 @@ namespace Grupo02PCSAS
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FloralWhite;
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.bAccederPruebaConocimiento);
             this.panel5.Controls.Add(this.lValorar);
             this.panel5.Controls.Add(this.bValorar);
             this.panel5.Controls.Add(this.dgvDescargas);
@@ -101,11 +105,36 @@ namespace Grupo02PCSAS
             this.panel5.TabIndex = 11;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1187, 133);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(231, 26);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Prueba de conocimiento";
+            // 
+            // bAccederPruebaConocimiento
+            // 
+            this.bAccederPruebaConocimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bAccederPruebaConocimiento.BackColor = System.Drawing.Color.White;
+            this.bAccederPruebaConocimiento.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bAccederPruebaConocimiento.BackgroundImage")));
+            this.bAccederPruebaConocimiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bAccederPruebaConocimiento.Location = new System.Drawing.Point(1114, 108);
+            this.bAccederPruebaConocimiento.Name = "bAccederPruebaConocimiento";
+            this.bAccederPruebaConocimiento.Size = new System.Drawing.Size(67, 60);
+            this.bAccederPruebaConocimiento.TabIndex = 17;
+            this.bAccederPruebaConocimiento.UseVisualStyleBackColor = false;
+            this.bAccederPruebaConocimiento.Click += new System.EventHandler(this.bAccederPruebaConocimiento_Click);
+            // 
             // lValorar
             // 
+            this.lValorar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lValorar.AutoSize = true;
             this.lValorar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lValorar.Location = new System.Drawing.Point(1240, 45);
+            this.lValorar.Location = new System.Drawing.Point(1187, 45);
             this.lValorar.Name = "lValorar";
             this.lValorar.Size = new System.Drawing.Size(131, 26);
             this.lValorar.TabIndex = 16;
@@ -113,10 +142,11 @@ namespace Grupo02PCSAS
             // 
             // bValorar
             // 
+            this.bValorar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bValorar.BackColor = System.Drawing.Color.White;
             this.bValorar.BackgroundImage = global::Grupo02PCSAS.Properties.Resources.estrella;
             this.bValorar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bValorar.Location = new System.Drawing.Point(1167, 30);
+            this.bValorar.Location = new System.Drawing.Point(1114, 30);
             this.bValorar.Name = "bValorar";
             this.bValorar.Size = new System.Drawing.Size(67, 60);
             this.bValorar.TabIndex = 5;
@@ -142,7 +172,7 @@ namespace Grupo02PCSAS
             this.bParticipantes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bParticipantes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bParticipantes.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bParticipantes.Location = new System.Drawing.Point(1071, 113);
+            this.bParticipantes.Location = new System.Drawing.Point(1071, 184);
             this.bParticipantes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bParticipantes.Name = "bParticipantes";
             this.bParticipantes.Size = new System.Drawing.Size(339, 86);
@@ -642,5 +672,7 @@ namespace Grupo02PCSAS
         private PictureBox pictureBox4;
         private Button bValorar;
         private Label lValorar;
+        private Label label3;
+        private Button bAccederPruebaConocimiento;
     }
 }

@@ -42,26 +42,16 @@ namespace Grupo02PCSAS
             this.lNombreCurso = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lPregunta1 = new System.Windows.Forms.Label();
-            this.cbOpc1p1 = new System.Windows.Forms.CheckBox();
-            this.cbOpc2p1 = new System.Windows.Forms.CheckBox();
-            this.cbOpc3p1 = new System.Windows.Forms.CheckBox();
-            this.cbOpc3p2 = new System.Windows.Forms.CheckBox();
-            this.cbOpc2p2 = new System.Windows.Forms.CheckBox();
-            this.cbOpc1p2 = new System.Windows.Forms.CheckBox();
             this.lPregunta2 = new System.Windows.Forms.Label();
-            this.cbOpc3p3 = new System.Windows.Forms.CheckBox();
-            this.cbOpc2p3 = new System.Windows.Forms.CheckBox();
-            this.cbOpc1p3 = new System.Windows.Forms.CheckBox();
             this.lPregunta3 = new System.Windows.Forms.Label();
-            this.cbOpc3p4 = new System.Windows.Forms.CheckBox();
-            this.cbOpc2p4 = new System.Windows.Forms.CheckBox();
-            this.cbOpc1p4 = new System.Windows.Forms.CheckBox();
             this.lPregunta4 = new System.Windows.Forms.Label();
-            this.cbOpc3p5 = new System.Windows.Forms.CheckBox();
-            this.cbOpc2p5 = new System.Windows.Forms.CheckBox();
-            this.cbOpc1p5 = new System.Windows.Forms.CheckBox();
             this.lPregunta5 = new System.Windows.Forms.Label();
             this.bEnviar = new System.Windows.Forms.Button();
+            this.chlBpregunta1 = new System.Windows.Forms.CheckedListBox();
+            this.chlBpregunta2 = new System.Windows.Forms.CheckedListBox();
+            this.chlBpregunta3 = new System.Windows.Forms.CheckedListBox();
+            this.chlBpregunta4 = new System.Windows.Forms.CheckedListBox();
+            this.chlBpregunta5 = new System.Windows.Forms.CheckedListBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPCSAS)).BeginInit();
@@ -94,6 +84,7 @@ namespace Grupo02PCSAS
             this.lMiPerfil.Size = new System.Drawing.Size(88, 26);
             this.lMiPerfil.TabIndex = 7;
             this.lMiPerfil.Text = "Mi perfil";
+            this.lMiPerfil.Click += new System.EventHandler(this.lMiPerfil_Click);
             // 
             // picturePerfil
             // 
@@ -105,6 +96,7 @@ namespace Grupo02PCSAS
             this.picturePerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picturePerfil.TabIndex = 6;
             this.picturePerfil.TabStop = false;
+            this.picturePerfil.Click += new System.EventHandler(this.picturePerfil_Click);
             // 
             // lRolUser
             // 
@@ -159,6 +151,7 @@ namespace Grupo02PCSAS
             this.logoPCSAS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoPCSAS.TabIndex = 1;
             this.logoPCSAS.TabStop = false;
+            this.logoPCSAS.Click += new System.EventHandler(this.logoPCSAS_Click);
             // 
             // lFinalizado
             // 
@@ -210,254 +203,51 @@ namespace Grupo02PCSAS
             // 
             // lPregunta1
             // 
-            this.lPregunta1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lPregunta1.AutoSize = true;
             this.lPregunta1.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPregunta1.Location = new System.Drawing.Point(532, 315);
+            this.lPregunta1.Location = new System.Drawing.Point(114, 290);
             this.lPregunta1.Name = "lPregunta1";
             this.lPregunta1.Size = new System.Drawing.Size(306, 29);
             this.lPregunta1.TabIndex = 28;
             this.lPregunta1.Text = "Enunciado de la pregunta 1";
             // 
-            // cbOpc1p1
-            // 
-            this.cbOpc1p1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOpc1p1.AutoSize = true;
-            this.cbOpc1p1.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpc1p1.Location = new System.Drawing.Point(473, 366);
-            this.cbOpc1p1.Name = "cbOpc1p1";
-            this.cbOpc1p1.Size = new System.Drawing.Size(97, 27);
-            this.cbOpc1p1.TabIndex = 29;
-            this.cbOpc1p1.Text = "Opcion 1";
-            this.cbOpc1p1.UseVisualStyleBackColor = true;
-            // 
-            // cbOpc2p1
-            // 
-            this.cbOpc2p1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOpc2p1.AutoSize = true;
-            this.cbOpc2p1.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpc2p1.Location = new System.Drawing.Point(652, 366);
-            this.cbOpc2p1.Name = "cbOpc2p1";
-            this.cbOpc2p1.Size = new System.Drawing.Size(97, 27);
-            this.cbOpc2p1.TabIndex = 30;
-            this.cbOpc2p1.Text = "Opcion 2";
-            this.cbOpc2p1.UseVisualStyleBackColor = true;
-            // 
-            // cbOpc3p1
-            // 
-            this.cbOpc3p1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOpc3p1.AutoSize = true;
-            this.cbOpc3p1.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpc3p1.Location = new System.Drawing.Point(864, 366);
-            this.cbOpc3p1.Name = "cbOpc3p1";
-            this.cbOpc3p1.Size = new System.Drawing.Size(97, 27);
-            this.cbOpc3p1.TabIndex = 31;
-            this.cbOpc3p1.Text = "Opcion 3";
-            this.cbOpc3p1.UseVisualStyleBackColor = true;
-            // 
-            // cbOpc3p2
-            // 
-            this.cbOpc3p2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOpc3p2.AutoSize = true;
-            this.cbOpc3p2.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpc3p2.Location = new System.Drawing.Point(864, 477);
-            this.cbOpc3p2.Name = "cbOpc3p2";
-            this.cbOpc3p2.Size = new System.Drawing.Size(97, 27);
-            this.cbOpc3p2.TabIndex = 35;
-            this.cbOpc3p2.Text = "Opcion 3";
-            this.cbOpc3p2.UseVisualStyleBackColor = true;
-            // 
-            // cbOpc2p2
-            // 
-            this.cbOpc2p2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOpc2p2.AutoSize = true;
-            this.cbOpc2p2.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpc2p2.Location = new System.Drawing.Point(652, 477);
-            this.cbOpc2p2.Name = "cbOpc2p2";
-            this.cbOpc2p2.Size = new System.Drawing.Size(97, 27);
-            this.cbOpc2p2.TabIndex = 34;
-            this.cbOpc2p2.Text = "Opcion 2";
-            this.cbOpc2p2.UseVisualStyleBackColor = true;
-            // 
-            // cbOpc1p2
-            // 
-            this.cbOpc1p2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOpc1p2.AutoSize = true;
-            this.cbOpc1p2.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpc1p2.Location = new System.Drawing.Point(473, 477);
-            this.cbOpc1p2.Name = "cbOpc1p2";
-            this.cbOpc1p2.Size = new System.Drawing.Size(97, 27);
-            this.cbOpc1p2.TabIndex = 33;
-            this.cbOpc1p2.Text = "Opcion 1";
-            this.cbOpc1p2.UseVisualStyleBackColor = true;
-            // 
             // lPregunta2
             // 
-            this.lPregunta2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lPregunta2.AutoSize = true;
             this.lPregunta2.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPregunta2.Location = new System.Drawing.Point(532, 426);
+            this.lPregunta2.Location = new System.Drawing.Point(114, 512);
             this.lPregunta2.Name = "lPregunta2";
             this.lPregunta2.Size = new System.Drawing.Size(306, 29);
             this.lPregunta2.TabIndex = 32;
             this.lPregunta2.Text = "Enunciado de la pregunta 2";
             // 
-            // cbOpc3p3
-            // 
-            this.cbOpc3p3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOpc3p3.AutoSize = true;
-            this.cbOpc3p3.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpc3p3.Location = new System.Drawing.Point(864, 593);
-            this.cbOpc3p3.Name = "cbOpc3p3";
-            this.cbOpc3p3.Size = new System.Drawing.Size(97, 27);
-            this.cbOpc3p3.TabIndex = 39;
-            this.cbOpc3p3.Text = "Opcion 3";
-            this.cbOpc3p3.UseVisualStyleBackColor = true;
-            // 
-            // cbOpc2p3
-            // 
-            this.cbOpc2p3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOpc2p3.AutoSize = true;
-            this.cbOpc2p3.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpc2p3.Location = new System.Drawing.Point(652, 593);
-            this.cbOpc2p3.Name = "cbOpc2p3";
-            this.cbOpc2p3.Size = new System.Drawing.Size(97, 27);
-            this.cbOpc2p3.TabIndex = 38;
-            this.cbOpc2p3.Text = "Opcion 2";
-            this.cbOpc2p3.UseVisualStyleBackColor = true;
-            // 
-            // cbOpc1p3
-            // 
-            this.cbOpc1p3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOpc1p3.AutoSize = true;
-            this.cbOpc1p3.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpc1p3.Location = new System.Drawing.Point(473, 593);
-            this.cbOpc1p3.Name = "cbOpc1p3";
-            this.cbOpc1p3.Size = new System.Drawing.Size(97, 27);
-            this.cbOpc1p3.TabIndex = 37;
-            this.cbOpc1p3.Text = "Opcion 1";
-            this.cbOpc1p3.UseVisualStyleBackColor = true;
-            // 
             // lPregunta3
             // 
-            this.lPregunta3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lPregunta3.AutoSize = true;
             this.lPregunta3.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPregunta3.Location = new System.Drawing.Point(532, 542);
+            this.lPregunta3.Location = new System.Drawing.Point(114, 740);
             this.lPregunta3.Name = "lPregunta3";
             this.lPregunta3.Size = new System.Drawing.Size(306, 29);
             this.lPregunta3.TabIndex = 36;
             this.lPregunta3.Text = "Enunciado de la pregunta 3";
             // 
-            // cbOpc3p4
-            // 
-            this.cbOpc3p4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOpc3p4.AutoSize = true;
-            this.cbOpc3p4.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpc3p4.Location = new System.Drawing.Point(864, 727);
-            this.cbOpc3p4.Name = "cbOpc3p4";
-            this.cbOpc3p4.Size = new System.Drawing.Size(97, 27);
-            this.cbOpc3p4.TabIndex = 43;
-            this.cbOpc3p4.Text = "Opcion 3";
-            this.cbOpc3p4.UseVisualStyleBackColor = true;
-            // 
-            // cbOpc2p4
-            // 
-            this.cbOpc2p4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOpc2p4.AutoSize = true;
-            this.cbOpc2p4.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpc2p4.Location = new System.Drawing.Point(652, 727);
-            this.cbOpc2p4.Name = "cbOpc2p4";
-            this.cbOpc2p4.Size = new System.Drawing.Size(97, 27);
-            this.cbOpc2p4.TabIndex = 42;
-            this.cbOpc2p4.Text = "Opcion 2";
-            this.cbOpc2p4.UseVisualStyleBackColor = true;
-            // 
-            // cbOpc1p4
-            // 
-            this.cbOpc1p4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOpc1p4.AutoSize = true;
-            this.cbOpc1p4.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpc1p4.Location = new System.Drawing.Point(473, 727);
-            this.cbOpc1p4.Name = "cbOpc1p4";
-            this.cbOpc1p4.Size = new System.Drawing.Size(97, 27);
-            this.cbOpc1p4.TabIndex = 41;
-            this.cbOpc1p4.Text = "Opcion 1";
-            this.cbOpc1p4.UseVisualStyleBackColor = true;
-            // 
             // lPregunta4
             // 
-            this.lPregunta4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lPregunta4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lPregunta4.AutoSize = true;
             this.lPregunta4.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPregunta4.Location = new System.Drawing.Point(532, 676);
+            this.lPregunta4.Location = new System.Drawing.Point(831, 290);
             this.lPregunta4.Name = "lPregunta4";
             this.lPregunta4.Size = new System.Drawing.Size(306, 29);
             this.lPregunta4.TabIndex = 40;
             this.lPregunta4.Text = "Enunciado de la pregunta 4";
             // 
-            // cbOpc3p5
-            // 
-            this.cbOpc3p5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOpc3p5.AutoSize = true;
-            this.cbOpc3p5.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpc3p5.Location = new System.Drawing.Point(864, 859);
-            this.cbOpc3p5.Name = "cbOpc3p5";
-            this.cbOpc3p5.Size = new System.Drawing.Size(97, 27);
-            this.cbOpc3p5.TabIndex = 47;
-            this.cbOpc3p5.Text = "Opcion 3";
-            this.cbOpc3p5.UseVisualStyleBackColor = true;
-            // 
-            // cbOpc2p5
-            // 
-            this.cbOpc2p5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOpc2p5.AutoSize = true;
-            this.cbOpc2p5.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpc2p5.Location = new System.Drawing.Point(652, 859);
-            this.cbOpc2p5.Name = "cbOpc2p5";
-            this.cbOpc2p5.Size = new System.Drawing.Size(97, 27);
-            this.cbOpc2p5.TabIndex = 46;
-            this.cbOpc2p5.Text = "Opcion 2";
-            this.cbOpc2p5.UseVisualStyleBackColor = true;
-            // 
-            // cbOpc1p5
-            // 
-            this.cbOpc1p5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOpc1p5.AutoSize = true;
-            this.cbOpc1p5.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOpc1p5.Location = new System.Drawing.Point(473, 859);
-            this.cbOpc1p5.Name = "cbOpc1p5";
-            this.cbOpc1p5.Size = new System.Drawing.Size(97, 27);
-            this.cbOpc1p5.TabIndex = 45;
-            this.cbOpc1p5.Text = "Opcion 1";
-            this.cbOpc1p5.UseVisualStyleBackColor = true;
-            // 
             // lPregunta5
             // 
-            this.lPregunta5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lPregunta5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lPregunta5.AutoSize = true;
             this.lPregunta5.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPregunta5.Location = new System.Drawing.Point(532, 808);
+            this.lPregunta5.Location = new System.Drawing.Point(831, 512);
             this.lPregunta5.Name = "lPregunta5";
             this.lPregunta5.Size = new System.Drawing.Size(306, 29);
             this.lPregunta5.TabIndex = 44;
@@ -465,15 +255,58 @@ namespace Grupo02PCSAS
             // 
             // bEnviar
             // 
-            this.bEnviar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.bEnviar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bEnviar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bEnviar.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEnviar.Location = new System.Drawing.Point(576, 922);
+            this.bEnviar.Location = new System.Drawing.Point(840, 699);
             this.bEnviar.Name = "bEnviar";
-            this.bEnviar.Size = new System.Drawing.Size(262, 61);
+            this.bEnviar.Size = new System.Drawing.Size(262, 83);
             this.bEnviar.TabIndex = 48;
             this.bEnviar.Text = "Enviar todo y terminar";
             this.bEnviar.UseVisualStyleBackColor = false;
+            this.bEnviar.Click += new System.EventHandler(this.bEnviar_Click);
+            // 
+            // chlBpregunta1
+            // 
+            this.chlBpregunta1.FormattingEnabled = true;
+            this.chlBpregunta1.Location = new System.Drawing.Point(144, 332);
+            this.chlBpregunta1.Name = "chlBpregunta1";
+            this.chlBpregunta1.Size = new System.Drawing.Size(241, 89);
+            this.chlBpregunta1.TabIndex = 49;
+            // 
+            // chlBpregunta2
+            // 
+            this.chlBpregunta2.FormattingEnabled = true;
+            this.chlBpregunta2.Location = new System.Drawing.Point(144, 554);
+            this.chlBpregunta2.Name = "chlBpregunta2";
+            this.chlBpregunta2.Size = new System.Drawing.Size(241, 89);
+            this.chlBpregunta2.TabIndex = 50;
+            // 
+            // chlBpregunta3
+            // 
+            this.chlBpregunta3.FormattingEnabled = true;
+            this.chlBpregunta3.Location = new System.Drawing.Point(144, 785);
+            this.chlBpregunta3.Name = "chlBpregunta3";
+            this.chlBpregunta3.Size = new System.Drawing.Size(241, 89);
+            this.chlBpregunta3.TabIndex = 51;
+            // 
+            // chlBpregunta4
+            // 
+            this.chlBpregunta4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chlBpregunta4.FormattingEnabled = true;
+            this.chlBpregunta4.Location = new System.Drawing.Point(861, 330);
+            this.chlBpregunta4.Name = "chlBpregunta4";
+            this.chlBpregunta4.Size = new System.Drawing.Size(241, 89);
+            this.chlBpregunta4.TabIndex = 52;
+            // 
+            // chlBpregunta5
+            // 
+            this.chlBpregunta5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chlBpregunta5.FormattingEnabled = true;
+            this.chlBpregunta5.Location = new System.Drawing.Point(861, 559);
+            this.chlBpregunta5.Name = "chlBpregunta5";
+            this.chlBpregunta5.Size = new System.Drawing.Size(241, 89);
+            this.chlBpregunta5.TabIndex = 53;
             // 
             // fPruebaConocimientoCurso
             // 
@@ -482,27 +315,17 @@ namespace Grupo02PCSAS
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1469, 1033);
+            this.ClientSize = new System.Drawing.Size(1469, 915);
+            this.Controls.Add(this.chlBpregunta5);
+            this.Controls.Add(this.chlBpregunta4);
+            this.Controls.Add(this.chlBpregunta3);
+            this.Controls.Add(this.chlBpregunta2);
+            this.Controls.Add(this.chlBpregunta1);
             this.Controls.Add(this.bEnviar);
-            this.Controls.Add(this.cbOpc3p5);
-            this.Controls.Add(this.cbOpc2p5);
-            this.Controls.Add(this.cbOpc1p5);
             this.Controls.Add(this.lPregunta5);
-            this.Controls.Add(this.cbOpc3p4);
-            this.Controls.Add(this.cbOpc2p4);
-            this.Controls.Add(this.cbOpc1p4);
             this.Controls.Add(this.lPregunta4);
-            this.Controls.Add(this.cbOpc3p3);
-            this.Controls.Add(this.cbOpc2p3);
-            this.Controls.Add(this.cbOpc1p3);
             this.Controls.Add(this.lPregunta3);
-            this.Controls.Add(this.cbOpc3p2);
-            this.Controls.Add(this.cbOpc2p2);
-            this.Controls.Add(this.cbOpc1p2);
             this.Controls.Add(this.lPregunta2);
-            this.Controls.Add(this.cbOpc3p1);
-            this.Controls.Add(this.cbOpc2p1);
-            this.Controls.Add(this.cbOpc1p1);
             this.Controls.Add(this.lPregunta1);
             this.Controls.Add(this.lFinalizado);
             this.Controls.Add(this.label9);
@@ -511,7 +334,10 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.panel2);
             this.MaximizeBox = false;
             this.Name = "fPruebaConocimientoCurso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prueba de conocimiento";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.fPruebaConocimientoCurso_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePerfil)).EndInit();
@@ -536,25 +362,15 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label lNombreCurso;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lPregunta1;
-        private System.Windows.Forms.CheckBox cbOpc1p1;
-        private System.Windows.Forms.CheckBox cbOpc2p1;
-        private System.Windows.Forms.CheckBox cbOpc3p1;
-        private System.Windows.Forms.CheckBox cbOpc3p2;
-        private System.Windows.Forms.CheckBox cbOpc2p2;
-        private System.Windows.Forms.CheckBox cbOpc1p2;
         private System.Windows.Forms.Label lPregunta2;
-        private System.Windows.Forms.CheckBox cbOpc3p3;
-        private System.Windows.Forms.CheckBox cbOpc2p3;
-        private System.Windows.Forms.CheckBox cbOpc1p3;
         private System.Windows.Forms.Label lPregunta3;
-        private System.Windows.Forms.CheckBox cbOpc3p4;
-        private System.Windows.Forms.CheckBox cbOpc2p4;
-        private System.Windows.Forms.CheckBox cbOpc1p4;
         private System.Windows.Forms.Label lPregunta4;
-        private System.Windows.Forms.CheckBox cbOpc3p5;
-        private System.Windows.Forms.CheckBox cbOpc2p5;
-        private System.Windows.Forms.CheckBox cbOpc1p5;
         private System.Windows.Forms.Label lPregunta5;
         private System.Windows.Forms.Button bEnviar;
+        private System.Windows.Forms.CheckedListBox chlBpregunta1;
+        private System.Windows.Forms.CheckedListBox chlBpregunta2;
+        private System.Windows.Forms.CheckedListBox chlBpregunta3;
+        private System.Windows.Forms.CheckedListBox chlBpregunta4;
+        private System.Windows.Forms.CheckedListBox chlBpregunta5;
     }
 }
