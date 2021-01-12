@@ -280,6 +280,9 @@
     <EmbeddedResource Include="fCrearPruebaConocimiento.resx">
       <DependentUpon>fCrearPruebaConocimiento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fEditarPruebaConocimiento.resx">
+      <DependentUpon>fEditarPruebaConocimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fInfoActividad.resx">
       <DependentUpon>fInfoActividad.cs</DependentUpon>
     </EmbeddedResource>

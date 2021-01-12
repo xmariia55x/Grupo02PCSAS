@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Grupo02PCSAS
 {
-    class PruebaConocimiento
+    public class PruebaConocimiento
     {
         private static string BD_SERVER = Properties.Settings.Default.BD_SERVER;
         private static string BD_NAME = Properties.Settings.Default.BD_NAME;
@@ -107,7 +107,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                string sentencia = "UPDATE PruebaConocimiento SET P1 = '" + value + "' WHERE idCursoPrueba = " + this.idCursoPrueba + ";";
+                string sentencia = "UPDATE PruebaConocimiento SET P5 = '" + value + "' WHERE idCursoPrueba = " + this.idCursoPrueba + ";";
                 miBD.Update(sentencia);
 
                 this.p1 = value;

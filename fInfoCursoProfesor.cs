@@ -242,10 +242,10 @@ namespace Grupo02PCSAS
         {
             if (PruebaConocimiento.hayPruebaConocimiento(curso))
             {
-                //fCrearPruebaConocimiento f = new fCrearPruebaConocimiento(user, curso);
-                //this.Hide();
-                //f.ShowDialog();
-                //this.Close();
+                fEditarPruebaConocimiento f = new fEditarPruebaConocimiento(user, curso, new PruebaConocimiento(curso.CursoID));
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
             }
             else
             {
