@@ -33,7 +33,15 @@ namespace Grupo02PCSAS
             }
             mostrarUsuario();
             mostrarActividad();
-            comprobarInscrito();
+
+            if(ActividadesRealizadas.comprobarInscrito(user, act))
+            {
+                lInscrito.Text = "Inscrito";
+            } else
+            {
+                lInscrito.Text = "No inscrito";
+            }
+
             calcularPlazasDisponibles();
             if(user != null && (user.RolUsuario.RolName.Equals("PROFESOR") || user.RolUsuario.RolName.Equals("ENTIDAD")))
             {
@@ -64,27 +72,19 @@ namespace Grupo02PCSAS
             lPlazasDisp.Text = (act.AforoActividad - filtro.Count).ToString();
         }
 
-        private void comprobarInscrito()
+        private bool estaValorada()
         {
-            bool inscrito = false;
-            if (user != null)
+            bool res = false;
+
+            foreach (Actividad a in ValoracionActividad.listaActividadesValoradas(user))
             {
-
-
-                foreach (Usuario u in ActividadesRealizadas.listaUsuarios(act.IdActividad))
+                if (a.Equals(act))
                 {
-                    if (user.CorreoUsuario.Equals(u.CorreoUsuario)) inscrito = true;
-                }
-
-                if (inscrito)
-                {
-                    lInscrito.Text = "Inscrito";
-                }
-                else
-                {
-                    lInscrito.Text = "No inscrito";
+                    res = true;
                 }
             }
+
+            return res;
         }
 
         private void mostrarUsuario()
@@ -185,6 +185,32 @@ namespace Grupo02PCSAS
             {
                 //do something else
 
+            }
+        }
+
+        private void bValorar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(ActividadesRealizadas.comprobarInscrito(user,act))
+                {
+                    if(!estaValorada())
+                    {
+                        fSatisfaccionActividad satisfaccionActividad = new fSatisfaccionActividad(user,act);
+                        this.Visible = false;
+                        satisfaccionActividad.ShowDialog();
+                        this.Visible = true;
+                    } else
+                    {
+                        throw new Exception("Ya ha valorado la actividad");
+                    }
+                } else
+                {
+                    throw new Exception("No esta inscrito en la actividad");
+                }
+            } catch(Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
             }
         }
     }

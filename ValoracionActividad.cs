@@ -20,6 +20,20 @@ namespace Grupo02PCSAS
         private bool repetir;
         private String comentario;
 
+        public static List<Actividad> listaActividadesValoradas(Usuario u)
+        {
+            List<Actividad> res = new List<Actividad>();
+            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER,BD_NAME);
+
+            foreach(Object[] tupla in miBD.Select("SELECT idActividad FROM ValoracionActividad WHERE correoUsuario = '" + u.CorreoUsuario + "';"))
+            {
+                int id = (int)tupla[0];
+                res.Add(new Actividad(id));
+            }
+
+            return res;
+        }
+
         public ValoracionActividad(Usuario usuario, Actividad act)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
@@ -38,7 +52,7 @@ namespace Grupo02PCSAS
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
 
-            string sentencia = "INSERT INTO ValoracionActividad VALUES (" + user.CorreoUsuario + "," + act.IdActividad + "," + s + "," + l + ","+ h + "," + o + "," + (r == true ? 1 : 0) + ",'" + c + "');";
+            string sentencia = "INSERT INTO ValoracionActividad VALUES ('" + user.CorreoUsuario + "'," + act.IdActividad + "," + s + "," + l + ","+ h + "," + o + "," + (r == true ? 1 : 0) + ",'" + c + "');";
             miBD.Insert(sentencia);
             this.user = user;
             this.actividad = act;
@@ -82,6 +96,8 @@ namespace Grupo02PCSAS
                 this.satisfaccion = value;
             }
         }
+
+       
 
         public int Lugar
         {

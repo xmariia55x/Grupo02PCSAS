@@ -101,6 +101,12 @@
     <Compile Include="fPruebaConocimientoCurso.Designer.cs">
       <DependentUpon>fPruebaConocimientoCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="fSatisfaccionActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSatisfaccionActividad.Designer.cs">
+      <DependentUpon>fSatisfaccionActividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="fSatisfaccionCurso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fRegistro.resx">
       <DependentUpon>fRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSatisfaccionActividad.resx">
+      <DependentUpon>fSatisfaccionActividad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fSatisfaccionCurso.resx">
       <DependentUpon>fSatisfaccionCurso.cs</DependentUpon>

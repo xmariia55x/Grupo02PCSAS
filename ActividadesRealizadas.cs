@@ -14,6 +14,21 @@ namespace Grupo02PCSAS
         private int idActividad;
         private string correo;
 
+        public static bool comprobarInscrito(Usuario usuario, Actividad actividad)
+        {
+            bool inscrito = false;
+            if (usuario != null)
+            {
+
+
+                foreach (Usuario u in ActividadesRealizadas.listaUsuarios(actividad.IdActividad))
+                {
+                    if (usuario.CorreoUsuario.Equals(u.CorreoUsuario)) inscrito = true;
+                }
+            }
+            return inscrito;
+        }
+
         public static List<Usuario> listaUsuarios(int actId)
         {
             List<Usuario> lista = new List<Usuario>();
