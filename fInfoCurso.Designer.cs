@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fInfoCurso));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lInvitado = new System.Windows.Forms.Label();
             this.dgvDescargas = new System.Windows.Forms.DataGridView();
             this.bParticipantes = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
@@ -67,6 +68,7 @@
             this.lNombreUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lDescargasInscritos = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescargas)).BeginInit();
             this.panel4.SuspendLayout();
@@ -83,6 +85,8 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FloralWhite;
+            this.panel5.Controls.Add(this.lDescargasInscritos);
+            this.panel5.Controls.Add(this.lInvitado);
             this.panel5.Controls.Add(this.dgvDescargas);
             this.panel5.Controls.Add(this.bParticipantes);
             this.panel5.Controls.Add(this.label20);
@@ -92,6 +96,18 @@
             this.panel5.Size = new System.Drawing.Size(1649, 481);
             this.panel5.TabIndex = 11;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // lInvitado
+            // 
+            this.lInvitado.AutoSize = true;
+            this.lInvitado.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lInvitado.Location = new System.Drawing.Point(560, 102);
+            this.lInvitado.Name = "lInvitado";
+            this.lInvitado.Size = new System.Drawing.Size(551, 27);
+            this.lInvitado.TabIndex = 5;
+            this.lInvitado.Text = "Inicie sesión para descargar los archivos de este curso";
+            this.lInvitado.UseMnemonic = false;
+            this.lInvitado.Click += new System.EventHandler(this.label3_Click);
             // 
             // dgvDescargas
             // 
@@ -519,6 +535,18 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // lDescargasInscritos
+            // 
+            this.lDescargasInscritos.AutoSize = true;
+            this.lDescargasInscritos.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lDescargasInscritos.Location = new System.Drawing.Point(582, 102);
+            this.lDescargasInscritos.Name = "lDescargasInscritos";
+            this.lDescargasInscritos.Size = new System.Drawing.Size(505, 27);
+            this.lDescargasInscritos.TabIndex = 6;
+            this.lDescargasInscritos.Text = "Inscribase en el curso para descargar los archivos";
+            this.lDescargasInscritos.UseMnemonic = false;
+            this.lDescargasInscritos.Click += new System.EventHandler(this.label3_Click_1);
+            // 
             // fInfoCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -596,5 +624,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bParticipantes;
         private System.Windows.Forms.DataGridView dgvDescargas;
+        private System.Windows.Forms.Label lInvitado;
+        private System.Windows.Forms.Label lDescargasInscritos;
     }
 }
