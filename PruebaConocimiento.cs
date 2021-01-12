@@ -12,7 +12,8 @@ namespace Grupo02PCSAS
         private static string BD_NAME = Properties.Settings.Default.BD_NAME;
 
         //Formato de pi
-        //pregunta; respuesta1, respuesta2, respuesta3; indexRespuestaCorrecta(1,2,3)
+        //pregunta;respuesta1;respuesta2;respuesta3;indexRespuestaCorrecta(1,2,3)
+
         private string p1;
         private string p2;
         private string p3;
@@ -135,6 +136,13 @@ namespace Grupo02PCSAS
         public override int GetHashCode()
         {
             return this.idCursoPrueba.GetHashCode();
+        }
+
+        public static Boolean hayPruebaConocimiento(Curso curso)
+        {
+            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+            string sentencia = "SELECT * FROM PruebaConocimiento WHERE idCursoPrueba = " + curso.CursoID + ";";
+            return miBD.Select(sentencia).Count > 0;
         }
     }
 }

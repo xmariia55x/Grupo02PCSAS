@@ -36,6 +36,10 @@ namespace Grupo02PCSAS
                 label5.Visible = false;
                 label9.Visible = false;
                 lInscrito.Visible = false;
+                bAccederPruebaConocimiento.Visible = false;
+                label3.Visible = false;
+                bValorar.Visible = false;
+                lValorar.Visible = false;
             } else
             {
                 if (user.Equals(curso.CursoProfesor))
@@ -117,13 +121,45 @@ namespace Grupo02PCSAS
             if (inscrito)
             {
                 lInscrito.Text = "Inscrito";
+                if (comprobarSiAcabado())
+                {
+                    //Permite acceder a la prueba de conocimiento
+                    bAccederPruebaConocimiento.Visible = true;
+                    label3.Visible = true;
+
+                    //Permite acceder a la valoracion del curso
+                    bValorar.Visible = true;
+                    lValorar.Visible = true;
+                } else
+                {
+                    bAccederPruebaConocimiento.Visible = false;
+                    label3.Visible = false;
+
+                    bValorar.Visible = false;
+                    lValorar.Visible = false;
+                }
                 return true;
             }
             else
             {
                 lInscrito.Text = "No inscrito";
+
+                bAccederPruebaConocimiento.Visible = false;
+                label3.Visible = false;
+
+                bValorar.Visible = false;
+                lValorar.Visible = false;
                 return false;
             }
+            return inscrito;
+        }
+
+        private Boolean comprobarSiAcabado()
+        {
+            string[] fechaFinSplit = curso.CursoFechaFin.Split('/');
+            DateTime dt = new DateTime(int.Parse(fechaFinSplit[2]), int.Parse(fechaFinSplit[1]), int.Parse(fechaFinSplit[0]));
+            DateTime dt2 = DateTime.Now;
+            return dt.CompareTo(dt2) < 0;
         }
 
         private void mostrarUsuario()
@@ -213,22 +249,7 @@ namespace Grupo02PCSAS
             this.Visible = false;
             datos.ShowDialog();
             this.Visible = true;
-        }
-
-        private void bParticipantes_Click(object sender, EventArgs e)
-        {
-            PantallaListaUsuarios usu = new PantallaListaUsuarios(curso, user);
-            usu.Show();
-            this.Close();
-            //this.Visible = true;
-        }
-
-        
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        }        
 
 
         private void cargaGrid()
@@ -245,14 +266,69 @@ namespace Grupo02PCSAS
             dgvDescargas.DataSource = tablaC;
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void bValorar_Click(object sender, EventArgs e)
         {
-
+            if (estaValorado())
+            {
+                MessageBox.Show("El curso ya se ha valorado");
+            } else
+            {
+                fSatisfaccionCurso f = new fSatisfaccionCurso(user, curso);
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+            }
         }
 
-        private void label3_Click_1(object sender, EventArgs e)
+        private bool estaValorado()
         {
+            bool res = false;
 
+            foreach (Curso c in ValoracionCurso.listaCursosValorados(user))
+            {
+                if (c.Equals(curso))
+                {
+                    res = true;
+                }
+            }
+
+            return res;
+        }
+
+        private void bAccederPruebaConocimiento_Click(object sender, EventArgs e)
+        {
+            if (pruebaRealizada())
+            {
+                MessageBox.Show("La prueba ya se ha realizado");
+            } else
+            {
+                if (!PruebaConocimiento.hayPruebaConocimiento(curso))
+                {
+                    MessageBox.Show("No hay una prueba de conocimiento disponible todavia");
+                } else
+                {
+                    fPruebaConocimientoCurso prueba = new fPruebaConocimientoCurso(user, curso);
+                    this.Hide();
+                    prueba.ShowDialog();
+                    this.Close();
+                }
+                
+            }
+        }
+
+        private bool pruebaRealizada()
+        {
+            bool res = false;
+
+            foreach (string usuario in RespuestaPruebaConocimiento.usuariosQueHanRellenadoPrueba(curso))
+            {
+                if (user.CorreoUsuario.Equals(usuario))
+                {
+                    res = true;
+                }
+            }
+
+            return res;
         }
     }
 

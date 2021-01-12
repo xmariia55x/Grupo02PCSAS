@@ -92,8 +92,8 @@ namespace Grupo02PCSAS
             main.FormClosed += MainForm_Closed;
             main.Show();
             Application.Run();
+           
 
-            
             //Correo.sendEmail(Correo.recordatorioEvento("12/1/2021"), "Recordatorio", new Usuario("mariagalvez12345@gmail.com"));
             //Curso c = new Curso(24);
             //MaterialCurso material = new MaterialCurso("curso prueba", "google drive", c);

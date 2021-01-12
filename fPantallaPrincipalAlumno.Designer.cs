@@ -1,4 +1,7 @@
 ﻿
+using System;
+using System.Windows.Forms;
+
 namespace Grupo02PCSAS
 {
     partial class fPantallaPrincipalAlumno
@@ -860,6 +863,11 @@ namespace Grupo02PCSAS
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void dgvMisCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
