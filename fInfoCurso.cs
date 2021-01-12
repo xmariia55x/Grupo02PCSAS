@@ -146,7 +146,7 @@ namespace Grupo02PCSAS
                     bValorar.Visible = false;
                     lValorar.Visible = false;
                 }
-                return true;
+                
             }
             else
             {
@@ -157,7 +157,7 @@ namespace Grupo02PCSAS
 
                 bValorar.Visible = false;
                 lValorar.Visible = false;
-                return false;
+                
             }
             
         }

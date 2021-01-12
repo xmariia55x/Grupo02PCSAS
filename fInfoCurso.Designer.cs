@@ -618,7 +618,7 @@ namespace Grupo02PCSAS
             this.lDescargasInscritos.TabIndex = 6;
             this.lDescargasInscritos.Text = "Inscribase en el curso para descargar los archivos";
             this.lDescargasInscritos.UseMnemonic = false;
-            this.lDescargasInscritos.Click += new System.EventHandler(this.label3_Click_1);
+
             // 
             // fInfoCurso
             // 
@@ -703,6 +703,7 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvDescargas;
         private PictureBox pictureBox4;
+        private Label lDescargasInscritos;
         private Button bValorar;
         private Label lValorar;
         private Label label3;
