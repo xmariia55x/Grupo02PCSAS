@@ -295,8 +295,9 @@ namespace Grupo02PCSAS
                 {
                     int id = (int) dgvMisCursos.SelectedRows[0].Cells[0].Value;
                     fInfoCurso info = new fInfoCurso(alumno, new Curso(id));
-                    info.Show();
-                    this.Close();
+                    this.Visible = false;
+                    info.ShowDialog();
+                    this.Visible = true;
                 }
             }
             catch (Exception ex)

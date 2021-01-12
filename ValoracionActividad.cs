@@ -11,8 +11,8 @@ namespace Grupo02PCSAS
         private static string BD_SERVER = Properties.Settings.Default.BD_SERVER;
         private static string BD_NAME = Properties.Settings.Default.BD_NAME;
 
-        private int id;
-        private int idActividad;
+        private Usuario user;
+        private Actividad actividad;
         private int satisfaccion;
         private int lugar;
         private int horario;
@@ -20,16 +20,12 @@ namespace Grupo02PCSAS
         private bool repetir;
         private String comentario;
 
-        private Actividad actividad;
-
-
-        public ValoracionActividad(int id)
+        public ValoracionActividad(Usuario usuario, Actividad act)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            Object[] tupla = miBD.Select("SELECT * FROM ValoracionActividad WHERE id = " + id + ";")[0];
-            this.id = (int)tupla[0];
+            Object[] tupla = miBD.Select("SELECT * FROM ValoracionActividad WHERE correoUsuario = '" + usuario.CorreoUsuario + "' AND idActividad = "+act.IdActividad+";")[0];
+            this.user = new Usuario((string)tupla[0]);
             this.actividad = new Actividad((int)tupla[1]);
-            this.idActividad = actividad.IdActividad;
             this.satisfaccion = (int)tupla[2];
             this.lugar = (int)tupla[3];
             this.horario = (int)tupla[4];
@@ -38,15 +34,14 @@ namespace Grupo02PCSAS
             this.comentario = (String)tupla[7];
         }
 
-        public ValoracionActividad(int ia, int s, int l, int h, int o, bool r, String c) 
+        public ValoracionActividad(Usuario user, Actividad act, int s, int l, int h, int o, bool r, String c) 
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
 
-            string sentencia = "INSERT INTO ValoracionActividad VALUES (" + 0 + "," + ia + "," + s + "," + l + ","+ h + "," + o + "," + (r == true ? 1 : 0) + ",'" + c + "');";
+            string sentencia = "INSERT INTO ValoracionActividad VALUES (" + user.CorreoUsuario + "," + act.IdActividad + "," + s + "," + l + ","+ h + "," + o + "," + (r == true ? 1 : 0) + ",'" + c + "');";
             miBD.Insert(sentencia);
-            this.id = (int)miBD.SelectScalar("SELECT MAX(id) FROM ValoracionActividad;");
-            this.actividad = new Actividad(ia);
-            this.idActividad = actividad.IdActividad;
+            this.user = user;
+            this.actividad = act;
             this.satisfaccion = s;
             this.lugar = l;
             this.horario = h;
@@ -55,24 +50,24 @@ namespace Grupo02PCSAS
             this.comentario = c;
         }
 
-        public int IDValoracionActividad
+        public Usuario UsuarioValoracion
         {
-            get { return this.id; }
+            get { return this.user; }
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE ValoracionActividad SET id =" + value + "WHERE id = " + this.id);
-                this.id = value;
+                miBD.Update("UPDATE ValoracionActividad SET correoUsuario ='" + value + "' WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idActividad = "+this.actividad.IdActividad+"; ");
+                this.user = value;
             }
         }
-        public int IdActividad
+        public Actividad ActividadValoracion
         {
-            get { return this.idActividad; }
+            get { return this.actividad; }
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE ValoracionActividad SET idActividad =" + value + "WHERE id = " + this.id);
-                this.idActividad = value;
+                miBD.Update("UPDATE ValoracionActividad SET idActividad ="+ value +" WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idActividad = " + this.actividad.IdActividad + "; ");
+                this.actividad = value;
             }
         }
 
@@ -83,7 +78,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE ValoracionActividad SET satisfaccion =" + value + "WHERE id = " + this.id);
+                miBD.Update("UPDATE ValoracionActividad SET satisfaccion =" + value + " WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idActividad = " + this.actividad.IdActividad + "; ");
                 this.satisfaccion = value;
             }
         }
@@ -94,7 +89,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE ValoracionActividad SET lugar =" + value + "WHERE id = " + this.id);
+                miBD.Update("UPDATE ValoracionActividad SET lugar =" + value + " WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idActividad = " + this.actividad.IdActividad + "; ");
                 this.lugar = value;
             }
         }
@@ -105,7 +100,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE ValoracionActividad SET horario =" + value + "WHERE id = " + this.id);
+                miBD.Update("UPDATE ValoracionActividad SET horario =" + value + " WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idActividad = " + this.actividad.IdActividad + "; ");
                 this.horario = value;
             }
         }
@@ -116,7 +111,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE ValoracionActividad SET organizacion =" + value + "WHERE id = " + this.id);
+                miBD.Update("UPDATE ValoracionActividad SET organizacion =" + value + " WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idActividad = " + this.actividad.IdActividad + "; ");
                 this.organizacion = value;
             }
         }
@@ -127,7 +122,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE ValoracionActividad SET repetir =" + (value == true ? 1 : 0 ) + "WHERE id = " + this.id);
+                miBD.Update("UPDATE ValoracionActividad SET repetir =" + (value == true ? 1 : 0 ) + " WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idActividad = " + this.actividad.IdActividad + "; ");
                 this.repetir = value;
             }
         }
@@ -138,7 +133,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE ValoracionActividad SET comentario =" + value + "WHERE id = " + this.id);
+                miBD.Update("UPDATE ValoracionActividad SET comentario =" + value + " WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idActividad = " + this.actividad.IdActividad + "; ");
                 this.comentario = value;
             }
         }
@@ -147,9 +142,9 @@ namespace Grupo02PCSAS
         public void BorrarValoracionActividad()
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            miBD.Delete("DELETE FROM ValoracionActividad WHERE id = " + this.id);
-            this.id = -1;
-            this.idActividad = -1;
+            miBD.Delete("DELETE FROM ValoracionActividad WHERE correoUsuario = '" + this.user.CorreoUsuario + "' AND idActividad = "+this.actividad.IdActividad+"; ");
+            this.user = null;
+            this.actividad = null;
             this.actividad = null;
             this.satisfaccion = -1;
             this.lugar = -1;
@@ -161,12 +156,12 @@ namespace Grupo02PCSAS
 
         public override bool Equals(object obj)
         {
-            return (obj is ValoracionActividad) && (id.Equals(((ValoracionActividad)obj).id));
+            return (obj is ValoracionActividad) && (user.Equals(((ValoracionActividad)obj).user)) && (actividad.Equals(((ValoracionActividad)obj).actividad));
         }
 
         public override int GetHashCode()
         {
-            return id.GetHashCode();
+            return user.GetHashCode() + actividad.GetHashCode();
         }
 
 
