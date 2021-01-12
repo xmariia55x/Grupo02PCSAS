@@ -91,6 +91,7 @@ namespace Grupo02PCSAS
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FloralWhite;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.bAccederPruebaConocimiento);
             this.panel5.Controls.Add(this.lValorar);
@@ -107,7 +108,7 @@ namespace Grupo02PCSAS
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1186, 123);
+            this.label3.Location = new System.Drawing.Point(1184, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(231, 26);
             this.label3.TabIndex = 18;
@@ -119,7 +120,7 @@ namespace Grupo02PCSAS
             this.bAccederPruebaConocimiento.BackColor = System.Drawing.Color.White;
             this.bAccederPruebaConocimiento.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bAccederPruebaConocimiento.BackgroundImage")));
             this.bAccederPruebaConocimiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bAccederPruebaConocimiento.Location = new System.Drawing.Point(1114, 108);
+            this.bAccederPruebaConocimiento.Location = new System.Drawing.Point(1112, 108);
             this.bAccederPruebaConocimiento.Name = "bAccederPruebaConocimiento";
             this.bAccederPruebaConocimiento.Size = new System.Drawing.Size(67, 60);
             this.bAccederPruebaConocimiento.TabIndex = 17;
@@ -131,7 +132,7 @@ namespace Grupo02PCSAS
             this.lValorar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lValorar.AutoSize = true;
             this.lValorar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lValorar.Location = new System.Drawing.Point(1187, 45);
+            this.lValorar.Location = new System.Drawing.Point(1185, 45);
             this.lValorar.Name = "lValorar";
             this.lValorar.Size = new System.Drawing.Size(131, 26);
             this.lValorar.TabIndex = 16;
@@ -143,7 +144,7 @@ namespace Grupo02PCSAS
             this.bValorar.BackColor = System.Drawing.Color.White;
             this.bValorar.BackgroundImage = global::Grupo02PCSAS.Properties.Resources.estrella;
             this.bValorar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bValorar.Location = new System.Drawing.Point(1114, 30);
+            this.bValorar.Location = new System.Drawing.Point(1112, 30);
             this.bValorar.Name = "bValorar";
             this.bValorar.Size = new System.Drawing.Size(67, 60);
             this.bValorar.TabIndex = 5;
@@ -156,7 +157,7 @@ namespace Grupo02PCSAS
             this.dgvDescargas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDescargas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDescargas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDescargas.Location = new System.Drawing.Point(460, 70);
+            this.dgvDescargas.Location = new System.Drawing.Point(459, 70);
             this.dgvDescargas.Name = "dgvDescargas";
             this.dgvDescargas.RowHeadersWidth = 62;
             this.dgvDescargas.RowTemplate.Height = 28;

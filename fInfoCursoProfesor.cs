@@ -223,5 +223,34 @@ namespace Grupo02PCSAS
         {
             this.Close();
         }
+
+        private void bAnyadirPrueba_Click(object sender, EventArgs e)
+        {
+            if (PruebaConocimiento.hayPruebaConocimiento(curso))
+            {
+                MessageBox.Show("Ya hay una prueba asociada al curso");
+            } else
+            {
+                fCrearPruebaConocimiento f = new fCrearPruebaConocimiento(user, curso);
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private void bEditarPrueba_Click(object sender, EventArgs e)
+        {
+            if (PruebaConocimiento.hayPruebaConocimiento(curso))
+            {
+                //fCrearPruebaConocimiento f = new fCrearPruebaConocimiento(user, curso);
+                //this.Hide();
+                //f.ShowDialog();
+                //this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No existe ninguna prueba asociada al curso");
+            }
+        }
     }
 }
