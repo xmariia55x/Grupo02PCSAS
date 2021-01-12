@@ -110,8 +110,6 @@ namespace Grupo02PCSAS
                     throw new Exception("No hay ninguna noticia seleccionada");
                 }
 
-                //para que no se vuelva a seleccionar el mismo
-                noticiaSeleccionada = null;
             } catch (Exception ex)
             {
                 MessageBox.Show("ERROR: " + ex.Message);
@@ -165,6 +163,11 @@ namespace Grupo02PCSAS
             {
                 if(user.RolUsuario.Admin)
                 {
+                    fCrearNoticia crearNoticia = new fCrearNoticia();
+                    this.Visible = false;
+                    crearNoticia.ShowDialog();
+                    this.Visible = true;
+                    cargaGrid();
 
                 } else
                 {

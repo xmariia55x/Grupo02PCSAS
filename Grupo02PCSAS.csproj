@@ -77,6 +77,12 @@
       <DependentUpon>apsgrupo02DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="BDLibrary.cs" />
+    <Compile Include="fCrearNoticia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCrearNoticia.Designer.cs">
+      <DependentUpon>fCrearNoticia.cs</DependentUpon>
+    </Compile>
     <Compile Include="fInfoNoticia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fCrearCursoAdmin.resx">
       <DependentUpon>fCrearCursoAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCrearNoticia.resx">
+      <DependentUpon>fCrearNoticia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fInfoActividad.resx">
       <DependentUpon>fInfoActividad.cs</DependentUpon>
