@@ -23,15 +23,15 @@ namespace Grupo02PCSAS
             object[] tupla = miBD.Select(sentencia)[0];
 
             this.idActividad = (int)tupla[0];
-            this.enlace = (string)tupla[1];
-            this.nombre = (string)tupla[2];
+            this.nombre = (string)tupla[1];
+            this.enlace = (string)tupla[2];
         }
 
         public MaterialActividad(string nombre, string enlace, Actividad actividad)
         {
             //Insert
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "INSERT INTO MaterialActividad VALUES (" + actividad.IdActividad + ",'" + enlace + "','" + nombre + "');";
+            string sentencia = "INSERT INTO MaterialActividad VALUES (" + actividad.IdActividad + ",'" + nombre + "','" + enlace + "');";
             miBD.Insert(sentencia);
 
             this.nombre = nombre;
