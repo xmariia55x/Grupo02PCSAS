@@ -76,6 +76,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>apsgrupo02DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="apsgrupo02DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>apsgrupo02DataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BDLibrary.cs" />
     <Compile Include="fArchivoActividad.cs">
       <SubType>Form</SubType>
@@ -429,6 +434,17 @@
     </None>
     <None Include="apsgrupo02DataSet1.xss">
       <DependentUpon>apsgrupo02DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="apsgrupo02DataSet2.xsc">
+      <DependentUpon>apsgrupo02DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="apsgrupo02DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>apsgrupo02DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="apsgrupo02DataSet2.xss">
+      <DependentUpon>apsgrupo02DataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
