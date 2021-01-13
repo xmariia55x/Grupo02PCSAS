@@ -114,6 +114,22 @@ namespace Grupo02PCSAS
             }
         }
 
+        public int IdCursoPrueba
+        {
+            get
+            {
+                return this.idCursoPrueba;
+            }
+            set
+            {
+                SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+                string sentencia = "UPDATE PruebaConocimiento SET idCursoPrueba = '" + value + "' WHERE idCursoPrueba = " + this.idCursoPrueba + ";";
+                miBD.Update(sentencia);
+
+                this.idCursoPrueba = value;
+            }
+        }
+
         public void BorrarPrueba()
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);

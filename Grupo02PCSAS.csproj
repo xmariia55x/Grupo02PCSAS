@@ -137,6 +137,12 @@
     <Compile Include="fPruebaConocimientoCurso.Designer.cs">
       <DependentUpon>fPruebaConocimientoCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="fRespuestaPrueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRespuestaPrueba.Designer.cs">
+      <DependentUpon>fRespuestaPrueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="fSatisfaccionActividad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -366,6 +372,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fRegistro.resx">
       <DependentUpon>fRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRespuestaPrueba.resx">
+      <DependentUpon>fRespuestaPrueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fSatisfaccionActividad.resx">
       <DependentUpon>fSatisfaccionActividad.cs</DependentUpon>
