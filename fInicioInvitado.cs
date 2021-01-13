@@ -36,9 +36,9 @@ namespace Grupo02PCSAS
         private void fInicioInvitado_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Actividad' Puede moverla o quitarla según sea necesario.
-            this.actividadTableAdapter.Fill(this.apsgrupo02DataSet.Actividad);
+            //this.actividadTableAdapter.Fill(this.apsgrupo02DataSet.Actividad);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Curso' Puede moverla o quitarla según sea necesario.
-            this.cursoTableAdapter.Fill(this.apsgrupo02DataSet.Curso);
+            //this.cursoTableAdapter.Fill(this.apsgrupo02DataSet.Curso);
             MySqlConnection conexion = new MySqlConnection();
             conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             conexion.Open();
