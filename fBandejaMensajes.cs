@@ -86,7 +86,11 @@ namespace Grupo02PCSAS
             {
                 int id = (int)dataGridView1.SelectedRows[0].Cells[2].Value;
                 mensajeSeleccionado = new Mensaje(id);
-                
+
+            }
+            else
+            {
+                mensajeSeleccionado = null;
             }
         }
 

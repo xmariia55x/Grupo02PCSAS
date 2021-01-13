@@ -198,7 +198,15 @@ namespace Grupo02PCSAS
 
         private void button1_Click(object sender, EventArgs e)
         {
+            fBorrarArchivoCurso f = new fBorrarArchivoCurso(this.user,this.cursoRealizado);
+        }
 
+        private void bModAniadirArchivosCurso_Click(object sender, EventArgs e)
+        {
+            fArchivoCurso f = new fArchivoCurso(user, cursoRealizado);
+            this.Visible = false;
+            f.ShowDialog();
+            this.Visible = true;
         }
     }
 }

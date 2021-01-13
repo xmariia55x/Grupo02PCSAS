@@ -389,6 +389,7 @@ namespace Grupo02PCSAS
             this.bModAniadirArchivosCurso.Size = new System.Drawing.Size(65, 62);
             this.bModAniadirArchivosCurso.TabIndex = 37;
             this.bModAniadirArchivosCurso.UseVisualStyleBackColor = false;
+            this.bModAniadirArchivosCurso.Click += new System.EventHandler(this.bModAniadirArchivosCurso_Click);
             // 
             // fModificarCursos
             // 
