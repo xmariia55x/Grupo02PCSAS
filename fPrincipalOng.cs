@@ -42,7 +42,7 @@ namespace Grupo02PCSAS
         private void fPrincipalOng_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet1.Curso' Puede moverla o quitarla según sea necesario.
-            this.cursoTableAdapter.Fill(this.apsgrupo02DataSet1.Curso);
+            //this.cursoTableAdapter.Fill(this.apsgrupo02DataSet1.Curso);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Actividad' Puede moverla o quitarla según sea necesario.
             //this.actividadTableAdapter.Fill(this.apsgrupo02DataSet.Actividad);
             lRol.Text = ong.RolUsuario.RolName;
@@ -146,9 +146,9 @@ namespace Grupo02PCSAS
                 if (seleccionado != null)
                 {
                     fInfoActividad info = new fInfoActividad(ong, seleccionado);
-                    this.Visible = false;
+                    this.Hide();
                     info.ShowDialog();
-                    this.Visible = true;
+                    this.Close();
                 }
                 else
                 {
@@ -255,7 +255,6 @@ namespace Grupo02PCSAS
                     this.Hide();
                     f.ShowDialog();
                     this.Close();
-                    cargaGrid();
                 }
             }
             catch (Exception ex)
