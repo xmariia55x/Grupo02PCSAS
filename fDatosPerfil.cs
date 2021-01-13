@@ -175,6 +175,9 @@ namespace Grupo02PCSAS
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+			fPantallaPrincipalAlumno f = new fPantallaPrincipalAlumno(user);
+			this.Hide();
+			f.ShowDialog();
 			this.Close();
         }
 
