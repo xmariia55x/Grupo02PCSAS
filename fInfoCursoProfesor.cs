@@ -252,5 +252,34 @@ namespace Grupo02PCSAS
                 MessageBox.Show("No existe ninguna prueba asociada al curso");
             }
         }
+
+        private void bEliminarPrueba_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (PruebaConocimiento.hayPruebaConocimiento(curso))
+                {
+                    DialogResult dialogResult = MessageBox.Show("¿Desea borrar la prueba de conocimiento?", "ALERTA", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        PruebaConocimiento p = new PruebaConocimiento(curso.CursoID);
+                        p.BorrarPrueba();
+                        MessageBox.Show("Prueba de conocimiento eliminada con exito");
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        //do something else
+
+                    }
+                }
+                else
+                {
+                    throw new Exception("No existe ninguna prueba asociada al curso");
+                }
+            } catch(Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+        }
     }
 }
