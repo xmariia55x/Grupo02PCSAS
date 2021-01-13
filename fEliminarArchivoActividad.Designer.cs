@@ -42,13 +42,14 @@ namespace Grupo02PCSAS
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enlaceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialActividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.apsgrupo02DataSet1 = new Grupo02PCSAS.apsgrupo02DataSet1();
             this.label1 = new System.Windows.Forms.Label();
             this.materialActividadTableAdapter = new Grupo02PCSAS.apsgrupo02DataSet1TableAdapters.MaterialActividadTableAdapter();
-            this.idActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enlaceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bEliminar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -200,38 +201,13 @@ namespace Grupo02PCSAS
             this.enlaceDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.materialActividadBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(407, 344);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(695, 312);
             this.dataGridView1.TabIndex = 28;
-            // 
-            // materialActividadBindingSource
-            // 
-            this.materialActividadBindingSource.DataMember = "MaterialActividad";
-            this.materialActividadBindingSource.DataSource = this.apsgrupo02DataSet1;
-            // 
-            // apsgrupo02DataSet1
-            // 
-            this.apsgrupo02DataSet1.DataSetName = "apsgrupo02DataSet1";
-            this.apsgrupo02DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(596, 273);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(328, 49);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Eliminar Archivos";
-            // 
-            // materialActividadTableAdapter
-            // 
-            this.materialActividadTableAdapter.ClearBeforeFill = true;
             // 
             // idActividadDataGridViewTextBoxColumn
             // 
@@ -262,12 +238,50 @@ namespace Grupo02PCSAS
             this.enlaceDataGridViewTextBoxColumn.Name = "enlaceDataGridViewTextBoxColumn";
             this.enlaceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // materialActividadBindingSource
+            // 
+            this.materialActividadBindingSource.DataMember = "MaterialActividad";
+            this.materialActividadBindingSource.DataSource = this.apsgrupo02DataSet1;
+            // 
+            // apsgrupo02DataSet1
+            // 
+            this.apsgrupo02DataSet1.DataSetName = "apsgrupo02DataSet1";
+            this.apsgrupo02DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(596, 273);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(328, 49);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Eliminar Archivos";
+            // 
+            // materialActividadTableAdapter
+            // 
+            this.materialActividadTableAdapter.ClearBeforeFill = true;
+            // 
+            // bEliminar
+            // 
+            this.bEliminar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bEliminar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bEliminar.Location = new System.Drawing.Point(710, 696);
+            this.bEliminar.Name = "bEliminar";
+            this.bEliminar.Size = new System.Drawing.Size(114, 43);
+            this.bEliminar.TabIndex = 30;
+            this.bEliminar.Text = "Eliminar";
+            this.bEliminar.UseVisualStyleBackColor = false;
+            // 
             // fEliminarArchivoActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1469, 1033);
+            this.Controls.Add(this.bEliminar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
@@ -311,5 +325,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.DataGridViewTextBoxColumn idActividadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enlaceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button bEliminar;
     }
 }

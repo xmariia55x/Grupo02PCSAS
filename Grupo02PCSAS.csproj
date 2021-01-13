@@ -113,6 +113,12 @@
     <Compile Include="fInfoNoticia.Designer.cs">
       <DependentUpon>fInfoNoticia.cs</DependentUpon>
     </Compile>
+    <Compile Include="fModificarActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fModificarActividad.Designer.cs">
+      <DependentUpon>fModificarActividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="fNoticia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fInicioInvitado.resx">
       <DependentUpon>fInicioInvitado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fModificarActividad.resx">
+      <DependentUpon>fModificarActividad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fModificarCursos.resx">
       <DependentUpon>fModificarCursos.cs</DependentUpon>

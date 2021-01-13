@@ -91,6 +91,8 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bModificar = new System.Windows.Forms.Button();
+            this.bDel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -380,7 +382,7 @@
             this.bInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInformacion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInformacion.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInformacion.Location = new System.Drawing.Point(1105, 371);
+            this.bInformacion.Location = new System.Drawing.Point(1105, 261);
             this.bInformacion.Name = "bInformacion";
             this.bInformacion.Size = new System.Drawing.Size(181, 63);
             this.bInformacion.TabIndex = 56;
@@ -785,6 +787,32 @@
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Width = 71;
             // 
+            // bModificar
+            // 
+            this.bModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bModificar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bModificar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bModificar.Location = new System.Drawing.Point(1105, 348);
+            this.bModificar.Name = "bModificar";
+            this.bModificar.Size = new System.Drawing.Size(181, 63);
+            this.bModificar.TabIndex = 80;
+            this.bModificar.Text = "Modificar";
+            this.bModificar.UseVisualStyleBackColor = false;
+            this.bModificar.Click += new System.EventHandler(this.bModificar_Click);
+            // 
+            // bDel
+            // 
+            this.bDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bDel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bDel.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bDel.Location = new System.Drawing.Point(1105, 441);
+            this.bDel.Name = "bDel";
+            this.bDel.Size = new System.Drawing.Size(181, 63);
+            this.bDel.TabIndex = 81;
+            this.bDel.Text = "Eliminar";
+            this.bDel.UseVisualStyleBackColor = false;
+            this.bDel.Click += new System.EventHandler(this.bDel_Click);
+            // 
             // fPrincipalOng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -793,6 +821,8 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1653, 1050);
+            this.Controls.Add(this.bDel);
+            this.Controls.Add(this.bModificar);
             this.Controls.Add(this.dgvActividades);
             this.Controls.Add(this.dgvCursos);
             this.Controls.Add(this.bInformacionActividad);
@@ -897,5 +927,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.Button bModificar;
+        private System.Windows.Forms.Button bDel;
     }
 }

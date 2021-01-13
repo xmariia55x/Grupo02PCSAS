@@ -16,6 +16,7 @@ namespace Grupo02PCSAS
         Usuario ong;
         Actividad seleccionado;
         Curso cursoSeleccionado;
+        Actividad actividadSeleccionada;
         public fPrincipalOng(Usuario u)
         {
             InitializeComponent();
@@ -47,6 +48,11 @@ namespace Grupo02PCSAS
             lRol.Text = ong.RolUsuario.RolName;
             lNombreUser.Text = ong.NombreUsuario;
 
+            cargaGrid();
+        }
+
+        private void cargaGrid()
+        {
             MySqlConnection conexion = new MySqlConnection();
             conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             conexion.Open();
@@ -59,6 +65,7 @@ namespace Grupo02PCSAS
             cargaActividadesFecha(DateTime.Now.ToShortDateString());
             cargaCursosFecha(DateTime.Now.ToShortTimeString());
         }
+
         private void cargaActividadesFecha(string fecha)
         {
             MySqlConnection conexion = new MySqlConnection();
@@ -160,6 +167,8 @@ namespace Grupo02PCSAS
             this.Visible = false;
             a.ShowDialog();
             this.Visible = true;
+
+            cargaGrid();
         }
 
         private void bNoticias_Click(object sender, EventArgs e)
@@ -190,9 +199,9 @@ namespace Grupo02PCSAS
         {
             try
             {
-                if (ong.RolUsuario.RolName.Equals("ENTIDAD"))
+                if (actividadSeleccionada == null)
                 {
-                    fInfoActividad infoActividad = new fInfoActividad(ong, seleccionado);
+                    fInfoActividad infoActividad = new fInfoActividad(ong, actividadSeleccionada);
                     this.Hide();
                     infoActividad.ShowDialog();
                     this.Close();
@@ -225,7 +234,53 @@ namespace Grupo02PCSAS
             if (dgvActividades.SelectedRows.Count > 0)
             {
                 int idSel = (int)dgvActividades.SelectedRows[0].Cells[0].Value;
-                seleccionado = new Actividad(idSel);
+                actividadSeleccionada = new Actividad(idSel);
+            }
+        }
+
+        private void bModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (seleccionado == null)
+                {
+                    throw new Exception("No hay ninguna actividad seleccionada");
+                } else
+                {
+                    fModificarActividad f = new fModificarActividad(ong, seleccionado);
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Close();
+                    cargaGrid();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+        }
+
+        private void bDel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (seleccionado == null)
+                {
+                    throw new Exception("No hay ninguna actividad seleccionada");
+                }
+                else
+                {
+                    if (MessageBox.Show("¿Quieres eliminar la actividad " + seleccionado.NombreActividad + "?", "Borrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        seleccionado.BorrarActividad();
+                        cargaGrid();
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
             }
         }
     }
