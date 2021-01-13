@@ -132,6 +132,7 @@ namespace Grupo02PCSAS
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idCursoDataGridViewTextBoxColumn,
@@ -500,6 +501,7 @@ namespace Grupo02PCSAS
             this.dgvCursos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCursos.AutoGenerateColumns = false;
+            this.dgvCursos.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idCursoDataGridViewTextBoxColumn1,
@@ -531,6 +533,7 @@ namespace Grupo02PCSAS
             this.dgvActividades.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvActividades.AutoGenerateColumns = false;
+            this.dgvActividades.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dgvActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvActividades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idActividadDataGridViewTextBoxColumn,
