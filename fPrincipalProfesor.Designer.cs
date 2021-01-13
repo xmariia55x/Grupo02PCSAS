@@ -66,10 +66,17 @@ namespace Grupo02PCSAS
             this.calendario = new System.Windows.Forms.MonthCalendar();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
             this.dgvActividades = new System.Windows.Forms.DataGridView();
+            this.actividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.apsgrupo02DataSet1 = new Grupo02PCSAS.apsgrupo02DataSet1();
             this.lCursos = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lNoActividades = new System.Windows.Forms.Label();
             this.lNoCursos = new System.Windows.Forms.Label();
+            this.actividadTableAdapter = new Grupo02PCSAS.apsgrupo02DataSet1TableAdapters.ActividadTableAdapter();
+            this.bInformacionCurso = new System.Windows.Forms.Button();
+            this.bInformacionActividad = new System.Windows.Forms.Button();
+            this.bInscribirCurso = new System.Windows.Forms.Button();
+            this.bInscribirActividad = new System.Windows.Forms.Button();
             this.idCursoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.profesorCursoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreCursoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,9 +88,6 @@ namespace Grupo02PCSAS
             this.lugarCursoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aforoCursoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.onlineCursoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apsgrupo02DataSet1 = new Grupo02PCSAS.apsgrupo02DataSet1();
-            this.actividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.actividadTableAdapter = new Grupo02PCSAS.apsgrupo02DataSet1TableAdapters.ActividadTableAdapter();
             this.idActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creadorActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -94,10 +98,6 @@ namespace Grupo02PCSAS
             this.horaFinActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lugarActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aforoActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bInformacionCurso = new System.Windows.Forms.Button();
-            this.bInformacionActividad = new System.Windows.Forms.Button();
-            this.bInscribirCurso = new System.Windows.Forms.Button();
-            this.bInscribirActividad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSetBindingSource)).BeginInit();
@@ -107,8 +107,8 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -553,6 +553,16 @@ namespace Grupo02PCSAS
             this.dgvActividades.TabIndex = 60;
             this.dgvActividades.SelectionChanged += new System.EventHandler(this.dgvActividades_SelectionChanged);
             // 
+            // actividadBindingSource
+            // 
+            this.actividadBindingSource.DataMember = "Actividad";
+            this.actividadBindingSource.DataSource = this.apsgrupo02DataSet1;
+            // 
+            // apsgrupo02DataSet1
+            // 
+            this.apsgrupo02DataSet1.DataSetName = "apsgrupo02DataSet1";
+            this.apsgrupo02DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // lCursos
             // 
             this.lCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -597,6 +607,62 @@ namespace Grupo02PCSAS
             this.lNoCursos.Size = new System.Drawing.Size(0, 24);
             this.lNoCursos.TabIndex = 64;
             // 
+            // actividadTableAdapter
+            // 
+            this.actividadTableAdapter.ClearBeforeFill = true;
+            // 
+            // bInformacionCurso
+            // 
+            this.bInformacionCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bInformacionCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bInformacionCurso.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bInformacionCurso.Location = new System.Drawing.Point(957, 719);
+            this.bInformacionCurso.Name = "bInformacionCurso";
+            this.bInformacionCurso.Size = new System.Drawing.Size(129, 56);
+            this.bInformacionCurso.TabIndex = 65;
+            this.bInformacionCurso.Text = "Información";
+            this.bInformacionCurso.UseVisualStyleBackColor = false;
+            this.bInformacionCurso.Click += new System.EventHandler(this.bInformacionCurso_Click);
+            // 
+            // bInformacionActividad
+            // 
+            this.bInformacionActividad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bInformacionActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bInformacionActividad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bInformacionActividad.Location = new System.Drawing.Point(957, 874);
+            this.bInformacionActividad.Name = "bInformacionActividad";
+            this.bInformacionActividad.Size = new System.Drawing.Size(129, 56);
+            this.bInformacionActividad.TabIndex = 66;
+            this.bInformacionActividad.Text = "Información";
+            this.bInformacionActividad.UseVisualStyleBackColor = false;
+            this.bInformacionActividad.Click += new System.EventHandler(this.bInformacionActividad_Click);
+            // 
+            // bInscribirCurso
+            // 
+            this.bInscribirCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bInscribirCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bInscribirCurso.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bInscribirCurso.Location = new System.Drawing.Point(957, 781);
+            this.bInscribirCurso.Name = "bInscribirCurso";
+            this.bInscribirCurso.Size = new System.Drawing.Size(129, 56);
+            this.bInscribirCurso.TabIndex = 67;
+            this.bInscribirCurso.Text = "Inscribir";
+            this.bInscribirCurso.UseVisualStyleBackColor = false;
+            this.bInscribirCurso.Click += new System.EventHandler(this.bInscribirCurso_Click);
+            // 
+            // bInscribirActividad
+            // 
+            this.bInscribirActividad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bInscribirActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bInscribirActividad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bInscribirActividad.Location = new System.Drawing.Point(957, 936);
+            this.bInscribirActividad.Name = "bInscribirActividad";
+            this.bInscribirActividad.Size = new System.Drawing.Size(129, 56);
+            this.bInscribirActividad.TabIndex = 68;
+            this.bInscribirActividad.Text = "Inscribir";
+            this.bInscribirActividad.UseVisualStyleBackColor = false;
+            this.bInscribirActividad.Click += new System.EventHandler(this.bInscribirActividad_Click);
+            // 
             // idCursoDataGridViewTextBoxColumn1
             // 
             this.idCursoDataGridViewTextBoxColumn1.DataPropertyName = "idCurso";
@@ -629,12 +695,13 @@ namespace Grupo02PCSAS
             // 
             // descripcionCursoDataGridViewTextBoxColumn1
             // 
-            this.descripcionCursoDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcionCursoDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.descripcionCursoDataGridViewTextBoxColumn1.DataPropertyName = "descripcionCurso";
             this.descripcionCursoDataGridViewTextBoxColumn1.HeaderText = "Descripcion";
             this.descripcionCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.descripcionCursoDataGridViewTextBoxColumn1.Name = "descripcionCursoDataGridViewTextBoxColumn1";
             this.descripcionCursoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.descripcionCursoDataGridViewTextBoxColumn1.Width = 111;
             // 
             // fechaInicioCursoDataGridViewTextBoxColumn1
             // 
@@ -687,13 +754,12 @@ namespace Grupo02PCSAS
             // 
             // aforoCursoDataGridViewTextBoxColumn1
             // 
+            this.aforoCursoDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.aforoCursoDataGridViewTextBoxColumn1.DataPropertyName = "aforoCurso";
-            this.aforoCursoDataGridViewTextBoxColumn1.HeaderText = "aforoCurso";
+            this.aforoCursoDataGridViewTextBoxColumn1.HeaderText = "Aforo";
             this.aforoCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.aforoCursoDataGridViewTextBoxColumn1.Name = "aforoCursoDataGridViewTextBoxColumn1";
             this.aforoCursoDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.aforoCursoDataGridViewTextBoxColumn1.Visible = false;
-            this.aforoCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
             // onlineCursoDataGridViewTextBoxColumn1
             // 
@@ -704,20 +770,6 @@ namespace Grupo02PCSAS
             this.onlineCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.onlineCursoDataGridViewTextBoxColumn1.Visible = false;
             this.onlineCursoDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // apsgrupo02DataSet1
-            // 
-            this.apsgrupo02DataSet1.DataSetName = "apsgrupo02DataSet1";
-            this.apsgrupo02DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // actividadBindingSource
-            // 
-            this.actividadBindingSource.DataMember = "Actividad";
-            this.actividadBindingSource.DataSource = this.apsgrupo02DataSet1;
-            // 
-            // actividadTableAdapter
-            // 
-            this.actividadTableAdapter.ClearBeforeFill = true;
             // 
             // idActividadDataGridViewTextBoxColumn
             // 
@@ -801,75 +853,21 @@ namespace Grupo02PCSAS
             // 
             // lugarActividadDataGridViewTextBoxColumn
             // 
-            this.lugarActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.lugarActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.lugarActividadDataGridViewTextBoxColumn.DataPropertyName = "lugarActividad";
             this.lugarActividadDataGridViewTextBoxColumn.HeaderText = "Lugar";
             this.lugarActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.lugarActividadDataGridViewTextBoxColumn.Name = "lugarActividadDataGridViewTextBoxColumn";
             this.lugarActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lugarActividadDataGridViewTextBoxColumn.Width = 74;
             // 
             // aforoActividadDataGridViewTextBoxColumn
             // 
-            this.aforoActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.aforoActividadDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.aforoActividadDataGridViewTextBoxColumn.DataPropertyName = "aforoActividad";
             this.aforoActividadDataGridViewTextBoxColumn.HeaderText = "Aforo";
             this.aforoActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.aforoActividadDataGridViewTextBoxColumn.Name = "aforoActividadDataGridViewTextBoxColumn";
             this.aforoActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aforoActividadDataGridViewTextBoxColumn.Width = 71;
-            // 
-            // bInformacionCurso
-            // 
-            this.bInformacionCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bInformacionCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bInformacionCurso.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInformacionCurso.Location = new System.Drawing.Point(957, 719);
-            this.bInformacionCurso.Name = "bInformacionCurso";
-            this.bInformacionCurso.Size = new System.Drawing.Size(129, 56);
-            this.bInformacionCurso.TabIndex = 65;
-            this.bInformacionCurso.Text = "Información";
-            this.bInformacionCurso.UseVisualStyleBackColor = false;
-            this.bInformacionCurso.Click += new System.EventHandler(this.bInformacionCurso_Click);
-            // 
-            // bInformacionActividad
-            // 
-            this.bInformacionActividad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bInformacionActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bInformacionActividad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInformacionActividad.Location = new System.Drawing.Point(957, 874);
-            this.bInformacionActividad.Name = "bInformacionActividad";
-            this.bInformacionActividad.Size = new System.Drawing.Size(129, 56);
-            this.bInformacionActividad.TabIndex = 66;
-            this.bInformacionActividad.Text = "Información";
-            this.bInformacionActividad.UseVisualStyleBackColor = false;
-            this.bInformacionActividad.Click += new System.EventHandler(this.bInformacionActividad_Click);
-            // 
-            // bInscribirCurso
-            // 
-            this.bInscribirCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bInscribirCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bInscribirCurso.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInscribirCurso.Location = new System.Drawing.Point(957, 781);
-            this.bInscribirCurso.Name = "bInscribirCurso";
-            this.bInscribirCurso.Size = new System.Drawing.Size(129, 56);
-            this.bInscribirCurso.TabIndex = 67;
-            this.bInscribirCurso.Text = "Inscribir";
-            this.bInscribirCurso.UseVisualStyleBackColor = false;
-            this.bInscribirCurso.Click += new System.EventHandler(this.bInscribirCurso_Click);
-            // 
-            // bInscribirActividad
-            // 
-            this.bInscribirActividad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bInscribirActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bInscribirActividad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInscribirActividad.Location = new System.Drawing.Point(957, 936);
-            this.bInscribirActividad.Name = "bInscribirActividad";
-            this.bInscribirActividad.Size = new System.Drawing.Size(129, 56);
-            this.bInscribirActividad.TabIndex = 68;
-            this.bInscribirActividad.Text = "Inscribir";
-            this.bInscribirActividad.UseVisualStyleBackColor = false;
-            this.bInscribirActividad.Click += new System.EventHandler(this.bInscribirActividad_Click);
             // 
             // fPrincipalProfesor
             // 
@@ -918,8 +916,8 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -966,6 +964,13 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lNoActividades;
         private System.Windows.Forms.Label lNoCursos;
+        private apsgrupo02DataSet1 apsgrupo02DataSet1;
+        private System.Windows.Forms.BindingSource actividadBindingSource;
+        private apsgrupo02DataSet1TableAdapters.ActividadTableAdapter actividadTableAdapter;
+        private System.Windows.Forms.Button bInformacionCurso;
+        private System.Windows.Forms.Button bInformacionActividad;
+        private System.Windows.Forms.Button bInscribirCurso;
+        private System.Windows.Forms.Button bInscribirActividad;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCursoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn profesorCursoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCursoDataGridViewTextBoxColumn1;
@@ -977,9 +982,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.DataGridViewTextBoxColumn lugarCursoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn aforoCursoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn onlineCursoDataGridViewTextBoxColumn1;
-        private apsgrupo02DataSet1 apsgrupo02DataSet1;
-        private System.Windows.Forms.BindingSource actividadBindingSource;
-        private apsgrupo02DataSet1TableAdapters.ActividadTableAdapter actividadTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idActividadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn creadorActividadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreActividadDataGridViewTextBoxColumn;
@@ -990,9 +992,5 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.DataGridViewTextBoxColumn horaFinActividadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lugarActividadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aforoActividadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button bInformacionCurso;
-        private System.Windows.Forms.Button bInformacionActividad;
-        private System.Windows.Forms.Button bInscribirCurso;
-        private System.Windows.Forms.Button bInscribirActividad;
     }
 }

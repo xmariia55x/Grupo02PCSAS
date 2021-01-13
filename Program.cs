@@ -72,12 +72,12 @@ namespace Grupo02PCSAS
             //Application.Run(new fPantallaAdmin(user));
             //Usuario user = new Usuario("caritas@gmail.com");
             //Application.Run(new fPrincipalOng(user));
-            Usuario user = new Usuario("caritas@gmail.com");
+            //Usuario user = new Usuario("caritas@gmail.com");
             //Application.Run(new fPrincipalOng(user));
             //Usuario user = new Usuario("caritas@gmail.com");
             //Application.Run(new fPrincipalOng(user));
             //Usuario user = new Usuario("pepe");
-            Application.Run(new fBandejaMensajes(user));
+            //Application.Run(new fBandejaMensajes(user));
 
             //Application.Run(new fPrincipalOng(user));
 
@@ -88,10 +88,10 @@ namespace Grupo02PCSAS
             //Application.Run(new fInfoCurso(user, new Curso(22)));
 
 
-            //fInicioInvitado main = new fInicioInvitado();
-            //main.FormClosed += MainForm_Closed;
-            //main.Show();
-            //Application.Run();
+            fInicioInvitado main = new fInicioInvitado();
+            main.FormClosed += MainForm_Closed;
+            main.Show();
+            Application.Run();
            
 
             //Correo.sendEmail(Correo.recordatorioEvento("12/1/2021"), "Recordatorio", new Usuario("mariagalvez12345@gmail.com"));
