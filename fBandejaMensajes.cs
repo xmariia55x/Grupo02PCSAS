@@ -37,7 +37,7 @@ namespace Grupo02PCSAS
             MySqlConnection conexion = new MySqlConnection();
             conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             conexion.Open();
-            MySqlCommand comando = new MySqlCommand("select emisor,idMensaje,asunto,cuerpo,fecha from mensaje where cr.receptor= '" + user.CorreoUsuario + "';", conexion);
+            MySqlCommand comando = new MySqlCommand("select emisor as `Emisor`,idMensaje as `ID`,asunto as `Asunto`,cuerpo as `Cuerpo`,fecha as `Fecha del mensaje` from Mensaje where receptor= '" + user.CorreoUsuario + "';", conexion);
             MySqlDataAdapter adaptador = new MySqlDataAdapter();
             adaptador.SelectCommand = comando;
             DataTable tabla = new DataTable();
