@@ -42,9 +42,9 @@ namespace Grupo02PCSAS
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.apsgrupo02DataSet1 = new Grupo02PCSAS.apsgrupo02DataSet1();
             this.materialActividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.apsgrupo02DataSet1 = new Grupo02PCSAS.apsgrupo02DataSet1();
+            this.label1 = new System.Windows.Forms.Label();
             this.materialActividadTableAdapter = new Grupo02PCSAS.apsgrupo02DataSet1TableAdapters.MaterialActividadTableAdapter();
             this.idActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,8 +54,8 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialActividadBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -192,6 +192,7 @@ namespace Grupo02PCSAS
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idActividadDataGridViewTextBoxColumn,
@@ -206,6 +207,16 @@ namespace Grupo02PCSAS
             this.dataGridView1.Size = new System.Drawing.Size(695, 312);
             this.dataGridView1.TabIndex = 28;
             // 
+            // materialActividadBindingSource
+            // 
+            this.materialActividadBindingSource.DataMember = "MaterialActividad";
+            this.materialActividadBindingSource.DataSource = this.apsgrupo02DataSet1;
+            // 
+            // apsgrupo02DataSet1
+            // 
+            this.apsgrupo02DataSet1.DataSetName = "apsgrupo02DataSet1";
+            this.apsgrupo02DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -217,16 +228,6 @@ namespace Grupo02PCSAS
             this.label1.Size = new System.Drawing.Size(328, 49);
             this.label1.TabIndex = 29;
             this.label1.Text = "Eliminar Archivos";
-            // 
-            // apsgrupo02DataSet1
-            // 
-            this.apsgrupo02DataSet1.DataSetName = "apsgrupo02DataSet1";
-            this.apsgrupo02DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // materialActividadBindingSource
-            // 
-            this.materialActividadBindingSource.DataMember = "MaterialActividad";
-            this.materialActividadBindingSource.DataSource = this.apsgrupo02DataSet1;
             // 
             // materialActividadTableAdapter
             // 
@@ -246,17 +247,17 @@ namespace Grupo02PCSAS
             // 
             this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
             this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 85;
+            this.nombreDataGridViewTextBoxColumn.Width = 87;
             // 
             // enlaceDataGridViewTextBoxColumn
             // 
             this.enlaceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.enlaceDataGridViewTextBoxColumn.DataPropertyName = "enlace";
-            this.enlaceDataGridViewTextBoxColumn.HeaderText = "enlace";
+            this.enlaceDataGridViewTextBoxColumn.HeaderText = "Enlace";
             this.enlaceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.enlaceDataGridViewTextBoxColumn.Name = "enlaceDataGridViewTextBoxColumn";
             this.enlaceDataGridViewTextBoxColumn.ReadOnly = true;
@@ -282,8 +283,8 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialActividadBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

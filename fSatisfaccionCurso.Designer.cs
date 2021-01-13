@@ -380,6 +380,7 @@ namespace Grupo02PCSAS
             // 
             // tComentarios
             // 
+            this.tComentarios.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tComentarios.Location = new System.Drawing.Point(605, 413);
             this.tComentarios.Multiline = true;
             this.tComentarios.Name = "tComentarios";

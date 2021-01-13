@@ -211,7 +211,7 @@ namespace Grupo02PCSAS
             conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             conexion.Open();
             //nombreCurso 'Nombre', fechaInicioCurso, fechaFinCurso, aforoCurso
-            MySqlCommand comandoC = new MySqlCommand("SELECT nombre FROM MaterialCurso WHERE idCurso = " + curso.CursoID, conexion);
+            MySqlCommand comandoC = new MySqlCommand("SELECT nombre as `Nombre del recurso` FROM MaterialCurso WHERE idCurso = " + curso.CursoID, conexion);
             MySqlDataAdapter adaptadorC = new MySqlDataAdapter();
             adaptadorC.SelectCommand = comandoC;
             DataTable tablaC = new DataTable();

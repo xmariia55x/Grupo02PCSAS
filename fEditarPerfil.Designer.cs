@@ -168,45 +168,49 @@ namespace Grupo02PCSAS
             // 
             // tNombreAlumno
             // 
+            this.tNombreAlumno.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tNombreAlumno.HideSelection = false;
             this.tNombreAlumno.Location = new System.Drawing.Point(278, 30);
             this.tNombreAlumno.Name = "tNombreAlumno";
-            this.tNombreAlumno.Size = new System.Drawing.Size(193, 22);
+            this.tNombreAlumno.Size = new System.Drawing.Size(193, 28);
             this.tNombreAlumno.TabIndex = 34;
             // 
             // tEmailAlumno
             // 
+            this.tEmailAlumno.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tEmailAlumno.HideSelection = false;
             this.tEmailAlumno.Location = new System.Drawing.Point(278, 70);
             this.tEmailAlumno.Name = "tEmailAlumno";
-            this.tEmailAlumno.Size = new System.Drawing.Size(193, 22);
+            this.tEmailAlumno.Size = new System.Drawing.Size(193, 28);
             this.tEmailAlumno.TabIndex = 35;
             // 
             // tCifEntidad
             // 
+            this.tCifEntidad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tCifEntidad.HideSelection = false;
             this.tCifEntidad.Location = new System.Drawing.Point(278, 104);
             this.tCifEntidad.Name = "tCifEntidad";
-            this.tCifEntidad.Size = new System.Drawing.Size(193, 22);
+            this.tCifEntidad.Size = new System.Drawing.Size(193, 28);
             this.tCifEntidad.TabIndex = 36;
             // 
             // tNiuProfe
             // 
             this.tNiuProfe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tNiuProfe.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tNiuProfe.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tNiuProfe.HideSelection = false;
             this.tNiuProfe.Location = new System.Drawing.Point(278, 95);
             this.tNiuProfe.Name = "tNiuProfe";
-            this.tNiuProfe.Size = new System.Drawing.Size(193, 31);
+            this.tNiuProfe.Size = new System.Drawing.Size(193, 28);
             this.tNiuProfe.TabIndex = 37;
             // 
             // tPwdAlumno
             // 
+            this.tPwdAlumno.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tPwdAlumno.Location = new System.Drawing.Point(278, 106);
             this.tPwdAlumno.Name = "tPwdAlumno";
             this.tPwdAlumno.PasswordChar = '*';
-            this.tPwdAlumno.Size = new System.Drawing.Size(193, 22);
+            this.tPwdAlumno.Size = new System.Drawing.Size(193, 28);
             this.tPwdAlumno.TabIndex = 38;
             // 
             // label9
@@ -221,10 +225,11 @@ namespace Grupo02PCSAS
             // 
             // tConfPwdAlumno
             // 
+            this.tConfPwdAlumno.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tConfPwdAlumno.Location = new System.Drawing.Point(276, 145);
             this.tConfPwdAlumno.Name = "tConfPwdAlumno";
             this.tConfPwdAlumno.PasswordChar = '*';
-            this.tConfPwdAlumno.Size = new System.Drawing.Size(195, 22);
+            this.tConfPwdAlumno.Size = new System.Drawing.Size(195, 28);
             this.tConfPwdAlumno.TabIndex = 40;
             // 
             // bGuardarCambios
@@ -250,7 +255,7 @@ namespace Grupo02PCSAS
             this.panelAlumno.Controls.Add(this.tPwdAlumno);
             this.panelAlumno.Controls.Add(this.tConfPwdAlumno);
             this.panelAlumno.Controls.Add(this.label9);
-            this.panelAlumno.Location = new System.Drawing.Point(88, 443);
+            this.panelAlumno.Location = new System.Drawing.Point(88, 442);
             this.panelAlumno.Name = "panelAlumno";
             this.panelAlumno.Size = new System.Drawing.Size(491, 203);
             this.panelAlumno.TabIndex = 46;
@@ -267,7 +272,7 @@ namespace Grupo02PCSAS
             this.panelProfesor.Controls.Add(this.tConfPwdProfesor);
             this.panelProfesor.Controls.Add(this.label14);
             this.panelProfesor.Controls.Add(this.label7);
-            this.panelProfesor.Location = new System.Drawing.Point(0, 0);
+            this.panelProfesor.Location = new System.Drawing.Point(88, 443);
             this.panelProfesor.Name = "panelProfesor";
             this.panelProfesor.Size = new System.Drawing.Size(491, 250);
             this.panelProfesor.TabIndex = 47;
@@ -296,22 +301,22 @@ namespace Grupo02PCSAS
             // 
             this.tNombreProfesor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tNombreProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tNombreProfesor.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tNombreProfesor.HideSelection = false;
             this.tNombreProfesor.Location = new System.Drawing.Point(278, 30);
             this.tNombreProfesor.Name = "tNombreProfesor";
-            this.tNombreProfesor.Size = new System.Drawing.Size(193, 31);
+            this.tNombreProfesor.Size = new System.Drawing.Size(193, 28);
             this.tNombreProfesor.TabIndex = 34;
             // 
             // tCorreoProfesor
             // 
             this.tCorreoProfesor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tCorreoProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tCorreoProfesor.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tCorreoProfesor.HideSelection = false;
             this.tCorreoProfesor.Location = new System.Drawing.Point(278, 62);
             this.tCorreoProfesor.Name = "tCorreoProfesor";
-            this.tCorreoProfesor.Size = new System.Drawing.Size(193, 31);
+            this.tCorreoProfesor.Size = new System.Drawing.Size(193, 28);
             this.tCorreoProfesor.TabIndex = 35;
             // 
             // label13
@@ -328,22 +333,22 @@ namespace Grupo02PCSAS
             // 
             this.tPwdProfesor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tPwdProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tPwdProfesor.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tPwdProfesor.Location = new System.Drawing.Point(277, 128);
             this.tPwdProfesor.Name = "tPwdProfesor";
             this.tPwdProfesor.PasswordChar = '*';
-            this.tPwdProfesor.Size = new System.Drawing.Size(193, 31);
+            this.tPwdProfesor.Size = new System.Drawing.Size(193, 28);
             this.tPwdProfesor.TabIndex = 38;
             // 
             // tConfPwdProfesor
             // 
             this.tConfPwdProfesor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tConfPwdProfesor.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tConfPwdProfesor.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tConfPwdProfesor.Location = new System.Drawing.Point(276, 166);
             this.tConfPwdProfesor.Name = "tConfPwdProfesor";
             this.tConfPwdProfesor.PasswordChar = '*';
-            this.tConfPwdProfesor.Size = new System.Drawing.Size(195, 31);
+            this.tConfPwdProfesor.Size = new System.Drawing.Size(195, 28);
             this.tConfPwdProfesor.TabIndex = 40;
             // 
             // label14
@@ -362,7 +367,6 @@ namespace Grupo02PCSAS
             this.panelEntidad.Controls.Add(this.label16);
             this.panelEntidad.Controls.Add(this.tNombreEntidad);
             this.panelEntidad.Controls.Add(this.tCorreoEntidad);
-            this.panelEntidad.Controls.Add(this.panelProfesor);
             this.panelEntidad.Controls.Add(this.label17);
             this.panelEntidad.Controls.Add(this.tCifEntidad);
             this.panelEntidad.Controls.Add(this.tPwdEntidad);
@@ -396,18 +400,20 @@ namespace Grupo02PCSAS
             // 
             // tNombreEntidad
             // 
+            this.tNombreEntidad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tNombreEntidad.HideSelection = false;
             this.tNombreEntidad.Location = new System.Drawing.Point(278, 30);
             this.tNombreEntidad.Name = "tNombreEntidad";
-            this.tNombreEntidad.Size = new System.Drawing.Size(193, 22);
+            this.tNombreEntidad.Size = new System.Drawing.Size(193, 28);
             this.tNombreEntidad.TabIndex = 34;
             // 
             // tCorreoEntidad
             // 
+            this.tCorreoEntidad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tCorreoEntidad.HideSelection = false;
             this.tCorreoEntidad.Location = new System.Drawing.Point(278, 70);
             this.tCorreoEntidad.Name = "tCorreoEntidad";
-            this.tCorreoEntidad.Size = new System.Drawing.Size(193, 22);
+            this.tCorreoEntidad.Size = new System.Drawing.Size(193, 28);
             this.tCorreoEntidad.TabIndex = 35;
             // 
             // label17
@@ -422,18 +428,20 @@ namespace Grupo02PCSAS
             // 
             // tPwdEntidad
             // 
+            this.tPwdEntidad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tPwdEntidad.Location = new System.Drawing.Point(277, 135);
             this.tPwdEntidad.Name = "tPwdEntidad";
             this.tPwdEntidad.PasswordChar = '*';
-            this.tPwdEntidad.Size = new System.Drawing.Size(193, 22);
+            this.tPwdEntidad.Size = new System.Drawing.Size(193, 28);
             this.tPwdEntidad.TabIndex = 38;
             // 
             // tConfPwdEntidad
             // 
+            this.tConfPwdEntidad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tConfPwdEntidad.Location = new System.Drawing.Point(275, 174);
             this.tConfPwdEntidad.Name = "tConfPwdEntidad";
             this.tConfPwdEntidad.PasswordChar = '*';
-            this.tConfPwdEntidad.Size = new System.Drawing.Size(195, 22);
+            this.tConfPwdEntidad.Size = new System.Drawing.Size(195, 28);
             this.tConfPwdEntidad.TabIndex = 40;
             // 
             // label18
@@ -450,6 +458,7 @@ namespace Grupo02PCSAS
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(685, 473);
             this.dataGridView1.Name = "dataGridView1";
@@ -476,6 +485,7 @@ namespace Grupo02PCSAS
             // 
             this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(981, 473);
             this.dataGridView2.Name = "dataGridView2";
@@ -701,6 +711,7 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.bAtras);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panelProfesor);
             this.Controls.Add(this.panelAlumno);
             this.Controls.Add(this.panelEntidad);
             this.Controls.Add(this.bGuardarCambios);
