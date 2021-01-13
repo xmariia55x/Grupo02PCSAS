@@ -95,6 +95,12 @@
     <Compile Include="fEditarPruebaConocimiento.Designer.cs">
       <DependentUpon>fEditarPruebaConocimiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="fInfoMensaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInfoMensaje.Designer.cs">
+      <DependentUpon>fInfoMensaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="fInfoNoticia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fDatosPerfil.resx">
       <DependentUpon>fDatosPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fInfoMensaje.resx">
+      <DependentUpon>fInfoMensaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fInfoNoticia.resx">
       <DependentUpon>fInfoNoticia.cs</DependentUpon>
