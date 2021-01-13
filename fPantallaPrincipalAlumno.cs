@@ -30,12 +30,14 @@ namespace Grupo02PCSAS
 
         private void fPantallaPrincipalAlumno_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet1.Actividad' Puede moverla o quitarla según sea necesario.
+            //this.actividadTableAdapter1.Fill(this.apsgrupo02DataSet1.Actividad);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.ActividadesRealizadas' Puede moverla o quitarla según sea necesario.
-            this.actividadesRealizadasTableAdapter.Fill(this.apsgrupo02DataSet.ActividadesRealizadas);
+            //this.actividadesRealizadasTableAdapter.Fill(this.apsgrupo02DataSet.ActividadesRealizadas);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.CursosRealizados' Puede moverla o quitarla según sea necesario.
-            this.cursosRealizadosTableAdapter.Fill(this.apsgrupo02DataSet.CursosRealizados);
+            //this.cursosRealizadosTableAdapter.Fill(this.apsgrupo02DataSet.CursosRealizados);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Actividad' Puede moverla o quitarla según sea necesario.
-            this.actividadTableAdapter.Fill(this.apsgrupo02DataSet.Actividad);
+            //this.actividadTableAdapter.Fill(this.apsgrupo02DataSet.Actividad);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Curso' Puede moverla o quitarla según sea necesario.
 
             lRol.Text = alumno.RolUsuario.RolName;
@@ -55,21 +57,28 @@ namespace Grupo02PCSAS
             MySqlCommand comandoC = new MySqlCommand("SELECT * FROM Curso WHERE fechaInicioCurso >= '" + DateTime.Now.ToString("dd / MM / yyyy") + "'", conexion);
             MySqlCommand comandoA = new MySqlCommand("SELECT * FROM Actividad WHERE fechaInicioActividad >= '" + DateTime.Now.ToString("dd / MM / yyyy") + "'", conexion);
             MySqlCommand comandoMC = new MySqlCommand("select * from CursosRealizados cr join Curso c on cr.idCurso = c.idCurso where cr.correo = '" + alumno.CorreoUsuario + "'", conexion);
+            MySqlCommand comandoMA = new MySqlCommand("select * from ActividadesRealizadas ar join Actividad a on ar.idActividad = a.idActividad where ar.correo = '" + alumno.CorreoUsuario + "'", conexion);
+
             MySqlDataAdapter adaptadorC = new MySqlDataAdapter();
             MySqlDataAdapter adaptadorA = new MySqlDataAdapter();
             MySqlDataAdapter adaptadorMC = new MySqlDataAdapter();
+            MySqlDataAdapter adaptadorMA = new MySqlDataAdapter();
             adaptadorC.SelectCommand = comandoC;
             adaptadorA.SelectCommand = comandoA;
             adaptadorMC.SelectCommand = comandoMC;
+            adaptadorMA.SelectCommand = comandoMA;
             DataTable tablaC = new DataTable();
             DataTable tablaA = new DataTable();
             DataTable tablaMC = new DataTable();
+            DataTable tablaMA = new DataTable();
             adaptadorC.Fill(tablaC);
             adaptadorA.Fill(tablaA);
             adaptadorMC.Fill(tablaMC);
+            adaptadorMA.Fill(tablaMA);
             dgvNuevosCursos.DataSource = tablaC;
             dgvNuevasActividades.DataSource = tablaA;
             dgvMisCursos.DataSource = tablaMC;
+            dgvMisAct.DataSource = tablaMA;
         }
 
        
@@ -525,6 +534,25 @@ namespace Grupo02PCSAS
             catch (Exception ex)
             {
                 MessageBox.Show("ERROR: " + ex.Message);
+            }
+        }
+
+        private void dgvMisAct_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvMisAct.SelectedRows.Count > 0)
+                {
+                    int id = (int)dgvMisAct.SelectedRows[0].Cells[0].Value;
+                    fInfoActividad info = new fInfoActividad(alumno, new Actividad(id));
+                    this.Hide();
+                    info.ShowDialog();
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR " + ex.Message);
             }
         }
     }
