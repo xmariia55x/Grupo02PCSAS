@@ -30,6 +30,8 @@ namespace Grupo02PCSAS
                 label5.Visible = false;
                 label9.Visible = false;
                 lInscrito.Visible = false;
+                bValorar.Visible = false;
+                lValorar.Visible = false;
             }
             mostrarUsuario();
             mostrarActividad();
@@ -40,6 +42,8 @@ namespace Grupo02PCSAS
             } else
             {
                 lInscrito.Text = "No inscrito";
+                bValorar.Visible = false;
+                lValorar.Visible = false;
             }
 
             calcularPlazasDisponibles();
@@ -192,8 +196,6 @@ namespace Grupo02PCSAS
         {
             try
             {
-                if(ActividadesRealizadas.comprobarInscrito(user,act))
-                {
                     if(!estaValorada())
                     {
                         fSatisfaccionActividad satisfaccionActividad = new fSatisfaccionActividad(user,act);
@@ -204,10 +206,6 @@ namespace Grupo02PCSAS
                     {
                         throw new Exception("Ya ha valorado la actividad");
                     }
-                } else
-                {
-                    throw new Exception("No esta inscrito en la actividad");
-                }
             } catch(Exception ex)
             {
                 MessageBox.Show("ERROR: " + ex.Message);
