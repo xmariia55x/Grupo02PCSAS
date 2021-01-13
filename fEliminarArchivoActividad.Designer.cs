@@ -50,6 +50,7 @@ namespace Grupo02PCSAS
             this.label1 = new System.Windows.Forms.Label();
             this.materialActividadTableAdapter = new Grupo02PCSAS.apsgrupo02DataSet1TableAdapters.MaterialActividadTableAdapter();
             this.bEliminar = new System.Windows.Forms.Button();
+            this.materialActividadBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,6 +58,7 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialActividadBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialActividadBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -199,7 +201,7 @@ namespace Grupo02PCSAS
             this.idActividadDataGridViewTextBoxColumn,
             this.nombreDataGridViewTextBoxColumn,
             this.enlaceDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.materialActividadBindingSource;
+            this.dataGridView1.DataSource = this.materialActividadBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(407, 344);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -275,6 +277,11 @@ namespace Grupo02PCSAS
             this.bEliminar.Text = "Eliminar";
             this.bEliminar.UseVisualStyleBackColor = false;
             // 
+            // materialActividadBindingSource1
+            // 
+            this.materialActividadBindingSource1.DataMember = "MaterialActividad";
+            this.materialActividadBindingSource1.DataSource = this.apsgrupo02DataSet1;
+            // 
             // fEliminarArchivoActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -299,6 +306,7 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialActividadBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialActividadBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,5 +334,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enlaceDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button bEliminar;
+        private System.Windows.Forms.BindingSource materialActividadBindingSource1;
     }
 }

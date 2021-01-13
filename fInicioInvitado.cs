@@ -111,9 +111,9 @@ namespace Grupo02PCSAS
 
                             case "ENTIDAD":
                                 fPrincipalOng ong = new fPrincipalOng(user);  // añadir el user
-                                this.Visible = false;
+                                this.Hide();
                                 ong.ShowDialog();
-                                this.Visible = true;
+                                this.Close();
                                 break;
 
                             case "PROFESOR":
