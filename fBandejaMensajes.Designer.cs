@@ -33,39 +33,37 @@ namespace Grupo02PCSAS
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lRol = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lNombreUser = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bNuevoMensaje = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.emisorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idMensajeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.asuntoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cuerpoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mensajeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.apsgrupo02DataSet1 = new Grupo02PCSAS.apsgrupo02DataSet1();
             this.mensajeTableAdapter = new Grupo02PCSAS.apsgrupo02DataSet1TableAdapters.MensajeTableAdapter();
+            this.bInfoMensaje = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensajeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mensajeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -115,18 +113,6 @@ namespace Grupo02PCSAS
             this.label4.Text = "Mi perfil";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.pictureBox3.Location = new System.Drawing.Point(1152, 10);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(113, 102);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -171,16 +157,6 @@ namespace Grupo02PCSAS
             this.label9.TabIndex = 2;
             this.label9.Text = "Hola,";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(297, 178);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -191,17 +167,6 @@ namespace Grupo02PCSAS
             this.label5.Size = new System.Drawing.Size(88, 26);
             this.label5.TabIndex = 7;
             this.label5.Text = "Mi perfil";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(1154, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(113, 102);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
             // 
             // lRol
             // 
@@ -247,23 +212,13 @@ namespace Grupo02PCSAS
             this.label3.TabIndex = 2;
             this.label3.Text = "Hola,";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(297, 178);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FloralWhite;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(575, 222);
+            this.label1.Location = new System.Drawing.Point(538, 236);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(384, 49);
             this.label1.TabIndex = 8;
@@ -285,61 +240,18 @@ namespace Grupo02PCSAS
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.emisorDataGridViewTextBoxColumn,
-            this.idMensajeDataGridViewTextBoxColumn,
-            this.asuntoDataGridViewTextBoxColumn,
-            this.cuerpoDataGridViewTextBoxColumn,
-            this.fechaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.mensajeBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(531, 303);
+            this.dataGridView1.Location = new System.Drawing.Point(513, 373);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(828, 379);
             this.dataGridView1.TabIndex = 24;
-            // 
-            // emisorDataGridViewTextBoxColumn
-            // 
-            this.emisorDataGridViewTextBoxColumn.DataPropertyName = "emisor";
-            this.emisorDataGridViewTextBoxColumn.HeaderText = "emisor";
-            this.emisorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emisorDataGridViewTextBoxColumn.Name = "emisorDataGridViewTextBoxColumn";
-            this.emisorDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idMensajeDataGridViewTextBoxColumn
-            // 
-            this.idMensajeDataGridViewTextBoxColumn.DataPropertyName = "idMensaje";
-            this.idMensajeDataGridViewTextBoxColumn.HeaderText = "idMensaje";
-            this.idMensajeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idMensajeDataGridViewTextBoxColumn.Name = "idMensajeDataGridViewTextBoxColumn";
-            this.idMensajeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // asuntoDataGridViewTextBoxColumn
-            // 
-            this.asuntoDataGridViewTextBoxColumn.DataPropertyName = "asunto";
-            this.asuntoDataGridViewTextBoxColumn.HeaderText = "asunto";
-            this.asuntoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.asuntoDataGridViewTextBoxColumn.Name = "asuntoDataGridViewTextBoxColumn";
-            this.asuntoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // cuerpoDataGridViewTextBoxColumn
-            // 
-            this.cuerpoDataGridViewTextBoxColumn.DataPropertyName = "cuerpo";
-            this.cuerpoDataGridViewTextBoxColumn.HeaderText = "cuerpo";
-            this.cuerpoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cuerpoDataGridViewTextBoxColumn.Name = "cuerpoDataGridViewTextBoxColumn";
-            this.cuerpoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // fechaDataGridViewTextBoxColumn
-            // 
-            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "fecha";
-            this.fechaDataGridViewTextBoxColumn.HeaderText = "fecha";
-            this.fechaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
-            this.fechaDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // mensajeBindingSource
             // 
@@ -355,30 +267,106 @@ namespace Grupo02PCSAS
             // 
             this.mensajeTableAdapter.ClearBeforeFill = true;
             // 
+            // bInfoMensaje
+            // 
+            this.bInfoMensaje.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bInfoMensaje.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
+            this.bInfoMensaje.Location = new System.Drawing.Point(106, 549);
+            this.bInfoMensaje.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bInfoMensaje.Name = "bInfoMensaje";
+            this.bInfoMensaje.Size = new System.Drawing.Size(204, 91);
+            this.bInfoMensaje.TabIndex = 33;
+            this.bInfoMensaje.Text = "Info Mensaje";
+            this.bInfoMensaje.UseVisualStyleBackColor = false;
+            this.bInfoMensaje.Click += new System.EventHandler(this.bInfoMensaje_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Grupo02PCSAS.Properties.Resources._60577;
+            this.pictureBox5.Location = new System.Drawing.Point(39, 199);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(93, 86);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 32;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
+            this.pictureBox3.Location = new System.Drawing.Point(1152, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(113, 102);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(297, 178);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
+            this.pictureBox2.Location = new System.Drawing.Point(1154, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(113, 102);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(297, 178);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // fBandejaMensajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1469, 844);
+            this.Controls.Add(this.bInfoMensaje);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bNuevoMensaje);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "fBandejaMensajes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fBandejaMensajes";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fBandejaMensajes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensajeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mensajeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,11 +388,6 @@ namespace Grupo02PCSAS
         private apsgrupo02DataSet1 apsgrupo02DataSet1;
         private System.Windows.Forms.BindingSource mensajeBindingSource;
         private apsgrupo02DataSet1TableAdapters.MensajeTableAdapter mensajeTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emisorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idMensajeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn asuntoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cuerpoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -413,5 +396,7 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button bInfoMensaje;
     }
 }

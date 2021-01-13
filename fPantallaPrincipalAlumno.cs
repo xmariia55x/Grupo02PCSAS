@@ -80,7 +80,8 @@ namespace Grupo02PCSAS
         private void button1_Click(object sender, EventArgs e)
         {
             PantallaPrincipalForo foro = new PantallaPrincipalForo(alumno);
-            foro.Show();
+            this.Hide();
+            foro.ShowDialog();
             this.Close();
         }
 
@@ -115,7 +116,8 @@ namespace Grupo02PCSAS
                 else
                 {
                     fInfoCurso info = new fInfoCurso(alumno, cursoSeleccionado);
-                    info.Show();
+                    this.Hide();
+                    info.ShowDialog();
                     this.Close();
                 }
             } catch (Exception ex)
@@ -229,7 +231,8 @@ namespace Grupo02PCSAS
                 else
                 {
                     fInfoActividad info = new fInfoActividad(alumno, actividadSeleccionada);
-                    info.Show();
+                    this.Hide();
+                    info.ShowDialog();
                     this.Close();
                 }
             } catch (Exception ex)
@@ -295,9 +298,9 @@ namespace Grupo02PCSAS
                 {
                     int id = (int) dgvMisCursos.SelectedRows[0].Cells[0].Value;
                     fInfoCurso info = new fInfoCurso(alumno, new Curso(id));
-                    this.Visible = false;
+                    this.Hide();
                     info.ShowDialog();
-                    this.Visible = true;
+                    this.Close();
                 }
             }
             catch (Exception ex)
@@ -309,23 +312,25 @@ namespace Grupo02PCSAS
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(alumno);
-            datos.Show();
+            this.Hide();
+            datos.ShowDialog();
             this.Close();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(alumno);
-            datos.Show();
+            this.Hide();
+            datos.ShowDialog();
             this.Close();
         }
 
         private void Noticias_Click(object sender, EventArgs e)
         {
             fNoticia noticias = new fNoticia(alumno);
-            this.Visible = false;
+            this.Hide();
             noticias.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
     }
 }
