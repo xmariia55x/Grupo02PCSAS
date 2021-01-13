@@ -50,25 +50,25 @@ namespace Grupo02PCSAS
         private void label4_Click(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(user);
-            this.Visible = false;
+            this.Hide();
             datos.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(user);
-            this.Visible = false;
+            this.Hide();
             datos.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void bNuevoMensaje_Click(object sender, EventArgs e)
         {
             fRedactarMensaje f = new fRedactarMensaje(user);
-            this.Visible = false;
+            this.Hide();
             f.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
     }
 }

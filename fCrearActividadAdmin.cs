@@ -17,43 +17,41 @@ namespace Grupo02PCSAS
         private Actividad actividad;
 
         private Usuario usuarioCreador;
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+      
 
+        
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (usuarioCreador.RolUsuario.RolName.Equals("ALUMNO"))
             {
                 fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(usuarioCreador);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
                 
             }
             else if (usuarioCreador.RolUsuario.RolName.Equals("PROFESOR"))
             {
                 fPrincipalProfesor inicio = new fPrincipalProfesor(usuarioCreador);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
                 
             }
             else if (usuarioCreador.RolUsuario.RolName.Equals("ENTIDAD"))
             {
                 fPrincipalOng inicio = new fPrincipalOng(usuarioCreador);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
                 
             }
             else if (usuarioCreador.RolUsuario.RolName.Equals("ADMIN"))
             {
                 fPantallaAdminFinal inicio = new fPantallaAdminFinal(usuarioCreador);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
                 
             }
         }
-
+        
         
         private void bGuardarCambiosAct_Click(object sender, EventArgs e)
         {
