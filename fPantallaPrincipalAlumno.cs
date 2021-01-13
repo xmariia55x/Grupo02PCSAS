@@ -431,11 +431,18 @@ namespace Grupo02PCSAS
         {
             try
             {
-
-                fInfoCurso infoCurso = new fInfoCurso(alumno, cursoSeleccionado);
-                this.Hide();
-                infoCurso.ShowDialog();
-                this.Close();
+                if(cursoSeleccionado == null)
+                {
+                    throw new Exception("Ningún curso seleccionado");
+                }
+                else
+                {
+                    fInfoCurso infoCurso = new fInfoCurso(alumno, cursoSeleccionado);
+                    this.Hide();
+                    infoCurso.ShowDialog();
+                    this.Close();
+                }
+                
             }
             catch (Exception ex)
             {
@@ -449,7 +456,7 @@ namespace Grupo02PCSAS
             {
                 if (cursoSeleccionado == null)
                 {
-                    throw new Exception("No hay ningun curso seleccionado");
+                    throw new Exception("Ningún curso seleccionado");
                 }
                 else
                 {
@@ -485,13 +492,20 @@ namespace Grupo02PCSAS
         {
             try
             {
-                if (alumno.RolUsuario.RolName.Equals("ALUMNO"))
+                if(actividadSeleccionada == null)
                 {
-                    fInfoActividad infoActividad = new fInfoActividad(alumno, actividadSeleccionada);
-                    this.Hide();
-                    infoActividad.ShowDialog();
-                    this.Close();
+                    throw new Exception("Ninguna actividad seleccionada");
+                } else
+                {
+                    if (alumno.RolUsuario.RolName.Equals("ALUMNO"))
+                    {
+                        fInfoActividad infoActividad = new fInfoActividad(alumno, actividadSeleccionada);
+                        this.Hide();
+                        infoActividad.ShowDialog();
+                        this.Close();
+                    }
                 }
+                
             }
             catch (Exception ex)
             {
@@ -505,7 +519,7 @@ namespace Grupo02PCSAS
             {
                 if (actividadSeleccionada == null)
                 {
-                    throw new Exception("No hay ninguna actividad seleccionada");
+                    throw new Exception("Ninguna actividad seleccionada");
                 }
                 else
                 {

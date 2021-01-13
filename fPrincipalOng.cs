@@ -183,11 +183,18 @@ namespace Grupo02PCSAS
         {
             try
             {
-
-                fInfoCurso infoCurso = new fInfoCurso(ong, cursoSeleccionado);
-                this.Hide();
-                infoCurso.ShowDialog();
-                this.Close();
+                if(cursoSeleccionado == null)
+                {
+                    throw new Exception("Ningún curso seleccionado");
+                }
+                else
+                {
+                    fInfoCurso infoCurso = new fInfoCurso(ong, cursoSeleccionado);
+                    this.Hide();
+                    infoCurso.ShowDialog();
+                    this.Close();
+                }
+                
             }
             catch (Exception ex)
             {

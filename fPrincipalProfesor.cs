@@ -302,11 +302,17 @@ namespace Grupo02PCSAS
         {
             try
             {
-
-                fInfoCurso infoCurso = new fInfoCurso(profesor, seleccionado);
-                this.Hide();
-                infoCurso.ShowDialog();
-                this.Close();
+                if(seleccionado == null)
+                {
+                    throw new Exception("Ningún curso seleccionado");
+                } else
+                {
+                    fInfoCurso infoCurso = new fInfoCurso(profesor, seleccionado);
+                    this.Hide();
+                    infoCurso.ShowDialog();
+                    this.Close();
+                }
+                
             }
             catch (Exception ex)
             {
@@ -339,13 +345,20 @@ namespace Grupo02PCSAS
         {
             try
             {
-                if (profesor.RolUsuario.RolName.Equals("PROFESOR"))
+                if(seleccionada == null)
                 {
-                    fInfoActividad infoActividad = new fInfoActividad(profesor, seleccionada);
-                    this.Hide();
-                    infoActividad.ShowDialog();
-                    this.Close();
+                    throw new Exception("Ninguna actividad seleccionada");
+                } else
+                {
+                    if (profesor.RolUsuario.RolName.Equals("PROFESOR"))
+                    {
+                        fInfoActividad infoActividad = new fInfoActividad(profesor, seleccionada);
+                        this.Hide();
+                        infoActividad.ShowDialog();
+                        this.Close();
+                    }
                 }
+                
             } catch (Exception ex)
             {
                 MessageBox.Show("ERROR: " + ex.Message);
@@ -380,7 +393,7 @@ namespace Grupo02PCSAS
             {
                 if (seleccionado == null)
                 {
-                    throw new Exception("No hay ningun curso seleccionado");
+                    throw new Exception("Ningún curso seleccionado");
                 }
                 else
                 {

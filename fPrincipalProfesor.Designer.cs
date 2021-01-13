@@ -684,6 +684,7 @@ namespace Grupo02PCSAS
             this.profesorCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.profesorCursoDataGridViewTextBoxColumn1.Name = "profesorCursoDataGridViewTextBoxColumn1";
             this.profesorCursoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.profesorCursoDataGridViewTextBoxColumn1.Visible = false;
             this.profesorCursoDataGridViewTextBoxColumn1.Width = 91;
             // 
             // nombreCursoDataGridViewTextBoxColumn1
@@ -704,16 +705,16 @@ namespace Grupo02PCSAS
             this.descripcionCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.descripcionCursoDataGridViewTextBoxColumn1.Name = "descripcionCursoDataGridViewTextBoxColumn1";
             this.descripcionCursoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.descripcionCursoDataGridViewTextBoxColumn1.Visible = false;
             this.descripcionCursoDataGridViewTextBoxColumn1.Width = 111;
             // 
             // fechaInicioCursoDataGridViewTextBoxColumn1
             // 
             this.fechaInicioCursoDataGridViewTextBoxColumn1.DataPropertyName = "fechaInicioCurso";
-            this.fechaInicioCursoDataGridViewTextBoxColumn1.HeaderText = "fechaInicioCurso";
+            this.fechaInicioCursoDataGridViewTextBoxColumn1.HeaderText = "Fecha de inicio";
             this.fechaInicioCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.fechaInicioCursoDataGridViewTextBoxColumn1.Name = "fechaInicioCursoDataGridViewTextBoxColumn1";
             this.fechaInicioCursoDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.fechaInicioCursoDataGridViewTextBoxColumn1.Visible = false;
             this.fechaInicioCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
             // fechaFinCursoDataGridViewTextBoxColumn1
@@ -763,6 +764,7 @@ namespace Grupo02PCSAS
             this.aforoCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.aforoCursoDataGridViewTextBoxColumn1.Name = "aforoCursoDataGridViewTextBoxColumn1";
             this.aforoCursoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.aforoCursoDataGridViewTextBoxColumn1.Visible = false;
             // 
             // onlineCursoDataGridViewTextBoxColumn1
             // 
@@ -792,6 +794,7 @@ namespace Grupo02PCSAS
             this.creadorActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.creadorActividadDataGridViewTextBoxColumn.Name = "creadorActividadDataGridViewTextBoxColumn";
             this.creadorActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.creadorActividadDataGridViewTextBoxColumn.Visible = false;
             this.creadorActividadDataGridViewTextBoxColumn.Width = 88;
             // 
             // nombreActividadDataGridViewTextBoxColumn
@@ -812,16 +815,16 @@ namespace Grupo02PCSAS
             this.descripcionActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.descripcionActividadDataGridViewTextBoxColumn.Name = "descripcionActividadDataGridViewTextBoxColumn";
             this.descripcionActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descripcionActividadDataGridViewTextBoxColumn.Visible = false;
             this.descripcionActividadDataGridViewTextBoxColumn.Width = 111;
             // 
             // fechaInicioActividadDataGridViewTextBoxColumn
             // 
             this.fechaInicioActividadDataGridViewTextBoxColumn.DataPropertyName = "fechaInicioActividad";
-            this.fechaInicioActividadDataGridViewTextBoxColumn.HeaderText = "fechaInicioActividad";
+            this.fechaInicioActividadDataGridViewTextBoxColumn.HeaderText = "Fecha de inicio";
             this.fechaInicioActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fechaInicioActividadDataGridViewTextBoxColumn.Name = "fechaInicioActividadDataGridViewTextBoxColumn";
             this.fechaInicioActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaInicioActividadDataGridViewTextBoxColumn.Visible = false;
             this.fechaInicioActividadDataGridViewTextBoxColumn.Width = 125;
             // 
             // fechaFinActividadDataGridViewTextBoxColumn
@@ -871,6 +874,7 @@ namespace Grupo02PCSAS
             this.aforoActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.aforoActividadDataGridViewTextBoxColumn.Name = "aforoActividadDataGridViewTextBoxColumn";
             this.aforoActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aforoActividadDataGridViewTextBoxColumn.Visible = false;
             // 
             // fPrincipalProfesor
             // 

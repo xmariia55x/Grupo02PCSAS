@@ -69,6 +69,9 @@
             this.cursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cursoTableAdapter = new Grupo02PCSAS.apsgrupo02DataSet1TableAdapters.CursoTableAdapter();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
+            this.dgvActividades = new System.Windows.Forms.DataGridView();
+            this.bModificar = new System.Windows.Forms.Button();
+            this.bDel = new System.Windows.Forms.Button();
             this.idCursoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.profesorCursoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreCursoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,7 +83,6 @@
             this.lugarCursoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aforoCursoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.onlineCursoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvActividades = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,8 +93,6 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bModificar = new System.Windows.Forms.Button();
-            this.bDel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -548,6 +548,63 @@
             this.dgvCursos.TabIndex = 78;
             this.dgvCursos.SelectionChanged += new System.EventHandler(this.dgvCursos_SelectionChanged);
             // 
+            // dgvActividades
+            // 
+            this.dgvActividades.AllowUserToAddRows = false;
+            this.dgvActividades.AllowUserToDeleteRows = false;
+            this.dgvActividades.AllowUserToOrderColumns = true;
+            this.dgvActividades.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvActividades.AutoGenerateColumns = false;
+            this.dgvActividades.BackgroundColor = System.Drawing.Color.FloralWhite;
+            this.dgvActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActividades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.dgvActividades.DataSource = this.actividadBindingSource;
+            this.dgvActividades.Location = new System.Drawing.Point(378, 847);
+            this.dgvActividades.Name = "dgvActividades";
+            this.dgvActividades.ReadOnly = true;
+            this.dgvActividades.RowHeadersWidth = 51;
+            this.dgvActividades.RowTemplate.Height = 24;
+            this.dgvActividades.Size = new System.Drawing.Size(565, 93);
+            this.dgvActividades.TabIndex = 79;
+            this.dgvActividades.SelectionChanged += new System.EventHandler(this.dgvActividades_SelectionChanged);
+            // 
+            // bModificar
+            // 
+            this.bModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bModificar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bModificar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bModificar.Location = new System.Drawing.Point(1105, 348);
+            this.bModificar.Name = "bModificar";
+            this.bModificar.Size = new System.Drawing.Size(181, 63);
+            this.bModificar.TabIndex = 80;
+            this.bModificar.Text = "Modificar";
+            this.bModificar.UseVisualStyleBackColor = false;
+            this.bModificar.Click += new System.EventHandler(this.bModificar_Click);
+            // 
+            // bDel
+            // 
+            this.bDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bDel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bDel.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bDel.Location = new System.Drawing.Point(1105, 441);
+            this.bDel.Name = "bDel";
+            this.bDel.Size = new System.Drawing.Size(181, 63);
+            this.bDel.TabIndex = 81;
+            this.bDel.Text = "Eliminar";
+            this.bDel.UseVisualStyleBackColor = false;
+            this.bDel.Click += new System.EventHandler(this.bDel_Click);
+            // 
             // idCursoDataGridViewTextBoxColumn1
             // 
             this.idCursoDataGridViewTextBoxColumn1.DataPropertyName = "idCurso";
@@ -566,6 +623,7 @@
             this.profesorCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.profesorCursoDataGridViewTextBoxColumn1.Name = "profesorCursoDataGridViewTextBoxColumn1";
             this.profesorCursoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.profesorCursoDataGridViewTextBoxColumn1.Visible = false;
             this.profesorCursoDataGridViewTextBoxColumn1.Width = 91;
             // 
             // nombreCursoDataGridViewTextBoxColumn1
@@ -586,16 +644,16 @@
             this.descripcionCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.descripcionCursoDataGridViewTextBoxColumn1.Name = "descripcionCursoDataGridViewTextBoxColumn1";
             this.descripcionCursoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.descripcionCursoDataGridViewTextBoxColumn1.Visible = false;
             this.descripcionCursoDataGridViewTextBoxColumn1.Width = 111;
             // 
             // fechaInicioCursoDataGridViewTextBoxColumn1
             // 
             this.fechaInicioCursoDataGridViewTextBoxColumn1.DataPropertyName = "fechaInicioCurso";
-            this.fechaInicioCursoDataGridViewTextBoxColumn1.HeaderText = "fechaInicioCurso";
+            this.fechaInicioCursoDataGridViewTextBoxColumn1.HeaderText = "Fecha de inicio";
             this.fechaInicioCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.fechaInicioCursoDataGridViewTextBoxColumn1.Name = "fechaInicioCursoDataGridViewTextBoxColumn1";
             this.fechaInicioCursoDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.fechaInicioCursoDataGridViewTextBoxColumn1.Visible = false;
             this.fechaInicioCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
             // fechaFinCursoDataGridViewTextBoxColumn1
@@ -645,6 +703,7 @@
             this.aforoCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.aforoCursoDataGridViewTextBoxColumn1.Name = "aforoCursoDataGridViewTextBoxColumn1";
             this.aforoCursoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.aforoCursoDataGridViewTextBoxColumn1.Visible = false;
             // 
             // onlineCursoDataGridViewTextBoxColumn1
             // 
@@ -655,37 +714,6 @@
             this.onlineCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.onlineCursoDataGridViewTextBoxColumn1.Visible = false;
             this.onlineCursoDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dgvActividades
-            // 
-            this.dgvActividades.AllowUserToAddRows = false;
-            this.dgvActividades.AllowUserToDeleteRows = false;
-            this.dgvActividades.AllowUserToOrderColumns = true;
-            this.dgvActividades.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvActividades.AutoGenerateColumns = false;
-            this.dgvActividades.BackgroundColor = System.Drawing.Color.FloralWhite;
-            this.dgvActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvActividades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.dgvActividades.DataSource = this.actividadBindingSource;
-            this.dgvActividades.Location = new System.Drawing.Point(378, 847);
-            this.dgvActividades.Name = "dgvActividades";
-            this.dgvActividades.ReadOnly = true;
-            this.dgvActividades.RowHeadersWidth = 51;
-            this.dgvActividades.RowTemplate.Height = 24;
-            this.dgvActividades.Size = new System.Drawing.Size(565, 93);
-            this.dgvActividades.TabIndex = 79;
-            this.dgvActividades.SelectionChanged += new System.EventHandler(this.dgvActividades_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -705,6 +733,7 @@
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Visible = false;
             this.dataGridViewTextBoxColumn2.Width = 88;
             // 
             // dataGridViewTextBoxColumn3
@@ -725,16 +754,16 @@
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Visible = false;
             this.dataGridViewTextBoxColumn4.Width = 111;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "fechaInicioActividad";
-            this.dataGridViewTextBoxColumn5.HeaderText = "fechaInicioActividad";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Fecha de inicio";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Visible = false;
             this.dataGridViewTextBoxColumn5.Width = 125;
             // 
             // dataGridViewTextBoxColumn6
@@ -769,13 +798,12 @@
             // 
             // dataGridViewTextBoxColumn9
             // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn9.DataPropertyName = "lugarActividad";
             this.dataGridViewTextBoxColumn9.HeaderText = "Lugar";
             this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 74;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -785,33 +813,8 @@
             this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Visible = false;
             this.dataGridViewTextBoxColumn10.Width = 71;
-            // 
-            // bModificar
-            // 
-            this.bModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bModificar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bModificar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bModificar.Location = new System.Drawing.Point(1105, 348);
-            this.bModificar.Name = "bModificar";
-            this.bModificar.Size = new System.Drawing.Size(181, 63);
-            this.bModificar.TabIndex = 80;
-            this.bModificar.Text = "Modificar";
-            this.bModificar.UseVisualStyleBackColor = false;
-            this.bModificar.Click += new System.EventHandler(this.bModificar_Click);
-            // 
-            // bDel
-            // 
-            this.bDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bDel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bDel.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bDel.Location = new System.Drawing.Point(1105, 441);
-            this.bDel.Name = "bDel";
-            this.bDel.Size = new System.Drawing.Size(181, 63);
-            this.bDel.TabIndex = 81;
-            this.bDel.Text = "Eliminar";
-            this.bDel.UseVisualStyleBackColor = false;
-            this.bDel.Click += new System.EventHandler(this.bDel_Click);
             // 
             // fPrincipalOng
             // 
@@ -905,6 +908,9 @@
         private System.Windows.Forms.BindingSource cursoBindingSource;
         private apsgrupo02DataSet1TableAdapters.CursoTableAdapter cursoTableAdapter;
         private System.Windows.Forms.DataGridView dgvCursos;
+        private System.Windows.Forms.DataGridView dgvActividades;
+        private System.Windows.Forms.Button bModificar;
+        private System.Windows.Forms.Button bDel;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCursoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn profesorCursoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCursoDataGridViewTextBoxColumn1;
@@ -916,7 +922,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lugarCursoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn aforoCursoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn onlineCursoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridView dgvActividades;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -927,7 +932,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.Button bModificar;
-        private System.Windows.Forms.Button bDel;
     }
 }
