@@ -201,6 +201,10 @@ namespace Grupo02PCSAS
             {
                 if (actividadSeleccionada == null)
                 {
+                    throw new Exception("Ninguna actividad seleccionada");
+                }
+                else
+                {
                     fInfoActividad infoActividad = new fInfoActividad(ong, actividadSeleccionada);
                     this.Hide();
                     infoActividad.ShowDialog();
