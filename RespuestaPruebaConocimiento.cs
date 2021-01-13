@@ -16,6 +16,7 @@ namespace Grupo02PCSAS
         private int idPrueba;
         private string respuestaPregunta1, respuestaPregunta2, respuestaPregunta3, respuestaPregunta4, respuestaPregunta5;
 
+
         public static List<string> usuariosQueHanRellenadoPrueba(Curso curso)
         {
             List<string> lista = new List<string>();
