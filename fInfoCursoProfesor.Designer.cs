@@ -75,6 +75,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.actividadesRealizadasTableAdapter1 = new Grupo02PCSAS.apsgrupo02DataSet1TableAdapters.ActividadesRealizadasTableAdapter();
+            this.bValoraciones = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescargas)).BeginInit();
             this.panel4.SuspendLayout();
@@ -93,6 +94,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FloralWhite;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.bValoraciones);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.bAnyadirPrueba);
             this.panel5.Controls.Add(this.label7);
@@ -690,6 +692,17 @@
             // 
             this.actividadesRealizadasTableAdapter1.ClearBeforeFill = true;
             // 
+            // bValoraciones
+            // 
+            this.bValoraciones.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bValoraciones.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bValoraciones.Location = new System.Drawing.Point(77, 63);
+            this.bValoraciones.Name = "bValoraciones";
+            this.bValoraciones.Size = new System.Drawing.Size(319, 109);
+            this.bValoraciones.TabIndex = 13;
+            this.bValoraciones.Text = "Ver Valoraciones";
+            this.bValoraciones.UseVisualStyleBackColor = false;
+            // 
             // fInfoCursoProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -776,5 +789,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button bAnyadirPrueba;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button bValoraciones;
     }
 }

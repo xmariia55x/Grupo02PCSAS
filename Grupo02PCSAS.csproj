@@ -143,6 +143,12 @@
     <Compile Include="fSatisfaccionCurso.Designer.cs">
       <DependentUpon>fSatisfaccionCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="fVerValoraciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fVerValoraciones.Designer.cs">
+      <DependentUpon>fVerValoraciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="RespuestaPruebaConocimiento.cs" />
     <Compile Include="ValoracionCurso.cs" />
     <Compile Include="Correo.cs" />
@@ -363,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fSatisfaccionCurso.resx">
       <DependentUpon>fSatisfaccionCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fVerValoraciones.resx">
+      <DependentUpon>fVerValoraciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaBorrarCurso.resx">
       <DependentUpon>PantallaBorrarCurso.cs</DependentUpon>
