@@ -95,6 +95,12 @@
     <Compile Include="fEditarPruebaConocimiento.Designer.cs">
       <DependentUpon>fEditarPruebaConocimiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="fEliminarArchivoActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fEliminarArchivoActividad.Designer.cs">
+      <DependentUpon>fEliminarArchivoActividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="fInfoMensaje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +295,9 @@
     <EmbeddedResource Include="fEditarPruebaConocimiento.resx">
       <DependentUpon>fEditarPruebaConocimiento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fEliminarArchivoActividad.resx">
+      <DependentUpon>fEliminarArchivoActividad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fInfoActividad.resx">
       <DependentUpon>fInfoActividad.cs</DependentUpon>
     </EmbeddedResource>
@@ -423,6 +432,8 @@
     <None Include="Resources\edit-155387_960_720.png" />
     <None Include="Resources\580b585b2edbce24c47b2769.png" />
     <None Include="Resources\189689.png" />
+    <None Include="Resources\add-folder.png" />
+    <None Include="Resources\Open-folder-delete-icon.png" />
     <Content Include="Resources\pcsas.jpeg" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>

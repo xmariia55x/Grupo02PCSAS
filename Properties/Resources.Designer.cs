@@ -113,6 +113,16 @@ namespace Grupo02PCSAS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_folder {
+            get {
+                object obj = ResourceManager.GetObject("add-folder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Atras {
             get {
                 object obj = ResourceManager.GetObject("Atras", resourceCulture);
@@ -216,6 +226,16 @@ namespace Grupo02PCSAS.Properties {
         internal static System.Drawing.Bitmap logo_uma {
             get {
                 object obj = ResourceManager.GetObject("logo-uma", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Open_folder_delete_icon {
+            get {
+                object obj = ResourceManager.GetObject("Open-folder-delete-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
