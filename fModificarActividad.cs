@@ -88,14 +88,17 @@ namespace Grupo02PCSAS
 
         private void bModAniadirArchivosCurso_Click(object sender, EventArgs e)
         {
-            
+            fArchivoActividad f = new fArchivoActividad(user, act);
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
         }
 
         private void bEliminarArchivo_Click(object sender, EventArgs e)
         {
             fEliminarArchivoActividad f = new fEliminarArchivoActividad(user, act);
             this.Hide();
-            this.ShowDialog();
+            f.ShowDialog();
             this.Close();
         }
 
@@ -135,6 +138,11 @@ namespace Grupo02PCSAS
             this.Hide();
             f.ShowDialog();
             this.Close();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            cerrar();
         }
     }
 }

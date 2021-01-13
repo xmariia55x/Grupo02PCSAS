@@ -15,6 +15,7 @@ namespace Grupo02PCSAS
     {
         Usuario usuario;
         Actividad actividad;
+        MaterialActividad seleccionado;
         public fEliminarArchivoActividad(Usuario u, Actividad a)
         {
             this.usuario = u;
@@ -44,6 +45,42 @@ namespace Grupo02PCSAS
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
             dataGridView1.DataSource = tabla;
+        }
+
+        private void bEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (seleccionado == null)
+                {
+                    throw new Exception("No se ha seleccionado ningún material");
+                } else
+                {
+                    seleccionado.BorrarMaterialActividad();
+                    
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+           if (dataGridView1.SelectedRows.Count > 0)
+           {
+                seleccionado = new MaterialActividad((string)dataGridView1.SelectedRows[0].Cells[1].Value, (int)dataGridView1.SelectedRows[0].Cells[0].Value);
+                cerrar();     
+           }
+        
+        }
+
+        private void cerrar()
+        {
+            fModificarActividad f = new fModificarActividad(usuario, actividad);
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
         }
     }
 }

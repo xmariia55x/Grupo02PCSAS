@@ -45,20 +45,20 @@ namespace Grupo02PCSAS
             this.idActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enlaceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialActividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.materialActividadBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.apsgrupo02DataSet1 = new Grupo02PCSAS.apsgrupo02DataSet1();
+            this.materialActividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.materialActividadTableAdapter = new Grupo02PCSAS.apsgrupo02DataSet1TableAdapters.MaterialActividadTableAdapter();
             this.bEliminar = new System.Windows.Forms.Button();
-            this.materialActividadBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.materialActividadBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialActividadBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialActividadBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -210,6 +210,7 @@ namespace Grupo02PCSAS
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(695, 312);
             this.dataGridView1.TabIndex = 28;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // idActividadDataGridViewTextBoxColumn
             // 
@@ -240,15 +241,20 @@ namespace Grupo02PCSAS
             this.enlaceDataGridViewTextBoxColumn.Name = "enlaceDataGridViewTextBoxColumn";
             this.enlaceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // materialActividadBindingSource
+            // materialActividadBindingSource1
             // 
-            this.materialActividadBindingSource.DataMember = "MaterialActividad";
-            this.materialActividadBindingSource.DataSource = this.apsgrupo02DataSet1;
+            this.materialActividadBindingSource1.DataMember = "MaterialActividad";
+            this.materialActividadBindingSource1.DataSource = this.apsgrupo02DataSet1;
             // 
             // apsgrupo02DataSet1
             // 
             this.apsgrupo02DataSet1.DataSetName = "apsgrupo02DataSet1";
             this.apsgrupo02DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // materialActividadBindingSource
+            // 
+            this.materialActividadBindingSource.DataMember = "MaterialActividad";
+            this.materialActividadBindingSource.DataSource = this.apsgrupo02DataSet1;
             // 
             // label1
             // 
@@ -276,16 +282,14 @@ namespace Grupo02PCSAS
             this.bEliminar.TabIndex = 30;
             this.bEliminar.Text = "Eliminar";
             this.bEliminar.UseVisualStyleBackColor = false;
-            // 
-            // materialActividadBindingSource1
-            // 
-            this.materialActividadBindingSource1.DataMember = "MaterialActividad";
-            this.materialActividadBindingSource1.DataSource = this.apsgrupo02DataSet1;
+            this.bEliminar.Click += new System.EventHandler(this.bEliminar_Click);
             // 
             // fEliminarArchivoActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1469, 1033);
             this.Controls.Add(this.bEliminar);
@@ -295,8 +299,11 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.lNombreCurso);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox4);
+            this.MaximizeBox = false;
             this.Name = "fEliminarArchivoActividad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fEliminarArchivoActividad";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fEliminarArchivoActividad_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -304,9 +311,9 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.materialActividadBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialActividadBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apsgrupo02DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialActividadBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
