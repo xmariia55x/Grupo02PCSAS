@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Grupo02PCSAS
 {
@@ -30,7 +31,34 @@ namespace Grupo02PCSAS
             this.Close();
         }
 
-        
+        private void cargaGridCurso()
+        {
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
+            conexion.Open();
+            //nombreCurso 'Nombre', fechaInicioCurso, fechaFinCurso, aforoCurso
+            MySqlCommand comandoC = new MySqlCommand("SELECT * FROM ValoracionCurso WHERE idCurso = " + ((Curso)evento).CursoID, conexion);
+            MySqlDataAdapter adaptadorC = new MySqlDataAdapter();
+            adaptadorC.SelectCommand = comandoC;
+            DataTable tablaC = new DataTable();
+            adaptadorC.Fill(tablaC);
+            dgvValoracionCursos.DataSource = tablaC;
+        }
+        private void cargaGridActividad()
+        {
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
+            conexion.Open();
+            //nombreCurso 'Nombre', fechaInicioCurso, fechaFinCurso, aforoCurso
+            MySqlCommand comandoC = new MySqlCommand("SELECT * FROM ValoracionActividad WHERE idActividad = " + ((Actividad)evento).IdActividad, conexion);
+            MySqlDataAdapter adaptadorC = new MySqlDataAdapter();
+            adaptadorC.SelectCommand = comandoC;
+            DataTable tablaC = new DataTable();
+            adaptadorC.Fill(tablaC);
+            dgvValoracionesActividad.DataSource = tablaC;
+        }
+
+
 
         private void fVerValoraciones_Load(object sender, EventArgs e)
         {
@@ -42,6 +70,7 @@ namespace Grupo02PCSAS
                 lActividad.Visible = false;
                 dgvValoracionCursos.Visible = true;
                 dgvValoracionesActividad.Visible = false;
+                cargaGridCurso();
             }
             else
             {
@@ -49,6 +78,7 @@ namespace Grupo02PCSAS
                 lActividad.Visible = true;
                 dgvValoracionCursos.Visible = false;
                 dgvValoracionesActividad.Visible = true;
+                cargaGridActividad();
             }
         }
 
