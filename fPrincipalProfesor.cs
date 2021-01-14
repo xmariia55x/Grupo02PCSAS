@@ -403,9 +403,20 @@ namespace Grupo02PCSAS
                     {
                         if (!inscritoCurso(profesor) && !creadorCurso(profesor))
                         {
-                            CursosRealizados c = new CursosRealizados(seleccionado.CursoID, profesor.CorreoUsuario);
-                            MessageBox.Show("Se ha inscrito con éxito");
-                            //cargaGrid();
+                            string[] horaSplit = seleccionado.CursoHoraInicio.Split(':');
+                            string[] fechaSplit = seleccionado.CursoFechaInicio.Split('/');
+                            DateTime dt = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]), int.Parse(horaSplit[0]), int.Parse(horaSplit[1]), 0);
+                            DateTime dt2 = DateTime.Now;
+                            if (dt.CompareTo(dt2) <= 0)
+                            {
+                                throw new Exception("Este curso ya ha finalizado.");
+                            }
+                            else
+                            {
+                                CursosRealizados c = new CursosRealizados(seleccionado.CursoID, profesor.CorreoUsuario);
+                                MessageBox.Show("Se ha inscrito con éxito");
+                                //cargaGrid();
+                            }
                         }
                         else
                         {
@@ -456,9 +467,20 @@ namespace Grupo02PCSAS
                     {
                         if (!inscritoActividad(profesor))
                         {
-                            ActividadesRealizadas a = new ActividadesRealizadas(seleccionada.IdActividad, profesor.CorreoUsuario);
-                            MessageBox.Show("Se ha inscrito con éxito");
-                            //cargaGrid();
+                            string[] horaSplit = seleccionada.HoraInicioActividad.Split(':');
+                            string[] fechaSplit = seleccionada.FechaInicioActividad.Split('/');
+                            DateTime dt = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]), int.Parse(horaSplit[0]), int.Parse(horaSplit[1]), 0);
+                            DateTime dt2 = DateTime.Now;
+                            if (dt.CompareTo(dt2) <= 0)
+                            {
+                                throw new Exception("Esta actividad ya ha finalizado.");
+                            }
+                            else
+                            {
+                                ActividadesRealizadas a = new ActividadesRealizadas(seleccionada.IdActividad, profesor.CorreoUsuario);
+                                MessageBox.Show("Se ha inscrito con éxito");
+                                //cargaGrid();
+                            }
                         }
                         else
                         {
