@@ -26,17 +26,17 @@ namespace Grupo02PCSAS
         private void bAccederAlForo_Click(object sender, EventArgs e)
         {
             PantallaPrincipalForo foro = new PantallaPrincipalForo(ong);
-            this.Visible = false;
+            this.Hide();
             foro.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            fDatosPerfil datosPerfil = new fDatosPerfil(ong); 
-            this.Visible = false;
+            fDatosPerfil datosPerfil = new fDatosPerfil(ong);
+            this.Hide();
             datosPerfil.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void fPrincipalOng_Load(object sender, EventArgs e)
@@ -124,10 +124,10 @@ namespace Grupo02PCSAS
         }
         private void bEventos_Click(object sender, EventArgs e)
         {
-            fPantallaPrincipalAlumno principal = new fPantallaPrincipalAlumno(ong); 
-            this.Visible = false;
+            fPantallaPrincipalAlumno principal = new fPantallaPrincipalAlumno(ong);
+            this.Hide();
             principal.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -164,9 +164,9 @@ namespace Grupo02PCSAS
         private void bCrearActividad_Click(object sender, EventArgs e)
         {
             fCrearActividadAdmin a = new fCrearActividadAdmin(ong);
-            this.Visible = false;
+            this.Hide();
             a.ShowDialog();
-            this.Visible = true;
+            this.Close();
 
             cargaGrid();
         }
@@ -174,9 +174,9 @@ namespace Grupo02PCSAS
         private void bNoticias_Click(object sender, EventArgs e)
         {
             fNoticia noticias = new fNoticia(ong);
-            this.Visible = false;
+            this.Hide();
             noticias.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void bInformacionCurso_Click(object sender, EventArgs e)
