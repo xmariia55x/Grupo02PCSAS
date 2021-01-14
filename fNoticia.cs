@@ -102,9 +102,9 @@ namespace Grupo02PCSAS
                 if(noticiaSeleccionada != null)
                 {
                     fInfoNoticia infoNoticia = new fInfoNoticia(user,noticiaSeleccionada);
-                    this.Visible = false;
+                    this.Hide();
                     infoNoticia.ShowDialog();
-                    this.Visible = true;
+                    this.Close();
                 } else
                 {
                     throw new Exception("No hay ninguna noticia seleccionada");
@@ -118,10 +118,41 @@ namespace Grupo02PCSAS
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            fInicioInvitado nuevoDebate = new fInicioInvitado();
-            this.Hide();
-            nuevoDebate.ShowDialog();
-            this.Close();
+            if (user == null)
+            {
+                fInicioInvitado inv = new fInicioInvitado();
+                this.Hide();
+                inv.ShowDialog();
+                this.Close();
+            }
+            else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
+            {
+                fPrincipalOng ong = new fPrincipalOng(user);
+                this.Hide();
+                ong.ShowDialog();
+                this.Close();
+            }
+            else if (user.RolUsuario.RolName.Equals("PROFESOR"))
+            {
+                fPrincipalProfesor profe = new fPrincipalProfesor(user);
+                this.Hide();
+                profe.ShowDialog();
+                this.Close();
+            }
+            else if (user.RolUsuario.RolName.Equals("ALUMNO"))
+            {
+                fPantallaPrincipalAlumno alu = new fPantallaPrincipalAlumno(user);
+                this.Hide();
+                alu.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                fPantallaAdminFinal admin = new fPantallaAdminFinal(user);
+                this.Hide();
+                admin.ShowDialog();
+                this.Close();
+            }
         }
 
         private void bDelNot_Click(object sender, EventArgs e)
