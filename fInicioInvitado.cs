@@ -16,6 +16,8 @@ namespace Grupo02PCSAS
         private Usuario user;
         private Curso cursoSeleccionado;
         private Actividad actividadSeleccionada;
+        private static string BD_SERVER = Properties.Settings.Default.BD_SERVER;
+        private static string BD_NAME = Properties.Settings.Default.BD_NAME;
         public fInicioInvitado()
         {
             InitializeComponent();
@@ -32,34 +34,62 @@ namespace Grupo02PCSAS
         {
 
         }
+        
 
+        private List<Curso> sacarFechasCurso()
+        {
+            string sentencia = "SELECT idCurso, fechaInicioCurso, horaInicioCurso FROM Curso";
+            List<Curso> lista = new List<Curso>();
+            SQLSERVERDB bd = new SQLSERVERDB(BD_SERVER, BD_NAME);
+            foreach(Object[] obj in bd.Select(sentencia))
+            {
+                string fecha = (string)obj[1];
+                string hora = (string)obj[2];
+                string[] fechaSplit = fecha.Split('/');
+                string[] horaSplit = hora.Split(':');
+                DateTime dt = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]), int.Parse(horaSplit[0]), int.Parse(horaSplit[1]), 0);
+                if (dt.CompareTo(DateTime.Now) >= 0)
+                {
+                    Curso c = new Curso((int)obj[0]);
+                    Console.WriteLine(c.ToString());
+                    lista.Add(c);
+                }
+            }
+            return lista;
+        }
+
+        private List<Actividad> sacarFechasActividad()
+        {
+            string sentencia = "SELECT idActividad, fechaInicioActividad, horaInicioActividad FROM Actividad";
+            List<Actividad> lista = new List<Actividad>();
+            SQLSERVERDB bd = new SQLSERVERDB(BD_SERVER, BD_NAME);
+            foreach (Object[] obj in bd.Select(sentencia))
+            {
+
+                string fecha = (string)obj[1];
+                string hora = (string)obj[2];
+                string[] fechaSplit = fecha.Split('/');
+                string[] horaSplit = hora.Split(':');
+                DateTime dt = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]), int.Parse(horaSplit[0]), int.Parse(horaSplit[1]), 0);
+                
+                if (dt.CompareTo(DateTime.Now) >= 0)
+                {
+                    
+                    lista.Add(new Actividad((int)obj[0]));
+                }
+                
+            }
+            return lista;
+        }
         private void fInicioInvitado_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Actividad' Puede moverla o quitarla según sea necesario.
             //this.actividadTableAdapter.Fill(this.apsgrupo02DataSet.Actividad);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Curso' Puede moverla o quitarla según sea necesario.
             //this.cursoTableAdapter.Fill(this.apsgrupo02DataSet.Curso);
-            MySqlConnection conexion = new MySqlConnection();
-            conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
-            conexion.Open();
-            //nombreCurso 'Nombre', fechaInicioCurso, fechaFinCurso, aforoCurso
-            MySqlCommand comandoC = new MySqlCommand("SELECT * FROM Curso WHERE fechaInicioCurso >= '" + DateTime.Now.ToString("dd / MM / yyyy") + "'", conexion);
-            MySqlCommand comandoA = new MySqlCommand("SELECT * FROM Actividad WHERE fechaInicioActividad >= '" + DateTime.Now.ToString("dd / MM / yyyy") + "'", conexion);
-           
-            MySqlDataAdapter adaptadorC = new MySqlDataAdapter();
-            MySqlDataAdapter adaptadorA = new MySqlDataAdapter();
             
-            adaptadorC.SelectCommand = comandoC;
-            adaptadorA.SelectCommand = comandoA;
-           
-            DataTable tablaC = new DataTable();
-            DataTable tablaA = new DataTable();
-          
-            adaptadorC.Fill(tablaC);
-            adaptadorA.Fill(tablaA);
-
-            dgvCursos.DataSource = tablaC;
-            dgvActividades.DataSource = tablaA;
+            dgvCursos.DataSource = sacarFechasCurso();
+            dgvActividades.DataSource = sacarFechasActividad();
             
         }
 
