@@ -51,17 +51,17 @@ namespace Grupo02PCSAS
         private void label4_Click(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(user);
-            this.Hide();
+            this.Visible = false;
             datos.ShowDialog();
-            this.Close();
+            this.Visible = true;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(user);
-            this.Hide();
+            this.Visible = false;
             datos.ShowDialog();
-            this.Close();
+            this.Visible = true;
         }
 
         private void bNuevoMensaje_Click(object sender, EventArgs e)
@@ -74,9 +74,9 @@ namespace Grupo02PCSAS
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            fDatosPerfil f = new fDatosPerfil(user);
+            fDatosPerfil datosPerfil = new fDatosPerfil(user);
             this.Hide();
-            f.ShowDialog();
+            datosPerfil.ShowDialog();
             this.Close();
         }
 
