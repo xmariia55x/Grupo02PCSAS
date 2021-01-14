@@ -274,6 +274,20 @@ namespace Grupo02PCSAS
             }
         }
 
-        
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datosPerfil = new fDatosPerfil(user);
+            this.Visible = false;
+            datosPerfil.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datosPerfil = new fDatosPerfil(user);
+            this.Visible = false;
+            datosPerfil.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
