@@ -41,10 +41,7 @@ namespace Grupo02PCSAS
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            fDatosPerfil datosPerfil = new fDatosPerfil(user);
-            this.Visible = false;
-            datosPerfil.ShowDialog();
-            this.Visible = true;
+            cerrar();
         }
 
         private void cerrar()
