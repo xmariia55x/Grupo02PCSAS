@@ -111,6 +111,7 @@ namespace Grupo02PCSAS
                 {
                     
                     debateCreado = new Debate(usuario.CorreoUsuario, asunto, mensaje, DateTime.Now.ToShortDateString());
+                    Respuesta r = new Respuesta(0, debateCreado, usuario, mensaje, DateTime.Now.ToShortDateString());
                     MessageBox.Show("Debate creado con éxito");
                     debateCreado = null;
                     this.Close();

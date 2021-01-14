@@ -168,9 +168,9 @@ namespace Grupo02PCSAS
         private void bEditarPerfil_Click(object sender, EventArgs e)
         {
 			fEditarPerfil edicion = new fEditarPerfil(this.user);
-			this.Visible = false;
+			this.Hide();
 			edicion.ShowDialog();
-			this.Visible = true;
+			this.Close();
 		}
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -229,9 +229,9 @@ namespace Grupo02PCSAS
         private void bMensajes_Click(object sender, EventArgs e)
         {
 			fBandejaMensajes f = new fBandejaMensajes(this.user);
-			this.Visible = false;
+			this.Hide();
 			f.ShowDialog();
-			this.Visible = true;
+			this.Close();
 		}
     }
 }
