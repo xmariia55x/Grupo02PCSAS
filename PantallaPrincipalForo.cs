@@ -69,15 +69,41 @@ namespace Grupo02PCSAS
 
         private void bAniadirDebate_Click(object sender, EventArgs e)
         {
-            fNuevoDebateForo nuevoDebate = new fNuevoDebateForo(user); 
-            this.Visible = false;
+            fNuevoDebateForo nuevoDebate = new fNuevoDebateForo(user);
+            this.Hide();
             nuevoDebate.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(user.RolUsuario.RolName.Equals("ALUMNO"))
+            {
+                fPantallaPrincipalAlumno principalAlumno = new fPantallaPrincipalAlumno(user);
+                this.Hide();
+                principalAlumno.ShowDialog();
+                this.Close();
+            } else if(user.RolUsuario.RolName.Equals("ADMIN"))
+            {
+                fPantallaAdminFinal pantallaAdmin = new fPantallaAdminFinal(user);
+                this.Hide();
+                pantallaAdmin.ShowDialog();
+                this.Close();
+            } else if(user.RolUsuario.RolName.Equals("ENTIDAD"))
+            {
+                fPrincipalOng pantallaOng = new fPrincipalOng(user);
+                this.Hide();
+                pantallaOng.ShowDialog();
+                this.Close();
+            } else
+            {
+                fPrincipalProfesor pantallaProfesor = new fPrincipalProfesor(user);
+                this.Hide();
+                pantallaProfesor.ShowDialog();
+                this.Close();
+            }
+
+
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)

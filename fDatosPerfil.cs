@@ -175,11 +175,42 @@ namespace Grupo02PCSAS
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-			fPantallaPrincipalAlumno f = new fPantallaPrincipalAlumno(user);
-			this.Hide();
-			f.ShowDialog();
-			this.Close();
-        }
+			if (user == null)
+			{
+				fInicioInvitado inv = new fInicioInvitado();
+				this.Hide();
+				inv.ShowDialog();
+				this.Close();
+			}
+			else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
+			{
+				fPrincipalOng ong = new fPrincipalOng(user);
+				this.Hide();
+				ong.ShowDialog();
+				this.Close();
+			}
+			else if (user.RolUsuario.RolName.Equals("PROFESOR"))
+			{
+				fPrincipalProfesor profe = new fPrincipalProfesor(user);
+				this.Hide();
+				profe.ShowDialog();
+				this.Close();
+			}
+			else if (user.RolUsuario.RolName.Equals("ALUMNO"))
+			{
+				fPantallaPrincipalAlumno alu = new fPantallaPrincipalAlumno(user);
+				this.Hide();
+				alu.ShowDialog();
+				this.Close();
+			}
+			else
+			{
+				fPantallaAdminFinal admin = new fPantallaAdminFinal(user);
+				this.Hide();
+				admin.ShowDialog();
+				this.Close();
+			}
+		}
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
