@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fInfoActividad));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lValorar = new System.Windows.Forms.Label();
+            this.bValorar = new System.Windows.Forms.Button();
             this.bRecordar = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -66,8 +68,7 @@
             this.lNombreUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bValorar = new System.Windows.Forms.Button();
-            this.lValorar = new System.Windows.Forms.Label();
+            this.bValoraciones = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -83,6 +84,7 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FloralWhite;
+            this.panel5.Controls.Add(this.bValoraciones);
             this.panel5.Controls.Add(this.lValorar);
             this.panel5.Controls.Add(this.bValorar);
             this.panel5.Controls.Add(this.bRecordar);
@@ -92,6 +94,29 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1653, 481);
             this.panel5.TabIndex = 10;
+            // 
+            // lValorar
+            // 
+            this.lValorar.AutoSize = true;
+            this.lValorar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lValorar.Location = new System.Drawing.Point(1362, 106);
+            this.lValorar.Name = "lValorar";
+            this.lValorar.Size = new System.Drawing.Size(196, 29);
+            this.lValorar.TabIndex = 17;
+            this.lValorar.Text = "Valorar actividad";
+            // 
+            // bValorar
+            // 
+            this.bValorar.BackColor = System.Drawing.Color.White;
+            this.bValorar.BackgroundImage = global::Grupo02PCSAS.Properties.Resources.estrella;
+            this.bValorar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bValorar.Location = new System.Drawing.Point(1427, 139);
+            this.bValorar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bValorar.Name = "bValorar";
+            this.bValorar.Size = new System.Drawing.Size(75, 75);
+            this.bValorar.TabIndex = 11;
+            this.bValorar.UseVisualStyleBackColor = false;
+            this.bValorar.Click += new System.EventHandler(this.bValorar_Click);
             // 
             // bRecordar
             // 
@@ -502,28 +527,17 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // bValorar
+            // bValoraciones
             // 
-            this.bValorar.BackColor = System.Drawing.Color.White;
-            this.bValorar.BackgroundImage = global::Grupo02PCSAS.Properties.Resources.estrella;
-            this.bValorar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bValorar.Location = new System.Drawing.Point(1427, 139);
-            this.bValorar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bValorar.Name = "bValorar";
-            this.bValorar.Size = new System.Drawing.Size(75, 75);
-            this.bValorar.TabIndex = 11;
-            this.bValorar.UseVisualStyleBackColor = false;
-            this.bValorar.Click += new System.EventHandler(this.bValorar_Click);
-            // 
-            // lValorar
-            // 
-            this.lValorar.AutoSize = true;
-            this.lValorar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lValorar.Location = new System.Drawing.Point(1362, 106);
-            this.lValorar.Name = "lValorar";
-            this.lValorar.Size = new System.Drawing.Size(196, 29);
-            this.lValorar.TabIndex = 17;
-            this.lValorar.Text = "Valorar actividad";
+            this.bValoraciones.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bValoraciones.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bValoraciones.Location = new System.Drawing.Point(59, 42);
+            this.bValoraciones.Name = "bValoraciones";
+            this.bValoraciones.Size = new System.Drawing.Size(319, 109);
+            this.bValoraciones.TabIndex = 18;
+            this.bValoraciones.Text = "Ver Valoraciones";
+            this.bValoraciones.UseVisualStyleBackColor = false;
+            this.bValoraciones.Click += new System.EventHandler(this.bValoraciones_Click);
             // 
             // fInfoActividad
             // 
@@ -602,5 +616,6 @@
         private System.Windows.Forms.Button bRecordar;
         private System.Windows.Forms.Button bValorar;
         private System.Windows.Forms.Label lValorar;
+        private System.Windows.Forms.Button bValoraciones;
     }
 }
