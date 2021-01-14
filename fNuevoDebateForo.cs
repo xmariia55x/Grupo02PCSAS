@@ -36,7 +36,7 @@ namespace Grupo02PCSAS
         private void fNuevoDebateForo_Load(object sender, EventArgs e)
         {
             bEnviarDebate.Enabled = true;
-            bCancelarDebate.Enabled = true;
+            
             lNombreUser.Text = usuario.NombreUsuario;
             lRol.Text = usuario.RolUsuario.RolName;
         }

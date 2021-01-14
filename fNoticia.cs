@@ -28,10 +28,17 @@ namespace Grupo02PCSAS
             {
                 lNombreUser.Text = user.NombreUsuario;
                 lRol.Text = user.RolUsuario.RolName;
+                if (!user.RolUsuario.RolName.Equals("ADMIN"))
+                {
+                    bAddNoticia.Visible = false;
+                    bDelNot.Visible = false;
+                }
             } else
             {
                 lNombreUser.Text = "Invitado";
                 lRol.Text = "INVITADO";
+                bAddNoticia.Visible = false;
+                bDelNot.Visible = false;
             }
         }
 
