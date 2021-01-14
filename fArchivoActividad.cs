@@ -31,14 +31,20 @@ namespace Grupo02PCSAS
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Vuelva a la pagina principal para acceder a sus datos ");
+            fDatosPerfil datosPerfil = new fDatosPerfil(user);
+            this.Visible = false;
+            datosPerfil.ShowDialog();
+            this.Visible = true;
         }
 
      
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            cerrar();
+            fDatosPerfil datosPerfil = new fDatosPerfil(user);
+            this.Visible = false;
+            datosPerfil.ShowDialog();
+            this.Visible = true;
         }
 
         private void cerrar()
