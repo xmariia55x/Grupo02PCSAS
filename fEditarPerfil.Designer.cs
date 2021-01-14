@@ -234,10 +234,10 @@ namespace Grupo02PCSAS
             // 
             // bGuardarCambios
             // 
-            this.bGuardarCambios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.bGuardarCambios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bGuardarCambios.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bGuardarCambios.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bGuardarCambios.Location = new System.Drawing.Point(593, 726);
+            this.bGuardarCambios.Location = new System.Drawing.Point(874, 671);
             this.bGuardarCambios.Name = "bGuardarCambios";
             this.bGuardarCambios.Size = new System.Drawing.Size(181, 63);
             this.bGuardarCambios.TabIndex = 41;
@@ -463,7 +463,7 @@ namespace Grupo02PCSAS
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(685, 473);
+            this.dataGridView1.Location = new System.Drawing.Point(630, 473);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
