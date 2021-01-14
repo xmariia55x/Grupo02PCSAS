@@ -14,12 +14,39 @@ namespace Grupo02PCSAS
     {
         private string nombreActividad, descrip, lugar, fechaIni, fechaFin, horaIni, horaFin, aforo, colaborador;
         private int aforoActividad;
-        private Actividad actividad;
-
-        private Usuario usuarioCreador;
-      
 
         
+        private Actividad actividad;
+
+        private void fCrearActividadAdmin_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private Usuario usuarioCreador;
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (usuarioCreador.RolUsuario.RolName.Equals("ENTIDAD"))
+            {
+                fPrincipalOng inicio = new fPrincipalOng(usuarioCreador);
+                this.Hide();
+                inicio.ShowDialog();
+                this.Close();
+
+            }
+            else if (usuarioCreador.RolUsuario.RolName.Equals("ADMIN"))
+            {
+                fPantallaAdminFinal inicio = new fPantallaAdminFinal(usuarioCreador);
+                this.Hide();
+                inicio.ShowDialog();
+                this.Close();
+            }
+        }
+
+
+
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 

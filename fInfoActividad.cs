@@ -150,17 +150,17 @@ namespace Grupo02PCSAS
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(user);
-            this.Visible = false;
+            this.Hide();
             datos.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
             fDatosPerfil edicion = new fDatosPerfil(this.user);
-            this.Visible = false;
+            this.Hide();
             edicion.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -234,9 +234,9 @@ namespace Grupo02PCSAS
                     if(!estaValorada())
                     {
                         fSatisfaccionActividad satisfaccionActividad = new fSatisfaccionActividad(user,act);
-                        this.Visible = false;
+                    this.Hide();
                         satisfaccionActividad.ShowDialog();
-                        this.Visible = true;
+                    this.Close();
                     } else
                     {
                         throw new Exception("Ya ha valorado la actividad");

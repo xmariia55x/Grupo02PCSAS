@@ -111,9 +111,9 @@ namespace Grupo02PCSAS
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(user);
-            this.Visible = false;
+            this.Hide();
             datos.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
