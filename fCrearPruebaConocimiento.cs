@@ -67,5 +67,21 @@ namespace Grupo02PCSAS
             f.ShowDialog();
             this.Close();
         }
+
+        private void picturePerfil_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datosPerfil = new fDatosPerfil(usuario);
+            this.Visible = false;
+            datosPerfil.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void lMiPerfil_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datosPerfil = new fDatosPerfil(usuario);
+            this.Visible = false;
+            datosPerfil.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
