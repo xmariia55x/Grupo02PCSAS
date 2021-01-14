@@ -74,9 +74,6 @@ namespace Grupo02PCSAS
                 cargaGrid();
             }
 
-            
-
-
         }
 
         private void calcularPlazasDisponibles()
@@ -200,22 +197,49 @@ namespace Grupo02PCSAS
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(user);
-            this.Visible = false;
+            this.Hide();
             datos.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (user.RolUsuario.RolName.Equals("ALUMNO"))
+            {
+                fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(user);
+                this.Hide();
+                inicio.ShowDialog();
+                this.Close();
+            }
+            else if (user.RolUsuario.RolName.Equals("PROFESOR"))
+            {
+                fPrincipalProfesor inicio = new fPrincipalProfesor(user);
+                this.Hide();
+                inicio.ShowDialog();
+                this.Close();
+            }
+            else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
+            {
+                fPrincipalOng inicio = new fPrincipalOng(user);
+                this.Hide();
+                inicio.ShowDialog();
+                this.Close();
+            }
+            else if (user.RolUsuario.RolName.Equals("ADMIN"))
+            {
+                fPantallaAdminFinal inicio = new fPantallaAdminFinal(user);
+                this.Hide();
+                inicio.ShowDialog();
+                this.Close();
+            }
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(user);
-            this.Visible = false;
+            this.Hide();
             datos.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -223,30 +247,30 @@ namespace Grupo02PCSAS
             if (user.RolUsuario.RolName.Equals("ALUMNO"))
             {
                 fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(user);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
-                this.Visible = true;
+                this.Close();
             }
             else if (user.RolUsuario.RolName.Equals("PROFESOR"))
             {
                 fPrincipalProfesor inicio = new fPrincipalProfesor(user);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
-                this.Visible = true;
+                this.Close();
             }
             else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
             {
                 fPrincipalOng inicio = new fPrincipalOng(user);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
-                this.Visible = true;
+                this.Close();
             }
             else if (user.RolUsuario.RolName.Equals("ADMIN"))
             {
                 fPantallaAdminFinal inicio = new fPantallaAdminFinal(user);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
-                this.Visible = true;
+                this.Close();
             }
 
         }
@@ -254,9 +278,9 @@ namespace Grupo02PCSAS
         private void label5_Click(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(user);
-            this.Visible = false;
+            this.Hide();
             datos.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }        
 
 
@@ -266,12 +290,16 @@ namespace Grupo02PCSAS
             conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             conexion.Open();
             //nombreCurso 'Nombre', fechaInicioCurso, fechaFinCurso, aforoCurso
-            MySqlCommand comandoC = new MySqlCommand("SELECT nombre FROM MaterialCurso WHERE idCurso = " + curso.CursoID , conexion);
+            MySqlCommand comandoC = new MySqlCommand("SELECT nombre as `Nombre del recurso` FROM MaterialCurso WHERE idCurso = " + curso.CursoID , conexion);
             MySqlDataAdapter adaptadorC = new MySqlDataAdapter();
             adaptadorC.SelectCommand = comandoC;
             DataTable tablaC = new DataTable();
             adaptadorC.Fill(tablaC);
             dgvDescargas.DataSource = tablaC;
+            if (tablaC.Rows.Count == 0)
+            {
+                dgvDescargas.Visible = false;
+            }
         }
 
         private void bValorar_Click(object sender, EventArgs e)

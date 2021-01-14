@@ -16,7 +16,8 @@ namespace Grupo02PCSAS
         private Usuario alumno;
         private Curso cursoSeleccionado;
         private Actividad actividadSeleccionada;
-
+        private static string BD_SERVER = Properties.Settings.Default.BD_SERVER;
+        private static string BD_NAME = Properties.Settings.Default.BD_NAME;
         public fPantallaPrincipalAlumno(Usuario u)
         {
             InitializeComponent();
@@ -47,41 +48,125 @@ namespace Grupo02PCSAS
             cargaActividadesFecha(DateTime.Now.ToShortDateString());
             cargaCursosFecha(DateTime.Now.ToShortDateString());
         }
+        private List<Curso> sacarFechasCurso()
+        {
+            string sentencia = "SELECT idCurso, fechaInicioCurso, horaInicioCurso FROM Curso";
+            List<Curso> lista = new List<Curso>();
+            SQLSERVERDB bd = new SQLSERVERDB(BD_SERVER, BD_NAME);
+            foreach (Object[] obj in bd.Select(sentencia))
+            {
+                string fecha = (string)obj[1];
+                string hora = (string)obj[2];
+                string[] fechaSplit = fecha.Split('/');
+                string[] horaSplit = hora.Split(':');
+                DateTime dt = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]), int.Parse(horaSplit[0]), int.Parse(horaSplit[1]), 0);
+                if (dt.CompareTo(DateTime.Now) >= 0)
+                {
+                    Curso c = new Curso((int)obj[0]);
+                    lista.Add(c);
+                }
+            }
+            return lista;
+        }
 
+        private List<Actividad> sacarFechasActividad()
+        {
+            string sentencia = "SELECT idActividad, fechaInicioActividad, horaInicioActividad FROM Actividad";
+            List<Actividad> lista = new List<Actividad>();
+            SQLSERVERDB bd = new SQLSERVERDB(BD_SERVER, BD_NAME);
+            foreach (Object[] obj in bd.Select(sentencia))
+            {
+
+                string fecha = (string)obj[1];
+                string hora = (string)obj[2];
+                string[] fechaSplit = fecha.Split('/');
+                string[] horaSplit = hora.Split(':');
+                DateTime dt = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]), int.Parse(horaSplit[0]), int.Parse(horaSplit[1]), 0);
+
+                if (dt.CompareTo(DateTime.Now) >= 0)
+                {
+
+                    lista.Add(new Actividad((int)obj[0]));
+                }
+
+            }
+            return lista;
+        }
         private void cargaGrid()
         {
             MySqlConnection conexion = new MySqlConnection();
             conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             conexion.Open();
             //nombreCurso 'Nombre', fechaInicioCurso, fechaFinCurso, aforoCurso
-            MySqlCommand comandoC = new MySqlCommand("SELECT * FROM Curso WHERE fechaInicioCurso >= '" + DateTime.Now.ToString("dd / MM / yyyy") + "'", conexion);
-            MySqlCommand comandoA = new MySqlCommand("SELECT * FROM Actividad WHERE fechaInicioActividad >= '" + DateTime.Now.ToString("dd / MM / yyyy") + "'", conexion);
+            
             MySqlCommand comandoMC = new MySqlCommand("select * from CursosRealizados cr join Curso c on cr.idCurso = c.idCurso where cr.correo = '" + alumno.CorreoUsuario + "'", conexion);
             MySqlCommand comandoMA = new MySqlCommand("select * from ActividadesRealizadas ar join Actividad a on ar.idActividad = a.idActividad where ar.correo = '" + alumno.CorreoUsuario + "'", conexion);
 
-            MySqlDataAdapter adaptadorC = new MySqlDataAdapter();
-            MySqlDataAdapter adaptadorA = new MySqlDataAdapter();
+           
             MySqlDataAdapter adaptadorMC = new MySqlDataAdapter();
             MySqlDataAdapter adaptadorMA = new MySqlDataAdapter();
-            adaptadorC.SelectCommand = comandoC;
-            adaptadorA.SelectCommand = comandoA;
+         
             adaptadorMC.SelectCommand = comandoMC;
             adaptadorMA.SelectCommand = comandoMA;
-            DataTable tablaC = new DataTable();
-            DataTable tablaA = new DataTable();
+         
             DataTable tablaMC = new DataTable();
             DataTable tablaMA = new DataTable();
-            adaptadorC.Fill(tablaC);
-            adaptadorA.Fill(tablaA);
+        
             adaptadorMC.Fill(tablaMC);
             adaptadorMA.Fill(tablaMA);
-            dgvNuevosCursos.DataSource = tablaC;
-            dgvNuevasActividades.DataSource = tablaA;
+          
             dgvMisCursos.DataSource = tablaMC;
             dgvMisAct.DataSource = tablaMA;
+
+            //DGVCURSOS
+            dgvNuevosCursos.DataSource = sacarFechasCurso();
+            //Columnas no visibles
+            dgvNuevosCursos.Columns[0].Visible = false;
+            dgvNuevosCursos.Columns[1].Visible = false;
+            dgvNuevosCursos.Columns[3].Visible = false;
+            dgvNuevosCursos.Columns[6].Visible = false;
+            dgvNuevosCursos.Columns[7].Visible = false;
+
+            //Columnas visibles
+            dgvNuevosCursos.Columns[2].HeaderText = "Nombre";
+            dgvNuevosCursos.Columns[4].HeaderText = "Fecha inicio";
+            dgvNuevosCursos.Columns[5].HeaderText = "Fecha fin";
+            dgvNuevosCursos.Columns[8].HeaderText = "Lugar";
+            dgvNuevosCursos.Columns[9].HeaderText = "Aforo";
+            dgvNuevosCursos.Columns[10].HeaderText = "Online";
+
+            dgvNuevosCursos.Columns[2].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dgvNuevosCursos.Columns[4].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvNuevosCursos.Columns[5].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvNuevosCursos.Columns[8].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvNuevosCursos.Columns[9].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvNuevosCursos.Columns[10].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+
+            //DGVACTIVIDADES
+            dgvNuevasActividades.DataSource = sacarFechasActividad();
+
+            dgvNuevasActividades.Columns[0].Visible = false;
+            dgvNuevasActividades.Columns[1].Visible = false;
+            dgvNuevasActividades.Columns[3].Visible = false;
+            dgvNuevasActividades.Columns[6].Visible = false;
+            dgvNuevasActividades.Columns[7].Visible = false;
+
+            //Columnas visibles
+            dgvNuevasActividades.Columns[2].HeaderText = "Nombre";
+            dgvNuevasActividades.Columns[4].HeaderText = "Fecha inicio";
+            dgvNuevasActividades.Columns[5].HeaderText = "Fecha fin";
+            dgvNuevasActividades.Columns[8].HeaderText = "Lugar";
+            dgvNuevasActividades.Columns[9].HeaderText = "Aforo";
+
+            dgvNuevasActividades.Columns[2].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dgvNuevasActividades.Columns[4].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvNuevasActividades.Columns[5].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvNuevasActividades.Columns[8].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvNuevasActividades.Columns[9].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+
         }
 
-       
+
         private void label1_Click_1(object sender, EventArgs e)
         {
 
@@ -270,6 +355,7 @@ namespace Grupo02PCSAS
                         {
                             new ActividadesRealizadas(actividadSeleccionada.IdActividad, alumno.CorreoUsuario);
                             MessageBox.Show("Se ha inscrito con éxito");
+                            cargaGrid();
                         }
                         else
                         {
