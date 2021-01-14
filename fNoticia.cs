@@ -206,9 +206,9 @@ namespace Grupo02PCSAS
                 else if(user.RolUsuario.Admin)
                 {
                     fCrearNoticia crearNoticia = new fCrearNoticia(user);
-                    this.Visible = false;
+                    this.Hide();
                     crearNoticia.ShowDialog();
-                    this.Visible = true;
+                    this.Close();
                     cargaGrid();
 
                 } else
