@@ -159,7 +159,11 @@ namespace Grupo02PCSAS
         {
             try
             {
-                if(user.RolUsuario.Admin)
+                if(user == null)
+                {
+                    throw new Exception("Funcion solo para administradores");
+                }
+                else if(user.RolUsuario.Admin)
                 {
                     if(noticiaSeleccionada != null)
                     {
@@ -195,12 +199,16 @@ namespace Grupo02PCSAS
         {
             try
             {
-                if(user.RolUsuario.Admin)
+                if(user == null)
                 {
-                    fCrearNoticia crearNoticia = new fCrearNoticia();
-                    this.Visible = false;
+                    throw new Exception("Funcion solo para administradores");
+                }
+                else if(user.RolUsuario.Admin)
+                {
+                    fCrearNoticia crearNoticia = new fCrearNoticia(user);
+                    this.Hide();
                     crearNoticia.ShowDialog();
-                    this.Visible = true;
+                    this.Close();
                     cargaGrid();
 
                 } else

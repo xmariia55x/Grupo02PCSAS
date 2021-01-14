@@ -47,7 +47,6 @@ namespace Grupo02PCSAS
             this.apsgrupo02DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.apsgrupo02DataSet = new Grupo02PCSAS.apsgrupo02DataSet();
             this.bAccederAlForo = new System.Windows.Forms.Button();
-            this.bEventosInscritos = new System.Windows.Forms.Button();
             this.bCrearCurso = new System.Windows.Forms.Button();
             this.bModCur = new System.Windows.Forms.Button();
             this.bDelCur = new System.Windows.Forms.Button();
@@ -118,9 +117,9 @@ namespace Grupo02PCSAS
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(657, 258);
+            this.label3.Location = new System.Drawing.Point(584, 206);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(226, 57);
+            this.label3.Size = new System.Drawing.Size(191, 49);
             this.label3.TabIndex = 47;
             this.label3.Text = "Mis cursos";
             // 
@@ -147,14 +146,13 @@ namespace Grupo02PCSAS
             this.aforoCursoDataGridViewTextBoxColumn,
             this.onlineCursoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.cursoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(104, 336);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(92, 269);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1226, 295);
+            this.dataGridView1.Size = new System.Drawing.Size(1090, 236);
             this.dataGridView1.TabIndex = 48;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -205,7 +203,7 @@ namespace Grupo02PCSAS
             this.fechaInicioCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.fechaInicioCursoDataGridViewTextBoxColumn.Name = "fechaInicioCursoDataGridViewTextBoxColumn";
             this.fechaInicioCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaInicioCursoDataGridViewTextBoxColumn.Width = 131;
+            this.fechaInicioCursoDataGridViewTextBoxColumn.Width = 112;
             // 
             // fechaFinCursoDataGridViewTextBoxColumn
             // 
@@ -215,7 +213,7 @@ namespace Grupo02PCSAS
             this.fechaFinCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.fechaFinCursoDataGridViewTextBoxColumn.Name = "fechaFinCursoDataGridViewTextBoxColumn";
             this.fechaFinCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaFinCursoDataGridViewTextBoxColumn.Width = 116;
+            this.fechaFinCursoDataGridViewTextBoxColumn.Width = 99;
             // 
             // horaInicioCursoDataGridViewTextBoxColumn
             // 
@@ -245,7 +243,7 @@ namespace Grupo02PCSAS
             this.lugarCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.lugarCursoDataGridViewTextBoxColumn.Name = "lugarCursoDataGridViewTextBoxColumn";
             this.lugarCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lugarCursoDataGridViewTextBoxColumn.Width = 86;
+            this.lugarCursoDataGridViewTextBoxColumn.Width = 74;
             // 
             // aforoCursoDataGridViewTextBoxColumn
             // 
@@ -255,7 +253,7 @@ namespace Grupo02PCSAS
             this.aforoCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.aforoCursoDataGridViewTextBoxColumn.Name = "aforoCursoDataGridViewTextBoxColumn";
             this.aforoCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aforoCursoDataGridViewTextBoxColumn.Width = 84;
+            this.aforoCursoDataGridViewTextBoxColumn.Width = 71;
             // 
             // onlineCursoDataGridViewTextBoxColumn
             // 
@@ -286,38 +284,23 @@ namespace Grupo02PCSAS
             // 
             this.bAccederAlForo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bAccederAlForo.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAccederAlForo.Location = new System.Drawing.Point(104, 726);
-            this.bAccederAlForo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bAccederAlForo.Location = new System.Drawing.Point(92, 581);
             this.bAccederAlForo.Name = "bAccederAlForo";
-            this.bAccederAlForo.Size = new System.Drawing.Size(204, 79);
+            this.bAccederAlForo.Size = new System.Drawing.Size(181, 63);
             this.bAccederAlForo.TabIndex = 49;
             this.bAccederAlForo.Text = "Acceder al foro";
             this.bAccederAlForo.UseVisualStyleBackColor = false;
             this.bAccederAlForo.Click += new System.EventHandler(this.bAccederAlForo_Click);
-            // 
-            // bEventosInscritos
-            // 
-            this.bEventosInscritos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bEventosInscritos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bEventosInscritos.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEventosInscritos.Location = new System.Drawing.Point(449, 726);
-            this.bEventosInscritos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bEventosInscritos.Name = "bEventosInscritos";
-            this.bEventosInscritos.Size = new System.Drawing.Size(223, 79);
-            this.bEventosInscritos.TabIndex = 50;
-            this.bEventosInscritos.Text = "Eventos inscritos";
-            this.bEventosInscritos.UseVisualStyleBackColor = false;
-            this.bEventosInscritos.Click += new System.EventHandler(this.bEventosInscritos_Click);
             // 
             // bCrearCurso
             // 
             this.bCrearCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bCrearCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bCrearCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCrearCurso.Location = new System.Drawing.Point(814, 726);
+            this.bCrearCurso.Location = new System.Drawing.Point(553, 726);
             this.bCrearCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bCrearCurso.Name = "bCrearCurso";
-            this.bCrearCurso.Size = new System.Drawing.Size(223, 79);
+            this.bCrearCurso.Size = new System.Drawing.Size(198, 63);
             this.bCrearCurso.TabIndex = 51;
             this.bCrearCurso.Text = "Crear Curso";
             this.bCrearCurso.UseVisualStyleBackColor = false;
@@ -328,10 +311,10 @@ namespace Grupo02PCSAS
             this.bModCur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bModCur.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bModCur.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.bModCur.Location = new System.Drawing.Point(1378, 558);
+            this.bModCur.Location = new System.Drawing.Point(1225, 446);
             this.bModCur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bModCur.Name = "bModCur";
-            this.bModCur.Size = new System.Drawing.Size(223, 74);
+            this.bModCur.Size = new System.Drawing.Size(198, 59);
             this.bModCur.TabIndex = 52;
             this.bModCur.Text = "Modificar Curso";
             this.bModCur.UseVisualStyleBackColor = false;
@@ -342,10 +325,10 @@ namespace Grupo02PCSAS
             this.bDelCur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bDelCur.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bDelCur.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.bDelCur.Location = new System.Drawing.Point(1378, 336);
+            this.bDelCur.Location = new System.Drawing.Point(1225, 269);
             this.bDelCur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bDelCur.Name = "bDelCur";
-            this.bDelCur.Size = new System.Drawing.Size(223, 74);
+            this.bDelCur.Size = new System.Drawing.Size(198, 59);
             this.bDelCur.TabIndex = 53;
             this.bDelCur.Text = "Eliminar Curso";
             this.bDelCur.UseVisualStyleBackColor = false;
@@ -356,10 +339,10 @@ namespace Grupo02PCSAS
             this.bInfCur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInfCur.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInfCur.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.bInfCur.Location = new System.Drawing.Point(1378, 449);
+            this.bInfCur.Location = new System.Drawing.Point(1225, 359);
             this.bInfCur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bInfCur.Name = "bInfCur";
-            this.bInfCur.Size = new System.Drawing.Size(223, 74);
+            this.bInfCur.Size = new System.Drawing.Size(198, 59);
             this.bInfCur.TabIndex = 54;
             this.bInfCur.Text = "Información Curso";
             this.bInfCur.UseVisualStyleBackColor = false;
@@ -382,9 +365,8 @@ namespace Grupo02PCSAS
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1937, 221);
+            this.panel1.Size = new System.Drawing.Size(1710, 177);
             this.panel1.TabIndex = 55;
             // 
             // label5
@@ -392,21 +374,20 @@ namespace Grupo02PCSAS
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1602, 158);
+            this.label5.Location = new System.Drawing.Point(1412, 126);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 29);
+            this.label5.Size = new System.Drawing.Size(88, 26);
             this.label5.TabIndex = 7;
             this.label5.Text = "Mi perfil";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(1583, 12);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(1395, 10);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(127, 128);
+            this.pictureBox2.Size = new System.Drawing.Size(113, 102);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
@@ -417,9 +398,9 @@ namespace Grupo02PCSAS
             this.lRol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lRol.AutoSize = true;
             this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRol.Location = new System.Drawing.Point(1043, 145);
+            this.lRol.Location = new System.Drawing.Point(915, 116);
             this.lRol.Name = "lRol";
-            this.lRol.Size = new System.Drawing.Size(73, 29);
+            this.lRol.Size = new System.Drawing.Size(63, 26);
             this.lRol.TabIndex = 5;
             this.lRol.Text = "Tu rol";
             // 
@@ -428,9 +409,9 @@ namespace Grupo02PCSAS
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(976, 145);
+            this.label1.Location = new System.Drawing.Point(856, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 29);
+            this.label1.Size = new System.Drawing.Size(53, 26);
             this.label1.TabIndex = 4;
             this.label1.Text = "Rol: ";
             // 
@@ -439,9 +420,9 @@ namespace Grupo02PCSAS
             this.lNombreUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lNombreUser.AutoSize = true;
             this.lNombreUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreUser.Location = new System.Drawing.Point(1105, 48);
+            this.lNombreUser.Location = new System.Drawing.Point(970, 38);
             this.lNombreUser.Name = "lNombreUser";
-            this.lNombreUser.Size = new System.Drawing.Size(408, 52);
+            this.lNombreUser.Size = new System.Drawing.Size(346, 44);
             this.lNombreUser.TabIndex = 3;
             this.lNombreUser.Text = "Nombre y apellidos";
             // 
@@ -450,9 +431,9 @@ namespace Grupo02PCSAS
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(972, 48);
+            this.label2.Location = new System.Drawing.Point(852, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 57);
+            this.label2.Size = new System.Drawing.Size(112, 49);
             this.label2.TabIndex = 2;
             this.label2.Text = "Hola,";
             // 
@@ -460,9 +441,8 @@ namespace Grupo02PCSAS
             // 
             this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(334, 222);
+            this.pictureBox1.Size = new System.Drawing.Size(297, 178);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -472,10 +452,10 @@ namespace Grupo02PCSAS
             this.bNotProf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bNotProf.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bNotProf.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bNotProf.Location = new System.Drawing.Point(1115, 726);
+            this.bNotProf.Location = new System.Drawing.Point(983, 726);
             this.bNotProf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bNotProf.Name = "bNotProf";
-            this.bNotProf.Size = new System.Drawing.Size(223, 79);
+            this.bNotProf.Size = new System.Drawing.Size(198, 63);
             this.bNotProf.TabIndex = 56;
             this.bNotProf.Text = "Noticias";
             this.bNotProf.UseVisualStyleBackColor = false;
@@ -486,10 +466,10 @@ namespace Grupo02PCSAS
             this.bListaParticipantes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bListaParticipantes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bListaParticipantes.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.bListaParticipantes.Location = new System.Drawing.Point(1378, 726);
+            this.bListaParticipantes.Location = new System.Drawing.Point(1225, 581);
             this.bListaParticipantes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bListaParticipantes.Name = "bListaParticipantes";
-            this.bListaParticipantes.Size = new System.Drawing.Size(223, 70);
+            this.bListaParticipantes.Size = new System.Drawing.Size(198, 56);
             this.bListaParticipantes.TabIndex = 56;
             this.bListaParticipantes.Text = "Ver participantes";
             this.bListaParticipantes.UseVisualStyleBackColor = false;
@@ -497,8 +477,7 @@ namespace Grupo02PCSAS
             // 
             // calendario
             // 
-            this.calendario.Location = new System.Drawing.Point(104, 864);
-            this.calendario.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.calendario.Location = new System.Drawing.Point(92, 691);
             this.calendario.Name = "calendario";
             this.calendario.TabIndex = 58;
             this.calendario.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendario_DateSelected);
@@ -526,14 +505,13 @@ namespace Grupo02PCSAS
             this.aforoCursoDataGridViewTextBoxColumn1,
             this.onlineCursoDataGridViewTextBoxColumn1});
             this.dgvCursos.DataSource = this.cursoBindingSource;
-            this.dgvCursos.Location = new System.Drawing.Point(402, 899);
-            this.dgvCursos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvCursos.Location = new System.Drawing.Point(357, 719);
             this.dgvCursos.MultiSelect = false;
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.ReadOnly = true;
             this.dgvCursos.RowHeadersWidth = 51;
             this.dgvCursos.RowTemplate.Height = 24;
-            this.dgvCursos.Size = new System.Drawing.Size(636, 116);
+            this.dgvCursos.Size = new System.Drawing.Size(565, 93);
             this.dgvCursos.TabIndex = 59;
             this.dgvCursos.SelectionChanged += new System.EventHandler(this.dgvCursos_SelectionChanged);
             // 
@@ -556,7 +534,7 @@ namespace Grupo02PCSAS
             this.profesorCursoDataGridViewTextBoxColumn1.Name = "profesorCursoDataGridViewTextBoxColumn1";
             this.profesorCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.profesorCursoDataGridViewTextBoxColumn1.Visible = false;
-            this.profesorCursoDataGridViewTextBoxColumn1.Width = 150;
+            this.profesorCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
             // nombreCursoDataGridViewTextBoxColumn1
             // 
@@ -566,7 +544,7 @@ namespace Grupo02PCSAS
             this.nombreCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.nombreCursoDataGridViewTextBoxColumn1.Name = "nombreCursoDataGridViewTextBoxColumn1";
             this.nombreCursoDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nombreCursoDataGridViewTextBoxColumn1.Width = 101;
+            this.nombreCursoDataGridViewTextBoxColumn1.Width = 87;
             // 
             // descripcionCursoDataGridViewTextBoxColumn1
             // 
@@ -577,7 +555,7 @@ namespace Grupo02PCSAS
             this.descripcionCursoDataGridViewTextBoxColumn1.Name = "descripcionCursoDataGridViewTextBoxColumn1";
             this.descripcionCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.descripcionCursoDataGridViewTextBoxColumn1.Visible = false;
-            this.descripcionCursoDataGridViewTextBoxColumn1.Width = 150;
+            this.descripcionCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
             // fechaInicioCursoDataGridViewTextBoxColumn1
             // 
@@ -669,14 +647,13 @@ namespace Grupo02PCSAS
             this.lugarActividadDataGridViewTextBoxColumn,
             this.aforoActividadDataGridViewTextBoxColumn});
             this.dgvActividades.DataSource = this.actividadBindingSource;
-            this.dgvActividades.Location = new System.Drawing.Point(402, 1092);
-            this.dgvActividades.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvActividades.Location = new System.Drawing.Point(357, 874);
             this.dgvActividades.MultiSelect = false;
             this.dgvActividades.Name = "dgvActividades";
             this.dgvActividades.ReadOnly = true;
             this.dgvActividades.RowHeadersWidth = 51;
             this.dgvActividades.RowTemplate.Height = 24;
-            this.dgvActividades.Size = new System.Drawing.Size(636, 116);
+            this.dgvActividades.Size = new System.Drawing.Size(565, 93);
             this.dgvActividades.TabIndex = 60;
             this.dgvActividades.SelectionChanged += new System.EventHandler(this.dgvActividades_SelectionChanged);
             // 
@@ -699,7 +676,7 @@ namespace Grupo02PCSAS
             this.creadorActividadDataGridViewTextBoxColumn.Name = "creadorActividadDataGridViewTextBoxColumn";
             this.creadorActividadDataGridViewTextBoxColumn.ReadOnly = true;
             this.creadorActividadDataGridViewTextBoxColumn.Visible = false;
-            this.creadorActividadDataGridViewTextBoxColumn.Width = 150;
+            this.creadorActividadDataGridViewTextBoxColumn.Width = 125;
             // 
             // nombreActividadDataGridViewTextBoxColumn
             // 
@@ -709,7 +686,7 @@ namespace Grupo02PCSAS
             this.nombreActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nombreActividadDataGridViewTextBoxColumn.Name = "nombreActividadDataGridViewTextBoxColumn";
             this.nombreActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreActividadDataGridViewTextBoxColumn.Width = 101;
+            this.nombreActividadDataGridViewTextBoxColumn.Width = 87;
             // 
             // descripcionActividadDataGridViewTextBoxColumn
             // 
@@ -720,7 +697,7 @@ namespace Grupo02PCSAS
             this.descripcionActividadDataGridViewTextBoxColumn.Name = "descripcionActividadDataGridViewTextBoxColumn";
             this.descripcionActividadDataGridViewTextBoxColumn.ReadOnly = true;
             this.descripcionActividadDataGridViewTextBoxColumn.Visible = false;
-            this.descripcionActividadDataGridViewTextBoxColumn.Width = 150;
+            this.descripcionActividadDataGridViewTextBoxColumn.Width = 125;
             // 
             // fechaInicioActividadDataGridViewTextBoxColumn
             // 
@@ -797,9 +774,9 @@ namespace Grupo02PCSAS
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lCursos.AutoSize = true;
             this.lCursos.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCursos.Location = new System.Drawing.Point(398, 852);
+            this.lCursos.Location = new System.Drawing.Point(354, 682);
             this.lCursos.Name = "lCursos";
-            this.lCursos.Size = new System.Drawing.Size(577, 36);
+            this.lCursos.Size = new System.Drawing.Size(495, 29);
             this.lCursos.TabIndex = 61;
             this.lCursos.Text = "Cursos programados para el día seleccionado";
             // 
@@ -810,9 +787,9 @@ namespace Grupo02PCSAS
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(396, 1052);
+            this.label4.Location = new System.Drawing.Point(352, 842);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(642, 36);
+            this.label4.Size = new System.Drawing.Size(550, 29);
             this.label4.TabIndex = 62;
             this.label4.Text = "Actividades programadas para el día seleccionado";
             // 
@@ -820,18 +797,18 @@ namespace Grupo02PCSAS
             // 
             this.lNoActividades.AutoSize = true;
             this.lNoActividades.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNoActividades.Location = new System.Drawing.Point(430, 1101);
+            this.lNoActividades.Location = new System.Drawing.Point(382, 881);
             this.lNoActividades.Name = "lNoActividades";
-            this.lNoActividades.Size = new System.Drawing.Size(0, 27);
+            this.lNoActividades.Size = new System.Drawing.Size(0, 24);
             this.lNoActividades.TabIndex = 63;
             // 
             // lNoCursos
             // 
             this.lNoCursos.AutoSize = true;
             this.lNoCursos.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNoCursos.Location = new System.Drawing.Point(438, 948);
+            this.lNoCursos.Location = new System.Drawing.Point(389, 758);
             this.lNoCursos.Name = "lNoCursos";
-            this.lNoCursos.Size = new System.Drawing.Size(0, 27);
+            this.lNoCursos.Size = new System.Drawing.Size(0, 24);
             this.lNoCursos.TabIndex = 64;
             // 
             // actividadTableAdapter
@@ -843,10 +820,9 @@ namespace Grupo02PCSAS
             this.bInformacionCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInformacionCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInformacionCurso.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInformacionCurso.Location = new System.Drawing.Point(1077, 899);
-            this.bInformacionCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bInformacionCurso.Location = new System.Drawing.Point(957, 719);
             this.bInformacionCurso.Name = "bInformacionCurso";
-            this.bInformacionCurso.Size = new System.Drawing.Size(145, 70);
+            this.bInformacionCurso.Size = new System.Drawing.Size(129, 56);
             this.bInformacionCurso.TabIndex = 65;
             this.bInformacionCurso.Text = "Información";
             this.bInformacionCurso.UseVisualStyleBackColor = false;
@@ -857,10 +833,9 @@ namespace Grupo02PCSAS
             this.bInformacionActividad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInformacionActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInformacionActividad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInformacionActividad.Location = new System.Drawing.Point(1077, 1092);
-            this.bInformacionActividad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bInformacionActividad.Location = new System.Drawing.Point(957, 874);
             this.bInformacionActividad.Name = "bInformacionActividad";
-            this.bInformacionActividad.Size = new System.Drawing.Size(145, 70);
+            this.bInformacionActividad.Size = new System.Drawing.Size(129, 56);
             this.bInformacionActividad.TabIndex = 66;
             this.bInformacionActividad.Text = "Información";
             this.bInformacionActividad.UseVisualStyleBackColor = false;
@@ -871,10 +846,9 @@ namespace Grupo02PCSAS
             this.bInscribirCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInscribirCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInscribirCurso.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInscribirCurso.Location = new System.Drawing.Point(1077, 976);
-            this.bInscribirCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bInscribirCurso.Location = new System.Drawing.Point(957, 781);
             this.bInscribirCurso.Name = "bInscribirCurso";
-            this.bInscribirCurso.Size = new System.Drawing.Size(145, 70);
+            this.bInscribirCurso.Size = new System.Drawing.Size(129, 56);
             this.bInscribirCurso.TabIndex = 67;
             this.bInscribirCurso.Text = "Inscribir";
             this.bInscribirCurso.UseVisualStyleBackColor = false;
@@ -885,10 +859,9 @@ namespace Grupo02PCSAS
             this.bInscribirActividad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInscribirActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInscribirActividad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInscribirActividad.Location = new System.Drawing.Point(1077, 1170);
-            this.bInscribirActividad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bInscribirActividad.Location = new System.Drawing.Point(957, 936);
             this.bInscribirActividad.Name = "bInscribirActividad";
-            this.bInscribirActividad.Size = new System.Drawing.Size(145, 70);
+            this.bInscribirActividad.Size = new System.Drawing.Size(129, 56);
             this.bInscribirActividad.TabIndex = 68;
             this.bInscribirActividad.Text = "Inscribir";
             this.bInscribirActividad.UseVisualStyleBackColor = false;
@@ -896,12 +869,12 @@ namespace Grupo02PCSAS
             // 
             // fPrincipalProfesor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1937, 1312);
+            this.ClientSize = new System.Drawing.Size(1710, 999);
             this.Controls.Add(this.bInscribirActividad);
             this.Controls.Add(this.bInscribirCurso);
             this.Controls.Add(this.bInformacionActividad);
@@ -920,12 +893,10 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.bDelCur);
             this.Controls.Add(this.bModCur);
             this.Controls.Add(this.bCrearCurso);
-            this.Controls.Add(this.bEventosInscritos);
             this.Controls.Add(this.bAccederAlForo);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.ForeColor = System.Drawing.Color.Black;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "fPrincipalProfesor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -953,7 +924,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button bAccederAlForo;
-        private System.Windows.Forms.Button bEventosInscritos;
         private System.Windows.Forms.Button bCrearCurso;
         private System.Windows.Forms.Button bModCur;
         private System.Windows.Forms.Button bDelCur;

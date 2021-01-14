@@ -25,8 +25,6 @@ namespace Grupo02PCSAS
             this.user = user;
             this.curso = curso;
             InitializeComponent();
-           
-            
         }
 
 
@@ -87,30 +85,30 @@ namespace Grupo02PCSAS
             if (user.RolUsuario.RolName.Equals("ALUMNO"))
             {
                 fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(user);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
-                this.Visible = true;
+                this.Close();
             }
             else if (user.RolUsuario.RolName.Equals("PROFESOR"))
             {
                 fPrincipalProfesor inicio = new fPrincipalProfesor(user);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
-                this.Visible = true;
+                this.Close();
             }
             else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
             {
                 fPrincipalOng inicio = new fPrincipalOng(user);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
-                this.Visible = true;
+                this.Close();
             }
             else if (user.RolUsuario.RolName.Equals("ADMIN"))
             {
                 fPantallaAdminFinal inicio = new fPantallaAdminFinal(user);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
-                this.Visible = true;
+                this.Close();
             }
         }
 
@@ -146,15 +144,18 @@ namespace Grupo02PCSAS
             comprobarInscrito();
             calcularPlazasDisponibles();
             string[] fechaSplit = curso.CursoFechaInicio.Split('/');
-            DateTime fecha = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]));
+            string[] horaSplit = curso.CursoHoraInicio.Split(':');
+            DateTime fecha = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]), int.Parse(horaSplit[0]), int.Parse(horaSplit[1]), 0);
             if (fecha.CompareTo(DateTime.Now) >= 0)
             {
 
-                bRecordar.Enabled = true;
+                bRecordar.Visible = true;
+                label3.Visible = true;
             }
             else
             {
-                bRecordar.Enabled = false;
+                bRecordar.Visible = false;
+                label3.Visible = false;
             }
 
 
