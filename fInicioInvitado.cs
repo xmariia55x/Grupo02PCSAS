@@ -83,12 +83,15 @@ namespace Grupo02PCSAS
         }
         private void fInicioInvitado_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet2.Curso' Puede moverla o quitarla según sea necesario.
+            //this.cursoTableAdapter1.Fill(this.apsgrupo02DataSet2.Curso);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Actividad' Puede moverla o quitarla según sea necesario.
             //this.actividadTableAdapter.Fill(this.apsgrupo02DataSet.Actividad);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Curso' Puede moverla o quitarla según sea necesario.
             //this.cursoTableAdapter.Fill(this.apsgrupo02DataSet.Curso);
-            
+            Console.WriteLine(sacarFechasCurso());
             dgvCursos.DataSource = sacarFechasCurso();
+            
             dgvActividades.DataSource = sacarFechasActividad();
             
         }
