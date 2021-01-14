@@ -25,13 +25,14 @@ namespace Grupo02PCSAS
         {
             lNombreUser.Text = user.NombreUsuario;
             lRol.Text = user.RolUsuario.RolName;
+            label3.Text = debate.ID.ToString();
         }
 
         private void bRespuesta_Click(object sender, EventArgs e)
         {
             try
             {
-                Respuesta r = new Respuesta(this.debate, this.user, tRespuesta.Text, DateTime.Now.ToShortDateString());
+                Respuesta r = new Respuesta(this.debate, this.user, tRespuesta.Text, DateTime.Now.ToString("dd/MM/yyyy"));
                 MessageBox.Show("Respuesta creada con éxito");
                 fInfoForo f = new fInfoForo(user, debate);
                 this.Hide();

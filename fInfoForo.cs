@@ -24,11 +24,14 @@ namespace Grupo02PCSAS
 
         private void fInfoForo_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet2.Debate' Puede moverla o quitarla según sea necesario.
+            //this.debateTableAdapter.Fill(this.apsgrupo02DataSet2.Debate);
 
             lNombreUser.Text = this.user.NombreUsuario;
             lRol.Text = this.user.RolUsuario.RolName;
             lNombreDebateCreador.Text = this.debate.CreadorDebate;
             lAsunto.Text = this.debate.AsuntoDebate;
+            /*
             MySqlConnection conexion = new MySqlConnection();
             conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             conexion.Open();
@@ -38,6 +41,25 @@ namespace Grupo02PCSAS
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
             dataGridView1.DataSource = tabla;
+            */
+            cargaGrid();
+        }
+
+        private void cargaGrid()
+        {
+            dataGridView1.DataSource = Respuesta.listaRespuestas(debate.ID);
+
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].Visible = false;
+
+            //Columnas visibles
+            dataGridView1.Columns[2].HeaderText = "Usuario";
+            dataGridView1.Columns[3].HeaderText = "Mensaje";
+            dataGridView1.Columns[4].HeaderText = "Fecha";
+
+            dataGridView1.Columns[2].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns[3].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridView1.Columns[4].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
         }
 
         private void bRespuesta_Click(object sender, EventArgs e)

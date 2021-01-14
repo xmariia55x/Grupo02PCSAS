@@ -203,6 +203,11 @@ namespace Grupo02PCSAS
             return correoUsuario.GetHashCode();
         }
 
+        public override string ToString()
+        {
+            return this.correoUsuario;
+        }
+
 
     }
 }
