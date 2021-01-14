@@ -632,6 +632,7 @@
             this.label5.Size = new System.Drawing.Size(102, 29);
             this.label5.TabIndex = 7;
             this.label5.Text = "Mi perfil";
+            this.label5.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // pictureBox2
             // 
@@ -644,6 +645,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // lRol
             // 

@@ -44,8 +44,8 @@ namespace Grupo02PCSAS
             this.label5 = new System.Windows.Forms.Label();
             this.lFecha = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.tMensaje = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.tMensaje = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -224,14 +224,6 @@ namespace Grupo02PCSAS
             this.label10.TabIndex = 31;
             this.label10.Text = "Mensaje:";
             // 
-            // tMensaje
-            // 
-            this.tMensaje.Location = new System.Drawing.Point(542, 412);
-            this.tMensaje.Multiline = true;
-            this.tMensaje.Name = "tMensaje";
-            this.tMensaje.Size = new System.Drawing.Size(494, 354);
-            this.tMensaje.TabIndex = 32;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Grupo02PCSAS.Properties.Resources._60577;
@@ -244,6 +236,16 @@ namespace Grupo02PCSAS
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
+            // tMensaje
+            // 
+            this.tMensaje.AutoSize = true;
+            this.tMensaje.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tMensaje.Location = new System.Drawing.Point(536, 381);
+            this.tMensaje.Name = "tMensaje";
+            this.tMensaje.Size = new System.Drawing.Size(94, 26);
+            this.tMensaje.TabIndex = 34;
+            this.tMensaje.Text = "tMensaje";
+            // 
             // fInfoMensaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -252,8 +254,8 @@ namespace Grupo02PCSAS
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1469, 844);
-            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.tMensaje);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lFecha);
             this.Controls.Add(this.label5);
@@ -265,7 +267,7 @@ namespace Grupo02PCSAS
             this.MaximizeBox = false;
             this.Name = "fInfoMensaje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fInfoMensaje";
+            this.Text = "Información de un mensaje";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fInfoMensaje_Load);
             this.panel2.ResumeLayout(false);
@@ -295,7 +297,7 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lFecha;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox tMensaje;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label tMensaje;
     }
 }
