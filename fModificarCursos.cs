@@ -151,6 +151,9 @@ namespace Grupo02PCSAS
                     cursoRealizado.CursoProfesor = new Usuario((string)listProfesor.SelectedItem);
                 }
                 MessageBox.Show("Curso modificado correctamente");
+                fPrincipalProfesor principalProfesor = new fPrincipalProfesor(user);
+                this.Hide();
+                principalProfesor.ShowDialog();
                 this.Close();
             }
             catch (Exception ex)
@@ -175,6 +178,9 @@ namespace Grupo02PCSAS
         private void button1_Click(object sender, EventArgs e)
         {
             fBorrarArchivoCurso f = new fBorrarArchivoCurso(this.user,this.cursoRealizado);
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
         }
 
         private void bModAniadirArchivosCurso_Click(object sender, EventArgs e)

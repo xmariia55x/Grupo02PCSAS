@@ -64,6 +64,10 @@ namespace Grupo02PCSAS
                 {
                     this.archivoSeleccionado.BorrarMaterialCurso();
                     MessageBox.Show("Archivo borrado con exito");
+                    fModificarCursos f = new fModificarCursos(user, curso);
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Close();
                 }
                 else if (dialogResult == DialogResult.No)
                 {
@@ -76,6 +80,22 @@ namespace Grupo02PCSAS
                 MessageBox.Show("ERROR: " + ex.Message);
             }
            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datosPerfil = new fDatosPerfil(user);
+            this.Hide();
+            datosPerfil.ShowDialog();
+            this.Close();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datosPerfil = new fDatosPerfil(user);
+            this.Hide();
+            datosPerfil.ShowDialog();
+            this.Close();
         }
     }
 }
