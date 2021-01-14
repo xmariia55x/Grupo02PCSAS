@@ -161,8 +161,9 @@ namespace Grupo02PCSAS
 
         private Boolean comprobarSiAcabado()
         {
+            string[] horaSplit = curso.CursoHoraFin.Split(':');
             string[] fechaFinSplit = curso.CursoFechaFin.Split('/');
-            DateTime dt = new DateTime(int.Parse(fechaFinSplit[2]), int.Parse(fechaFinSplit[1]), int.Parse(fechaFinSplit[0]));
+            DateTime dt = new DateTime(int.Parse(fechaFinSplit[2]), int.Parse(fechaFinSplit[1]), int.Parse(fechaFinSplit[0]), int.Parse(horaSplit[0]), int.Parse(horaSplit[1]), 0);
             DateTime dt2 = DateTime.Now;
             return dt.CompareTo(dt2) < 0;
         }
@@ -238,7 +239,7 @@ namespace Grupo02PCSAS
                 this.Hide();
                 inicio.ShowDialog();
                 this.Close();
-            }
+            } 
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)

@@ -24,6 +24,15 @@ namespace Grupo02PCSAS
 
         private void PantallaBorrarCurso_Load(object sender, EventArgs e)
         {
+            lNombreApellidos.Text = user.NombreUsuario;
+            lRol.Text = user.RolUsuario.RolName;
+            cargaGrid();
+        }
+
+        private void cargaGrid()
+        {
+            // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet2.Debate' Puede moverla o quitarla según sea necesario.
+            this.debateTableAdapter.Fill(this.apsgrupo02DataSet2.Debate);
             MySqlConnection conexion = new MySqlConnection();
             conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             conexion.Open();
@@ -33,18 +42,6 @@ namespace Grupo02PCSAS
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
             dgvMisDebates.DataSource = tabla;
-
-            //where fechaPublicacion <'" + DateTime.Now.AddDays(-10)
-            MySqlCommand comando2 = new MySqlCommand("Select creador as `Creador`, asunto as `Asunto`, mensaje as `Mensaje`, fechaInicio as `Fecha publicacion`,id as `ID` from Debate ORDER BY fechaInicio DESC", conexion);
-            MySqlDataAdapter adaptador2 = new MySqlDataAdapter();
-            adaptador2.SelectCommand = comando2;
-            DataTable tabla2 = new DataTable();
-            adaptador2.Fill(tabla2);
-            dgvDebatesRecientes.DataSource = tabla2;
-
-            lNombreApellidos.Text = user.NombreUsuario;
-            lRol.Text = user.RolUsuario.RolName;
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -180,7 +177,7 @@ namespace Grupo02PCSAS
         {
             if (dgvDebatesRecientes.SelectedRows.Count > 0)
             {
-                int id = (int)dgvDebatesRecientes.SelectedRows[0].Cells[4].Value;
+                int id = (int)dgvDebatesRecientes.SelectedRows[0].Cells[0].Value;
                 debateSeleccionado = new Debate(id);
 
             }
