@@ -279,7 +279,7 @@ namespace Grupo02PCSAS
             this.bEliminar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bEliminar.Location = new System.Drawing.Point(710, 696);
             this.bEliminar.Name = "bEliminar";
-            this.bEliminar.Size = new System.Drawing.Size(114, 43);
+            this.bEliminar.Size = new System.Drawing.Size(132, 61);
             this.bEliminar.TabIndex = 30;
             this.bEliminar.Text = "Eliminar";
             this.bEliminar.UseVisualStyleBackColor = false;

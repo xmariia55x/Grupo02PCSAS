@@ -31,11 +31,11 @@ namespace Grupo02PCSAS
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.lMiPerfil = new System.Windows.Forms.Label();
+            this.picturePerfil = new System.Windows.Forms.PictureBox();
             this.lRolUser = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.lNombreUser = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.picturePerfil = new System.Windows.Forms.PictureBox();
             this.logoPCSAS = new System.Windows.Forms.PictureBox();
             this.bEditar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -141,6 +141,17 @@ namespace Grupo02PCSAS
             this.lMiPerfil.TabIndex = 7;
             this.lMiPerfil.Text = "Mi perfil";
             // 
+            // picturePerfil
+            // 
+            this.picturePerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.picturePerfil.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
+            this.picturePerfil.Location = new System.Drawing.Point(1428, 10);
+            this.picturePerfil.Name = "picturePerfil";
+            this.picturePerfil.Size = new System.Drawing.Size(113, 102);
+            this.picturePerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picturePerfil.TabIndex = 6;
+            this.picturePerfil.TabStop = false;
+            // 
             // lRolUser
             // 
             this.lRolUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -184,17 +195,6 @@ namespace Grupo02PCSAS
             this.label22.Size = new System.Drawing.Size(112, 49);
             this.label22.TabIndex = 2;
             this.label22.Text = "Hola,";
-            // 
-            // picturePerfil
-            // 
-            this.picturePerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.picturePerfil.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.picturePerfil.Location = new System.Drawing.Point(1428, 10);
-            this.picturePerfil.Name = "picturePerfil";
-            this.picturePerfil.Size = new System.Drawing.Size(113, 102);
-            this.picturePerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picturePerfil.TabIndex = 6;
-            this.picturePerfil.TabStop = false;
             // 
             // logoPCSAS
             // 
@@ -889,6 +889,8 @@ namespace Grupo02PCSAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1743, 1033);
             this.Controls.Add(this.pictureBox3);
@@ -902,8 +904,11 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.lNombreCurso);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel2);
+            this.MaximizeBox = false;
             this.Name = "fEditarPruebaConocimiento";
-            this.Text = "fEditarPruebaConocimiento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Editar prueba de conocimiento";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fEditarPruebaConocimiento_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
