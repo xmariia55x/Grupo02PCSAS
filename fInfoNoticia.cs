@@ -86,6 +86,9 @@ namespace Grupo02PCSAS
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            fNoticia noticia = new fNoticia(user);
+            this.Hide();
+            noticia.ShowDialog();
             this.Close();
         }
     }
