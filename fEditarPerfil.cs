@@ -26,9 +26,9 @@ namespace Grupo02PCSAS
 			label20.Text = user.RolUsuario.RolName;
 			lNombreUser.Text = user.NombreUsuario;
 			// TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.ActividadesRealizadas' Puede moverla o quitarla según sea necesario.
-			this.actividadesRealizadasTableAdapter.Fill(this.apsgrupo02DataSet.ActividadesRealizadas);
+			//this.actividadesRealizadasTableAdapter.Fill(this.apsgrupo02DataSet.ActividadesRealizadas);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.CursosRealizados' Puede moverla o quitarla según sea necesario.
-            this.cursosRealizadosTableAdapter.Fill(this.apsgrupo02DataSet.CursosRealizados);
+            //this.cursosRealizadosTableAdapter.Fill(this.apsgrupo02DataSet.CursosRealizados);
 			if (user.RolUsuario.RolName.Equals("ALUMNO"))
 			{
 				
@@ -129,8 +129,11 @@ namespace Grupo02PCSAS
         
         private void bAtras_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+			fDatosPerfil edicion = new fDatosPerfil(user);
+			this.Hide();
+			edicion.ShowDialog();
+			this.Close();
+		}
 
         
 
@@ -166,15 +169,6 @@ namespace Grupo02PCSAS
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         
 

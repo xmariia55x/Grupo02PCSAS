@@ -52,9 +52,6 @@ namespace Grupo02PCSAS
 				tNombre.Text = user.NombreUsuario;
 				tPassword.Text = user.ContraseniaUsuario;
 				tCorreo.Text = user.CorreoUsuario;
-			
-
-
 			}
 			else if (user.RolUsuario.RolName.Equals("PROFESOR"))
             {
@@ -95,20 +92,12 @@ namespace Grupo02PCSAS
 			adaptador.Fill(tabla);
 			dataGridView1.DataSource = tabla;
 
-			/*
-			//Hazle el resize
-			dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-
-			int i = 0;
-			foreach (DataGridViewColumn c in dataGridView1.Columns)
-			{
-				i += c.Width;
-			}
-
-			dataGridView1.Width = i + dataGridView1.RowHeadersWidth + 2;
-			dataGridView1.Height = dataGridView1.GetRowDisplayRectangle(dataGridView1.NewRowIndex, true).Bottom + 
-				dataGridView1.GetRowDisplayRectangle(dataGridView1.NewRowIndex, false).Height;
-			*/
+			dataGridView1.Columns[0].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			dataGridView1.Columns[1].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+			dataGridView1.Columns[2].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+			dataGridView1.Columns[3].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+			dataGridView1.Columns[4].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+			
 
 			//Cargar el dataGridView filtrado ActividadRealizado
 
@@ -122,7 +111,11 @@ namespace Grupo02PCSAS
 			DataTable tabla2 = new DataTable();
 			adaptador2.Fill(tabla2);
 			dataGridView2.DataSource = tabla2;
-
+			dataGridView2.Columns[0].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			dataGridView2.Columns[1].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+			dataGridView2.Columns[2].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+			dataGridView2.Columns[3].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+			dataGridView2.Columns[4].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
 			/*
 			dataGridView2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 			 i = 0;
@@ -150,8 +143,10 @@ namespace Grupo02PCSAS
 			{
 				this.user.BorrarUsuario();
 				fInicioInvitado inicio = new fInicioInvitado();
-				this.Visible = false;
+				//this.Visible = false;
+				this.Hide();
 				inicio.ShowDialog();
+				this.Close();
 			}
 			else if (dialogResult == DialogResult.No)
 			{
@@ -167,7 +162,7 @@ namespace Grupo02PCSAS
 
         private void bEditarPerfil_Click(object sender, EventArgs e)
         {
-			fEditarPerfil edicion = new fEditarPerfil(this.user);
+			fEditarPerfil edicion = new fEditarPerfil(user);
 			this.Hide();
 			edicion.ShowDialog();
 			this.Close();
