@@ -19,8 +19,11 @@ namespace Grupo02PCSAS
         string fecha;
         Noticias noticiaCreada;
 
-        public fCrearNoticia()
+        Usuario user;
+
+        public fCrearNoticia(Usuario u)
         {
+            user = u;
             InitializeComponent();
         }
 
@@ -31,6 +34,9 @@ namespace Grupo02PCSAS
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            fNoticia noticia = new fNoticia(user);
+            this.Hide();
+            noticia.ShowDialog();
             this.Close();
         }
 
