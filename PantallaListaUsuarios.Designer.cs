@@ -67,11 +67,12 @@ namespace Grupo02PCSAS
             // 
             // lCurso
             // 
-            this.lCurso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lCurso.AutoSize = true;
             this.lCurso.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCurso.Location = new System.Drawing.Point(508, 274);
+            this.lCurso.Location = new System.Drawing.Point(542, 274);
             this.lCurso.Name = "lCurso";
             this.lCurso.Size = new System.Drawing.Size(125, 46);
             this.lCurso.TabIndex = 7;
@@ -80,11 +81,12 @@ namespace Grupo02PCSAS
             // 
             // lNombreCurso
             // 
-            this.lNombreCurso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lNombreCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lNombreCurso.AutoSize = true;
             this.lNombreCurso.Font = new System.Drawing.Font("Trebuchet MS", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreCurso.Location = new System.Drawing.Point(634, 274);
+            this.lNombreCurso.Location = new System.Drawing.Point(667, 274);
             this.lNombreCurso.Name = "lNombreCurso";
             this.lNombreCurso.Size = new System.Drawing.Size(150, 46);
             this.lNombreCurso.TabIndex = 7;
@@ -93,7 +95,8 @@ namespace Grupo02PCSAS
             // 
             // lNombreProfesorCurso
             // 
-            this.lNombreProfesorCurso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lNombreProfesorCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lNombreProfesorCurso.AutoSize = true;
             this.lNombreProfesorCurso.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -105,7 +108,8 @@ namespace Grupo02PCSAS
             // 
             // lProfesorCurso
             // 
-            this.lProfesorCurso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lProfesorCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lProfesorCurso.AutoSize = true;
             this.lProfesorCurso.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -117,7 +121,8 @@ namespace Grupo02PCSAS
             // 
             // lListaUsuarios
             // 
-            this.lListaUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lListaUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lListaUsuarios.AutoSize = true;
             this.lListaUsuarios.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -178,14 +183,14 @@ namespace Grupo02PCSAS
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
-            this.pictureBox3.Location = new System.Drawing.Point(113, 241);
+            this.pictureBox3.Location = new System.Drawing.Point(21, 197);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(97, 76);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel1
             // 
@@ -281,10 +286,12 @@ namespace Grupo02PCSAS
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // bDelUser
             // 
-            this.bDelUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bDelUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bDelUser.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bDelUser.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.bDelUser.Location = new System.Drawing.Point(568, 796);
