@@ -118,34 +118,7 @@ namespace Grupo02PCSAS
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            if (user.RolUsuario.RolName.Equals("ALUMNO"))
-            {
-                fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(user);
-                this.Visible = false;
-                inicio.ShowDialog();
-                this.Visible = true;
-            }
-            else if (user.RolUsuario.RolName.Equals("PROFESOR"))
-            {
-                fPrincipalProfesor inicio = new fPrincipalProfesor(user);
-                this.Visible = false;
-                inicio.ShowDialog();
-                this.Visible = true;
-            }
-            else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
-            {
-                fPrincipalOng inicio = new fPrincipalOng(user);
-                this.Visible = false;
-                inicio.ShowDialog();
-                this.Visible = true;
-            }
-            else if (user.RolUsuario.RolName.Equals("ADMIN"))
-            {
-                fPantallaAdminFinal inicio = new fPantallaAdminFinal(user);
-                this.Visible = false;
-                inicio.ShowDialog();
-                this.Visible = true;
-            }
+
         }
 
         private void bInfoDebate_Click(object sender, EventArgs e)

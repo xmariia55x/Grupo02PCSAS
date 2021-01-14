@@ -22,37 +22,10 @@ namespace Grupo02PCSAS
         
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (usuarioCreador.RolUsuario.RolName.Equals("ALUMNO"))
-            {
-                fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(usuarioCreador);
-                this.Hide();
-                inicio.ShowDialog();
-                
-            }
-            else if (usuarioCreador.RolUsuario.RolName.Equals("PROFESOR"))
-            {
-                fPrincipalProfesor inicio = new fPrincipalProfesor(usuarioCreador);
-                this.Hide();
-                inicio.ShowDialog();
-                
-            }
-            else if (usuarioCreador.RolUsuario.RolName.Equals("ENTIDAD"))
-            {
-                fPrincipalOng inicio = new fPrincipalOng(usuarioCreador);
-                this.Hide();
-                inicio.ShowDialog();
-                
-            }
-            else if (usuarioCreador.RolUsuario.RolName.Equals("ADMIN"))
-            {
-                fPantallaAdminFinal inicio = new fPantallaAdminFinal(usuarioCreador);
-                this.Hide();
-                inicio.ShowDialog();
-                
-            }
+
         }
-        
-        
+
+
         private void bGuardarCambiosAct_Click(object sender, EventArgs e)
         {
             nombreActividad = tNombreAct.Text;
