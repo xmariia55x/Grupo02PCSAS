@@ -119,9 +119,8 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1860, 221);
+            this.panel1.Size = new System.Drawing.Size(1653, 177);
             this.panel1.TabIndex = 10;
             // 
             // label5
@@ -129,9 +128,9 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1531, 170);
+            this.label5.Location = new System.Drawing.Point(1360, 136);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 29);
+            this.label5.Size = new System.Drawing.Size(88, 26);
             this.label5.TabIndex = 7;
             this.label5.Text = "Mi perfil";
             // 
@@ -139,10 +138,9 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(1510, 28);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(1341, 22);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(134, 129);
+            this.pictureBox2.Size = new System.Drawing.Size(119, 103);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
@@ -153,9 +151,9 @@
             this.lRol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lRol.AutoSize = true;
             this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRol.Location = new System.Drawing.Point(1017, 145);
+            this.lRol.Location = new System.Drawing.Point(903, 116);
             this.lRol.Name = "lRol";
-            this.lRol.Size = new System.Drawing.Size(73, 29);
+            this.lRol.Size = new System.Drawing.Size(63, 26);
             this.lRol.TabIndex = 5;
             this.lRol.Text = "Tu rol";
             // 
@@ -164,9 +162,9 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(964, 145);
+            this.label1.Location = new System.Drawing.Point(856, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 29);
+            this.label1.Size = new System.Drawing.Size(53, 26);
             this.label1.TabIndex = 4;
             this.label1.Text = "Rol: ";
             // 
@@ -175,9 +173,9 @@
             this.lNombreUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lNombreUser.AutoSize = true;
             this.lNombreUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreUser.Location = new System.Drawing.Point(1092, 48);
+            this.lNombreUser.Location = new System.Drawing.Point(970, 38);
             this.lNombreUser.Name = "lNombreUser";
-            this.lNombreUser.Size = new System.Drawing.Size(408, 52);
+            this.lNombreUser.Size = new System.Drawing.Size(346, 44);
             this.lNombreUser.TabIndex = 3;
             this.lNombreUser.Text = "Nombre y apellidos";
             // 
@@ -186,9 +184,9 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(959, 48);
+            this.label2.Location = new System.Drawing.Point(851, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 57);
+            this.label2.Size = new System.Drawing.Size(112, 49);
             this.label2.TabIndex = 2;
             this.label2.Text = "Hola,";
             // 
@@ -196,22 +194,19 @@
             // 
             this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(334, 222);
+            this.pictureBox1.Size = new System.Drawing.Size(297, 178);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // bEventos
             // 
-            this.bEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bEventos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bEventos.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEventos.Location = new System.Drawing.Point(956, 719);
-            this.bEventos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bEventos.Location = new System.Drawing.Point(632, 575);
             this.bEventos.Name = "bEventos";
-            this.bEventos.Size = new System.Drawing.Size(204, 79);
+            this.bEventos.Size = new System.Drawing.Size(181, 63);
             this.bEventos.TabIndex = 55;
             this.bEventos.Text = "Eventos";
             this.bEventos.UseVisualStyleBackColor = false;
@@ -221,10 +216,9 @@
             // 
             this.bAccederAlForo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bAccederAlForo.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAccederAlForo.Location = new System.Drawing.Point(174, 719);
-            this.bAccederAlForo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bAccederAlForo.Location = new System.Drawing.Point(117, 575);
             this.bAccederAlForo.Name = "bAccederAlForo";
-            this.bAccederAlForo.Size = new System.Drawing.Size(204, 79);
+            this.bAccederAlForo.Size = new System.Drawing.Size(181, 63);
             this.bAccederAlForo.TabIndex = 54;
             this.bAccederAlForo.Text = "Acceder al foro";
             this.bAccederAlForo.UseVisualStyleBackColor = false;
@@ -251,14 +245,13 @@
             this.lugarActividadDataGridViewTextBoxColumn,
             this.aforoActividadDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.actividadBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(127, 290);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(113, 232);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1080, 399);
+            this.dataGridView1.Size = new System.Drawing.Size(960, 319);
             this.dataGridView1.TabIndex = 53;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -290,7 +283,7 @@
             this.nombreActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nombreActividadDataGridViewTextBoxColumn.Name = "nombreActividadDataGridViewTextBoxColumn";
             this.nombreActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreActividadDataGridViewTextBoxColumn.Width = 101;
+            this.nombreActividadDataGridViewTextBoxColumn.Width = 87;
             // 
             // descripcionActividadDataGridViewTextBoxColumn
             // 
@@ -310,7 +303,7 @@
             this.fechaInicioActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fechaInicioActividadDataGridViewTextBoxColumn.Name = "fechaInicioActividadDataGridViewTextBoxColumn";
             this.fechaInicioActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaInicioActividadDataGridViewTextBoxColumn.Width = 129;
+            this.fechaInicioActividadDataGridViewTextBoxColumn.Width = 112;
             // 
             // fechaFinActividadDataGridViewTextBoxColumn
             // 
@@ -320,7 +313,7 @@
             this.fechaFinActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fechaFinActividadDataGridViewTextBoxColumn.Name = "fechaFinActividadDataGridViewTextBoxColumn";
             this.fechaFinActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaFinActividadDataGridViewTextBoxColumn.Width = 111;
+            this.fechaFinActividadDataGridViewTextBoxColumn.Width = 95;
             // 
             // horaInicioActividadDataGridViewTextBoxColumn
             // 
@@ -359,7 +352,7 @@
             this.aforoActividadDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.aforoActividadDataGridViewTextBoxColumn.Name = "aforoActividadDataGridViewTextBoxColumn";
             this.aforoActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aforoActividadDataGridViewTextBoxColumn.Width = 84;
+            this.aforoActividadDataGridViewTextBoxColumn.Width = 71;
             // 
             // actividadBindingSource1
             // 
@@ -378,9 +371,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(572, 225);
+            this.label3.Location = new System.Drawing.Point(508, 180);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(331, 57);
+            this.label3.Size = new System.Drawing.Size(279, 49);
             this.label3.TabIndex = 52;
             this.label3.Text = "Mis actividades";
             // 
@@ -389,10 +382,9 @@
             this.bInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInformacion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInformacion.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInformacion.Location = new System.Drawing.Point(1243, 326);
-            this.bInformacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bInformacion.Location = new System.Drawing.Point(1105, 232);
             this.bInformacion.Name = "bInformacion";
-            this.bInformacion.Size = new System.Drawing.Size(204, 79);
+            this.bInformacion.Size = new System.Drawing.Size(181, 63);
             this.bInformacion.TabIndex = 56;
             this.bInformacion.Text = "Información";
             this.bInformacion.UseVisualStyleBackColor = false;
@@ -409,12 +401,12 @@
             // 
             // bCrearActividad
             // 
+            this.bCrearActividad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bCrearActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bCrearActividad.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCrearActividad.Location = new System.Drawing.Point(568, 719);
-            this.bCrearActividad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bCrearActividad.Location = new System.Drawing.Point(1105, 488);
             this.bCrearActividad.Name = "bCrearActividad";
-            this.bCrearActividad.Size = new System.Drawing.Size(204, 79);
+            this.bCrearActividad.Size = new System.Drawing.Size(181, 63);
             this.bCrearActividad.TabIndex = 57;
             this.bCrearActividad.Text = "Crear Actividad";
             this.bCrearActividad.UseVisualStyleBackColor = false;
@@ -422,13 +414,12 @@
             // 
             // bNoticias
             // 
-            this.bNoticias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bNoticias.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bNoticias.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bNoticias.Location = new System.Drawing.Point(1329, 719);
-            this.bNoticias.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.bNoticias.Location = new System.Drawing.Point(378, 575);
+            this.bNoticias.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bNoticias.Name = "bNoticias";
-            this.bNoticias.Size = new System.Drawing.Size(208, 79);
+            this.bNoticias.Size = new System.Drawing.Size(185, 63);
             this.bNoticias.TabIndex = 58;
             this.bNoticias.Text = "Noticias";
             this.bNoticias.UseVisualStyleBackColor = false;
@@ -439,10 +430,9 @@
             this.bInformacionActividad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInformacionActividad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInformacionActividad.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInformacionActividad.Location = new System.Drawing.Point(1101, 1084);
-            this.bInformacionActividad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bInformacionActividad.Location = new System.Drawing.Point(979, 867);
             this.bInformacionActividad.Name = "bInformacionActividad";
-            this.bInformacionActividad.Size = new System.Drawing.Size(145, 70);
+            this.bInformacionActividad.Size = new System.Drawing.Size(129, 56);
             this.bInformacionActividad.TabIndex = 77;
             this.bInformacionActividad.Text = "Información";
             this.bInformacionActividad.UseVisualStyleBackColor = false;
@@ -453,10 +443,9 @@
             this.bInformacionCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInformacionCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInformacionCurso.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bInformacionCurso.Location = new System.Drawing.Point(1101, 892);
-            this.bInformacionCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bInformacionCurso.Location = new System.Drawing.Point(979, 714);
             this.bInformacionCurso.Name = "bInformacionCurso";
-            this.bInformacionCurso.Size = new System.Drawing.Size(145, 70);
+            this.bInformacionCurso.Size = new System.Drawing.Size(129, 56);
             this.bInformacionCurso.TabIndex = 76;
             this.bInformacionCurso.Text = "Información";
             this.bInformacionCurso.UseVisualStyleBackColor = false;
@@ -466,18 +455,18 @@
             // 
             this.lNoCursos.AutoSize = true;
             this.lNoCursos.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNoCursos.Location = new System.Drawing.Point(461, 914);
+            this.lNoCursos.Location = new System.Drawing.Point(410, 731);
             this.lNoCursos.Name = "lNoCursos";
-            this.lNoCursos.Size = new System.Drawing.Size(0, 27);
+            this.lNoCursos.Size = new System.Drawing.Size(0, 24);
             this.lNoCursos.TabIndex = 75;
             // 
             // lNoActividades
             // 
             this.lNoActividades.AutoSize = true;
             this.lNoActividades.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNoActividades.Location = new System.Drawing.Point(453, 1068);
+            this.lNoActividades.Location = new System.Drawing.Point(403, 854);
             this.lNoActividades.Name = "lNoActividades";
-            this.lNoActividades.Size = new System.Drawing.Size(0, 27);
+            this.lNoActividades.Size = new System.Drawing.Size(0, 24);
             this.lNoActividades.TabIndex = 74;
             // 
             // label4
@@ -487,9 +476,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(420, 1019);
+            this.label4.Location = new System.Drawing.Point(373, 815);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(642, 36);
+            this.label4.Size = new System.Drawing.Size(550, 29);
             this.label4.TabIndex = 73;
             this.label4.Text = "Actividades programadas para el día seleccionado";
             // 
@@ -500,16 +489,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lCursos.AutoSize = true;
             this.lCursos.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCursos.Location = new System.Drawing.Point(422, 819);
+            this.lCursos.Location = new System.Drawing.Point(375, 655);
             this.lCursos.Name = "lCursos";
-            this.lCursos.Size = new System.Drawing.Size(577, 36);
+            this.lCursos.Size = new System.Drawing.Size(495, 29);
             this.lCursos.TabIndex = 72;
             this.lCursos.Text = "Cursos programados para el día seleccionado";
             // 
             // calendario
             // 
-            this.calendario.Location = new System.Drawing.Point(127, 830);
-            this.calendario.Margin = new System.Windows.Forms.Padding(10, 11, 10, 11);
+            this.calendario.Location = new System.Drawing.Point(113, 664);
             this.calendario.Name = "calendario";
             this.calendario.TabIndex = 69;
             this.calendario.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendario_DateSelected);
@@ -551,14 +539,13 @@
             this.aforoCursoDataGridViewTextBoxColumn1,
             this.onlineCursoDataGridViewTextBoxColumn1});
             this.dgvCursos.DataSource = this.cursoBindingSource;
-            this.dgvCursos.Location = new System.Drawing.Point(425, 871);
-            this.dgvCursos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvCursos.Location = new System.Drawing.Point(378, 697);
             this.dgvCursos.MultiSelect = false;
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.ReadOnly = true;
             this.dgvCursos.RowHeadersWidth = 51;
             this.dgvCursos.RowTemplate.Height = 24;
-            this.dgvCursos.Size = new System.Drawing.Size(636, 116);
+            this.dgvCursos.Size = new System.Drawing.Size(565, 93);
             this.dgvCursos.TabIndex = 78;
             this.dgvCursos.SelectionChanged += new System.EventHandler(this.dgvCursos_SelectionChanged);
             // 
@@ -581,7 +568,7 @@
             this.profesorCursoDataGridViewTextBoxColumn1.Name = "profesorCursoDataGridViewTextBoxColumn1";
             this.profesorCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.profesorCursoDataGridViewTextBoxColumn1.Visible = false;
-            this.profesorCursoDataGridViewTextBoxColumn1.Width = 150;
+            this.profesorCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
             // nombreCursoDataGridViewTextBoxColumn1
             // 
@@ -591,7 +578,7 @@
             this.nombreCursoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.nombreCursoDataGridViewTextBoxColumn1.Name = "nombreCursoDataGridViewTextBoxColumn1";
             this.nombreCursoDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.nombreCursoDataGridViewTextBoxColumn1.Width = 101;
+            this.nombreCursoDataGridViewTextBoxColumn1.Width = 87;
             // 
             // descripcionCursoDataGridViewTextBoxColumn1
             // 
@@ -602,7 +589,7 @@
             this.descripcionCursoDataGridViewTextBoxColumn1.Name = "descripcionCursoDataGridViewTextBoxColumn1";
             this.descripcionCursoDataGridViewTextBoxColumn1.ReadOnly = true;
             this.descripcionCursoDataGridViewTextBoxColumn1.Visible = false;
-            this.descripcionCursoDataGridViewTextBoxColumn1.Width = 150;
+            this.descripcionCursoDataGridViewTextBoxColumn1.Width = 125;
             // 
             // fechaInicioCursoDataGridViewTextBoxColumn1
             // 
@@ -694,14 +681,13 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.dgvActividades.DataSource = this.actividadBindingSource;
-            this.dgvActividades.Location = new System.Drawing.Point(425, 1059);
-            this.dgvActividades.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvActividades.Location = new System.Drawing.Point(378, 847);
             this.dgvActividades.MultiSelect = false;
             this.dgvActividades.Name = "dgvActividades";
             this.dgvActividades.ReadOnly = true;
             this.dgvActividades.RowHeadersWidth = 51;
             this.dgvActividades.RowTemplate.Height = 24;
-            this.dgvActividades.Size = new System.Drawing.Size(636, 116);
+            this.dgvActividades.Size = new System.Drawing.Size(565, 93);
             this.dgvActividades.TabIndex = 79;
             this.dgvActividades.SelectionChanged += new System.EventHandler(this.dgvActividades_SelectionChanged);
             // 
@@ -724,7 +710,7 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Visible = false;
-            this.dataGridViewTextBoxColumn2.Width = 150;
+            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -734,7 +720,7 @@
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 101;
+            this.dataGridViewTextBoxColumn3.Width = 87;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -745,7 +731,7 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Visible = false;
-            this.dataGridViewTextBoxColumn4.Width = 150;
+            this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -804,17 +790,16 @@
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Visible = false;
-            this.dataGridViewTextBoxColumn10.Width = 150;
+            this.dataGridViewTextBoxColumn10.Width = 125;
             // 
             // bModificar
             // 
             this.bModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bModificar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bModificar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bModificar.Location = new System.Drawing.Point(1243, 435);
-            this.bModificar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bModificar.Location = new System.Drawing.Point(1105, 319);
             this.bModificar.Name = "bModificar";
-            this.bModificar.Size = new System.Drawing.Size(204, 79);
+            this.bModificar.Size = new System.Drawing.Size(181, 63);
             this.bModificar.TabIndex = 80;
             this.bModificar.Text = "Modificar";
             this.bModificar.UseVisualStyleBackColor = false;
@@ -825,10 +810,9 @@
             this.bDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bDel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bDel.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bDel.Location = new System.Drawing.Point(1243, 551);
-            this.bDel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bDel.Location = new System.Drawing.Point(1105, 406);
             this.bDel.Name = "bDel";
-            this.bDel.Size = new System.Drawing.Size(204, 79);
+            this.bDel.Size = new System.Drawing.Size(181, 63);
             this.bDel.TabIndex = 81;
             this.bDel.Text = "Eliminar";
             this.bDel.UseVisualStyleBackColor = false;
@@ -836,12 +820,12 @@
             // 
             // fPrincipalOng
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1860, 1312);
+            this.ClientSize = new System.Drawing.Size(1653, 844);
             this.Controls.Add(this.bDel);
             this.Controls.Add(this.bModificar);
             this.Controls.Add(this.dgvActividades);
@@ -861,7 +845,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "fPrincipalOng";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

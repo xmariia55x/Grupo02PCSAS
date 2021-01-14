@@ -51,20 +51,21 @@ namespace Grupo02PCSAS
 
                 if(titulo.Equals("") || autor.Equals("") || cuerpo.Equals(""))
                 {
-                    throw new Exception("Campos vacíos");
+                    throw new Exception("Aún hay campos por rellenar.");
                 } else
                 {
                     noticiaCreada = new Noticias(titulo,autor,cuerpo,fecha);
-                    MessageBox.Show("Noticia creada correctamente");
+                    MessageBox.Show("Noticia creada correctamente.");
                 }
+                fNoticia noticia = new fNoticia(user);
+                this.Hide();
+                noticia.ShowDialog();
                 this.Close();
 
             } catch(Exception ex)
             {
                 MessageBox.Show("ERROR: " + ex.Message);
             }
-
-
         }
     }
 }
