@@ -147,9 +147,9 @@ namespace Grupo02PCSAS
         private void bRegistrate_Click(object sender, EventArgs e)
         {
             fRegistro registro = new fRegistro();
-            this.Visible = false;
+            this.Hide();
             registro.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void bIniciarSesión_Click(object sender, EventArgs e)
@@ -174,29 +174,30 @@ namespace Grupo02PCSAS
                         {
                             case "ALUMNO":
                                 fPantallaPrincipalAlumno alumno = new fPantallaPrincipalAlumno(user);  // añadir el user
-                                alumno.Show();
+                                this.Hide();
+                                alumno.ShowDialog();
                                 this.Close();
                                 break;
 
                             case "ADMIN":
                                 fPantallaAdminFinal admin = new fPantallaAdminFinal(user);  // añadir el user
-                                this.Visible = false;
+                                this.Hide();
                                 admin.ShowDialog();
-                                this.Visible = true;
+                                this.Close();
                                 break;
 
                             case "ENTIDAD":
                                 fPrincipalOng ong = new fPrincipalOng(user);  // añadir el user
-                                this.Visible = false;
+                                this.Hide();
                                 ong.ShowDialog();
-                                this.Visible = true;
+                                this.Close();
                                 break;
 
                             case "PROFESOR":
                                 fPrincipalProfesor profesor = new fPrincipalProfesor(user);  // añadir el user
-                                this.Visible = false;
+                                this.Hide();
                                 profesor.ShowDialog();
-                                this.Visible = true;
+                                this.Close();
                                 break;
 
                         }
@@ -261,9 +262,9 @@ namespace Grupo02PCSAS
                 else
                 {
                     fInfoCurso info = new fInfoCurso(null, cursoSeleccionado);
-                    this.Visible = false;
+                    this.Hide();
                     info.ShowDialog();
-                    this.Visible = true;
+                    this.Close();
                 }
 
             }
@@ -284,9 +285,9 @@ namespace Grupo02PCSAS
                 } else
                 {
                     fInfoActividad info = new fInfoActividad(null, actividadSeleccionada);
-                    this.Visible = false;
+                    this.Hide();
                     info.ShowDialog();
-                    this.Visible = true;
+                    this.Close();
                 }
                 
             }
@@ -297,37 +298,6 @@ namespace Grupo02PCSAS
 
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-            if (user.RolUsuario.RolName.Equals("ALUMNO"))
-            {
-                fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(user);
-                this.Visible = false;
-                inicio.ShowDialog();
-                this.Visible = true;
-            }
-            else if (user.RolUsuario.RolName.Equals("PROFESOR"))
-            {
-                fPrincipalProfesor inicio = new fPrincipalProfesor(user);
-                this.Visible = false;
-                inicio.ShowDialog();
-                this.Visible = true;
-            }
-            else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
-            {
-                fPrincipalOng inicio = new fPrincipalOng(user);
-                this.Visible = false;
-                inicio.ShowDialog();
-                this.Visible = true;
-            }
-            else if (user.RolUsuario.RolName.Equals("ADMIN"))
-            {
-                fPantallaAdminFinal inicio = new fPantallaAdminFinal(user);
-                this.Visible = false;
-                inicio.ShowDialog();
-                this.Visible = true;
-            }
-        }
 
         private void dgvCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -368,9 +338,9 @@ namespace Grupo02PCSAS
         {
             
             fNoticia noticias = new fNoticia(null);
-            this.Visible = false;
+            this.Hide();
             noticias.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
     }
 }

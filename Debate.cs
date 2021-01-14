@@ -23,6 +23,7 @@ namespace Grupo02PCSAS
             string sentencia = "SELECT * FROM Debate WHERE id = " + id + ";";
             object[] tupla = miBD.Select(sentencia)[0];
 
+            this.id = (int)tupla[0];
             this.creadorDebate = (string)tupla[1];
             this.asuntoDebate = (string)tupla[2];
             this.mensajeDebate = (string)tupla[3];
@@ -32,7 +33,7 @@ namespace Grupo02PCSAS
         public Debate(string creador, string asunto, string mensaje, string fecha)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "INSERT INTO Debate VALUES ('" + creador + "', '" + asunto + "','" + mensaje + "','" + fecha + "');";
+            string sentencia = "INSERT INTO Debate VALUES (" + 0 +",'" + creador + "', '" + asunto + "','" + mensaje + "','" + fecha + "');";
             miBD.Insert(sentencia);
             this.id = (int) miBD.SelectScalar("SELECT MAX(id) FROM Debate");
             this.creadorDebate = creador;

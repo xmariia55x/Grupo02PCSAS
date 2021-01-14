@@ -205,7 +205,14 @@ namespace Grupo02PCSAS
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            if (user.RolUsuario.RolName.Equals("ALUMNO"))
+            if(user == null)
+            {
+                fInicioInvitado inicio = new fInicioInvitado();
+                this.Hide();
+                inicio.ShowDialog();
+                this.Close();
+            }
+            else if (user.RolUsuario.RolName.Equals("ALUMNO"))
             {
                 fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(user);
                 this.Hide();

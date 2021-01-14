@@ -110,8 +110,8 @@ namespace Grupo02PCSAS
                 else if (!asunto.Equals("") && !mensaje.Equals(""))
                 {
                     
-                    debateCreado = new Debate(usuario.CorreoUsuario, asunto, mensaje, DateTime.Now.ToShortDateString());
-                    Respuesta r = new Respuesta (debateCreado, usuario, mensaje, DateTime.Now.ToShortDateString());
+                    debateCreado = new Debate(usuario.CorreoUsuario, asunto, mensaje, DateTime.Now.ToString("dd/MM/yyyy"));
+                    Respuesta r = new Respuesta (debateCreado, usuario, mensaje, DateTime.Now.ToString("dd/MM/yyyy"));
                     MessageBox.Show("Debate creado con éxito");
                     debateCreado = null;
                     this.Close();

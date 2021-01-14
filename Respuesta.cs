@@ -15,14 +15,28 @@ namespace Grupo02PCSAS
         private int idRespuesta;
         private Debate debate;        
         private Usuario creador;
-        private String mensaje;
-        private String fecha;
+        private string mensaje;
+        private string fecha;
 
-        public Respuesta(int idRespuesta, int idDebate)
+        
+        public static List<Respuesta> listaRespuestas(int idDebate)
+        {
+            List<Respuesta> lista = new List<Respuesta>();
+            SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
+            foreach (object[] tupla in miBD.Select("SELECT idRespuesta FROM Respuesta WHERE idDebate = " + idDebate + ";")){
+                Console.WriteLine((int)tupla[0]);
+                int idRespuesta = (int) tupla[0];
+                lista.Add(new Respuesta(idRespuesta));
+            }
+            return lista;
+        }
+        
+
+        public Respuesta(int id)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            Object[] tupla = miBD.Select("SELECT * FROM Respuesta WHERE idRespuesta = " + idRespuesta + " AND idDebate = " + idDebate + ";")[0];
-            this.idRespuesta = idRespuesta;
+            Object[] tupla = miBD.Select("SELECT * FROM Respuesta WHERE idRespuesta = " + id +";")[0];
+            this.idRespuesta = (int)tupla[0];
             this.debate = new Debate((int)tupla[1]);
             this.creador = new Usuario((string)tupla[2]);
             this.mensaje = (string)tupla[3];
@@ -34,13 +48,11 @@ namespace Grupo02PCSAS
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
 
-            string sentencia = "INSERT INTO Respuesta VALUES (" + 0 + "," + debate.ID + ", '" + creador.CorreoUsuario + "', '" + mensaje + "','" + fecha + "');";
+            string sentencia = "INSERT INTO Respuesta VALUES ("+0+","+ debate.ID + ",'" + creador.CorreoUsuario + "','" + mensaje + "','" + fecha + "');";
             miBD.Insert(sentencia);
 
             this.idRespuesta = (int)miBD.SelectScalar("SELECT MAX(idRespuesta) FROM Respuesta;"); ;
-          
             this.debate = debate;
-            
             this.mensaje = mensaje;
             this.creador = creador;
             this.fecha = fecha;
@@ -55,7 +67,7 @@ namespace Grupo02PCSAS
             set
             {
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-                miBD.Update("UPDATE Respuesta SET idDebate =" + value + "WHERE idDebate = " + this.idRespuesta);
+                miBD.Update("UPDATE Respuesta SET idRespuesta =" + value + "WHERE idRespuesta = " + this.idRespuesta);
                 this.idRespuesta = value;
             }
         }
@@ -109,7 +121,7 @@ namespace Grupo02PCSAS
         public void BorrarRespuesta()
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            miBD.Delete("DELETE * FROM Recurso WHERE idRespuesta = " + this.idRespuesta);
+            miBD.Delete("DELETE * FROM Respuesta WHERE idRespuesta = " + this.idRespuesta);
             this.idRespuesta = -1;
            
             this.debate = null;
