@@ -51,7 +51,6 @@ namespace Grupo02PCSAS
                 if (dt.CompareTo(DateTime.Now) >= 0)
                 {
                     Curso c = new Curso((int)obj[0]);
-                    Console.WriteLine(c.ToString());
                     lista.Add(c);
                 }
             }
@@ -89,11 +88,55 @@ namespace Grupo02PCSAS
             //this.actividadTableAdapter.Fill(this.apsgrupo02DataSet.Actividad);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Curso' Puede moverla o quitarla según sea necesario.
             //this.cursoTableAdapter.Fill(this.apsgrupo02DataSet.Curso);
-            Console.WriteLine(sacarFechasCurso());
+            //Console.WriteLine(sacarFechasCurso());
+            //Console.WriteLine(sacarFechasActividad());
+
+            //DGVCURSOS
             dgvCursos.DataSource = sacarFechasCurso();
-            
+            //Columnas no visibles
+            dgvCursos.Columns[0].Visible = false;
+            dgvCursos.Columns[1].Visible = false;
+            dgvCursos.Columns[3].Visible = false;
+            dgvCursos.Columns[6].Visible = false;
+            dgvCursos.Columns[7].Visible = false;
+
+            //Columnas visibles
+            dgvCursos.Columns[2].HeaderText = "Nombre";
+            dgvCursos.Columns[4].HeaderText = "Fecha inicio";
+            dgvCursos.Columns[5].HeaderText = "Fecha fin";
+            dgvCursos.Columns[8].HeaderText = "Lugar";
+            dgvCursos.Columns[9].HeaderText = "Aforo";
+            dgvCursos.Columns[10].HeaderText = "Online";
+
+            dgvCursos.Columns[2].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dgvCursos.Columns[4].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvCursos.Columns[5].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvCursos.Columns[8].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvCursos.Columns[9].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvCursos.Columns[10].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+
+            //DGVACTIVIDADES
             dgvActividades.DataSource = sacarFechasActividad();
-            
+
+            dgvActividades.Columns[0].Visible = false;
+            dgvActividades.Columns[1].Visible = false;
+            dgvActividades.Columns[3].Visible = false;
+            dgvActividades.Columns[6].Visible = false;
+            dgvActividades.Columns[7].Visible = false;
+
+            //Columnas visibles
+            dgvActividades.Columns[2].HeaderText = "Nombre";
+            dgvActividades.Columns[4].HeaderText = "Fecha inicio";
+            dgvActividades.Columns[5].HeaderText = "Fecha fin";
+            dgvActividades.Columns[8].HeaderText = "Lugar";
+            dgvActividades.Columns[9].HeaderText = "Aforo";
+
+            dgvActividades.Columns[2].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dgvActividades.Columns[4].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvActividades.Columns[5].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvActividades.Columns[8].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvActividades.Columns[9].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+
         }
 
         private void label2_Click(object sender, EventArgs e)
