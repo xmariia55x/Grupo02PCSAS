@@ -61,7 +61,10 @@ namespace Grupo02PCSAS
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Vuelva a la pagina principal para acceder a sus datos ");
+            fDatosPerfil datosPerfil = new fDatosPerfil(user);
+            this.Visible = false;
+            datosPerfil.ShowDialog();
+            this.Visible = true;
         }
 
         private void label13_Click(object sender, EventArgs e)
@@ -75,9 +78,9 @@ namespace Grupo02PCSAS
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             fModificarCursos modificarCurso = new fModificarCursos(user, curso);
-            this.Visible = false;
+            this.Hide();
             modificarCurso.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
     }
 }
