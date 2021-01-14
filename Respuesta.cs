@@ -13,9 +13,7 @@ namespace Grupo02PCSAS
         private static string BD_NAME = Properties.Settings.Default.BD_NAME;
 
         private int idRespuesta;
-        private int idDebate;
-        private Debate debate;
-        private String correoUsuario;
+        private Debate debate;        
         private Usuario creador;
         private String mensaje;
         private String fecha;
@@ -32,7 +30,7 @@ namespace Grupo02PCSAS
 
         }
 
-        public Respuesta(int idRespuesta, Debate debate, Usuario creador, string mensaje, string fecha)
+        public Respuesta(Debate debate, Usuario creador, string mensaje, string fecha)
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
 
@@ -40,9 +38,9 @@ namespace Grupo02PCSAS
             miBD.Insert(sentencia);
 
             this.idRespuesta = (int)miBD.SelectScalar("SELECT MAX(idRespuesta) FROM Respuesta;"); ;
-            this.idDebate = debate.ID;
+          
             this.debate = debate;
-            this.correoUsuario = creador.CorreoUsuario;
+            
             this.mensaje = mensaje;
             this.creador = creador;
             this.fecha = fecha;
@@ -69,7 +67,7 @@ namespace Grupo02PCSAS
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
                 miBD.Update("UPDATE Respuesta SET idDebate='" + value.ID + "' WHERE idRespuesta = " + this.idRespuesta);
                 this.debate = new Debate(value.ID);
-                this.idDebate = value.ID;
+               // this.idDebate = value.ID;
             }
         }
         public Usuario CreadorRespuesta
@@ -80,7 +78,7 @@ namespace Grupo02PCSAS
                 SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
                 miBD.Update("UPDATE Respuesta SET correoUsuario='" + value.CorreoUsuario + "' WHERE idRespuesta = " + this.idRespuesta);
                 this.creador = new Usuario(value.CorreoUsuario);
-                this.correoUsuario = value.CorreoUsuario;
+                //this.correoUsuario = value.CorreoUsuario;
             }
         }
         public string MensajeRespuesta
@@ -113,9 +111,9 @@ namespace Grupo02PCSAS
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
             miBD.Delete("DELETE * FROM Recurso WHERE idRespuesta = " + this.idRespuesta);
             this.idRespuesta = -1;
-            this.idDebate = -1;
+           
             this.debate = null;
-            this.correoUsuario = null;
+            
             this.mensaje = null;
             this.creador = null;
             this.fecha = null;

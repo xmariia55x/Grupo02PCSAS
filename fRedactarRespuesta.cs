@@ -31,8 +31,8 @@ namespace Grupo02PCSAS
         {
             try
             {
-                Respuesta r = new Respuesta(0, this.debate, this.user, tRespuesta.Text, DateTime.Now.ToShortDateString());
-                MessageBox.Show("Debate creado con éxito");
+                Respuesta r = new Respuesta(this.debate, this.user, tRespuesta.Text, DateTime.Now.ToShortDateString());
+                MessageBox.Show("Respuesta creada con éxito");
                 fInfoForo f = new fInfoForo(user, debate);
                 this.Hide();
                 f.ShowDialog();

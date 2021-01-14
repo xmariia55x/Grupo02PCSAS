@@ -86,7 +86,7 @@ namespace Grupo02PCSAS
             //Application.Run(new fInfoCurso(user, new Curso(22)));
             //Application.Run(new fInfoActividad(user, new Actividad(5)));
             //Application.Run(new fInfoCurso(user, new Curso(22)));
-
+            //Application.Run(new PantallaPrincipalForo(user));
 
             fInicioInvitado main = new fInicioInvitado();
             main.FormClosed += MainForm_Closed;
