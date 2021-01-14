@@ -75,9 +75,9 @@ namespace Grupo02PCSAS
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             fDatosPerfil f = new fDatosPerfil(user);
-            this.Visible = false;
+            this.Hide();
             f.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -97,9 +97,9 @@ namespace Grupo02PCSAS
         private void bInfoMensaje_Click(object sender, EventArgs e)
         {
             fInfoMensaje f = new fInfoMensaje(user,mensajeSeleccionado);
-            this.Visible = false;
+            this.Hide();
             f.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
     }
 }

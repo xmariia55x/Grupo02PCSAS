@@ -111,15 +111,12 @@ namespace Grupo02PCSAS
                 {
                     
                     debateCreado = new Debate(usuario.CorreoUsuario, asunto, mensaje, DateTime.Now.ToShortDateString());
+                    Respuesta r = new Respuesta (debateCreado, usuario, mensaje, DateTime.Now.ToShortDateString());
                     MessageBox.Show("Debate creado con éxito");
                     debateCreado = null;
                     this.Close();
                 }
-            } catch (MySqlException excp)
-            {
-                //Ya habia un debate creado por el mismo usuario con igual asunto y hay que lanzar una advertencia
-                MessageBox.Show("Ya hay un debate creado con el mismo asunto, cambie el asunto, por favor.");
-            }
+            } 
             catch (Exception ex)
             {
                 MessageBox.Show("Se ha producido un error: " + ex.Message);

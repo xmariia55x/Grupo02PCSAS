@@ -124,6 +124,12 @@
     <Compile Include="fEliminarArchivoActividad.Designer.cs">
       <DependentUpon>fEliminarArchivoActividad.cs</DependentUpon>
     </Compile>
+    <Compile Include="fInfoForo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInfoForo.Designer.cs">
+      <DependentUpon>fInfoForo.cs</DependentUpon>
+    </Compile>
     <Compile Include="fInfoMensaje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,12 @@
     </Compile>
     <Compile Include="fPruebaConocimientoCurso.Designer.cs">
       <DependentUpon>fPruebaConocimientoCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRedactarRespuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRedactarRespuesta.Designer.cs">
+      <DependentUpon>fRedactarRespuesta.cs</DependentUpon>
     </Compile>
     <Compile Include="fRespuestaPrueba.cs">
       <SubType>Form</SubType>
@@ -360,6 +372,9 @@
     <EmbeddedResource Include="fDatosPerfil.resx">
       <DependentUpon>fDatosPerfil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fInfoForo.resx">
+      <DependentUpon>fInfoForo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fInfoMensaje.resx">
       <DependentUpon>fInfoMensaje.cs</DependentUpon>
     </EmbeddedResource>
@@ -398,6 +413,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fRedactarMensaje.resx">
       <DependentUpon>fRedactarMensaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRedactarRespuesta.resx">
+      <DependentUpon>fRedactarRespuesta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fRegistro.resx">
       <DependentUpon>fRegistro.cs</DependentUpon>
