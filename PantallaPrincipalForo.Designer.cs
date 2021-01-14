@@ -84,6 +84,7 @@ namespace Grupo02PCSAS
             this.dgvDebatesRecientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDebatesRecientes.Location = new System.Drawing.Point(465, 350);
             this.dgvDebatesRecientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDebatesRecientes.MultiSelect = false;
             this.dgvDebatesRecientes.Name = "dgvDebatesRecientes";
             this.dgvDebatesRecientes.ReadOnly = true;
             this.dgvDebatesRecientes.RowHeadersWidth = 62;
@@ -101,6 +102,7 @@ namespace Grupo02PCSAS
             this.dgvMisDebates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMisDebates.Location = new System.Drawing.Point(41, 444);
             this.dgvMisDebates.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvMisDebates.MultiSelect = false;
             this.dgvMisDebates.Name = "dgvMisDebates";
             this.dgvMisDebates.ReadOnly = true;
             this.dgvMisDebates.RowHeadersWidth = 62;

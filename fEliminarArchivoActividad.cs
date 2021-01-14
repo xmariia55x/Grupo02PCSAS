@@ -57,7 +57,13 @@ namespace Grupo02PCSAS
                 } else
                 {
                     seleccionado.BorrarMaterialActividad();
-                    
+                    cargaGrid();
+                    MessageBox.Show("El material se ha borrado con éxito de la actividad");
+                    if (MessageBox.Show("¿Quieres seguir borrando material de la actividad?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                    {
+                        cerrar();
+                    }
+
                 }
             } catch (Exception ex)
             {
@@ -70,7 +76,6 @@ namespace Grupo02PCSAS
            if (dataGridView1.SelectedRows.Count > 0)
            {
                 seleccionado = new MaterialActividad((string)dataGridView1.SelectedRows[0].Cells[1].Value, (int)dataGridView1.SelectedRows[0].Cells[0].Value);
-                cerrar();     
            }
         
         }
@@ -81,6 +86,11 @@ namespace Grupo02PCSAS
             this.Hide();
             f.ShowDialog();
             this.Close();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            cerrar();
         }
     }
 }

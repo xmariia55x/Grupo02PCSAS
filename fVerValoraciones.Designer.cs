@@ -151,21 +151,22 @@ namespace Grupo02PCSAS
             // dgvValoracionCursos
             // 
             this.dgvValoracionCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvValoracionCursos.Location = new System.Drawing.Point(216, 412);
+            this.dgvValoracionCursos.Location = new System.Drawing.Point(80, 412);
             this.dgvValoracionCursos.Name = "dgvValoracionCursos";
             this.dgvValoracionCursos.RowHeadersWidth = 62;
             this.dgvValoracionCursos.RowTemplate.Height = 28;
-            this.dgvValoracionCursos.Size = new System.Drawing.Size(1328, 553);
+            this.dgvValoracionCursos.Size = new System.Drawing.Size(1464, 553);
             this.dgvValoracionCursos.TabIndex = 78;
             // 
             // dgvValoracionesActividad
             // 
             this.dgvValoracionesActividad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvValoracionesActividad.Location = new System.Drawing.Point(100, 383);
+            this.dgvValoracionesActividad.Location = new System.Drawing.Point(80, 412);
+            this.dgvValoracionesActividad.MultiSelect = false;
             this.dgvValoracionesActividad.Name = "dgvValoracionesActividad";
             this.dgvValoracionesActividad.RowHeadersWidth = 62;
             this.dgvValoracionesActividad.RowTemplate.Height = 28;
-            this.dgvValoracionesActividad.Size = new System.Drawing.Size(1444, 582);
+            this.dgvValoracionesActividad.Size = new System.Drawing.Size(1464, 553);
             this.dgvValoracionesActividad.TabIndex = 79;
             // 
             // lCurso
@@ -204,6 +205,8 @@ namespace Grupo02PCSAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1606, 1018);
             this.Controls.Add(this.pictureBox3);
@@ -212,8 +215,11 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.dgvValoracionesActividad);
             this.Controls.Add(this.dgvValoracionCursos);
             this.Controls.Add(this.panel2);
+            this.MaximizeBox = false;
             this.Name = "fVerValoraciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fVerValoraciones";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fVerValoraciones_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

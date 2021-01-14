@@ -475,6 +475,8 @@ namespace Grupo02PCSAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1469, 1033);
             this.Controls.Add(this.lNombreCreador);
@@ -506,7 +508,9 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "fModificarActividad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fModificarActividad";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fModificarActividad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);

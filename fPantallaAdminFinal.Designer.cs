@@ -137,7 +137,7 @@ namespace Grupo02PCSAS
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(1161, 138);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 26);
+            this.label1.Size = new System.Drawing.Size(102, 29);
             this.label1.TabIndex = 7;
             this.label1.Text = "Mi perfil";
             // 
@@ -159,7 +159,7 @@ namespace Grupo02PCSAS
             this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lRol.Location = new System.Drawing.Point(671, 116);
             this.lRol.Name = "lRol";
-            this.lRol.Size = new System.Drawing.Size(63, 26);
+            this.lRol.Size = new System.Drawing.Size(73, 29);
             this.lRol.TabIndex = 5;
             this.lRol.Text = "Tu rol";
             // 
@@ -170,7 +170,7 @@ namespace Grupo02PCSAS
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(612, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 26);
+            this.label2.Size = new System.Drawing.Size(62, 29);
             this.label2.TabIndex = 4;
             this.label2.Text = "Rol: ";
             // 
@@ -181,7 +181,7 @@ namespace Grupo02PCSAS
             this.lNombreApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNombreApellidos.Location = new System.Drawing.Point(726, 38);
             this.lNombreApellidos.Name = "lNombreApellidos";
-            this.lNombreApellidos.Size = new System.Drawing.Size(346, 44);
+            this.lNombreApellidos.Size = new System.Drawing.Size(408, 52);
             this.lNombreApellidos.TabIndex = 3;
             this.lNombreApellidos.Text = "Nombre y apellidos";
             // 
@@ -192,7 +192,7 @@ namespace Grupo02PCSAS
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(607, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 49);
+            this.label3.Size = new System.Drawing.Size(132, 57);
             this.label3.TabIndex = 2;
             this.label3.Text = "Hola,";
             // 
@@ -286,6 +286,7 @@ namespace Grupo02PCSAS
             this.dgvActividades.DataSource = this.actividadBindingSource;
             this.dgvActividades.Location = new System.Drawing.Point(119, 329);
             this.dgvActividades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvActividades.MultiSelect = false;
             this.dgvActividades.Name = "dgvActividades";
             this.dgvActividades.ReadOnly = true;
             this.dgvActividades.RowHeadersWidth = 62;
@@ -330,7 +331,7 @@ namespace Grupo02PCSAS
             this.fechaInicioActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.fechaInicioActividadDataGridViewTextBoxColumn.Name = "fechaInicioActividadDataGridViewTextBoxColumn";
             this.fechaInicioActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaInicioActividadDataGridViewTextBoxColumn.Width = 92;
+            this.fechaInicioActividadDataGridViewTextBoxColumn.Width = 153;
             // 
             // horaInicioActividadDataGridViewTextBoxColumn
             // 
@@ -340,7 +341,7 @@ namespace Grupo02PCSAS
             this.horaInicioActividadDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.horaInicioActividadDataGridViewTextBoxColumn.Name = "horaInicioActividadDataGridViewTextBoxColumn";
             this.horaInicioActividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.horaInicioActividadDataGridViewTextBoxColumn.Width = 114;
+            this.horaInicioActividadDataGridViewTextBoxColumn.Width = 143;
             // 
             // lugarActividadDataGridViewTextBoxColumn
             // 
@@ -385,6 +386,7 @@ namespace Grupo02PCSAS
             this.dgvCursos.DataSource = this.cursoBindingSource;
             this.dgvCursos.Location = new System.Drawing.Point(119, 329);
             this.dgvCursos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvCursos.MultiSelect = false;
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.ReadOnly = true;
             this.dgvCursos.RowHeadersWidth = 62;
@@ -429,7 +431,7 @@ namespace Grupo02PCSAS
             this.fechaInicioCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.fechaInicioCursoDataGridViewTextBoxColumn.Name = "fechaInicioCursoDataGridViewTextBoxColumn";
             this.fechaInicioCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaInicioCursoDataGridViewTextBoxColumn.Width = 92;
+            this.fechaInicioCursoDataGridViewTextBoxColumn.Width = 153;
             // 
             // horaInicioCursoDataGridViewTextBoxColumn
             // 
@@ -439,7 +441,7 @@ namespace Grupo02PCSAS
             this.horaInicioCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.horaInicioCursoDataGridViewTextBoxColumn.Name = "horaInicioCursoDataGridViewTextBoxColumn";
             this.horaInicioCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.horaInicioCursoDataGridViewTextBoxColumn.Width = 114;
+            this.horaInicioCursoDataGridViewTextBoxColumn.Width = 143;
             // 
             // lugarCursoDataGridViewTextBoxColumn
             // 
@@ -458,7 +460,7 @@ namespace Grupo02PCSAS
             this.onlineCursoDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.onlineCursoDataGridViewTextBoxColumn.Name = "onlineCursoDataGridViewTextBoxColumn";
             this.onlineCursoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.onlineCursoDataGridViewTextBoxColumn.Width = 78;
+            this.onlineCursoDataGridViewTextBoxColumn.Width = 90;
             // 
             // cursoBindingSource
             // 
@@ -487,13 +489,14 @@ namespace Grupo02PCSAS
             this.niuDataGridViewTextBoxColumn,
             this.rolUsuarioDataGridViewTextBoxColumn});
             this.dgvUsuarios.DataSource = this.usuarioBindingSource;
-            this.dgvUsuarios.Location = new System.Drawing.Point(119, 201);
+            this.dgvUsuarios.Location = new System.Drawing.Point(119, 329);
             this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvUsuarios.MultiSelect = false;
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.RowHeadersWidth = 62;
             this.dgvUsuarios.RowTemplate.Height = 28;
-            this.dgvUsuarios.Size = new System.Drawing.Size(1012, 307);
+            this.dgvUsuarios.Size = new System.Drawing.Size(1008, 179);
             this.dgvUsuarios.TabIndex = 66;
             this.dgvUsuarios.SelectionChanged += new System.EventHandler(this.dgvUsuarios_SelectionChanged);
             // 
@@ -550,7 +553,7 @@ namespace Grupo02PCSAS
             this.rolUsuarioDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.rolUsuarioDataGridViewTextBoxColumn.Name = "rolUsuarioDataGridViewTextBoxColumn";
             this.rolUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rolUsuarioDataGridViewTextBoxColumn.Width = 58;
+            this.rolUsuarioDataGridViewTextBoxColumn.Width = 69;
             // 
             // usuarioBindingSource
             // 
@@ -605,7 +608,7 @@ namespace Grupo02PCSAS
             this.creadorDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.creadorDataGridViewTextBoxColumn.Name = "creadorDataGridViewTextBoxColumn";
             this.creadorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.creadorDataGridViewTextBoxColumn.Width = 125;
+            this.creadorDataGridViewTextBoxColumn.Width = 150;
             // 
             // asuntoDataGridViewTextBoxColumn
             // 
@@ -615,7 +618,7 @@ namespace Grupo02PCSAS
             this.asuntoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.asuntoDataGridViewTextBoxColumn.Name = "asuntoDataGridViewTextBoxColumn";
             this.asuntoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.asuntoDataGridViewTextBoxColumn.Width = 125;
+            this.asuntoDataGridViewTextBoxColumn.Width = 150;
             // 
             // mensajeDataGridViewTextBoxColumn
             // 
@@ -634,7 +637,7 @@ namespace Grupo02PCSAS
             this.fechaInicioDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fechaInicioDataGridViewTextBoxColumn.Name = "fechaInicioDataGridViewTextBoxColumn";
             this.fechaInicioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaInicioDataGridViewTextBoxColumn.Width = 125;
+            this.fechaInicioDataGridViewTextBoxColumn.Width = 150;
             // 
             // debateBindingSource1
             // 
@@ -719,6 +722,7 @@ namespace Grupo02PCSAS
             this.fechaInicioDataGridViewTextBoxColumn1});
             this.dgvDebates.DataSource = this.debateBindingSource;
             this.dgvDebates.Location = new System.Drawing.Point(119, 329);
+            this.dgvDebates.MultiSelect = false;
             this.dgvDebates.Name = "dgvDebates";
             this.dgvDebates.ReadOnly = true;
             this.dgvDebates.RowHeadersWidth = 51;
@@ -745,7 +749,7 @@ namespace Grupo02PCSAS
             this.creadorDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.creadorDataGridViewTextBoxColumn1.Name = "creadorDataGridViewTextBoxColumn1";
             this.creadorDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.creadorDataGridViewTextBoxColumn1.Width = 88;
+            this.creadorDataGridViewTextBoxColumn1.Width = 102;
             // 
             // asuntoDataGridViewTextBoxColumn1
             // 
@@ -755,7 +759,7 @@ namespace Grupo02PCSAS
             this.asuntoDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.asuntoDataGridViewTextBoxColumn1.Name = "asuntoDataGridViewTextBoxColumn1";
             this.asuntoDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.asuntoDataGridViewTextBoxColumn1.Width = 81;
+            this.asuntoDataGridViewTextBoxColumn1.Width = 96;
             // 
             // mensajeDataGridViewTextBoxColumn1
             // 
@@ -774,7 +778,7 @@ namespace Grupo02PCSAS
             this.fechaInicioDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.fechaInicioDataGridViewTextBoxColumn1.Name = "fechaInicioDataGridViewTextBoxColumn1";
             this.fechaInicioDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.fechaInicioDataGridViewTextBoxColumn1.Width = 92;
+            this.fechaInicioDataGridViewTextBoxColumn1.Width = 107;
             // 
             // debateBindingSource
             // 

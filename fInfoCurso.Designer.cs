@@ -93,8 +93,8 @@ namespace Grupo02PCSAS
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FloralWhite;
-            this.panel5.Controls.Add(this.lInvitado);
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.lInvitado);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.bAccederPruebaConocimiento);
             this.panel5.Controls.Add(this.lValorar);
@@ -186,8 +186,9 @@ namespace Grupo02PCSAS
             this.dgvDescargas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDescargas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDescargas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDescargas.Location = new System.Drawing.Point(544, 89);
+            this.dgvDescargas.Location = new System.Drawing.Point(568, 205);
             this.dgvDescargas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvDescargas.MultiSelect = false;
             this.dgvDescargas.Name = "dgvDescargas";
             this.dgvDescargas.RowHeadersWidth = 62;
             this.dgvDescargas.RowTemplate.Height = 28;

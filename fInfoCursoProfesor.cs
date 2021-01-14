@@ -286,5 +286,14 @@ namespace Grupo02PCSAS
         {
 
         }
+
+        private void bValoraciones_Click(object sender, EventArgs e)
+        {
+            fVerValoraciones ver = new fVerValoraciones(user, curso);
+            this.Hide();
+            ver.ShowDialog();
+            this.Close();
+           
+        }
     }
 }

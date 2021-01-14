@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fInfoCursoProfesor));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.bValoraciones = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.bAnyadirPrueba = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -75,7 +76,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.actividadesRealizadasTableAdapter1 = new Grupo02PCSAS.apsgrupo02DataSet1TableAdapters.ActividadesRealizadasTableAdapter();
-            this.bValoraciones = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDescargas)).BeginInit();
             this.panel4.SuspendLayout();
@@ -111,6 +111,18 @@
             this.panel5.Size = new System.Drawing.Size(1881, 507);
             this.panel5.TabIndex = 13;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // bValoraciones
+            // 
+            this.bValoraciones.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bValoraciones.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bValoraciones.Location = new System.Drawing.Point(77, 63);
+            this.bValoraciones.Name = "bValoraciones";
+            this.bValoraciones.Size = new System.Drawing.Size(319, 109);
+            this.bValoraciones.TabIndex = 13;
+            this.bValoraciones.Text = "Ver Valoraciones";
+            this.bValoraciones.UseVisualStyleBackColor = false;
+            this.bValoraciones.Click += new System.EventHandler(this.bValoraciones_Click);
             // 
             // label8
             // 
@@ -178,6 +190,7 @@
             this.dgvDescargas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDescargas.Location = new System.Drawing.Point(570, 79);
             this.dgvDescargas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDescargas.MultiSelect = false;
             this.dgvDescargas.Name = "dgvDescargas";
             this.dgvDescargas.ReadOnly = true;
             this.dgvDescargas.RowHeadersWidth = 62;
@@ -691,17 +704,6 @@
             // actividadesRealizadasTableAdapter1
             // 
             this.actividadesRealizadasTableAdapter1.ClearBeforeFill = true;
-            // 
-            // bValoraciones
-            // 
-            this.bValoraciones.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bValoraciones.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bValoraciones.Location = new System.Drawing.Point(77, 63);
-            this.bValoraciones.Name = "bValoraciones";
-            this.bValoraciones.Size = new System.Drawing.Size(319, 109);
-            this.bValoraciones.TabIndex = 13;
-            this.bValoraciones.Text = "Ver Valoraciones";
-            this.bValoraciones.UseVisualStyleBackColor = false;
             // 
             // fInfoCursoProfesor
             // 
