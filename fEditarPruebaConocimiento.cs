@@ -130,5 +130,26 @@ namespace Grupo02PCSAS
             MessageBox.Show("Se ha actualizado la prueba de conocimiento con éxito");
             cerrar();
         }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            cerrar(); 
+        }
+
+        private void picturePerfil_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datosPerfil = new fDatosPerfil(usuario);
+            this.Visible = false;
+            datosPerfil.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void lMiPerfil_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datosPerfil = new fDatosPerfil(usuario);
+            this.Visible = false;
+            datosPerfil.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
