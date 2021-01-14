@@ -188,6 +188,7 @@ namespace Grupo02PCSAS
             this.dgvDescargas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDescargas.Location = new System.Drawing.Point(568, 205);
             this.dgvDescargas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvDescargas.MultiSelect = false;
             this.dgvDescargas.Name = "dgvDescargas";
             this.dgvDescargas.RowHeadersWidth = 62;
             this.dgvDescargas.RowTemplate.Height = 28;
