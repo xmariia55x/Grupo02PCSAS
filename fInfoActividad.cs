@@ -32,10 +32,12 @@ namespace Grupo02PCSAS
                 lInscrito.Visible = false;
                 bValorar.Visible = false;
                 lValorar.Visible = false;
+                lRecordar.Visible = false;
                 bValoraciones.Visible = false;
             } else if(!act.UsuarioCreador.Equals(user.CorreoUsuario))
             {
                 bValoraciones.Visible = false;
+                lRecordar.Visible = false;
             }
             mostrarUsuario();
             mostrarActividad();
@@ -46,10 +48,12 @@ namespace Grupo02PCSAS
                 string[] fechaSplit = act.FechaFinActividad.Split('/');
                 string[] horaSplit = act.HoraFinActividad.Split(':');
                 DateTime fecha = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]), int.Parse(horaSplit[0]), int.Parse(horaSplit[1]), 0);
+                
                 if (DateTime.Now.CompareTo(fecha) <= 0)
                 {
                     lValorar.Visible = false;
                     bValorar.Visible = false;
+                    
                 }/* else
                 {
                     lValorar.Visible = true;
@@ -73,11 +77,15 @@ namespace Grupo02PCSAS
                 if (fecha.CompareTo(DateTime.Now) >= 0)
                 {
 
-                    bRecordar.Enabled = true;
+                    bRecordar.Visible = true;
+                    lRecordar.Visible = true;
+                    bValoraciones.Visible = false;
                 }
                 else
                 {
-                    bRecordar.Enabled = false;
+                    bRecordar.Visible = false;
+                    lRecordar.Visible = false;
+                    bValoraciones.Visible = true;
                     
                 }
             } else
@@ -110,7 +118,7 @@ namespace Grupo02PCSAS
 
             return res;
         }
-
+        
         private void mostrarUsuario()
         {
             if (user == null)
