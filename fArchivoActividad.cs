@@ -31,19 +31,10 @@ namespace Grupo02PCSAS
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            fDatosPerfil datosPerfil = new fDatosPerfil(user);
-            this.Visible = false;
-            datosPerfil.ShowDialog();
-            this.Visible = true;
+            MessageBox.Show("Vuelva a la pagina principal para acceder a sus datos ");
         }
 
-        private void label13_Click(object sender, EventArgs e)
-        {
-            fDatosPerfil datosPerfil = new fDatosPerfil(user);
-            this.Visible = false;
-            datosPerfil.ShowDialog();
-            this.Visible = true;
-        }
+     
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
@@ -53,9 +44,9 @@ namespace Grupo02PCSAS
         private void cerrar()
         {
             fModificarActividad modificarActividad = new fModificarActividad(user, act);
-            this.Visible = false;
+            this.Hide();
             modificarActividad.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void bSubirArchivo_Click(object sender, EventArgs e)

@@ -72,7 +72,11 @@ namespace Grupo02PCSAS
 
         private void pAtras_Click(object sender, EventArgs e)
         {
+            fInicioInvitado ini = new fInicioInvitado();
+            this.Hide();
+            ini.ShowDialog();
             this.Close();
+
         }
 
         private void bRegistro_Click(object sender, EventArgs e)
@@ -95,7 +99,12 @@ namespace Grupo02PCSAS
                     }
                     Usuario user = new Usuario(correoA, nombreA, contraseniaA, cifA, niuA, new Rol(rolA));
                     MessageBox.Show("Usuario con rol Alumno creado con éxito");
+
+                    fPantallaPrincipalAlumno a = new fPantallaPrincipalAlumno(user);
+                    this.Hide();
+                    a.ShowDialog();
                     this.Close();
+                    
                 }
                 else if (seleccionado == 1) //Profesor
                 {
@@ -114,6 +123,9 @@ namespace Grupo02PCSAS
                     }
                     Usuario user = new Usuario(correoP, nombreP, contraseniaP, cifP, niuP, new Rol(rolP));
                     MessageBox.Show("Usuario con rol Profesor creado con éxito");
+                    fPrincipalProfesor p = new fPrincipalProfesor(user);
+                    this.Hide();
+                    p.ShowDialog();
                     this.Close();
                 }
                 else if (seleccionado == 2) //ONG
@@ -133,6 +145,9 @@ namespace Grupo02PCSAS
                     }
                     Usuario user = new Usuario(correoO, nombreO, contraseniaO, cifO, niuO, new Rol(rolO));
                     MessageBox.Show("Usuario con rol Ong/Entidad creado con éxito");
+                    fPrincipalOng o = new fPrincipalOng(user);
+                    this.Hide();
+                    o.ShowDialog();
                     this.Close();
                 }
                 

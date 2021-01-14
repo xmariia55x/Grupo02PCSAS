@@ -32,25 +32,44 @@ namespace Grupo02PCSAS
                 lInscrito.Visible = false;
                 bValorar.Visible = false;
                 lValorar.Visible = false;
+                bValoraciones.Visible = false;
+            } else if(!act.UsuarioCreador.Equals(user.CorreoUsuario))
+            {
+                bValoraciones.Visible = false;
             }
             mostrarUsuario();
             mostrarActividad();
-
+            
             if(ActividadesRealizadas.comprobarInscrito(user, act))
             {
                 lInscrito.Text = "Inscrito";
+                string[] fechaSplit = act.FechaFinActividad.Split('/');
+                string[] horaSplit = act.HoraFinActividad.Split(':');
+                DateTime fecha = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]), int.Parse(horaSplit[0]), int.Parse(horaSplit[1]), 0);
+                if (DateTime.Now.CompareTo(fecha) <= 0)
+                {
+                    lValorar.Visible = false;
+                    bValorar.Visible = false;
+                }/* else
+                {
+                    lValorar.Visible = true;
+                    bValorar.Visible = true;
+                }*/
             } else
             {
                 lInscrito.Text = "No inscrito";
                 bValorar.Visible = false;
                 lValorar.Visible = false;
             }
+            
 
             calcularPlazasDisponibles();
             if(user != null && (user.RolUsuario.RolName.Equals("PROFESOR") || user.RolUsuario.RolName.Equals("ENTIDAD")))
             {
                 string[] fechaSplit = act.FechaInicioActividad.Split('/');
-                DateTime fecha = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]));
+                string[] horaSplit = act.HoraInicioActividad.Split(':');
+                DateTime fecha = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]), int.Parse(horaSplit[0]), int.Parse(horaSplit[1]), 0);
+                
                 if (fecha.CompareTo(DateTime.Now) >= 0)
                 {
 
@@ -59,6 +78,7 @@ namespace Grupo02PCSAS
                 else
                 {
                     bRecordar.Enabled = false;
+                    
                 }
             } else
             {
