@@ -27,21 +27,7 @@ namespace Grupo02PCSAS
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            if (usuarioCreador.RolUsuario.RolName.Equals("ENTIDAD"))
-            {
-                fPrincipalOng inicio = new fPrincipalOng(usuarioCreador);
-                this.Hide();
-                inicio.ShowDialog();
-                this.Close();
-
-            }
-            else if (usuarioCreador.RolUsuario.RolName.Equals("ADMIN"))
-            {
-                fPantallaAdminFinal inicio = new fPantallaAdminFinal(usuarioCreador);
-                this.Hide();
-                inicio.ShowDialog();
-                this.Close();
-            }
+            cerrar();
         }
 
 
@@ -80,6 +66,7 @@ namespace Grupo02PCSAS
 
                     actividad = new Actividad(usuarioCreador, nombreActividad, descrip, fechaIni, fechaFin, horaIni, horaFin, lugar, aforoActividad);
                     MessageBox.Show("Actividad creada correctamente");
+                    cerrar();
                 }
                 else
                 {
@@ -87,7 +74,7 @@ namespace Grupo02PCSAS
                 }
 
             }
-            this.Close();
+            
         }
 
         
@@ -109,7 +96,26 @@ namespace Grupo02PCSAS
 
         private void bAtras_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
+        }
+
+        private void cerrar()
+        {
+            if (usuarioCreador.RolUsuario.RolName.Equals("ENTIDAD"))
+            {
+                fPrincipalOng inicio = new fPrincipalOng(usuarioCreador);
+                this.Hide();
+                inicio.ShowDialog();
+                this.Close();
+
+            }
+            else if (usuarioCreador.RolUsuario.RolName.Equals("ADMIN"))
+            {
+                fPantallaAdminFinal inicio = new fPantallaAdminFinal(usuarioCreador);
+                this.Hide();
+                inicio.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

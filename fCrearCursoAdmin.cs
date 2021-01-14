@@ -21,35 +21,19 @@ namespace Grupo02PCSAS
         private Usuario usuarioCreador;
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            cerrar();
         }
 
         
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void cerrar()
         {
-            if (usuarioCreador.RolUsuario.RolName.Equals("ALUMNO"))
-            {
-                fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(usuarioCreador);
-                this.Hide();
-                inicio.ShowDialog();
-                this.Close();
-
-            }
-            else if (usuarioCreador.RolUsuario.RolName.Equals("PROFESOR"))
+            if (usuarioCreador.RolUsuario.RolName.Equals("PROFESOR"))
             {
                 fPrincipalProfesor inicio = new fPrincipalProfesor(usuarioCreador);
                 this.Hide();
                 inicio.ShowDialog();
                 this.Close();
 
-            }
-            else if (usuarioCreador.RolUsuario.RolName.Equals("ENTIDAD"))
-            {
-                fPrincipalOng inicio = new fPrincipalOng(usuarioCreador);
-                this.Hide();
-                inicio.ShowDialog();
-                
-                
             }
             else if (usuarioCreador.RolUsuario.RolName.Equals("ADMIN"))
             {
@@ -125,13 +109,14 @@ namespace Grupo02PCSAS
                     cursoCreado = new Curso(profesor, nombreDelCurso, descrip, fechaIni,
                         fechaFin, horaIni, horaFin, lugar, aforoDelCurso, onlineOPresencial);
                     MessageBox.Show("Curso creado correctamente");
+                    cerrar();
                 } else
                 {
                     MessageBox.Show("Las fechas no son correctas.");
                 }
                 
             }
-            this.Close();
+     
         }
         
     }
