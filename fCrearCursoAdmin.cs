@@ -32,14 +32,16 @@ namespace Grupo02PCSAS
                 fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(usuarioCreador);
                 this.Hide();
                 inicio.ShowDialog();
-                
+                this.Close();
+
             }
             else if (usuarioCreador.RolUsuario.RolName.Equals("PROFESOR"))
             {
                 fPrincipalProfesor inicio = new fPrincipalProfesor(usuarioCreador);
                 this.Hide();
                 inicio.ShowDialog();
-                
+                this.Close();
+
             }
             else if (usuarioCreador.RolUsuario.RolName.Equals("ENTIDAD"))
             {

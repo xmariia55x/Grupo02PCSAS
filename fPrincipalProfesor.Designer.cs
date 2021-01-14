@@ -47,7 +47,6 @@ namespace Grupo02PCSAS
             this.apsgrupo02DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.apsgrupo02DataSet = new Grupo02PCSAS.apsgrupo02DataSet();
             this.bAccederAlForo = new System.Windows.Forms.Button();
-            this.bEventosInscritos = new System.Windows.Forms.Button();
             this.bCrearCurso = new System.Windows.Forms.Button();
             this.bModCur = new System.Windows.Forms.Button();
             this.bDelCur = new System.Windows.Forms.Button();
@@ -293,25 +292,13 @@ namespace Grupo02PCSAS
             this.bAccederAlForo.UseVisualStyleBackColor = false;
             this.bAccederAlForo.Click += new System.EventHandler(this.bAccederAlForo_Click);
             // 
-            // bEventosInscritos
-            // 
-            this.bEventosInscritos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bEventosInscritos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bEventosInscritos.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEventosInscritos.Location = new System.Drawing.Point(399, 581);
-            this.bEventosInscritos.Name = "bEventosInscritos";
-            this.bEventosInscritos.Size = new System.Drawing.Size(198, 63);
-            this.bEventosInscritos.TabIndex = 50;
-            this.bEventosInscritos.Text = "Eventos inscritos";
-            this.bEventosInscritos.UseVisualStyleBackColor = false;
-            this.bEventosInscritos.Click += new System.EventHandler(this.bEventosInscritos_Click);
-            // 
             // bCrearCurso
             // 
             this.bCrearCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bCrearCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bCrearCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCrearCurso.Location = new System.Drawing.Point(724, 581);
+            this.bCrearCurso.Location = new System.Drawing.Point(553, 726);
+            this.bCrearCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bCrearCurso.Name = "bCrearCurso";
             this.bCrearCurso.Size = new System.Drawing.Size(198, 63);
             this.bCrearCurso.TabIndex = 51;
@@ -392,7 +379,7 @@ namespace Grupo02PCSAS
             this.label5.Size = new System.Drawing.Size(88, 26);
             this.label5.TabIndex = 7;
             this.label5.Text = "Mi perfil";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // pictureBox2
             // 
@@ -465,7 +452,8 @@ namespace Grupo02PCSAS
             this.bNotProf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bNotProf.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bNotProf.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bNotProf.Location = new System.Drawing.Point(991, 581);
+            this.bNotProf.Location = new System.Drawing.Point(983, 726);
+            this.bNotProf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bNotProf.Name = "bNotProf";
             this.bNotProf.Size = new System.Drawing.Size(198, 63);
             this.bNotProf.TabIndex = 56;
@@ -905,7 +893,6 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.bDelCur);
             this.Controls.Add(this.bModCur);
             this.Controls.Add(this.bCrearCurso);
-            this.Controls.Add(this.bEventosInscritos);
             this.Controls.Add(this.bAccederAlForo);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
@@ -937,7 +924,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button bAccederAlForo;
-        private System.Windows.Forms.Button bEventosInscritos;
         private System.Windows.Forms.Button bCrearCurso;
         private System.Windows.Forms.Button bModCur;
         private System.Windows.Forms.Button bDelCur;

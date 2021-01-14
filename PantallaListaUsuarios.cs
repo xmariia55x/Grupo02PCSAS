@@ -71,30 +71,30 @@ namespace Grupo02PCSAS
             if (user.RolUsuario.RolName.Equals("ALUMNO"))
             {
                 fPantallaPrincipalAlumno inicio = new fPantallaPrincipalAlumno(user);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
-                this.Visible = true;
+                this.Close();
             }
             else if (user.RolUsuario.RolName.Equals("PROFESOR"))
             {
                 fPrincipalProfesor inicio = new fPrincipalProfesor(user);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
-                this.Visible = true;
+                this.Close();
             }
             else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
             {
                 fPrincipalOng inicio = new fPrincipalOng(user);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
-                this.Visible = true;
+                this.Close();
             }
             else if (user.RolUsuario.RolName.Equals("ADMIN"))
             {
                 fPantallaAdminFinal inicio = new fPantallaAdminFinal(user);
-                this.Visible = false;
+                this.Hide();
                 inicio.ShowDialog();
-                this.Visible = true;
+                this.Close();
             }
         }
 

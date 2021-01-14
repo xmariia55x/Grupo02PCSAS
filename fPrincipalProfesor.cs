@@ -32,17 +32,17 @@ namespace Grupo02PCSAS
         private void bAccederAlForo_Click(object sender, EventArgs e)
         {
             PantallaPrincipalForo foro = new PantallaPrincipalForo(profesor);
-            this.Visible = false;
+            this.Hide();
             foro.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             fDatosPerfil datosPerfil = new fDatosPerfil(profesor); 
-            this.Visible = false;
+            this.Hide();
             datosPerfil.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void fPrincipalProfesor_Load(object sender, EventArgs e)
@@ -133,9 +133,9 @@ namespace Grupo02PCSAS
         private void bCrearCurso_Click(object sender, EventArgs e)
         {
             fCrearCursoAdmin crearCurso = new fCrearCursoAdmin(profesor);
-            this.Visible = false;
+            this.Hide();
             crearCurso.ShowDialog();
-            this.Visible = true;
+            this.Close();
             cargaGrid();
         }
 
@@ -155,9 +155,9 @@ namespace Grupo02PCSAS
                 if (seleccionado != null)
                 {
                     fModificarCursos modicurso = new fModificarCursos(profesor, seleccionado);
-                    this.Visible = false;
+                    this.Hide();
                     modicurso.ShowDialog();
-                    this.Visible = true;
+                    this.Close();
                     cargaGrid();
                 }
                 else
@@ -214,9 +214,9 @@ namespace Grupo02PCSAS
                     if(profesor != null)
                     {
                         fInfoCursoProfesor infocurso = new fInfoCursoProfesor(profesor, seleccionado);
-                        this.Visible = false;
+                        this.Hide();
                         infocurso.ShowDialog();
-                        this.Visible = true;
+                        this.Close();
                     }
                 }
                 else
@@ -232,37 +232,22 @@ namespace Grupo02PCSAS
             }
             
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            fDatosPerfil datosPerfil = new fDatosPerfil(profesor);
-            this.Visible = false;
-            datosPerfil.ShowDialog();
-            this.Visible = true;
-        }
-
-        private void bEventosInscritos_Click(object sender, EventArgs e)
-        {
-            fPantallaPrincipalAlumno fAlum = new fPantallaPrincipalAlumno(profesor);
-            this.Visible = false;
-            fAlum.ShowDialog();
-            this.Visible = true;
-        }
+       
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             fDatosPerfil datosPerfil = new fDatosPerfil(profesor);
-            this.Visible = false;
+            this.Hide();
             datosPerfil.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void bNotProf_Click(object sender, EventArgs e)
         {
             fNoticia noticias = new fNoticia(profesor);
-            this.Visible = false;
+            this.Hide();
             noticias.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void bListaParticipantes_Click(object sender, EventArgs e)
