@@ -24,9 +24,9 @@ namespace Grupo02PCSAS
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             fBandejaMensajes bandejaMensajes = new fBandejaMensajes(user);
-            this.Visible = false;
+            this.Hide();
             bandejaMensajes.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void fInfoMensaje_Load(object sender, EventArgs e)

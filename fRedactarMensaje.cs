@@ -37,11 +37,26 @@ namespace Grupo02PCSAS
 
         private void bEnviarMensaje_Click(object sender, EventArgs e)
         {
-            Mensaje m = new Mensaje(this.user.CorreoUsuario, tUsuario.Text,  0, tAsunto.Text, tCuerpo.Text,DateTime.Now.ToString("dd/MM/yyyy"));
-            fBandejaMensajes f = new fBandejaMensajes(user);
-            this.Hide();
-            f.ShowDialog();
-            this.Close();
+            try
+            {
+                if (tUsuario.Text.Equals("") || tAsunto.Text.Equals("") || tCuerpo.Text.Equals(""))
+                {
+                    throw new Exception("Falta campos por rellenar");
+                }
+                else
+                {
+                    Mensaje m = new Mensaje(this.user.CorreoUsuario, tUsuario.Text, 0, tAsunto.Text, tCuerpo.Text, DateTime.Now.ToString("dd/MM/yyyy"));
+                    MessageBox.Show("Mensaje enviado");
+                    fBandejaMensajes f = new fBandejaMensajes(user);
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Close();
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
