@@ -116,19 +116,7 @@ namespace Grupo02PCSAS
 			dataGridView2.Columns[2].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
 			dataGridView2.Columns[3].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
 			dataGridView2.Columns[4].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-			/*
-			dataGridView2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-			 i = 0;
-			foreach (DataGridViewColumn c in dataGridView1.Columns)
-			{
-				i += c.Width;
-			}
 			
-			dataGridView2.Width = i + dataGridView2.RowHeadersWidth + 2;
-			dataGridView2.Height = dataGridView2.GetRowDisplayRectangle(dataGridView2.NewRowIndex, true).Bottom +
-				dataGridView2.GetRowDisplayRectangle(dataGridView2.NewRowIndex, false).Height;
-
-			*/
 		}
 
 		private void label3_Click(object sender, EventArgs e)
