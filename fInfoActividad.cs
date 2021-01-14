@@ -169,8 +169,14 @@ namespace Grupo02PCSAS
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-
-            if (user.RolUsuario.RolName.Equals("ENTIDAD"))
+            if( user == null)
+            {
+                fInicioInvitado inv = new fInicioInvitado();
+                this.Hide();
+                inv.ShowDialog();
+                this.Close();
+            }
+            else if (user.RolUsuario.RolName.Equals("ENTIDAD"))
             {
                 fPrincipalOng ong = new fPrincipalOng(user);
                 this.Hide();
@@ -238,6 +244,14 @@ namespace Grupo02PCSAS
             {
                 MessageBox.Show("ERROR: " + ex.Message);
             }
+        }
+
+        private void bValoraciones_Click(object sender, EventArgs e)
+        {
+            fVerValoraciones ver = new fVerValoraciones(user, act);
+            this.Hide();
+            ver.ShowDialog();
+            this.Close();
         }
     }
 }
