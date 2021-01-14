@@ -88,6 +88,18 @@
     <Compile Include="fArchivoActividad.Designer.cs">
       <DependentUpon>fArchivoActividad.cs</DependentUpon>
     </Compile>
+    <Compile Include="fArchivoCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fArchivoCurso.Designer.cs">
+      <DependentUpon>fArchivoCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBorrarArchivoCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBorrarArchivoCurso.Designer.cs">
+      <DependentUpon>fBorrarArchivoCurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="fCrearNoticia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,8 +321,14 @@
     <EmbeddedResource Include="fArchivoActividad.resx">
       <DependentUpon>fArchivoActividad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fArchivoCurso.resx">
+      <DependentUpon>fArchivoCurso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fBandejaMensajes.resx">
       <DependentUpon>fBandejaMensajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBorrarArchivoCurso.resx">
+      <DependentUpon>fBorrarArchivoCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fCrearActividadAdmin.resx">
       <DependentUpon>fCrearActividadAdmin.cs</DependentUpon>

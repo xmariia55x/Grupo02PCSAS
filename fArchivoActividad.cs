@@ -76,5 +76,20 @@ namespace Grupo02PCSAS
                 MessageBox.Show("ERROR: " + ex.Message);
             }
         }
+
+        private void lNombreAct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
