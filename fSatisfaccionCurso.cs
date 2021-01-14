@@ -56,9 +56,9 @@ namespace Grupo02PCSAS
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(user);
-            this.Hide();
+            this.Visible = false;
             datos.ShowDialog();
-            this.Close();
+            this.Visible = true;
         }
 
         private void label5_Click(object sender, EventArgs e)

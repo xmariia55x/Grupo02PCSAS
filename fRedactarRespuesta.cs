@@ -49,17 +49,17 @@ namespace Grupo02PCSAS
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             fDatosPerfil f = new fDatosPerfil(user);
-            this.Hide();
+            this.Visible = false; ;
             f.ShowDialog();
-            this.Close();
+            this.Visible = true;
         }
 
         private void label13_Click(object sender, EventArgs e)
         {
             fDatosPerfil f = new fDatosPerfil(user);
-            this.Hide();
+            this.Visible = false; ;
             f.ShowDialog();
-            this.Close();
+            this.Visible = true;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

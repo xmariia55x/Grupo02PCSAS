@@ -65,9 +65,9 @@ namespace Grupo02PCSAS
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             fInfoCursoProfesor infoCursoProfesor = new fInfoCursoProfesor(user,curso);
-            this.Visible = false;
+            this.Hide();
             infoCursoProfesor.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
     }
 }

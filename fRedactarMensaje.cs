@@ -39,9 +39,9 @@ namespace Grupo02PCSAS
         {
             Mensaje m = new Mensaje(this.user.CorreoUsuario, tUsuario.Text,  0, tAsunto.Text, tCuerpo.Text,DateTime.Now.ToString("dd/MM/yyyy"));
             fBandejaMensajes f = new fBandejaMensajes(user);
-            this.Visible = false;
+            this.Hide();
             f.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -56,9 +56,9 @@ namespace Grupo02PCSAS
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             fBandejaMensajes f = new fBandejaMensajes(user);
-            this.Visible = false;
+            this.Hide();
             f.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void label5_Click(object sender, EventArgs e)
