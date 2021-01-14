@@ -118,6 +118,9 @@ namespace Grupo02PCSAS
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            fInicioInvitado nuevoDebate = new fInicioInvitado();
+            this.Hide();
+            nuevoDebate.ShowDialog();
             this.Close();
         }
 
