@@ -190,6 +190,7 @@
             this.dgvDescargas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDescargas.Location = new System.Drawing.Point(570, 79);
             this.dgvDescargas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDescargas.MultiSelect = false;
             this.dgvDescargas.Name = "dgvDescargas";
             this.dgvDescargas.ReadOnly = true;
             this.dgvDescargas.RowHeadersWidth = 62;

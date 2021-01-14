@@ -162,6 +162,7 @@ namespace Grupo02PCSAS
             // 
             this.dgvValoracionesActividad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvValoracionesActividad.Location = new System.Drawing.Point(80, 412);
+            this.dgvValoracionesActividad.MultiSelect = false;
             this.dgvValoracionesActividad.Name = "dgvValoracionesActividad";
             this.dgvValoracionesActividad.RowHeadersWidth = 62;
             this.dgvValoracionesActividad.RowTemplate.Height = 28;
