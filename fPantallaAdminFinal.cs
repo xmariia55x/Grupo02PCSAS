@@ -123,14 +123,14 @@ namespace Grupo02PCSAS
 
         private void bCrear_Click(object sender, EventArgs e)
         {
-            if(elementoSeleccionado is Actividad)
+            if(seleccionado == 0)
             {
                 fCrearActividadAdmin acti = new fCrearActividadAdmin(user);
                 this.Visible = false;
                 acti.ShowDialog();
                 this.actividadTableAdapter.Fill(this.apsgrupo02DataSet.Actividad);
                 this.Visible = true;
-            }else if (elementoSeleccionado is Curso)
+            }else if (seleccionado == 1)
             {
                 fCrearCursoAdmin curso = new fCrearCursoAdmin(user);
                 this.Visible = false;
@@ -138,7 +138,7 @@ namespace Grupo02PCSAS
                 this.cursoTableAdapter.Fill(this.apsgrupo02DataSet.Curso);
                 this.Visible = true;
             }
-            else if (elementoSeleccionado is Debate)
+            else if (seleccionado == 3)
             {
                 fNuevoDebateForo foro = new fNuevoDebateForo(user);
                 this.Visible = false;
@@ -199,31 +199,18 @@ namespace Grupo02PCSAS
                 }
             }
         }
-        private void dgvForos_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dgvDebates.SelectedRows.Count > 0)
-            {
-                try
-                {
-                    int id = (int)dgvDebates.SelectedRows[0].Cells[0].Value;
-                    elementoSeleccionado = new Debate(id);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("ERROR: " + ex.Message);
-                }
-            }
-        }
-
+      
         private void bBorrar_Click(object sender, EventArgs e)
 
 
         {
-            if (elementoSeleccionado != null)
+            try
             {
-                if (MessageBox.Show("¿Quieres borrar el elemento definitivamente?", "Borrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (elementoSeleccionado != null)
                 {
-                  
+                    if (MessageBox.Show("¿Quieres borrar el elemento definitivamente?", "Borrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+
                         if (elementoSeleccionado is Actividad)
                         {
                             Actividad a = (Actividad)elementoSeleccionado;
@@ -248,12 +235,16 @@ namespace Grupo02PCSAS
                             d.BorrarDebate();
                             this.debateTableAdapter1.Fill(this.apsgrupo02DataSet1.Debate);
                         }
-                    
+
+                    }
                 }
-            }
-            else
+                else
+                {
+                    MessageBox.Show("ERROR: Ningun elemento seleccionado");
+                }
+            }catch(Exception excp)
             {
-                MessageBox.Show("ERROR: Ningun elemento seleccionado");
+                Console.WriteLine(excp.Message);
             }
 
         }

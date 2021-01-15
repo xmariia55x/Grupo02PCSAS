@@ -261,10 +261,10 @@ namespace Grupo02PCSAS
             // 
             // tAsunto
             // 
-            this.tAsunto.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tAsunto.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tAsunto.Location = new System.Drawing.Point(823, 290);
             this.tAsunto.Name = "tAsunto";
-            this.tAsunto.Size = new System.Drawing.Size(346, 28);
+            this.tAsunto.Size = new System.Drawing.Size(346, 31);
             this.tAsunto.TabIndex = 27;
             // 
             // label7
@@ -283,7 +283,7 @@ namespace Grupo02PCSAS
             // 
             // tCuerpo
             // 
-            this.tCuerpo.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tCuerpo.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tCuerpo.Location = new System.Drawing.Point(823, 333);
             this.tCuerpo.Multiline = true;
             this.tCuerpo.Name = "tCuerpo";
