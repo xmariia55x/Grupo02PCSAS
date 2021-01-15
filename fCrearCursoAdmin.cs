@@ -64,7 +64,7 @@ namespace Grupo02PCSAS
             {
                 foreach (Usuario u in Usuario.listaProfesores()) listProfesor.Items.Add(u.CorreoUsuario);
             }
-            bAniadirArchivosCurso.Enabled = true;
+            
             bGuardarCambiosCurso.Enabled = true;
             
 
@@ -77,45 +77,56 @@ namespace Grupo02PCSAS
 
         private void bGuardarCambiosCurso_Click(object sender, EventArgs e)
         {
-            nombreDelCurso = tNombreCurso.Text;
-            descrip = tDescripcionCurso.Text;
-            lugar = tLugarCurso.Text;
-            fechaIni = dFechaIniCurso.Value.ToString();
-            fechaFin = dFechaFinCurso.Value.ToString();
-            horaIni = dHoraIniCurso.Value.ToString("HH:mm");
-            horaFin = dHoraFinCurso.Value.ToString("HH:mm");
-            int comparacion = dFechaFinCurso.Value.CompareTo(dHoraIniCurso.Value);
-            
-            aforo = tAforoCurso.Text.ToString(); //Pasar el aforo a entero 
-            aforoDelCurso = int.Parse(aforo);
-            Usuario profesor = null;
-            if(!usuarioCreador.RolUsuario.RolName.Equals("ADMIN"))
+            try
             {
-                profesor = usuarioCreador;
-            } else
-            {
-                profesor = new Usuario((string)listProfesor.SelectedItem);
-            }
-            
-            onlineOPresencial = rOnline.Checked;
-            if (nombreDelCurso.Equals("") || descrip.Equals("") || lugar.Equals("") || fechaIni.Equals("") || fechaFin.Equals("") || 
-                horaIni.Equals("") || horaFin.Equals("") || profesor.CorreoUsuario.Equals("") || aforoDelCurso < 0)
-            {
-                MessageBox.Show("Faltan campos obligatorios por rellenar.");
-            } else
-            {
-                if(comparacion >= 0)
+                nombreDelCurso = tNombreCurso.Text;
+                descrip = tDescripcionCurso.Text;
+                lugar = tLugarCurso.Text;
+                fechaIni = dFechaIniCurso.Value.ToString();
+                fechaFin = dFechaFinCurso.Value.ToString();
+                horaIni = dHoraIniCurso.Value.ToString("HH:mm");
+                horaFin = dHoraFinCurso.Value.ToString("HH:mm");
+                int comparacion = dFechaFinCurso.Value.CompareTo(dHoraIniCurso.Value);
+
+
+                Usuario profesor = null;
+                if (!usuarioCreador.RolUsuario.RolName.Equals("ADMIN"))
                 {
-                    cursoCreado = new Curso(profesor, nombreDelCurso, descrip, fechaIni,
-                        fechaFin, horaIni, horaFin, lugar, aforoDelCurso, onlineOPresencial);
-                    MessageBox.Show("Curso creado correctamente");
-                    cerrar();
-                } else
-                {
-                    MessageBox.Show("Las fechas no son correctas.");
+                    profesor = usuarioCreador;
                 }
-                
+                else
+                {
+                    profesor = new Usuario((string)listProfesor.SelectedItem);
+                }
+
+                onlineOPresencial = rOnline.Checked;
+                if (nombreDelCurso.Equals("") || descrip.Equals("") || lugar.Equals("") || fechaIni.Equals("") || fechaFin.Equals("") ||
+                    horaIni.Equals("") || horaFin.Equals("") || profesor.CorreoUsuario.Equals("") || tAforoCurso.Text == null || tAforoCurso.Text.Equals(""))
+                {
+                    throw new Exception("Faltan campos obligatorios por rellenar.");
+                }
+                else
+                {
+                    if (comparacion >= 0)
+                    {
+                        aforo = tAforoCurso.Text.ToString(); //Pasar el aforo a entero 
+                        aforoDelCurso = int.Parse(aforo);
+                        cursoCreado = new Curso(profesor, nombreDelCurso, descrip, fechaIni,
+                            fechaFin, horaIni, horaFin, lugar, aforoDelCurso, onlineOPresencial);
+                        MessageBox.Show("Curso creado correctamente");
+                        cerrar();
+                    }
+                    else
+                    {
+                        throw new Exception("Las fechas no son correctas.");
+                    }
+
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
             }
+            
      
         }
         

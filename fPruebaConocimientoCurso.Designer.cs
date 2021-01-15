@@ -235,7 +235,7 @@ namespace Grupo02PCSAS
             this.lPregunta4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lPregunta4.AutoSize = true;
             this.lPregunta4.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPregunta4.Location = new System.Drawing.Point(831, 290);
+            this.lPregunta4.Location = new System.Drawing.Point(758, 290);
             this.lPregunta4.Name = "lPregunta4";
             this.lPregunta4.Size = new System.Drawing.Size(306, 29);
             this.lPregunta4.TabIndex = 40;
@@ -246,7 +246,7 @@ namespace Grupo02PCSAS
             this.lPregunta5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lPregunta5.AutoSize = true;
             this.lPregunta5.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPregunta5.Location = new System.Drawing.Point(831, 512);
+            this.lPregunta5.Location = new System.Drawing.Point(758, 512);
             this.lPregunta5.Name = "lPregunta5";
             this.lPregunta5.Size = new System.Drawing.Size(306, 29);
             this.lPregunta5.TabIndex = 44;
@@ -257,7 +257,7 @@ namespace Grupo02PCSAS
             this.bEnviar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bEnviar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bEnviar.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEnviar.Location = new System.Drawing.Point(840, 727);
+            this.bEnviar.Location = new System.Drawing.Point(767, 727);
             this.bEnviar.Name = "bEnviar";
             this.bEnviar.Size = new System.Drawing.Size(262, 83);
             this.bEnviar.TabIndex = 48;
@@ -293,7 +293,7 @@ namespace Grupo02PCSAS
             // 
             this.chlBpregunta4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chlBpregunta4.FormattingEnabled = true;
-            this.chlBpregunta4.Location = new System.Drawing.Point(861, 330);
+            this.chlBpregunta4.Location = new System.Drawing.Point(788, 330);
             this.chlBpregunta4.Name = "chlBpregunta4";
             this.chlBpregunta4.Size = new System.Drawing.Size(241, 72);
             this.chlBpregunta4.TabIndex = 52;
@@ -302,7 +302,7 @@ namespace Grupo02PCSAS
             // 
             this.chlBpregunta5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chlBpregunta5.FormattingEnabled = true;
-            this.chlBpregunta5.Location = new System.Drawing.Point(861, 559);
+            this.chlBpregunta5.Location = new System.Drawing.Point(788, 559);
             this.chlBpregunta5.Name = "chlBpregunta5";
             this.chlBpregunta5.Size = new System.Drawing.Size(241, 72);
             this.chlBpregunta5.TabIndex = 53;
