@@ -29,7 +29,7 @@ namespace Grupo02PCSAS
         private void fBandejaMensajes_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet1.Mensaje' Puede moverla o quitarla según sea necesario.
-            this.mensajeTableAdapter.Fill(this.apsgrupo02DataSet1.Mensaje);
+            //this.mensajeTableAdapter.Fill(this.apsgrupo02DataSet1.Mensaje);
             label6.Text = user.RolUsuario.RolName;
             label8.Text = user.NombreUsuario;
 
