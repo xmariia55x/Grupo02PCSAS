@@ -370,6 +370,8 @@ namespace Grupo02PCSAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1450, 694);
             this.Controls.Add(this.lInscrito);
@@ -391,8 +393,11 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "fSatisfaccionActividad";
-            this.Text = "fSatisfaccionActividad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cuestionario satisfacción de una actividad";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fSatisfaccionActividad_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -48,9 +48,9 @@ namespace Grupo02PCSAS
         private void fPrincipalProfesor_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet1.Actividad' Puede moverla o quitarla según sea necesario.
-            this.actividadTableAdapter.Fill(this.apsgrupo02DataSet1.Actividad);
+            //this.actividadTableAdapter.Fill(this.apsgrupo02DataSet1.Actividad);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.Curso' Puede moverla o quitarla según sea necesario.
-            this.cursoTableAdapter.Fill(this.apsgrupo02DataSet.Curso);
+            //this.cursoTableAdapter.Fill(this.apsgrupo02DataSet.Curso);
             lRol.Text = profesor.RolUsuario.RolName;
             lNombreUser.Text = profesor.NombreUsuario;
             cargaGrid();

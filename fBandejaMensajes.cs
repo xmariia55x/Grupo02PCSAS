@@ -74,9 +74,9 @@ namespace Grupo02PCSAS
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            fDatosPerfil datosPerfil = new fDatosPerfil(user);
+            fDatosPerfil datos = new fDatosPerfil(user);
             this.Hide();
-            datosPerfil.ShowDialog();
+            datos.ShowDialog();
             this.Close();
         }
 
@@ -96,10 +96,16 @@ namespace Grupo02PCSAS
 
         private void bInfoMensaje_Click(object sender, EventArgs e)
         {
-            fInfoMensaje f = new fInfoMensaje(user,mensajeSeleccionado);
-            this.Hide();
-            f.ShowDialog();
-            this.Close();
+            if (mensajeSeleccionado == null)
+            {
+                MessageBox.Show("No se ha seleccionado ningún mensaje");
+            } else
+            {
+                fInfoMensaje f = new fInfoMensaje(user, mensajeSeleccionado);
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

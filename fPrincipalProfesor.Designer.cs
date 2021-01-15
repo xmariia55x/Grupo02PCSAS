@@ -152,7 +152,7 @@ namespace Grupo02PCSAS
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1090, 236);
+            this.dataGridView1.Size = new System.Drawing.Size(1090, 287);
             this.dataGridView1.TabIndex = 48;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -282,11 +282,12 @@ namespace Grupo02PCSAS
             // 
             // bAccederAlForo
             // 
+            this.bAccederAlForo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.bAccederAlForo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bAccederAlForo.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAccederAlForo.Location = new System.Drawing.Point(92, 578);
             this.bAccederAlForo.Name = "bAccederAlForo";
-            this.bAccederAlForo.Size = new System.Drawing.Size(198, 59);
+            this.bAccederAlForo.Size = new System.Drawing.Size(341, 59);
             this.bAccederAlForo.TabIndex = 49;
             this.bAccederAlForo.Text = "Acceder al foro";
             this.bAccederAlForo.UseVisualStyleBackColor = false;
@@ -294,13 +295,13 @@ namespace Grupo02PCSAS
             // 
             // bCrearCurso
             // 
-            this.bCrearCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bCrearCurso.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.bCrearCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bCrearCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCrearCurso.Location = new System.Drawing.Point(1225, 530);
+            this.bCrearCurso.Location = new System.Drawing.Point(846, 578);
             this.bCrearCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bCrearCurso.Name = "bCrearCurso";
-            this.bCrearCurso.Size = new System.Drawing.Size(198, 59);
+            this.bCrearCurso.Size = new System.Drawing.Size(341, 59);
             this.bCrearCurso.TabIndex = 51;
             this.bCrearCurso.Text = "Crear";
             this.bCrearCurso.UseVisualStyleBackColor = false;
@@ -311,7 +312,7 @@ namespace Grupo02PCSAS
             this.bModCur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bModCur.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bModCur.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.bModCur.Location = new System.Drawing.Point(1225, 446);
+            this.bModCur.Location = new System.Drawing.Point(1225, 422);
             this.bModCur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bModCur.Name = "bModCur";
             this.bModCur.Size = new System.Drawing.Size(198, 59);
@@ -325,7 +326,7 @@ namespace Grupo02PCSAS
             this.bDelCur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bDelCur.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bDelCur.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.bDelCur.Location = new System.Drawing.Point(1225, 269);
+            this.bDelCur.Location = new System.Drawing.Point(1225, 345);
             this.bDelCur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bDelCur.Name = "bDelCur";
             this.bDelCur.Size = new System.Drawing.Size(198, 59);
@@ -339,7 +340,7 @@ namespace Grupo02PCSAS
             this.bInfCur.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bInfCur.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInfCur.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.bInfCur.Location = new System.Drawing.Point(1225, 359);
+            this.bInfCur.Location = new System.Drawing.Point(1225, 269);
             this.bInfCur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bInfCur.Name = "bInfCur";
             this.bInfCur.Size = new System.Drawing.Size(198, 59);
@@ -449,13 +450,13 @@ namespace Grupo02PCSAS
             // 
             // bNotProf
             // 
-            this.bNotProf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bNotProf.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bNotProf.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bNotProf.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bNotProf.Location = new System.Drawing.Point(342, 578);
+            this.bNotProf.Location = new System.Drawing.Point(473, 578);
             this.bNotProf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bNotProf.Name = "bNotProf";
-            this.bNotProf.Size = new System.Drawing.Size(198, 59);
+            this.bNotProf.Size = new System.Drawing.Size(341, 59);
             this.bNotProf.TabIndex = 56;
             this.bNotProf.Text = "Noticias";
             this.bNotProf.UseVisualStyleBackColor = false;
@@ -466,7 +467,7 @@ namespace Grupo02PCSAS
             this.bListaParticipantes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bListaParticipantes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bListaParticipantes.Font = new System.Drawing.Font("Trebuchet MS", 12F);
-            this.bListaParticipantes.Location = new System.Drawing.Point(593, 578);
+            this.bListaParticipantes.Location = new System.Drawing.Point(1225, 497);
             this.bListaParticipantes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bListaParticipantes.Name = "bListaParticipantes";
             this.bListaParticipantes.Size = new System.Drawing.Size(198, 59);
