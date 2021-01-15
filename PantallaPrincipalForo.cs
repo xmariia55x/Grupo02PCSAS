@@ -159,5 +159,10 @@ namespace Grupo02PCSAS
                 debateSeleccionado = null;
             }
         }
+
+        private void bMisDebatesForo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

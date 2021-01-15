@@ -215,6 +215,7 @@ namespace Grupo02PCSAS
             this.bMisDebatesForo.TabIndex = 16;
             this.bMisDebatesForo.Text = "Mis debates";
             this.bMisDebatesForo.UseVisualStyleBackColor = false;
+            this.bMisDebatesForo.Click += new System.EventHandler(this.bMisDebatesForo_Click);
             // 
             // panel1
             // 

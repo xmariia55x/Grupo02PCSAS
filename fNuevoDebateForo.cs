@@ -61,6 +61,9 @@ namespace Grupo02PCSAS
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            PantallaPrincipalForo principalForo = new PantallaPrincipalForo(usuario);
+            this.Hide();
+            principalForo.ShowDialog();
             this.Close();
         }
 
