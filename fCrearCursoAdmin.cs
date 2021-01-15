@@ -12,7 +12,7 @@ namespace Grupo02PCSAS
 {
     public partial class fCrearCursoAdmin : Form
     {
-        private string nombreDelCurso, descrip, lugar, fechaIni, fechaFin, horaIni, horaFin, aforo;
+        private string nombreDelCurso, descrip, lugar, fechaIni, fechaFin, horaIni, horaFin, aforo, seleccionado;
         private int aforoDelCurso;
 
 
@@ -49,6 +49,7 @@ namespace Grupo02PCSAS
         {
             InitializeComponent();
             usuarioCreador = user;
+            seleccionado = null;
         }
 
         
@@ -62,6 +63,7 @@ namespace Grupo02PCSAS
             }
             else
             {
+                listProfesor.ClearSelected();
                 foreach (Usuario u in Usuario.listaProfesores()) listProfesor.Items.Add(u.CorreoUsuario);
             }
             
@@ -96,7 +98,15 @@ namespace Grupo02PCSAS
                 }
                 else
                 {
-                    profesor = new Usuario((string)listProfesor.SelectedItem);
+                    if (listProfesor.SelectedItems.Count > 0)
+                    {
+                        seleccionado = (string)listProfesor.SelectedItem;
+                        profesor = new Usuario((string)listProfesor.SelectedItem);
+                    }
+                    else
+                    {
+                        throw new Exception("No se ha selccionado ningún profesor");
+                    }
                 }
 
                 onlineOPresencial = rOnline.Checked;
