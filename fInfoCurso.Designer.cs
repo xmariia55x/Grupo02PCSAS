@@ -129,6 +129,7 @@ namespace Grupo02PCSAS
             this.label3.Size = new System.Drawing.Size(272, 29);
             this.label3.TabIndex = 18;
             this.label3.Text = "Prueba de conocimiento";
+            this.label3.Click += new System.EventHandler(this.bAccederPruebaConocimiento_Click);
             // 
             // bAccederPruebaConocimiento
             // 
@@ -154,6 +155,7 @@ namespace Grupo02PCSAS
             this.lValorar.Size = new System.Drawing.Size(153, 29);
             this.lValorar.TabIndex = 16;
             this.lValorar.Text = "Valorar curso";
+            this.lValorar.Click += new System.EventHandler(this.bValorar_Click);
             // 
             // bValorar
             // 
