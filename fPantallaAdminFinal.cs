@@ -123,14 +123,14 @@ namespace Grupo02PCSAS
 
         private void bCrear_Click(object sender, EventArgs e)
         {
-            if(elementoSeleccionado is Actividad)
+            if(seleccionado == 0)
             {
                 fCrearActividadAdmin acti = new fCrearActividadAdmin(user);
                 this.Visible = false;
                 acti.ShowDialog();
                 this.actividadTableAdapter.Fill(this.apsgrupo02DataSet.Actividad);
                 this.Visible = true;
-            }else if (elementoSeleccionado is Curso)
+            }else if (seleccionado == 1)
             {
                 fCrearCursoAdmin curso = new fCrearCursoAdmin(user);
                 this.Visible = false;
@@ -138,7 +138,7 @@ namespace Grupo02PCSAS
                 this.cursoTableAdapter.Fill(this.apsgrupo02DataSet.Curso);
                 this.Visible = true;
             }
-            else if (elementoSeleccionado is Debate)
+            else if (seleccionado == 3)
             {
                 fNuevoDebateForo foro = new fNuevoDebateForo(user);
                 this.Visible = false;
