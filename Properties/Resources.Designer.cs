@@ -93,6 +93,16 @@ namespace Grupo02PCSAS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _56805 {
+            get {
+                object obj = ResourceManager.GetObject("56805", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _580b585b2edbce24c47b2769 {
             get {
                 object obj = ResourceManager.GetObject("580b585b2edbce24c47b2769", resourceCulture);
@@ -246,6 +256,16 @@ namespace Grupo02PCSAS.Properties {
         internal static System.Drawing.Bitmap pcsas {
             get {
                 object obj = ResourceManager.GetObject("pcsas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pruebaconocimiento {
+            get {
+                object obj = ResourceManager.GetObject("pruebaconocimiento", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

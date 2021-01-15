@@ -34,23 +34,18 @@ namespace Grupo02PCSAS
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.lNombreUser = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lRol = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lNombre = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lNombreDatos = new System.Windows.Forms.Label();
             this.lCorreo = new System.Windows.Forms.Label();
             this.lNIU = new System.Windows.Forms.Label();
@@ -62,15 +57,21 @@ namespace Grupo02PCSAS
             this.tPassword = new System.Windows.Forms.Label();
             this.lPassword = new System.Windows.Forms.Label();
             this.bMensajes = new System.Windows.Forms.Button();
+            this.bCerrarSesion = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // bEditarPerfil
@@ -107,7 +108,7 @@ namespace Grupo02PCSAS
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(791, 219);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(458, 36);
+            this.label10.Size = new System.Drawing.Size(395, 29);
             this.label10.TabIndex = 21;
             this.label10.Text = "Mis Actividades y cursos realizados:";
             // 
@@ -146,17 +147,6 @@ namespace Grupo02PCSAS
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(541, 148);
             this.dataGridView2.TabIndex = 47;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
-            this.pictureBox3.Location = new System.Drawing.Point(37, 208);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(73, 72);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 52;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // panel1
             // 
@@ -200,20 +190,9 @@ namespace Grupo02PCSAS
             this.label19.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(1169, 126);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(102, 29);
+            this.label19.Size = new System.Drawing.Size(88, 26);
             this.label19.TabIndex = 7;
             this.label19.Text = "Mi perfil";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.pictureBox4.Location = new System.Drawing.Point(1152, 10);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(113, 102);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
             // 
             // label20
             // 
@@ -222,7 +201,7 @@ namespace Grupo02PCSAS
             this.label20.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(672, 116);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(73, 29);
+            this.label20.Size = new System.Drawing.Size(63, 26);
             this.label20.TabIndex = 5;
             this.label20.Text = "Tu rol";
             // 
@@ -233,7 +212,7 @@ namespace Grupo02PCSAS
             this.label21.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(613, 116);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(62, 29);
+            this.label21.Size = new System.Drawing.Size(53, 26);
             this.label21.TabIndex = 4;
             this.label21.Text = "Rol: ";
             // 
@@ -244,7 +223,7 @@ namespace Grupo02PCSAS
             this.lNombreUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNombreUser.Location = new System.Drawing.Point(727, 38);
             this.lNombreUser.Name = "lNombreUser";
-            this.lNombreUser.Size = new System.Drawing.Size(408, 52);
+            this.lNombreUser.Size = new System.Drawing.Size(346, 44);
             this.lNombreUser.TabIndex = 3;
             this.lNombreUser.Text = "Nombre y apellidos";
             // 
@@ -255,19 +234,9 @@ namespace Grupo02PCSAS
             this.label22.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(609, 38);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(132, 57);
+            this.label22.Size = new System.Drawing.Size(112, 49);
             this.label22.TabIndex = 2;
             this.label22.Text = "Hola,";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(297, 178);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
             // 
             // label1
             // 
@@ -275,21 +244,10 @@ namespace Grupo02PCSAS
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(1153, 126);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 29);
+            this.label1.Size = new System.Drawing.Size(88, 26);
             this.label1.TabIndex = 7;
             this.label1.Text = "Mi perfil";
             this.label1.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(1135, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(113, 102);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lRol
             // 
@@ -297,7 +255,7 @@ namespace Grupo02PCSAS
             this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lRol.Location = new System.Drawing.Point(551, 116);
             this.lRol.Name = "lRol";
-            this.lRol.Size = new System.Drawing.Size(73, 29);
+            this.lRol.Size = new System.Drawing.Size(63, 26);
             this.lRol.TabIndex = 5;
             this.lRol.Text = "Tu rol";
             // 
@@ -307,7 +265,7 @@ namespace Grupo02PCSAS
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(507, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 29);
+            this.label2.Size = new System.Drawing.Size(53, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "Rol: ";
             // 
@@ -317,7 +275,7 @@ namespace Grupo02PCSAS
             this.lNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNombre.Location = new System.Drawing.Point(621, 39);
             this.lNombre.Name = "lNombre";
-            this.lNombre.Size = new System.Drawing.Size(408, 52);
+            this.lNombre.Size = new System.Drawing.Size(346, 44);
             this.lNombre.TabIndex = 3;
             this.lNombre.Text = "Nombre y apellidos";
             // 
@@ -327,20 +285,9 @@ namespace Grupo02PCSAS
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(503, 38);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 57);
+            this.label4.Size = new System.Drawing.Size(112, 49);
             this.label4.TabIndex = 2;
             this.label4.Text = "Hola,";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(297, 178);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lNombreDatos
             // 
@@ -348,7 +295,7 @@ namespace Grupo02PCSAS
             this.lNombreDatos.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNombreDatos.Location = new System.Drawing.Point(214, 262);
             this.lNombreDatos.Name = "lNombreDatos";
-            this.lNombreDatos.Size = new System.Drawing.Size(123, 36);
+            this.lNombreDatos.Size = new System.Drawing.Size(105, 29);
             this.lNombreDatos.TabIndex = 54;
             this.lNombreDatos.Text = "Nombre:";
             this.lNombreDatos.Click += new System.EventHandler(this.label6_Click);
@@ -359,7 +306,7 @@ namespace Grupo02PCSAS
             this.lCorreo.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lCorreo.Location = new System.Drawing.Point(214, 331);
             this.lCorreo.Name = "lCorreo";
-            this.lCorreo.Size = new System.Drawing.Size(109, 36);
+            this.lCorreo.Size = new System.Drawing.Size(93, 29);
             this.lCorreo.TabIndex = 55;
             this.lCorreo.Text = "Correo:";
             // 
@@ -369,7 +316,7 @@ namespace Grupo02PCSAS
             this.lNIU.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNIU.Location = new System.Drawing.Point(247, 463);
             this.lNIU.Name = "lNIU";
-            this.lNIU.Size = new System.Drawing.Size(69, 36);
+            this.lNIU.Size = new System.Drawing.Size(60, 29);
             this.lNIU.TabIndex = 56;
             this.lNIU.Text = "NIU:";
             // 
@@ -379,7 +326,7 @@ namespace Grupo02PCSAS
             this.lCIF.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lCIF.Location = new System.Drawing.Point(247, 463);
             this.lCIF.Name = "lCIF";
-            this.lCIF.Size = new System.Drawing.Size(65, 36);
+            this.lCIF.Size = new System.Drawing.Size(56, 29);
             this.lCIF.TabIndex = 57;
             this.lCIF.Text = "CIF:";
             // 
@@ -389,7 +336,7 @@ namespace Grupo02PCSAS
             this.tCIF.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tCIF.Location = new System.Drawing.Point(360, 463);
             this.tCIF.Name = "tCIF";
-            this.tCIF.Size = new System.Drawing.Size(92, 36);
+            this.tCIF.Size = new System.Drawing.Size(79, 29);
             this.tCIF.TabIndex = 61;
             this.tCIF.Text = "label8";
             // 
@@ -399,7 +346,7 @@ namespace Grupo02PCSAS
             this.tNIU.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tNIU.Location = new System.Drawing.Point(360, 463);
             this.tNIU.Name = "tNIU";
-            this.tNIU.Size = new System.Drawing.Size(92, 36);
+            this.tNIU.Size = new System.Drawing.Size(79, 29);
             this.tNIU.TabIndex = 60;
             this.tNIU.Text = "label9";
             // 
@@ -409,7 +356,7 @@ namespace Grupo02PCSAS
             this.tCorreo.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tCorreo.Location = new System.Drawing.Point(360, 331);
             this.tCorreo.Name = "tCorreo";
-            this.tCorreo.Size = new System.Drawing.Size(107, 36);
+            this.tCorreo.Size = new System.Drawing.Size(92, 29);
             this.tCorreo.TabIndex = 59;
             this.tCorreo.Text = "label11";
             // 
@@ -419,7 +366,7 @@ namespace Grupo02PCSAS
             this.tNombre.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tNombre.Location = new System.Drawing.Point(360, 262);
             this.tNombre.Name = "tNombre";
-            this.tNombre.Size = new System.Drawing.Size(107, 36);
+            this.tNombre.Size = new System.Drawing.Size(92, 29);
             this.tNombre.TabIndex = 58;
             this.tNombre.Text = "label12";
             // 
@@ -429,7 +376,7 @@ namespace Grupo02PCSAS
             this.tPassword.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tPassword.Location = new System.Drawing.Point(360, 403);
             this.tPassword.Name = "tPassword";
-            this.tPassword.Size = new System.Drawing.Size(140, 36);
+            this.tPassword.Size = new System.Drawing.Size(120, 29);
             this.tPassword.TabIndex = 63;
             this.tPassword.Text = "Password:";
             // 
@@ -439,7 +386,7 @@ namespace Grupo02PCSAS
             this.lPassword.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lPassword.Location = new System.Drawing.Point(183, 403);
             this.lPassword.Name = "lPassword";
-            this.lPassword.Size = new System.Drawing.Size(140, 36);
+            this.lPassword.Size = new System.Drawing.Size(120, 29);
             this.lPassword.TabIndex = 62;
             this.lPassword.Text = "Password:";
             // 
@@ -456,14 +403,81 @@ namespace Grupo02PCSAS
             this.bMensajes.UseVisualStyleBackColor = false;
             this.bMensajes.Click += new System.EventHandler(this.bMensajes_Click);
             // 
+            // bCerrarSesion
+            // 
+            this.bCerrarSesion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bCerrarSesion.BackgroundImage = global::Grupo02PCSAS.Properties.Resources._56805;
+            this.bCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bCerrarSesion.Location = new System.Drawing.Point(1337, 194);
+            this.bCerrarSesion.Name = "bCerrarSesion";
+            this.bCerrarSesion.Size = new System.Drawing.Size(92, 86);
+            this.bCerrarSesion.TabIndex = 65;
+            this.bCerrarSesion.UseVisualStyleBackColor = false;
+            this.bCerrarSesion.Click += new System.EventHandler(this.bCerrarSesion_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
+            this.pictureBox4.Location = new System.Drawing.Point(1152, 10);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(113, 102);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(297, 178);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
+            this.pictureBox2.Location = new System.Drawing.Point(1135, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(113, 102);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(297, 178);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
+            this.pictureBox3.Location = new System.Drawing.Point(37, 208);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(73, 72);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 52;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // fDatosPerfil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1469, 1033);
+            this.Controls.Add(this.bCerrarSesion);
             this.Controls.Add(this.bMensajes);
             this.Controls.Add(this.tPassword);
             this.Controls.Add(this.lPassword);
@@ -491,7 +505,6 @@ namespace Grupo02PCSAS
             this.Load += new System.EventHandler(this.fDatosPerfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -500,6 +513,7 @@ namespace Grupo02PCSAS
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -540,5 +554,6 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button bMensajes;
+        private System.Windows.Forms.Button bCerrarSesion;
     }
 }

@@ -522,7 +522,9 @@
     <None Include="Resources\189689.png" />
     <None Include="Resources\add-folder.png" />
     <None Include="Resources\Open-folder-delete-icon.png" />
+    <None Include="Resources\56805.png" />
     <Content Include="Resources\pcsas.jpeg" />
+    <None Include="Resources\pruebaconocimiento.png" />
     <Content Include="Resources\usuario.png" />
   </ItemGroup>
   <ItemGroup>

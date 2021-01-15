@@ -17,6 +17,7 @@ namespace Grupo02PCSAS
         Usuario user;
         Curso curso;
         String enlace;
+        PruebaConocimiento prueba;
         private static string BD_SERVER = Properties.Settings.Default.BD_SERVER;
         private static string BD_NAME = Properties.Settings.Default.BD_NAME;
 
@@ -24,6 +25,14 @@ namespace Grupo02PCSAS
         {
             this.user = user;
             this.curso = curso;
+
+            if (PruebaConocimiento.hayPruebaConocimiento(curso))
+            {
+                prueba = new PruebaConocimiento(curso.CursoID);
+            } else
+            {
+                prueba = null;
+            }
             InitializeComponent();
         }
 
@@ -116,21 +125,40 @@ namespace Grupo02PCSAS
             mostrarActividad();
             comprobarInscrito();
             calcularPlazasDisponibles();
+            //Fecha inicio
             string[] fechaSplit = curso.CursoFechaInicio.Split('/');
             string[] horaSplit = curso.CursoHoraInicio.Split(':');
             DateTime fecha = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]), int.Parse(horaSplit[0]), int.Parse(horaSplit[1]), 0);
+            //Fecha fin
+            string[] fechaFinSplit = curso.CursoFechaFin.Split('/');
+            string[] horaFinSplit = curso.CursoHoraFin.Split(':');
+            DateTime fechaFin = new DateTime(int.Parse(fechaFinSplit[2]), int.Parse(fechaFinSplit[1]), int.Parse(fechaFinSplit[0]), int.Parse(horaFinSplit[0]), int.Parse(horaFinSplit[1]), 0);
+
+            //Si no ha empezado
             if (fecha.CompareTo(DateTime.Now) >= 0)
             {
-
                 bRecordar.Visible = true;
                 label3.Visible = true;
+                bValoraciones.Visible = false;
+                bConocimiento.Visible = false;
             }
+
+            //Si no ha acabado
+            else if (fechaFin.CompareTo(DateTime.Now) >= 0)
+            {
+                bRecordar.Visible = false;
+                label3.Visible = false;
+                bValoraciones.Visible = false;
+                bConocimiento.Visible = false;
+            }
+            //Si ha acabado
             else
             {
                 bRecordar.Visible = false;
                 label3.Visible = false;
+                bValoraciones.Visible = true;
+                bConocimiento.Visible = true;
             }
-
 
             cargaGrid();
         }
@@ -279,6 +307,20 @@ namespace Grupo02PCSAS
             this.Visible = false;
             d.ShowDialog();
             this.Visible = true;
+        }
+
+        private void bConocimiento_Click(object sender, EventArgs e)
+        {
+            if (prueba == null)
+            {
+                MessageBox.Show("No existe una prueba de conocimiento asociada");
+            } else
+            {
+                fRespuestaPrueba f = new fRespuestaPrueba(user, curso, prueba);
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

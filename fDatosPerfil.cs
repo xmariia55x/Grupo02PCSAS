@@ -213,5 +213,11 @@ namespace Grupo02PCSAS
 			f.ShowDialog();
 			this.Close();
 		}
+
+        private void bCerrarSesion_Click(object sender, EventArgs e)
+        {
+			Application.Restart();
+			Environment.Exit(0);
+		}
     }
 }
