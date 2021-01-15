@@ -148,13 +148,14 @@ namespace Grupo02PCSAS
             // 
             // dgvValoracionCursos
             // 
+            this.dgvValoracionCursos.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dgvValoracionCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvValoracionCursos.Location = new System.Drawing.Point(71, 330);
             this.dgvValoracionCursos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvValoracionCursos.Name = "dgvValoracionCursos";
             this.dgvValoracionCursos.RowHeadersWidth = 62;
             this.dgvValoracionCursos.RowTemplate.Height = 28;
-            this.dgvValoracionCursos.Size = new System.Drawing.Size(1301, 442);
+            this.dgvValoracionCursos.Size = new System.Drawing.Size(1301, 290);
             this.dgvValoracionCursos.TabIndex = 78;
             // 
             // dgvValoracionesActividad
@@ -171,7 +172,7 @@ namespace Grupo02PCSAS
             this.dgvValoracionesActividad.ReadOnly = true;
             this.dgvValoracionesActividad.RowHeadersWidth = 62;
             this.dgvValoracionesActividad.RowTemplate.Height = 28;
-            this.dgvValoracionesActividad.Size = new System.Drawing.Size(1301, 442);
+            this.dgvValoracionesActividad.Size = new System.Drawing.Size(1301, 290);
             this.dgvValoracionesActividad.TabIndex = 79;
             // 
             // lCurso

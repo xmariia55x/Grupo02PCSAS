@@ -43,6 +43,29 @@ namespace Grupo02PCSAS
             DataTable tablaC = new DataTable();
             adaptadorC.Fill(tablaC);
             dgvValoracionCursos.DataSource = tablaC;
+
+            //Columnas no visibles
+            dgvValoracionCursos.Columns[1].Visible = false;
+
+
+            //Columnas visibles
+            dgvValoracionCursos.Columns[0].HeaderText = "Usuario";
+            dgvValoracionCursos.Columns[2].HeaderText = "Satisfacción";
+            dgvValoracionCursos.Columns[3].HeaderText = "Lugar";
+            dgvValoracionCursos.Columns[4].HeaderText = "Horario";
+            dgvValoracionCursos.Columns[5].HeaderText = "Organización";
+            dgvValoracionCursos.Columns[6].HeaderText = "Repetir o no";
+            dgvValoracionCursos.Columns[7].HeaderText = "Comentario";
+
+            dgvValoracionCursos.Columns[0].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+
+            dgvValoracionCursos.Columns[2].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvValoracionCursos.Columns[3].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvValoracionCursos.Columns[4].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvValoracionCursos.Columns[5].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvValoracionCursos.Columns[6].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvValoracionCursos.Columns[7].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+          
         }
         private void cargaGridActividad()
         {
@@ -56,6 +79,28 @@ namespace Grupo02PCSAS
             DataTable tablaC = new DataTable();
             adaptadorC.Fill(tablaC);
             dgvValoracionesActividad.DataSource = tablaC;
+
+            //Columnas no visibles
+            dgvValoracionesActividad.Columns[1].Visible = false;
+
+
+            //Columnas visibles
+            dgvValoracionesActividad.Columns[0].HeaderText = "Usuario";
+            dgvValoracionesActividad.Columns[2].HeaderText = "Satisfacción";
+            dgvValoracionesActividad.Columns[3].HeaderText = "Lugar";
+            dgvValoracionesActividad.Columns[4].HeaderText = "Horario";
+            dgvValoracionesActividad.Columns[5].HeaderText = "Organización";
+            dgvValoracionesActividad.Columns[6].HeaderText = "Repetir o no";
+            dgvValoracionesActividad.Columns[7].HeaderText = "Comentario";
+
+            dgvValoracionesActividad.Columns[0].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+
+            dgvValoracionesActividad.Columns[2].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvValoracionesActividad.Columns[3].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvValoracionesActividad.Columns[4].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvValoracionesActividad.Columns[5].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvValoracionesActividad.Columns[6].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvValoracionesActividad.Columns[7].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
         }
 
 

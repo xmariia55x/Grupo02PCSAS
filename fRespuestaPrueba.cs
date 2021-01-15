@@ -36,6 +36,33 @@ namespace Grupo02PCSAS
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
             dataGridView1.DataSource = tabla;
+
+            //Columnas no visibles
+            dataGridView1.Columns[1].Visible = false;
+
+
+            //Columnas visibles
+            dataGridView1.Columns[0].HeaderText = "Usuario";
+            dataGridView1.Columns[2].HeaderText = "Respuesta pregunta 1";
+            dataGridView1.Columns[3].HeaderText = "Respuesta pregunta 2";
+            dataGridView1.Columns[4].HeaderText = "Respuesta pregunta 3";
+            dataGridView1.Columns[5].HeaderText = "Respuesta pregunta 4";
+            dataGridView1.Columns[6].HeaderText = "Respuesta pregunta 5";
+
+
+            dataGridView1.Columns[0].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+
+            /*dataGridView1.Columns[2].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridView1.Columns[3].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridView1.Columns[4].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridView1.Columns[5].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridView1.Columns[6].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            */
+            dataGridView1.Columns[2].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns[3].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns[4].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns[5].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns[6].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void fRespuestaPrueba_Load(object sender, EventArgs e)
