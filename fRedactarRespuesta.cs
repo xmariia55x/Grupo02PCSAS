@@ -25,7 +25,7 @@ namespace Grupo02PCSAS
         {
             lNombreUser.Text = user.NombreUsuario;
             lRol.Text = user.RolUsuario.RolName;
-            label3.Text = debate.ID.ToString();
+            
         }
 
         private void bRespuesta_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace Grupo02PCSAS
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             fDatosPerfil f = new fDatosPerfil(user);
-            this.Visible = false; ;
+            this.Visible = false;
             f.ShowDialog();
             this.Visible = true;
         }
@@ -57,7 +57,7 @@ namespace Grupo02PCSAS
         private void label13_Click(object sender, EventArgs e)
         {
             fDatosPerfil f = new fDatosPerfil(user);
-            this.Visible = false; ;
+            this.Visible = false;
             f.ShowDialog();
             this.Visible = true;
         }

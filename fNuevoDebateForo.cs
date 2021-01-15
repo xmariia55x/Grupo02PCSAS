@@ -30,6 +30,9 @@ namespace Grupo02PCSAS
 
         private void bCancelarDebate_Click(object sender, EventArgs e)
         {
+            PantallaPrincipalForo f = new PantallaPrincipalForo(this.usuario);
+            this.Hide();
+            f.ShowDialog();
             this.Close();
         }
 
@@ -45,22 +48,26 @@ namespace Grupo02PCSAS
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            fDatosPerfil ventana = new fDatosPerfil(usuario);
+            fDatosPerfil f = new fDatosPerfil(usuario);
             this.Visible = false;
-            ventana.ShowDialog();
+            f.ShowDialog();
             this.Visible = true;
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            fDatosPerfil ventana = new fDatosPerfil(usuario);
+
+            fDatosPerfil f = new fDatosPerfil(usuario);
             this.Visible = false;
-            ventana.ShowDialog();
+            f.ShowDialog();
             this.Visible = true;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            PantallaPrincipalForo f = new PantallaPrincipalForo(this.usuario);
+            this.Hide();
+            f.ShowDialog();
             this.Close();
         }
 
@@ -87,6 +94,9 @@ namespace Grupo02PCSAS
                     Respuesta r = new Respuesta (debateCreado, usuario, mensaje, DateTime.Now.ToString("dd/MM/yyyy"));
                     MessageBox.Show("Debate creado con éxito");
                     debateCreado = null;
+                    PantallaPrincipalForo f = new PantallaPrincipalForo(this.usuario);
+                    this.Hide();
+                    f.ShowDialog();
                     this.Close();
                 }
             } 

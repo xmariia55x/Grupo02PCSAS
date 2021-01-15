@@ -84,6 +84,7 @@ namespace Grupo02PCSAS
             this.label13.Size = new System.Drawing.Size(88, 26);
             this.label13.TabIndex = 7;
             this.label13.Text = "Mi perfil";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // pictureBox2
             // 
@@ -95,6 +96,7 @@ namespace Grupo02PCSAS
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lRol
             // 
@@ -180,7 +182,7 @@ namespace Grupo02PCSAS
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(515, 315);
+            this.label1.Location = new System.Drawing.Point(491, 315);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 49);
             this.label1.TabIndex = 84;
@@ -203,6 +205,8 @@ namespace Grupo02PCSAS
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(344, 376);
@@ -215,6 +219,8 @@ namespace Grupo02PCSAS
             // 
             // bRespuesta
             // 
+            this.bRespuesta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bRespuesta.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bRespuesta.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
             this.bRespuesta.Location = new System.Drawing.Point(601, 688);
@@ -228,9 +234,8 @@ namespace Grupo02PCSAS
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 196);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 195);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(83, 69);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
