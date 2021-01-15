@@ -140,13 +140,13 @@ namespace Grupo02PCSAS
             // 
             // bAddNot
             // 
-            this.bAddNot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.bAddNot.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bAddNot.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bAddNot.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAddNot.Location = new System.Drawing.Point(372, 743);
+            this.bAddNot.Location = new System.Drawing.Point(532, 712);
             this.bAddNot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bAddNot.Name = "bAddNot";
-            this.bAddNot.Size = new System.Drawing.Size(542, 43);
+            this.bAddNot.Size = new System.Drawing.Size(207, 43);
             this.bAddNot.TabIndex = 44;
             this.bAddNot.Text = "Crear noticia";
             this.bAddNot.UseVisualStyleBackColor = false;
@@ -174,7 +174,7 @@ namespace Grupo02PCSAS
             this.MaximizeBox = false;
             this.Name = "fCrearNoticia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fCrearNoticia";
+            this.Text = "Crear noticia";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
