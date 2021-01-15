@@ -116,9 +116,9 @@ namespace Grupo02PCSAS
         private void bNoticias_Click(object sender, EventArgs e)
         {
             fNoticia noticias = new fNoticia(user);
-            this.Visible = false;
+            this.Hide();
             noticias.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void bCrear_Click(object sender, EventArgs e)
@@ -126,25 +126,25 @@ namespace Grupo02PCSAS
             if(seleccionado == 0)
             {
                 fCrearActividadAdmin acti = new fCrearActividadAdmin(user);
-                this.Visible = false;
+                this.Hide();
                 acti.ShowDialog();
                 this.actividadTableAdapter.Fill(this.apsgrupo02DataSet.Actividad);
-                this.Visible = true;
+                this.Close();
             }else if (seleccionado == 1)
             {
                 fCrearCursoAdmin curso = new fCrearCursoAdmin(user);
-                this.Visible = false;
+                this.Hide();
                 curso.ShowDialog();
                 this.cursoTableAdapter.Fill(this.apsgrupo02DataSet.Curso);
-                this.Visible = true;
+                this.Close();
             }
             else if (seleccionado == 3)
             {
                 fNuevoDebateForo foro = new fNuevoDebateForo(user);
-                this.Visible = false;
+                this.Hide();
                 foro.ShowDialog();
                 this.debateTableAdapter1.Fill(this.apsgrupo02DataSet1.Debate);
-                this.Visible = true;
+                this.Close();
             }
         }
 
