@@ -98,10 +98,6 @@ namespace Grupo02PCSAS
                         Process.Start(new MaterialCurso(curso.CursoID,nombre).Enlace);
                     }
                 }
-                else
-                {
-                    
-                }
             }
             catch (Exception ex)
             {

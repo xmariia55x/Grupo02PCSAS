@@ -590,7 +590,7 @@ namespace Grupo02PCSAS
             this.dgvForos.RowTemplate.Height = 28;
             this.dgvForos.Size = new System.Drawing.Size(1012, 326);
             this.dgvForos.TabIndex = 67;
-            this.dgvForos.SelectionChanged += new System.EventHandler(this.dgvForos_SelectionChanged);
+
             // 
             // idDataGridViewTextBoxColumn
             // 
