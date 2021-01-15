@@ -33,7 +33,7 @@ namespace Grupo02PCSAS
                 else
                 {
                     MaterialCurso mc = new MaterialCurso(tbEnlace.Text,this.curso,tbNombre.Text);
-                    MessageBox.Show("Material aniadido con exito");
+                    MessageBox.Show("Material añadido con exito");
                     fModificarCursos modificarCurso = new fModificarCursos(user, curso);
                     this.Visible = false;
                     modificarCurso.ShowDialog();

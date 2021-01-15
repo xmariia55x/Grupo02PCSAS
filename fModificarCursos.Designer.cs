@@ -131,7 +131,7 @@ namespace Grupo02PCSAS
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(916, 326);
@@ -142,7 +142,7 @@ namespace Grupo02PCSAS
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(916, 428);
@@ -153,7 +153,7 @@ namespace Grupo02PCSAS
             // 
             // label9
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(916, 525);
@@ -219,7 +219,7 @@ namespace Grupo02PCSAS
             // 
             // tModAforoCurso
             // 
-            this.tModAforoCurso.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tModAforoCurso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tModAforoCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tModAforoCurso.Location = new System.Drawing.Point(920, 563);
             this.tModAforoCurso.Name = "tModAforoCurso";
@@ -265,7 +265,7 @@ namespace Grupo02PCSAS
             // 
             // dModiHoraIniCurso
             // 
-            this.dModiHoraIniCurso.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dModiHoraIniCurso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dModiHoraIniCurso.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dModiHoraIniCurso.CustomFormat = "HH:mm";
             this.dModiHoraIniCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,7 +277,7 @@ namespace Grupo02PCSAS
             // 
             // dModiHoraFinCurso
             // 
-            this.dModiHoraFinCurso.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dModiHoraFinCurso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dModiHoraFinCurso.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dModiHoraFinCurso.CustomFormat = "HH:mm";
             this.dModiHoraFinCurso.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -289,7 +289,7 @@ namespace Grupo02PCSAS
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.listProfesor);
             this.panel1.Location = new System.Drawing.Point(921, 614);

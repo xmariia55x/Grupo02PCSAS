@@ -112,6 +112,9 @@ namespace Grupo02PCSAS
                         lRecordar.Visible = false;
                         bValoraciones.Visible = true;
                     }
+                    dgvDescargas.Visible = true;
+                    lDescargasInscritos.Visible = false;
+                    lInscrito.Text = "Creador";
                 }
 
 

@@ -37,7 +37,6 @@
             this.lNombreUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bEventos = new System.Windows.Forms.Button();
             this.bAccederAlForo = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -199,18 +198,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // bEventos
-            // 
-            this.bEventos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bEventos.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEventos.Location = new System.Drawing.Point(632, 575);
-            this.bEventos.Name = "bEventos";
-            this.bEventos.Size = new System.Drawing.Size(181, 63);
-            this.bEventos.TabIndex = 55;
-            this.bEventos.Text = "Eventos";
-            this.bEventos.UseVisualStyleBackColor = false;
-            this.bEventos.Click += new System.EventHandler(this.bEventos_Click);
             // 
             // bAccederAlForo
             // 
@@ -840,7 +827,6 @@
             this.Controls.Add(this.bNoticias);
             this.Controls.Add(this.bCrearActividad);
             this.Controls.Add(this.bInformacion);
-            this.Controls.Add(this.bEventos);
             this.Controls.Add(this.bAccederAlForo);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
@@ -878,7 +864,6 @@
         private System.Windows.Forms.Label lNombreUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button bEventos;
         private System.Windows.Forms.Button bAccederAlForo;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;

@@ -120,7 +120,7 @@ namespace Grupo02PCSAS
             // 
             // dHoraFin
             // 
-            this.dHoraFin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dHoraFin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dHoraFin.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dHoraFin.CustomFormat = "HH:mm";
             this.dHoraFin.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -132,7 +132,7 @@ namespace Grupo02PCSAS
             // 
             // dHoraIni
             // 
-            this.dHoraIni.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dHoraIni.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dHoraIni.CalendarFont = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dHoraIni.CustomFormat = "HH:mm";
             this.dHoraIni.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -195,7 +195,7 @@ namespace Grupo02PCSAS
             // 
             // tAforo
             // 
-            this.tAforo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tAforo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tAforo.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tAforo.Location = new System.Drawing.Point(1015, 631);
             this.tAforo.Name = "tAforo";
@@ -233,7 +233,7 @@ namespace Grupo02PCSAS
             // 
             // label9
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(1011, 593);
@@ -244,7 +244,7 @@ namespace Grupo02PCSAS
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(1011, 496);
@@ -255,7 +255,7 @@ namespace Grupo02PCSAS
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(1011, 394);

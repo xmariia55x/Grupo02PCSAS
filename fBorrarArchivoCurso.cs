@@ -39,6 +39,7 @@ namespace Grupo02PCSAS
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
             dataGridView1.DataSource = tabla;
+            dataGridView1.Columns[0].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -62,12 +63,19 @@ namespace Grupo02PCSAS
                 DialogResult dialogResult = MessageBox.Show("¿Desea borrar el archivo?", "ALERTA", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    this.archivoSeleccionado.BorrarMaterialCurso();
-                    MessageBox.Show("Archivo borrado con exito");
-                    fModificarCursos f = new fModificarCursos(user, curso);
-                    this.Hide();
-                    f.ShowDialog();
-                    this.Close();
+                    if(archivoSeleccionado != null)
+                    {
+                        this.archivoSeleccionado.BorrarMaterialCurso();
+                        MessageBox.Show("Archivo borrado con exito");
+                        fModificarCursos f = new fModificarCursos(user, curso);
+                        this.Hide();
+                        f.ShowDialog();
+                        this.Close();
+                    } else
+                    {
+                        throw new Exception("No se ha seleccionado ningún archivo");
+                    }
+                    
                 }
                 else if (dialogResult == DialogResult.No)
                 {
@@ -95,6 +103,14 @@ namespace Grupo02PCSAS
             fDatosPerfil datosPerfil = new fDatosPerfil(user);
             this.Hide();
             datosPerfil.ShowDialog();
+            this.Close();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            fModificarCursos f = new fModificarCursos(user, curso);
+            this.Hide();
+            f.ShowDialog();
             this.Close();
         }
     }
