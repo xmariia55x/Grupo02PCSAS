@@ -41,8 +41,6 @@ namespace Grupo02PCSAS
             this.tRespuesta = new System.Windows.Forms.TextBox();
             this.bRespuesta = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -158,6 +156,8 @@ namespace Grupo02PCSAS
             // 
             // tRespuesta
             // 
+            this.tRespuesta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tRespuesta.Location = new System.Drawing.Point(407, 284);
             this.tRespuesta.Multiline = true;
             this.tRespuesta.Name = "tRespuesta";
@@ -166,6 +166,8 @@ namespace Grupo02PCSAS
             // 
             // bRespuesta
             // 
+            this.bRespuesta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bRespuesta.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bRespuesta.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
             this.bRespuesta.Location = new System.Drawing.Point(407, 639);
@@ -179,7 +181,6 @@ namespace Grupo02PCSAS
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
             this.pictureBox3.Location = new System.Drawing.Point(12, 185);
             this.pictureBox3.Name = "pictureBox3";
@@ -189,24 +190,6 @@ namespace Grupo02PCSAS
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 89;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(770, 221);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 90;
-            this.label3.Text = "label3";
-            // 
             // fRedactarRespuesta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -215,8 +198,6 @@ namespace Grupo02PCSAS
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1469, 840);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.bRespuesta);
             this.Controls.Add(this.tRespuesta);
@@ -252,7 +233,5 @@ namespace Grupo02PCSAS
         private System.Windows.Forms.TextBox tRespuesta;
         private System.Windows.Forms.Button bRespuesta;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }

@@ -24,7 +24,7 @@ namespace Grupo02PCSAS
 
         private void PantallaBorrarCurso_Load(object sender, EventArgs e)
         {
-            lNombreApellidos.Text = user.NombreUsuario;
+            lNombreUser.Text = user.NombreUsuario;
             lRol.Text = user.RolUsuario.RolName;
             cargaGrid();
         }
@@ -158,6 +158,22 @@ namespace Grupo02PCSAS
             {
                 debateSeleccionado = null;
             }
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            fDatosPerfil f = new fDatosPerfil(user);
+            this.Visible = false;
+            f.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil f = new fDatosPerfil(user);
+            this.Visible = false;
+            f.ShowDialog();
+            this.Visible = true;
         }
     }
 }
