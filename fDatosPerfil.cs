@@ -130,11 +130,8 @@ namespace Grupo02PCSAS
 			if (dialogResult == DialogResult.Yes)
 			{
 				this.user.BorrarUsuario();
-				fInicioInvitado inicio = new fInicioInvitado();
-				//this.Visible = false;
-				this.Hide();
-				inicio.ShowDialog();
-				this.Close();
+				Application.Restart();
+				Environment.Exit(0);
 			}
 			else if (dialogResult == DialogResult.No)
 			{
