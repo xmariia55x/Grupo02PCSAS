@@ -133,6 +133,7 @@
             this.label8.Size = new System.Drawing.Size(163, 29);
             this.label8.TabIndex = 11;
             this.label8.Text = "Añadir prueba";
+            this.label8.Click += new System.EventHandler(this.bAnyadirPrueba_Click);
             // 
             // bAnyadirPrueba
             // 
@@ -157,6 +158,7 @@
             this.label7.Size = new System.Drawing.Size(183, 29);
             this.label7.TabIndex = 9;
             this.label7.Text = "Eliminar prueba";
+            this.label7.Click += new System.EventHandler(this.bEliminarPrueba_Click);
             // 
             // label4
             // 
@@ -167,6 +169,7 @@
             this.label4.Size = new System.Drawing.Size(159, 29);
             this.label4.TabIndex = 8;
             this.label4.Text = "Editar prueba";
+            this.label4.Click += new System.EventHandler(this.bEditarPrueba_Click);
             // 
             // label3
             // 
@@ -177,6 +180,7 @@
             this.label3.Size = new System.Drawing.Size(108, 29);
             this.label3.TabIndex = 7;
             this.label3.Text = "Recordar";
+            this.label3.Click += new System.EventHandler(this.bRecordar_Click);
             // 
             // dgvDescargas
             // 
@@ -632,6 +636,7 @@
             this.label5.Size = new System.Drawing.Size(102, 29);
             this.label5.TabIndex = 7;
             this.label5.Text = "Mi perfil";
+            this.label5.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // pictureBox2
             // 
@@ -644,6 +649,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // lRol
             // 

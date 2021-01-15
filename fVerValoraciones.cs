@@ -26,9 +26,9 @@ namespace Grupo02PCSAS
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             fDatosPerfil datos = new fDatosPerfil(user);
-            this.Hide();
+            this.Visible = false;
             datos.ShowDialog();
-            this.Close();
+            this.Visible = true;
         }
 
         private void cargaGridCurso()
@@ -113,6 +113,14 @@ namespace Grupo02PCSAS
                 curso.ShowDialog();
                 this.Close();
             }
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            fDatosPerfil datos = new fDatosPerfil(user);
+            this.Visible = false;
+            datos.ShowDialog();
+            this.Visible = true;
         }
     }
 }

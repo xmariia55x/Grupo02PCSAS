@@ -74,6 +74,7 @@ namespace Grupo02PCSAS
             this.label13.Size = new System.Drawing.Size(102, 29);
             this.label13.TabIndex = 7;
             this.label13.Text = "Mi perfil";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // pictureBox2
             // 
@@ -86,6 +87,7 @@ namespace Grupo02PCSAS
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lRol
             // 
@@ -154,11 +156,16 @@ namespace Grupo02PCSAS
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(521, 446);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(502, 288);
@@ -169,10 +176,10 @@ namespace Grupo02PCSAS
             // 
             this.bEliminarArchivo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bEliminarArchivo.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEliminarArchivo.Location = new System.Drawing.Point(483, 851);
+            this.bEliminarArchivo.Location = new System.Drawing.Point(521, 844);
             this.bEliminarArchivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bEliminarArchivo.Name = "bEliminarArchivo";
-            this.bEliminarArchivo.Size = new System.Drawing.Size(580, 128);
+            this.bEliminarArchivo.Size = new System.Drawing.Size(502, 115);
             this.bEliminarArchivo.TabIndex = 95;
             this.bEliminarArchivo.Text = "Eliminar archivo";
             this.bEliminarArchivo.UseVisualStyleBackColor = false;
@@ -182,6 +189,8 @@ namespace Grupo02PCSAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1653, 1050);
             this.Controls.Add(this.bEliminarArchivo);
@@ -189,8 +198,11 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "fBorrarArchivoCurso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fBorrarArchivoCurso";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fBorrarArchivoCurso_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

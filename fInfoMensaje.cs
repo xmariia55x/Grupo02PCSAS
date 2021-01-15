@@ -23,10 +23,10 @@ namespace Grupo02PCSAS
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            fDatosPerfil f = new fDatosPerfil(user);
-            this.Visible = false;
-            f.ShowDialog();
-            this.Visible = true;
+            fBandejaMensajes bandejaMensajes = new fBandejaMensajes(user);
+            this.Hide();
+            bandejaMensajes.ShowDialog();
+            this.Close();
         }
 
         private void fInfoMensaje_Load(object sender, EventArgs e)

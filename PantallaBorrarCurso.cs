@@ -83,17 +83,17 @@ namespace Grupo02PCSAS
         private void bCrearCurso_Click(object sender, EventArgs e)
         {
             fCrearCursoAdmin curso = new fCrearCursoAdmin(user);
-            this.Visible = false;
+            this.Hide();
             curso.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
 
         private void bAccesoForo_Click(object sender, EventArgs e)
         {
             PantallaPrincipalForo foro = new PantallaPrincipalForo(user);
-            this.Visible = false;
+            this.Hide();
             foro.ShowDialog();
-            this.Visible = true;
+            this.Close();
         }
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {

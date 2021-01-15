@@ -106,6 +106,7 @@
             this.lRecordar.Size = new System.Drawing.Size(108, 29);
             this.lRecordar.TabIndex = 19;
             this.lRecordar.Text = "Recordar";
+            this.lRecordar.Click += new System.EventHandler(this.bRecordar_Click);
             // 
             // bValoraciones
             // 
@@ -129,6 +130,7 @@
             this.lValorar.Size = new System.Drawing.Size(196, 29);
             this.lValorar.TabIndex = 17;
             this.lValorar.Text = "Valorar actividad";
+            this.lValorar.Click += new System.EventHandler(this.bValorar_Click);
             // 
             // bValorar
             // 

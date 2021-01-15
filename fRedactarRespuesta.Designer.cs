@@ -206,7 +206,7 @@ namespace Grupo02PCSAS
             this.MaximizeBox = false;
             this.Name = "fRedactarRespuesta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fRedactarRespuesta";
+            this.Text = "Redactar respuesta";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fRedactarRespuesta_Load);
             this.panel2.ResumeLayout(false);

@@ -125,7 +125,7 @@ namespace Grupo02PCSAS
             this.dHoraFin.CustomFormat = "HH:mm";
             this.dHoraFin.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dHoraFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dHoraFin.Location = new System.Drawing.Point(1015, 527);
+            this.dHoraFin.Location = new System.Drawing.Point(1015, 534);
             this.dHoraFin.Name = "dHoraFin";
             this.dHoraFin.Size = new System.Drawing.Size(196, 31);
             this.dHoraFin.TabIndex = 69;
@@ -137,7 +137,7 @@ namespace Grupo02PCSAS
             this.dHoraIni.CustomFormat = "HH:mm";
             this.dHoraIni.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dHoraIni.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dHoraIni.Location = new System.Drawing.Point(1015, 426);
+            this.dHoraIni.Location = new System.Drawing.Point(1015, 433);
             this.dHoraIni.Name = "dHoraIni";
             this.dHoraIni.Size = new System.Drawing.Size(196, 31);
             this.dHoraIni.TabIndex = 68;
@@ -197,7 +197,7 @@ namespace Grupo02PCSAS
             // 
             this.tAforo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tAforo.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tAforo.Location = new System.Drawing.Point(1015, 624);
+            this.tAforo.Location = new System.Drawing.Point(1015, 631);
             this.tAforo.Name = "tAforo";
             this.tAforo.Size = new System.Drawing.Size(196, 31);
             this.tAforo.TabIndex = 63;
@@ -236,7 +236,7 @@ namespace Grupo02PCSAS
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1011, 586);
+            this.label9.Location = new System.Drawing.Point(1011, 593);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 26);
             this.label9.TabIndex = 57;
@@ -247,7 +247,7 @@ namespace Grupo02PCSAS
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1011, 489);
+            this.label8.Location = new System.Drawing.Point(1011, 496);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(195, 26);
             this.label8.TabIndex = 56;
@@ -258,7 +258,7 @@ namespace Grupo02PCSAS
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1011, 387);
+            this.label7.Location = new System.Drawing.Point(1011, 394);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(139, 26);
             this.label7.TabIndex = 55;
@@ -357,6 +357,7 @@ namespace Grupo02PCSAS
             this.label13.Size = new System.Drawing.Size(88, 26);
             this.label13.TabIndex = 7;
             this.label13.Text = "Mi perfil";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // pictureBox2
             // 
@@ -368,6 +369,7 @@ namespace Grupo02PCSAS
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lRol
             // 
@@ -478,7 +480,7 @@ namespace Grupo02PCSAS
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1469, 1033);
+            this.ClientSize = new System.Drawing.Size(1469, 855);
             this.Controls.Add(this.lNombreCreador);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.lNombreAct);
@@ -507,9 +509,10 @@ namespace Grupo02PCSAS
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "fModificarActividad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fModificarActividad";
+            this.Text = "Modificar actividad";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fModificarActividad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

@@ -80,9 +80,8 @@ namespace Grupo02PCSAS
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1653, 221);
+            this.panel1.Size = new System.Drawing.Size(1469, 177);
             this.panel1.TabIndex = 22;
             // 
             // panel2
@@ -98,9 +97,8 @@ namespace Grupo02PCSAS
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1651, 221);
+            this.panel2.Size = new System.Drawing.Size(1467, 177);
             this.panel2.TabIndex = 23;
             // 
             // label4
@@ -108,9 +106,9 @@ namespace Grupo02PCSAS
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1316, 158);
+            this.label4.Location = new System.Drawing.Point(1169, 126);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 29);
+            this.label4.Size = new System.Drawing.Size(88, 26);
             this.label4.TabIndex = 7;
             this.label4.Text = "Mi perfil";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -119,10 +117,9 @@ namespace Grupo02PCSAS
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.pictureBox3.Location = new System.Drawing.Point(1297, 12);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(1152, 10);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(127, 128);
+            this.pictureBox3.Size = new System.Drawing.Size(113, 102);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
@@ -133,9 +130,9 @@ namespace Grupo02PCSAS
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(757, 145);
+            this.label6.Location = new System.Drawing.Point(672, 116);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 29);
+            this.label6.Size = new System.Drawing.Size(63, 26);
             this.label6.TabIndex = 5;
             this.label6.Text = "Tu rol";
             // 
@@ -144,9 +141,9 @@ namespace Grupo02PCSAS
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(691, 145);
+            this.label7.Location = new System.Drawing.Point(613, 116);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 29);
+            this.label7.Size = new System.Drawing.Size(53, 26);
             this.label7.TabIndex = 4;
             this.label7.Text = "Rol: ";
             // 
@@ -155,9 +152,9 @@ namespace Grupo02PCSAS
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(819, 48);
+            this.label8.Location = new System.Drawing.Point(727, 38);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(408, 52);
+            this.label8.Size = new System.Drawing.Size(346, 44);
             this.label8.TabIndex = 3;
             this.label8.Text = "Nombre y apellidos";
             // 
@@ -166,9 +163,9 @@ namespace Grupo02PCSAS
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(686, 48);
+            this.label9.Location = new System.Drawing.Point(609, 38);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 57);
+            this.label9.Size = new System.Drawing.Size(112, 49);
             this.label9.TabIndex = 2;
             this.label9.Text = "Hola,";
             // 
@@ -176,9 +173,8 @@ namespace Grupo02PCSAS
             // 
             this.pictureBox4.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
             this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(334, 222);
+            this.pictureBox4.Size = new System.Drawing.Size(297, 178);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
@@ -188,9 +184,9 @@ namespace Grupo02PCSAS
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1318, 158);
+            this.label5.Location = new System.Drawing.Point(1171, 126);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 29);
+            this.label5.Size = new System.Drawing.Size(88, 26);
             this.label5.TabIndex = 7;
             this.label5.Text = "Mi perfil";
             // 
@@ -198,10 +194,9 @@ namespace Grupo02PCSAS
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::Grupo02PCSAS.Properties.Resources.usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(1299, 12);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(1154, 10);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(127, 128);
+            this.pictureBox2.Size = new System.Drawing.Size(113, 102);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
@@ -211,9 +206,9 @@ namespace Grupo02PCSAS
             this.lRol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lRol.AutoSize = true;
             this.lRol.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRol.Location = new System.Drawing.Point(759, 145);
+            this.lRol.Location = new System.Drawing.Point(674, 116);
             this.lRol.Name = "lRol";
-            this.lRol.Size = new System.Drawing.Size(73, 29);
+            this.lRol.Size = new System.Drawing.Size(63, 26);
             this.lRol.TabIndex = 5;
             this.lRol.Text = "Tu rol";
             // 
@@ -222,9 +217,9 @@ namespace Grupo02PCSAS
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(693, 145);
+            this.label2.Location = new System.Drawing.Point(615, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 29);
+            this.label2.Size = new System.Drawing.Size(53, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "Rol: ";
             // 
@@ -233,9 +228,9 @@ namespace Grupo02PCSAS
             this.lNombreUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lNombreUser.AutoSize = true;
             this.lNombreUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombreUser.Location = new System.Drawing.Point(821, 48);
+            this.lNombreUser.Location = new System.Drawing.Point(729, 38);
             this.lNombreUser.Name = "lNombreUser";
-            this.lNombreUser.Size = new System.Drawing.Size(408, 52);
+            this.lNombreUser.Size = new System.Drawing.Size(346, 44);
             this.lNombreUser.TabIndex = 3;
             this.lNombreUser.Text = "Nombre y apellidos";
             // 
@@ -244,9 +239,9 @@ namespace Grupo02PCSAS
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(688, 48);
+            this.label3.Location = new System.Drawing.Point(611, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 57);
+            this.label3.Size = new System.Drawing.Size(112, 49);
             this.label3.TabIndex = 2;
             this.label3.Text = "Hola,";
             // 
@@ -254,22 +249,23 @@ namespace Grupo02PCSAS
             // 
             this.pictureBox1.Image = global::Grupo02PCSAS.Properties.Resources.WhatsApp_Image_2020_12_06_at_17_27_26;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(334, 222);
+            this.pictureBox1.Size = new System.Drawing.Size(297, 178);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FloralWhite;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(605, 295);
+            this.label1.Location = new System.Drawing.Point(538, 236);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(457, 57);
+            this.label1.Size = new System.Drawing.Size(384, 49);
             this.label1.TabIndex = 8;
             this.label1.Text = "Bandeja de mensajes";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -278,10 +274,10 @@ namespace Grupo02PCSAS
             // 
             this.bNuevoMensaje.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bNuevoMensaje.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
-            this.bNuevoMensaje.Location = new System.Drawing.Point(119, 494);
-            this.bNuevoMensaje.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.bNuevoMensaje.Location = new System.Drawing.Point(106, 395);
+            this.bNuevoMensaje.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bNuevoMensaje.Name = "bNuevoMensaje";
-            this.bNuevoMensaje.Size = new System.Drawing.Size(230, 114);
+            this.bNuevoMensaje.Size = new System.Drawing.Size(204, 91);
             this.bNuevoMensaje.TabIndex = 23;
             this.bNuevoMensaje.Text = "Nuevo Mensaje";
             this.bNuevoMensaje.UseVisualStyleBackColor = false;
@@ -294,14 +290,13 @@ namespace Grupo02PCSAS
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(577, 466);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(513, 373);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(932, 474);
+            this.dataGridView1.Size = new System.Drawing.Size(828, 379);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -323,22 +318,22 @@ namespace Grupo02PCSAS
             // 
             this.bInfoMensaje.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bInfoMensaje.Font = new System.Drawing.Font("Trebuchet MS", 10.8F);
-            this.bInfoMensaje.Location = new System.Drawing.Point(119, 686);
-            this.bInfoMensaje.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.bInfoMensaje.Location = new System.Drawing.Point(106, 549);
+            this.bInfoMensaje.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bInfoMensaje.Name = "bInfoMensaje";
-            this.bInfoMensaje.Size = new System.Drawing.Size(230, 114);
+            this.bInfoMensaje.Size = new System.Drawing.Size(204, 91);
             this.bInfoMensaje.TabIndex = 33;
-            this.bInfoMensaje.Text = "Info Mensaje";
+            this.bInfoMensaje.Text = "Información";
             this.bInfoMensaje.UseVisualStyleBackColor = false;
             this.bInfoMensaje.Click += new System.EventHandler(this.bInfoMensaje_Click);
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Grupo02PCSAS.Properties.Resources._60577;
-            this.pictureBox5.Location = new System.Drawing.Point(44, 249);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pictureBox5.Location = new System.Drawing.Point(39, 199);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(105, 108);
+            this.pictureBox5.Size = new System.Drawing.Size(93, 86);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 32;
             this.pictureBox5.TabStop = false;
@@ -346,19 +341,18 @@ namespace Grupo02PCSAS
             // 
             // fBandejaMensajes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1653, 1055);
+            this.ClientSize = new System.Drawing.Size(1469, 844);
             this.Controls.Add(this.bInfoMensaje);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bNuevoMensaje);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "fBandejaMensajes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

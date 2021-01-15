@@ -195,6 +195,9 @@ namespace Grupo02PCSAS
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            fPrincipalProfesor p = new fPrincipalProfesor(user);
+            this.Hide();
+            p.ShowDialog();
             this.Close();
         }
 
@@ -268,6 +271,14 @@ namespace Grupo02PCSAS
             ver.ShowDialog();
             this.Close();
            
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            fDatosPerfil d = new fDatosPerfil(user);
+            this.Visible = false;
+            d.ShowDialog();
+            this.Visible = true;
         }
     }
 }

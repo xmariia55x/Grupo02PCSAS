@@ -39,7 +39,7 @@ namespace Grupo02PCSAS
             MySqlConnection conexion = new MySqlConnection();
             conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
             conexion.Open();
-            MySqlCommand comando = new MySqlCommand("SELECT * FROM MaterialActividad WHERE idActividad = '" + actividad.IdActividad + "'", conexion);
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM MaterialActividad WHERE idActividad = " + actividad.IdActividad + ";", conexion);
             MySqlDataAdapter adaptador = new MySqlDataAdapter();
             adaptador.SelectCommand = comando;
             DataTable tabla = new DataTable();
@@ -91,6 +91,27 @@ namespace Grupo02PCSAS
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             cerrar();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datosPerfil = new fDatosPerfil(usuario);
+            this.Visible = false;
+            datosPerfil.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            fDatosPerfil datosPerfil = new fDatosPerfil(usuario);
+            this.Visible = false;
+            datosPerfil.ShowDialog();
+            this.Visible = true;
         }
     }
 }

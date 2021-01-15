@@ -26,9 +26,9 @@ namespace Grupo02PCSAS
 			label20.Text = user.RolUsuario.RolName;
 			lNombreUser.Text = user.NombreUsuario;
 			// TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.ActividadesRealizadas' Puede moverla o quitarla según sea necesario.
-			this.actividadesRealizadasTableAdapter.Fill(this.apsgrupo02DataSet.ActividadesRealizadas);
+			//this.actividadesRealizadasTableAdapter.Fill(this.apsgrupo02DataSet.ActividadesRealizadas);
             // TODO: esta línea de código carga datos en la tabla 'apsgrupo02DataSet.CursosRealizados' Puede moverla o quitarla según sea necesario.
-            this.cursosRealizadosTableAdapter.Fill(this.apsgrupo02DataSet.CursosRealizados);
+            //this.cursosRealizadosTableAdapter.Fill(this.apsgrupo02DataSet.CursosRealizados);
 			if (user.RolUsuario.RolName.Equals("ALUMNO"))
 			{
 				
@@ -62,17 +62,8 @@ namespace Grupo02PCSAS
 			DataTable tabla = new DataTable();
 			adaptador.Fill(tabla);
 			dataGridView1.DataSource = tabla;
-			dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+			dataGridView1.Columns[0].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
 
-			int i = 0;
-			foreach (DataGridViewColumn c in dataGridView1.Columns)
-			{
-				i += c.Width;
-			}
-
-			dataGridView1.Width = i + dataGridView1.RowHeadersWidth + 2;
-			dataGridView1.Height = dataGridView1.GetRowDisplayRectangle(dataGridView1.NewRowIndex, true).Bottom +
-				dataGridView1.GetRowDisplayRectangle(dataGridView1.NewRowIndex, false).Height;
 
 
 			//Cargar el dataGridView filtrado ActividadRealizado
@@ -87,18 +78,8 @@ namespace Grupo02PCSAS
 			tabla = new DataTable();
 			adaptador.Fill(tabla);
 			dataGridView2.DataSource = tabla;
-
-			dataGridView2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-			i = 0;
-			foreach (DataGridViewColumn c in dataGridView1.Columns)
-			{
-				i += c.Width;
-			}
-
-			dataGridView2.Width = i + dataGridView2.RowHeadersWidth + 2;
-			dataGridView2.Height = dataGridView2.GetRowDisplayRectangle(dataGridView2.NewRowIndex, true).Bottom +
-				dataGridView2.GetRowDisplayRectangle(dataGridView2.NewRowIndex, false).Height;
-
+			dataGridView2.Columns[0].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			
 
 		}
 
@@ -129,8 +110,11 @@ namespace Grupo02PCSAS
         
         private void bAtras_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+			fDatosPerfil edicion = new fDatosPerfil(user);
+			this.Hide();
+			edicion.ShowDialog();
+			this.Close();
+		}
 
         
 
@@ -166,15 +150,6 @@ namespace Grupo02PCSAS
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         
 

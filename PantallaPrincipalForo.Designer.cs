@@ -127,17 +127,17 @@ namespace Grupo02PCSAS
             // 
             this.creadorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.creadorDataGridViewTextBoxColumn.DataPropertyName = "creador";
-            this.creadorDataGridViewTextBoxColumn.HeaderText = "creador";
+            this.creadorDataGridViewTextBoxColumn.HeaderText = "Creador";
             this.creadorDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.creadorDataGridViewTextBoxColumn.Name = "creadorDataGridViewTextBoxColumn";
             this.creadorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.creadorDataGridViewTextBoxColumn.Width = 86;
+            this.creadorDataGridViewTextBoxColumn.Width = 88;
             // 
             // asuntoDataGridViewTextBoxColumn
             // 
             this.asuntoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.asuntoDataGridViewTextBoxColumn.DataPropertyName = "asunto";
-            this.asuntoDataGridViewTextBoxColumn.HeaderText = "asunto";
+            this.asuntoDataGridViewTextBoxColumn.HeaderText = "Asunto";
             this.asuntoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.asuntoDataGridViewTextBoxColumn.Name = "asuntoDataGridViewTextBoxColumn";
             this.asuntoDataGridViewTextBoxColumn.ReadOnly = true;
@@ -156,11 +156,11 @@ namespace Grupo02PCSAS
             // 
             this.fechaInicioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.fechaInicioDataGridViewTextBoxColumn.DataPropertyName = "fechaInicio";
-            this.fechaInicioDataGridViewTextBoxColumn.HeaderText = "fechaInicio";
+            this.fechaInicioDataGridViewTextBoxColumn.HeaderText = "Fecha inicio";
             this.fechaInicioDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fechaInicioDataGridViewTextBoxColumn.Name = "fechaInicioDataGridViewTextBoxColumn";
             this.fechaInicioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaInicioDataGridViewTextBoxColumn.Width = 104;
+            this.fechaInicioDataGridViewTextBoxColumn.Width = 112;
             // 
             // debateBindingSource
             // 
@@ -219,10 +219,10 @@ namespace Grupo02PCSAS
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Grupo02PCSAS.Properties.Resources._60577;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 204);
+            this.pictureBox3.Location = new System.Drawing.Point(41, 220);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 64);
+            this.pictureBox3.Size = new System.Drawing.Size(71, 48);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
