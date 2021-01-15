@@ -41,39 +41,48 @@ namespace Grupo02PCSAS
 
         private void bGuardarCambiosAct_Click(object sender, EventArgs e)
         {
-            nombreActividad = tNombreAct.Text;
-            descrip = tDescripcionAct.Text;
-            lugar = tLugarAct.Text;
-            fechaIni = dFechaIniAct.Value.ToString();
-            fechaFin = dFechaFinAct.Value.ToString();
-            horaIni = dHoraIniAct.Value.ToString("HH:mm");
-            horaFin = dHoraFinAct.Value.ToString("HH:mm");
+            try
+            {
+                nombreActividad = tNombreAct.Text;
+                descrip = tDescripcionAct.Text;
+                lugar = tLugarAct.Text;
+                fechaIni = dFechaIniAct.Value.ToString();
+                fechaFin = dFechaFinAct.Value.ToString();
+                horaIni = dHoraIniAct.Value.ToString("HH:mm");
+                horaFin = dHoraFinAct.Value.ToString("HH:mm");
 
-            int comparacion = dFechaFinAct.Value.CompareTo(dFechaIniAct.Value);
+                int comparacion = dFechaFinAct.Value.CompareTo(dFechaIniAct.Value);
+                
+                   
 
-            aforo = tAforoAct.Text.ToString(); //Pasar el aforo a entero 
-            aforoActividad = int.Parse(aforo);
+                    if (nombreActividad.Equals("") || descrip.Equals("") || lugar.Equals("") || fechaIni.Equals("") || fechaFin.Equals("") ||
+                        horaIni.Equals("") || horaFin.Equals("") || tAforoAct.Text == null || tAforoAct.Text.Equals(""))
+                    {
+                        throw new Exception("Faltan campos obligatorios por rellenar.");
+                    }
+                    else
+                    {
+                        if (comparacion >= 0)
+                        {
+                            aforo = tAforoAct.Text.ToString(); //Pasar el aforo a entero 
+                            aforoActividad = int.Parse(aforo);
+                            actividad = new Actividad(usuarioCreador, nombreActividad, descrip, fechaIni, fechaFin, horaIni, horaFin, lugar, aforoActividad);
+                            MessageBox.Show("Actividad creada correctamente");
+                            cerrar();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Las fechas no son correctas.");
+                        }
+
+                    }
+                
+                
+            } catch (Exception ex)
+            {
+                MessageBox.Show("ERROR : " + ex.Message);
+            }
             
-            if (nombreActividad.Equals("") || descrip.Equals("") || lugar.Equals("") || fechaIni.Equals("") || fechaFin.Equals("") ||
-                horaIni.Equals("") || horaFin.Equals("") || aforoActividad < 0)
-            {
-                MessageBox.Show("Faltan campos obligatorios por rellenar.");
-            }
-            else
-            {
-                if (comparacion >= 0)
-                {
-
-                    actividad = new Actividad(usuarioCreador, nombreActividad, descrip, fechaIni, fechaFin, horaIni, horaFin, lugar, aforoActividad);
-                    MessageBox.Show("Actividad creada correctamente");
-                    cerrar();
-                }
-                else
-                {
-                    MessageBox.Show("Las fechas no son correctas.");
-                }
-
-            }
             
         }
 
