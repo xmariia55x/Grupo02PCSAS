@@ -29,6 +29,8 @@ namespace Grupo02PCSAS
             dgvDescargas.Visible = false;
             if (user == null)
             {
+                lRol.Text = "INVITADO";
+                lNombreUser.Text = "INVITADO";
                 pictureBox2.Visible = false;
                 label5.Visible = false;
                 label9.Visible = false;
