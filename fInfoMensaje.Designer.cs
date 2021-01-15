@@ -255,13 +255,14 @@ namespace Grupo02PCSAS
             this.tMensaje.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tMensaje.AutoEllipsis = true;
             this.tMensaje.AutoSize = true;
             this.tMensaje.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tMensaje.Location = new System.Drawing.Point(536, 381);
             this.tMensaje.Name = "tMensaje";
-            this.tMensaje.Size = new System.Drawing.Size(94, 26);
+            this.tMensaje.Size = new System.Drawing.Size(176, 26);
             this.tMensaje.TabIndex = 34;
-            this.tMensaje.Text = "tMensaje";
+            this.tMensaje.Text = "texto del mensaje";
             // 
             // fInfoMensaje
             // 

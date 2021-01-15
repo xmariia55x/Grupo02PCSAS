@@ -558,7 +558,7 @@ namespace Grupo02PCSAS
                             DateTime dt2 = DateTime.Now;
                             if (dt.CompareTo(dt2) <= 0)
                             {
-                                throw new Exception("Este curso ya ha finalizado.");
+                                throw new Exception("Este curso ya ha comenzado.");
                             } else
                             {
                                 CursosRealizados c = new CursosRealizados(cursoSeleccionado.CursoID, alumno.CorreoUsuario);
@@ -632,7 +632,7 @@ namespace Grupo02PCSAS
                             DateTime dt2 = DateTime.Now;
                             if(dt.CompareTo(dt2) <= 0)
                             {
-                                throw new Exception("Esta actividad ya ha finalizado.");
+                                throw new Exception("Esta actividad ya ha comenzado.");
                             }
                             else
                             {
