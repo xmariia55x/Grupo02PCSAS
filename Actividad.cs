@@ -183,7 +183,7 @@ namespace Grupo02PCSAS
             miBD.Delete(sentencia);
 
             idActividad = -1;
-            UsuarioCreador = null;
+            usuarioCreador = null;
             nombreActividad = null;
             descripcionActividad = null;
             fechaInicioActividad = null;

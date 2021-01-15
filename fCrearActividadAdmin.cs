@@ -12,7 +12,7 @@ namespace Grupo02PCSAS
 {
     public partial class fCrearActividadAdmin : Form
     {
-        private string nombreActividad, descrip, lugar, fechaIni, fechaFin, horaIni, horaFin, aforo, colaborador;
+        private string nombreActividad, descrip, lugar, fechaIni, fechaFin, horaIni, horaFin, aforo;
         private int aforoActividad;
 
         
@@ -53,9 +53,9 @@ namespace Grupo02PCSAS
 
             aforo = tAforoAct.Text.ToString(); //Pasar el aforo a entero 
             aforoActividad = int.Parse(aforo);
-            colaborador = lColaboradores.SelectedItem.ToString();
+            
             if (nombreActividad.Equals("") || descrip.Equals("") || lugar.Equals("") || fechaIni.Equals("") || fechaFin.Equals("") ||
-                horaIni.Equals("") || horaFin.Equals("") || colaborador.Equals("") || aforoActividad < 0)
+                horaIni.Equals("") || horaFin.Equals("") || aforoActividad < 0)
             {
                 MessageBox.Show("Faltan campos obligatorios por rellenar.");
             }
@@ -87,7 +87,7 @@ namespace Grupo02PCSAS
         private void fCrearActividadAdmin_Load(object sender, EventArgs e)
         {
             bGuardarCambiosAct.Enabled = true;
-            foreach (Usuario u in Usuario.listaColaboradores()) lColaboradores.Items.Add(u.CorreoUsuario);
+            //foreach (Usuario u in Usuario.listaColaboradores()) lColaboradores.Items.Add(u.CorreoUsuario);
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
