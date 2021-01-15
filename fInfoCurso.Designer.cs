@@ -112,7 +112,7 @@ namespace Grupo02PCSAS
             // 
             this.lInvitado.AutoSize = true;
             this.lInvitado.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lInvitado.Location = new System.Drawing.Point(587, 158);
+            this.lInvitado.Location = new System.Drawing.Point(595, 153);
             this.lInvitado.Name = "lInvitado";
             this.lInvitado.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lInvitado.Size = new System.Drawing.Size(411, 27);
@@ -616,7 +616,7 @@ namespace Grupo02PCSAS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1648, 1198);
+            this.ClientSize = new System.Drawing.Size(1648, 1050);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
