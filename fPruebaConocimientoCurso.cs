@@ -81,7 +81,7 @@ namespace Grupo02PCSAS
                     respuesta = new RespuestaPruebaConocimiento(usuario.CorreoUsuario, curso.CursoID, chlBpregunta1.CheckedItems[0].ToString(), chlBpregunta2.CheckedItems[0].ToString(),
                         chlBpregunta3.CheckedItems[0].ToString(), chlBpregunta4.CheckedItems[0].ToString(), chlBpregunta5.CheckedItems[0].ToString());
                     MessageBox.Show("Prueba de conocimiento guardada correctamente.");
-                    this.Close();
+                    cierra();
                 } else
                 {
                     MessageBox.Show("Faltan campos por rellenar o hay campos que no están bien rellenos.");
@@ -91,6 +91,32 @@ namespace Grupo02PCSAS
             {
                 MessageBox.Show("ERROR: " + ex.Message);
             }
+        }
+
+        private void cierra()
+        {
+            if (usuario.RolUsuario.RolName.Equals("ENTIDAD"))
+            {
+                fPrincipalOng ong = new fPrincipalOng(usuario);
+                this.Hide();
+                ong.ShowDialog();
+                this.Close();
+            }
+            else if (usuario.RolUsuario.RolName.Equals("PROFESOR"))
+            {
+                fPrincipalProfesor profe = new fPrincipalProfesor(usuario);
+                this.Hide();
+                profe.ShowDialog();
+                this.Close();
+            }
+            else if (usuario.RolUsuario.RolName.Equals("ALUMNO"))
+            {
+                fPantallaPrincipalAlumno alu = new fPantallaPrincipalAlumno(usuario);
+                this.Hide();
+                alu.ShowDialog();
+                this.Close();
+            }
+            
         }
 
         private Boolean compruebaSeleccionCorrecta(CheckedListBox checkbox)
