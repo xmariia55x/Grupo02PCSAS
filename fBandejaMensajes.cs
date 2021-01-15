@@ -18,7 +18,7 @@ namespace Grupo02PCSAS
         public fBandejaMensajes(Usuario u)
         {
             InitializeComponent();
-            this.user = u;
+            user = u;
         }
 
         private void label1_Click(object sender, EventArgs e)

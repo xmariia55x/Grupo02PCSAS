@@ -232,7 +232,7 @@ namespace Grupo02PCSAS
 
         private void bMensajes_Click(object sender, EventArgs e)
         {
-			fBandejaMensajes f = new fBandejaMensajes(this.user);
+			fBandejaMensajes f = new fBandejaMensajes(user);
 			this.Hide();
 			f.ShowDialog();
 			this.Close();
