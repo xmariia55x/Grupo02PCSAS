@@ -33,66 +33,80 @@ namespace Grupo02PCSAS
                 bValorar.Visible = false;
                 lValorar.Visible = false;
                 lRecordar.Visible = false;
+                bRecordar.Visible = false;
                 bValoraciones.Visible = false;
-            } else if(!act.UsuarioCreador.Equals(user.CorreoUsuario))
-            {
-                bValoraciones.Visible = false;
-                lRecordar.Visible = false;
             }
-            mostrarUsuario();
-            mostrarActividad();
-            
-            if(ActividadesRealizadas.comprobarInscrito(user, act))
+            else
             {
-                lInscrito.Text = "Inscrito";
                 string[] fechaSplit = act.FechaFinActividad.Split('/');
                 string[] horaSplit = act.HoraFinActividad.Split(':');
                 DateTime fecha = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]), int.Parse(horaSplit[0]), int.Parse(horaSplit[1]), 0);
-                
-                if (DateTime.Now.CompareTo(fecha) <= 0)
-                {
-                    lValorar.Visible = false;
-                    bValorar.Visible = false;
-                    
-                }/* else
-                {
-                    lValorar.Visible = true;
-                    bValorar.Visible = true;
-                }*/
-            } else
-            {
-                lInscrito.Text = "No inscrito";
-                bValorar.Visible = false;
-                lValorar.Visible = false;
-            }
-            
 
-            calcularPlazasDisponibles();
-            if(user != null && (user.RolUsuario.RolName.Equals("PROFESOR") || user.RolUsuario.RolName.Equals("ENTIDAD")))
-            {
-                string[] fechaSplit = act.FechaInicioActividad.Split('/');
-                string[] horaSplit = act.HoraInicioActividad.Split(':');
-                DateTime fecha = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]), int.Parse(horaSplit[0]), int.Parse(horaSplit[1]), 0);
-                
-                if (fecha.CompareTo(DateTime.Now) >= 0)
-                {
-
-                    bRecordar.Visible = true;
-                    lRecordar.Visible = true;
-                    bValoraciones.Visible = false;
-                }
-                else
+                if (!act.UsuarioCreador.CorreoUsuario.Equals(user.CorreoUsuario))
                 {
                     bRecordar.Visible = false;
                     lRecordar.Visible = false;
-                    bValoraciones.Visible = true;
-                    
+                    bValoraciones.Visible = false;
+
+                    if (ActividadesRealizadas.comprobarInscrito(user, act))
+                    {
+                        lInscrito.Text = "Inscrito";
+
+                        if (DateTime.Now.CompareTo(fecha) <= 0)
+                        {
+                            lValorar.Visible = false;
+                            bValorar.Visible = false;
+                        }
+                        else
+                        {
+                            bValorar.Visible = true;
+                            lValorar.Visible = true;
+                        }
+                    }
+                    else
+                    {
+                        lValorar.Visible = false;
+                        bValorar.Visible = false;
+                        lInscrito.Text = "No inscrito";
+                    }
                 }
-            } else
-            {
-                bRecordar.Hide();
+                else
+                {
+                    string[] fechaSplitInicio = act.FechaInicioActividad.Split('/');
+                    string[] horaSplitInicio = act.HoraInicioActividad.Split(':');
+                    DateTime fechaInicio = new DateTime(int.Parse(fechaSplitInicio[2]), int.Parse(fechaSplitInicio[1]), int.Parse(fechaSplitInicio[0]), int.Parse(horaSplitInicio[0]), int.Parse(horaSplitInicio[1]), 0);
+
+                    lValorar.Visible = false;
+                    bValorar.Visible = false;
+
+                    //Si es menor que la fecha de inicio
+                    if (DateTime.Now.CompareTo(fechaInicio) <= 0)
+                    {
+                        bRecordar.Visible = true;
+                        lRecordar.Visible = true;
+                        bValoraciones.Visible = false;
+                    }
+                    //Si es menor que la fecha final
+                    else if (DateTime.Now.CompareTo(fecha) <= 0)
+                    {
+                        bRecordar.Visible = false;
+                        lRecordar.Visible = false;
+                        bValoraciones.Visible = false;
+                    }
+                    //Si la actividad ha acabado
+                    else
+                    {
+                        bRecordar.Visible = false;
+                        lRecordar.Visible = false;
+                        bValoraciones.Visible = true;
+                    }
+                }
+
+
+                mostrarUsuario();
             }
-            
+            mostrarActividad();
+            calcularPlazasDisponibles();
         }
 
         private void calcularPlazasDisponibles()
