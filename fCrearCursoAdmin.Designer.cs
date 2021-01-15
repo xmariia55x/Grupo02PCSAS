@@ -237,7 +237,7 @@ namespace Grupo02PCSAS
             this.bGuardarCambiosCurso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bGuardarCambiosCurso.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bGuardarCambiosCurso.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bGuardarCambiosCurso.Location = new System.Drawing.Point(677, 672);
+            this.bGuardarCambiosCurso.Location = new System.Drawing.Point(677, 730);
             this.bGuardarCambiosCurso.Name = "bGuardarCambiosCurso";
             this.bGuardarCambiosCurso.Size = new System.Drawing.Size(181, 63);
             this.bGuardarCambiosCurso.TabIndex = 26;
@@ -300,7 +300,7 @@ namespace Grupo02PCSAS
             this.listProfesor.ItemHeight = 23;
             this.listProfesor.Location = new System.Drawing.Point(0, 41);
             this.listProfesor.Name = "listProfesor";
-            this.listProfesor.Size = new System.Drawing.Size(196, 27);
+            this.listProfesor.Size = new System.Drawing.Size(196, 96);
             this.listProfesor.TabIndex = 32;
             // 
             // panel1
@@ -308,9 +308,9 @@ namespace Grupo02PCSAS
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.listProfesor);
-            this.panel1.Location = new System.Drawing.Point(1076, 624);
+            this.panel1.Location = new System.Drawing.Point(1076, 608);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.Size = new System.Drawing.Size(202, 147);
             this.panel1.TabIndex = 33;
             // 
             // pictureBox3
