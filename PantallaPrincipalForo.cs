@@ -42,6 +42,7 @@ namespace Grupo02PCSAS
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
             dgvMisDebates.DataSource = tabla;
+            dgvMisDebates.Columns[0].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

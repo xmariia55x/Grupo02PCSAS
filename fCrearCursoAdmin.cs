@@ -12,7 +12,7 @@ namespace Grupo02PCSAS
 {
     public partial class fCrearCursoAdmin : Form
     {
-        private string nombreDelCurso, descrip, lugar, fechaIni, fechaFin, horaIni, horaFin, aforo, profesor;
+        private string nombreDelCurso, descrip, lugar, fechaIni, fechaFin, horaIni, horaFin, aforo;
         private int aforoDelCurso;
 
 

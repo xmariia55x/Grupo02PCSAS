@@ -99,8 +99,9 @@ namespace Grupo02PCSAS
         public void BorrarDebate()
         {
             SQLSERVERDB miBD = new SQLSERVERDB(BD_SERVER, BD_NAME);
-            string sentencia = "DELETE * FROM Debate WHERE id = " + id + ";";
+            string sentencia = "DELETE FROM Debate WHERE id = " + id + ";";
             miBD.Delete(sentencia);
+            id = -1;
             creadorDebate = null;
             asuntoDebate = null;
             mensajeDebate = null;

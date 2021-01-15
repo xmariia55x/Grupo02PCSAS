@@ -158,6 +158,7 @@ namespace Grupo02PCSAS
             // 
             this.tRespuesta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tRespuesta.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tRespuesta.Location = new System.Drawing.Point(407, 284);
             this.tRespuesta.Multiline = true;
             this.tRespuesta.Name = "tRespuesta";
