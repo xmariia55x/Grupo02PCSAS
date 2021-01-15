@@ -72,7 +72,7 @@ namespace Grupo02PCSAS
                         }
                         else
                         {
-                            MessageBox.Show("Las fechas no son correctas.");
+                            throw new Exception("Las fechas no son correctas.");
                         }
 
                     }
