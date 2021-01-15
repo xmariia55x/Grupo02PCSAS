@@ -30,12 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fInfoActividad));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dgvDescargas = new System.Windows.Forms.DataGridView();
+            this.lInvitado = new System.Windows.Forms.Label();
+            this.lDescargasInscritos = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.lRecordar = new System.Windows.Forms.Label();
             this.bValoraciones = new System.Windows.Forms.Button();
             this.lValorar = new System.Windows.Forms.Label();
             this.bValorar = new System.Windows.Forms.Button();
             this.bRecordar = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lHoraFin = new System.Windows.Forms.Label();
             this.lFechaFin = new System.Windows.Forms.Label();
@@ -71,6 +74,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDescargas)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -85,17 +89,75 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FloralWhite;
+            this.panel5.Controls.Add(this.dgvDescargas);
+            this.panel5.Controls.Add(this.lInvitado);
+            this.panel5.Controls.Add(this.lDescargasInscritos);
+            this.panel5.Controls.Add(this.label20);
             this.panel5.Controls.Add(this.lRecordar);
             this.panel5.Controls.Add(this.bValoraciones);
             this.panel5.Controls.Add(this.lValorar);
             this.panel5.Controls.Add(this.bValorar);
             this.panel5.Controls.Add(this.bRecordar);
-            this.panel5.Controls.Add(this.label20);
             this.panel5.Location = new System.Drawing.Point(0, 812);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1653, 481);
             this.panel5.TabIndex = 10;
+            // 
+            // dgvDescargas
+            // 
+            this.dgvDescargas.AllowUserToAddRows = false;
+            this.dgvDescargas.AllowUserToDeleteRows = false;
+            this.dgvDescargas.AllowUserToOrderColumns = true;
+            this.dgvDescargas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvDescargas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDescargas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvDescargas.BackgroundColor = System.Drawing.Color.FloralWhite;
+            this.dgvDescargas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDescargas.Location = new System.Drawing.Point(610, 104);
+            this.dgvDescargas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvDescargas.MultiSelect = false;
+            this.dgvDescargas.Name = "dgvDescargas";
+            this.dgvDescargas.ReadOnly = true;
+            this.dgvDescargas.RowHeadersWidth = 62;
+            this.dgvDescargas.RowTemplate.Height = 28;
+            this.dgvDescargas.Size = new System.Drawing.Size(464, 161);
+            this.dgvDescargas.TabIndex = 23;
+            this.dgvDescargas.SelectionChanged += new System.EventHandler(this.dgvDescargas_SelectionChanged);
+            // 
+            // lInvitado
+            // 
+            this.lInvitado.AutoSize = true;
+            this.lInvitado.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lInvitado.Location = new System.Drawing.Point(642, 73);
+            this.lInvitado.Name = "lInvitado";
+            this.lInvitado.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lInvitado.Size = new System.Drawing.Size(411, 27);
+            this.lInvitado.TabIndex = 22;
+            this.lInvitado.Text = "Inicie sesion para descargar los archivos";
+            // 
+            // lDescargasInscritos
+            // 
+            this.lDescargasInscritos.AutoSize = true;
+            this.lDescargasInscritos.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lDescargasInscritos.Location = new System.Drawing.Point(593, 46);
+            this.lDescargasInscritos.Name = "lDescargasInscritos";
+            this.lDescargasInscritos.Size = new System.Drawing.Size(543, 27);
+            this.lDescargasInscritos.TabIndex = 21;
+            this.lDescargasInscritos.Text = "Inscribase en la actividad para descargar los archivos";
+            this.lDescargasInscritos.UseMnemonic = false;
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(728, 13);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(253, 29);
+            this.label20.TabIndex = 20;
+            this.label20.Text = "ARCHIVOS Y ENLACES";
             // 
             // lRecordar
             // 
@@ -158,16 +220,6 @@
             this.bRecordar.TabIndex = 7;
             this.bRecordar.UseVisualStyleBackColor = false;
             this.bRecordar.Click += new System.EventHandler(this.bRecordar_Click);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(759, 22);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(207, 29);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "COLABORADORES";
             // 
             // panel4
             // 
@@ -575,6 +627,7 @@
             this.Load += new System.EventHandler(this.fInfoActividad_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDescargas)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -593,7 +646,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lHoraFin;
         private System.Windows.Forms.Label lFechaFin;
@@ -633,5 +685,9 @@
         private System.Windows.Forms.Label lValorar;
         private System.Windows.Forms.Button bValoraciones;
         private System.Windows.Forms.Label lRecordar;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lDescargasInscritos;
+        private System.Windows.Forms.Label lInvitado;
+        private System.Windows.Forms.DataGridView dgvDescargas;
     }
 }

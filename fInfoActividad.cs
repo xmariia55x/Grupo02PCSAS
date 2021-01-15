@@ -1,7 +1,9 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,6 +26,7 @@ namespace Grupo02PCSAS
 
         private void fInfoActividad_Load(object sender, EventArgs e)
         {
+            dgvDescargas.Visible = false;
             if (user == null)
             {
                 pictureBox2.Visible = false;
@@ -35,12 +38,16 @@ namespace Grupo02PCSAS
                 lRecordar.Visible = false;
                 bRecordar.Visible = false;
                 bValoraciones.Visible = false;
+                lInvitado.Visible = true;
+                lDescargasInscritos.Visible = false;
             }
             else
             {
                 string[] fechaSplit = act.FechaFinActividad.Split('/');
                 string[] horaSplit = act.HoraFinActividad.Split(':');
                 DateTime fecha = new DateTime(int.Parse(fechaSplit[2]), int.Parse(fechaSplit[1]), int.Parse(fechaSplit[0]), int.Parse(horaSplit[0]), int.Parse(horaSplit[1]), 0);
+                lInvitado.Visible = false;
+                cargaGrid();
 
                 if (!act.UsuarioCreador.CorreoUsuario.Equals(user.CorreoUsuario))
                 {
@@ -51,6 +58,8 @@ namespace Grupo02PCSAS
                     if (ActividadesRealizadas.comprobarInscrito(user, act))
                     {
                         lInscrito.Text = "Inscrito";
+                        dgvDescargas.Visible = true;
+                        lDescargasInscritos.Visible = false;
 
                         if (DateTime.Now.CompareTo(fecha) <= 0)
                         {
@@ -68,6 +77,7 @@ namespace Grupo02PCSAS
                         lValorar.Visible = false;
                         bValorar.Visible = false;
                         lInscrito.Text = "No inscrito";
+                        lDescargasInscritos.Visible = true;
                     }
                 }
                 else
@@ -107,6 +117,24 @@ namespace Grupo02PCSAS
             }
             mostrarActividad();
             calcularPlazasDisponibles();
+        }
+
+        private void cargaGrid()
+        {
+            MySqlConnection conexion = new MySqlConnection();
+            conexion.ConnectionString = "server=ingreq2021-mysql.cobadwnzalab.eu-central-1.rds.amazonaws.com; user id=grupo02;database=apsgrupo02;Password=galvezgerena2021";
+            conexion.Open();
+            //nombreCurso 'Nombre', fechaInicioCurso, fechaFinCurso, aforoCurso
+            MySqlCommand comandoA = new MySqlCommand("SELECT nombre as `Nombre del recurso` FROM MaterialActividad WHERE idActividad = " + act.IdActividad, conexion);
+            MySqlDataAdapter adaptadorA = new MySqlDataAdapter();
+            adaptadorA.SelectCommand = comandoA;
+            DataTable tablaA = new DataTable();
+            adaptadorA.Fill(tablaA);
+            dgvDescargas.DataSource = tablaA;
+            if (tablaA.Rows.Count == 0)
+            {
+                dgvDescargas.Visible = false;
+            }
         }
 
         private void calcularPlazasDisponibles()
@@ -267,6 +295,25 @@ namespace Grupo02PCSAS
             this.Hide();
             ver.ShowDialog();
             this.Close();
+        }
+
+        private void dgvDescargas_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvDescargas.SelectedRows.Count > 0)
+                {
+                    String nombre = (String)dgvDescargas.SelectedRows[0].Cells[0].Value;
+                    if (MessageBox.Show("¿Está seguro que quiere descargar el archivo?", "Descargar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        Process.Start(new MaterialActividad(nombre, act.IdActividad).Enlace);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
         }
     }
 }
