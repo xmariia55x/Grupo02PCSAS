@@ -15,10 +15,10 @@ Yeray Ruiz Suárez
 1. Introducción
 
     1. Objetivos
-    1. Alcance
-    1. Definiciones, acrónimos y abreviaturas
-    1. Referencias
-    1. Resumen
+    2. Alcance
+    3. Definiciones, acrónimos y abreviaturas
+    4. Referencias
+    5. Resumen
 2. Directivas del proyecto
 
     2. Descripción del problema
