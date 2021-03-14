@@ -96,4 +96,24 @@ Referencia al [BOE-A-2017-10811](https://www.boe.es/diario_boe/txt.php?id=BOE-A-
 
 Este documento se encuentra estructurado según como se explica en el índice. El punto 2 define el problema que se presenta, así como la solución que planteamos. En el apartado 3 se describen los participantes y los usuarios propios del proyecto. La sección 4 cubre el funcionamiento y las características de la aplicación. El apartado 5 describe todos los requisitos funcionales del proyecto. El punto 6 trata acerca de la preferencia y la prioridad que se establecerá en el proyecto. Por último, en la sección 7 se cubre todo lo relacionado con los requisitos no funcionales.
 
+#### Directivas del proyecto
+
+##### Descripción del problema
+
+El problema de no poder comunicarse presencialmente ya sea debido a la distancia o a otros problemas de salud, afecta a aquellos que recibían ayudas sociales mediante actividades, tanto en educación como en apoyo moral. El impacto de ese problema se ve reflejado directamente en que estas labores de aprendizajes-servicios a la comunidad no se pueden realizar. 
+
+Una solución satisfactoria sería crear un sistema de aprendizaje-servicio que proporcione contenidos formativos, informativos, de difusión y sensibilización a sus usuarios, disponible para cualquier dispositivo con conexión a internet.
+
+Así, se lograría unir a los centros educativos más desfavorecidos y apoyar a los alumnos con un sistema que  sea interactivo y pedagógico que permita compartir contenidos en directo y/o diferido además de contener numerosos recursos lúdicos para mejorar el aprendizaje de los alumnos de estos centros.
+
+Cabe destacar que a la vez que los alumnos de los centros aprenden, los alumnos de la UMA implicados en este proyecto se forman y adquieren competencias que con otro tipo de formación no podrían adquirir.
+
+##### Descripción del producto
+
+Para la comunidad educativa, empresas y ONG, quienes tienen una necesidad de formarse en aspectos sociales, el sistema es un software que ofrece una solución al problema planteado. El objetivo principal de la aplicación es crear un entorno de unión entre los alumnos más desfavorecidos y profesores implicados de todo el mundo, ofrecer actividades formativas para estos estudiantes a la vez que los estudiantes de la UMA se forman mediante la adquisición de competencias transversales y experiencia laboral.  Por tanto, incluiremos el sistema en un mercado en el que no hay otro competidor actualmente por lo que nuestro producto cubrirá unas necesidades que a día de hoy nadie las satisface.
+
+
+
+
+
 
