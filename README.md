@@ -76,3 +76,15 @@ Hay que destacar que está enmarcado en el contexto de la asignatura de “Ingen
 - UMA: Universidad de Málaga.
 - CV: Currículum Vitae.
 - LGPD: Ley General de Protección de Datos.
+
+##### Referencias
+
+En este documento se hará referencia al BOE ya que en el BOE se regula cómo debe ser el aprendizaje basado en servicios y que debe cumplir.
+
+Referencia al [BOE-A-2017-10811] (https://www.boe.es/diario_boe/txt.php?id=BOE-A-2017-10811) donde se regula el ApS.
+1 [Blog de Roser Batlle]. (https://roserbatlle.net/)
+2 [National Youth Leadership Council – NYLC]. (https://www.nylc.org/)
+3 [Centro Latinoamericano de Aprendizaje Servicio Solidario]. (http://www.clayss.org.ar/)
+4 [Google Classroom]. (https://classroom.google.com/)
+5 [Ley General de Protección de Datos]. (https://www.boe.es/eli/es/lo/2018/12/05/3)
+
