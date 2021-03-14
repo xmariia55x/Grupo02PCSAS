@@ -23,27 +23,26 @@ Yeray Ruiz Suárez
 
     1. Descripción del problema
     1. Descripción del producto
-3. Descripción de participantes y usuarios
+1. Descripción de participantes y usuarios
 
-    3. Resumen de los participantes
-    3. Resumen y entorno de los usuarios
-    3. Perfiles de los participantes
-    3. Perfiles de usuarios
-    3. Alternativas y competencia
-4. Visión general del producto
+    1. Resumen de los participantes
+    1. Resumen y entorno de los usuarios
+    1. Perfiles de los participantes
+    1. Perfiles de usuarios
+    1. Alternativas y competencia
+1. Visión general del producto
 
-    4. Entorno de despliegue
-    4. Resumen de características
-    4. Suposiciones y dependencias
-    4. Precio y coste
-    4. Licencias e instalación
-5. Requisitos funcionales
+    1. Entorno de despliegue
+    1. Resumen de características
+    1. Suposiciones y dependencias
+    1. Precio y coste
+    1. Licencias e instalación
+1. Requisitos funcionales
 
-6. Precedencia y prioridad
+1. Precedencia y prioridad
 
-7. Requisitos no funcionales
+1. Requisitos no funcionales
 
-8. Modelo del dominio
-9. Cuestiones abiertas 
+1. Cuestiones abiertas 
 
 
