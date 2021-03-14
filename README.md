@@ -56,7 +56,23 @@ El objetivo de este documento es recoger, analizar y definir las característica
 
 
 ##### Alcance
+
 El documento está relacionado tanto con el ámbito de la medicina como con el ámbito de la ingeniería pues afecta principalmente a cómo los estudiantes de entornos más desfavorecidos necesitan comunicarse con otras personas que están lejos de cara a poder complementar la formación de los estudiantes mediante el aprendizaje basado en servicios, para poder facilitar esta comunicación es necesario el desarrollo de un proyecto software. 
 
 Hay que destacar que está enmarcado en el contexto de la asignatura de “Ingeniería de Requisitos” del grado de Ingeniería de Software de la UMA. Concretamente es el resultado de una colaboración con los estudiantes de la facultad de Medicina, ayudando así a su asignatura optativa “Farmacoterapéutica en entornos desfavorecidos”, impartida por la profesora María Cabello quien nos ha propuesto la idea de proyecto .
 
+##### Definiciones, acrónimos y abreviaturas
+
+- ApS: Aprendizaje-Servicio.
+- Aprendizaje-servicio: Aproximación a la enseñanza y al aprendizaje que integra el servicio a la comunidad con el estudio académico, cuyo objetivo es enriquecer el aprendizaje, fomentar la responsabilidad cívica de la formación, así como el fortalecimiento de las comunidades.
+- ONG: Organización no gubernamental.
+- PCSAS: Plataforma de Compromiso Social y Aprendizaje Servicio.
+- ACOES: Asociación, colaboración y esfuerzo.
+- FED: Farmacoterapéutica en entornos desfavorecidos.
+- BOE: Boletín Oficial del Estado.
+- Fe y Alegría: ONG fundada en Venezuela que ofrece oportunidades de estudio a los sectores más pobres de la sociedad.
+- AACID: Alianzas entre actores y territorios para reducir la desigualdad.
+- Farmamundi: ONG de cooperación al desarrollo, acción humanitaria y emergencia que nace en 1991 para asegurar que la salud sea un derecho básico en los países subdesarrollados.
+- UMA: Universidad de Málaga.
+- CV: Currículum Vitae.
+- LGPD: Ley General de Protección de Datos.
