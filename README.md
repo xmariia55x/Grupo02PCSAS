@@ -44,7 +44,6 @@ Yeray Ruiz Suárez
 
 1. Requisitos no funcionales
 
-1. Cuestiones abiertas 
 
 ***
 
@@ -83,14 +82,18 @@ En este documento se hará referencia al BOE ya que en el BOE se regula cómo de
 
 Referencia al [BOE-A-2017-10811](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2017-10811) donde se regula el ApS.
 
-1 [Blog de Roser Batlle](https://roserbatlle.net/)
+[1] [Blog de Roser Batlle](https://roserbatlle.net/)
 
-2 [National Youth Leadership Council – NYLC](https://www.nylc.org/)
+[2] [National Youth Leadership Council – NYLC](https://www.nylc.org/)
 
-3 [Centro Latinoamericano de Aprendizaje Servicio Solidario](http://www.clayss.org.ar/)
+[3] [Centro Latinoamericano de Aprendizaje Servicio Solidario](http://www.clayss.org.ar/)
 
-4 [Google Classroom](https://classroom.google.com/)
+[4] [Google Classroom](https://classroom.google.com/)
 
-5 [Ley General de Protección de Datos](https://www.boe.es/eli/es/lo/2018/12/05/3)
+[5] [Ley General de Protección de Datos](https://www.boe.es/eli/es/lo/2018/12/05/3)
+
+##### Resumen
+
+Este documento se encuentra estructurado según como se explica en el índice. El punto 2 define el problema que se presenta, así como la solución que planteamos. En el apartado 3 se describen los participantes y los usuarios propios del proyecto. La sección 4 cubre el funcionamiento y las características de la aplicación. El apartado 5 describe todos los requisitos funcionales del proyecto. El punto 6 trata acerca de la preferencia y la prioridad que se establecerá en el proyecto. Por último, en la sección 7 se cubre todo lo relacionado con los requisitos no funcionales.
 
 
