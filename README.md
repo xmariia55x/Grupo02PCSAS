@@ -19,23 +19,22 @@ Yeray Ruiz Suárez
     1. Referencias
     1. Resumen
 2. Directivas del proyecto
-
-  2. Descripción del problema
-  2. Descripción del producto
+    2. Descripción del problema
+    2. Descripción del producto
 3. Descripción de participantes y usuarios
 
-  3. Resumen de los participantes
-  3. Resumen y entorno de los usuarios
-  3. Perfiles de los participantes
-  3. Perfiles de usuarios
-  3. Alternativas y competencia
+    3. Resumen de los participantes
+    3. Resumen y entorno de los usuarios
+    3. Perfiles de los participantes
+    3. Perfiles de usuarios
+    3. Alternativas y competencia
 4. Visión general del producto
 
-  4. Entorno de despliegue
-  4. Resumen de características
-  4. Suposiciones y dependencias
-  4. Precio y coste
-  4. Licencias e instalación
+    4. Entorno de despliegue
+    4. Resumen de características
+    4. Suposiciones y dependencias
+    4. Precio y coste
+    4. Licencias e instalación
 5. Requisitos funcionales
 
 6. Precedencia y prioridad
