@@ -42,8 +42,6 @@ Yeray Ruiz Suárez
 - [5 Requisitos funcionales](#5-requisitos-funcionales)
 - [6 Precedencia y prioridad](#6-precedencia-y-prioridad)
 - [7 Requisitos no funcionales](#7-requisitos-no-funcionales)
-- [8 Modelo del dominio](#8-modelo-del-dominio)
-- [9 Cuestiones abiertas](#9-cuestiones-abiertas)
 
 ## 1. Introducción
 
@@ -257,7 +255,16 @@ La principal diferencia que tenemos con el CLAYSS es que operamos además de en 
 
 ### 4.1 Entorno de despliegue
 
+La aplicación está pensada como una aplicación de escritorio para ser desarrollada en lenguaje C# usando el framework de .NET y usando una base de datos relacional de MySQL  alojada en la plataforma de AWS si bien actualmente (marzo 2021) ya no está disponible la información alojada en dicha base de datos.
+
 ### 4.2 Resumen de características
+
+Beneficios para el cliente | Características de soporte
+------------ | -------------
+Mayor facilidad para formarse en el llamado aprendizaje - servicio. | Implementar recursos interactivos para educar e instruir a todo aquel que quiera en este ámbito.
+Posibilidad de formarse a distancia.  | Implementar un sistema de vídeo para poder seguir los cursos.
+Comunicación directa entre personas del sistema. | Implementar un servicio de mensajería interna dentro del propio sistema, así como un chat.
+Acceso directo a las actividades del sistema. | Implementar una barra de búsqueda en la que se acceda a la base de datos donde se encuentre almacenada la información relativas a las actividades.
 
 ### 4.3 Suposiciones y dependencias
 
