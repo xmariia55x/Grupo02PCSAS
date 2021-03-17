@@ -268,9 +268,23 @@ Acceso directo a las actividades del sistema. | Implementar una barra de búsque
 
 ### 4.3 Suposiciones y dependencias
 
+Las principales dependencias a las que se somete este proyecto son:
+
+- **Dependencia total del sistema informático:** Cualquier fallo en la aplicación o en el servicio de internet perjudica bastante a nuestro sistema.
+- **Dependencia de la proposición activa de proyectos y actividades:** Es necesario que haya un equipo de profesores y entidades que organicen eventos regularmente para que el sistema tenga vida.
+- **Suposición de conocimiento del usuario:** Suponemos que los usuarios que utilicen el sistema tienen unas nociones básicas para utilizar el mismo.
+
 ### 4.4 Precio y coste
 
+En principio la aplicación está pensada para que sea gratuita, ya que la idea es que sea una aplicación a la que todo el mundo pueda tener acceso. No tendremos en cuenta ningún tipo de coste físico, ya que se trata de una aplicación software. Sin embargo, puede que necesitemos adquirir alguna licencia de algún programa en específico o conseguir alguna certificación especial para asegurarnos de la calidad del producto.
+
+Los costes dependen del tipo de programadores y líderes de proyecto que se contraten, cuanta más experiencia y más rápido y con menos fallos se hará. Si se opta por programadores noveles puede ser más barato pero se prolongará más el desarrollo. En principio estimamos que el coste por hora de trabajo es de 10€.
+Si trabajamos un equipo de 5 desarrolladores un total de 8 horas diarias durante 25 días (más o menos fue el tiempo real de implementación) estimamos unos costes de 2.000€ en mano de obra, si aparte necesitásemos adquirir software o alquilar de servidores, esto sería un coste extra.
+
+
 ### 4.5 Licencias e instalación
+
+Usaremos entornos de trabajo que en principio son gratuitos como MySQL (para la base de datos) y Visual Studio 2019, si bien para plantear el diagrama de clases del proyecto y el modelo del sistema, usaremos MagicDraw donde será necesaria una licencia. Para cuestiones organizativas usaremos Trello, un bloc de notas digital donde iremos marcando los objetivos y cómo el proyecto va avanzando de forma que el cliente también puede ver el progreso que sigue el proyecto.
 
 ## 5 Requisitos funcionales
 
