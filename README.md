@@ -240,6 +240,19 @@ Entregables | No tienen.
 
 ### 3.5 Alternativas y competencia
 
+Se pueden considerar como alternativas, pero no presentan un sistema para realizar actividades programadas, simplemente son blogs/webs que disponen de información para la información y formación de usuarios en el ApS.
+
+**[1] Blog de Roser Batlle:** Página con gran cantidad de recursos sobre aprendizaje servicios, en la que se encuentran infinidad de recursos e informaciones sobre esta metodología. Destacan los materiales y las guías que ayudarán al profesorado que se quiera iniciar en esta metodología y también al que desee adquirir mayor destreza. También contiene información sobre las modalidades de cursos de formación o asesoramientos que su responsable ofrece a centros, entidades y profesorado.
+
+**[2] National Youth Leadership Council – NYLC:**  Es una página con una fuente inagotable de información y de ideas para seguir avanzando en la aplicación del aprendizaje servicio en nuestros centros educativos, entidades sociales y municipios. También se puede encontrar información sobre un importante encuentro anual de participantes en actividades de aprendizaje servicio, el Annual National Service-Learning Conference.
+
+**[3] Centro Latinoamericano de Aprendizaje Servicio Solidario:** Una página de referencia del ApS, en especial para América Latina y cada vez con mayor presencia en África y Europa. Ofrece información relevante sobre los programas de difusión del aprendizaje servicio en los que está colaborando. También ofrece programas de formación adecuados a distintas necesidades y, por último, es muy relevante la documentación en abierto que pone a disposición y que se convierte en una biblioteca básica sobre aprendizaje servicio.
+
+La principal diferencia que tenemos con el CLAYSS es que operamos además de en América Latina, en España. Además la página web visualmente no es muy atractiva, en cambio dentro del proyecto haremos que esto sea una prioridad.
+
+**[4] Google Classroom:** una plataforma principalmente orientada a la enseñanza en entornos académicos, si bien incorpora diversas funcionalidades como pueden ser videollamadas grupales, foros donde todos los participantes pueden colgar sus dudas y comentar entradas del resto de usuarios… Esta plataforma no termina de cumplir con las necesidades planteadas por el cliente ya que no existe un papel diferenciado entre usuarios invitados, alumnos, profesores y otros participantes.
+
+
 ## 4 Visión general del producto
 
 ### 4.1 Entorno de despliegue
