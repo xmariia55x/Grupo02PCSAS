@@ -85,7 +85,7 @@ Referencia al [BOE-A-2017-10811](https://www.boe.es/diario_boe/txt.php?id=BOE-A-
 
 [4] [Google Classroom](https://classroom.google.com/)
 
-[5] [Ley General de Protección de Datos](https://www.boe.es/eli/es/lo/2018/12/05/3)
+[5] [Reglamento General de Protección de Datos](https://www.boe.es/eli/es/lo/2018/12/05/3)
 
 ### 1.5 Resumen
 
@@ -290,5 +290,55 @@ Usaremos entornos de trabajo que en principio son gratuitos como MySQL (para la 
 
 ## 6 Precedencia y prioridad
 
+Se ha decidido dar mayor importancia a los requisitos relacionados con las actividades relacionadas con la formación en el ApS; es decir, el sistema deberá implementar las funcionalidades que le permitan registrar usuarios, lanzar actividades, así como cursos, en los que puedan apuntarse los distintos usuarios. Dentro de estos requisitos se incluirá un calendario de actividades para los usuarios, así como un sistema de notificaciones. 
+
 ## 7 Requisitos no funcionales
+
+### 7.1 Requisitos de aspecto
+
+- RNF1. La interfaz debe proporcionar toda la documentación necesaria para formarse en el ApS.
+- RNF2. La interfaz seguirá una estructura consistente en toda la plataforma para asegurar la estética general.
+    - RNF2.1. La interfaz tendrá una paleta de colores predefinida. 
+- RNF3. Habrá diferentes tipos de interfaces según el tipo de usuario, una para los alumnos, otra para los profesores y otra para los invitados.
+
+### 7.2 Requisitos de facilidad de uso y aprendizaje
+
+- RNF4. El sistema debe ser intuitivo y accesible para cualquier tipo de usuario como para poderla manejar con soltura en un tiempo de aprendizaje de entre 5 y 15 minutos.
+- RNF5. Al colocar el cursor sobre algunas zonas o botones de la GUI se mostrarán tooltips: mensajes que informan brevemente sobre qué es el elemento señalado o qué acción se realiza al hacer clic sobre el mismo.
+
+### 7.3 Requisitos de funcionamiento
+
+- RNF6. El sistema deberá optimizar los tiempos de carga y descarga de archivos.
+- RNF7. El sistema deberá soportar un gran número de tráfico tanto de usuarios como de archivos.
+- RNF8. El sistema deberá tener capacidad para almacenar gran cantidad de archivos dedicados exclusivamente a la formación sobre el ApS.
+
+### 7.4 Requisitos operacionales
+
+- RNF9. El sistema será desarrollado como una aplicación de escritorio usando C# y .NET.
+
+### 7.5 Requisitos de mantenimiento y portabilidad
+
+- RNF10. El sistema contará con una estructura que sea fácil de mantener.
+    - RNF10.1. El sistema se mantendrá actualizado periódicamente.
+- RNF11. En caso de que el sistema falle contará con una copia de seguridad que se actualizará periódicamente. 
+
+### 7.6 Requisitos de seguridad
+
+- RNF12. El sistema no podrá penetrarse, los datos de los usuarios estarán sujetos a máxima confidencialidad y estarán guardados en un sistema de alta seguridad para evitar cualquier posible exposición de los mismos.
+- RNF13. Un usuario no privilegiado no podrá acceder a las funcionalidades de uno que sí lo es.
+- RNF14. Un administrador revisará las propuestas de actividades antes de lanzarlas al público para controlar posibles irregularidades.
+- RNF15. El sistema deberá impedir la corrupción de datos internos.
+
+### 7.7 Requisitos culturales y políticos
+
+- RNF16. Se castigará a todo aquel que proponga alguna actividad o muestre alguna actitud discriminatoria o irrespetuosa con otro usuario, etnia o condición personal.
+- RNF17. No se podrá promover ninguna ideología política o religiosa en el sistema. 
+
+### 7.8 Requisitos legales
+
+- RNF18. El sistema no podrá contener información ilegal o contraria a la moral.
+- RNF19. El sistema tratará los datos de un usuario conforme al RGPD [5].
+
+
+
 
