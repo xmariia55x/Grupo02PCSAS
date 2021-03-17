@@ -1,4 +1,5 @@
-# Plataforma de Compromiso Social y Aprendizaje Servicio
+<h1>Plataforma de Compromiso Social y Aprendizaje Servicio</h1>
+<h4>
 Proyecto realizado por:
 
 Javier Blanco Navarro
@@ -11,56 +12,52 @@ David Gerena Comino
 
 Yeray Ruiz Suárez
 
+</h4>
 
-## Índice
-1. Introducción
+- - -
 
-    1. Objetivos
-    1. Alcance
-    1. Definiciones, acrónimos y abreviaturas
-    1. Referencias
-    1. Resumen
-1. Directivas del proyecto
+<h3>Índice<h4/>
 
-    1. Descripción del problema
-    1. Descripción del producto
-1. Descripción de participantes y usuarios
+- [1. Introducción](#1-introducción)
+  - [1.1 Objetivos](#11-objetivos)
+  - [1.2 Alcance](#12-alcance)
+  - [1.3 Definiciones, acrónimos y abreviaturas](#13-definiciones-acrónimos-y-abreviaturas)
+  - [1.4 Referencias](#14-referencias)
+  - [1.5 Resumen](#15-resumen)
+- [2 Directivas del proyecto](#2-directivas-del-proyecto)
+  - [2.1 Descripción del problema](#21-descripción-del-problema)
+  - [2.2 Descripción del producto](#22-descripción-del-producto)
+- [3 Descripción de participantes y usuarios](#3-descripción-de-participantes-y-usuarios)
+  - [3.1 Resumen de los participantes](#31-resumen-de-los-participantes)
+  - [3.2 Resumen y entorno de los usuarios](#32-resumen-y-entorno-de-los-usuarios)
+  - [3.3 Perfiles de los participantes](#33-perfiles-de-los-participantes)
+  - [3.4 Perfiles de usuarios](#34-perfiles-de-usuarios)
+  - [3.5 Alternativas y competencia](#35-alternativas-y-competencia)
+- [4 Visión general del producto](#4-visión-general-del-producto)
+  - [4.1 Entorno de despliegue](#41-entorno-de-despliegue)
+  - [4.2 Resumen de características](#42-resumen-de-características)
+  - [4.3 Suposiciones y dependencias](#43-suposiciones-y-dependencias)
+  - [4.4 Precio y coste](#44-precio-y-coste)
+  - [4.5 Licencias e instalación](#45-licencias-e-instalación)
+- [5 Requisitos funcionales](#5-requisitos-funcionales)
+- [6 Precedencia y prioridad](#6-precedencia-y-prioridad)
+- [7 Requisitos no funcionales](#7-requisitos-no-funcionales)
+- [8 Modelo del dominio](#8-modelo-del-dominio)
+- [9 Cuestiones abiertas](#9-cuestiones-abiertas)
 
-    1. Resumen de los participantes
-    1. Resumen y entorno de los usuarios
-    1. Perfiles de los participantes
-    1. Perfiles de usuarios
-    1. Alternativas y competencia
-1. Visión general del producto
+## 1. Introducción
 
-    1. Entorno de despliegue
-    1. Resumen de características
-    1. Suposiciones y dependencias
-    1. Precio y coste
-    1. Licencias e instalación
-1. Requisitos funcionales
-
-1. Precedencia y prioridad
-
-1. Requisitos no funcionales
-
-
-***
-
-### Introducción
-
-#### Objetivos
+### 1.1 Objetivos
 
 El objetivo de este documento es recoger, analizar y definir las características y necesidades de alto nivel del sistema PCSAS: Plataforma de Compromiso Social y Aprendizaje Servicio. Se centrará en describir las expectativas de cada una de las partes del proyecto y de los usuarios finales y por qué estas necesidades existen. Los detalles de cómo PCSAS: Plataforma de Compromiso Social y Aprendizaje Servicio cumple estas necesidades se detallan en los casos de uso y en las especificaciones adicionales.
 
-
-#### Alcance
+### 1.2 Alcance
 
 El documento está relacionado tanto con el ámbito de la medicina como con el ámbito de la ingeniería pues afecta principalmente a cómo los estudiantes de entornos más desfavorecidos necesitan comunicarse con otras personas que están lejos de cara a poder complementar la formación de los estudiantes mediante el aprendizaje basado en servicios, para poder facilitar esta comunicación es necesario el desarrollo de un proyecto software. 
 
-Hay que destacar que está enmarcado en el contexto de la asignatura de “Ingeniería de Requisitos” del grado de Ingeniería de Software de la UMA. Concretamente es el resultado de una colaboración con los estudiantes de la facultad de Medicina, ayudando así a su asignatura optativa “Farmacoterapéutica en entornos desfavorecidos”, impartida por la profesora María Cabello quien nos ha propuesto la idea de proyecto .
+Hay que destacar que está enmarcado en el contexto de la asignatura de “Ingeniería de Requisitos” del grado de Ingeniería de Software de la UMA. Concretamente es el resultado de una colaboración con los estudiantes de la facultad de Medicina, ayudando así a su asignatura optativa “Farmacoterapéutica en entornos desfavorecidos”, impartida por la profesora María Cabello quien nos ha propuesto la idea de proyecto.
 
-#### Definiciones, acrónimos y abreviaturas
+### 1.3 Definiciones, acrónimos y abreviaturas
 
 - ApS: Aprendizaje-Servicio.
 - Aprendizaje-servicio: Aproximación a la enseñanza y al aprendizaje que integra el servicio a la comunidad con el estudio académico, cuyo objetivo es enriquecer el aprendizaje, fomentar la responsabilidad cívica de la formación, así como el fortalecimiento de las comunidades.
@@ -76,7 +73,7 @@ Hay que destacar que está enmarcado en el contexto de la asignatura de “Ingen
 - CV: Currículum Vitae.
 - LGPD: Ley General de Protección de Datos.
 
-#### Referencias
+### 1.4 Referencias
 
 En este documento se hará referencia al BOE ya que en el BOE se regula cómo debe ser el aprendizaje basado en servicios y que debe cumplir.
 
@@ -92,13 +89,14 @@ Referencia al [BOE-A-2017-10811](https://www.boe.es/diario_boe/txt.php?id=BOE-A-
 
 [5] [Ley General de Protección de Datos](https://www.boe.es/eli/es/lo/2018/12/05/3)
 
-#### Resumen
+### 1.5 Resumen
+
 
 Este documento se encuentra estructurado según como se explica en el índice. El punto 2 define el problema que se presenta, así como la solución que planteamos. En el apartado 3 se describen los participantes y los usuarios propios del proyecto. La sección 4 cubre el funcionamiento y las características de la aplicación. El apartado 5 describe todos los requisitos funcionales del proyecto. El punto 6 trata acerca de la preferencia y la prioridad que se establecerá en el proyecto. Por último, en la sección 7 se cubre todo lo relacionado con los requisitos no funcionales.
 
-### Directivas del proyecto
+## 2 Directivas del proyecto
 
-#### Descripción del problema
+### 2.1 Descripción del problema
 
 El problema de no poder comunicarse presencialmente ya sea debido a la distancia o a otros problemas de salud, afecta a aquellos que recibían ayudas sociales mediante actividades, tanto en educación como en apoyo moral. El impacto de ese problema se ve reflejado directamente en que estas labores de aprendizajes-servicios a la comunidad no se pueden realizar. 
 
@@ -108,13 +106,14 @@ Así, se lograría unir a los centros educativos más desfavorecidos y apoyar a 
 
 Cabe destacar que a la vez que los alumnos de los centros aprenden, los alumnos de la UMA implicados en este proyecto se forman y adquieren competencias que con otro tipo de formación no podrían adquirir.
 
-#### Descripción del producto
+### 2.2 Descripción del producto
+
 
 Para la comunidad educativa, empresas y ONG, quienes tienen una necesidad de formarse en aspectos sociales, el sistema es un software que ofrece una solución al problema planteado. El objetivo principal de la aplicación es crear un entorno de unión entre los alumnos más desfavorecidos y profesores implicados de todo el mundo, ofrecer actividades formativas para estos estudiantes a la vez que los estudiantes de la UMA se forman mediante la adquisición de competencias transversales y experiencia laboral.  Por tanto, incluiremos el sistema en un mercado en el que no hay otro competidor actualmente por lo que nuestro producto cubrirá unas necesidades que a día de hoy nadie las satisface.
 
-### Descripción de participantes y usuarios
+## 3 Descripción de participantes y usuarios
 
-#### Resumen de los participantes
+### 3.1 Resumen de los participantes
 
 Nombre | Rol
 ------------ | -------------
@@ -124,7 +123,7 @@ Empresas | Las empresas podrán prestarse también a promocionar distintos proye
 María Cabello | Coordinadora de la asignatura que usará el sistema y encargada de aportar la idea e interés en el proyecto.
 Facultad de Medicina | Facultad que usará nuestro sistema para una asignatura optativa.
 
-#### Resumen y entorno de los usuarios
+### 3.2 Resumen y entorno de los usuarios
 
 Nombre | Descripción | Participante
 ------------ | ------------- | -------------
@@ -134,7 +133,7 @@ Alumnos | Son los beneficiarios del sistema y que utilizan la plataforma para ap
 Administradores | Gestionan el sistema y se aseguran de que todos los recursos y funcionalidades funcionan correctamente. | Serán contratados por las entidades que financien el proyecto.
 Invitado | Podrán consultar las actividades propuestas en el calendario y ver contenidos del sistema. | Ven una parte de los contenidos que promueven las ONG’s.
 
-#### Perfiles de los participantes
+### 3.3 Perfiles de los participantes
 
 **UMA**
 
@@ -187,6 +186,25 @@ Responsabilidades | Realización de actividades como formación para su posterio
 Criterio de éxito | Tener una gran cantidad de alumnos realizando estas actividades del proyecto.
 Entregables | Una lista con los principales proyectos.
 
+### 3.4 Perfiles de usuarios
 
+### 3.5 Alternativas y competencia
 
+## 4 Visión general del producto
+
+### 4.1 Entorno de despliegue
+
+### 4.2 Resumen de características
+
+### 4.3 Suposiciones y dependencias
+
+### 4.4 Precio y coste
+
+### 4.5 Licencias e instalación
+
+## 5 Requisitos funcionales
+
+## 6 Precedencia y prioridad
+
+## 7 Requisitos no funcionales
 
