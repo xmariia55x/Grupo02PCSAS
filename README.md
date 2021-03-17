@@ -188,6 +188,56 @@ Entregables | Una lista con los principales proyectos.
 
 ### 3.4 Perfiles de usuarios
 
+**Alumnos**
+
+| | |
+|-|-|
+Representante | Representante de estudiantes.
+Descripción | Los alumnos usarán el sistema para cumplimentar la formación mediante el servicio a la comunidad.
+Tipo | Cualquier tipo de alumno desde alumnos de primaria hasta alumnos de las distintas facultades de la UMA.
+Responsabilidades | Ser responsable de las tareas asignadas, ya que pueden necesitar ser realizadas con cuidado.
+Criterio de éxito | Que los alumnos aprendan mediante los servicios y que puedan desempeñar con éxito la tarea asignada.
+
+**Profesores**
+
+| | |
+|-|-|
+Representante | Representante de los profesores.
+Tipo | Son los alumnos de la asignatura anteriormente mencionada aunque el uso del sistema se podría ampliar a profesionales titulados en educación y que tengan un conocimiento mínimo de tecnología.
+Responsabilidades | Deberán impartir a los alumnos los contenidos de los cursos.
+Criterio de éxito | Su objetivo es enseñar lo mejor posible a sus alumnos.
+Entregables | Las valoraciones y el conocimiento de los alumnos.
+
+**ONG**
+
+| | |
+|-|-|
+Representante | Representante de las ONG.
+Tipo | Son colaboradores o voluntarios de las distintas ONG con conocimiento específico sobre el campo donde se desarrollan las actividades.
+Responsabilidades | Propondrán las distintas actividades y se harán cargo de la organización y planificación de las mismas.
+Criterio de éxito | Que las actividades sociales y benéficas tengan una gran aceptación y se lleven a cabo con éxito.
+Entregables | Las valoraciones de los asistentes a la actividad social cuestión.
+
+**Administradores**
+
+| | |
+|-|-|
+Representante | Project Leader.
+Tipo | Deben ser profesionales titulados capaces de gestionar el proyecto y su mantenimiento.
+Responsabilidades | Tienen que escribir un código limpio y optimizado para evitar ineficiencias y estar realmente implicados con el proyecto.
+Criterio de éxito | Su objetivo es crear el sistema y mantenerlo con todas las funcionalidades prometidas en un inicio.
+Entregables | El proyecto y diferentes informes y documentación.
+
+**Invitados**
+
+| | |
+|-|-|
+Representante | Cada uno de los invitados.
+Tipo | Usuarios no registrados en el sistema.
+Responsabilidades | Responsabilidad de no difundir los contenidos a los que pueden acceder en el sistema.
+Criterio de éxito | Al invitado le llama la atención el sistema y se registra como usuario.
+Entregables | No tienen.
+
 ### 3.5 Alternativas y competencia
 
 ## 4 Visión general del producto
