@@ -287,6 +287,76 @@ Si trabajamos un equipo de 5 desarrolladores un total de 8 horas diarias durante
 Usaremos entornos de trabajo que en principio son gratuitos como MySQL (para la base de datos) y Visual Studio 2019, si bien para plantear el diagrama de clases del proyecto y el modelo del sistema, usaremos MagicDraw donde será necesaria una licencia. Para cuestiones organizativas usaremos Trello, un bloc de notas digital donde iremos marcando los objetivos y cómo el proyecto va avanzando de forma que el cliente también puede ver el progreso que sigue el proyecto.
 
 ## 5 Requisitos funcionales
+### 5.1 Requisitos relacionados con la interfaz de la plataforma
+
+- RF1. El sistema informará de las distintas secciones que existen dentro del mismo.
+- RF2. El sistema permitirá  navegar por sus distintas secciones (calendario, cursos, actividades…).
+- RF3. El sistema ofrecerá un buscador para poder filtrar las actividades.
+- RF4. El sistema permitirá ordenar las actividades. 
+- RF5. El sistema permitirá compartir las actividades a través de redes sociales (Twitter, Instagram…).
+
+### 5.2 Requisitos relacionados con la comunicación en la plataforma
+
+- RF6. Un usuario con rol de profesor o ONG’s podrá hacer conferencias en tiempo real.
+  - RF6.1. Un usuario registrado podrá acceder a una conferencia.
+- RF7. El sistema permitirá comunicación entre sus integrantes mediante mensajería interna.
+  - RF7.1. El sistema ofrecerá un chat en tiempo real en las conferencias donde los usuarios podrán enviar mensajes.
+  - RF7.2. Los usuarios implicados en la comunicación podrán enviar mensajes con texto estándar, caracteres especiales y emojis o GIFs.
+  - RF7.3. Los usuarios podrán adjuntar fotos y vídeos. Comentario: Los archivos tienen que tener un tamaño de menos de 5 MB.
+- RF8. El sistema ofrecerá un foro de usuarios para exponer las dudas y opiniones de las distintas actividades o cursos.
+  - RF8.1.   Los usuarios podrán abrir un debate en el foro.
+  - RF8.2. Los usuarios podrán responder en un debate del foro con mensajes de texto estándar, caracteres especiales y emojis o GIFs.
+  - RF8.3. Los usuarios podrán borrar mensajes del foro. Comentario: El mensaje se podrá borrar antes de la primera hora desde que se envió. Transcurrido dicho tiempo no se podrá borrar el mensaje.
+  - RF8.4. Los usuarios podrán editar los mensajes escritos en el foro. 
+
+### 5.3 Requisitos relacionados con el perfil del usuario
+
+- RF9. El sistema permitirá registrar a un usuario que no estuviera previamente registrado.
+  - RF9.1. El sistema permitirá iniciar sesión mediante un usuario y contraseña.
+  - RF9.2. El sistema permitirá modificar un usuario y su contraseña, así como la información del perfil.
+  - RF9.3. El usuario podrá borrar su perfil.
+
+### 5.4 Requisitos relacionados con las actividades
+
+- RF10. Un usuario con rol de alumno podrá ver la información de una actividad.
+- RF11. Un usuario puede renunciar a participar en una actividad. Comentario: Se deberá renunciar con 24 horas de antelación. Si no asiste y no ha renunciado previamente sufrirá una penalización y no podrá asistir a otras actividades en los siguientes 2 días.
+- RF12. Cualquier usuario registrado podrá lanzar una actividad relacionada con el ApS, por ejemplo, recogida de alimentos, voluntariados, jornadas de convivencia… Comentario: incluyendo ONG’s.
+- RF13. Cualquier usuario registrado podrá apuntarse a una o varias de las actividades mencionadas en RF12.
+- RF14.  El usuario podrá valorar la actividad tras haber asistido. Comentario: En la valoración se podrá incluir apreciaciones personales en un comentario.
+- RF15. Los usuarios con perfil de invitado podrán ver información de las actividades. Comentario: el invitado no podrá apuntarse a las actividades.
+
+### 5.5 Requisitos relacionados con los cursos
+	
+- RF16. Un usuario con rol de profesor podrá crear un curso del sistema.
+  - RF16.1. Un usuario con rol de profesor podrá impartir un curso que ha creado.
+  - RF16.2. Un usuario con rol de profesor que haya creado un curso puede autorizar a otro profesor para que imparta un curso que él ha creado.
+  - RF16.3. Un usuario con rol de profesor podrá borrar un curso que ha creado.
+  - RF16.4. Un usuario con rol de profesor podrá editar un curso que ha creado.
+  - RF16.5. Un usuario con rol de profesor puede autorizar a un usuario registrado a participar en un curso.
+  - RF16.6. Un usuario con rol de profesor podrá ver los usuarios que se han apuntado a un curso que él haya creado.
+  -RF16.7. Un usuario con rol de profesor podrá expulsar a usuarios que se hayan apuntado a un curso que él haya creado.
+
+- RF17. Un usuario registrado podrá participar en un curso. 
+  - RF17.1. Un usuario registrado podrá dejar de participar en un curso.
+  - RF17.2. Un usuario podrá valorar un curso tras haberlo realizado. Comentario: En la valoración se podrá incluir apreciaciones personales en un comentario.
+
+### 5.6 Requisitos relacionados con el administrador
+
+- RF18. El administrador podrá crear una actividad y un curso.
+  - RF18.1. El administrador podrá borrar cualquier actividad o curso
+  - RF18.2. El administrador podrá modificar cualquier actividad o curso.
+  - RF18.3. El administrador podrá expulsar a algún usuario de cualquier actividad o curso.
+- RF19. El administrador podrá expulsar a un usuario del sistema.
+- RF20. El administrador podrá borrar un foro del sistema.
+
+### 5.7 Requisitos relacionados con la planificación y calendario
+
+- RF21. El sistema contará con un calendario donde los usuarios registrados podrán añadir, consultar, eliminar o editar eventos (actividades y/o cursos). 
+- RF22. Los usuarios registrados podrán añadir eventos al calendario.
+- RF23. Los usuarios podrán consultar eventos del calendario.
+- RF24. Los usuarios registrados o el administrador podrán eliminar eventos del calendario. Comentario: Se eliminará un evento que el usuario haya creado.
+- RF25.  Los usuarios registrados o el administrador podrán editar eventos del calendario que ellos mismos hayan creado previamente. 
+- RF26. El sistema enviará un correo electrónico para avisar de los eventos más cercanos.
 
 ## 6 Precedencia y prioridad
 
